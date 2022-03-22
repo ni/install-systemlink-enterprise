@@ -1,5 +1,7 @@
+# Do not enforce line length.
 MD013: false
 
+# Allowed inline HTML tags.
 MD033:
   allowed_elements:
     - figure
@@ -7,7 +9,9 @@ MD033:
     - img
     - b
 
+# Indentation level for unordered lists.
 MD007:
   indent: 4
 
+# Disable enforcement of "no space in code snippet" rule.
 MD038: false
