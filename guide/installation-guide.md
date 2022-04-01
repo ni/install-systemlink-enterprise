@@ -1,6 +1,6 @@
 # SystemLink Enterprise Installation Guide
 
-## Prequisites
+## First Steps
 
 ### Cluster Requirements
 
@@ -58,7 +58,7 @@ The remainder of this document provides example Helm commands with variables tha
 
 - **\<release\>**: The name Helm assigns to the installed collection of software. You will use this name to manage the software in the future. Prefer short names. "systemlink" is a good default.
 - **\<admin-release\>**: This is the release name used for installing the systemlink-admin Helm chart. "systemlink-admin" is a good default.
-- **\<repo\>**: Asbolute URL for the ni-helm repository, as described above.
+- **\<repo\>**: Absolute URL for the ni-helm repository, as described above.
 - **\<version\>**: The specific version of the software to install. NI recommends specifying a specific version for all installations. Omitting this argument will cause the latest stable release to be installed.
 - **\<namespace\>**: An existing namespace on the cluster.
 
@@ -66,11 +66,11 @@ The remainder of this document provides example Helm commands with variables tha
 
 SystemLink Enterprise requires some resources to be installed globally on the cluster. This installation requires a cluster administrator with full access rights.
 
-Prequisites are installed using the systemlink-admin Helm chart.
+Prerequisites are installed using the systemlink-admin Helm chart.
 
 You should download [admin-values.yaml](templates/admin-values.yaml) to customize the configuration of these components. It should not be necessary to modify any of the defaults in this file.
 
-Install prequisites using the following commands:
+Install prerequisites using the following commands:
 
 ```bash
 helm repo update
