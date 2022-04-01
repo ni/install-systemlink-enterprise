@@ -15,10 +15,10 @@ SystemLink Enterprise is installed using the [Helm](https://helm.sh/) tool. You 
 Prior to installing SystemLink Enterprise, you must configure required repositories in the Helm tool. The following repositories are required.
 
 | Alias   | Default URL | Description |
-| ------- | ---------------------------------------------------- | ----------- |
-| stable  | https://charts.helm.sh/stable                        | A chart repository hosted by the Helm maintainers |
-| bitnami | https://charts.bitnami.com/bitnami                   | A collection of charts for popular open source components maintained by [bitnami](https://bitnami.com/) |
-| ni-helm | https://niartifacts.jfrog.io/artifactory/ni-helm | NIs public Helm repository |
+| ------- | -------------------------------------------------- | ----------- |
+| stable  | `https://charts.helm.sh/stable`                    | A chart repository hosted by the Helm maintainers |
+| bitnami | `https://charts.bitnami.com/bitnami`               | A collection of charts for popular open source components maintained by [bitnami](https://bitnami.com/) |
+| ni-helm | `https://niartifacts.jfrog.io/artifactory/ni-helm` | NIs public Helm repository |
 
 The NI repository is authenticated. You will have received a username and and access key for the repository when you were granted access to the SystemLink Enterprise product.
 
