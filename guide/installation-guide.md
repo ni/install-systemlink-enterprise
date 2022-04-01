@@ -36,11 +36,31 @@ helm repo add ni-helm https://niartifacts.jfrog.io/artifactory/ni-helm --usernam
 
 Some organizations may choose to mirror the public Helm repositories on an internal server. This is supported by SystemLink Enterprise. In this case, simply replace the default repository URLs above with the URL of the mirror.
 
-**!!IMPORTANT** - Do not alter the repository alias names even when using a mirror. The alias names will be used by the SystemLink Helm chart to locate dependencies.
+**!!IMPORTANT!!** - Do not alter the repository alias names even when using a mirror. The alias names will be used by the SystemLink Helm chart to locate dependencies.
 
 ## Configuration
 
-!!TODO!!
+The installation of the SystemLink Enterprise product is configured using Helm values. These values are set in YAML files. This guide will walk through a common configuration and identify required values and common customizations.
+
+### Common Configuration
+
+### Secrets
+
+### Certificate files
+
+This guide assumes that SystemLink Enterprise will be configured to store data to an external PostgresSQL database. The application will require a public certificate in order to authenticate with the database. You will need to obtain this certificate from your database administrator. This guide assumes that this file is named `postgres.pem`, but any name can be used.
+
+SystemLink Enterprise will deploy this certificate as a ConfigMap resource. The installation examples shown below provide the certificate as configuration using the following Helm argument:
+
+```bash
+--set-file database.postgresCertificate=postgres.pem
+```
+
+Rarely, deployments may also require a custom certificate authority in order to communicate with an OpenID Connect authorization server. Again, this is something you will need to obtain from the server administrator. This file can be deployed to the application by appending the following argument to any of the commands described below.
+
+```
+--set-file webserver.additionalCaCertificates=oidc.pem
+```
 
 ## Installation
 
@@ -54,7 +74,7 @@ kubectl create <namespace>
 
 ### Variables for Helm Commands
 
-The remainder of this document provides example Helm commands with variables that will need to be substitued with values specific to your deployment. These are defined here:
+The remainder of this document provides example Helm commands with variables that will be substituted with values specific to your deployment. These are defined here:
 
 - **\<release\>**: The name Helm assigns to the installed collection of software. You will use this name to manage the software in the future. Prefer short names. "systemlink" is a good default.
 - **\<admin-release\>**: This is the release name used for installing the systemlink-admin Helm chart. "systemlink-admin" is a good default.
@@ -68,7 +88,7 @@ SystemLink Enterprise requires some resources to be installed globally on the cl
 
 Prerequisites are installed using the systemlink-admin Helm chart.
 
-You should download [admin-values.yaml](templates/admin-values.yaml) to customize the configuration of these components. It should not be necessary to modify any of the defaults in this file.
+You will need download a copy of [admin-values.yaml](templates/admin-values.yaml) to deploy the configuration for these prerequisites. It should not be necessary to modify any of the defaults in this file.
 
 Install prerequisites using the following commands:
 
@@ -82,7 +102,7 @@ helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version 
 
 Installation should be performed by a user with full access to the SystemLink Enterprise namespace created above. Full cluster access is not required.
 
-The following commands can be used to install or update SystemLink Enterprise using the typical configuration described above.
+The following commands can be used to install SystemLink Enterprise using the typical configuration described above.
 
 ```bash
 helm repo update
@@ -115,6 +135,8 @@ helm upgrade <release> systemlink --install --repo <repo> --version <version> --
 ```
 
 Changes to the values files will be applied. New pods will be deployed as needed using the specified `<version>` using a rolling update strategy.
+
+**!!IMPORTANT!!** - All configuration files must be provided whenever an upgrade is performed. Failing to provide some part of the configuration may result in resources being deleted from the cluster and failures in the application.
 
 If it is necessary to completely remove SystemLink Enterprise from a cluster, you can do so by running:
 
