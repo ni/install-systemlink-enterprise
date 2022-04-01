@@ -1,0 +1,223 @@
+# Default values for systemlink.
+# This is a YAML-formatted file.
+# Declare override values for variables.
+
+global:
+  hosts: ["sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"]
+  apiHosts: ["api-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"]
+  imagePullSecrets: &pullSecretsRef
+  - name: aws-ecr-secret
+  - name: niartifacts-secret
+  imageRegistry: "niartifacts.jfrog.io"
+  imageRepository: "rnd-docker-ci"
+  deploySecrets: true
+
+initialAdministratorMapping:
+  mappingValue: jd.robertson@ni.com
+
+# Shared database configuration.
+database:
+  # If using an externally managed Postgres database, this value can be used to define a public TLS certificate used
+  # to authenticate with that database. The following argument can be used to load a certificate file from disk as part of a
+  # Helm install/upgrade command:
+  #       --set-file database.postgresCertificate my-cert.pem
+  postgresCertificate: ""
+  # Name that will be used for this certificate when mounted on disk.
+  postgresCertificateFileName: &postgresCertificateFileName "postgres-tls-certificate.pem"
+  # Name of the ConfigMap used to deploy the certificate.
+  postgresCertificateConfigMapName: &postgresCertificateConfigMap "postgres-tls-certificate"
+
+# Work-around for rabbitmq deployment
+rabbitmq:
+  rbac:
+    create: false
+  persistence:
+    enabled: false
+  configuration: |-
+    {{- if not .Values.loadDefinition.enabled -}}
+    ## Username and password
+    ##
+    default_user = {{ .Values.auth.username }}
+    default_pass = CHANGEME
+    {{- end }}
+    {{- if .Values.clustering.enabled }}
+    ## Clustering
+    ##
+    #    cluster_formation.peer_discovery_backend  = rabbit_peer_discovery_k8s
+    #    cluster_formation.k8s.host = kubernetes.default.svc.{{ .Values.clusterDomain }}
+    #    cluster_formation.node_cleanup.interval = 10
+    #    cluster_formation.node_cleanup.only_log_warning = true
+    #    cluster_partition_handling = autoheal
+    {{- end }}
+    # queue master locator
+    queue_master_locator = min-masters
+    # enable guest user
+    loopback_users.guest = false
+    {{ tpl .Values.extraConfiguration . }}
+    {{- if .Values.auth.tls.enabled }}
+    ssl_options.verify = {{ .Values.auth.tls.sslOptionsVerify }}
+    listeners.ssl.default = {{ .Values.service.tlsPort }}
+    ssl_options.fail_if_no_peer_cert = {{ .Values.auth.tls.failIfNoPeerCert }}
+    ssl_options.cacertfile = /opt/bitnami/rabbitmq/certs/ca_certificate.pem
+    ssl_options.certfile = /opt/bitnami/rabbitmq/certs/server_certificate.pem
+    ssl_options.keyfile = /opt/bitnami/rabbitmq/certs/server_key.pem
+    {{- end }}
+    {{- if .Values.ldap.enabled }}
+    auth_backends.1 = rabbit_auth_backend_ldap
+    auth_backends.2 = internal
+    {{- range $index, $server := .Values.ldap.servers }}
+    auth_ldap.servers.{{ add $index 1 }} = {{ $server }}
+    {{- end }}
+    auth_ldap.port = {{ .Values.ldap.port }}
+    auth_ldap.user_dn_pattern = {{ .Values.ldap.user_dn_pattern  }}
+    {{- if .Values.ldap.tls.enabled }}
+    auth_ldap.use_ssl = true
+    {{- end }}
+    {{- end }}
+    {{- if .Values.metrics.enabled }}
+    ## Prometheus metrics
+    ##
+    prometheus.tcp.port = 9419
+    {{- end }}
+    {{- if .Values.memoryHighWatermark.enabled }}
+    ## Memory Threshold
+    ##
+    total_memory_available_override_value = {{ include "rabbitmq.toBytes" .Values.resources.limits.memory }}
+    vm_memory_high_watermark.{{ .Values.memoryHighWatermark.type }} = {{ .Values.memoryHighWatermark.value }}
+    {{- end }}
+
+minio:
+  # Setup user credentials
+  auth:
+    existingSecret: minio-credentials
+  ingress:
+    ## @param ingress.hostname Default host for the ingress resource
+    ##
+    hostname: minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com
+
+  ## Configure the ingress resource that allows you to access the
+  ## MinIO&reg; API. Set up the URL
+  ## ref: https://kubernetes.io/docs/user-guide/ingress/
+  ##
+  apiIngress:
+    ## @param apiIngress.hostname Default host for the ingress resource
+    ##
+    hostname: api-minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com
+  # Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode)
+  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
+
+webserver:
+  # Values used to configure OIDC providers.
+  oidc:
+    scope: "openid email profile"
+    # Required - Secret name that holds client ID, client secret,
+    # and ID token key management JWKs
+    secretName: "azure-oidc"
+    # Required - Include either issuer URL (for discovery) or the
+    # provider configuration (wrapped in single quotes)
+    issuer: "https://login.microsoftonline.com/87ba1f9a-44cd-43a6-b008-6fdb45a5204e/v2.0"
+
+testmonitorservice:
+  database:
+    #connectionInfo:
+    #    secretName: testmonitorservicedb-connection
+    connectionString:
+      secretName: testmonitorservicedb-connection
+      connectionStringKey: connection-string
+    tls:
+      enabled: true
+      existingConfigMap: *postgresCertificateConfigMap
+      certificateSubPath: *postgresCertificateFileName
+
+dashboardhost:
+  databaseSecretName: &dashboardhostdbSecret "dashboardhost-postgres-secrets"
+
+  # Grafana community chart configuration. See https://github.com/grafana/helm-charts/blob/main/charts/grafana/README.md
+  # for more documentation and examples for these values
+  grafana:
+    ingress:
+      enabled: true
+      className: "nginx"
+      # pathType is only for k8s >= 1.1=
+      pathType: Prefix
+      # ingress accepted hostnames
+      hosts:
+        - "sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"
+
+    # This sets the GF_INSTALL_PLUGINS env variable
+    # https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
+    plugins:
+      - https://repos.natinst.com/artifactory/rnd-app-builds/grafana-plugins/systemlink-notebook-datasource/systemlink-notebook-datasource-latest.zip;systemlink-notebook-datasource
+
+    # Node count. This must be set to 1 if Grafana is not configured to use an external database.
+    replicas: 2
+
+    # Additional grafana server secret mounts
+    # Defines additional mounts with secrets. Secrets must be manually created in the namespace
+    extraSecretMounts:
+      - name: *dashboardhostdbSecret
+        secretName: *dashboardhostdbSecret
+        defaultMode: 0440
+        mountPath: /etc/secrets/dashboardhost
+        readOnly: true
+
+    # Additional grafana server configMap volume mounts.
+    # Defines additional mounts with configmaps. Configmaps must be manually created in the namespace.
+    extraConfigmapMounts:
+      - name: *postgresCertificateConfigMap
+        mountPath: /etc/ssl/certs/dashboardhost/
+        subPath: *postgresCertificateFileName
+        configMap: *postgresCertificateConfigMap
+        readOnly: true
+
+    grafana.ini:
+      server:
+        domain: sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com
+
+      # Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
+      database:
+        # Either mysql, postgres or sqlite3
+        type: postgres
+        # The database user (not applicable for sqlite3).
+        user: $__file{/etc/secrets/dashboardhost/user}
+        # The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;"""
+        password: $__file{/etc/secrets/dashboardhost/password}
+        # Only applicable to MySQL or Postgres. Includes IP or hostname and port or in case of Unix sockets the path to it.
+        # For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock
+        host: $__file{/etc/secrets/dashboardhost/host}
+        # The name of the Grafana database. Leave it set to grafana (default) or some other name.
+        # name: database-name
+        # Use either URL or the other fields above to configure the database.
+        # url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
+        # For Postgres, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
+        ssl_mode: require
+        # The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
+        ca_cert_path: /etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem
+
+dataframeservice:
+  database:
+    useCustom: false
+    customConnectionSecret:
+      name: "nidataframe-mongodb-connection"
+      key: "connectionString"
+  s3:
+    bucket: "systemlink-dataframe"
+    host: "api-minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"
+
+# Configure SaltMaster to use an IP address from the systemlink pool so that MetalLB will route TCP traffic appropriately
+saltmaster:
+  serviceTCP:
+    annotations:
+      metallb.universe.tf/address-pool: systemlink
+
+# Configure FileIngestion to use minio as the s3 host
+fileingestionservices:
+  s3:
+    # Use a different credentials secret that contains the minio username & password
+    existingSecret: "fileingestion-minio-keys"
+    storageLimitsEnabled: false
+    host: "api-minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"
+
+sl-jupyterhub:
+  jupyterhub:
+    imagePullSecrets: *pullSecretsRef

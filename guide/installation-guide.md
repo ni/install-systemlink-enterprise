@@ -44,11 +44,25 @@ The installation of the SystemLink Enterprise product is configured using Helm v
 
 ### General Configuration
 
-Download [values.yaml](templates/systemlink-values.yaml). This file
+Download [systemlink-values.yaml](templates/systemlink-values.yaml). This file will hold the configuration for your SystemLink Enterprise deployment. You will need to retain this file for the lifetime of your application. NI recommends storing this file in a source control repository.
+
+The file is self-documenting and contains numerous `!!TODO!!` comments calling out values that must be provided and sections requiring specific review. NI recommends reading through all of these comments and then deleting them once the configuration is complete.
+
+Refer to the [Commonly Modified Settings for SystemLink Enterprise](configuration/common-configuration.md) document for detailed description of the most commonly modified settings.
 
 ### Secrets
 
-### Certificate files
+Sensitive information such as cryptographic keys and passwords required by SystemLink Enterprise will be stored as Kubernetes secrets on the cluster. SystemLink Enterprise supports configuring these secrets as part of Helm deployment.
+
+Download [systemlink-secrets.yaml](templates/systemlink-secrets.yaml). This file will hold the secrets for your SystemLink Enterprise deployment. As with systemlink-values.yaml, this file must be retained for the lifetime of your deployment. Care must be taken to control access to this file as it contains data that could compromise the security of the application.
+
+Refer to the [Required Secrets for SystemLink Enterprise](secrets/secrets.md) document for a detailed description of every secret required by the SystemLink Enterprise application.
+
+The systemlink-secrets.yaml file also contains detailed documentation. Every value in the file that must be configured is marked with a `!!TODO!!` comment. All values should be set and the `!!TODO!!` deleted prior to proceeding with the installation.
+
+Helm deployment of secrets is not required. To disable, simply set the `global.deploySecrets` value to `false` in systemlink-values.yaml. When choosing this option, it is up to you to ensure that all required secrets have been deployed to the cluster prior to installing the application.
+
+### Certificate Files
 
 This guide assumes that SystemLink Enterprise will be configured to store data to an external PostgresSQL database. The application will require a public certificate in order to authenticate with the database. You will need to obtain this certificate from your database administrator. This guide assumes that this file is named `postgres.pem`, but any name can be used.
 
@@ -60,13 +74,13 @@ SystemLink Enterprise will deploy this certificate as a ConfigMap resource. The 
 
 Rarely, deployments may also require a custom certificate authority in order to communicate with an OpenID Connect authorization server. Again, this is something you will need to obtain from the server administrator. This file can be deployed to the application by appending the following argument to any of the commands described below.
 
-```
+```bash
 --set-file webserver.additionalCaCertificates=oidc.pem
 ```
 
 ## Installation
 
-### Create a namespace
+### Create a Namespace
 
 NI recommends installing SystemLink enterprise to a dedicated namespace on the cluster. You should select a name for your namespace and create it using:
 
