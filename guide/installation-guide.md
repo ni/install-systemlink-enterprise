@@ -42,7 +42,9 @@ Some organizations may choose to mirror the public Helm repositories on an inter
 
 The installation of the SystemLink Enterprise product is configured using Helm values. These values are set in YAML files. This guide will walk through a common configuration and identify required values and common customizations.
 
-### Common Configuration
+### General Configuration
+
+Download [values.yaml](templates/systemlink-values.yaml). This file
 
 ### Secrets
 
@@ -88,14 +90,14 @@ SystemLink Enterprise requires some resources to be installed globally on the cl
 
 Prerequisites are installed using the systemlink-admin Helm chart.
 
-You will need download a copy of [admin-values.yaml](templates/admin-values.yaml) to deploy the configuration for these prerequisites. It should not be necessary to modify any of the defaults in this file.
+You will need download a copy of [systemlink-admin-values.yaml](templates/admin-values.yaml) to deploy the configuration for these prerequisites. It should not be necessary to modify any of the defaults in this file.
 
 Install prerequisites using the following commands:
 
 ```bash
 helm repo update
 
-helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --values admin-values.yaml
+helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --values systemlink-admin-values.yaml
 ```
 
 ### Install SystemLink Enterprise
@@ -107,7 +109,7 @@ The following commands can be used to install SystemLink Enterprise using the ty
 ```bash
 helm repo update
 
-helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values values.yaml --values secrets.yaml --set-file database.postgresCertificate=postgres.pem
+helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
 ```
 
 [Refer to the Helm documentation for additional information about the install command](https://helm.sh/docs/helm/helm_upgrade/).
@@ -131,7 +133,7 @@ To modify the configuration of the SystemLink application or to upgrade to a new
 ```bash
 helm repo update
 
-helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values values.yaml --values secrets.yaml --set-file database.postgresCertificate=postgres.pem
+helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
 ```
 
 Changes to the values files will be applied. New pods will be deployed as needed using the specified `<version>` using a rolling update strategy.
