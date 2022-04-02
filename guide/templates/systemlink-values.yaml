@@ -105,10 +105,10 @@ webserver:
   oidc:
     ## Required - Secret name that holds client ID, client secret, and JWKs.
     ##
-    secretName: "google-oidc-secret"
+    secretName: "oidc-secret"
     ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes.
     ##
-    issuer: "https://accounts.google.com/"
+    issuer: "https://oidc.example.com/"
     # provider: '<provider-config-json>'
     ## Optional - Claim to use for user ID.
     ##
