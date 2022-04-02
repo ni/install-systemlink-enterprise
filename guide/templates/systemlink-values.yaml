@@ -1,159 +1,267 @@
-# Default values for systemlink.
-# This is a YAML-formatted file.
-# Declare override values for variables.
+## Default values for systemlink.
+## This is a YAML-formatted file.
+## Declare override values for variables.
 
+## Global variables expected to be inherited from parent helm charts which apply to the entire application.
+##
 global:
-  hosts: ["sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"]
-  apiHosts: ["api-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"]
+  ## Hostnames for the cluster's UI ingress controller.
+  # !!!TODO!!! - Set this to the DNS address where the SystemLink UI will be hosted.
+  ##
+  hosts: &uiHosts ["systemlink.example.com"]
+  ## Hostnames for the cluster's API ingress controller.
+  # !!!TODO!!! - Set this to the DNS address to be used for communication between client systems and the SystemLink API.
+  ##
+  apiHosts: ["systemlink-api.example.com"]
+  ## Defines secrets required if containers are hosted on a private image repository.
+  ##
   imagePullSecrets: &pullSecretsRef
-  - name: aws-ecr-secret
   - name: niartifacts-secret
-  imageRegistry: "niartifacts.jfrog.io"
-  imageRepository: "rnd-docker-ci"
+  ## Overrides the default image registry.
+  # !!!TODO!!! - Use this override if mirroring the SystemLink container registry.
+  ##
+  ## imageRegistry: "niartifacts.jfrog.io/ni-docker"
+  # !!!TODO!!! - Set to false if you do not want to manage secrets as part of the Helm installation.
+  ##
   deploySecrets: true
 
+## Defines an initial administrator role mapping, allowing an initial user or users to access the system.
+## At least one user must be defined during installation to allow access to the application. The initial user(s) can then provision
+## access for further users. By default, users are only created on install, not during upgrades.
+##
 initialAdministratorMapping:
-  mappingValue: jd.robertson@ni.com
+  ## Overrides default behavior and creates or updates an administrator user mapping on upgrade.
+  # !!!TODO!!! - If true, the configured administrator will be reconfigured on upgrade.
+  ##
+  createOnUpgrade: false
+  ## The mapping type used to define the administrator user.
+  ##
+  mappingType: "oidc-claim"
+  ## The property used to match mappingValue.
+  ##
+  mappingKey: "email"
+  ## The property value used to identify admin users. This value is required when creating a new user mapping.
+  ## To avoid unwanted information disclosure, it is recommended to only set this value when creating a new mapping.
+  # !!!TODO!!! - Choose an initial system administrator here. You must configure an administrator to enable access
+  #   to the SystemLink application. This example shows configuring an administrator by email address, but any
+  #   OpenID Connect claim can be used to define this mapping.
+  ##
+  mappingValue: "user@example.com"
 
-# Shared database configuration.
+## Shared database configuration.
+##
 database:
-  # If using an externally managed Postgres database, this value can be used to define a public TLS certificate used
-  # to authenticate with that database. The following argument can be used to load a certificate file from disk as part of a
-  # Helm install/upgrade command:
-  #       --set-file database.postgresCertificate my-cert.pem
+  ## If using an externally managed Postgres database, this value can be used to define a public TLS certificate used
+  ## to authenticate with that database. The following argument can be used to load a certificate file from disk as part of a
+  ## Helm install/upgrade command:
+  ##       --set-file database.postgresCertificate my-cert.pem
+  ##
   postgresCertificate: ""
-  # Name that will be used for this certificate when mounted on disk.
+  ## Name that will be used for this certificate when mounted on disk.
+  ##
   postgresCertificateFileName: &postgresCertificateFileName "postgres-tls-certificate.pem"
-  # Name of the ConfigMap used to deploy the certificate.
+  ## Name of the ConfigMap used to deploy the certificate.
+  ##
   postgresCertificateConfigMapName: &postgresCertificateConfigMap "postgres-tls-certificate"
 
-# Work-around for rabbitmq deployment
-rabbitmq:
-  rbac:
-    create: false
-  persistence:
-    enabled: false
-  configuration: |-
-    {{- if not .Values.loadDefinition.enabled -}}
-    ## Username and password
-    ##
-    default_user = {{ .Values.auth.username }}
-    default_pass = CHANGEME
-    {{- end }}
-    {{- if .Values.clustering.enabled }}
-    ## Clustering
-    ##
-    #    cluster_formation.peer_discovery_backend  = rabbit_peer_discovery_k8s
-    #    cluster_formation.k8s.host = kubernetes.default.svc.{{ .Values.clusterDomain }}
-    #    cluster_formation.node_cleanup.interval = 10
-    #    cluster_formation.node_cleanup.only_log_warning = true
-    #    cluster_partition_handling = autoheal
-    {{- end }}
-    # queue master locator
-    queue_master_locator = min-masters
-    # enable guest user
-    loopback_users.guest = false
-    {{ tpl .Values.extraConfiguration . }}
-    {{- if .Values.auth.tls.enabled }}
-    ssl_options.verify = {{ .Values.auth.tls.sslOptionsVerify }}
-    listeners.ssl.default = {{ .Values.service.tlsPort }}
-    ssl_options.fail_if_no_peer_cert = {{ .Values.auth.tls.failIfNoPeerCert }}
-    ssl_options.cacertfile = /opt/bitnami/rabbitmq/certs/ca_certificate.pem
-    ssl_options.certfile = /opt/bitnami/rabbitmq/certs/server_certificate.pem
-    ssl_options.keyfile = /opt/bitnami/rabbitmq/certs/server_key.pem
-    {{- end }}
-    {{- if .Values.ldap.enabled }}
-    auth_backends.1 = rabbit_auth_backend_ldap
-    auth_backends.2 = internal
-    {{- range $index, $server := .Values.ldap.servers }}
-    auth_ldap.servers.{{ add $index 1 }} = {{ $server }}
-    {{- end }}
-    auth_ldap.port = {{ .Values.ldap.port }}
-    auth_ldap.user_dn_pattern = {{ .Values.ldap.user_dn_pattern  }}
-    {{- if .Values.ldap.tls.enabled }}
-    auth_ldap.use_ssl = true
-    {{- end }}
-    {{- end }}
-    {{- if .Values.metrics.enabled }}
-    ## Prometheus metrics
-    ##
-    prometheus.tcp.port = 9419
-    {{- end }}
-    {{- if .Values.memoryHighWatermark.enabled }}
-    ## Memory Threshold
-    ##
-    total_memory_available_override_value = {{ include "rabbitmq.toBytes" .Values.resources.limits.memory }}
-    vm_memory_high_watermark.{{ .Values.memoryHighWatermark.type }} = {{ .Values.memoryHighWatermark.value }}
-    {{- end }}
-
+## MinIO block storage configuration.
+##
 minio:
-  # Setup user credentials
+  ## Setup user credentials
+  ##
   auth:
     existingSecret: minio-credentials
   ingress:
+    ## Enable ingress controller resource
+    # !!!TODO!!! - Enable this toggle and configure a hostname to allow access to the MinIO UI
+    enabled: false
     ## @param ingress.hostname Default host for the ingress resource
     ##
-    hostname: minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com
+    hostname: "minio.example.com"
 
   ## Configure the ingress resource that allows you to access the
   ## MinIO&reg; API. Set up the URL
   ## ref: https://kubernetes.io/docs/user-guide/ingress/
   ##
   apiIngress:
-    ## @param apiIngress.hostname Default host for the ingress resource
+    ## Enable ingress controller resource
     ##
-    hostname: api-minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com
-  # Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode)
+    enabled: true
+    ## Default host for the ingress resource
+    # !!TODO!! - Set this to the DNS address where the MinIO API will be hosted.
+    ##
+    hostname: &minioApiHost "minio-api.example.com"
+  ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode)
+  ##
   defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
 
+## Core configuration for the SystemLink web application.
+##
 webserver:
-  # Values used to configure OIDC providers.
+  ## Values used to configure OIDC providers.
+  # !!!TODO!!! - Configure you OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
+  #    Consult your provider's documentation regarding exposing scopes to clients.
+  ##
   oidc:
+    ## Required - Secret name that holds client ID, client secret, and JWKs.
+    ##
+    secretName: "google-oidc-secret"
+    ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes
+    ##
+    issuer: "https://accounts.google.com/"
+    # provider: '<provider-config-json>'
+    ## Optional - Claim to use for user ID
+    ##
+    # userIDClaim: "email"
+    ## Optional - Claim to use for username
+    ##
+    # usernameClaim: "name"
+    ## Optional - Scopes requested from the provider
+    ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
+    ##
     scope: "openid email profile"
-    # Required - Secret name that holds client ID, client secret,
-    # and ID token key management JWKs
-    secretName: "azure-oidc"
-    # Required - Include either issuer URL (for discovery) or the
-    # provider configuration (wrapped in single quotes)
-    issuer: "https://login.microsoftonline.com/87ba1f9a-44cd-43a6-b008-6fdb45a5204e/v2.0"
 
+## Configuration for test result storage.
+##
 testmonitorservice:
+  ## Database configuration
+  ##
   database:
-    #connectionInfo:
-    #    secretName: testmonitorservicedb-connection
+    ## The PostgreSQL database connection string
+    ## NOTE: If specified, the `database.connectionInfo` parameters are ignored. If
+    ## `database.tls.enabled` is set to `true`, the connection string must include the
+    ## appropriate SSL Mode (Prefer or Require).
+    # !!!TODO!!! - If connecting to an external PostgresSQL database, you must configure one of
+    #    the connectionString and connectionInfo sections with the details of your database.
+    ##
     connectionString:
       secretName: testmonitorservicedb-connection
       connectionStringKey: connection-string
-    tls:
-      enabled: true
-      existingConfigMap: *postgresCertificateConfigMap
-      certificateSubPath: *postgresCertificateFileName
+      ## The PostgreSQL database connection info
+    ## NOTE: If the `database.connectionString` parameters are specified, the `database.connectionInfo`
+    ## parameters are ignored.
+    ##
+    # connectionInfo:
+    #     ## PostgreSQL hostname
+    #     ##
+    #     host: ""
+    #     ## PostgreSQL port
+    #     ##
+    #     port: ""
+    #     ## PostgreSQL database name
+    #     ##
+    #     dbName: nisystemlink
+    #     ## PostgreSQL username
+    #     ##
+    #     user: nisystemlink
+    #     ## The name of an existing secret with PostgreSQL connection credentials
+    #     ##
+    #     secretName: ""
+    #     ## Password key to be retrieved from existing secret
+    #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    #     ##
+    #     passwordKey: password
+  ## The PostgreSQL database TLS configuration
+  ##
+  tls:
+    ## Enable TLS communication with the PostgreSQL database.
+    ## NOTE: If set to true, the public TLS certificate from the server (.pem or .crt)
+    ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
+    ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
+    ## parameters respectively.
+    ##
+    enabled: true
+    ## The name of an existing ConfigMap with a TLS certificate for the database.
+    ## NOTE: Ignored if `database.tls.enabled` is set to `false`
+    ##
+    existingConfigMap: "postgres-tls-certificate"
+    ## Certificate key to be retrieved from existing ConfigMap
+    ## NOTE: Ignored if `database.tls.enabled` is set to `false`
+    ##
+    certificateSubPath: "postgres-tls-certificate.pem"
 
+## Configuration for the Grafana dashboard provider.
+##
 dashboardhost:
+  ## Name to use for the database access secret.
+  ##
   databaseSecretName: &dashboardhostdbSecret "dashboardhost-postgres-secrets"
 
-  # Grafana community chart configuration. See https://github.com/grafana/helm-charts/blob/main/charts/grafana/README.md
-  # for more documentation and examples for these values
-  grafana:
-    ingress:
-      enabled: true
-      className: "nginx"
-      # pathType is only for k8s >= 1.1=
-      pathType: Prefix
-      # ingress accepted hostnames
-      hosts:
-        - "sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"
+  ## Override Grafana ingress to enable pulling in globally-defined ingress annotation
+  ## The Grafana ingress is disabled by default so no futher configuration is required under the "grafana" section
+  ##
+  ingress:
+    ## Enable the ingress.
+    ##
+    enabled: true
+    ## For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
+    ## See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
+    # !!!TODO!!! - Configure you ingress controller class name.
+    ##
+    ingressClassName: "nginx"
+    ## Values can be templated
+    ##
+    annotations: {}
+    labels: {}
+    path: /dashboardhost
+    ## pathType is only for k8s >= 1.1=
+    ##
+    pathType: Prefix
+    hosts: *uiHosts
+    ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
+    ##
+    extraPaths: []
+    tls: []
 
-    # This sets the GF_INSTALL_PLUGINS env variable
-    # https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
+  ## Grafana community chart configuration. See https://github.com/grafana/helm-charts/blob/main/charts/grafana/README.md
+  ## for more documentation and examples for these values.
+  ##
+  grafana:
+    ## This sets the GF_INSTALL_PLUGINS env variable
+    ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
+    ##
     plugins:
       - https://repos.natinst.com/artifactory/rnd-app-builds/grafana-plugins/systemlink-notebook-datasource/systemlink-notebook-datasource-latest.zip;systemlink-notebook-datasource
 
-    # Node count. This must be set to 1 if Grafana is not configured to use an external database.
+    ## Node count. This must be set to 1 if Grafana is not configured to use an external database.
+    ##
     replicas: 2
 
-    # Additional grafana server secret mounts
-    # Defines additional mounts with secrets. Secrets must be manually created in the namespace
+    ## Use an existing secret for the admin user.
+    # !!!TODO!!! - Uncomment this section to use a different secret to configure the admin user.
+    ##
+    # admin:
+    #   ## The name of an existing secret containing the admin credentials.
+    #   existingSecret: "dashboardhost-login"
+    #   ## The key in the existing admin secret containing the username.
+    #   userKey: admin-user
+    #   ## The key in the existing admin secret containing the password.
+    #   passwordKey: admin-password
+
+    # ## Pass the plugins you want installed as a list.
+    # !!!TODO!!! - Uncomment this section to specify plugins to install.
+    ##
+    # plugins: []
+    #   # - digrich-bubblechart-panel
+    #   # - grafana-clock-panel
+
+    # ## When adding additional datasources, take care to leave the the systemlink-notebook-datasource entry in place, and add
+    # ## new entries after it.
+    # !!!TODO!!! - Uncomment this to provision additional datasources (the chart provisions systemlink-notebook-datasource by default)
+    ##
+    # datasources:
+    #   datasources.yaml:
+    #     apiVersion: 1
+    #     datasources:
+    #     - name: SystemLink Notebooks
+    #       type: systemlink-notebook-datasource
+    #       access: direct
+    #       url: /
+    #       version: 1
+
+    ## Defines additional mounts with secrets.
+    # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    ##
     extraSecretMounts:
       - name: *dashboardhostdbSecret
         secretName: *dashboardhostdbSecret
@@ -161,8 +269,9 @@ dashboardhost:
         mountPath: /etc/secrets/dashboardhost
         readOnly: true
 
-    # Additional grafana server configMap volume mounts.
-    # Defines additional mounts with configmaps. Configmaps must be manually created in the namespace.
+    ## Defines additional mounts with configmaps.
+    # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    ##
     extraConfigmapMounts:
       - name: *postgresCertificateConfigMap
         mountPath: /etc/ssl/certs/dashboardhost/
@@ -170,54 +279,98 @@ dashboardhost:
         configMap: *postgresCertificateConfigMap
         readOnly: true
 
+    ## Customize the grafana.ini file
+    ##
     grafana.ini:
       server:
-        domain: sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com
+        ## Hostname for the Grafana instance.
+        # !!!TODO!!! - The DNS address of the SystemLink application must be duplicated here.
+        ##
+        domain: "systemlink.example.com"
 
-      # Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
+      ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
+      # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+      ##
       database:
-        # Either mysql, postgres or sqlite3
+        ## Either mysql, postgres or sqlite3
+        ##
         type: postgres
-        # The database user (not applicable for sqlite3).
+        ## The database user (not applicable for sqlite3).
+        ##
         user: $__file{/etc/secrets/dashboardhost/user}
-        # The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;"""
+        ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;"""
+        ##
         password: $__file{/etc/secrets/dashboardhost/password}
-        # Only applicable to MySQL or Postgres. Includes IP or hostname and port or in case of Unix sockets the path to it.
-        # For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock
+        ## Only applicable to MySQL or Postgres. Includes IP or hostname and port or in case of Unix sockets the path to it.
+        ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock
+        ##
         host: $__file{/etc/secrets/dashboardhost/host}
-        # The name of the Grafana database. Leave it set to grafana (default) or some other name.
-        # name: database-name
-        # Use either URL or the other fields above to configure the database.
-        # url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
-        # For Postgres, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
+        ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
+        ## name: database-name
+        ## Use either URL or the other fields above to configure the database.
+        ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
+        ## For Postgres, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
+        ##
         ssl_mode: require
-        # The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
+        ## The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
+        # !!!TODO!!! - The filename here must mach database.postgresCertificateFileName.
+        ##
         ca_cert_path: /etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem
 
+## Configuration for the Data Frame service.
+##
 dataframeservice:
-  database:
-    useCustom: false
-    customConnectionSecret:
-      name: "nidataframe-mongodb-connection"
-      key: "connectionString"
+  ## Configure S3/MinIO access.
   s3:
+    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ##
     bucket: "systemlink-dataframe"
-    host: "api-minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"
+    ## This should just be the name of the scheme, without the trailing ://
+    ##
+    schemeName: "https"
+    ## Hostname for S3 API access.
+    ##
+    host: *minioApiHost
+    ## S3 Port
+    ##
+    port: 443
 
-# Configure SaltMaster to use an IP address from the systemlink pool so that MetalLB will route TCP traffic appropriately
+## Salt configuration.
+##
 saltmaster:
+  ## Configure the TCP ingress for the Salt API.
+  ##
   serviceTCP:
     annotations:
+      # !!!TODO!!! - ???
       metallb.universe.tf/address-pool: systemlink
 
-# Configure FileIngestion to use minio as the s3 host
+## File upload configuration.
+##
 fileingestionservices:
+  ## Configure S3/MinIO access.
+  ##
   s3:
-    # Use a different credentials secret that contains the minio username & password
+    ## Secret name for S3 credentials.
+    ##
     existingSecret: "fileingestion-minio-keys"
+    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ##
+    bucket: "systemlink-dataframe"
+    ## Set this to true to limit each user to a maximum of 1Gb of file storage.
     storageLimitsEnabled: false
-    host: "api-minio-sle-install.systemlink-enterprise.grl-us1.uat.k8s.natinst.com"
+    ## S3 connection scheme.
+    ##
+    schemeName: "https"
+    ## Hostname for S3 API access.
+    ##
+    host: *minioApiHost
+    ## S3 Port
+    ##
+    port: 443
 
+## Configuration for Jupyterhub
+##
 sl-jupyterhub:
   jupyterhub:
     imagePullSecrets: *pullSecretsRef
