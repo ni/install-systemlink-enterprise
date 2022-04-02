@@ -5,11 +5,11 @@
 ## Global variables expected to be inherited from parent helm charts which apply to the entire application.
 ##
 global:
-  ## Hostnames for the cluster's UI ingress controller.
+  ## Host names for the cluster's UI ingress controller.
   # !!!TODO!!! - Set this to the DNS address where the SystemLink UI will be hosted.
   ##
   hosts: &uiHosts ["systemlink.example.com"]
-  ## Hostnames for the cluster's API ingress controller.
+  ## Host names for the cluster's API ingress controller.
   # !!!TODO!!! - Set this to the DNS address to be used for communication between client systems and the SystemLink API.
   ##
   apiHosts: ["systemlink-api.example.com"]
@@ -51,7 +51,7 @@ initialAdministratorMapping:
 ## Shared database configuration.
 ##
 database:
-  ## If using an externally managed Postgres database, this value can be used to define a public TLS certificate used
+  ## If using an externally managed PostgresSQL database, this value can be used to define a public TLS certificate used
   ## to authenticate with that database. The following argument can be used to load a certificate file from disk as part of a
   ## Helm install/upgrade command:
   ##       --set-file database.postgresCertificate my-cert.pem
@@ -73,7 +73,7 @@ minio:
     existingSecret: minio-credentials
   ingress:
     ## Enable ingress controller resource
-    # !!!TODO!!! - Enable this toggle and configure a hostname to allow access to the MinIO UI
+    # !!!TODO!!! - Enable this toggle and configure a host name to allow access to the MinIO UI
     enabled: false
     ## @param ingress.hostname Default host for the ingress resource
     ##
@@ -113,7 +113,7 @@ webserver:
     ## Optional - Claim to use for user ID
     ##
     # userIDClaim: "email"
-    ## Optional - Claim to use for username
+    ## Optional - Claim to use for user name.
     ##
     # usernameClaim: "name"
     ## Optional - Scopes requested from the provider
@@ -142,7 +142,7 @@ testmonitorservice:
     ## parameters are ignored.
     ##
     # connectionInfo:
-    #     ## PostgreSQL hostname
+    #     ## PostgreSQL host name
     #     ##
     #     host: ""
     #     ## PostgreSQL port
@@ -151,7 +151,7 @@ testmonitorservice:
     #     ## PostgreSQL database name
     #     ##
     #     dbName: nisystemlink
-    #     ## PostgreSQL username
+    #     ## PostgreSQL user name
     #     ##
     #     user: nisystemlink
     #     ## The name of an existing secret with PostgreSQL connection credentials
@@ -188,7 +188,7 @@ dashboardhost:
   databaseSecretName: &dashboardhostdbSecret "dashboardhost-postgres-secrets"
 
   ## Override Grafana ingress to enable pulling in globally-defined ingress annotation
-  ## The Grafana ingress is disabled by default so no futher configuration is required under the "grafana" section
+  ## The Grafana ingress is disabled by default so no further configuration is required under the "grafana" section
   ##
   ingress:
     ## Enable the ingress.
@@ -217,7 +217,7 @@ dashboardhost:
   ## for more documentation and examples for these values.
   ##
   grafana:
-    ## This sets the GF_INSTALL_PLUGINS env variable
+    ## This sets the GF_INSTALL_PLUGINS environment variable.
     ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
     ##
     plugins:
@@ -233,7 +233,7 @@ dashboardhost:
     # admin:
     #   ## The name of an existing secret containing the admin credentials.
     #   existingSecret: "dashboardhost-login"
-    #   ## The key in the existing admin secret containing the username.
+    #   ## The key in the existing admin secret containing the user name.
     #   userKey: admin-user
     #   ## The key in the existing admin secret containing the password.
     #   passwordKey: admin-password
@@ -245,9 +245,9 @@ dashboardhost:
     #   # - digrich-bubblechart-panel
     #   # - grafana-clock-panel
 
-    # ## When adding additional datasources, take care to leave the the systemlink-notebook-datasource entry in place, and add
+    # ## When adding additional data sources, take care to leave the systemlink-notebook-datasource entry in place, and add
     # ## new entries after it.
-    # !!!TODO!!! - Uncomment this to provision additional datasources (the chart provisions systemlink-notebook-datasource by default)
+    # !!!TODO!!! - Uncomment this to provision additional data sources (the chart provisions systemlink-notebook-datasource by default)
     ##
     # datasources:
     #   datasources.yaml:
@@ -259,7 +259,7 @@ dashboardhost:
     #       url: /
     #       version: 1
 
-    ## Defines additional mounts with secrets.
+    ## Defines additional mounts from Secrets.
     # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
     ##
     extraSecretMounts:
@@ -269,7 +269,7 @@ dashboardhost:
         mountPath: /etc/secrets/dashboardhost
         readOnly: true
 
-    ## Defines additional mounts with configmaps.
+    ## Defines additional mounts from ConfigMaps.
     # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
     ##
     extraConfigmapMounts:
@@ -283,7 +283,7 @@ dashboardhost:
     ##
     grafana.ini:
       server:
-        ## Hostname for the Grafana instance.
+        ## Host name for the Grafana instance.
         # !!!TODO!!! - The DNS address of the SystemLink application must be duplicated here.
         ##
         domain: "systemlink.example.com"
@@ -301,7 +301,7 @@ dashboardhost:
         ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;"""
         ##
         password: $__file{/etc/secrets/dashboardhost/password}
-        ## Only applicable to MySQL or Postgres. Includes IP or hostname and port or in case of Unix sockets the path to it.
+        ## Only applicable to MySQL or Postgres. Includes IP or host name and port or in case of Unix sockets the path to it.
         ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock
         ##
         host: $__file{/etc/secrets/dashboardhost/host}
@@ -309,7 +309,7 @@ dashboardhost:
         ## name: database-name
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
-        ## For Postgres, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
+        ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
         ##
         ssl_mode: require
         ## The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
@@ -328,10 +328,10 @@ dataframeservice:
     ## This should just be the name of the scheme, without the trailing ://
     ##
     schemeName: "https"
-    ## Hostname for S3 API access.
+    ## Host name for S3 API access.
     ##
     host: *minioApiHost
-    ## S3 Port
+    ## S3 Port.
     ##
     port: 443
 
@@ -362,14 +362,14 @@ fileingestionservices:
     ## S3 connection scheme.
     ##
     schemeName: "https"
-    ## Hostname for S3 API access.
+    ## Host name for S3 API access.
     ##
     host: *minioApiHost
     ## S3 Port
     ##
     port: 443
 
-## Configuration for Jupyterhub
+## Configuration for JupyterHub
 ##
 sl-jupyterhub:
   jupyterhub:
