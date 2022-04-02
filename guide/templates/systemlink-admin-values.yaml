@@ -11,3 +11,6 @@ strimzi-kafka-operator:
   watchAnyNamespace: true
   podSecurityContext: 
     runAsNonRoot: true
+
+foo: {}
+ - bar: test
