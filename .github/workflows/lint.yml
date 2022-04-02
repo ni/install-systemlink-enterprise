@@ -8,8 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  markdownLint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: articulate/actions-markdownlint@v1
+  yamlLint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ibiqlik/action-yamllint@v3
