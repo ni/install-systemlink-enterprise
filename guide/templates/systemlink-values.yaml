@@ -67,31 +67,31 @@ database:
 ## MinIO block storage configuration.
 ##
 minio:
-  ## Setup user credentials
+  ## Setup user credentials.
   ##
   auth:
     existingSecret: minio-credentials
   ingress:
-    ## Enable ingress controller resource
+    ## Enable ingress controller resource.
     # !!!TODO!!! - Enable this toggle and configure a host name to allow access to the MinIO UI
+    ##
     enabled: false
-    ## @param ingress.hostname Default host for the ingress resource
+    ## @param ingress.hostname Default host for the ingress resource.
     ##
     hostname: "minio.example.com"
 
-  ## Configure the ingress resource that allows you to access the
-  ## MinIO&reg; API. Set up the URL
+  ## Configure the ingress resource that allows you to access the MinIO API.
   ## ref: https://kubernetes.io/docs/user-guide/ingress/
   ##
   apiIngress:
-    ## Enable ingress controller resource
+    ## Enable ingress controller resource.
     ##
     enabled: true
-    ## Default host for the ingress resource
+    ## Default host for the ingress resource.
     # !!TODO!! - Set this to the DNS address where the MinIO API will be hosted.
     ##
     hostname: &minioApiHost "minio-api.example.com"
-  ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode)
+  ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
   defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
 
@@ -106,17 +106,17 @@ webserver:
     ## Required - Secret name that holds client ID, client secret, and JWKs.
     ##
     secretName: "google-oidc-secret"
-    ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes
+    ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes.
     ##
     issuer: "https://accounts.google.com/"
     # provider: '<provider-config-json>'
-    ## Optional - Claim to use for user ID
+    ## Optional - Claim to use for user ID.
     ##
     # userIDClaim: "email"
     ## Optional - Claim to use for user name.
     ##
     # usernameClaim: "name"
-    ## Optional - Scopes requested from the provider
+    ## Optional - Scopes requested from the provider.
     ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
     ##
     scope: "openid email profile"
@@ -128,8 +128,8 @@ testmonitorservice:
   ##
   database:
     ## The PostgreSQL database connection string
-    ## NOTE: If specified, the `database.connectionInfo` parameters are ignored. If
-    ## `database.tls.enabled` is set to `true`, the connection string must include the
+    ## NOTE: If specified, the `database.connectionInfo` parameters are ignored.
+    ## If `database.tls.enabled` is set to `true`, the connection string must include the
     ## appropriate SSL Mode (Prefer or Require).
     # !!!TODO!!! - If connecting to an external PostgresSQL database, you must configure one of
     #    the connectionString and connectionInfo sections with the details of your database.
@@ -137,27 +137,27 @@ testmonitorservice:
     connectionString:
       secretName: testmonitorservicedb-connection
       connectionStringKey: connection-string
-      ## The PostgreSQL database connection info
+    ## The PostgreSQL database connection info.
     ## NOTE: If the `database.connectionString` parameters are specified, the `database.connectionInfo`
     ## parameters are ignored.
     ##
     # connectionInfo:
-    #     ## PostgreSQL host name
+    #     ## PostgreSQL host name.
     #     ##
     #     host: ""
-    #     ## PostgreSQL port
+    #     ## PostgreSQL port.
     #     ##
     #     port: ""
-    #     ## PostgreSQL database name
+    #     ## PostgreSQL database name.
     #     ##
     #     dbName: nisystemlink
-    #     ## PostgreSQL user name
+    #     ## PostgreSQL user name.
     #     ##
     #     user: nisystemlink
-    #     ## The name of an existing secret with PostgreSQL connection credentials
+    #     ## The name of an existing secret with PostgreSQL connection credentials.
     #     ##
     #     secretName: ""
-    #     ## Password key to be retrieved from existing secret
+    #     ## Password key to be retrieved from existing secret.
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     passwordKey: password
@@ -172,11 +172,9 @@ testmonitorservice:
     ##
     enabled: true
     ## The name of an existing ConfigMap with a TLS certificate for the database.
-    ## NOTE: Ignored if `database.tls.enabled` is set to `false`
     ##
     existingConfigMap: "postgres-tls-certificate"
     ## Certificate key to be retrieved from existing ConfigMap
-    ## NOTE: Ignored if `database.tls.enabled` is set to `false`
     ##
     certificateSubPath: "postgres-tls-certificate.pem"
 
@@ -187,8 +185,8 @@ dashboardhost:
   ##
   databaseSecretName: &dashboardhostdbSecret "dashboardhost-postgres-secrets"
 
-  ## Override Grafana ingress to enable pulling in globally-defined ingress annotation
-  ## The Grafana ingress is disabled by default so no further configuration is required under the "grafana" section
+  ## Override Grafana ingress to enable pulling in globally-defined ingress annotation.
+  ## The Grafana ingress is disabled by default so no further configuration is required under the "grafana" section.
   ##
   ingress:
     ## Enable the ingress.
@@ -199,12 +197,12 @@ dashboardhost:
     # !!!TODO!!! - Configure you ingress controller class name.
     ##
     ingressClassName: "nginx"
-    ## Values can be templated
+    ## Values can be templated.
     ##
     annotations: {}
     labels: {}
     path: /dashboardhost
-    ## pathType is only for k8s >= 1.1=
+    ## pathType is only for k8s >= 1.1=.
     ##
     pathType: Prefix
     hosts: *uiHosts
@@ -245,8 +243,8 @@ dashboardhost:
     #   # - digrich-bubblechart-panel
     #   # - grafana-clock-panel
 
-    # ## When adding additional data sources, take care to leave the systemlink-notebook-datasource entry in place, and add
-    # ## new entries after it.
+    ## When adding additional data sources, take care to leave the systemlink-notebook-datasource entry in place, and add
+    ## new entries after it.
     # !!!TODO!!! - Uncomment this to provision additional data sources (the chart provisions systemlink-notebook-datasource by default)
     ##
     # datasources:
@@ -279,7 +277,7 @@ dashboardhost:
         configMap: *postgresCertificateConfigMap
         readOnly: true
 
-    ## Customize the grafana.ini file
+    ## Customize the grafana.ini file.
     ##
     grafana.ini:
       server:
@@ -292,21 +290,22 @@ dashboardhost:
       # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
       ##
       database:
-        ## Either mysql, postgres or sqlite3
+        ## Either mysql, postgres or sqlite3.
         ##
         type: postgres
         ## The database user (not applicable for sqlite3).
         ##
         user: $__file{/etc/secrets/dashboardhost/user}
-        ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;"""
+        ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;""".
         ##
         password: $__file{/etc/secrets/dashboardhost/password}
         ## Only applicable to MySQL or Postgres. Includes IP or host name and port or in case of Unix sockets the path to it.
-        ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock
+        ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock.
         ##
         host: $__file{/etc/secrets/dashboardhost/host}
         ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
-        ## name: database-name
+        ##
+        # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
         ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
@@ -325,7 +324,7 @@ dataframeservice:
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
     bucket: "systemlink-dataframe"
-    ## This should just be the name of the scheme, without the trailing ://
+    ## This should just be the name of the scheme, without the trailing ://.
     ##
     schemeName: "https"
     ## Host name for S3 API access.
@@ -358,6 +357,7 @@ fileingestionservices:
     ##
     bucket: "systemlink-dataframe"
     ## Set this to true to limit each user to a maximum of 1Gb of file storage.
+    ##
     storageLimitsEnabled: false
     ## S3 connection scheme.
     ##
