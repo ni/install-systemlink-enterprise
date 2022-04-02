@@ -1,11 +1,13 @@
-# Default values for systemlink-admin.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+## Default values for systemlink-admin.
+## This is a YAML-formatted file.
+## Declare variables to be passed into your templates.
 
-# Configuring Strimzi Kafka:
-# https://github.com/strimzi/strimzi-kafka-operator/tree/main/helm-charts/helm3/strimzi-kafka-operator#configuration
+## Configuring Strimzi Kafka:
+## https://github.com/strimzi/strimzi-kafka-operator/tree/main/helm-charts/helm3/strimzi-kafka-operator#configuration
+##
 strimzi-kafka-operator:
-  # Watch the whole Kubernetes cluster
+  ## Watch the whole Kubernetes cluster
+  ##
   watchAnyNamespace: true
   podSecurityContext: 
     runAsNonRoot: true
