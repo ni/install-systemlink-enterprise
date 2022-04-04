@@ -15,7 +15,7 @@ global:
   apiHosts: ["systemlink-api.example.com"]
   ## Defines secrets required if containers are hosted on a private image repository.
   ##
-  imagePullSecrets: &pullSecretsRef ["niartifacts-secret"]
+  imagePullSecrets: &pullSecrets ["niartifacts-secret"]
   ## Overrides the default image registry.
   # !!!TODO!!! - Use this override if mirroring the SystemLink container registry.
   ##
@@ -215,6 +215,13 @@ dashboardhost:
   ## for more documentation and examples for these values.
   ##
   grafana:
+
+    ## Configure access to the Grafana container.
+    ##
+    image:
+      ## Image pull secrets requried by Grafana
+      pullSecrets: *pullSecrets
+
     ## This sets the GF_INSTALL_PLUGINS environment variable.
     ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
     ##
@@ -377,4 +384,4 @@ fileingestionservices:
 ##
 sl-jupyterhub:
   jupyterhub:
-    imagePullSecrets: *pullSecretsRef
+    imagePullSecrets: *pullSecrets
