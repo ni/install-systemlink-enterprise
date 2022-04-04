@@ -4,7 +4,21 @@
 
 ### Cluster Requirements
 
-!!!TODO!!!
+SystemLink Enterprise requires a Kubernetes cluster with the following minimum requirements:
+
+TODO: Define minimum requirements.
+
+Cluster setup is beyond the scope of this document.
+
+The SystemLink Enterprise helm charts currently supports the Nginx ingress controller. It may be possible to use other ingress controllers by customizing ingress annotations in the Helm values file, but this is not officially supported.
+
+### External Dependencies
+
+SystemLink Enterprise supports authentication through the OpenID Connect protocol. An external authentication server must be provided.
+
+SystemLink Enterprise requires an external PostgresSQL Server for data storage.
+
+Refer to the [Commonly Modified Settings for SystemLink Enterprise](configuration/common-configuration.md) document for more information on connection SystemLink to these resources.
 
 ### Installing Helm
 

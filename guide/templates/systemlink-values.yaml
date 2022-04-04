@@ -20,6 +20,25 @@ global:
   # !!!TODO!!! - Use this override if mirroring the SystemLink container registry.
   ##
   ## imageRegistry: "niartifacts.jfrog.io/ni-docker"
+  ## Ingress settings that apply globally.
+  # !!!TODO!!! - Use the following section to apply annotation-based configuration to all Systemlink ingresses.
+  #    Configuration is specific to the ingress controller, and the defautlts will be sufficient for many deployments.
+  ##
+  ingress:
+    ## Ingress settings that apply to the apiHosts endpoints.
+    ##
+    api:
+      ## Annotations for the ingress.
+      ##
+      annotations: {}
+    ## Ingress settings that apply to the hosts endpoints.
+    ##
+    ui:
+      ## @param global.ingress.ui.annotations Annotations for the ingress.
+      ##
+      annotations: {}
+  ## Disable secret deployment if you want to manually manage secrets on the cluster.
+  ## WARNING: Changing this value from true to false during an upgrade will delete existing secrets.
   # !!!TODO!!! - Set to false if you do not want to manage secrets as part of the Helm installation.
   ##
   deploySecrets: true
