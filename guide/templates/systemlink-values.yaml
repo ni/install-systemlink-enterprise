@@ -15,8 +15,7 @@ global:
   apiHosts: ["systemlink-api.example.com"]
   ## Defines secrets required if containers are hosted on a private image repository.
   ##
-  imagePullSecrets: &pullSecretsRef
-  - name: niartifacts-secret
+  imagePullSecrets: &pullSecretsRef ["niartifacts-secret"]
   ## Overrides the default image registry.
   # !!!TODO!!! - Use this override if mirroring the SystemLink container registry.
   ##
