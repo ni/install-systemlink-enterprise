@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
         "bitnami",
+        "jwks",
         "kubectl",
         "Kubernetes",
+        "minio",
         "oidc",
         "systemlink"
     ]
