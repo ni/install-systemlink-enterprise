@@ -27,6 +27,8 @@ This will be the UI hostname. The other host names can then be built off of this
 
 The process for configuring routing for these host names and the ingress controller for your cluster are beyond the scope of this document.
 
+Finally, it is necessary to manually set `dashboardhost.grafana.grafana.ini.server.domain` value in _systemlink-secrets.yaml` to be the UI host.
+
 ## Authentication
 
 ### OpenID Connect
@@ -71,7 +73,23 @@ More information on assigning users to roles in the SystemLink application can b
 
 ## External PostgresSQL Instance
 
-TODO
+SystemLink Enterprise can store data from its Test Monitor and Dashboard services on an external PostgresSQL server. For this configuration you will need the host name of the database server and at least one set of credentials with access to the database server.
+
+You may also require a public certificate for TLS authentication with the server. Refer to the section on Certificate Files in the [installation guide](../installation-guide.md) for details on deploying this certificate.
+
+### Configuring the Test Monitor Service
+
+**Option #1: Connection String
+
+The Test Monitor service can make use of a PostgresSQL connection string stored as a Kubernetes secret. You can deploy this secret by configuring the `testmonitor.secrets.database.connectionString` value in _systemlink-secrets.yaml_. If not managing secrets in the Helm chart, you will instead need to manually create this secret.
+
+**Option #2: Connection Paramaters
+
+Alternatively, you can configure the invdividual connection parameters for the database in the Helm chart. In _systemlink-values.yaml_, comment out the `testmonitor.database.connectionString` group and uncomment the `testmonitor.database.connectionInfo` group. Add the required parameters in the group. You will also need to configure `testmonitor.secrets.database.connectionPassword` in _systemlink-secrets.yaml_ or else create the required secret manually.
+
+### Configuring the Dashboard Service
+
+The Dashboard service requires the hostname and credentials to be provided as a secret. You can configure this secret using the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_ if managing secrets with Helm. You will also need to ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.gfrafan.extraConfigmapMounts` configurations in _systemlink-values.yaml_ are enabled.
 
 ## Saltmaster TCP access
 
