@@ -1,11 +1,14 @@
 {
     "cSpell.words": [
         "bitnami",
+        "dashboardhost",
+        "grafana",
         "jwks",
         "kubectl",
         "Kubernetes",
         "minio",
         "oidc",
-        "systemlink"
+        "systemlink",
+        "testmonitor"
     ]
 }

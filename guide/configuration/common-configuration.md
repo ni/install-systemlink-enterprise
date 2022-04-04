@@ -83,14 +83,14 @@ You may also require a public certificate for TLS authentication with the server
 
 The Test Monitor service can make use of a PostgresSQL connection string stored as a Kubernetes secret. You can deploy this secret by configuring the `testmonitor.secrets.database.connectionString` value in _systemlink-secrets.yaml_. If not managing secrets in the Helm chart, you will instead need to manually create this secret.
 
-**Option #2: Connection Paramaters
+**Option #2: Connection Parameters
 
-Alternatively, you can configure the invdividual connection parameters for the database in the Helm chart. In _systemlink-values.yaml_, comment out the `testmonitor.database.connectionString` group and uncomment the `testmonitor.database.connectionInfo` group. Add the required parameters in the group. You will also need to configure `testmonitor.secrets.database.connectionPassword` in _systemlink-secrets.yaml_ or else create the required secret manually.
+Alternatively, you can configure the individual connection parameters for the database in the Helm chart. In _systemlink-values.yaml_, comment out the `testmonitor.database.connectionString` group and uncomment the `testmonitor.database.connectionInfo` group. Add the required parameters in the group. You will also need to configure `testmonitor.secrets.database.connectionPassword` in _systemlink-secrets.yaml_ or else create the required secret manually.
 
 ### Configuring the Dashboard Service
 
-The Dashboard service requires the hostname and credentials to be provided as a secret. You can configure this secret using the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_ if managing secrets with Helm. You will also need to ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.gfrafan.extraConfigmapMounts` configurations in _systemlink-values.yaml_ are enabled.
+The Dashboard service requires the hostname and credentials to be provided as a secret. You can configure this secret using the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_ if managing secrets with Helm. You will also need to ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations in _systemlink-values.yaml_ are enabled.
 
-## Saltmaster TCP access
+## SaltMaster TCP access
 
 TODO
