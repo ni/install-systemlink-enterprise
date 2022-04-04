@@ -25,6 +25,32 @@ global:
   ##
   deploySecrets: true
 
+## Core configuration for the SystemLink web application.
+##
+webserver:
+  ## Values used to configure OIDC providers.
+  # !!!TODO!!! - Configure you OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
+  #    Consult your provider's documentation regarding exposing scopes to clients.
+  ##
+  oidc:
+    ## Required - Secret name that holds client ID, client secret, and JWKs.
+    ##
+    secretName: "oidc-secret"
+    ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes.
+    ##
+    issuer: "https://oidc.example.com/"
+    # provider: '<provider-config-json>'
+    ## Optional - Claim to use for user ID.
+    ##
+    # userIDClaim: "email"
+    ## Optional - Claim to use for user name.
+    ##
+    # usernameClaim: "name"
+    ## Optional - Scopes requested from the provider.
+    ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
+    ##
+    scope: "openid email profile"
+
 ## Defines an initial administrator role mapping, allowing an initial user or users to access the system.
 ## At least one user must be defined during installation to allow access to the application. The initial user(s) can then provision
 ## access for further users. By default, users are only created on install, not during upgrades.
@@ -94,32 +120,6 @@ minio:
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
   defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
-
-## Core configuration for the SystemLink web application.
-##
-webserver:
-  ## Values used to configure OIDC providers.
-  # !!!TODO!!! - Configure you OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
-  #    Consult your provider's documentation regarding exposing scopes to clients.
-  ##
-  oidc:
-    ## Required - Secret name that holds client ID, client secret, and JWKs.
-    ##
-    secretName: "oidc-secret"
-    ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes.
-    ##
-    issuer: "https://oidc.example.com/"
-    # provider: '<provider-config-json>'
-    ## Optional - Claim to use for user ID.
-    ##
-    # userIDClaim: "email"
-    ## Optional - Claim to use for user name.
-    ##
-    # usernameClaim: "name"
-    ## Optional - Scopes requested from the provider.
-    ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
-    ##
-    scope: "openid email profile"
 
 ## Configuration for test result storage.
 ##
