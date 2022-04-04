@@ -54,7 +54,7 @@ Refer to the [Commonly Modified Settings for SystemLink Enterprise](configuratio
 
 Sensitive information such as cryptographic keys and passwords required by SystemLink Enterprise will be stored as Kubernetes secrets on the cluster. SystemLink Enterprise supports configuring these secrets as part of Helm deployment.
 
-Download [systemlink-secrets.yaml](templates/systemlink-secrets.yaml). This file will hold the secrets for your SystemLink Enterprise deployment. As with systemlink-values.yaml, this file must be retained for the lifetime of your deployment. Care must be taken to control access to this file as it contains data that could compromise the security of the application.
+Download [systemlink-secrets.yaml](templates/systemlink-secrets.yaml). This file will hold the secrets for your SystemLink Enterprise deployment. As with systemlink-values.yaml, this file must be retained for the lifetime of your deployment. Care must be taken to control access to this file as it contains data that could compromise the security of the application. Best practices for secure management of secrets is beyond the scope of this document.
 
 Refer to the [Required Secrets for SystemLink Enterprise](secrets/secrets.md) document for a detailed description of every secret required by the SystemLink Enterprise application.
 
