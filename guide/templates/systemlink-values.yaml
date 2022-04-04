@@ -321,6 +321,10 @@ dashboardhost:
 dataframeservice:
   ## Configure S3/MinIO access.
   s3:
+    auth:
+      ## Name of the secret containing the S3 or MinIO login credentials
+      ##
+      secretName: nidataframe-s3-credentials
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
     bucket: "systemlink-dataframe"
@@ -352,7 +356,7 @@ fileingestionservices:
   s3:
     ## Secret name for S3 credentials.
     ##
-    existingSecret: "fileingestion-minio-keys"
+    existingSecret: "fileingestion-s3-credentials"
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
     bucket: "systemlink-dataframe"
