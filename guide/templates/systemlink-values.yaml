@@ -104,7 +104,7 @@ minio:
     enabled: false
     ## @param ingress.hostname Default host for the ingress resource.
     ##
-    hostname: "minio.example.com"
+    hostname: "systemlink-minio.example.com"
 
   ## Configure the ingress resource that allows you to access the MinIO API.
   ## ref: https://kubernetes.io/docs/user-guide/ingress/
@@ -116,7 +116,7 @@ minio:
     ## Default host for the ingress resource.
     # !!TODO!! - Set this to the DNS address where the MinIO API will be hosted.
     ##
-    hostname: &minioApiHost "minio-api.example.com"
+    hostname: &minioApiHost "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
   defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
