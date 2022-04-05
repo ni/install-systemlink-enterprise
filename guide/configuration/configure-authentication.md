@@ -1,6 +1,6 @@
 # Configure Authentication for SystemLink Enterprise
 
-SystemLink Enterprise uses the OpenID connect protocol to authenticate users from an external authentication provider. You will need to configure the application to use your authentication provider and create an initial system administrator account.
+SystemLink Enterprise uses the OpenID Connect protocol to authenticate users from an external authentication provider. You will need to configure the application to use your authentication provider and create an initial system administrator account.
 
 ## Configure OpenID Connect client access
 
