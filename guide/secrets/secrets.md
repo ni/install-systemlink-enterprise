@@ -9,6 +9,7 @@ The following is a categorized list of required secrets.
 - Authentication
     - oidc-secret
 - Whitelisted API Keys
+    - assetmanagement-apikey
     - jupyterhub-apikey
     - nbexecworker-apikey
     - saltmaster-apikey
@@ -17,17 +18,20 @@ The following is a categorized list of required secrets.
 - Encryption Keys
     - fileingestionservices-encryption-key
     - systemsmanagementservice-dataprotection
+    - webappservices-continuation-token
     - webserver-session
 - Credentials
     - Grafana
         - grafana-login
     - MongoDB
+        - assetmanagementservice-mongodb-credentials
         - fileingestionservices-mongodb-credentials
         - nbexecservice-mongodb-credentials
         - nidataframe-mongodb-credentials
         - sysmgmtevent-mongodb-credentials
         - systemsmangementservice-mongodb-credentials
         - userservices-mongodb-credentials
+        - webappservices-mongodb-credentials
     - PostgresSQL
         - dashboardhost-postgres-secrets
         - testmonitorservicedb-connection
@@ -71,6 +75,7 @@ Several encryption keys are used to protect application data. The following tabl
 |-----------------------------------------|---------------|----------|
 | fileingestionservices-encryption-key    | encryptionKey | AES-256  |
 | systemsmanagementservice-dataprotection | aesKey        | AES-128  |
+| webappservices-continuation-token       | encryptionKey | AEAD     |
 | webserver-session                       | encryptionKey | AES-128  |
 | webserver-session                       | signatureKey  | SHA-256  |
 
