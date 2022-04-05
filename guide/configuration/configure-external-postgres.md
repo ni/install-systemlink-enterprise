@@ -6,6 +6,10 @@ You may also require a public certificate for TLS authentication with the server
 
 ## Configure the Test Monitor Service
 
+1. Create a database on your database server.
+2. Create a user with access to the database.
+3. With this information, including the user credentials, choose one of the following configuration options:
+
 **Option #1: Connection String
 
 The Test Monitor service can make use of a PostgresSQL connection string stored as a Kubernetes secret. You can deploy this secret by configuring the `testmonitorservice.secrets.database.connectionString` value in _systemlink-secrets.yaml_. If not managing secrets in the Helm chart, you will instead need to manually create this secret.
@@ -21,7 +25,7 @@ Alternatively, you can configure the individual connection parameters for the da
 
 ## Configure the Dashboard Service
 
-The Dashboard service requires the host name and credentials to be provided as a secret.
-
-1. If managing secrets with Helm, this secret in _systemlink-secrets.yaml_ by setting values in  the `dashboardhost.secrets.database` group.
-2. In _systemlink-values.yaml_, ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations are enabled.
+1. Create a database on your database server.
+2. Create a user with access to the database.
+3. If managing secrets with Helm, add your configuration to the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_.
+4. In _systemlink-values.yaml_, ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations are enabled.
