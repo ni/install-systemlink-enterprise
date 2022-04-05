@@ -2,6 +2,8 @@
 
 SystemLink Enterprise requires multiple routable host names to enable access to the application. This document will explain what addresses are required. The process for registering DNS addresses and setting up the ingress controller for your cluster are beyond the scope of this document.
 
+The Kubernetes documentation provides [a detailed overview of Cluster ingresses](https://kubernetes.io/docs/concepts/services-networking/ingress/).
+
 ## Configure Access to the UI
 
 The SystemLink UI is the primary access point for the application. After selecting your hostname:
