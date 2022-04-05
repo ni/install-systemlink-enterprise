@@ -1,8 +1,10 @@
 # SystemLink Enterprise Installation Guide
 
-## First Steps
+This document is a guide for configuring and deploying the SystemLink Enterprise application for the first time.
 
-### Cluster Requirements
+## 1. Before You Start
+
+### 1.1 Setup the Cluster
 
 SystemLink Enterprise requires a Kubernetes cluster with the following minimum requirements:
 
@@ -12,17 +14,17 @@ Cluster setup is beyond the scope of this document.
 
 The SystemLink Enterprise helm charts currently supports the Nginx ingress controller. It may be possible to use other ingress controllers by customizing ingress annotations in the Helm values file, but this is not officially supported.
 
-### External Dependencies
+### 1.2 External Dependencies
 
 SystemLink Enterprise supports authentication through the OpenID Connect protocol. An external authentication server must be provided. More detail can be found in the [Configure Authentication for SystemLink Enterprise](configuration/configure-authentication.md) document.
 
 SystemLink Enterprise requires an external PostgresSQL Server for data storage.More detail can be found in the [Configure SystemLink Enterprise to use an External PostgresSQL Database](configuration/configure-external-postgres.md)
 
-### Installing Helm
+### 1.3 Install Helm
 
 SystemLink Enterprise is installed using the [Helm](https://helm.sh/) tool. You will need to install this tool locally prior to installing the application. [Refer to the official Helm documentation for installation instructions](https://helm.sh/docs/intro/install/).
 
-## Configure Repositories
+## 2. Configure Repositories
 
 Prior to installing SystemLink Enterprise, you must configure required repositories in the Helm tool. The following repositories are required.
 
@@ -44,21 +46,24 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add ni-helm https://niartifacts.jfrog.io/artifactory/ni-helm --username <user> --password <key>
 ```
 
-### Private Repositories
+### 2.1 Using a Private Repositories
 
 Some organizations may choose to mirror the public Helm repositories on an internal server. This is supported by SystemLink Enterprise. In this case, simply replace the default repository URLs above with the URL of the mirror.
 
-**!!IMPORTANT!!** - Do not alter the repository alias names even when using a mirror. The alias names will be used by the SystemLink Helm chart to locate dependencies.
+**IMPORTANT** - Do not alter the repository alias names even when using a mirror. The alias names will be used by the SystemLink Helm chart to locate dependencies.
 
-## Configuration
+## 3. Configure SystemLink Enterprise
 
 The installation of the SystemLink Enterprise product is configured using Helm values. These values are set in YAML files. This guide will walk through a common configuration and identify required values and common customizations.
 
-### General Configuration
+### 3.1 Configure the Application
 
-Download [systemlink-values.yaml](templates/systemlink-values.yaml). This file will hold the configuration for your SystemLink Enterprise deployment. You will need to retain this file for the lifetime of your application. NI recommends storing this file in a source control repository.
+Configuration will be stored in values files. Template files are provided with this guide. These files must be retained for the lifetime of your deployment. NI recommends storing this file in a source control repository.
 
-The file is self-documenting and contains numerous `!!TODO!!` comments calling out values that must be provided and sections requiring specific review. NI recommends reading through all of these comments and then deleting them once the configuration is complete.
+1. Download [systemlink-values.yaml](templates/systemlink-values.yaml).
+2. The file contains detailed comments. NI recommends reading everything to understand what configuration will be applied with your application.
+3. In many cases, the default values can be used. In cases where a value must be provided or additional attention is warranted, a `!!TODO!!` content has been added.
+4. Review all `!!TODO!!` comments and ensure the required configuration is provided. Delete these comments when done.
 
 Additional detail on specific configuration tasks can be found in the following documents:
 
@@ -66,19 +71,23 @@ Additional detail on specific configuration tasks can be found in the following 
 - [Configure Authentication for SystemLink Enterprise](configuration/configure-authentication.md)
 - [Configure SystemLink Enterprise to use an External PostgresSQL Database](configuration/configure-external-postgres.md)
 
-### Secrets
+### 3.2 Configure Secret Values
 
 Sensitive information such as cryptographic keys and passwords required by SystemLink Enterprise will be stored as Kubernetes secrets on the cluster. SystemLink Enterprise supports configuring these secrets as part of Helm deployment.
 
-Download [systemlink-secrets.yaml](templates/systemlink-secrets.yaml). This file will hold the secrets for your SystemLink Enterprise deployment. As with systemlink-values.yaml, this file must be retained for the lifetime of your deployment. Care must be taken to control access to this file as it contains data that could compromise the security of the application. Best practices for secure management of secrets is beyond the scope of this document.
-
 Refer to the [Required Secrets for SystemLink Enterprise](secrets/secrets.md) document for a detailed description of every secret required by the SystemLink Enterprise application.
 
-The systemlink-secrets.yaml file also contains detailed documentation. Every value in the file that must be configured is marked with a `!!TODO!!` comment. All values should be set and the `!!TODO!!` deleted prior to proceeding with the installation.
+1. Download [systemlink-secrets.yaml](templates/systemlink-secrets.yaml).
 
-Helm deployment of secrets is not required. To disable, simply set the `global.deploySecrets` value to `false` in systemlink-values.yaml. When choosing this option, it is up to you to ensure that all required secrets have been deployed to the cluster prior to installing the application.
+    NOTE: This file will hold the secrets for your SystemLink Enterprise deployment. As with systemlink-values.yaml, this file must be retained for the lifetime of your deployment. Care must be taken to control access to this file as it contains data that could compromise the security of the application. Best practices for secure management of secrets is beyond the scope of this document.
 
-### Certificate Files
+2. Read the documentation in the file to understand requirements.
+3. For every value in the file marked with a `!!TODO!!` comment a value must be provided.
+4. After a value is configured, delete the corresponding `TODO`.
+
+NOTE: Helm deployment of secrets is not required. To disable, simply set the `global.deploySecrets` value to `false` in systemlink-values.yaml. When choosing this option, it is up to you to ensure that all required secrets have been deployed to the cluster prior to installing the application.
+
+### 3.3 Deploy Certificate Files
 
 This guide assumes that SystemLink Enterprise will be configured to store data to an external PostgresSQL database. The application will require a public certificate in order to authenticate with the database. You will need to obtain this certificate from your database administrator. This guide assumes that this file is named `postgres.pem`, but any name can be used.
 
@@ -94,17 +103,7 @@ Rarely, deployments may also require a custom certificate authority in order to 
 --set-file webserver.additionalCaCertificates=oidc.pem
 ```
 
-## Installation
-
-### Create a Namespace
-
-NI recommends installing SystemLink enterprise to a dedicated namespace on the cluster. You should select a name for your namespace and create it using:
-
-```bash
-kubectl create <namespace>
-```
-
-### Variables for Helm Commands
+## 4 Install SystemLink Enterprise
 
 The remainder of this document provides example Helm commands with variables that will be substituted with values specific to your deployment. These are defined here:
 
@@ -114,7 +113,15 @@ The remainder of this document provides example Helm commands with variables tha
 - **\<version\>**: The specific version of the software to install. NI recommends specifying a specific version for all installations. Omitting this argument will cause the latest stable release to be installed.
 - **\<namespace\>**: An existing namespace on the cluster.
 
-### Install Cluster Prerequisites
+### 4.1 Create a Namespace
+
+NI recommends installing SystemLink enterprise to a dedicated namespace on the cluster. You should select a name for your namespace and create it using:
+
+```bash
+kubectl create <namespace>
+```
+
+### 4.2 Install Cluster Prerequisites
 
 SystemLink Enterprise requires some resources to be installed globally on the cluster. This installation requires a cluster administrator with full access rights.
 
@@ -130,7 +137,7 @@ helm repo update
 helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --values systemlink-admin-values.yaml
 ```
 
-### Install SystemLink Enterprise
+### 4.3 Install the Application
 
 Installation should be performed by a user with full access to the SystemLink Enterprise namespace created above. Full cluster access is not required.
 
@@ -144,9 +151,9 @@ helm upgrade <release> systemlink --install --repo <repo> --version <version> --
 
 [Refer to the Helm documentation for additional information about the install command](https://helm.sh/docs/helm/helm_upgrade/).
 
-## Validation
+## 5. Validate the Install
 
-SystemLink provides a set of Helm tests to help validate a new installation. These can be run as follows:
+SystemLink provides a set of Helm tests to help validate a new installation. Run the test using the following command:
 
 ```bash
 helm test <release> --namespace <namespace>
@@ -154,9 +161,9 @@ helm test <release> --namespace <namespace>
 
 This operation will deploy a series of pods to the cluster, each of which performs a validation test then completes. If the test passes, all deployed containers wil be deleted. If a test fails, deployed pods will remain in place so that logs may be inspected. It may be necessary to manually delete pods in this case.
 
-You can now login to the SystemLink application as the configured system administrator by navigating to the Host URL you previously configured.
+You can now login to the SystemLink application as the configured system administrator by navigating to the UI hostname you previously configured.
 
-## Upgrades and Modifications
+## 6. Updating the Application
 
 To modify the configuration of the SystemLink application or to upgrade to a newer version of the product, you will re-run the same command used to install the product, for example:
 
