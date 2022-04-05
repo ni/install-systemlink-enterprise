@@ -174,7 +174,7 @@ testmonitorservice:
     #     user: nisystemlink
     #     ## The name of an existing secret with PostgreSQL connection credentials.
     #     ##
-    #     secretName: ""
+    #     secretName: "testmonitorservicedb-connection"
     #     ## Password key to be retrieved from existing secret.
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
