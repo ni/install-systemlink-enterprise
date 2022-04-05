@@ -248,8 +248,26 @@ dashboardhost:
       - https://repos.natinst.com/artifactory/rnd-app-builds/grafana-plugins/systemlink-notebook-datasource/systemlink-notebook-datasource-latest.zip;systemlink-notebook-datasource
 
     ## Node count. This must be set to 1 if Grafana is not configured to use an external database.
+    ## This value is only used if autoscaling is disabled.
     ##
-    replicas: 2
+    replicas: 1
+
+    ## Create HorizontalPodAutoscaler object for deployment type
+    ##
+    autoscaling:
+      # !!!TODO!!! - If not using an external database, you must disable autoscaling and use a single Grafana instance.
+      enabled: true
+      minReplicas: 2
+      maxReplicas: 10
+      metrics:
+      - type: Resource
+        resource:
+          name: cpu
+          targetAverageUtilization: 60
+      - type: Resource
+        resource:
+          name: memory
+          targetAverageUtilization: 70
 
     ## Use an existing secret for the admin user.
     # !!!TODO!!! - Uncomment this section to use a different secret to configure the admin user.
