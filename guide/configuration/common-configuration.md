@@ -4,23 +4,23 @@
 
 The Systemlink Enterprise Application requires three routable host names:
 
-- A hostname for the SystemLink UI.
+- A host name for the SystemLink UI.
     - Requires interactive authentication by a user.
     - Configured using the `global.hosts` value in the Helm chart.
-- A hostname for the SystemLink API.
+- A host name for the SystemLink API.
     - Requires API key authentication for programmatic access to the application.
     - Configured using the `global.apiHosts` value in the Helm chart.
-- A hostname for the API for the hosted MinIO instance.
+- A host name for the API for the hosted MinIO instance.
     - Authentication is handled by MinIO.
     - Configured using the `minio.apiIngress.hostname` value in the Helm chart.
 
-It is possible, but not required, to expose the MinIO API from the application. If this is enabled, a fourth hostname will be required.
+It is possible, but not required, to expose the MinIO API from the application. If this is enabled, a fourth host name will be required.
 
 A common approach for selecting host names is to start with a base name, e.g. `systemlink` which is added to your chosen domain. For example:
 
 `systemlink.myorganization.org`
 
-This will be the UI hostname. The other host names can then be built off of this base value:
+This will be the UI host name. The other host names can then be built off of this base value:
 
 - `systemlink-api.myorganization.org`
 - `systemlink-minio-api.myorganization.org`
@@ -35,7 +35,7 @@ Finally, it is necessary to manually set `dashboardhost.grafana.grafana.ini.serv
 
 SystemLink Enterprise uses the OpenID connect protocol to authenticate users from an external authentication provider.
 
-Register SystemLink Enterprise as a client with your authentication provider. The UI hostname configured above must be used for the registration. Refer to the documentation for your authentication provider for the specific registration process.
+Register SystemLink Enterprise as a client with your authentication provider. The UI host name configured above must be used for the registration. Refer to the documentation for your authentication provider for the specific registration process.
 
 Once registered, you should have a `client id` and `client secret` value for your application. Depending on the provider, you may also have a [JSON web key set (jwks)](https://datatracker.ietf.org/doc/html/rfc7517#section-5). You will need these plus the URL of your authentication provider in order to configure SystemLink Enterprise.
 
@@ -89,7 +89,7 @@ Alternatively, you can configure the individual connection parameters for the da
 
 ### Configuring the Dashboard Service
 
-The Dashboard service requires the hostname and credentials to be provided as a secret. You can configure this secret using the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_ if managing secrets with Helm. You will also need to ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations in _systemlink-values.yaml_ are enabled.
+The Dashboard service requires the host name and credentials to be provided as a secret. You can configure this secret using the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_ if managing secrets with Helm. You will also need to ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations in _systemlink-values.yaml_ are enabled.
 
 ## SaltMaster TCP access
 
