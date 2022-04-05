@@ -57,7 +57,7 @@ Image pull secrets must conform to [the kubernetes.io/dockerconfigjson format](h
 
 The "oidc-secret" identifies SystemLink Enterprise with your OpenID Connect authentication provider. Refer to the [Configure Authentication for SystemLink Enterprise](../configuration/configure-authentication.md) document for more information on setting up OpenID Connect. This secret has the following fields:
 
-- `clientId`: OpenID connect client ID.
+- `clientId`: OpenID Connect client ID.
 - `clientSecret`: The secret corresponding to `clientId`.
 - `jwks`: A JSON web key set. If none is required, set to an empty string value.
 
