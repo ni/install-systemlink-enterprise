@@ -97,6 +97,8 @@ SystemLink Enterprise will deploy this certificate as a ConfigMap resource. The 
 --set-file database.postgresCertificate=postgres.pem
 ```
 
+**NOTE:** A certificate is not required if TLS is not enabled for your database. NI recommends using TLS for all communication between SystemLink Enterprise and outside resources.
+
 Rarely, deployments may also require a custom certificate authority in order to communicate with an OpenID Connect authorization server. Again, this is something you will need to obtain from the server administrator. This file can be deployed to the application by appending the following argument to any of the commands described below.
 
 ```bash
