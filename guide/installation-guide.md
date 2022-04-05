@@ -14,11 +14,9 @@ The SystemLink Enterprise helm charts currently supports the Nginx ingress contr
 
 ### External Dependencies
 
-SystemLink Enterprise supports authentication through the OpenID Connect protocol. An external authentication server must be provided.
+SystemLink Enterprise supports authentication through the OpenID Connect protocol. An external authentication server must be provided. More detail can be found in the [Configure Authentication for SystemLink Enterprise](configuration/configure-authentication.md) document.
 
-SystemLink Enterprise requires an external PostgresSQL Server for data storage.
-
-Refer to the [Commonly Modified Settings for SystemLink Enterprise](configuration/common-configuration.md) document for more information on connection SystemLink to these resources.
+SystemLink Enterprise requires an external PostgresSQL Server for data storage.More detail can be found in the [Configure SystemLink Enterprise to use an External PostgresSQL Database](configuration/configure-external-postgres.md)
 
 ### Installing Helm
 
@@ -62,7 +60,11 @@ Download [systemlink-values.yaml](templates/systemlink-values.yaml). This file w
 
 The file is self-documenting and contains numerous `!!TODO!!` comments calling out values that must be provided and sections requiring specific review. NI recommends reading through all of these comments and then deleting them once the configuration is complete.
 
-Refer to the [Commonly Modified Settings for SystemLink Enterprise](configuration/common-configuration.md) document for detailed description of the most commonly modified settings.
+Additional detail on specific configuration tasks can be found in the following documents:
+
+- [Configure Web Access to SystemLink Enterprise](configuration/configure-hostnames.md)
+- [Configure Authentication for SystemLink Enterprise](configuration/configure-authentication.md)
+- [Configure SystemLink Enterprise to use an External PostgresSQL Database](configuration/configure-external-postgres.md)
 
 ### Secrets
 
