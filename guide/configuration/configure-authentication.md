@@ -13,7 +13,7 @@ Once registered, you should have a `client id` and `client secret` value for you
 
     **NOTE:** If not using Helm to manage secrets, you will need to configure the OpenID Connect secret manually as described in the [secrets document](../secrets/secrets.md).
 
-3. \[optional\] In _systemlink-values.yaml_, select the OpenID Connect scopes that will be requested by the SystemLink Enterprise application by configuring `webserver.oidc.scope`. By default, the "openid", "email", and "profile" scopes are request. The "openid" scope is required. The "profile" and "email" scopes are required to populate user details in the UI. Other scopes may be useful when assigning user roles in the application. Consult the documentation for your authentication provider to see what scopes are available.
+3. \[optional\] In _systemlink-values.yaml_, select the OpenID Connect scopes that will be requested by the SystemLink Enterprise application by configuring `webserver.oidc.scope`. By default, the "openid", "email", and "profile" scopes are requested. The "openid" scope is required. The "profile" and "email" scopes are required to populate user details in the UI. Other scopes may be useful when assigning user roles in the application. Consult the documentation for your authentication provider to see what scopes are available.
 
 4. \[optional\] In _systemlink-values.yaml_, configure the OpenID Connect claim that SystemLink Enterprise will use to identify a user by configuring the `webserver.oidc.userIDClaim` value. By default, the user's email will be used.
 
