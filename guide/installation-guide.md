@@ -1,6 +1,6 @@
 # SystemLink Enterprise Installation Guide
 
-This document is a guide for configuring and deploying the SystemLink Enterprise application for the first time.
+This document is a guide for configuring and deploying the SystemLink Enterprise application for the first time. This guide assumes that the reader is familiar with basic [Kubernetes](https://kubernetes.io/) concepts and the user of [Helm charts](https://helm.sh/).
 
 ## 1. Before You Start
 
