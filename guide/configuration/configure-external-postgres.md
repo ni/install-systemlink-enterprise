@@ -8,16 +8,16 @@ You may also require a public certificate for TLS authentication with the server
 
 **Option #1: Connection String
 
-The Test Monitor service can make use of a PostgresSQL connection string stored as a Kubernetes secret. You can deploy this secret by configuring the `testmonitor.secrets.database.connectionString` value in _systemlink-secrets.yaml_. If not managing secrets in the Helm chart, you will instead need to manually create this secret.
+The Test Monitor service can make use of a PostgresSQL connection string stored as a Kubernetes secret. You can deploy this secret by configuring the `testmonitorservice.secrets.database.connectionString` value in _systemlink-secrets.yaml_. If not managing secrets in the Helm chart, you will instead need to manually create this secret.
 
 **Option #2: Connection Parameters
 
 Alternatively, you can configure the individual connection parameters for the database in the Helm chart.
 
-1. In _systemlink-values.yaml_, comment out the `testmonitor.database.connectionString` group.
-2. Uncomment the `testmonitor.database.connectionInfo` group.
+1. In _systemlink-values.yaml_, comment out the `testmonitorservice.database.connectionString` group.
+2. Uncomment the `testmonitorservice.database.connectionInfo` group.
 3. Add the required parameters in the group.
-4. In_systemlink-secrets.yaml_,  configure the `testmonitor.secrets.database.connectionPassword` value or else create the required secret manually.
+4. In_systemlink-secrets.yaml_,  configure the `testmonitorservice.secrets.database.connectionPassword` value or else create the required secret manually.
 
 ## Configure the Dashboard Service
 

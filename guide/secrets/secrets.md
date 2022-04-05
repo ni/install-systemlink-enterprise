@@ -124,7 +124,7 @@ The secret has a single field:
 
 The secret has a single field:
 
-- `password`: A password for the user defined by the `testmonitor.database.connectionInfo.user` value.
+- `password`: A password for the user defined by the `testmonitorservice.database.connectionInfo.user` value.
 
 ### RabbitMQ
 

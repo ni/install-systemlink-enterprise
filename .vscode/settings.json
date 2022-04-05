@@ -24,6 +24,7 @@
         "systemsmanagementservice",
         "systemsmangementservice",
         "testmonitor",
+        "testmonitorservice",
         "userservices"
     ]
 }
