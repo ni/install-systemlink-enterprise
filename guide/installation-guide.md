@@ -136,10 +136,10 @@ Install prerequisites using the following commands:
 ```bash
 helm repo update
 
-helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --values systemlink-admin-values.yaml --wait --timeout 20m0s
+helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --values systemlink-admin-values.yaml --wait --timeout 10m0s
 ```
 
-This command will wait for up to the configured timeout (20 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
+This command will wait for up to the configured timeout (10 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
 
 [Refer to the Helm documentation for additional information about the upgrade command](https://helm.sh/docs/helm/helm_upgrade/).
 
