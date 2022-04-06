@@ -6,13 +6,9 @@ The Kubernetes documentation provides [a detailed overview of Cluster ingresses]
 
 ## Configure Access to the UI
 
-The SystemLink UI is the primary access point for the application. After selecting your hostname:
+The SystemLink UI is the primary access point for the application. In _systemlink-values.yaml_, set the first value in the `global.hosts` array to your chosen hostname.
 
-1. In _systemlink-values.yaml, set the `global.host` value to be an array containing your hostname.
-
-    NOTE: The Helm chart supports multiple host names for the UI and API endpoints. This is an advanced feature not discussed here.
-
-2. Set `dashboardhost.grafana.grafana.ini.server.domain` to the same host name.
+NOTE: The Helm chart supports multiple host names for the UI and API endpoints. This is an advanced feature not discussed here.
 
 ## Configure Access to the API
 

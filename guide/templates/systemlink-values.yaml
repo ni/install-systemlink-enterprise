@@ -8,7 +8,8 @@ global:
   ## Host names for the cluster's UI ingress controller.
   # !!!TODO!!! - Set this to the DNS address where the SystemLink UI will be hosted.
   ##
-  hosts: &uiHosts ["systemlink.example.com"]
+  hosts: &uiHosts
+    - &primaryUIHost "systemlink.example.com"
   ## Host names for the cluster's API ingress controller.
   # !!!TODO!!! - Set this to the DNS address to be used for communication between client systems and the SystemLink API.
   ##
@@ -366,7 +367,7 @@ dashboardhost:
         ## Host name for the Grafana instance.
         # !!!TODO!!! - The DNS address of the SystemLink application must be duplicated here.
         ##
-        domain: "systemlink.example.com"
+        domain: *primaryUIHost
 
       ## Plugin configuration
       ##
