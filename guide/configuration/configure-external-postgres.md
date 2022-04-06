@@ -25,7 +25,7 @@ Alternatively, you can configure the individual connection parameters for the da
 
 ## Configure the Dashboard Service
 
-1. Create a database on your database server named "grafana".
+1. Create a database on your database server. NI suggests naming this database "grafana".
 2. Create a user with access to the database.
 3. If managing secrets with Helm, add your configuration to the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_.
 4. In _systemlink-values.yaml_, ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations are enabled.
