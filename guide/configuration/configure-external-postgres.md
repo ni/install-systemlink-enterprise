@@ -6,7 +6,7 @@ You may also require a public certificate for TLS authentication with the server
 
 ## Configure the Test Monitor Service
 
-1. Create a database on your database server.
+1. Create a database on your database server. A good default name for this database is "nisystemlink".
 2. Create a user with access to the database.
 3. With this information, including the user credentials, choose one of the following configuration options:
 
@@ -25,7 +25,7 @@ Alternatively, you can configure the individual connection parameters for the da
 
 ## Configure the Dashboard Service
 
-1. Create a database on your database server. NI suggests naming this database "grafana".
+1. Create a database on your database server. A good default name for this database is "grafana".
 2. Create a user with access to the database.
 3. If managing secrets with Helm, add your configuration to the `dashboardhost.secrets.database` group in _systemlink-secrets.yaml_.
 4. In _systemlink-values.yaml_, ensure that the default `dashboardhost.grafana.extraSecretMounts` and `dashboardhost.grafana.extraConfigmapMounts` configurations are enabled.
