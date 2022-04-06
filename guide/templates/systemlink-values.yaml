@@ -468,7 +468,7 @@ fileingestion:
     storageLimitsEnabled: false
     ## S3 connection scheme.
     ##
-    schemeName: "https"
+    scheme: "https://"
     ## Host name for S3 API access.
     ##
     host: *minioApiHost
