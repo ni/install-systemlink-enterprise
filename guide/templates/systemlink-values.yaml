@@ -394,7 +394,7 @@ saltmaster:
 
 ## File upload configuration.
 ##
-fileingestionservices:
+fileingestion:
   ## Configure S3/MinIO access.
   ##
   s3:
