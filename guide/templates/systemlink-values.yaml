@@ -111,10 +111,24 @@ database:
 ## MinIO block storage configuration.
 ##
 minio:
+  ## String to partially override common.names.fullname template (will maintain the release name)
+  ##
+  nameOverride: &minioServiceName "minio"
+
   ## Setup user credentials.
   ##
   auth:
     existingSecret: minio-credentials
+
+  ## Port configuration
+  containerPorts:
+    ##  MinIO container port to open for MinIO API
+    ##
+    api: &minioPort 9000
+
+  ## Configure the ingress resource that allows you to access the MinIO UI.
+  ## ref: https://kubernetes.io/docs/user-guide/ingress/
+  ##
   ingress:
     ## Enable ingress controller resource.
     # !!!TODO!!! - Enable this toggle and configure a host name to allow access to the MinIO UI
@@ -130,11 +144,11 @@ minio:
   apiIngress:
     ## Enable ingress controller resource.
     ##
-    enabled: true
+    enabled: false
     ## Default host for the ingress resource.
     # !!TODO!! - Set this to the DNS address where the MinIO API will be hosted.
     ##
-    hostname: &minioApiHost "systemlink-minio-api.example.com"
+    hostname: "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
   defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
@@ -424,13 +438,17 @@ dataframeservice:
     bucket: "systemlink-dataframe"
     ## This should just be the name of the scheme, without the trailing ://.
     ##
-    schemeName: "https"
-    ## Host name for S3 API access.
+    schemeName: "http"
+    ## Set this value to connect to an external S3 instance.
+    # !!!TODO!!! To connect to an external S3 bucket, set the host here as well as the schemeName and port.
     ##
-    host: *minioApiHost
-    ## S3 Port.
+    host: ""
+    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
     ##
-    port: 443
+    service: *minioServiceName
+    ## S3 port number.
+    ##
+    port: *minioPort
   ## Configure Kafka access
   ##
   kafkaconnect:
@@ -468,13 +486,17 @@ fileingestion:
     storageLimitsEnabled: false
     ## S3 connection scheme.
     ##
-    scheme: "https://"
-    ## Host name for S3 API access.
+    scheme: "http://"
+    ## Set this value to connect to an external S3 instance.
+    # !!!TODO!!! To connect to an external S3 bucket, set the host here as well as the scheme and port.
     ##
-    host: *minioApiHost
+    host: ""
+    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ##
+    service: *minioServiceName
     ## S3 Port
     ##
-    port: 443
+    port: *minioPort
 
 ## Configuration for JupyterHub
 ##

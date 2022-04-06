@@ -30,14 +30,14 @@ Configure this host name by modifying the `global.apiHosts` array in _systemlink
 
 TODO
 
-## Configure Access to the MinIO API
+## (Optional) Configure Access to MinIO
 
-An additional host name is required for the MinIO API. As above, as standard approach would be to use something like:
+You can enable external access to the MinIO service on the cluster. The following steps will enable UI access.
 
-"systemlink-minio-api.myorganization.org"
+1. In systemlink-values.yaml, set `minio.ingress.enabled` to true.
+2. Provide a hostname for `minio.ingress.hostname`. A suggestion would be "systemlink-minio.myorganization.org"
 
-Configure this host name by modifying the `minio.apiIngress.hostname` value in _systemlink-values.yaml_.
+The following steps will enable API access:
 
-## Configure Access to the MinIO UI
-
-If Access to the MinIO UI is enabled, modify the `minio.ingress.hostname` value in _systemlink-secrets.yaml_ with the chosen hostname.
+1. In systemlink-values.yaml, set `minio.apiIngress.enabled` to true.
+2. Provide a hostname for `minio.apiIngress.hostname`. A suggestion would be "systemlink-minio-api.myorganization.org"
