@@ -459,7 +459,7 @@ fileingestion:
   s3:
     ## Secret name for S3 credentials.
     ##
-    existingSecret: "fileingestion-s3-credentials"
+    secretName: "fileingestion-s3-credentials"
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
     bucket: "systemlink-dataframe"
