@@ -55,7 +55,7 @@ Image pull secrets must conform to [the kubernetes.io/dockerconfigjson format](h
 
 ## Authentication
 
-The "oidc-secret" identifies SystemLink Enterprise with your OpenID Connect authentication provider. Refer to the [Configure Authentication for SystemLink Enterprise](../configuration/configure-authentication.md) document for more information on setting up OpenID Connect. This secret has the following fields:
+The "oidc-secret" identifies SystemLink Enterprise with your OpenID Connect authentication provider. Refer to the [Configuring Authentication for SystemLink Enterprise](../configuration/configure-authentication.md) document for more information on setting up OpenID Connect. This secret has the following fields:
 
 - `clientId`: OpenID Connect client ID.
 - `clientSecret`: The secret corresponding to `clientId`.
@@ -112,7 +112,7 @@ This secret has the following fields:
 
 #### testmonitorservicedb-connection
 
-This secret has two forms depending on whether the database connection has been defined with a connection string or as parameters. Refer to the [Configure SystemLink Enterprise to use an External PostgresSQL Database](../configuration/configure-external-postgres.md) document for more information on setting up a PostgresSQL connection.
+This secret has two forms depending on whether the database connection has been defined with a connection string or as parameters. Refer to the [Configuring SystemLink Enterprise to use an External PostgresSQL Database](../configuration/configure-external-postgres.md) document for more information on setting up a PostgresSQL connection.
 
 **Option #1:** Connection String
 
