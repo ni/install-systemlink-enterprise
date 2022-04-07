@@ -455,7 +455,7 @@ saltmaster:
   ##
   serviceTCP:
     annotations:
-      # <ATTENTION> - Sset to the name of a MetalLB address group configured to allow TCP access to the Salt API.
+      # <ATTENTION> - Set to the name of a MetalLB address group configured to allow TCP access to the Salt API.
       metallb.universe.tf/address-pool: systemlink
 
 ## File upload configuration.
