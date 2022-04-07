@@ -8,8 +8,6 @@ Visit the [Kubernetes documentation](https://kubernetes.io/docs/concepts/service
 
 The SystemLink UI is the primary access point for the application. In _systemlink-values.yaml_, set the first value in the `global.hosts` array to your chosen hostname.
 
-NOTE: The Helm chart supports multiple host names for the UI and API endpoints. This is an advanced feature not discussed here.
-
 ## Configuring Access to the API
 
 A separate hostname is required for programmatic access to the SystemLink API. This can take any form desired, but a standard choice is to take the UI hostname:
