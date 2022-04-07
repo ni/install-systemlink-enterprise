@@ -10,15 +10,7 @@ The SystemLink UI is the primary access point for the application. In _systemlin
 
 ## Configuring Access to the API
 
-A separate hostname is required for programmatic access to the SystemLink API. This can take any form desired, but a standard choice is to take the UI hostname:
-
-"systemlink.myorganization.org"
-
-And add "-api" to get:
-
-"systemlink-api.myorganization.org"
-
-Configure this host name by modifying the `global.apiHosts` array in _systemlink-values.yaml_.
+You need a separate hostname for programmatic access to the SystemLink API. To configure the hostname, modify the `global.apiHosts`' array in _systemlink-values.yaml_. For example, if your UI hostname is "systemlink.myorganization.org", you can use "systemlink-api.myorganization.org".
 
 ## Configuring SaltMaster TCP Access
 
@@ -29,9 +21,9 @@ TODO
 If required, enable access to the MiniO UI as follows:
 
 1. In systemlink-values.yaml, set `minio.ingress.enabled` to true.
-2. Provide a hostname for `minio.ingress.hostname`. A suggestion would be "systemlink-minio.myorganization.org"
+2. Provide a hostname for `minio.ingress.hostname`. For example, "systemlink-minio.myorganization.org".
 
 Enable access to the MinIO API as follows:
 
 1. In systemlink-values.yaml, set `minio.apiIngress.enabled` to true.
-2. Provide a hostname for `minio.apiIngress.hostname`. A suggestion would be "systemlink-minio-api.myorganization.org"
+2. Provide a hostname for `minio.apiIngress.hostname`. For example, "systemlink-minio-api.myorganization.org"

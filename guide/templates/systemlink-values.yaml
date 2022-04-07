@@ -13,7 +13,8 @@ global:
   ## Host names for the cluster's API ingress controller.
   # <ATTENTION> - Set this to the DNS address to be used for communication between client systems and the SystemLink API.
   ##
-  apiHosts: ["systemlink-api.example.com"]
+  apiHosts: &apiHosts
+    - &primaryApiHost "systemlink-api.example.com"
   ## Defines secrets required if containers are hosted on a private image repository.
   ##
   imagePullSecrets: &pullSecrets ["niartifacts-secret"]
