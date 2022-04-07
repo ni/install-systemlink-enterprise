@@ -148,7 +148,7 @@ minio:
     ##
     enabled: false
     ## Default host for the ingress resource.
-    # !!TODO!! - Set this to the DNS address where the MinIO API will be hosted.
+    # <ATTENTION> - Set this to the DNS address where the MinIO API will be hosted.
     ##
     hostname: "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
@@ -455,7 +455,7 @@ saltmaster:
   ##
   serviceTCP:
     annotations:
-      # <ATTENTION> - ???
+      # <ATTENTION> - Sset to the name of a MetalLB address group configured to allow TCP access to the Salt API.
       metallb.universe.tf/address-pool: systemlink
 
 ## File upload configuration.

@@ -10,9 +10,9 @@ SystemLink Enterprise requires a Kubernetes cluster with the following minimum r
 
 TODO: Define minimum requirements.
 
-Cluster setup is beyond the scope of this document.
+SystemLink Enterprise supports the Nginx Ingress Controller for HTTP communication.
 
-The SystemLink Enterprise helm charts supports only the Nginx controller.
+SystemLink Enterprise requires the [MetalLB](https://metallb.universe.tf/) for TCP communication. Refer to the [MetalLB documentation](https://metallb.universe.tf/installation/) for installation instructions.
 
 ### 1.2 External Dependencies
 
