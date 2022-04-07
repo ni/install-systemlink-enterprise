@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "apikey",
+        "assetmanagement",
+        "assetmanagementservice",
         "bitnami",
         "dashboardhost",
         "fileingestion",
@@ -25,6 +27,7 @@
         "systemsmangementservice",
         "testmonitor",
         "testmonitorservice",
-        "userservices"
+        "userservices",
+        "webappservices"
     ]
 }
