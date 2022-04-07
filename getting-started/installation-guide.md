@@ -8,7 +8,11 @@ Before you begin, make sure you are familiar with [Kubernetes](https://kubernete
 
 SystemLink Enterprise requires a Kubernetes cluster with the following minimum requirements:
 
-TODO: Define minimum requirements.
+- 16 CPUs
+- 80 Gigabytes of RAM
+- 1 Terabyte of storage
+
+Additionally, the cluster should have a minimum of two nodes with 8 CPUs and 32 Gigabytes of RAM each. These nodes must have a `high_mem` [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) applied.
 
 Cluster setup is beyond the scope of this document.
 
@@ -28,7 +32,7 @@ SystemLink Enterprise is installed using the [Helm](https://helm.sh/) tool. You 
 
 Before installing SystemLink Enterprise, you must configure the following required repositories.
 
-| Alias   | Default URL | Description |
+| Alias   | Default URL                                        | Description |
 | ------- | -------------------------------------------------- | ----------- |
 | stable  | `https://charts.helm.sh/stable`                    | A chart repository hosted by the Helm maintainers. |
 | bitnami | `https://charts.bitnami.com/bitnami`               | A collection of charts for popular open source components maintained by [bitnami](https://bitnami.com/). |
