@@ -1,0 +1,30 @@
+{
+    "cSpell.words": [
+        "apikey",
+        "bitnami",
+        "dashboardhost",
+        "fileingestion",
+        "fileingestionservices",
+        "grafana",
+        "jupyterhub",
+        "jwks",
+        "kubectl",
+        "Kubernetes",
+        "minio",
+        "nbexecservice",
+        "nbexecworker",
+        "niartifacts",
+        "nidataframe",
+        "oidc",
+        "rabbitmq",
+        "saltmaster",
+        "sysmgmtevent",
+        "systemlink",
+        "systemsmamagement",
+        "systemsmanagementservice",
+        "systemsmangementservice",
+        "testmonitor",
+        "testmonitorservice",
+        "userservices"
+    ]
+}
