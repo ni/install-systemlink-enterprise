@@ -468,7 +468,7 @@ fileingestion:
     secretName: "fileingestion-s3-credentials"
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
-    bucket: "systemlink-dataframe"
+    bucket: "systemlink-file-ingestion"
     ## Set this to true to limit each user to a maximum of 1Gb of file storage.
     ##
     storageLimitsEnabled: false
