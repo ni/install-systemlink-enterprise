@@ -1,6 +1,6 @@
 # Configuring SystemLink Enterprise to use an External PostgresSQL Database
 
-SystemLink Enterprise can store data from its Test Monitor and Dashboard services on an external PostgresSQL server. For this configuration you will need the host name of the database server and at least one set of credentials with access to the database server. You may also require a public certificate for TLS authentication with the server. Refer to the section on Certificate Files in the [installation guide](../installation-guide.md) for details on deploying this certificate.
+SystemLink Enterprise can store data from its Test Monitor and Dashboard services on an external PostgresSQL server. For this configuration you will need the host name of the database server and at least one set of credentials with access to the database server. You may also require a public certificate for TLS authentication with the server. Refer to the section on Certificate Files in the [installation guide](installation-guide.md) for details on deploying this certificate.
 
 You will need access to create databases and users on your PostgresSQL server for the following steps.
 

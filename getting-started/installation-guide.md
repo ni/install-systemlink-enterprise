@@ -16,9 +16,9 @@ The SystemLink Enterprise helm charts supports only the Nginx controller.
 
 ### 1.2 External Dependencies
 
-SystemLink Enterprise supports authentication through the OpenID Connect protocol. You must provide an external authentication server. Visit [Configuring Authentication for SystemLink Enterprise](configuration/configure-authentication.md) for more details.
+SystemLink Enterprise supports authentication through the OpenID Connect protocol. You must provide an external authentication server. Visit [Configuring Authentication for SystemLink Enterprise](configure-authentication.md) for more details.
 
-SystemLink Enterprise requires an external PostgresSQL Server for data storage. Visit [Configuring SystemLink Enterprise to use an External PostgresSQL Database](configuration/configure-external-postgres.md) for more details.
+SystemLink Enterprise requires an external PostgresSQL Server for data storage. Visit [Configuring SystemLink Enterprise to use an External PostgresSQL Database](configure-external-postgres.md) for more details.
 
 ### 1.3 Install Helm
 
@@ -67,15 +67,15 @@ Configuration is stored in values files that must be retained for the lifetime o
 
 Visit the following pages for details on specific configuration tasks.
 
-- [Configuring Web Access to SystemLink Enterprise](configuration/configure-hostnames.md)
-- [Configuring Authentication for SystemLink Enterprise](configuration/configure-authentication.md)
-- [Configuring SystemLink Enterprise to use an External PostgresSQL Database](configuration/configure-external-postgres.md)
+- [Configuring Web Access to SystemLink Enterprise](configure-hostnames.md)
+- [Configuring Authentication for SystemLink Enterprise](configure-authentication.md)
+- [Configuring SystemLink Enterprise to use an External PostgresSQL Database](configure-external-postgres.md)
 
 ### 3.2 Configure Secret Values
 
 Sensitive information such as cryptographic keys and passwords required by SystemLink Enterprise will be stored as Kubernetes secrets on the cluster. SystemLink Enterprise supports configuring these secrets as part of Helm deployment.
 
-Refer to the [Required Secrets for SystemLink Enterprise](secrets/secrets.md) document for a detailed description of every secret required by the SystemLink Enterprise application.
+Refer to the [Required Secrets for SystemLink Enterprise](secrets.md) document for a detailed description of every secret required by the SystemLink Enterprise application.
 
 1. Download [systemlink-secrets.yaml](templates/systemlink-secrets.yaml).
 
