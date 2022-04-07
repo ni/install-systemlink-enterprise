@@ -6,23 +6,23 @@
 ##
 global:
   ## Host names for the cluster's UI ingress controller.
-  # !!!TODO!!! - Set this to the DNS address where the SystemLink UI will be hosted.
+  # <ATTENTION> - Set this to the DNS address where the SystemLink UI will be hosted.
   ##
   hosts: &uiHosts
     - &primaryUIHost "systemlink.example.com"
   ## Host names for the cluster's API ingress controller.
-  # !!!TODO!!! - Set this to the DNS address to be used for communication between client systems and the SystemLink API.
+  # <ATTENTION> - Set this to the DNS address to be used for communication between client systems and the SystemLink API.
   ##
   apiHosts: ["systemlink-api.example.com"]
   ## Defines secrets required if containers are hosted on a private image repository.
   ##
   imagePullSecrets: &pullSecrets ["niartifacts-secret"]
   ## Overrides the default image registry.
-  # !!!TODO!!! - Use this override if mirroring the SystemLink container registry.
+  # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
   ## imageRegistry: "niartifacts.jfrog.io/ni-docker"
   ## Ingress settings that apply globally.
-  # !!!TODO!!! - Use the following section to apply annotation-based configuration to all Systemlink ingresses.
+  # <ATTENTION> - Use the following section to apply annotation-based configuration to all Systemlink ingresses.
   #    Configuration is specific to the ingress controller, and the defautlts will be sufficient for many deployments.
   ##
   ingress:
@@ -40,7 +40,7 @@ global:
       annotations: {}
   ## Disable secret deployment if you want to manually manage secrets on the cluster.
   ## WARNING: Changing this value from true to false during an upgrade will delete existing secrets.
-  # !!!TODO!!! - Set to false if you do not want to manage secrets as part of the Helm installation.
+  # <ATTENTION> - Set to false if you do not want to manage secrets as part of the Helm installation.
   ##
   deploySecrets: true
 
@@ -48,7 +48,7 @@ global:
 ##
 webserver:
   ## Values used to configure OIDC providers.
-  # !!!TODO!!! - Configure you OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
+  # <ATTENTION> - Configure you OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
   #    Consult your provider's documentation regarding exposing scopes to clients.
   ##
   oidc:
@@ -76,7 +76,7 @@ webserver:
 ##
 initialAdministratorMapping:
   ## Overrides default behavior and creates or updates an administrator user mapping on upgrade.
-  # !!!TODO!!! - If true, the configured administrator will be reconfigured on upgrade.
+  # <ATTENTION> - If true, the configured administrator will be reconfigured on upgrade.
   ##
   createOnUpgrade: false
   ## The mapping type used to define the administrator user.
@@ -87,7 +87,7 @@ initialAdministratorMapping:
   mappingKey: "email"
   ## The property value used to identify admin users. This value is required when creating a new user mapping.
   ## To avoid unwanted information disclosure, it is recommended to only set this value when creating a new mapping.
-  # !!!TODO!!! - Choose an initial system administrator here. You must configure an administrator to enable access
+  # <ATTENTION> - Choose an initial system administrator here. You must configure an administrator to enable access
   #   to the SystemLink application. This example shows configuring an administrator by email address, but any
   #   OpenID Connect claim can be used to define this mapping.
   ##
@@ -132,7 +132,7 @@ minio:
   ##
   ingress:
     ## Enable ingress controller resource.
-    # !!!TODO!!! - Enable this toggle and configure a host name to allow access to the MinIO UI
+    # <ATTENTION> - Enable this toggle and configure a host name to allow access to the MinIO UI
     ##
     enabled: false
     ## @param ingress.hostname Default host for the ingress resource.
@@ -164,7 +164,7 @@ testmonitorservice:
     ## NOTE: If specified, the `database.connectionInfo` parameters are ignored.
     ## If `database.tls.enabled` is set to `true`, the connection string must include the
     ## appropriate SSL Mode (Prefer or Require).
-    # !!!TODO!!! - If connecting to an external PostgresSQL database, you must configure one of
+    # <ATTENTION> - If connecting to an external PostgresSQL database, you must configure one of
     #    the connectionString and connectionInfo sections with the details of your database.
     ##
     connectionString:
@@ -228,7 +228,7 @@ dashboardhost:
     enabled: true
     ## For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
     ## See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
-    # !!!TODO!!! - Configure you ingress controller class name.
+    # <ATTENTION> - Configure you ingress controller class name.
     ##
     ingressClassName: "nginx"
     ## Values can be templated.
@@ -264,7 +264,7 @@ dashboardhost:
     ## Create HorizontalPodAutoscaler object for deployment type
     ##
     autoscaling:
-      # !!!TODO!!! - If not using an external database, you must disable autoscaling and use a single Grafana instance.
+      # <ATTENTION> - If not using an external database, you must disable autoscaling and use a single Grafana instance.
       enabled: true
       minReplicas: 2
       maxReplicas: 10
@@ -279,7 +279,7 @@ dashboardhost:
           targetAverageUtilization: 70
 
     ## Use an existing secret for the admin user.
-    # !!!TODO!!! - Uncomment this section to use a different secret to configure the admin user.
+    # <ATTENTION> - Uncomment this section to use a different secret to configure the admin user.
     ##
     # admin:
     #   ## The name of an existing secret containing the admin credentials.
@@ -292,7 +292,7 @@ dashboardhost:
     ## Uncomment this to provision additional datasources (the chart provisions ni-slnotebook-datasource by default)
     ## When adding additional datasources, take care to leave the the ni-slnotebook-datasource entry in place, and add
     ## new entries after it.
-    # !!!TODO!!! - Uncomment this to provision additional data sources (the chart provisions systemlink-notebook-datasource by default)
+    # <ATTENTION> - Uncomment this to provision additional data sources (the chart provisions systemlink-notebook-datasource by default)
     ##
     # datasources:
     #   datasources.yaml:
@@ -305,7 +305,7 @@ dashboardhost:
     #       version: 1
 
     ## Defines additional mounts from Secrets.
-    # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
     ##
     extraSecretMounts:
       - name: *dashboardhostdbSecret
@@ -315,7 +315,7 @@ dashboardhost:
         readOnly: true
 
     ## Defines additional mounts from ConfigMaps.
-    # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
     ##
     extraConfigmapMounts:
       - name: *postgresCertificateConfigMap
@@ -331,7 +331,7 @@ dashboardhost:
       - https://github.com/ni/systemlink-notebook-datasource/releases/latest/download/systemlink-notebook-datasource.zip;ni-slnotebook-datasource
 
     ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
-    # !!!TODO!!! - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
     ##
     database:
       ## Either mysql, postgres or sqlite3.
@@ -356,7 +356,7 @@ dashboardhost:
       ##
       ssl_mode: require
       ## The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
-      # !!!TODO!!! - The filename here must mach database.postgresCertificateFileName.
+      # <ATTENTION> - The filename here must mach database.postgresCertificateFileName.
       ##
       ca_cert_path: /etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem
 
@@ -365,7 +365,7 @@ dashboardhost:
     grafana.ini:
       server:
         ## Host name for the Grafana instance.
-        # !!!TODO!!! - The DNS address of the SystemLink application must be duplicated here.
+        # <ATTENTION> - The DNS address of the SystemLink application must be duplicated here.
         ##
         domain: *primaryUIHost
 
@@ -428,7 +428,7 @@ dataframeservice:
     ##
     schemeName: "http"
     ## Set this value to connect to an external S3 instance.
-    # !!!TODO!!! To connect to an external S3 bucket, set the host here as well as the schemeName and port.
+    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the schemeName and port.
     ##
     host: ""
     ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
@@ -454,7 +454,7 @@ saltmaster:
   ##
   serviceTCP:
     annotations:
-      # !!!TODO!!! - ???
+      # <ATTENTION> - ???
       metallb.universe.tf/address-pool: systemlink
 
 ## File upload configuration.
@@ -476,7 +476,7 @@ fileingestion:
     ##
     scheme: "http://"
     ## Set this value to connect to an external S3 instance.
-    # !!!TODO!!! To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
     ##
     host: ""
     ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.

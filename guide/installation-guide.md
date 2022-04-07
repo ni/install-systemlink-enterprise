@@ -62,8 +62,8 @@ Configuration is stored in values files that must be retained for the lifetime o
 
     NOTE: The file contains detailed comments. NI recommends reading everything to understand what configuration will be applied with your application.
 
-2. In many cases, you can use the default values. Cases where a value must be provided or additional attention is warranted are marked with a `!!!TODO!!!`.
-3. Review all `!!TODO!!` comments and ensure the required configuration is provided. Delete these comments when you are done.
+2. In many cases, you can use the default values. Cases where a value must be provided or additional attention is warranted are marked with a `<ATTENTION>`.
+3. Review all `<ATTENTION>` comments and ensure the required configuration is provided. Delete these comments when you are done.
 
 Visit the following pages for details on specific configuration tasks.
 
@@ -82,7 +82,7 @@ Refer to the [Required Secrets for SystemLink Enterprise](secrets/secrets.md) do
     NOTE: This file will hold the secrets for your SystemLink Enterprise deployment and must be retained for the lifetime of your deployment. Restrict access to this file to avoid compromising the security of the application.
 
 2. Read the documentation in the file to understand requirements.
-3. Provide a value for every !!TODO!! comment and delete the comment when you are done.
+3. Provide a value for every `<ATTENTION>` comment and delete the comment when you are done.
 
 NOTE: You can disable Helm deployment of secrets by setting the `global.deploySecrets` value to false in _systemlink-values.yaml_. If you disable this option, you must ensure that all required secrets have been deployed to the cluster prior to installing the application.
 
