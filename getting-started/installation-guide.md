@@ -11,10 +11,9 @@ SystemLink Enterprise requires a Kubernetes cluster with the following minimum r
 - 16 CPUs
 - 80 Gigabytes of RAM
 - 1 Terabyte of storage
+- At least two nodes with 8CPUs and 32 Gigabytes of RAM each
 
-Additionally, the cluster should have a minimum of two nodes with 8 CPUs and 32 Gigabytes of RAM each. These nodes must have a `high_mem` [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) applied.
-
-Cluster setup is beyond the scope of this document.
+    NOTE: Apply the `high_mem` [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) to nodes with 32 Gigabytes of RAM or more.
 
 The SystemLink Enterprise helm charts supports only the Nginx controller.
 
