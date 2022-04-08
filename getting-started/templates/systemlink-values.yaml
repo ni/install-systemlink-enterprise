@@ -145,10 +145,10 @@ minio:
   ##
   apiIngress:
     ## Enable ingress controller resource.
+    # <ATTENTION> - Enable this toggle and configure a host name to allow access to the MinIO API
     ##
     enabled: false
     ## Default host for the ingress resource.
-    # <ATTENTION> - Set this to the DNS address where the MinIO API will be hosted.
     ##
     hostname: "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
