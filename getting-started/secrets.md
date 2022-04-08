@@ -9,7 +9,7 @@ The secrets listed in this document are required. Unless otherwise specified, al
 |Authentication|||
 ||oidc-secret|Identifies SystemLink Enterprise with your OpenID Connect authentication provider and has the following fields. <br/><ul><li>`clientId`: An OpenID Connect client ID.</li><li>`clientSecret`: The secret corresponding to `clientId`.</li><li>`jwks`: A JSON web key set. If none is required, set to an empty string value.</li></ul>|
 |Whitelisted API Keys||SystemLink Enterprise uses Whitelisted API keys to authenticate inter-cluster service to service communication for operations that do not execute in the context of a specific user.<br/><br/>TODO: Describe how to generate API keys and update the hashes list.|
-||assetmanagement-apikey||
+||assetservice-apikey||
 ||jupyterhub-apikey||
 ||nbexecworker-apikey||
 ||saltmaster-apikey||
@@ -23,7 +23,7 @@ The secrets listed in this document are required. Unless otherwise specified, al
 |Grafana Credentials|||
 ||grafana-login|Defines an admin user for Grafana with the following fields.<ul><li>`admin-user`: A user name.</li><li>`admin-password`: The password for `admin-user`.</li></ul>|
 |MongoDB Credentials||All MongoDB instances store credentials in a secret with the following fields.<ul><li>`mongodb-root-password`: A password that grants root access to the database cluster.</li><li>`mongodb-password`: An array of passwords that each grant full access to an individual database.</li></ul><br/> NOTE: Separate passwords with commas. Do not include whitespace or a trailing delimiter. For example: `password1,password2`<br/><br/>All mongoDB credential secrets except `userservices-mongodb-credentials` require one password for `mongodb-replica-set-key`, which is a key used to authenticate nodes in a MongoDB replica set.|
-||assetmanagementservice-mongodb-credentials||
+||assetservice-mongodb-credentials||
 ||fileingestionservices-mongodb-credentials||
 ||nbexecservice-mongodb-credentials||
 ||nidataframe-mongodb-credentials||
