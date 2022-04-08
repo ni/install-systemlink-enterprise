@@ -8,7 +8,7 @@ then
 fi
 
 KEY=`head -c42 < /dev/urandom | base64`
-echo "key: $KEY"
+echo "key: \"$KEY\""
 
 HASH=`echo $KEY | sha512 -x`
-echo "hash: $HASH"
+echo "hash: \"$HASH\""
