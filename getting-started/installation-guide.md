@@ -111,25 +111,27 @@ The example Helm commands in the remainder of this document contain the followin
 - **\<repo\>**: The absolute URL for the ni-helm repository.
 - **\<version\>**: The specific version of the software to install.
 - **\<namespace\>**: The namespace created for the application.
+- **\<admin-namespace\>**: The namespace created for the systemlink-admin Helm chart.
 
-### 4.1 Create a Namespace
+### 4.1 Create Namespaces
 
-NI recommends installing SystemLink enterprise to a dedicated namespace on the cluster. Select a name for your namespace and create it using the following command.
+Create the \<namespace\> and \<admin-namespace\> namespaces using the following commands.
 
 ```bash
-kubectl create <namespace>
+kubectl create namespace <admin-namespace>
+kubectl create namespace <namespace>
 ```
 
 ### 4.2 Install Cluster Prerequisites
 
 A cluster administrator with full access rights must use the systemlink-admin Helm chart to install prerequisite resources globally on the cluster. Download a copy of [systemlink-admin-values.yaml](templates/admin-values.yaml) to deploy the configuration for these prerequisites. You will not need to modify any of the defaults in this file.
 
-Use the following commands to install prerequisites.
+Use the following commands to install prerequisites to the \<systemlink-admin\> namespace.
 
 ```bash
 helm repo update
 
-helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --values systemlink-admin-values.yaml --wait --timeout 10m0s
+helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
 ```
 
 This command will wait for up to the configured timeout (10 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
