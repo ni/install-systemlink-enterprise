@@ -8,13 +8,16 @@ The secrets listed in this document are required. Unless otherwise specified, al
 ||niartifacts-secret||
 |Authentication|||
 ||oidc-secret|Identifies SystemLink Enterprise with your OpenID Connect authentication provider and has the following fields. <br/><ul><li>`clientId`: An OpenID Connect client ID.</li><li>`clientSecret`: The secret corresponding to `clientId`.</li><li>`jwks`: A JSON web key set. If none is required, set to an empty string value.</li></ul>|
-|Whitelisted API Keys||SystemLink Enterprise uses Whitelisted API keys to authenticate inter-cluster service to service communication for operations that do not execute in the context of a specific user.<br/><br/>TODO: Describe how to generate API keys and update the hashes list.|
+|Whitelisted API Keys|||
+||assetmanagement-apikey|SystemLink Enterprise uses Whitelisted API keys to authenticate inter-cluster service to service communication for operations that do not execute in the context of a specific user.<br/><br/>This secret contains a single field. <br/><ul><li>`apiKey`: A 42-byte random number sequence that has been bas64-encoded.</ul></li><br/><br/>If you are managing secrets with Helm, use `userservices.secrets.whitelistedApiKeys` value in _systemlink-secrets.yaml_ to define each secret and its corresponding hash. Use the [generate_whitelisted_key.sh](scripts/generate_whitelisted_key.sh) script to simplify key generation.|
 ||assetservice-apikey||
 ||jupyterhub-apikey||
 ||nbexecworker-apikey||
 ||saltmaster-init-apikey||
 ||systemsmamagement-service-apikey||
 ||webserver-apikey||
+|Whitelisted API Key Hashes|||
+||userservices-apikey-whitelist|Manages the list of authorized whitelisted API keys. This secret contains a single field. <br/><ul><li>`whitelistedApiKeyHashes`: An array of hexadecimal-encoded SHA-512 hashes, separated by commas, with no whitespace or trailing delimiter.</li></ul>
 |Encryption Keys|||
 ||fileingestionservices-encryption-key| Field: encryptionKey<br/>Key Type: AES-256|
 ||systemsmanagementservice-dataprotection|Field: aesKey<br/>Key Type: AES-128|
