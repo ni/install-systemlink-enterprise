@@ -12,7 +12,7 @@ The secrets listed in this document are required. Unless otherwise specified, al
 ||assetmanagement-apikey||
 ||jupyterhub-apikey||
 ||nbexecworker-apikey||
-||saltmaster-apikey||
+||saltmaster-init-apikey||
 ||systemsmamagement-service-apikey||
 ||webserver-apikey||
 |Encryption Keys|||
