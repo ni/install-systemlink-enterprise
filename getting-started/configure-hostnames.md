@@ -14,7 +14,7 @@ You need a separate hostname for programmatic access to the SystemLink API. To c
 
 ## Configuring SaltMaster TCP Access
 
-SystemLink Enterprise uses the [Salt](https://saltproject.io/) infrastructure management engine to manage test systems. Salt communicates with test systems using a TCP-based protocol.
+SystemLink Enterprise uses the [Salt](https://saltproject.io/) infrastructure management engine to manage test systems. Salt communicates with test systems using [a TCP-based protocol](https://docs.saltproject.io/en/getstarted/system/communication.html). Salt communication uses TCP ports 4505 and 4506.
 
 1. Create a layer2 [MetalLB address pool](https://metallb.universe.tf/concepts/) for Salt. This pool must contain all IP addresses which will be used for Salt access. An example can be found [here](https://metallb.universe.tf/configuration/#layer-2-configuration).
 2. In _systemlink-values.yaml_, modify `saltmaster.serviceTCP.annotations.metallb.universe.tf/address-pool` with the name of your address pool.
