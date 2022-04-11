@@ -120,7 +120,7 @@ minio:
   ## Setup user credentials.
   ##
   auth:
-    existingSecret: minio-credentials
+    existingSecret: "minio-credentials"
 
   ## Port configuration
   containerPorts:
@@ -169,8 +169,8 @@ testmonitorservice:
     #    the connectionString and connectionInfo sections with the details of your database.
     ##
     connectionString:
-      secretName: testmonitorservicedb-connection
-      connectionStringKey: connection-string
+      secretName: "testmonitorservicedb-connection"
+      connectionStringKey: "connection-string"
     ## The PostgreSQL database connection info.
     ## NOTE: If the `database.connectionString` parameters are specified, the `database.connectionInfo`
     ## parameters are ignored.
@@ -184,17 +184,17 @@ testmonitorservice:
     #     port: ""
     #     ## PostgreSQL database name.
     #     ##
-    #     dbName: nisystemlink
+    #     dbName: "nisystemlink"
     #     ## PostgreSQL user name.
     #     ##
-    #     user: nisystemlink
+    #     user: "nisystemlink"
     #     ## The name of an existing secret with PostgreSQL connection credentials.
     #     ##
     #     secretName: "testmonitorservicedb-connection"
     #     ## Password key to be retrieved from existing secret.
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
-    #     passwordKey: password
+    #     passwordKey: "password"
     ## The PostgreSQL database TLS configuration
     ##
     tls:
@@ -236,10 +236,10 @@ dashboardhost:
     ##
     annotations: {}
     labels: {}
-    path: /dashboardhost
+    path: "/dashboardhost"
     ## pathType is only for k8s >= 1.1=.
     ##
-    pathType: Prefix
+    pathType: "Prefix"
     hosts: *uiHosts
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
     ##
@@ -270,13 +270,13 @@ dashboardhost:
       minReplicas: 2
       maxReplicas: 10
       metrics:
-      - type: Resource
+      - type: "Resource"
         resource:
-          name: cpu
+          name: "cpu"
           targetAverageUtilization: 60
-      - type: Resource
+      - type: "Resource"
         resource:
-          name: memory
+          name: "memory"
           targetAverageUtilization: 70
 
     ## Use an existing secret for the admin user.
@@ -288,7 +288,7 @@ dashboardhost:
     #   ## The key in the existing admin secret containing the user name.
     #   userKey: admin-user
     #   ## The key in the existing admin secret containing the password.
-    #   passwordKey: admin-password
+    #   passwordKey: "admin-password"
 
     ## Uncomment this to provision additional datasources (the chart provisions ni-slnotebook-datasource by default)
     ## When adding additional datasources, take care to leave the the ni-slnotebook-datasource entry in place, and add
@@ -299,9 +299,9 @@ dashboardhost:
     #   datasources.yaml:
     #     apiVersion: 1
     #     datasources:
-    #     - name: SystemLink Notebooks
-    #       type: ni-slnotebook-datasource
-    #       access: direct
+    #     - name: "SystemLink Notebooks"
+    #       type: "ni-slnotebook-datasource"
+    #       access: "direct"
     #       url: /
     #       version: 1
 
@@ -312,7 +312,7 @@ dashboardhost:
       - name: *dashboardhostdbSecret
         secretName: *dashboardhostdbSecret
         defaultMode: 0440
-        mountPath: /etc/secrets/dashboardhost
+        mountPath: "/etc/secrets/dashboardhost"
         readOnly: true
 
     ## Defines additional mounts from ConfigMaps.
@@ -320,7 +320,7 @@ dashboardhost:
     ##
     extraConfigmapMounts:
       - name: *postgresCertificateConfigMap
-        mountPath: /etc/ssl/certs/dashboardhost/
+        mountPath: "/etc/ssl/certs/dashboardhost/"
         subPath: *postgresCertificateFileName
         configMap: *postgresCertificateConfigMap
         readOnly: true
@@ -337,7 +337,7 @@ dashboardhost:
     database:
       ## Either mysql, postgres or sqlite3.
       ##
-      type: postgres
+      type: "postgres"
       ## The database user (not applicable for sqlite3).
       ##
       user: $__file{/etc/secrets/dashboardhost/user}
@@ -355,11 +355,11 @@ dashboardhost:
       ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
       ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
       ##
-      ssl_mode: require
+      ssl_mode: "require"
       ## The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
       # <ATTENTION> - The filename here must mach database.postgresCertificateFileName.
       ##
-      ca_cert_path: /etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem
+      ca_cert_path: "/etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem"
 
     ## Customize the grafana.ini file.
     ##
@@ -375,7 +375,7 @@ dashboardhost:
       plugins:
         ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
         ##
-        allow_loading_unsigned_plugins: ni-slnotebook-datasource
+        allow_loading_unsigned_plugins:"ni-slnotebook-datasource"
 
 ## Grafana provisioning
 ##
@@ -421,7 +421,7 @@ dataframeservice:
     auth:
       ## Name of the secret containing the S3 or MinIO login credentials
       ##
-      secretName: nidataframe-s3-credentials
+      secretName: "nidataframe-s3-credentials"
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
     bucket: "systemlink-dataframe"
@@ -456,7 +456,7 @@ saltmaster:
   serviceTCP:
     annotations:
       # <ATTENTION> - Set to the name of a MetalLB address group configured to allow TCP access to the Salt API.
-      metallb.universe.tf/address-pool: systemlink
+      metallb.universe.tf/address-pool: "systemlink"
 
 ## File upload configuration.
 ##
