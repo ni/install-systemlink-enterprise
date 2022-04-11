@@ -199,7 +199,7 @@ testmonitorservice:
     ##
     tls:
       ## Enable TLS communication with the PostgreSQL database.
-      ## NOTE: If set to true, the public TLS certificate from the server (.pem or .crt)
+      ## NOTE: If true, the public TLS certificate from the server (.pem or .crt)
       ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
       ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
       ## parameters respectively.
@@ -209,7 +209,7 @@ testmonitorservice:
       ## The name of an existing ConfigMap with a TLS certificate for the database.
       ##
       existingConfigMap: *postgresCertificateConfigMap
-      ## Certificate key to be retrieved from existing ConfigMap
+      ## The Certificate key to be retrieved from existing ConfigMap
       ##
       certificateSubPath: *postgresCertificateFileName
 
