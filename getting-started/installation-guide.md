@@ -12,10 +12,11 @@ SystemLink Enterprise requires a Kubernetes cluster with the following minimum r
 - 80 Gigabytes of RAM
 - 1 Terabyte of storage
 - At least two nodes with 8CPUs and 32 Gigabytes of RAM each
-
     NOTE: Apply the `high_mem` [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) to nodes with 32 Gigabytes of RAM or more.
 
-The SystemLink Enterprise helm charts supports only the Nginx controller.
+SystemLink Enterprise supports the Nginx Ingress Controller for HTTP communication.
+
+SystemLink Enterprise requires the [MetalLB](https://metallb.universe.tf/) for TCP communication. Refer to the [MetalLB documentation](https://metallb.universe.tf/installation/) for installation instructions.
 
 ### 1.2 External Dependencies
 
