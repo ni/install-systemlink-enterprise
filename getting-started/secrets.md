@@ -21,7 +21,7 @@ The secrets listed in this document are required. Unless otherwise specified, al
 ||webappservices-continuation-token|Field: encryptionKey<br/>Key Type: AEAD|
 ||webserver-session|Field: encryptionKey<br/>Key Type: AES-128<br/>Field: signatureKey<br/>Key Type: SHA-256|
 |Dremio Credentials|||
-||nidataframe-dremio-credentials|Has the following fields.<ul><li>`username`: Username used to access the Dremio instance.</li><li>`password`: Password used to access the Dremio instance.</li></ul>|
+||nidataframe-dremio-credentials|Has the following fields.<ul><li>`username`: A username used to access the Dremio instance.</li><li>`password`: A password used to access the Dremio instance.</li></ul>|
 |Grafana Credentials|||
 ||grafana-login|Defines an admin user for Grafana with the following fields.<ul><li>`admin-user`: A user name.</li><li>`admin-password`: The password for `admin-user`.</li></ul>|
 |MongoDB Credentials||All MongoDB instances store credentials in a secret with the following fields.<ul><li>`mongodb-root-password`: A password that grants root access to the database cluster.</li><li>`mongodb-password`: An array of passwords that each grant full access to an individual database.</li></ul><br/> NOTE: Separate passwords with commas. Do not include whitespace or a trailing delimiter. For example: `password1,password2`<br/><br/>All mongoDB credential secrets except `userservices-mongodb-credentials` require one password for `mongodb-replica-set-key`, which is a key used to authenticate nodes in a MongoDB replica set.|
