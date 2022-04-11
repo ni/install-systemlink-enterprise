@@ -3,6 +3,7 @@
         "apikey",
         "assetmanagement",
         "assetmanagementservice",
+        "assetservice",
         "bitnami",
         "dashboardhost",
         "fileingestion",
