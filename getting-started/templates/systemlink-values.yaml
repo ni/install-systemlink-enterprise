@@ -195,23 +195,23 @@ testmonitorservice:
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     passwordKey: password
-  ## The PostgreSQL database TLS configuration
-  ##
-  tls:
-    ## Enable TLS communication with the PostgreSQL database.
-    ## NOTE: If set to true, the public TLS certificate from the server (.pem or .crt)
-    ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
-    ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
-    ## parameters respectively.
-    ## Use the database.postgresCertificate value to autoamtically uplaod this certificate.
+    ## The PostgreSQL database TLS configuration
     ##
-    enabled: true
-    ## The name of an existing ConfigMap with a TLS certificate for the database.
-    ##
-    existingConfigMap: *postgresCertificateConfigMap
-    ## Certificate key to be retrieved from existing ConfigMap
-    ##
-    certificateSubPath: *postgresCertificateFileName
+    tls:
+      ## Enable TLS communication with the PostgreSQL database.
+      ## NOTE: If set to true, the public TLS certificate from the server (.pem or .crt)
+      ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
+      ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
+      ## parameters respectively.
+      ## Use the database.postgresCertificate value to autoamtically uplaod this certificate.
+      ##
+      enabled: true
+      ## The name of an existing ConfigMap with a TLS certificate for the database.
+      ##
+      existingConfigMap: *postgresCertificateConfigMap
+      ## Certificate key to be retrieved from existing ConfigMap
+      ##
+      certificateSubPath: *postgresCertificateFileName
 
 ## Configuration for the Grafana dashboard provider.
 ##
