@@ -118,8 +118,8 @@ The example Helm commands in the remainder of this document contain the followin
 Create the \<namespace\> and \<admin-namespace\> namespaces using the following commands.
 
 ```bash
-kubectl create <admin-namespace>
-kubectl create <namespace>
+kubectl create namespace <admin-namespace>
+kubectl create namespace <namespace>
 ```
 
 ### 4.2 Install Cluster Prerequisites
