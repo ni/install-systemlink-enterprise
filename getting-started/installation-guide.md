@@ -36,6 +36,7 @@ Before installing SystemLink Enterprise, you must configure the following requir
 | ------- | -------------------------------------------------- | ----------- |
 | stable  | `https://charts.helm.sh/stable`                    | A chart repository hosted by the Helm maintainers. |
 | bitnami | `https://charts.bitnami.com/bitnami`               | A collection of charts for popular open source components maintained by [bitnami](https://bitnami.com/). |
+| strimzi | `https://strimzi.io/charts`                        | The Helm repository for [Apache Kafka](https://kafka.apache.org/). |
 | ni-helm | `https://niartifacts.jfrog.io/artifactory/ni-helm` | NI's public Helm repository. The NI repository is authenticated. |
 
 Run the following commands to add these repositories to your local helm instance using the username and access key you received when you were granted access to SystemLink Enterprise.
@@ -44,6 +45,8 @@ Run the following commands to add these repositories to your local helm instance
 helm repo add stable https://charts.helm.sh/stable
 
 helm repo add bitnami https://charts.bitnami.com/bitnami
+
+helm repo add strimzi https://strimzi.io/charts
 
 helm repo add ni-helm https://niartifacts.jfrog.io/artifactory/ni-helm --username <user> --password <key>
 ```
