@@ -21,6 +21,7 @@
         "oidc",
         "rabbitmq",
         "saltmaster",
+        "strimzi",
         "sysmgmtevent",
         "systemlink",
         "systemsmamagement",
