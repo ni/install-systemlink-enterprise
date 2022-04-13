@@ -134,7 +134,10 @@ The example Helm commands in the remainder of this document contain the followin
 - **\<repo\>**: The absolute URL for the ni-helm repository.
 - **\<version\>**: The specific version of the software to install.
 - **\<namespace\>**: The namespace created for the application.
-- **\<admin-namespace\>**: The namespace created for the systemlink-admin Helm chart.
+- **\<admin-namespace\>**: The namespace created for the systemlink-admin Helm
+chart.
+- **\<user\>**: The user name for the ni-helm repository.
+- **\<key\>**: The access key for the ni-helm repository.
 
 ### 4.1 Create Namespaces
 
@@ -159,7 +162,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
+helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --username <user> --password <key> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
 ```
 
 This command will wait for up to the configured timeout (10 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
@@ -177,7 +180,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem --wait --timeout 20m0s
+helm upgrade <release> systemlink --install --repo <repo> --version <version> --username <user> --password <key> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem --wait --timeout 20m0s
 ```
 
 This command will wait for up to the configured timeout (20 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
@@ -205,7 +208,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
+helm upgrade <release> systemlink --install --repo <repo> --version <version> --username <user> --password <key> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
 ```
 
 The update command will apply any changes you made to the values in your files since installing. If necessary, containers will be updated to the specified `<version>`. Changes will be applied using a [RollingUpdate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment) strategy to avoid downtime.
