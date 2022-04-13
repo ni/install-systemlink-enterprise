@@ -45,15 +45,25 @@ Run the following commands to add these repositories to your local helm instance
 
 ```bash
 helm repo add stable https://charts.helm.sh/stable
+```
 
+```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
+```
 
+```bash
 helm repo add grafana https://grafana.github.io/helm-charts
+```
 
+```bash
 helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
+```
 
+```bash
 helm repo add strimzi https://strimzi.io/charts
+```
 
+```bash
 helm repo add ni-helm https://niartifacts.jfrog.io/artifactory/ni-helm --username <user> --password <key>
 ```
 
@@ -132,6 +142,9 @@ Create the \<namespace\> and \<admin-namespace\> namespaces using the following 
 
 ```bash
 kubectl create namespace <admin-namespace>
+```
+
+```bash
 kubectl create namespace <namespace>
 ```
 
@@ -143,7 +156,9 @@ Use the following commands to install prerequisites to the \<systemlink-admin\> 
 
 ```bash
 helm repo update
+```
 
+```bash
 helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
 ```
 
@@ -159,7 +174,9 @@ Use the following commands to install SystemLink Enterprise.
 
 ```bash
 helm repo update
+```
 
+```bash
 helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem --wait --timeout 20m0s
 ```
 
@@ -185,7 +202,9 @@ To modify the configuration of the SystemLink application or to upgrade to a new
 
 ```bash
 helm repo update
+```
 
+```bash
 helm upgrade <release> systemlink --install --repo <repo> --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
 ```
 
@@ -203,5 +222,8 @@ To Uninstall SystemLink, run the following commands:
 
 ```bash
 helm delete <release> --namespace <namespace>
+```
+
+```bash
 helm delete <admin-release> --namespace <namespace>
 ```
