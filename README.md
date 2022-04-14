@@ -4,7 +4,7 @@ This repository constitues a basic getting-started guide for installing the Syst
 
 ## Accessing Documentation
 
-The documentation can be accessed as Markdown documents located under the [guide directory](guide).
+The documentation can be accessed as Markdown documents located under [getting-started](getting-started).
 
 ## Contributing to the Handbook
 
