@@ -153,7 +153,7 @@ kubectl create namespace <namespace>
 
 ### 4.2 Install Cluster Prerequisites
 
-A cluster administrator with full access rights must use the systemlink-admin Helm chart to install prerequisite resources globally on the cluster. Download a copy of [systemlink-admin-values.yaml](templates/admin-values.yaml) to deploy the configuration for these prerequisites. You will not need to modify any of the defaults in this file.
+A cluster administrator with full access rights must use the systemlink-admin Helm chart to install prerequisite resources globally on the cluster. Download a copy of [systemlink-admin-values.yaml](templates/systemlink-admin-values.yaml) to deploy the configuration for these prerequisites. You will not need to modify any of the defaults in this file.
 
 Use the following commands to install prerequisites to the \<systemlink-admin\> namespace.
 
