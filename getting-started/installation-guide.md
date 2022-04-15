@@ -34,29 +34,14 @@ Before installing SystemLink Enterprise, you must configure the following requir
 
 | Alias     | Default URL                                        | Description |
 | --------- | -------------------------------------------------- | ----------- |
-| stable    | `https://charts.helm.sh/stable`                    | A chart repository hosted by the Helm maintainers. |
 | bitnami   | `https://charts.bitnami.com/bitnami`               | A collection of charts for popular open source components maintained by [bitnami](https://bitnami.com/). |
-| grafana   | `https://grafana.github.io/helm-charts`            | The Helm repository for [Grafana](https://grafana.com/). |
-| jupyterhub| `https://jupyterhub.github.io/helm-chart/`         | The Helm repository for [JupyterHub](https://jupyter.org/hub). |
 | strimzi   | `https://strimzi.io/charts`                        | The Helm repository for [Apache Kafka](https://kafka.apache.org/). |
 | ni-helm   | `https://niartifacts.jfrog.io/artifactory/ni-helm` | NI's public Helm repository. The NI repository is authenticated. |
 
 Run the following commands to add these repositories to your local helm instance using the username and access key you received when you were granted access to SystemLink Enterprise.
 
 ```bash
-helm repo add stable https://charts.helm.sh/stable
-```
-
-```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
-```
-
-```bash
-helm repo add grafana https://grafana.github.io/helm-charts
-```
-
-```bash
-helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 ```
 
 ```bash
