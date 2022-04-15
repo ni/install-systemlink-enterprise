@@ -180,7 +180,13 @@ Use the following command to run a set of Helm tests to help validate a new inst
 helm test <release> --namespace <namespace>
 ```
 
-This command deploys a series of pods that each perform a validation test on the cluster. If the test passes, the command deletes all deployed pods. If a test fails, deployed pods remain in place so you can inspect the pod log.
+This command deploys a series of pods that each perform a validation test on the cluster. This operation will run for several minutes before displaying results. If the tests pass, the command deletes most deployed pods. If a test fails, deployed pods remain in place so you can inspect the pod log.
+
+A test provided by Grafana is not automatically deleted. Delete it manually by running the following command.
+
+```bash
+ kubectl delete pod <release>-dashboardhost-test --namespace <namespace>
+```
 
 Navigate to the UI hostname you configured to login to SystemLink Enterprise as the configured system administrator.
 
