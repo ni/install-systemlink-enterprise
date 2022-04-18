@@ -134,7 +134,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <admin-release> ni-helm/systemlink-admin --install --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
+helm upgrade <admin-release> ni-helm/systemlinkadmin --install --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
 ```
 
 This command will wait for up to the configured timeout (10 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
