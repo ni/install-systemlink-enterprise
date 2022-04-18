@@ -30,23 +30,13 @@ SystemLink Enterprise is installed using the [Helm](https://helm.sh/) tool. You 
 
 ## 2. Configure Repositories
 
-Before installing SystemLink Enterprise, you must configure the following required repositories.
+Before installing SystemLink Enterprise, you must configure the following required repository.
 
 | Alias     | Default URL                                        | Description |
 | --------- | -------------------------------------------------- | ----------- |
-| bitnami   | `https://charts.bitnami.com/bitnami`               | A collection of charts for popular open source components maintained by [bitnami](https://bitnami.com/). |
-| strimzi   | `https://strimzi.io/charts`                        | The Helm repository for [Apache Kafka](https://kafka.apache.org/). |
 | ni-helm   | `https://niartifacts.jfrog.io/artifactory/ni-helm` | NI's public Helm repository. The NI repository is authenticated. |
 
-Run the following commands to add these repositories to your local helm instance using the username and access key you received when you were granted access to SystemLink Enterprise.
-
-```bash
-helm repo add bitnami https://charts.bitnami.com/bitnami
-```
-
-```bash
-helm repo add strimzi https://strimzi.io/charts
-```
+Run the following command to add this repository to your local helm instance using the username and access key you received when you were granted access to SystemLink Enterprise.
 
 ```bash
 helm repo add ni-helm https://niartifacts.jfrog.io/artifactory/ni-helm --username <user> --password <key>
@@ -116,13 +106,10 @@ The example Helm commands in the remainder of this document contain the followin
 
 - **\<release\>**: The name Helm assigns to the installed collection of software. You will use this name to manage the software. Use short names such as "systemlink."
 - **\<admin-release\>**: The release name used for installing the systemlink-admin Helm chart. For example, "systemlink-admin".
-- **\<repo\>**: The absolute URL for the ni-helm repository.
 - **\<version\>**: The specific version of the software to install.
 - **\<namespace\>**: The namespace created for the application.
 - **\<admin-namespace\>**: The namespace created for the systemlink-admin Helm
 chart.
-- **\<user\>**: The user name for the ni-helm repository.
-- **\<key\>**: The access key for the ni-helm repository.
 
 ### 4.1 Create Namespaces
 
@@ -147,7 +134,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <admin-release> systemlink-admin --install --repo <repo> --version <version> --username <user> --password <key> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
+helm upgrade <admin-release> ni-helm/systemlink-admin --install --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
 ```
 
 This command will wait for up to the configured timeout (10 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
@@ -165,7 +152,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <release> systemlink --install --repo <repo> --version <version> --username <user> --password <key> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem --wait --timeout 20m0s
+helm upgrade <release> ni-helm/systemlink --install --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem --wait --timeout 20m0s
 ```
 
 This command will wait for up to the configured timeout (20 minutes) for the install to complete and for all resources to enter a ready state. The timeout is conservative, but actual installation times may vary due to a variety of factors. Adjust the timeout if needed.
@@ -193,7 +180,7 @@ helm repo update
 ```
 
 ```bash
-helm upgrade <release> systemlink --install --repo <repo> --version <version> --username <user> --password <key> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
+helm upgrade <release> ni-helm/systemlink --install --version <version> --namespace <namespace> --values systemlink-values.yaml --values systemlink-secrets.yaml --set-file database.postgresCertificate=postgres.pem
 ```
 
 The update command will apply any changes you made to the values in your files since installing. If necessary, containers will be updated to the specified `<version>`. Changes will be applied using a [RollingUpdate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment) strategy to avoid downtime.
