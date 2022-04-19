@@ -34,12 +34,12 @@ Before installing SystemLink Enterprise, you must configure the following requir
 
 | Alias     | Default URL                                        | Description |
 | --------- | -------------------------------------------------- | ----------- |
-| ni-helm   | `https://niartifacts.jfrog.io/artifactory/ni-helm` | NI's public Helm repository. The NI repository is authenticated. |
+| ni-helm   | `https://niedge01.jfrog.io/artifactory/ni-helm` | NI's public Helm repository. The NI repository is authenticated. |
 
 Run the following command to add this repository to your local helm instance using the username and access key you received when you were granted access to SystemLink Enterprise.
 
 ```bash
-helm repo add ni-helm https://niartifacts.jfrog.io/artifactory/ni-helm --username <user> --password <key>
+helm repo add ni-helm https://niedge01.jfrog.io/artifactory/ni-helm --username <user> --password <key>
 ```
 
 ### 2.1 Using a Private Repositories

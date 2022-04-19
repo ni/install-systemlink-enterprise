@@ -21,10 +21,10 @@ global:
   ## Overrides the default image registry.
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
-  ## imageRegistry: "niartifacts.jfrog.io/ni-docker"
+  ## imageRegistry: "niedge01.jfrog.io/ni-docker"
   ## Ingress settings that apply globally.
   # <ATTENTION> - Use the following section to apply annotation-based configuration to all Systemlink ingresses.
-  #    Configuration is specific to the ingress controller, and the defautlts will be sufficient for many deployments.
+  #    Configuration is specific to the ingress controller, and the defaults will be sufficient for many deployments.
   ##
   ingress:
     ## Ingress settings that apply to the apiHosts endpoints.
