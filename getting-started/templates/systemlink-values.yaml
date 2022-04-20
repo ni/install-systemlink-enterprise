@@ -212,15 +212,6 @@ testmonitorservice:
       ## The Certificate key to be retrieved from existing ConfigMap
       ##
       certificateSubPath: *postgresCertificateFileName
-  ## Update default resource requests when deploying with a remote PostgresSQL database
-  ##
-  resources:
-    limits:
-      cpu: 200m
-      memory: 512Mi
-    requests:
-      cpu: 125m
-      memory: 320Mi
 
 ## Configuration for the Grafana dashboard provider.
 ##
