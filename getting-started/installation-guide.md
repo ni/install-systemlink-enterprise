@@ -1,6 +1,6 @@
 # SystemLink Enterprise Installation Guide
 
-Before you begin, make sure you are familiar with [Kubernetes](https://kubernetes.io/) concepts and the user of [Helm charts](https://helm.sh/).
+Before you begin, make sure you are familiar with [Kubernetes](https://kubernetes.io/) concepts and the use of [Helm charts](https://helm.sh/).
 
 ## 1. Before You Start
 
