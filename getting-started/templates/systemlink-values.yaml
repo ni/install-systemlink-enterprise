@@ -49,7 +49,7 @@ global:
 ##
 webserver:
   ## Values used to configure OIDC providers.
-  # <ATTENTION> - Configure you OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
+  # <ATTENTION> - Configure your OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
   #    Consult your provider's documentation regarding exposing scopes to clients.
   ##
   oidc:
@@ -203,7 +203,7 @@ testmonitorservice:
       ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
       ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
       ## parameters respectively.
-      ## Use the database.postgresCertificate value to autoamtically uplaod this certificate.
+      ## Use the database.postgresCertificate value to automatically upload this certificate.
       ##
       enabled: true
       ## The name of an existing ConfigMap with a TLS certificate for the database.
@@ -263,7 +263,7 @@ dashboardhost:
     ## Configure access to the Grafana container.
     ##
     image:
-      ## Image pull secrets requried by Grafana
+      ## Image pull secrets required by Grafana
       pullSecrets: *pullSecrets
 
     ## Node count. This must be set to 1 if Grafana is not configured to use an external database.
@@ -315,7 +315,7 @@ dashboardhost:
     #       version: 1
 
     ## Defines additional mounts from Secrets.
-    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
     ##
     extraSecretMounts:
       - name: *dashboardhostdbSecret
@@ -325,7 +325,7 @@ dashboardhost:
         readOnly: true
 
     ## Defines additional mounts from ConfigMaps.
-    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
     ##
     extraConfigmapMounts:
       - name: *postgresCertificateConfigMap
@@ -341,7 +341,7 @@ dashboardhost:
       - https://github.com/ni/systemlink-notebook-datasource/releases/latest/download/systemlink-notebook-datasource.zip;ni-slnotebook-datasource
 
     ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
-    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external dataabase.
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
     ##
     database:
       ## Either mysql, postgres or sqlite3.
