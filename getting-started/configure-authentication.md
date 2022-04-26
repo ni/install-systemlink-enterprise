@@ -25,14 +25,14 @@ After registration, you should have a `client id` and `client secret` value for 
 
 By default, a user who logs into SystemLink Enterprise will have minimal permissions and will not be able to make changes to the system. At installation, you must assign an initial administrator by defining a mapping for a specific Open ID Connect claim. The administrator will be able to log in, perform initial configuration of the application, and assign roles to other users.
 
-1. In systemlink-values.yaml, set `initialAdministratorMapping.mappingKey` to the claim to use. The default is "email".
-2. Set `initialAdministratorMapping.mappingValue` to the value that identifies the administrator.
+1. In systemlink-values.yaml, set `userservicesetup.initialAdministratorMapping.mappingKey` to the claim to use. The default is "email".
+2. Set `userservicesetup.initialAdministratorMapping.mappingValue` to the value that identifies the administrator.
 
     For example, set the value to "john.doe@myorganization.org" to make the user with that email address the initial system administrator.
 
 If you configure a mapping that applies to multiple users, all selected users will have administrator access to the cluster.
 
-Normally, you configure the administrator mapping only at install but you can assign an administrator during an upgrade by setting the `initialAdministratorMapping.createOnUpgrade` value to true.
+Normally, you configure the administrator mapping only at install but you can assign an administrator during an upgrade by setting the `userservicesetup.initialAdministratorMapping.createOnUpgrade` value to true.
 
 After the initial install, use the SystemLink Enterprise application for all future user management. NI recommends removing the mapping configuration from systemlink-values.yaml once the application is working to avoid accidentally re-applying an unwanted mapping in the future.
 
