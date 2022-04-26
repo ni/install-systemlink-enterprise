@@ -26,7 +26,7 @@ After registration, you should have a `client id` and `client secret` value for 
 Use the following URL to configure the login redirect url for your provider:
 
 ```url
-[protocol]://[ui-hostname]/login/openidc-redirect
+[protocol]://[ui-hostname]/oidc/callback
 ```
 
 ## Assigning an initial system administrator
