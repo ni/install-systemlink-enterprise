@@ -6,6 +6,14 @@ SystemLink Enterprise uses the OpenID Connect protocol to authenticate users fro
 
 Before you begin, register SystemLink Enterprise as a client with your authentication provider. Refer to the documentation for your authentication provider for the specific registration process. Use the [UI hostname of the application](configure-hostnames.md) for registration.
 
+### Callback/Redirect URL
+
+Use the following URL to configure the login redirect for your provider:
+
+```url
+[protocol]://[ui-hostname]/oidc/callback
+```
+
 After registration, you should have a `client id` and `client secret` value for your application. You may also have a [JSON web key set (jwks)](https://datatracker.ietf.org/doc/html/rfc7517#section-5) depending on your provider. You will need these plus the URL of your authentication provider in order to configure SystemLink Enterprise.
 
 1. In _systemlink-values.yaml_, set `webserver.oidc.issuer` to the URL of your authentication provider.
