@@ -29,14 +29,6 @@ After registration, you should have a `client id` and `client secret` value for 
 
 5. \[option\] In _systemlink-values.yaml_, configure the OpenID Connect claim that SystemLink Enterprise will use as the user name for a given user. By default this is the "name" property. This setting only affects how users are displayed in the UI.
 
-### OpenID Connect Redirect URL
-
-Use the following URL to configure the login redirect url for your provider:
-
-```url
-[protocol]://[ui-hostname]/oidc/callback
-```
-
 ## Assigning an initial system administrator
 
 By default, a user who logs into SystemLink Enterprise will have minimal permissions and will not be able to make changes to the system. At installation, you must assign an initial administrator by defining a mapping for a specific Open ID Connect claim. The administrator will be able to log in, perform initial configuration of the application, and assign roles to other users.
