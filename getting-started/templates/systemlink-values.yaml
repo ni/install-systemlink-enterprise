@@ -508,6 +508,12 @@ fileingestion:
     ## S3 Port
     ##
     port: *minioPort
+  ## Configure rate limiting per user per replica over one second.
+  ##
+  rateLimits:
+    ## Upload file
+    ##
+    upload: 3
 
 ## Configuration for JupyterHub
 ##
