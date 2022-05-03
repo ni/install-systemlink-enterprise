@@ -76,7 +76,7 @@ webserver:
   proxy:
     ## The host and port of the proxy, no schema
     ##
-    authority: ""
+    # authority: "example.com:8080"
     ## Optional - The name of the secret that has the proxy credentials
     ##
     # secretName: "webserver-proxy-credentials"
