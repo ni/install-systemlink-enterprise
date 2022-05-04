@@ -39,6 +39,8 @@ The secrets listed in this document are required. Unless otherwise specified, al
 |PostgresSQL Credentials|||
 ||dashboardhost-postgres-secrets|Has the following fields.<ul><li>`host`: The Host name of the postgres server.</li><li>`user`: A PostgresSQL user name.</li><li>`password`: The password for `user`.</li></ul>|
 ||testmonitorservicedb-connection|Has two forms with the following fields depending on whether the database connection has been defined with a connection string or as parameters. <br/><br/>Connection string<br/>`connection string`: A PostgresSQL connection string.<br/><br/>Connection parameters<br/>`password`: A password for the user defined by the `testmonitorservice.database.connectionInfo.user` value.<br/><br/>Refer to the [Configuring SystemLink Enterprise to use an External PostgresSQL Database](configure-external-postgres.md) document for more information on setting up a PostgresSQL connection.|
+|Proxy Credentials|||
+||webserver-proxy-credentials|Credentials for authenticating with a proxy for access to an Open ID Connect provider. This secret has the following fields.<ul><li>`username`: The user name for the proxy server.</li><li>`password`: The password for `username`.|
 |RabbitMQ Credentials|||
 ||rabbitmq-user|Credentials for authenticating with the RabbitMQ instance. This secret has the following fields.<ul><li>`rabbitmq-user`: A user name.</li><li>`rabbitmq-password`: Password for `rabbitmq-user`.</li></ul>|
 ||rabbitmq-erlang-cookie|An [Erlang Cookie](https://www.rabbitmq.com/clustering.html#erlang-cookie) value. This secret has a single field.<ul><li>`rabbitmq-erlang-cookie`: The Erlang cookie value.</li></ul>|

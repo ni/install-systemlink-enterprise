@@ -48,7 +48,7 @@ global:
 ## Core configuration for the SystemLink web application.
 ##
 webserver:
-  ## Values used to configure OIDC providers.
+  ## Values used to configure OpenID Connect providers.
   # <ATTENTION> - Configure your OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
   #    Consult your provider's documentation regarding exposing scopes to clients.
   ##
@@ -70,6 +70,22 @@ webserver:
     ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
     ##
     scope: "openid email profile"
+  ## If access to the OpenID Connect provider requires a proxy server, provide proxy service configuration here.
+  # <ATTENTION> - Configure the proxy server for OpenID connect access here.
+  ##
+  proxy:
+    ## The host and port of the proxy, no schema
+    ##
+    # authority: "example.com:8080"
+    ## Optional - The name of the secret that has the proxy credentials
+    ##
+    # secretName: "webserver-proxy-credentials"
+    ## Optional - The key for the username in the credentials secret
+    ##
+    userSecretKey: "username"
+    ## Optional - The key for the password in the credentials secret
+    ##
+    passwordSecretKey: "password"
 
 ## Defines an initial administrator role mapping, allowing an initial user or users to access the system.
 ## At least one user must be defined during installation to allow access to the application. The initial user(s) can then provision

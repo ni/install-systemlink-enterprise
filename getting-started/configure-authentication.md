@@ -29,6 +29,13 @@ After registration, you should have a `client id` and `client secret` value for 
 
 5. \[option\] In _systemlink-values.yaml_, configure the OpenID Connect claim that SystemLink Enterprise will use as the user name for a given user. By default this is the "name" property. This setting only affects how users are displayed in the UI.
 
+## [Optional] Proxy Server Configuration
+
+If the cluster requires a proxy server to access your Open ID Connect authentication provider, provide the following configuration. Skip this section if no proxy is required.
+
+1. In _systemlink-values.yaml_, set `webserver.proxy.authority` to the hostname and port of the proxy server.
+2. [optional] If credentials are required for the proxy server, uncomment `webserver.proxy.secretName` in _systemlink-values.yaml_. Configure `webserver.secrets.proxy.username` and `webserver.secrets.proxy.password` in _systemlink-secrets.yaml_, or else manually deploy the required secret.
+
 ## Assigning an initial system administrator
 
 By default, a user who logs into SystemLink Enterprise will have minimal permissions and will not be able to make changes to the system. At installation, you must assign an initial administrator by defining a mapping for a specific Open ID Connect claim. The administrator will be able to log in, perform initial configuration of the application, and assign roles to other users.
