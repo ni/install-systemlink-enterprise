@@ -465,17 +465,31 @@ dataframeservice:
     port: *minioPort
   ## Configure Dremio access
   ##
-  dremio:
+  sldremio:
+    ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
+    ## Refer to Dremio documentation at https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
+    ## for a description of the reccomended minimum values.
+    ## Note: Dremio recommends 128 GB RAM for the executor and this might need to be increased from the default of 16 GB based on the 
+    ## amount of data that queries need to handle. It is not reccomended to reduce requests below these minimums.
+    ##
+    # coordinator:
+    #   cpu: 6
+    #   memory: 16384
+    #   volumeSize: 128Gi
+    # executor:
+    #   cpu: 4
+    #   memory: 16384
+    #   volumeSize: 128Gi
     auth:
       ## Name of the secret containing the Dremio login credentials
       ##
-      secretName: "nidataframe-dremio-credentials"
+      secretName: nidataframe-dremio-credentials
       ## The name of the key in the above secret whose value contains the Dremio username
       ##
-      usernameKey: "username"
+      usernameKey: username
       ## The name of the key in the above secret whose value contains the Dremio password
       ##
-      passwordKey: "password"
+      passwordKey: password
   ## Configure Kafka access
   ##
   kafkaconnect:
