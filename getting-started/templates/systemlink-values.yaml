@@ -483,13 +483,13 @@ dataframeservice:
     auth:
       ## Name of the secret containing the Dremio login credentials
       ##
-      secretName: nidataframe-dremio-credentials
+      secretName: "nidataframe-dremio-credentials"
       ## The name of the key in the above secret whose value contains the Dremio username
       ##
-      usernameKey: username
+      usernameKey: "username"
       ## The name of the key in the above secret whose value contains the Dremio password
       ##
-      passwordKey: password
+      passwordKey: "password"
   ## Configure Kafka access
   ##
   kafkaconnect:
