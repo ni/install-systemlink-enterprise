@@ -468,9 +468,9 @@ dataframeservice:
   sldremio:
     ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
     ## Refer to Dremio documentation at https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
-    ## for a description of the reccomended minimum values.
+    ## for a description of the recommended minimum values.
     # <ATTENTION> - Dremio recommends 128 GB RAM for the executor and this might need to be increased from the default of 16 GB based on the
-    ## amount of data that queries need to handle. It is not reccomended to reduce requests below these minimums.
+    ## amount of data that queries need to handle. It is not recommended to reduce requests below these minimums.
     ##
     # coordinator:
     #   cpu: 6
