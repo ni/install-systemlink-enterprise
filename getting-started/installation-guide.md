@@ -125,7 +125,11 @@ kubectl create namespace <namespace>
 
 ### 4.2 Install Cluster Prerequisites
 
-A cluster administrator with full access rights or a user with a cluster role that include privileges to create `CustomResourceDefinitions`, `ClusterRoles` and `ClusterRoleBindings` must use the systemlinkadmin Helm chart to install prerequisite resources globally on the cluster. The [Strimzi Kafka Operator](https://strimzi.io/docs/operators/latest/deploying.html#deploying-cluster-operator-to-watch-whole-cluster-str) and the [Jupyter Enterprise Gateway](https://jupyter-enterprise-gateway.readthedocs.io/en/v2.1.0/kernel-kubernetes.html#role-based-access-control-rbac) components create objects of these types during installation.
+One of the following types of users must use the systemlinkadmin Helm chart to install prerequisite resources globally on the cluster. 
+- A cluster administrator with full access rights
+- A user with a cluster role that include privileges to create `CustomResourceDefinitions`, `ClusterRoles` and `ClusterRoleBindings`
+
+NOTE: The [Strimzi Kafka Operator](https://strimzi.io/docs/operators/latest/deploying.html#deploying-cluster-operator-to-watch-whole-cluster-str) and the [Jupyter Enterprise Gateway](https://jupyter-enterprise-gateway.readthedocs.io/en/v2.1.0/kernel-kubernetes.html#role-based-access-control-rbac) components create prerequisite resources during installation.
 
 Download a copy of [systemlink-admin-values.yaml](templates/systemlink-admin-values.yaml) to deploy the configuration for these prerequisites. You will not need to modify any of the defaults in this file.
 
