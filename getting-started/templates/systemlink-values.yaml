@@ -468,9 +468,9 @@ dataframeservice:
   sldremio:
     ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
     ## Refer to Dremio documentation at https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
-    ## for a description of the reccomended minimum values.
-    ## <ATTENTION> - Dremio recommends 128 GB RAM for the executor and this might need to be increased from the default of 16 GB based on the 
-    ## amount of data that queries need to handle. It is not reccomended to reduce requests below these minimums.
+    ## for a description of the recommended minimum values.
+    # <ATTENTION> - Dremio recommends 128 GB RAM for the executor and this might need to be increased from the default of 16 GB based on the
+    ## amount of data that queries need to handle. It is not recommended to reduce requests below these minimums.
     ##
     # coordinator:
     #   cpu: 6
@@ -544,3 +544,28 @@ fileingestion:
 sl-jupyterhub:
   jupyterhub:
     imagePullSecrets: *pullSecrets
+
+## Configuration for Notebook Execution workers
+##
+nbexecworker:
+  ## Customize routes to back-end APIs
+  ##
+  apiRoutes:
+    ## Sets the release name prefix for the Jupyter Enterprise Gateway service running on the cluster.
+    # <ATTENTION> This must be set to the release name used to install the ni-helm/systemlinkadmin chart.
+    ##
+    jupyterEnterpriseGatewayReleaseName: "systemlink-admin"
+    ## Sets the service name for the Jupyter Enterprise Gateway instance running on the cluster.
+    ##
+    jupyterEnterpriseGatewayServiceName: "enterprise-gateway"
+    ## Sets the namespace name for the Jupyter Enterprise Gateway service running on the cluster.
+    # <ATTENTION> This must be set to the namespace where the ni-helm/systemlinkadmin chart was installed.
+    ##
+    jupyterEnterpriseGatewayNamespace: "systemlink-admin"
+    ## Sets the port number of for the Jupyter Enterprise Gateway service running on the cluster.
+    ##
+    jupyterEnterpriseGatewayPort: "8888"
+    ## If set, overrides the other jupyterEnterpriseGateway options and configures the service URL directly.
+    ##
+    jupyterEnterpriseGatewayUrl: ""
+
