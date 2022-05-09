@@ -19,9 +19,9 @@ The secrets listed in this document are required. Unless otherwise specified, al
 |Whitelisted API Key Hashes|||
 ||userservices-apikey-whitelist|Manages the list of authorized whitelisted API keys. This secret contains a single field. <br/><ul><li>`whitelistedApiKeyHashes`: An array of hexadecimal-encoded SHA-512 hashes, separated by commas, with no whitespace or trailing delimiter.</li></ul>
 |Encryption Keys|||
-||fileingestionservices-encryption-key| Field: encryptionKey<br/>Key Type: AES-256|
+||fileingestionservices-encryption-key| Field: encryptionKey<br/>Key Type: AES-256<br/>Notes: The key value must be Base64 encoded.|
 ||systemsmanagementservice-dataprotection|Field: aesKey<br/>Key Type: AES-128|
-||webappservices-continuation-token|Field: encryptionKey<br/>Key Type: AEAD|
+||webappservices-continuation-token|Field: encryptionKey<br/>Key Type: AEAD<br/>Notes: The key value must be Base64 encoded.|
 ||webserver-session|Field: encryptionKey<br/>Key Type: AES-128<br/>Field: signatureKey<br/>Key Type: SHA-256|
 |Dremio Credentials|||
 ||nidataframe-dremio-credentials|Has the following fields.<ul><li>`username`: A username used to access the Dremio instance.</li><li>`password`: A password used to access the Dremio instance.</li></ul>|
