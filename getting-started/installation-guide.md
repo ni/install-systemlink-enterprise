@@ -44,9 +44,7 @@ helm repo add ni-helm https://niedge01.jfrog.io/artifactory/ni-helm --username <
 
 ### 2.1 Using a Private Repositories
 
-To mirror the public Helm repositories on an internal server, replace the default repository URLs above with the URL of the mirror.
-
-**IMPORTANT** - Do not alter the repository alias names even when using a mirror. The Systemlink Enterprise Helm chart uses the alias names to locate dependencies.
+If mirroring SystemLink from a private repository, read the [Mirroring SystemLink Repositories](mirroring.md) document.
 
 ## 3. Configure SystemLink Enterprise
 
