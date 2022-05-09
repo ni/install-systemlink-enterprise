@@ -18,6 +18,8 @@ SystemLink Enterprise supports the Nginx Ingress Controller for HTTP communicati
 
 SystemLink Enterprise requires the [MetalLB](https://metallb.universe.tf/) for TCP communication. Refer to the [MetalLB documentation](https://metallb.universe.tf/installation/) for installation instructions.
 
+SystemLink Enterprise requires [Dynamic Volume Provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) to be enabled on the cluster. A [NFS storage provisioner](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner) or an equivalent storage class with [ReadWriteOnce access](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) must be available.
+
 ### 1.2 External Dependencies
 
 SystemLink Enterprise supports authentication through the OpenID Connect protocol. You must provide an external authentication server. Visit [Configuring Authentication for SystemLink Enterprise](configure-authentication.md) for more details.
