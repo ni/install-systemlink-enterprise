@@ -11,7 +11,7 @@ To create a local mirror for the SystemLink application, both must be replicated
 
 The NI artifact repositories are organized using the Virtual Repository layout described in JFrog's [whitepaper on structuring and naming repositories](https://jfrog.com/whitepaper/best-practices-structuring-naming-artifactory-repositories/). Any mirror must maintain the same relative naming and layout of artifacts. Failure to do so may prevent installation of the application.
 
-TODO: pull through proxy cache
+NI recommends configuring the mirror as a pull-through proxy for niedge01.jfrog.io. With this configuration, the mirror is connected to the NI repository. When a resource hosted on the NI repository is requested from the mirror, the mirror will automatically download and cache the resource. This approach minimizes maintenance of the mirror while still providing control over what resources can be accessed locally. The process for configuring this mirror will depend on your repository software. An example can be found in [the JFrog documentation](https://jfrog.com/knowledge-base/how-to-configure-a-remote-repository-in-artifactory-to-proxy-a-private-docker-registry-in-docker-hub/).
 
 ## Helm Setup
 
@@ -23,7 +23,7 @@ helm repo add ni-helm <mirror-url> --username <user> --password <key>
 
 Where `<mirror-url>` is the address of your mirror.
 
-**IMPORTANT** - Do not alter the repository alias names even when using a mirror. The Systemlink Enterprise Helm chart uses the alias names to locate dependencies.
+**IMPORTANT** - Do not alter the `ni-helm` alias name when using a mirror.
 
 ## Docker Setup
 
