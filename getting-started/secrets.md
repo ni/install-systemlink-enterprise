@@ -6,6 +6,8 @@ The secrets listed in this document are required. Unless otherwise specified, al
 |--|--|--|
 |Image Pull||The NI container repository that hosts SystemLink Enterprise is private and requires authenticated access. You will have received credentials with access to SystemLink Enterprise. Configure image pull secrets for SystemLink Enterprise using the `global.imagePullSecrets` array in _systemlink-values.yaml_. <br/><br/>Image pull secrets must conform to the [kubernetes.io/dockerconfigjson format](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).|
 ||niartifacts-secret||
+|Generic artifact pull|||
+||niartifacts-generic|Some SystemLink Enterprise services require miscellaneous artifacts that aren't container-based. These are hosted in the same NI repository as the Docker images and have the same authentication. This secret is configured in the `global.genericArtifactPullSecret` field, and contains the following fields: <br/><ul><li>`url`: The URL with the subpath containing generic artifacts.</li><li>`user`: Will reuse the user from 'niartifacts-secret'</li><li>`password`: Will reuse the password from 'niartifacts-secret'</li></ul>|
 |Authentication|||
 ||oidc-secret|Identifies SystemLink Enterprise with your OpenID Connect authentication provider and has the following fields. <br/><ul><li>`clientId`: An OpenID Connect client ID.</li><li>`clientSecret`: The secret corresponding to `clientId`.</li><li>`jwks`: A JSON web key set. If none is required, set to an empty string value.</li></ul>|
 |Whitelisted API Keys|||
