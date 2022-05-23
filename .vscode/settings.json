@@ -57,6 +57,7 @@
         "testmonitor",
         "testmonitorservice",
         "testmonitorservicedb",
+        "userdataservice",
         "userservices",
         "webappservices",
         "webserver"
