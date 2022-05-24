@@ -29,6 +29,10 @@ After registration, you should have a `client id` and `client secret` value for 
 
 5. \[option\] In _systemlink-values.yaml_, configure the OpenID Connect claim that SystemLink Enterprise will use as the user name for a given user. By default this is the "name" property. This setting only affects how users are displayed in the UI.
 
+### Viewing Claims
+
+You can view claims returned for a particular user by including the "offline_access" scope in the `webserver.oidc.scope` value. This grants access to a user's claims at `https://<systemlink-host>/oidc/userinfo`.
+
 ## [Optional] Proxy Server Configuration
 
 If the cluster requires a proxy server to access your Open ID Connect authentication provider, provide the following configuration. Skip this section if no proxy is required.
