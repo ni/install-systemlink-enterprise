@@ -58,6 +58,7 @@
         "testmonitorservice",
         "testmonitorservicedb",
         "userservices",
+        "userservicesetup",
         "webappservices",
         "webserver"
     ],
