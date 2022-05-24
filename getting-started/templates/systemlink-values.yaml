@@ -533,6 +533,14 @@ fileingestion:
     ## S3 Port
     ##
     port: *minioPort
+   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service 
+   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the 
+   ## individual rates configured here. 
+  ##
+  rateLimits:
+    ## Upload file
+    ##
+    upload: 3
 
 ## Configuration for JupyterHub
 ##
