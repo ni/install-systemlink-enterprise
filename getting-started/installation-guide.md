@@ -181,6 +181,37 @@ Navigate to the UI hostname you configured to login to SystemLink Enterprise as 
 
 ## 6. Updating the Application
 
+Updates are done in two steps. The admin release is updated, followed by the application. Upating the admin release is recommended to ensure maximum compatibility with the systemlink application.
+
+### 6.1 Updating Cluster Prerequisites
+
+One of the following types of users must use the systemlinkadmin Helm chart to update prerequisite resources globally on the cluster.
+
+- A cluster administrator with full access rights
+
+- A user with a cluster role that include privileges to create `CustomResourceDefinitions`, `ClusterRoles` and `ClusterRoleBindings`
+
+Using the same command you used to install the prerequisites, update the release.
+
+```bash
+helm repo update
+```
+
+```bash
+helm upgrade <admin-release> ni-helm/systemlinkadmin --install --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
+```
+
+The Strimzi Operator requires the manual update of `CustomResourceDefinitions` declared in its template.
+Download a copy of the [strimzi-crds](https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.28.0/strimzi-crds-0.28.0.yaml) and install it.
+
+```bash
+kubectl apply -f strimzi-crds-0.28.0.yaml
+```
+
+Ignore the `Warning` messages that appear. Proceed to update the application.
+
+### 6.2 Updating Systemlink Application
+
 To modify the configuration of the SystemLink application or to upgrade to a newer version of the product, re-run the same command you used to install the product as shown in the following example.
 
 ```bash
