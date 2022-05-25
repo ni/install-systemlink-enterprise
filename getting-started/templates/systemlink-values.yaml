@@ -21,7 +21,7 @@ global:
   ## Overrides the default image registry.
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
-  ## imageRegistry: "niedge01.jfrog.io/ni-docker"
+  imageRegistry: "niedge01.jfrog.io/ni-docker"
   ##
   ## Defines a secret containing the credentials for a repo hosting miscellaneous artifacts
   ##
