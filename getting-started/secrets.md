@@ -19,6 +19,7 @@ The secrets listed in this document are required. Unless otherwise specified, al
 ||systemsmamagement-service-apikey||
 ||webserver-apikey||
 ||nisession-apikey||
+||dashboardhost-apikey||
 |Whitelisted API Key Hashes|||
 ||userservices-apikey-whitelist|Manages the list of authorized whitelisted API keys. This secret contains a single field. <br/><ul><li>`whitelistedApiKeyHashes`: An array of hexadecimal-encoded SHA-512 hashes, separated by commas, with no whitespace or trailing delimiter.</li></ul>
 |Encryption Keys|||
