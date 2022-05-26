@@ -237,6 +237,13 @@ testmonitorservice:
 ## Configuration for the Grafana dashboard provider.
 ##
 dashboardhost:
+  ## Mirror SystemLink RBAC onto Grafana using a repeating job
+  ##
+  accessControlMirroring:
+    ## Enable RBAC mirroring.
+    ##
+    enabled: false
+
   ## Name to use for the database access secret.
   ##
   databaseSecretName: &dashboardhostdbSecret "dashboardhost-postgres-secrets"
