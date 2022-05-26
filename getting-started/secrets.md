@@ -13,13 +13,13 @@ The secrets listed in this document are required. Unless otherwise specified, al
 |Whitelisted API Keys|||
 ||assetmanagement-apikey|SystemLink Enterprise uses Whitelisted API keys to authenticate inter-cluster service to service communication for operations that do not execute in the context of a specific user.<br/><br/>This secret contains a single field. <br/><ul><li>`apiKey`: A 42-byte random number sequence that has been base64-encoded.</ul></li><br/><br/>If you are managing secrets with Helm, use `userservices.secrets.whitelistedApiKeys` value in _systemlink-secrets.yaml_ to define each secret and its corresponding hash. Use the [generate_whitelisted_key.sh](scripts/generate_whitelisted_key.sh) script to simplify key generation.|
 ||assetservice-apikey||
+||dashboardhost-apikey||
 ||jupyterhub-apikey||
 ||nbexecworker-apikey||
 ||saltmaster-init-apikey||
+||sessionmanagerservice-apikey||
 ||systemsmamagement-service-apikey||
 ||webserver-apikey||
-||sessionmanagerservice-apikey||
-||dashboardhost-apikey||
 |Whitelisted API Key Hashes|||
 ||userservices-apikey-whitelist|Manages the list of authorized whitelisted API keys. This secret contains a single field. <br/><ul><li>`whitelistedApiKeyHashes`: An array of hexadecimal-encoded SHA-512 hashes, separated by commas, with no whitespace or trailing delimiter.</li></ul>
 |Encryption Keys|||
