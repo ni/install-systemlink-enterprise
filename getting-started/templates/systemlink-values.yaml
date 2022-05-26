@@ -352,36 +352,6 @@ dashboardhost:
     plugins:
       - https://github.com/ni/systemlink-notebook-datasource/releases/latest/download/systemlink-notebook-datasource.zip;ni-slnotebook-datasource
 
-    ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
-    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
-    ##
-    database:
-      ## Either mysql, postgres or sqlite3.
-      ##
-      type: "postgres"
-      ## The database user (not applicable for sqlite3).
-      ##
-      user: $__file{/etc/secrets/dashboardhost/user}
-      ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;""".
-      ##
-      password: $__file{/etc/secrets/dashboardhost/password}
-      ## Only applicable to MySQL or Postgres. Includes IP or host name and port or in case of Unix sockets the path to it.
-      ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock.
-      ##
-      host: $__file{/etc/secrets/dashboardhost/host}
-      ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
-      ##
-      # name: "database-name"
-      ## Use either URL or the other fields above to configure the database.
-      ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
-      ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
-      ##
-      ssl_mode: "require"
-      ## The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
-      # <ATTENTION> - The filename here must mach database.postgresCertificateFileName.
-      ##
-      ca_cert_path: "/etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem"
-
     ## Customize the grafana.ini file.
     ##
     grafana.ini:
@@ -390,6 +360,36 @@ dashboardhost:
         # <ATTENTION> - The DNS address of the SystemLink application must be duplicated here.
         ##
         domain: *primaryUIHost
+      
+      ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
+      # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
+      ##
+      database:
+        ## Either mysql, postgres or sqlite3.
+        ##
+        type: "postgres"
+        ## The database user (not applicable for sqlite3).
+        ##
+        user: $__file{/etc/secrets/dashboardhost/user}
+        ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;""".
+        ##
+        password: $__file{/etc/secrets/dashboardhost/password}
+        ## Only applicable to MySQL or Postgres. Includes IP or host name and port or in case of Unix sockets the path to it.
+        ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock.
+        ##
+        host: $__file{/etc/secrets/dashboardhost/host}
+        ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
+        ##
+        # name: "database-name"
+        ## Use either URL or the other fields above to configure the database.
+        ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
+        ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
+        ##
+        ssl_mode: "require"
+        ## The path to the CA certificate to use. On many Linux systems, certs can be found in /etc/ssl/certs.
+        # <ATTENTION> - The filename here must mach database.postgresCertificateFileName.
+        ##
+        ca_cert_path: "/etc/ssl/certs/dashboardhost/postgres-tls-certificate.pem"
 
       ## Plugin configuration
       ##
