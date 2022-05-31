@@ -181,7 +181,8 @@ Navigate to the UI hostname you configured to login to SystemLink Enterprise as 
 
 ## 6. Updating the Application
 
-Updates are done in two steps. The admin release is updated, followed by the application. Upating the admin release is recommended to ensure maximum compatibility with the systemlink application.
+Updates can be a two step process. If there is a newer version of the systemlinkadmin Helm chart
+available then the cluster prerequisites must be updated first, followed by the application.  
 
 ### 6.1 Updating Cluster Prerequisites
 
@@ -201,11 +202,18 @@ helm repo update
 helm upgrade <admin-release> ni-helm/systemlinkadmin --install --version <version> --namespace <admin-namespace> --values systemlink-admin-values.yaml --values systemlink-values.yaml --values systemlink-secrets.yaml --wait --timeout 10m0s
 ```
 
-The Strimzi Operator requires the manual update of `CustomResourceDefinitions` declared in its template.
-Download a copy of the [strimzi-crds](https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.28.0/strimzi-crds-0.28.0.yaml) and install it.
+The Strimzi Kafka Operator requires the manual update of `CustomResourceDefinitions` declared in its template.
+
+Download and uncompress the package for the release.
 
 ```bash
-kubectl apply -f strimzi-crds-0.28.0.yaml
+helm pull ni-helm/systemlinkadmin --version <version> --untar
+```
+
+Manually install the definitions.
+
+```bash
+kubectl apply -f systemlinkadmin/charts/strimzi-kafka-operator/crds
 ```
 
 Ignore the `Warning` messages that appear. Proceed to update the application.
