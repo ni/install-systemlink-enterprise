@@ -516,6 +516,14 @@ saltmaster:
 ## File upload configuration.
 ##
 fileingestion:
+  ## Ingress configuration
+  ##
+  ingress:
+    ## Override the default upload limit for an nginx ingress controller.
+    ##
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: 2000m
+
   ## Configure S3/MinIO access.
   ##
   s3:
@@ -555,6 +563,14 @@ fileingestion:
 sl-jupyterhub:
   jupyterhub:
     imagePullSecrets: *pullSecrets
+
+  ## Ingress configuration.
+  ##
+  ingress:
+    ## Override the default upload limit for an nginx ingress controller.
+    ##
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
 
 ## Configuration for Notebook Execution workers
 ##
