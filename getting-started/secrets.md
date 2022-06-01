@@ -38,6 +38,7 @@ The secrets listed in this document are required. Unless otherwise specified, al
 ||nidataframe-mongodb-credentials||
 ||sysmgmtevent-mongodb-credentials||
 ||systemsmangementservice-mongodb-credentials||
+||userdataservice-mongodb-credentials||
 ||userservices-mongodb-credentials|Requires two `mongodb-passwords`. For the "user" and "keys" databases in that order.|
 ||webappservices-mongodb-credentials||
 |PostgresSQL Credentials|||
