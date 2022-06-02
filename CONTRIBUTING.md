@@ -22,7 +22,7 @@ All markdown must pass linting rules before a PR may be merged. The [markdownlin
 
 ## Contributing to the Online Documentation
 
-View the online help in the [NI Documentation Portal](https://ni-staging.zoominsoftware.io/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-configuration-and-installation.html). To request a change, submit an AzDO work item with a link to the section to change and a description/draft of the changes. Assign the work item to the Tech Writer assigned for the release (currently Melissa Hilliard) and set the target date to communicate the urgency.
+View the online help in the [NI Documentation Portal](https://ni-staging.zoominsoftware.io/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-configuration-and-installation.html). To request a change, use the **Was this information helpful?** buttons in the topic.
 
 ## Developer Certificate of Origin (DCO)
 
