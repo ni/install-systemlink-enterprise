@@ -20,9 +20,9 @@ for more details.
 
 All markdown must pass linting rules before a PR may be merged. The [markdownlint plugin for VSCode](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) is recommended. The `.markdownlint.yaml` file contains overrides to linting rules for the handbook.
 
-## Authoring Handbook Chapters
+## Contributing to the Online Documentation
 
-- Review **chapter-template.md** and use as a starting point and reference to the structure and style of the guide.
+View the online help in the [NI Documentation Portal](https://ni-staging.zoominsoftware.io/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-configuration-and-installation.html). To request a change, submit an AzDO work item with a link to the section to change and a description/draft of the changes. Assign the work item to the Tech Writer assigned for the release (currently Melissa Hilliard) and set the target date to communicate the urgency.
 
 ## Developer Certificate of Origin (DCO)
 
