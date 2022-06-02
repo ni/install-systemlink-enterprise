@@ -8,11 +8,11 @@ Before you begin, make sure you are familiar with [Kubernetes](https://kubernete
 
 SystemLink Enterprise requires a Kubernetes cluster with the following minimum requirements:
 
-- 16 CPUs
-- 80 Gigabytes of RAM
-- 1 Terabyte of storage
-- At least two nodes with 8CPUs and 32 Gigabytes of RAM each
-    NOTE: Apply the `high_mem` [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) to nodes with 32 Gigabytes of RAM or more.
+- 40 CPUs  
+- 174 Gigabytes of RAM  
+- 3 Terabytes of storage  
+- At least five nodes with 15CPUs and 122 Gigabytes of RAM each  
+    NOTE: Apply the `high_mem` [taint](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) to nodes with 32 Gigabytes of RAM or more. These resources can be reduced or increased depending on the query-load for the dataframe service.
 
 SystemLink Enterprise supports the Nginx Ingress Controller for HTTP communication.
 

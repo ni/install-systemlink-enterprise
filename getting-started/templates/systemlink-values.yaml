@@ -476,12 +476,12 @@ dataframeservice:
     ## amount of data that queries need to handle. It is not recommended to reduce requests below these minimums.
     ##
     # coordinator:
-    #   cpu: 6
-    #   memory: 16384
+    #   cpu: 15
+    #   memory: 122800
     #   volumeSize: 128Gi
     # executor:
-    #   cpu: 4
-    #   memory: 16384
+    #   cpu: 15
+    #   memory: 122800
     #   volumeSize: 128Gi
     auth:
       ## Name of the secret containing the Dremio login credentials
