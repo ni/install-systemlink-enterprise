@@ -357,7 +357,7 @@ dashboardhost:
     ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
     ##
     plugins:
-      - https://github.com/ni/systemlink-notebook-datasource/releases/latest/download/systemlink-notebook-datasource.zip;ni-slnotebook-datasource
+      - http://localhost:8080/ni/plugins/systemlink-notebook-datasource/1.1.0.zip;ni-slnotebook-datasource
 
     ## Customize the grafana.ini file.
     ##
