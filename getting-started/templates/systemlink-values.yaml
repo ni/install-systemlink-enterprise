@@ -464,6 +464,7 @@ dataframeservice:
     ##
     service: *minioServiceName
     ## S3 port number.
+    # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
   ## Configure Dremio access
@@ -549,6 +550,7 @@ fileingestion:
     ##
     service: *minioServiceName
     ## S3 Port
+    # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service 
