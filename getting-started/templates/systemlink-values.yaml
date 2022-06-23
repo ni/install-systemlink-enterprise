@@ -242,7 +242,7 @@ dashboardhost:
   accessControlMirroring:
     ## Enable RBAC mirroring.
     ##
-    enabled: false
+    enabled: true
 
   ## Name to use for the database access secret.
   ##
