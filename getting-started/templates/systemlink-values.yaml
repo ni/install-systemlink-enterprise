@@ -436,6 +436,13 @@ grafanaprovisioning:
 ## Configuration for the Data Frame service.
 ##
 dataframeservice:
+  ## Ingress configuration
+  ##
+  ingress:
+    ## Override the default request size limit for an nginx ingress controller.
+    ##
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: 256m
   ## Configure S3/MinIO access.
   ##
   s3:
