@@ -11,3 +11,9 @@ strimzi-kafka-operator:
   watchAnyNamespace: true
   podSecurityContext: 
     runAsNonRoot: true
+  ## Clusters that are not allowing external intenet access MUST set properties below.
+  ## More information on the properties can be found at: https://artifacthub.io/packages/helm/strimzi/strimzi-kafka-operator
+  defaultImageRegistry:
+  image:
+    imagePullSecrets:
+  
