@@ -13,7 +13,11 @@ strimzi-kafka-operator:
     runAsNonRoot: true
   ## Clusters that are not allowing external intenet access MUST set properties below.
   ## More information on the properties can be found at: https://artifacthub.io/packages/helm/strimzi/strimzi-kafka-operator
-  defaultImageRegistry:
+  defaultImageRegistry: "" # <ATTENTION>
+  ## The registry where you image is stored.
+  ##
   image:
-    imagePullSecrets:
+    imagePullSecrets: "" # <ATTENTION>
+    ## The secret for the registry that your operator image is stored in.
+    ##
   
