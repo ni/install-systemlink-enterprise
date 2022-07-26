@@ -149,6 +149,13 @@ minio:
     ##
     api: &minioPort 9000
 
+  ## Storage configuration.
+  persistence:
+    ## PVC Storage Request for MinIO data volume
+    # <ATTENTION> - Adjust this size to match the needs of your application. MinIO will be used to store uploaded files and data frames.
+    ##
+    size: 50Gi
+
   ## Configure the ingress resource that allows you to access the MinIO UI.
   ## ref: https://kubernetes.io/docs/user-guide/ingress/
   ##
