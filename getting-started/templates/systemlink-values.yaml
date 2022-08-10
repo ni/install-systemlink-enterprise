@@ -513,10 +513,6 @@ dataframeservice:
         bucketName: *dataframeBucket
         path: "/dremio/distStorage"
         authentication: "accessKeySecret"
-        # <ATTENTION> - Configure credentials in systemlink-secrets.yaml under sldremio.distStorage.aws.credentials
-        # credentials:
-        #   accessKey: ""
-        #   secret: ""
         # extraProperties are only necessary if not using Amazon S3
         # <ATTENTION>: If using Amazon S3, comment out extraProperties. If using MinIO or an equivalent, set fs.s3a.endpoint
         # to the FQDN of MinIO or the equivalent service.
@@ -540,6 +536,7 @@ dataframeservice:
             <description>Value can either be true or false, set to true to use SSL with a secure Minio server.</description>
             <value>false</value>
           </property>
+
   ## Configure Kafka access
   ##
   kafkaconnect:
