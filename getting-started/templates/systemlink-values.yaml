@@ -459,7 +459,7 @@ dataframeservice:
       secretName: "nidataframe-s3-credentials"
     ## The name of the S3 or MinIO bucket that the service should connect to.
     ##
-    bucket: "systemlink-dataframe"
+    bucket: &dataframeBucket "systemlink-dataframe"
     ## This should just be the name of the scheme, without the trailing ://.
     ##
     schemeName: "http"
@@ -503,6 +503,40 @@ dataframeservice:
       ## The name of the key in the above secret whose value contains the Dremio password
       ##
       passwordKey: "password"
+    distStorage:
+      # Dremio distributed storage configuration. This must be configured for the service to perform acceptably.
+      # See https://github.com/dremio/dremio-cloud-tools/blob/master/charts/dremio_v2/docs/Values-Reference.md#distributed-storage-values
+      # <ATTENTION>: This only partially configures distributed storage. Credentials must be configured in systemlink-secrets.yaml under
+      # sldremio.distStorage.aws.credentials.
+      type: "aws" # <ATTENTION> - change this if not using Amazon S3 or an equivalent, like MinIO
+      aws:
+        bucketName: *dataframeBucket
+        path: "/dremio/distStorage"
+        authentication: "accessKeySecret"
+        # extraProperties are only necessary if not using Amazon S3
+        # <ATTENTION>: If using Amazon S3, comment out extraProperties. If using MinIO or an equivalent, set fs.s3a.endpoint
+        # to the FQDN of MinIO or the equivalent service.
+        extraProperties: |
+          <property>
+            <name>fs.s3a.endpoint</name>
+            <value><ATTENTION> - set to the FQDN of the S3 endpoint</value>
+          </property>
+          <property>
+            <name>fs.s3a.path.style.access</name>
+            <description>Value has to be set to true.</description>
+            <value>true</value>
+          </property>
+          <property>
+            <name>dremio.s3.compat</name>
+            <description>Value has to be set to true.</description>
+            <value>true</value>
+          </property>
+          <property>
+            <name>fs.s3a.connection.ssl.enabled</name>
+            <description>Value can either be true or false, set to true to use SSL with a secure Minio server.</description>
+            <value>false</value>
+          </property>
+
   ## Configure Kafka access
   ##
   kafkaconnect:
