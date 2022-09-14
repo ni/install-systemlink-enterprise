@@ -641,3 +641,13 @@ nbexecworker:
     ##
     jupyterEnterpriseGatewayUrl: ""
 
+## Configuration for License Service for LiMo
+##
+licenseservicelimo:
+  ## Persistent Volume configuration
+  ##
+  persistentVolume:
+    ## Set this value to the name of the persistent storage class that supports ReadWriteMany access.
+    ## Leave this value as empty, if the default storage class already supports ReadWriteMany access.
+    ##
+    storageClassName: ""
