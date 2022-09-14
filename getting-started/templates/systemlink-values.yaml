@@ -641,7 +641,7 @@ nbexecworker:
     ##
     jupyterEnterpriseGatewayUrl: ""
 
-## Configuration for License Service for LiMo
+## Configuration for licensing
 ##
 licenseservicelimo:
   ## Persistent Volume configuration
