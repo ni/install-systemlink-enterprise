@@ -11,3 +11,9 @@ strimzi-kafka-operator:
   watchAnyNamespace: true
   podSecurityContext: 
     runAsNonRoot: true
+  ## Uncomment to set Java heap size
+  ## Only required if the operator is crashing with
+  ## "Terminating due to java.lang.OutOfMemoryError: Java heap space"
+  #extraEnvs:
+  #  - name: JAVA_OPTS
+  #    value: "-Xms256m -Xmx256m"
