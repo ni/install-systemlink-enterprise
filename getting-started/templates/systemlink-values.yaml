@@ -645,7 +645,7 @@ nbexecservice:
         ##
         bucket: "systemlink-notebook-execution"
         ## Set this value to connect to an external S3 instance.
-        # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the port.
+        # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the insecure and port.
         ##
         host: ""
         ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
