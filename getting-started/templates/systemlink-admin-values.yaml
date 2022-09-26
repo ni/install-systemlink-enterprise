@@ -2,6 +2,16 @@
 ## This is a YAML-formatted file.
 ## Declare variables to be passed into your templates.
 
+global:
+  ## Defines secrets required if containers are hosted on a private image repository.
+  ##
+  imagePullSecrets: 
+  - &imagePullSecrets "niartifacts-secret"
+  ## Overrides the default image registry.
+  # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
+  ##
+  imageRegistry: &imageRegistryRef "niedge01.jfrog.io/ni-docker"
+
 ## Configuring Strimzi Kafka:
 ## https://github.com/strimzi/strimzi-kafka-operator/tree/main/helm-charts/helm3/strimzi-kafka-operator#configuration
 ##
@@ -17,3 +27,9 @@ strimzi-kafka-operator:
   #extraEnvs:
   #  - name: JAVA_OPTS
   #    value: "-Xms256m -Xmx256m"
+
+  ## The registry where kafka images are stored.
+  defaultImageRegistry: *imageRegistryRef
+  ## The secrets required to pull the images.
+  image:
+    imagePullSecrets: *imagePullSecrets
