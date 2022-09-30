@@ -61,7 +61,8 @@ Complete the following steps to clean up resources Helm does not remove.
 
 **Note** In these steps we cannot use the cannot use the service to connect to the database
 
-1. Find the primary replica by running `kubectl exec -it <replica_name> -- mongo`, which should print something like `rs0:PRIMARY>`.
+1. Run `kubectl exec -it <replica_name> -- mongo` to find the primary replica. The result will look similar to the following example: `rs0:PRIMARY>`.
+
 
         Example: `kubectl exec -it fileingestion-mongodb-0 -- mongo`
 
