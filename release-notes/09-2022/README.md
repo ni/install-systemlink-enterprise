@@ -2,7 +2,7 @@
 
 The 09-2022 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts.
 
-**Note:**  If you are upgrading from the 07-2022 release or earlier there is a potential for file meta data loss. [FileIngestionDatabaseRecovery.md](/FileIngestionDatabaseRecovery.md) includes a procedure migrate this data through the upgrade.
+**Note:**  If you are upgrading from the 07-2022 release or earlier. Complete the steps in [FileIngestionDatabaseRecovery.md](/FileIngestionDatabaseRecovery.md) to avoid losing file metadata.
 
 ## Behavior Changes
 
