@@ -60,7 +60,8 @@ Complete the following steps to clean up resources Helm does not remove.
 
 ## Port Forwarding for the upgraded MongoDB instance
 
-**Note** In these steps we cannot use the cannot use the service to connect to the database
+**Note** In these steps we cannot use the service to connect to the database
+
 
 1. Run `kubectl exec -it <replica_name> -- mongo` to find the primary replica. The result will look similar to the following example: `rs0:PRIMARY>`.
 
