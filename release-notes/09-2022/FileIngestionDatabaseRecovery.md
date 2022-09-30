@@ -71,7 +71,10 @@ Complete the following steps to clean up resources Helm does not remove.
 
 ## Importing the database backup into the new MongoDB instance
 
-1. Import the database contents back by running `mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
+1. Run the following command to import the database contents.
+
+`mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
+
 
     **Note** `<root_user>` is should be replaced by the root user, `<root_password>` by the root password, `<path>` to the path on your local computer containing the backup, and `<port>` by the port specified on the previous step.
 
