@@ -49,7 +49,8 @@ Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade th
 
 ### Cleaning up the service
 
-This step must be completed because Helm does not to remove these resources. If they are not removed the upgraded version of the service will not be affected. All dependencies of the service will be created as needed during the upgrade.
+Complete the following steps to clean up resources Helm does not remove. 
+
 
 1. Run `kubectl get services | grep fileingestion` (or `Select-String` in powershell) to list all the services attached to `fileingestion`
 1. Delete all services that contain `mongodb` in their name.
