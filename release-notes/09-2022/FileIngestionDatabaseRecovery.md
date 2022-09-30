@@ -35,7 +35,8 @@ The following procedure can be used to backup meta data for files ingested by Sy
 
 ## Perform the August SLE Upgrade
 
-Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade the FileIngestion chart. You can use the following procedure to clean up resources that will no longer be needed after the upgrade.
+Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade the FileIngestion chart. Complete the following steps to clean up resources that will no longer be needed after the upgrade.
+
 
 ### Removing old PVCs
 
