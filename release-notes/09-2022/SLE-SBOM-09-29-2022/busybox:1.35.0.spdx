@@ -1,0 +1,25 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0-db59e042-0063-41aa-9a33-4523bf07c506
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:35.645245Z
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0
+SPDXID: SPDXRef-ContainerImage-4001d956fcb82906
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/busybox@sha256:80548a8d85fa32ce25b126657e29e6caf92ce8aa6b4a0bb5708c58a8d6a751f3?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fbusybox&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:8eb744de25204ff0d56f8197e43be8684f0ba3b7e25050a3c68d772632aab13f
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/busybox@sha256:80548a8d85fa32ce25b126657e29e6caf92ce8aa6b4a0bb5708c58a8d6a751f3
+PackageAttributionText: DiffID: sha256:98b8e9422b95d82ef10e913dd6a5444fe910c8505984648555bac770d8a98936
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-4001d956fcb82906
+

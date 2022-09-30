@@ -1,0 +1,646 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/helium-webappservices:fb778a1da34c9f026d19e953f9f5c86090b53b81.1
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/helium-webappservices:fb778a1da34c9f026d19e953f9f5c86090b53b81.1-027e9a8d-8960-46e6-9c46-843191552136
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:54.618019Z
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/helium-webappservices:fb778a1da34c9f026d19e953f9f5c86090b53b81.1
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/helium-webappservices:fb778a1da34c9f026d19e953f9f5c86090b53b81.1
+SPDXID: SPDXRef-ContainerImage-a14e7f795a53915f
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/helium-webappservices@sha256:2663f9046dc863d3aa2de79ad0978d00dca891861ba137909fd4e0a5f7685d50?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fni%2Fsystemlink%2Fhelium-webappservices&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:36653ebe55c963e5e3a827c4c94a79ee17e08a60e60d9d264ebb7ed19ba59172
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/helium-webappservices@sha256:2663f9046dc863d3aa2de79ad0978d00dca891861ba137909fd4e0a5f7685d50
+PackageAttributionText: DiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+PackageAttributionText: DiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+PackageAttributionText: DiffID: sha256:9a2efef04f4737e727d54775c2f9f7a5fe82f13269d01df885b4d857360dc9f1
+PackageAttributionText: DiffID: sha256:d889eb73a0a85e7e3b47886b9e6c0a0764ab8c6c259a904bec6daf2cfb1ec222
+PackageAttributionText: DiffID: sha256:aa7ec5b36751821252a254bc25e2b13fb54c0a46aa84a5ba09cbab2a002fb167
+PackageAttributionText: DiffID: sha256:ff858e6d97f4e8c01f2460d94837bc47832477656735257e288be488b2a63aba
+PackageAttributionText: DiffID: sha256:28c9aec9e3c78194671989cf6dfb6a6354379cda2354488505b1457562cbfbe0
+PackageAttributionText: DiffID: sha256:c0a4e74c657f2e8c6bb7e2cf7f88d800e81c26a5a05d979669255bc45fa7eca3
+PackageAttributionText: DiffID: sha256:535794ba3c5231f60ccaac24c82829d95d6c6af71b5e02c34ffb7ab2dc183e61
+PackageAttributionText: DiffID: sha256:26db543892a3768ad27bd7b7f8a474cdc9421e21bfb803c425f1471de565d71e
+PackageAttributionText: DiffID: sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+PackageAttributionText: DiffID: sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/helium-webappservices:fb778a1da34c9f026d19e953f9f5c86090b53b81.1
+
+##### Package: alpine
+
+PackageName: alpine
+SPDXID: SPDXRef-OperatingSystem-16ffdefd5b3bd47
+PackageVersion: 3.16.2
+FilesAnalyzed: false
+
+##### Package: py3-rsa
+
+PackageName: py3-rsa
+SPDXID: SPDXRef-Package-147f35cba4d1f5cb
+PackageVersion: 4.8-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-rsa 4.8-r0
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-rsa@4.8-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: libgcc
+
+PackageName: libgcc
+SPDXID: SPDXRef-Package-155fc59dc4bdb24a
+PackageVersion: 11.2.1_git20220219-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc 11.2.1_git20220219-r2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libgcc@11.2.1_git20220219-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: scanelf
+
+PackageName: scanelf
+SPDXID: SPDXRef-Package-1c9f757e08c67536
+PackageVersion: 1.3.4-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pax-utils 1.3.4-r0
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/scanelf@1.3.4-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: py3-six
+
+PackageName: py3-six
+SPDXID: SPDXRef-Package-1d9aaf2734bbc6a3
+PackageVersion: 1.16.0-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-six 1.16.0-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-six@1.16.0-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: py3-botocore
+
+PackageName: py3-botocore
+SPDXID: SPDXRef-Package-1e9efc1fad310ea6
+PackageVersion: 1.21.49-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-botocore 1.21.49-r1
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-botocore@1.21.49-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: py3-asn1
+
+PackageName: py3-asn1
+SPDXID: SPDXRef-Package-206f27adcd3dbc29
+PackageVersion: 0.4.8-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-asn1 0.4.8-r2
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-asn1@0.4.8-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: py3-jmespath
+
+PackageName: py3-jmespath
+SPDXID: SPDXRef-Package-22c7feab0fa47377
+PackageVersion: 0.10.0-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-jmespath 0.10.0-r2
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-jmespath@0.10.0-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: ncurses-terminfo-base
+
+PackageName: ncurses-terminfo-base
+SPDXID: SPDXRef-Package-2a48e39d97f824a5
+PackageVersion: 6.3_p20220521-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.3_p20220521-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ncurses-terminfo-base@6.3_p20220521-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: musl
+
+PackageName: musl
+SPDXID: SPDXRef-Package-2c3882041685b41b
+PackageVersion: 1.2.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.3-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl@1.2.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: py3-yaml
+
+PackageName: py3-yaml
+SPDXID: SPDXRef-Package-2ee15d04dc5e4f6d
+PackageVersion: 6.0-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-yaml 6.0-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-yaml@6.0-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: zlib
+
+PackageName: zlib
+SPDXID: SPDXRef-Package-43055220bd4c4e34
+PackageVersion: 1.2.12-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: zlib 1.2.12-r3
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/zlib@1.2.12-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: python3
+
+PackageName: python3
+SPDXID: SPDXRef-Package-4a3b186e10fd6d0
+PackageVersion: 3.10.5-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: python3 3.10.5-r0
+PackageLicenseConcluded: PSF-2.0
+PackageLicenseDeclared: PSF-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/python3@3.10.5-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: gdbm
+
+PackageName: gdbm
+SPDXID: SPDXRef-Package-53fe3408faeb7526
+PackageVersion: 1.23-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gdbm 1.23-r0
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/gdbm@1.23-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: libcrypto1.1
+
+PackageName: libcrypto1.1
+SPDXID: SPDXRef-Package-558d021893e01fcd
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libcrypto1.1@1.1.1q-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: apk-tools
+
+PackageName: apk-tools
+SPDXID: SPDXRef-Package-671b071a2e6334f0
+PackageVersion: 2.12.9-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apk-tools 2.12.9-r3
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/apk-tools@2.12.9-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: alpine-keys
+
+PackageName: alpine-keys
+SPDXID: SPDXRef-Package-6b7ab4739bd113a0
+PackageVersion: 2.4-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-keys 2.4-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-keys@2.4-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: py3-urllib3
+
+PackageName: py3-urllib3
+SPDXID: SPDXRef-Package-6fd13643d16bb159
+PackageVersion: 1.26.9-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-urllib3 1.26.9-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-urllib3@1.26.9-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: py3-colorama
+
+PackageName: py3-colorama
+SPDXID: SPDXRef-Package-76222116dc3346b7
+PackageVersion: 0.4.4-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-colorama 0.4.4-r2
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-colorama@0.4.4-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: musl-utils
+
+PackageName: musl-utils
+SPDXID: SPDXRef-Package-77d9144ba03ed632
+PackageVersion: 1.2.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.3-r0
+PackageLicenseConcluded: MIT, BSD-3-Clause, GPL-2.0
+PackageLicenseDeclared: MIT, BSD-3-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl-utils@1.2.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: py3-s3transfer
+
+PackageName: py3-s3transfer
+SPDXID: SPDXRef-Package-879db16d068480e4
+PackageVersion: 0.5.1-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-s3transfer 0.5.1-r0
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-s3transfer@0.5.1-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: libbz2
+
+PackageName: libbz2
+SPDXID: SPDXRef-Package-8b2bbf92489c5037
+PackageVersion: 1.0.8-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bzip2 1.0.8-r1
+PackageLicenseConcluded: bzip2-1.0.6
+PackageLicenseDeclared: bzip2-1.0.6
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libbz2@1.0.8-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: groff
+
+PackageName: groff
+SPDXID: SPDXRef-Package-8dab8fa15621dc5f
+PackageVersion: 1.22.4-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: groff 1.22.4-r1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/groff@1.22.4-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: ncurses-libs
+
+PackageName: ncurses-libs
+SPDXID: SPDXRef-Package-8fa9bfb4ce8f8282
+PackageVersion: 6.3_p20220521-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.3_p20220521-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ncurses-libs@6.3_p20220521-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: bash
+
+PackageName: bash
+SPDXID: SPDXRef-Package-93dd92ad6fd78b11
+PackageVersion: 5.1.16-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bash 5.1.16-r2
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/bash@5.1.16-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: ca-certificates
+
+PackageName: ca-certificates
+SPDXID: SPDXRef-Package-9dc911be1ea73ab3
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates@20220614-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: py3-dateutil
+
+PackageName: py3-dateutil
+SPDXID: SPDXRef-Package-a596d3af7f09558a
+PackageVersion: 2.8.2-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-dateutil 2.8.2-r1
+PackageLicenseConcluded: Apache-2.0, BSD-3-Clause
+PackageLicenseDeclared: Apache-2.0, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-dateutil@2.8.2-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: py3-docutils
+
+PackageName: py3-docutils
+SPDXID: SPDXRef-Package-abaef13dbf074137
+PackageVersion: 0.16-r4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: py3-docutils 0.16-r4
+PackageLicenseConcluded: BSD-2-Clause, GPL-3.0, Python-2.0
+PackageLicenseDeclared: BSD-2-Clause, GPL-3.0, Python-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/py3-docutils@0.16-r4?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: aws-cli
+
+PackageName: aws-cli
+SPDXID: SPDXRef-Package-abe920345fed57e2
+PackageVersion: 1.22.81-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: aws-cli 1.22.81-r0
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/aws-cli@1.22.81-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: libstdc++
+
+PackageName: libstdc++
+SPDXID: SPDXRef-Package-acfa8ab1d75c3e2a
+PackageVersion: 11.2.1_git20220219-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc 11.2.1_git20220219-r2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libstdc++@11.2.1_git20220219-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: ca-certificates-bundle
+
+PackageName: ca-certificates-bundle
+SPDXID: SPDXRef-Package-ae1e5be4a78c13d1
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates-bundle@20220614-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: alpine-baselayout
+
+PackageName: alpine-baselayout
+SPDXID: SPDXRef-Package-b9b73a8df6c20b7b
+PackageVersion: 3.2.0-r22
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r22
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout@3.2.0-r22?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: readline
+
+PackageName: readline
+SPDXID: SPDXRef-Package-c1b0d56c78fe7a57
+PackageVersion: 8.1.2-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: readline 8.1.2-r0
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/readline@8.1.2-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: expat
+
+PackageName: expat
+SPDXID: SPDXRef-Package-ca0dc1430633db3a
+PackageVersion: 2.4.9-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: expat 2.4.9-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/expat@2.4.9-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: mpdecimal
+
+PackageName: mpdecimal
+SPDXID: SPDXRef-Package-d8ce882443fb0067
+PackageVersion: 2.5.1-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: mpdecimal 2.5.1-r1
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/mpdecimal@2.5.1-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: libc-utils
+
+PackageName: libc-utils
+SPDXID: SPDXRef-Package-e4008ecaa6c1d39a
+PackageVersion: 0.7.2-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libc-dev 0.7.2-r3
+PackageLicenseConcluded: BSD-2-Clause, BSD-3-Clause
+PackageLicenseDeclared: BSD-2-Clause, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: sqlite-libs
+
+PackageName: sqlite-libs
+SPDXID: SPDXRef-Package-e48903cf2e05cd9d
+PackageVersion: 3.38.5-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sqlite 3.38.5-r0
+PackageLicenseConcluded: blessing
+PackageLicenseDeclared: blessing
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/sqlite-libs@3.38.5-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: yaml
+
+PackageName: yaml
+SPDXID: SPDXRef-Package-e5baed1ae428cd65
+PackageVersion: 0.2.5-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: yaml 0.2.5-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/yaml@0.2.5-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: ssl_client
+
+PackageName: ssl_client
+SPDXID: SPDXRef-Package-e96020d9856468f
+PackageVersion: 1.35.0-r17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.35.0-r17
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ssl_client@1.35.0-r17?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: libssl1.1
+
+PackageName: libssl1.1
+SPDXID: SPDXRef-Package-eab04bc506ca1930
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libssl1.1@1.1.1q-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: xz-libs
+
+PackageName: xz-libs
+SPDXID: SPDXRef-Package-ed98d8a4dc0fd8dc
+PackageVersion: 5.2.5-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: xz 5.2.5-r1
+PackageLicenseConcluded: GPL-2.0, Public-Domain, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, Public-Domain, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/xz-libs@5.2.5-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: busybox
+
+PackageName: busybox
+SPDXID: SPDXRef-Package-f55a39846a8dc061
+PackageVersion: 1.35.0-r17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.35.0-r17
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/busybox@1.35.0-r17?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: libffi
+
+PackageName: libffi
+SPDXID: SPDXRef-Package-f6dfb6070ba492b6
+PackageVersion: 3.4.2-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libffi 3.4.2-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libffi@3.4.2-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:93ec0489870af9af3a86d09bddb8b3fd070aeae4a6d44e63b02498d944020924
+PackageAttributionText: LayerDiffID: sha256:1d20a47301aecc81bb4e19a3afd74800bb31456e67d2340ee270c82d19ef76bb
+
+##### Package: alpine-baselayout-data
+
+PackageName: alpine-baselayout-data
+SPDXID: SPDXRef-Package-fab92f85b0031558
+PackageVersion: 3.2.0-r22
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r22
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout-data@3.2.0-r22?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-a14e7f795a53915f
+Relationship: SPDXRef-ContainerImage-a14e7f795a53915f CONTAINS SPDXRef-OperatingSystem-16ffdefd5b3bd47
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-b9b73a8df6c20b7b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-fab92f85b0031558
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-6b7ab4739bd113a0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-671b071a2e6334f0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-abe920345fed57e2
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-93dd92ad6fd78b11
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-f55a39846a8dc061
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-9dc911be1ea73ab3
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ae1e5be4a78c13d1
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ca0dc1430633db3a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-53fe3408faeb7526
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-8dab8fa15621dc5f
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-8b2bbf92489c5037
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e4008ecaa6c1d39a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-558d021893e01fcd
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-f6dfb6070ba492b6
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-155fc59dc4bdb24a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-eab04bc506ca1930
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-acfa8ab1d75c3e2a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-d8ce882443fb0067
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-2c3882041685b41b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-77d9144ba03ed632
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-8fa9bfb4ce8f8282
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-2a48e39d97f824a5
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-206f27adcd3dbc29
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-1e9efc1fad310ea6
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-76222116dc3346b7
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-a596d3af7f09558a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-abaef13dbf074137
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-22c7feab0fa47377
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-147f35cba4d1f5cb
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-879db16d068480e4
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-1d9aaf2734bbc6a3
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-6fd13643d16bb159
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-2ee15d04dc5e4f6d
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-4a3b186e10fd6d0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-c1b0d56c78fe7a57
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-1c9f757e08c67536
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e48903cf2e05cd9d
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e96020d9856468f
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ed98d8a4dc0fd8dc
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e5baed1ae428cd65
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-43055220bd4c4e34
+

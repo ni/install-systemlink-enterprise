@@ -1,0 +1,2393 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/bitnami/mongodb:5.0.11-debian-11-r3
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/bitnami/mongodb:5.0.11-debian-11-r3-fca0b771-c572-4547-afc5-297a1fd997d4
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:30.594489Z
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-2bbb114e48be0589
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/common/bin/wait-for-port
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-7117df5d92a3db45
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongostat
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-901084f742bdd5d6
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongotop
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-9fbff5299a3d2db9
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/common/bin/render-template
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-b49ab3605a09880a
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/common/bin/gosu
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-c3af67a31dff7a29
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongodump
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-c9834e18a4fa5e05
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/bsondump
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-ce6ac4b6fada9d06
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongoimport
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-e3b5a3df4c55a9cd
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongoexport
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-e7e61567116ceb4e
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongofiles
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-eecdf8b32c6b12ca
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/common/bin/yq
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-f7f5a529f612393
+FilesAnalyzed: false
+PackageSourceInfo: opt/bitnami/mongodb/bin/mongorestore
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/bitnami/mongodb:5.0.11-debian-11-r3
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/bitnami/mongodb:5.0.11-debian-11-r3
+SPDXID: SPDXRef-ContainerImage-ef86c2a327a65782
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/mongodb@sha256:38c28a081251d3eadfff912edc8697897e1bbcfd95a2c8a538d95ea73ae4ec05?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fbitnami%2Fmongodb&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:99c2be5e13abac7c1f6261f839c71a853142d7609bea83c5c3684f67bf62f679
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/bitnami/mongodb@sha256:38c28a081251d3eadfff912edc8697897e1bbcfd95a2c8a538d95ea73ae4ec05
+PackageAttributionText: DiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+PackageAttributionText: DiffID: sha256:da67df023118d53614026e6244dfa6cdf4d4a324cf9ead6fa3b10df75006a9c5
+PackageAttributionText: DiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+PackageAttributionText: DiffID: sha256:2617366fee4cc71f1da976bbc15bfdd768ecbe5398f57ffbb23f5ebbd5fefd81
+PackageAttributionText: DiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+PackageAttributionText: DiffID: sha256:b41950735a59db08c49394a50a7958e18915410ecd9f9bd19754adf156dee386
+PackageAttributionText: DiffID: sha256:faa0880c1b6a1e3fc4b7c4fd8e7f5e65d722ab4c8c67fbf9546ca2e107f74ab4
+PackageAttributionText: DiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+PackageAttributionText: DiffID: sha256:72b87a11db6c3be8e01238bf81ebe94daaff3d7cf3318fac5a7e37043a1735e6
+PackageAttributionText: DiffID: sha256:419441a0ca0726469b9aa4908c7140256325c63efb26a6d63c08bea68e95f269
+PackageAttributionText: DiffID: sha256:9ddc583bb5c1babfca5a733b5e2b4226c35f748b71763aa7ddd9931a43cdee4a
+PackageAttributionText: DiffID: sha256:9eb91d71e84aa3338a7e1d6a395151b452df4f474db57a4368490728cde68cf9
+PackageAttributionText: DiffID: sha256:38ed501f88c9203c0aa155761c45c011cfae0740a5fab3cb684ba5020a4db1ef
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/bitnami/mongodb:5.0.11-debian-11-r3
+
+##### Package: debian
+
+PackageName: debian
+SPDXID: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f
+PackageVersion: 11.4
+FilesAnalyzed: false
+
+##### Package: procps
+
+PackageName: procps
+SPDXID: SPDXRef-Package-10847f0e72fdbb3b
+PackageVersion: 2:3.3.17-5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: procps 2:3.3.17-5
+PackageLicenseConcluded: LGPL-2.1, LGPL-2.0, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, LGPL-2.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/procps@2:3.3.17-5?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: zlib1g
+
+PackageName: zlib1g
+SPDXID: SPDXRef-Package-10e9373908494406
+PackageVersion: 1:1.2.11.dfsg-2+deb11u2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: zlib 1:1.2.11.dfsg-2+deb11u2
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/zlib1g@1:1.2.11.dfsg-2+deb11u2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: golang.org/x/text
+
+PackageName: golang.org/x/text
+SPDXID: SPDXRef-Package-114ff4bcb97c8cc9
+PackageVersion: v0.3.7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/text@v0.3.7
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libsasl2-modules-db
+
+PackageName: libsasl2-modules-db
+SPDXID: SPDXRef-Package-11cfe38dab632fb3
+PackageVersion: 2.1.27+dfsg-2.1+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: cyrus-sasl2 2.1.27+dfsg-2.1+deb11u1
+PackageLicenseConcluded: BSD-4-Clause, GPL-3.0
+PackageLicenseDeclared: BSD-4-Clause, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsasl2-modules-db@2.1.27+dfsg-2.1+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: mount
+
+PackageName: mount
+SPDXID: SPDXRef-Package-12e0d3a2621a4afb
+PackageVersion: 2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/mount@2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libblkid1
+
+PackageName: libblkid1
+SPDXID: SPDXRef-Package-14e6f8b7273273e4
+PackageVersion: 2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libblkid1@2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libpam0g
+
+PackageName: libpam0g
+SPDXID: SPDXRef-Package-1714e700fea49497
+PackageVersion: 1.4.0-9+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.4.0-9+deb11u1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpam0g@1.4.0-9+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: gopkg.in/tomb.v2
+
+PackageName: gopkg.in/tomb.v2
+SPDXID: SPDXRef-Package-19dfa9845ae17f9f
+PackageVersion: v2.0.0-20140626144623-14b3d72120e8
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/tomb.v2@v2.0.0-20140626144623-14b3d72120e8
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: github.com/youmark/pkcs8
+
+PackageName: github.com/youmark/pkcs8
+SPDXID: SPDXRef-Package-1aae82399156b029
+PackageVersion: v0.0.0-20181117223130-1be2e3e5546d
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/youmark/pkcs8@v0.0.0-20181117223130-1be2e3e5546d
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libpcre3
+
+PackageName: libpcre3
+SPDXID: SPDXRef-Package-1ace58310b9a6d91
+PackageVersion: 2:8.39-13
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pcre3 2:8.39-13
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpcre3@2:8.39-13?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/jessevdk/go-flags
+
+PackageName: github.com/jessevdk/go-flags
+SPDXID: SPDXRef-Package-1d3858c1f894a410
+PackageVersion: v1.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jessevdk/go-flags@v1.5.0
+PackageAttributionText: LayerDigest: sha256:8d91405818ef77f376d5cdd41dafe13532fd6ae2fbccc4bb7de2a3d0f56606ce
+PackageAttributionText: LayerDiffID: sha256:b41950735a59db08c49394a50a7958e18915410ecd9f9bd19754adf156dee386
+
+##### Package: coreutils
+
+PackageName: coreutils
+SPDXID: SPDXRef-Package-1d9bdc038e40b3b3
+PackageVersion: 8.32-4+b1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: coreutils 8.32-4
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/coreutils@8.32-4+b1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/mattn/go-colorable
+
+PackageName: github.com/mattn/go-colorable
+SPDXID: SPDXRef-Package-1e88c15e1ab4080f
+PackageVersion: v0.1.12
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mattn/go-colorable@v0.1.12
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libmount1
+
+PackageName: libmount1
+SPDXID: SPDXRef-Package-1eaa3c4147fc6148
+PackageVersion: 2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libmount1@2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: startpar
+
+PackageName: startpar
+SPDXID: SPDXRef-Package-21930830f5d51349
+PackageVersion: 0.64-3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: startpar 0.64-3
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/startpar@0.64-3?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libc-bin
+
+PackageName: libc-bin
+SPDXID: SPDXRef-Package-228cc00eb49bd415
+PackageVersion: 2.31-13+deb11u3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: glibc 2.31-13+deb11u3
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libc-bin@2.31-13+deb11u3?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libnghttp2-14
+
+PackageName: libnghttp2-14
+SPDXID: SPDXRef-Package-250ab1e6d21152
+PackageVersion: 1.43.0-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: nghttp2 1.43.0-1
+PackageLicenseConcluded: Expat, MIT, all-permissive, GPL-3+ with autoconf exception, BSD-2-Clause, SIL-OFL-1.1, GPL-3.0
+PackageLicenseDeclared: Expat, MIT, all-permissive, GPL-3+ with autoconf exception, BSD-2-Clause, SIL-OFL-1.1, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libnghttp2-14@1.43.0-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libuuid1
+
+PackageName: libuuid1
+SPDXID: SPDXRef-Package-2602d30f4d644de3
+PackageVersion: 2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libuuid1@2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: golang.org/x/sys
+
+PackageName: golang.org/x/sys
+SPDXID: SPDXRef-Package-273cc4b2cd3e41fc
+PackageVersion: v0.0.0-20220712014510-0a85c31ab51e
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/sys@v0.0.0-20220712014510-0a85c31ab51e
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libpsl5
+
+PackageName: libpsl5
+SPDXID: SPDXRef-Package-28000a3e23856345
+PackageVersion: 0.21.0-1.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libpsl 0.21.0-1.2
+PackageLicenseConcluded: MIT, Chromium
+PackageLicenseDeclared: MIT, Chromium
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpsl5@0.21.0-1.2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: base-files
+
+PackageName: base-files
+SPDXID: SPDXRef-Package-28fc6cc355f871b9
+PackageVersion: 11.1+deb11u4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: base-files 11.1+deb11u4
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/base-files@11.1+deb11u4?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libpam-modules
+
+PackageName: libpam-modules
+SPDXID: SPDXRef-Package-2afdc36232a9c069
+PackageVersion: 1.4.0-9+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.4.0-9+deb11u1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpam-modules@1.4.0-9+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/golang/snappy
+
+PackageName: github.com/golang/snappy
+SPDXID: SPDXRef-Package-2b6fd2fe32938a59
+PackageVersion: v0.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/golang/snappy@v0.0.1
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libaudit1
+
+PackageName: libaudit1
+SPDXID: SPDXRef-Package-2d351a2054ef67a4
+PackageVersion: 1:3.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: audit 1:3.0-2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1, GPL-1.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1, GPL-1.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libaudit1@1:3.0-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libncursesw6
+
+PackageName: libncursesw6
+SPDXID: SPDXRef-Package-2e0dc9453c202009
+PackageVersion: 6.2+20201114-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2+20201114-2
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libncursesw6@6.2+20201114-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: base-passwd
+
+PackageName: base-passwd
+SPDXID: SPDXRef-Package-305ffff65bbc6cb7
+PackageVersion: 3.5.51
+FilesAnalyzed: false
+PackageSourceInfo: built package from: base-passwd 3.5.51
+PackageLicenseConcluded: GPL-2.0, public-domain
+PackageLicenseDeclared: GPL-2.0, public-domain
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/base-passwd@3.5.51?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libnuma1
+
+PackageName: libnuma1
+SPDXID: SPDXRef-Package-30e1e38480411cd9
+PackageVersion: 2.0.12-1+b1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: numactl 2.0.12-1
+PackageLicenseConcluded: GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libnuma1@2.0.12-1+b1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libtirpc-common
+
+PackageName: libtirpc-common
+SPDXID: SPDXRef-Package-31502d24a40f1d65
+PackageVersion: 1.3.1-1+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libtirpc 1.3.1-1+deb11u1
+PackageLicenseConcluded: BSD-3-Clause, GPL-2.0, __AUTO_PERMISSIVE__, BSD-2-Clause, BSD-4-Clause, LGPL-2.1, PERMISSIVE
+PackageLicenseDeclared: BSD-3-Clause, GPL-2.0, __AUTO_PERMISSIVE__, BSD-2-Clause, BSD-4-Clause, LGPL-2.1, PERMISSIVE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libtirpc-common@1.3.1-1+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:d72104c76454a47d2329cd7650f6448c5357a4f3b8f9cc7cc0f4b6257eb9c592
+PackageAttributionText: LayerDiffID: sha256:419441a0ca0726469b9aa4908c7140256325c63efb26a6d63c08bea68e95f269
+
+##### Package: gpgv
+
+PackageName: gpgv
+SPDXID: SPDXRef-Package-31cca5812dc97660
+PackageVersion: 2.2.27-2+deb11u2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gnupg2 2.2.27-2+deb11u2
+PackageLicenseConcluded: GPL-3.0, permissive, LGPL-2.1, Expat, BSD-3-Clause, LGPL-3.0, RFC-Reference, TinySCHEME, CC0-1.0
+PackageLicenseDeclared: GPL-3.0, permissive, LGPL-2.1, Expat, BSD-3-Clause, LGPL-3.0, RFC-Reference, TinySCHEME, CC0-1.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/gpgv@2.2.27-2+deb11u2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: grep
+
+PackageName: grep
+SPDXID: SPDXRef-Package-32ba42eb0fda9272
+PackageVersion: 3.6-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: grep 3.6-1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/grep@3.6-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: liblz4-1
+
+PackageName: liblz4-1
+SPDXID: SPDXRef-Package-354ee225c3117c28
+PackageVersion: 1.9.3-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: lz4 1.9.3-2
+PackageLicenseConcluded: BSD-2-Clause, GPL-2.0
+PackageLicenseDeclared: BSD-2-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/liblz4-1@1.9.3-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/jessevdk/go-flags
+
+PackageName: github.com/jessevdk/go-flags
+SPDXID: SPDXRef-Package-3810510b08ea8fdb
+PackageVersion: v1.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jessevdk/go-flags@v1.4.0
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libudev1
+
+PackageName: libudev1
+SPDXID: SPDXRef-Package-3870d28f45dc38b7
+PackageVersion: 247.3-7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: systemd 247.3-7
+PackageLicenseConcluded: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+PackageLicenseDeclared: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libudev1@247.3-7?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libgpg-error0
+
+PackageName: libgpg-error0
+SPDXID: SPDXRef-Package-3a9a8b3e332644aa
+PackageVersion: 1.38-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libgpg-error 1.38-2
+PackageLicenseConcluded: LGPL-2.1, BSD-3-Clause, g10-permissive, GPL-3.0
+PackageLicenseDeclared: LGPL-2.1, BSD-3-Clause, g10-permissive, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libgpg-error0@1.38-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: gopkg.in/yaml.v3
+
+PackageName: gopkg.in/yaml.v3
+SPDXID: SPDXRef-Package-3d15f14ab7c2d158
+PackageVersion: v3.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/yaml.v3@v3.0.1
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libcap-ng0
+
+PackageName: libcap-ng0
+SPDXID: SPDXRef-Package-3e00dfe0737b8d31
+PackageVersion: 0.7.9-2.2+b1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libcap-ng 0.7.9-2.2
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0, GPL-3.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libcap-ng0@0.7.9-2.2+b1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libunistring2
+
+PackageName: libunistring2
+SPDXID: SPDXRef-Package-40be80dbcf4dc855
+PackageVersion: 0.9.10-4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libunistring 0.9.10-4
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0, FreeSoftware, GPL-2+ with distribution exception, GPL-3.0, GFDL-1.2+, MIT, GFDL-1.2
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0, FreeSoftware, GPL-2+ with distribution exception, GPL-3.0, GFDL-1.2+, MIT, GFDL-1.2
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libunistring2@0.9.10-4?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libstdc++6
+
+PackageName: libstdc++6
+SPDXID: SPDXRef-Package-41de15a005fe88d6
+PackageVersion: 10.2.1-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc-10 10.2.1-6
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libstdc++6@10.2.1-6?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/mattn/go-runewidth
+
+PackageName: github.com/mattn/go-runewidth
+SPDXID: SPDXRef-Package-42bdfd0bce089606
+PackageVersion: v0.0.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mattn/go-runewidth@v0.0.4
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: dpkg
+
+PackageName: dpkg
+SPDXID: SPDXRef-Package-445d251dc3b62f90
+PackageVersion: 1.20.11
+FilesAnalyzed: false
+PackageSourceInfo: built package from: dpkg 1.20.11
+PackageLicenseConcluded: GPL-2.0, BSD-2-Clause, public-domain-s-s-d, public-domain-md5
+PackageLicenseDeclared: GPL-2.0, BSD-2-Clause, public-domain-s-s-d, public-domain-md5
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/dpkg@1.20.11?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/goccy/go-json
+
+PackageName: github.com/goccy/go-json
+SPDXID: SPDXRef-Package-4476b1b8ae1ff789
+PackageVersion: v0.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/goccy/go-json@v0.9.10
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: github.com/magiconair/properties
+
+PackageName: github.com/magiconair/properties
+SPDXID: SPDXRef-Package-44d262ea530e20e4
+PackageVersion: v1.8.6
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/magiconair/properties@v1.8.6
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libbz2-1.0
+
+PackageName: libbz2-1.0
+SPDXID: SPDXRef-Package-4afd34b3b12a5c3f
+PackageVersion: 1.0.8-4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bzip2 1.0.8-4
+PackageLicenseConcluded: BSD-variant, GPL-2.0
+PackageLicenseDeclared: BSD-variant, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libbz2-1.0@1.0.8-4?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libaudit-common
+
+PackageName: libaudit-common
+SPDXID: SPDXRef-Package-4c8055a4d24ac332
+PackageVersion: 1:3.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: audit 1:3.0-2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1, GPL-1.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1, GPL-1.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libaudit-common@1:3.0-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libsmartcols1
+
+PackageName: libsmartcols1
+SPDXID: SPDXRef-Package-4d0fc9c37b386653
+PackageVersion: 2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsmartcols1@2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libseccomp2
+
+PackageName: libseccomp2
+SPDXID: SPDXRef-Package-4d550a59bd772a4
+PackageVersion: 2.5.1-1+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libseccomp 2.5.1-1+deb11u1
+PackageLicenseConcluded: LGPL-2.1
+PackageLicenseDeclared: LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libseccomp2@2.5.1-1+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: ca-certificates
+
+PackageName: ca-certificates
+SPDXID: SPDXRef-Package-4ef7bf5c7e7b3bfd
+PackageVersion: 20210119
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20210119
+PackageLicenseConcluded: ...
+PackageLicenseDeclared: ...
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/ca-certificates@20210119?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libgssapi-krb5-2
+
+PackageName: libgssapi-krb5-2
+SPDXID: SPDXRef-Package-5225f6d1b49cab05
+PackageVersion: 1.18.3-6+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: krb5 1.18.3-6+deb11u1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libgssapi-krb5-2@1.18.3-6+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: librtmp1
+
+PackageName: librtmp1
+SPDXID: SPDXRef-Package-542c5cce3650e712
+PackageVersion: 2.4+20151223.gitfa8646d.1-2+b2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: rtmpdump 2.4+20151223.gitfa8646d.1-2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/librtmp1@2.4+20151223.gitfa8646d.1-2+b2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: dash
+
+PackageName: dash
+SPDXID: SPDXRef-Package-553a8d497f2786ab
+PackageVersion: 0.5.11+git20200708+dd9ef66-5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: dash 0.5.11+git20200708+dd9ef66-5
+PackageLicenseConcluded: BSD-3-Clause, FSFULLR, FSFUL, Expat, GPL-2.0, public-domain
+PackageLicenseDeclared: BSD-3-Clause, FSFULLR, FSFUL, Expat, GPL-2.0, public-domain
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/dash@0.5.11+git20200708+dd9ef66-5?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libgnutls30
+
+PackageName: libgnutls30
+SPDXID: SPDXRef-Package-5582da7b0b900451
+PackageVersion: 3.7.1-5+deb11u2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gnutls28 3.7.1-5+deb11u2
+PackageLicenseConcluded: The main library is licensed under GNU Lesser, LGPL-3.0, GPL-3.0, GFDL-1.3, CC0 license, Expat, Apache-2.0, LGPLv3+, GPL-2.0, LGPL-2.1, BSD-3-Clause
+PackageLicenseDeclared: The main library is licensed under GNU Lesser, LGPL-3.0, GPL-3.0, GFDL-1.3, CC0 license, Expat, Apache-2.0, LGPLv3+, GPL-2.0, LGPL-2.1, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libgnutls30@3.7.1-5+deb11u2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: tar
+
+PackageName: tar
+SPDXID: SPDXRef-Package-591a156365e8dade
+PackageVersion: 1.34+dfsg-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: tar 1.34+dfsg-1
+PackageLicenseConcluded: GPL-3.0, GPL-2.0
+PackageLicenseDeclared: GPL-3.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/tar@1.34+dfsg-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/mmikulicic/multierror
+
+PackageName: github.com/mmikulicic/multierror
+SPDXID: SPDXRef-Package-59456178a4361f6a
+PackageVersion: v0.0.0-20170428094957-c1ad6b5ecd26
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mmikulicic/multierror@v0.0.0-20170428094957-c1ad6b5ecd26
+PackageAttributionText: LayerDigest: sha256:57b9baaec301f885766e820e3e6818af87a9c780231cc14966bba882ac4f9264
+PackageAttributionText: LayerDiffID: sha256:faa0880c1b6a1e3fc4b7c4fd8e7f5e65d722ab4c8c67fbf9546ca2e107f74ab4
+
+##### Package: github.com/aymerick/raymond
+
+PackageName: github.com/aymerick/raymond
+SPDXID: SPDXRef-Package-597333c98979d4a9
+PackageVersion: v2.0.1+incompatible
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/aymerick/raymond@v2.0.1+incompatible
+PackageAttributionText: LayerDigest: sha256:57b9baaec301f885766e820e3e6818af87a9c780231cc14966bba882ac4f9264
+PackageAttributionText: LayerDiffID: sha256:faa0880c1b6a1e3fc4b7c4fd8e7f5e65d722ab4c8c67fbf9546ca2e107f74ab4
+
+##### Package: github.com/goccy/go-yaml
+
+PackageName: github.com/goccy/go-yaml
+SPDXID: SPDXRef-Package-5a202229987159a8
+PackageVersion: v1.9.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/goccy/go-yaml@v1.9.5
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libidn2-0
+
+PackageName: libidn2-0
+SPDXID: SPDXRef-Package-5a2c86f02fd00420
+PackageVersion: 2.3.0-5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libidn2 2.3.0-5
+PackageLicenseConcluded: GPL-3.0, LGPL-3.0, GPL-2.0, Unicode
+PackageLicenseDeclared: GPL-3.0, LGPL-3.0, GPL-2.0, Unicode
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libidn2-0@2.3.0-5?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: gopkg.in/yaml.v2
+
+PackageName: gopkg.in/yaml.v2
+SPDXID: SPDXRef-Package-5a797e37cb08a4e3
+PackageVersion: v2.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/yaml.v2@v2.4.0
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: sed
+
+PackageName: sed
+SPDXID: SPDXRef-Package-5bcef53edd47c771
+PackageVersion: 4.7-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sed 4.7-1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/sed@4.7-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libnsl2
+
+PackageName: libnsl2
+SPDXID: SPDXRef-Package-5d94ac2ad3a81b56
+PackageVersion: 1.3.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libnsl 1.3.0-2
+PackageLicenseConcluded: LGPL-2.1, BSD-3-Clause, permissive-fsf, permissive-makefile-in, permissive-autoconf-m4-no-warranty, GPL-3+-autoconf-exception, permissive-configure, GPL-2+-autoconf-exception, MIT, GPL-2+-libtool-exception, permissive-autoconf-m4, GPL-2.0, GPL-3.0
+PackageLicenseDeclared: LGPL-2.1, BSD-3-Clause, permissive-fsf, permissive-makefile-in, permissive-autoconf-m4-no-warranty, GPL-3+-autoconf-exception, permissive-configure, GPL-2+-autoconf-exception, MIT, GPL-2+-libtool-exception, permissive-autoconf-m4, GPL-2.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libnsl2@1.3.0-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/klauspost/compress
+
+PackageName: github.com/klauspost/compress
+SPDXID: SPDXRef-Package-5e862c7814c4bdc
+PackageVersion: v1.13.6
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/klauspost/compress@v1.13.6
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: golang.org/x/sys
+
+PackageName: golang.org/x/sys
+SPDXID: SPDXRef-Package-5eb9022536525a7
+PackageVersion: v0.0.0-20210817142637-7d9622a276b7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/sys@v0.0.0-20210817142637-7d9622a276b7
+PackageAttributionText: LayerDigest: sha256:2ef50ab3183dd5e5af63a4018934de7835af6c200cb75427590309fa308c30e2
+PackageAttributionText: LayerDiffID: sha256:72b87a11db6c3be8e01238bf81ebe94daaff3d7cf3318fac5a7e37043a1735e6
+
+##### Package: bash
+
+PackageName: bash
+SPDXID: SPDXRef-Package-5fab959500b7228
+PackageVersion: 5.1-2+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bash 5.1-2+deb11u1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/bash@5.1-2+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libkeyutils1
+
+PackageName: libkeyutils1
+SPDXID: SPDXRef-Package-678e889fe6d4db13
+PackageVersion: 1.6.1-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: keyutils 1.6.1-2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libkeyutils1@1.6.1-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libcom-err2
+
+PackageName: libcom-err2
+SPDXID: SPDXRef-Package-6ac509f091d6689
+PackageVersion: 1.46.2-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.46.2-2
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libcom-err2@1.46.2-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libdebconfclient0
+
+PackageName: libdebconfclient0
+SPDXID: SPDXRef-Package-6db2c25f4efd3cc3
+PackageVersion: 0.260
+FilesAnalyzed: false
+PackageSourceInfo: built package from: cdebconf 0.260
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libdebconfclient0@0.260?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: hostname
+
+PackageName: hostname
+SPDXID: SPDXRef-Package-6e50f4936fd6240f
+PackageVersion: 3.23
+FilesAnalyzed: false
+PackageSourceInfo: built package from: hostname 3.23
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/hostname@3.23?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: golang.org/x/crypto
+
+PackageName: golang.org/x/crypto
+SPDXID: SPDXRef-Package-708bd5817c40848f
+PackageVersion: v0.0.0-20220622213112-05595931fe9d
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/crypto@v0.0.0-20220622213112-05595931fe9d
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libhogweed6
+
+PackageName: libhogweed6
+SPDXID: SPDXRef-Package-729b4f6690517021
+PackageVersion: 3.7.3-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: nettle 3.7.3-1
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0, LGPL-2.0, Expat, GPL-3.0, GPL-3+ with Autoconf exception, public-domain, GAP
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0, LGPL-2.0, Expat, GPL-3.0, GPL-3+ with Autoconf exception, public-domain, GAP
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libhogweed6@3.7.3-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libkrb5support0
+
+PackageName: libkrb5support0
+SPDXID: SPDXRef-Package-7434975c8041358b
+PackageVersion: 1.18.3-6+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: krb5 1.18.3-6+deb11u1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libkrb5support0@1.18.3-6+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: adduser
+
+PackageName: adduser
+SPDXID: SPDXRef-Package-75d74f39052da70d
+PackageVersion: 3.118
+FilesAnalyzed: false
+PackageSourceInfo: built package from: adduser 3.118
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/adduser@3.118?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/spf13/pflag
+
+PackageName: github.com/spf13/pflag
+SPDXID: SPDXRef-Package-76fb1fff5d4a264b
+PackageVersion: v1.0.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/pflag@v1.0.5
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libgmp10
+
+PackageName: libgmp10
+SPDXID: SPDXRef-Package-7c5c647f23138459
+PackageVersion: 2:6.2.1+dfsg-1+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gmp 2:6.2.1+dfsg-1+deb11u1
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libgmp10@2:6.2.1+dfsg-1+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/elliotchance/orderedmap
+
+PackageName: github.com/elliotchance/orderedmap
+SPDXID: SPDXRef-Package-7d0f53fcc65ea60a
+PackageVersion: v1.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/elliotchance/orderedmap@v1.4.0
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libxxhash0
+
+PackageName: libxxhash0
+SPDXID: SPDXRef-Package-7e8d20723e06c839
+PackageVersion: 0.8.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: xxhash 0.8.0-2
+PackageLicenseConcluded: BSD-2-Clause, GPL-2.0
+PackageLicenseDeclared: BSD-2-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libxxhash0@0.8.0-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: gopkg.in/op/go-logging.v1
+
+PackageName: gopkg.in/op/go-logging.v1
+SPDXID: SPDXRef-Package-86f254fbb3da1d4a
+PackageVersion: v1.0.0-20160211212156-b2cb9fa56473
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/op/go-logging.v1@v1.0.0-20160211212156-b2cb9fa56473
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: github.com/opencontainers/runc
+
+PackageName: github.com/opencontainers/runc
+SPDXID: SPDXRef-Package-8717f719c22e46da
+PackageVersion: v1.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/opencontainers/runc@v1.0.1
+PackageAttributionText: LayerDigest: sha256:2ef50ab3183dd5e5af63a4018934de7835af6c200cb75427590309fa308c30e2
+PackageAttributionText: LayerDiffID: sha256:72b87a11db6c3be8e01238bf81ebe94daaff3d7cf3318fac5a7e37043a1735e6
+
+##### Package: gcc-10-base
+
+PackageName: gcc-10-base
+SPDXID: SPDXRef-Package-8791c60f13588c71
+PackageVersion: 10.2.1-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc-10 10.2.1-6
+PackageLicenseConcluded: GPL-3.0, GFDL-1.2, GPL-2.0, Artistic, LGPL-3.0
+PackageLicenseDeclared: GPL-3.0, GFDL-1.2, GPL-2.0, Artistic, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/gcc-10-base@10.2.1-6?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: go.mongodb.org/mongo-driver
+
+PackageName: go.mongodb.org/mongo-driver
+SPDXID: SPDXRef-Package-89818efd0b22745
+PackageVersion: v1.10.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/go.mongodb.org/mongo-driver@v1.10.0
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: bsdutils
+
+PackageName: bsdutils
+SPDXID: SPDXRef-Package-8a078ddabc356ff0
+PackageVersion: 1:2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/bsdutils@1:2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: sysv-rc
+
+PackageName: sysv-rc
+SPDXID: SPDXRef-Package-8a6d300e55d1a083
+PackageVersion: 2.96-7+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sysvinit 2.96-7+deb11u1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/sysv-rc@2.96-7+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libtasn1-6
+
+PackageName: libtasn1-6
+SPDXID: SPDXRef-Package-8bcc3caa47b1c212
+PackageVersion: 4.16.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libtasn1-6 4.16.0-2
+PackageLicenseConcluded: LGPL-3.0, LGPL-2.1, GPL-3.0, GFDL-1.3
+PackageLicenseDeclared: LGPL-3.0, LGPL-2.1, GPL-3.0, GFDL-1.3
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libtasn1-6@4.16.0-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/spf13/cobra
+
+PackageName: github.com/spf13/cobra
+SPDXID: SPDXRef-Package-8c78a2ea7517900c
+PackageVersion: v1.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/cobra@v1.5.0
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libgcc-s1
+
+PackageName: libgcc-s1
+SPDXID: SPDXRef-Package-8ef58ae971b7c790
+PackageVersion: 10.2.1-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc-10 10.2.1-6
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libgcc-s1@10.2.1-6?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: numactl
+
+PackageName: numactl
+SPDXID: SPDXRef-Package-944e90c78979677b
+PackageVersion: 2.0.12-1+b1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: numactl 2.0.12-1
+PackageLicenseConcluded: GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/numactl@2.0.12-1+b1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libselinux1
+
+PackageName: libselinux1
+SPDXID: SPDXRef-Package-94cfda63e779e1a2
+PackageVersion: 3.1-3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libselinux 3.1-3
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libselinux1@3.1-3?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libsemanage1
+
+PackageName: libsemanage1
+SPDXID: SPDXRef-Package-969f90bad473980c
+PackageVersion: 3.1-1+b2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libsemanage 3.1-1
+PackageLicenseConcluded: LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsemanage1@3.1-1+b2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: login
+
+PackageName: login
+SPDXID: SPDXRef-Package-97bded0ff1bf5fa7
+PackageVersion: 1:4.8.1-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: shadow 1:4.8.1-1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/login@1:4.8.1-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: apt
+
+PackageName: apt
+SPDXID: SPDXRef-Package-98774c231ee61a70
+PackageVersion: 2.2.4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apt 2.2.4
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/apt@2.2.4?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libldap-2.4-2
+
+PackageName: libldap-2.4-2
+SPDXID: SPDXRef-Package-9ac9e896d3171568
+PackageVersion: 2.4.57+dfsg-3+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openldap 2.4.57+dfsg-3+deb11u1
+PackageLicenseConcluded: BSD-4-Clause-UC, BSD-3-Clause, MIT, ISC, LicenseRef-C-Ares
+PackageLicenseDeclared: BSD-4-Clause-UC, BSD-3-Clause, MIT, ISC, LicenseRef-C-Ares
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libldap-2.4-2@2.4.57+dfsg-3+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: golang.org/x/net
+
+PackageName: golang.org/x/net
+SPDXID: SPDXRef-Package-9ae657220bbbfc0e
+PackageVersion: v0.0.0-20220708220712-1185a9018129
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/net@v0.0.0-20220708220712-1185a9018129
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libsemanage-common
+
+PackageName: libsemanage-common
+SPDXID: SPDXRef-Package-9b1e38f6ad6d6b85
+PackageVersion: 3.1-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libsemanage 3.1-1
+PackageLicenseConcluded: LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsemanage-common@3.1-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libffi7
+
+PackageName: libffi7
+SPDXID: SPDXRef-Package-9d77ea63bca6d513
+PackageVersion: 3.3-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libffi 3.3-6
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libffi7@3.3-6?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libpam-modules-bin
+
+PackageName: libpam-modules-bin
+SPDXID: SPDXRef-Package-9e5e8cde41a670a3
+PackageVersion: 1.4.0-9+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.4.0-9+deb11u1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpam-modules-bin@1.4.0-9+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: gzip
+
+PackageName: gzip
+SPDXID: SPDXRef-Package-9e7cdb72323fa0b8
+PackageVersion: 1.10-4+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gzip 1.10-4+deb11u1
+PackageLicenseConcluded: GPL-3.0, GFDL-1.3+-no-invariant, FSF-manpages, GFDL-3
+PackageLicenseDeclared: GPL-3.0, GFDL-1.3+-no-invariant, FSF-manpages, GFDL-3
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/gzip@1.10-4+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: lsb-base
+
+PackageName: lsb-base
+SPDXID: SPDXRef-Package-9e8943c75c1d10fa
+PackageVersion: 11.1.0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: lsb 11.1.0
+PackageLicenseConcluded: GPL-2.0, BSD-3-Clause
+PackageLicenseDeclared: GPL-2.0, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/lsb-base@11.1.0?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libcrypt1
+
+PackageName: libcrypt1
+SPDXID: SPDXRef-Package-ac58840fb18d3206
+PackageVersion: 1:4.4.18-4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libxcrypt 1:4.4.18-4
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libcrypt1@1:4.4.18-4?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libkrb5-3
+
+PackageName: libkrb5-3
+SPDXID: SPDXRef-Package-ad923849d9cdaabe
+PackageVersion: 1.18.3-6+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: krb5 1.18.3-6+deb11u1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libkrb5-3@1.18.3-6+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libapt-pkg6.0
+
+PackageName: libapt-pkg6.0
+SPDXID: SPDXRef-Package-ae7f42abed199048
+PackageVersion: 2.2.4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apt 2.2.4
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libapt-pkg6.0@2.2.4?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: acl
+
+PackageName: acl
+SPDXID: SPDXRef-Package-b2004bba7877b660
+PackageVersion: 2.2.53-10
+FilesAnalyzed: false
+PackageSourceInfo: built package from: acl 2.2.53-10
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0, LGPL-2.1
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0, LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/acl@2.2.53-10?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libpcre2-8-0
+
+PackageName: libpcre2-8-0
+SPDXID: SPDXRef-Package-b34de7889374ed77
+PackageVersion: 10.36-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pcre2 10.36-2
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpcre2-8-0@10.36-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/xdg-go/stringprep
+
+PackageName: github.com/xdg-go/stringprep
+SPDXID: SPDXRef-Package-b435ce840b722c65
+PackageVersion: v1.0.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/xdg-go/stringprep@v1.0.3
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libnettle8
+
+PackageName: libnettle8
+SPDXID: SPDXRef-Package-b4a207663552cca2
+PackageVersion: 3.7.3-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: nettle 3.7.3-1
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0, LGPL-2.0, Expat, GPL-3.0, GPL-3+ with Autoconf exception, public-domain, GAP
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0, LGPL-2.0, Expat, GPL-3.0, GPL-3+ with Autoconf exception, public-domain, GAP
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libnettle8@3.7.3-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: init-system-helpers
+
+PackageName: init-system-helpers
+SPDXID: SPDXRef-Package-b697e09a37d787cb
+PackageVersion: 1.60
+FilesAnalyzed: false
+PackageSourceInfo: built package from: init-system-helpers 1.60
+PackageLicenseConcluded: BSD-3-Clause, GPL-2.0
+PackageLicenseDeclared: BSD-3-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/init-system-helpers@1.60?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libc6
+
+PackageName: libc6
+SPDXID: SPDXRef-Package-b6ad7fef3fa9c364
+PackageVersion: 2.31-13+deb11u3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: glibc 2.31-13+deb11u3
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libc6@2.31-13+deb11u3?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libncurses6
+
+PackageName: libncurses6
+SPDXID: SPDXRef-Package-b6b03a114104eae2
+PackageVersion: 6.2+20201114-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2+20201114-2
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libncurses6@6.2+20201114-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: curl
+
+PackageName: curl
+SPDXID: SPDXRef-Package-b74de528ced9aeb7
+PackageVersion: 7.74.0-1.3+deb11u2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: curl 7.74.0-1.3+deb11u2
+PackageLicenseConcluded: curl, ISC, BSD-3-Clause, public-domain, BSD-4-Clause, other
+PackageLicenseDeclared: curl, ISC, BSD-3-Clause, public-domain, BSD-4-Clause, other
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/curl@7.74.0-1.3+deb11u2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: github.com/jessevdk/go-flags
+
+PackageName: github.com/jessevdk/go-flags
+SPDXID: SPDXRef-Package-b942d20ad68149f8
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jessevdk/go-flags@v1.3.0
+PackageAttributionText: LayerDigest: sha256:57b9baaec301f885766e820e3e6818af87a9c780231cc14966bba882ac4f9264
+PackageAttributionText: LayerDiffID: sha256:faa0880c1b6a1e3fc4b7c4fd8e7f5e65d722ab4c8c67fbf9546ca2e107f74ab4
+
+##### Package: libgcrypt20
+
+PackageName: libgcrypt20
+SPDXID: SPDXRef-Package-babc8d2faa35e219
+PackageVersion: 1.8.7-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libgcrypt20 1.8.7-6
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libgcrypt20@1.8.7-6?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: util-linux
+
+PackageName: util-linux
+SPDXID: SPDXRef-Package-c204bbac9d05b9da
+PackageVersion: 2.36.1-8+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.36.1-8+deb11u1
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/util-linux@2.36.1-8+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libattr1
+
+PackageName: libattr1
+SPDXID: SPDXRef-Package-c2376f0dbd6a6ba3
+PackageVersion: 1:2.4.48-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: attr 1:2.4.48-6
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0, LGPL-2.1
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0, LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libattr1@1:2.4.48-6?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/a8m/envsubst
+
+PackageName: github.com/a8m/envsubst
+SPDXID: SPDXRef-Package-c27ea5e37da0ee92
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/a8m/envsubst@v1.3.0
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: golang.org/x/sys
+
+PackageName: golang.org/x/sys
+SPDXID: SPDXRef-Package-c3cb500fe46b624e
+PackageVersion: v0.0.0-20210510120138-977fb7262007
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/sys@v0.0.0-20210510120138-977fb7262007
+PackageAttributionText: LayerDigest: sha256:8d91405818ef77f376d5cdd41dafe13532fd6ae2fbccc4bb7de2a3d0f56606ce
+PackageAttributionText: LayerDiffID: sha256:b41950735a59db08c49394a50a7958e18915410ecd9f9bd19754adf156dee386
+
+##### Package: github.com/nsf/termbox-go
+
+PackageName: github.com/nsf/termbox-go
+SPDXID: SPDXRef-Package-c58ab1d403296cdd
+PackageVersion: v0.0.0-20160718140619-0723e7c3d0a3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/nsf/termbox-go@v0.0.0-20160718140619-0723e7c3d0a3
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: sysvinit-utils
+
+PackageName: sysvinit-utils
+SPDXID: SPDXRef-Package-c6e43b57e3ea2be
+PackageVersion: 2.96-7+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sysvinit 2.96-7+deb11u1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/sysvinit-utils@2.96-7+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: insserv
+
+PackageName: insserv
+SPDXID: SPDXRef-Package-c840a8f3fbea2a07
+PackageVersion: 1.21.0-1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: insserv 1.21.0-1.1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/insserv@1.21.0-1.1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libk5crypto3
+
+PackageName: libk5crypto3
+SPDXID: SPDXRef-Package-c87f49f7cf5256a3
+PackageVersion: 1.18.3-6+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: krb5 1.18.3-6+deb11u1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libk5crypto3@1.18.3-6+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libsasl2-2
+
+PackageName: libsasl2-2
+SPDXID: SPDXRef-Package-c9a7d53c4de28096
+PackageVersion: 2.1.27+dfsg-2.1+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: cyrus-sasl2 2.1.27+dfsg-2.1+deb11u1
+PackageLicenseConcluded: BSD-4-Clause, GPL-3.0
+PackageLicenseDeclared: BSD-4-Clause, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsasl2-2@2.1.27+dfsg-2.1+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: github.com/xdg-go/pbkdf2
+
+PackageName: github.com/xdg-go/pbkdf2
+SPDXID: SPDXRef-Package-cb3fc23b3055f0b3
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/xdg-go/pbkdf2@v1.0.0
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: github.com/pkg/errors
+
+PackageName: github.com/pkg/errors
+SPDXID: SPDXRef-Package-cdcbeb036a13f8cc
+PackageVersion: v0.9.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/pkg/errors@v0.9.1
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: golang.org/x/sys
+
+PackageName: golang.org/x/sys
+SPDXID: SPDXRef-Package-ce2996735ab7d2d6
+PackageVersion: v0.0.0-20220520151302-bc2c85ada10a
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/sys@v0.0.0-20220520151302-bc2c85ada10a
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: debianutils
+
+PackageName: debianutils
+SPDXID: SPDXRef-Package-ce72009379d10c20
+PackageVersion: 4.11.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: debianutils 4.11.2
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/debianutils@4.11.2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/montanaflynn/stats
+
+PackageName: github.com/montanaflynn/stats
+SPDXID: SPDXRef-Package-cfdc3d3f99e4e30b
+PackageVersion: v0.0.0-20171201202039-1bf9dbcd8cbe
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/montanaflynn/stats@v0.0.0-20171201202039-1bf9dbcd8cbe
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: libdb5.3
+
+PackageName: libdb5.3
+SPDXID: SPDXRef-Package-d19416b376877432
+PackageVersion: 5.3.28+dfsg1-0.8
+FilesAnalyzed: false
+PackageSourceInfo: built package from: db5.3 5.3.28+dfsg1-0.8
+PackageLicenseConcluded: BSD-3-Clause, Sleepycat
+PackageLicenseDeclared: BSD-3-Clause, Sleepycat
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libdb5.3@5.3.28+dfsg1-0.8?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: openssl
+
+PackageName: openssl
+SPDXID: SPDXRef-Package-d205543405c7ef18
+PackageVersion: 1.1.1n-0+deb11u3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1n-0+deb11u3
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/openssl@1.1.1n-0+deb11u3?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libtinfo6
+
+PackageName: libtinfo6
+SPDXID: SPDXRef-Package-d55a81bc14c7edf5
+PackageVersion: 6.2+20201114-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2+20201114-2
+PackageLicenseConcluded: MIT/X11, X11, BSD-3-Clause
+PackageLicenseDeclared: MIT/X11, X11, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libtinfo6@6.2+20201114-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/xdg-go/scram
+
+PackageName: github.com/xdg-go/scram
+SPDXID: SPDXRef-Package-d778f487b8968770
+PackageVersion: v1.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/xdg-go/scram@v1.1.1
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: golang.org/x/sync
+
+PackageName: golang.org/x/sync
+SPDXID: SPDXRef-Package-d82bef20183e38eb
+PackageVersion: v0.0.0-20210220032951-036812b2e83c
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/sync@v0.0.0-20210220032951-036812b2e83c
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: debian-archive-keyring
+
+PackageName: debian-archive-keyring
+SPDXID: SPDXRef-Package-d99aacf8bfdc4bc1
+PackageVersion: 2021.1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: debian-archive-keyring 2021.1.1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/debian-archive-keyring@2021.1.1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/fatih/color
+
+PackageName: github.com/fatih/color
+SPDXID: SPDXRef-Package-d9e6c44df57653d8
+PackageVersion: v1.13.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/fatih/color@v1.13.0
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: perl-base
+
+PackageName: perl-base
+SPDXID: SPDXRef-Package-dbaa00c853cf3ecd
+PackageVersion: 5.32.1-4+deb11u2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: perl 5.32.1-4+deb11u2
+PackageLicenseConcluded: GPL-1.0, Artistic, Expat, REGCOMP, GPL-2.0-with-bison-exception, Unicode, BZIP, Zlib, GPL-2.0, RRA-KEEP-THIS-NOTICE, BSD-3-clause-with-weird-numbering, CC0-1.0, TEXT-TABS, BSD-4-clause-POWERDOG, BSD-3-clause-GENERIC, BSD-3-Clause, SDBM-PUBLIC-DOMAIN, DONT-CHANGE-THE-GPL, Artistic-dist, LGPL-2.1, Artistic-2, HSIEH-DERIVATIVE, HSIEH-BSD
+PackageLicenseDeclared: GPL-1.0, Artistic, Expat, REGCOMP, GPL-2.0-with-bison-exception, Unicode, BZIP, Zlib, GPL-2.0, RRA-KEEP-THIS-NOTICE, BSD-3-clause-with-weird-numbering, CC0-1.0, TEXT-TABS, BSD-4-clause-POWERDOG, BSD-3-clause-GENERIC, BSD-3-Clause, SDBM-PUBLIC-DOMAIN, DONT-CHANGE-THE-GPL, Artistic-dist, LGPL-2.1, Artistic-2, HSIEH-DERIVATIVE, HSIEH-BSD
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/perl-base@5.32.1-4+deb11u2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libprocps8
+
+PackageName: libprocps8
+SPDXID: SPDXRef-Package-dbed4f363b09e06b
+PackageVersion: 2:3.3.17-5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: procps 2:3.3.17-5
+PackageLicenseConcluded: LGPL-2.1, LGPL-2.0, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, LGPL-2.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libprocps8@2:3.3.17-5?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libcurl4
+
+PackageName: libcurl4
+SPDXID: SPDXRef-Package-dc16eb316f3f3214
+PackageVersion: 7.74.0-1.3+deb11u2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: curl 7.74.0-1.3+deb11u2
+PackageLicenseConcluded: curl, ISC, BSD-3-Clause, public-domain, BSD-4-Clause, other
+PackageLicenseDeclared: curl, ISC, BSD-3-Clause, public-domain, BSD-4-Clause, other
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libcurl4@7.74.0-1.3+deb11u2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: github.com/jinzhu/copier
+
+PackageName: github.com/jinzhu/copier
+SPDXID: SPDXRef-Package-de1ee0ea00271df8
+PackageVersion: v0.3.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jinzhu/copier@v0.3.5
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: liblzma5
+
+PackageName: liblzma5
+SPDXID: SPDXRef-Package-dfe11a41efcca8e2
+PackageVersion: 5.2.5-2.1~deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: xz-utils 5.2.5-2.1~deb11u1
+PackageLicenseConcluded: PD, probably-PD, GPL-2.0, LGPL-2.1, permissive-fsf, Autoconf, permissive-nowarranty, none, config-h, LGPL-2.0, noderivs, PD-debian, GPL-3.0
+PackageLicenseDeclared: PD, probably-PD, GPL-2.0, LGPL-2.1, permissive-fsf, Autoconf, permissive-nowarranty, none, config-h, LGPL-2.0, noderivs, PD-debian, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/liblzma5@5.2.5-2.1~deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: tzdata
+
+PackageName: tzdata
+SPDXID: SPDXRef-Package-dff856ffc18697f4
+PackageVersion: 2021a-1+deb11u5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: tzdata 2021a-1+deb11u5
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/tzdata@2021a-1+deb11u5?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:d72104c76454a47d2329cd7650f6448c5357a4f3b8f9cc7cc0f4b6257eb9c592
+PackageAttributionText: LayerDiffID: sha256:419441a0ca0726469b9aa4908c7140256325c63efb26a6d63c08bea68e95f269
+
+##### Package: golang.org/x/term
+
+PackageName: golang.org/x/term
+SPDXID: SPDXRef-Package-e2231bda88464f89
+PackageVersion: v0.0.0-20201126162022-7de9c90e9dd1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/term@v0.0.0-20201126162022-7de9c90e9dd1
+PackageAttributionText: LayerDigest: sha256:3a1c4d705a1de0d2ddb29e215c31f8347b9e21cc6898577be19cc981321f0449
+PackageAttributionText: LayerDiffID: sha256:b44ee57333a27ba0e7ccbf314ccf2dc624909fef3862d3bf76154c13752e1393
+
+##### Package: ncurses-base
+
+PackageName: ncurses-base
+SPDXID: SPDXRef-Package-e770dec2f87c7e55
+PackageVersion: 6.2+20201114-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2+20201114-2
+PackageLicenseConcluded: MIT/X11, X11, BSD-3-Clause
+PackageLicenseDeclared: MIT/X11, X11, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/ncurses-base@6.2+20201114-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: passwd
+
+PackageName: passwd
+SPDXID: SPDXRef-Package-e8c5df565bbe2e50
+PackageVersion: 1:4.8.1-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: shadow 1:4.8.1-1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/passwd@1:4.8.1-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libsepol1
+
+PackageName: libsepol1
+SPDXID: SPDXRef-Package-e8f7a4a0f57eac9e
+PackageVersion: 3.1-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libsepol 3.1-1
+PackageLicenseConcluded: LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsepol1@3.1-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libtirpc3
+
+PackageName: libtirpc3
+SPDXID: SPDXRef-Package-eaf8d6e4bbda0149
+PackageVersion: 1.3.1-1+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libtirpc 1.3.1-1+deb11u1
+PackageLicenseConcluded: BSD-3-Clause, GPL-2.0, __AUTO_PERMISSIVE__, BSD-2-Clause, BSD-4-Clause, LGPL-2.1, PERMISSIVE
+PackageLicenseDeclared: BSD-3-Clause, GPL-2.0, __AUTO_PERMISSIVE__, BSD-2-Clause, BSD-4-Clause, LGPL-2.1, PERMISSIVE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libtirpc3@1.3.1-1+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:d72104c76454a47d2329cd7650f6448c5357a4f3b8f9cc7cc0f4b6257eb9c592
+PackageAttributionText: LayerDiffID: sha256:419441a0ca0726469b9aa4908c7140256325c63efb26a6d63c08bea68e95f269
+
+##### Package: libssl1.1
+
+PackageName: libssl1.1
+SPDXID: SPDXRef-Package-ec48e141222fe515
+PackageVersion: 1.1.1n-0+deb11u3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1n-0+deb11u3
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libssl1.1@1.1.1n-0+deb11u3?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libsystemd0
+
+PackageName: libsystemd0
+SPDXID: SPDXRef-Package-eebd4ecda7093a8b
+PackageVersion: 247.3-7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: systemd 247.3-7
+PackageLicenseConcluded: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+PackageLicenseDeclared: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libsystemd0@247.3-7?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/alecthomas/participle/v2
+
+PackageName: github.com/alecthomas/participle/v2
+SPDXID: SPDXRef-Package-ef19a88fd57c06a
+PackageVersion: v2.0.0-beta.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/alecthomas/participle/v2@v2.0.0-beta.4
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: golang.org/x/text
+
+PackageName: golang.org/x/text
+SPDXID: SPDXRef-Package-efccc33f6fc11f79
+PackageVersion: v0.3.7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/text@v0.3.7
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libpam-runtime
+
+PackageName: libpam-runtime
+SPDXID: SPDXRef-Package-f009bff1bfdc77e3
+PackageVersion: 1.4.0-9+deb11u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.4.0-9+deb11u1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libpam-runtime@1.4.0-9+deb11u1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libssh2-1
+
+PackageName: libssh2-1
+SPDXID: SPDXRef-Package-f09eae68450f33a6
+PackageVersion: 1.9.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libssh2 1.9.0-2
+PackageLicenseConcluded: BSD3
+PackageLicenseDeclared: BSD3
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libssh2-1@1.9.0-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: diffutils
+
+PackageName: diffutils
+SPDXID: SPDXRef-Package-f12e53731f7dab5
+PackageVersion: 1:3.7-5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: diffutils 1:3.7-5
+PackageLicenseConcluded: GPL-3.0, GFDL
+PackageLicenseDeclared: GPL-3.0, GFDL
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/diffutils@1:3.7-5?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libbrotli1
+
+PackageName: libbrotli1
+SPDXID: SPDXRef-Package-f1ff7d1707a23c2e
+PackageVersion: 1.0.9-2+b2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: brotli 1.0.9-2
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libbrotli1@1.0.9-2+b2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:a83e3c23abaaabd7f9d74b33b4a938824367200b0091769afa41ea7e53238b99
+PackageAttributionText: LayerDiffID: sha256:bb23e438dd3e8627fbb93281f1fe5716ebe973383e8a707365fd1da1687eee2a
+
+##### Package: libp11-kit0
+
+PackageName: libp11-kit0
+SPDXID: SPDXRef-Package-f259d0a028c7e5c2
+PackageVersion: 0.23.22-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: p11-kit 0.23.22-1
+PackageLicenseConcluded: BSD-3-Clause, permissive-like-automake-output, ISC, ISC+IBM, same-as-rest-of-p11kit
+PackageLicenseDeclared: BSD-3-Clause, permissive-like-automake-output, ISC, ISC+IBM, same-as-rest-of-p11kit
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libp11-kit0@0.23.22-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: golang.org/x/xerrors
+
+PackageName: golang.org/x/xerrors
+SPDXID: SPDXRef-Package-f543bda2932c716d
+PackageVersion: v0.0.0-20220609144429-65e65417b02f
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/xerrors@v0.0.0-20220609144429-65e65417b02f
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Package: libacl1
+
+PackageName: libacl1
+SPDXID: SPDXRef-Package-f6e9e2c467bec280
+PackageVersion: 2.2.53-10
+FilesAnalyzed: false
+PackageSourceInfo: built package from: acl 2.2.53-10
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0, LGPL-2.1
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0, LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libacl1@2.2.53-10?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: debconf
+
+PackageName: debconf
+SPDXID: SPDXRef-Package-f70edde2ed60b24
+PackageVersion: 1.5.77
+FilesAnalyzed: false
+PackageSourceInfo: built package from: debconf 1.5.77
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/debconf@1.5.77?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: findutils
+
+PackageName: findutils
+SPDXID: SPDXRef-Package-f7f84ae3c480d66d
+PackageVersion: 4.8.0-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: findutils 4.8.0-1
+PackageLicenseConcluded: GPL-3.0, GFDL-1.3
+PackageLicenseDeclared: GPL-3.0, GFDL-1.3
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/findutils@4.8.0-1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: libzstd1
+
+PackageName: libzstd1
+SPDXID: SPDXRef-Package-f92d13afdf693e54
+PackageVersion: 1.4.8+dfsg-2.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libzstd 1.4.8+dfsg-2.1
+PackageLicenseConcluded: BSD-3-Clause, GPL-2.0, Zlib, Expat
+PackageLicenseDeclared: BSD-3-Clause, GPL-2.0, Zlib, Expat
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/libzstd1@1.4.8+dfsg-2.1?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: mawk
+
+PackageName: mawk
+SPDXID: SPDXRef-Package-f9d13af4d3bb61d6
+PackageVersion: 1.3.4.20200120-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: mawk 1.3.4.20200120-2
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/mawk@1.3.4.20200120-2?distro=debian-11.4
+PackageAttributionText: LayerDigest: sha256:3b5e91f25ce64a67644c45c771f24a33c8e5662d758e73e6edc4236e64d3c536
+PackageAttributionText: LayerDiffID: sha256:d745f418fc70bf8570f4b4ebefbd27fb868cda7d46deed2278b9749349b00ce2
+
+##### Package: github.com/mattn/go-isatty
+
+PackageName: github.com/mattn/go-isatty
+SPDXID: SPDXRef-Package-fd18ab5e4772699b
+PackageVersion: v0.0.14
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mattn/go-isatty@v0.0.14
+PackageAttributionText: LayerDigest: sha256:e7db655860cdbd312951ac2b25b068d22482f3048a9f50104a67653ad2571213
+PackageAttributionText: LayerDiffID: sha256:4e01029d8744dbca73a7180fc9c738342f9fc492929e5d4045778238f397e4e0
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-ef86c2a327a65782
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-OperatingSystem-ebbd95b4a5a39c5f
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b2004bba7877b660
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-75d74f39052da70d
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-98774c231ee61a70
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-28fc6cc355f871b9
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-305ffff65bbc6cb7
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-5fab959500b7228
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-8a078ddabc356ff0
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-4ef7bf5c7e7b3bfd
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-1d9bdc038e40b3b3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b74de528ced9aeb7
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-553a8d497f2786ab
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f70edde2ed60b24
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-d99aacf8bfdc4bc1
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-ce72009379d10c20
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f12e53731f7dab5
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-445d251dc3b62f90
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f7f84ae3c480d66d
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-8791c60f13588c71
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-31cca5812dc97660
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-32ba42eb0fda9272
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-9e7cdb72323fa0b8
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-6e50f4936fd6240f
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b697e09a37d787cb
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-c840a8f3fbea2a07
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f6e9e2c467bec280
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-ae7f42abed199048
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-c2376f0dbd6a6ba3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-4c8055a4d24ac332
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-2d351a2054ef67a4
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-14e6f8b7273273e4
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f1ff7d1707a23c2e
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-4afd34b3b12a5c3f
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-228cc00eb49bd415
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b6ad7fef3fa9c364
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-3e00dfe0737b8d31
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-6ac509f091d6689
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-ac58840fb18d3206
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-dc16eb316f3f3214
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-d19416b376877432
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-6db2c25f4efd3cc3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-9d77ea63bca6d513
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-8ef58ae971b7c790
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-babc8d2faa35e219
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-7c5c647f23138459
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-5582da7b0b900451
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-3a9a8b3e332644aa
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-5225f6d1b49cab05
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-729b4f6690517021
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-5a2c86f02fd00420
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-c87f49f7cf5256a3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-678e889fe6d4db13
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-ad923849d9cdaabe
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-7434975c8041358b
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-9ac9e896d3171568
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-354ee225c3117c28
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-dfe11a41efcca8e2
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-1eaa3c4147fc6148
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b6b03a114104eae2
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-2e0dc9453c202009
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b4a207663552cca2
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-250ab1e6d21152
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-5d94ac2ad3a81b56
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-30e1e38480411cd9
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f259d0a028c7e5c2
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-2afdc36232a9c069
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-9e5e8cde41a670a3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f009bff1bfdc77e3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-1714e700fea49497
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-b34de7889374ed77
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-1ace58310b9a6d91
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-dbed4f363b09e06b
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-28000a3e23856345
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-542c5cce3650e712
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-c9a7d53c4de28096
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-11cfe38dab632fb3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-4d550a59bd772a4
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-94cfda63e779e1a2
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-9b1e38f6ad6d6b85
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-969f90bad473980c
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-e8f7a4a0f57eac9e
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-4d0fc9c37b386653
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f09eae68450f33a6
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-ec48e141222fe515
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-41de15a005fe88d6
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-eebd4ecda7093a8b
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-8bcc3caa47b1c212
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-d55a81bc14c7edf5
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-31502d24a40f1d65
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-eaf8d6e4bbda0149
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-3870d28f45dc38b7
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-40be80dbcf4dc855
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-2602d30f4d644de3
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-7e8d20723e06c839
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f92d13afdf693e54
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-97bded0ff1bf5fa7
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-9e8943c75c1d10fa
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-f9d13af4d3bb61d6
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-12e0d3a2621a4afb
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-e770dec2f87c7e55
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-944e90c78979677b
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-d205543405c7ef18
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-e8c5df565bbe2e50
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-dbaa00c853cf3ecd
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-10847f0e72fdbb3b
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-5bcef53edd47c771
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-21930830f5d51349
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-8a6d300e55d1a083
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-c6e43b57e3ea2be
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-591a156365e8dade
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-dff856ffc18697f4
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-c204bbac9d05b9da
+Relationship: SPDXRef-OperatingSystem-ebbd95b4a5a39c5f CONTAINS SPDXRef-Package-10e9373908494406
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-eecdf8b32c6b12ca
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-c27ea5e37da0ee92
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-ef19a88fd57c06a
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-7d0f53fcc65ea60a
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-d9e6c44df57653d8
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-4476b1b8ae1ff789
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-5a202229987159a8
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-de1ee0ea00271df8
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-44d262ea530e20e4
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-1e88c15e1ab4080f
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-fd18ab5e4772699b
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-8c78a2ea7517900c
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-76fb1fff5d4a264b
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-9ae657220bbbfc0e
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-273cc4b2cd3e41fc
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-efccc33f6fc11f79
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-f543bda2932c716d
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-86f254fbb3da1d4a
+Relationship: SPDXRef-Application-eecdf8b32c6b12ca CONTAINS SPDXRef-Package-3d15f14ab7c2d158
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-2bbb114e48be0589
+Relationship: SPDXRef-Application-2bbb114e48be0589 CONTAINS SPDXRef-Package-1d3858c1f894a410
+Relationship: SPDXRef-Application-2bbb114e48be0589 CONTAINS SPDXRef-Package-c3cb500fe46b624e
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-9fbff5299a3d2db9
+Relationship: SPDXRef-Application-9fbff5299a3d2db9 CONTAINS SPDXRef-Package-597333c98979d4a9
+Relationship: SPDXRef-Application-9fbff5299a3d2db9 CONTAINS SPDXRef-Package-b942d20ad68149f8
+Relationship: SPDXRef-Application-9fbff5299a3d2db9 CONTAINS SPDXRef-Package-59456178a4361f6a
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-b49ab3605a09880a
+Relationship: SPDXRef-Application-b49ab3605a09880a CONTAINS SPDXRef-Package-8717f719c22e46da
+Relationship: SPDXRef-Application-b49ab3605a09880a CONTAINS SPDXRef-Package-5eb9022536525a7
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-901084f742bdd5d6
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-901084f742bdd5d6 CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-c9834e18a4fa5e05
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-c9834e18a4fa5e05 CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-c3af67a31dff7a29
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-c3af67a31dff7a29 CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-e3b5a3df4c55a9cd
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-e3b5a3df4c55a9cd CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-e7e61567116ceb4e
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-e7e61567116ceb4e CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-ce6ac4b6fada9d06
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-19dfa9845ae17f9f
+Relationship: SPDXRef-Application-ce6ac4b6fada9d06 CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-f7f5a529f612393
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-f7f5a529f612393 CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+Relationship: SPDXRef-ContainerImage-ef86c2a327a65782 CONTAINS SPDXRef-Application-7117df5d92a3db45
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-2b6fd2fe32938a59
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-3810510b08ea8fdb
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-5e862c7814c4bdc
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-42bdfd0bce089606
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-cfdc3d3f99e4e30b
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-c58ab1d403296cdd
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-cdcbeb036a13f8cc
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-cb3fc23b3055f0b3
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-d778f487b8968770
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-b435ce840b722c65
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-1aae82399156b029
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-89818efd0b22745
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-708bd5817c40848f
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-d82bef20183e38eb
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-ce2996735ab7d2d6
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-e2231bda88464f89
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-114ff4bcb97c8cc9
+Relationship: SPDXRef-Application-7117df5d92a3db45 CONTAINS SPDXRef-Package-5a797e37cb08a4e3
+

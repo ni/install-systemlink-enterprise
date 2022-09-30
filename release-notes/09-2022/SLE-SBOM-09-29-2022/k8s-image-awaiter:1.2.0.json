@@ -1,0 +1,101 @@
+{
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"creationInfo": {
+		"created": "2022-09-29T20:59:38.653412Z",
+		"creators": [
+			"Tool: trivy",
+			"Organization: aquasecurity"
+		]
+	},
+	"dataLicense": "CC0-1.0",
+	"documentNamespace": "http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0-6f10aff6-8835-45b9-bde6-8c85ff471adb",
+	"name": "niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0",
+	"packages": [
+		{
+			"SPDXID": "SPDXRef-Application-7a2accd920e5f90c",
+			"filesAnalyzed": false,
+			"name": "gobinary",
+			"sourceInfo": "image-awaiter"
+		},
+		{
+			"SPDXID": "SPDXRef-ContainerImage-f42b9ab5e3a10de9",
+			"attributionTexts": [
+				"SchemaVersion: 2",
+				"ImageID: sha256:230c59f2c1264b0ad41bf210d6b15f0260e5a887472bd84bef8a939971cf17a2",
+				"RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0",
+				"DiffID: sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d",
+				"RepoTag: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:oci/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fjupyterhub%2Fk8s-image-awaiter\u0026arch=amd64",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"name": "niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-1c138c232b5e453b",
+			"attributionTexts": [
+				"LayerDigest: sha256:a933ef5729e31fdda4fcc3c5b68689b0dc11807568dc93bacf0e757367b44a18",
+				"LayerDiffID: sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.6.7",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "github.com/hashicorp/go-retryablehttp",
+			"versionInfo": "v0.6.7"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-4c5239cca5f64a0b",
+			"attributionTexts": [
+				"LayerDigest: sha256:a933ef5729e31fdda4fcc3c5b68689b0dc11807568dc93bacf0e757367b44a18",
+				"LayerDiffID: sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "github.com/hashicorp/go-cleanhttp",
+			"versionInfo": "v0.5.1"
+		}
+	],
+	"relationships": [
+		{
+			"relatedSpdxElement": "SPDXRef-ContainerImage-f42b9ab5e3a10de9",
+			"relationshipType": "DESCRIBE",
+			"spdxElementId": "SPDXRef-DOCUMENT"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Application-7a2accd920e5f90c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-ContainerImage-f42b9ab5e3a10de9"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-4c5239cca5f64a0b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-7a2accd920e5f90c"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-1c138c232b5e453b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-7a2accd920e5f90c"
+		}
+	],
+	"spdxVersion": "SPDX-2.2"
+}

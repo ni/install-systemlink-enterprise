@@ -1,0 +1,59 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0-a714bf12-1ff7-48d0-9951-ad066cac8d2e
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:38.353917Z
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-7a2accd920e5f90c
+FilesAnalyzed: false
+PackageSourceInfo: image-awaiter
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0
+SPDXID: SPDXRef-ContainerImage-f42b9ab5e3a10de9
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fjupyterhub%2Fk8s-image-awaiter&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:230c59f2c1264b0ad41bf210d6b15f0260e5a887472bd84bef8a939971cf17a2
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0
+PackageAttributionText: DiffID: sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0
+
+##### Package: github.com/hashicorp/go-retryablehttp
+
+PackageName: github.com/hashicorp/go-retryablehttp
+SPDXID: SPDXRef-Package-1c138c232b5e453b
+PackageVersion: v0.6.7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/hashicorp/go-retryablehttp@v0.6.7
+PackageAttributionText: LayerDigest: sha256:a933ef5729e31fdda4fcc3c5b68689b0dc11807568dc93bacf0e757367b44a18
+PackageAttributionText: LayerDiffID: sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d
+
+##### Package: github.com/hashicorp/go-cleanhttp
+
+PackageName: github.com/hashicorp/go-cleanhttp
+SPDXID: SPDXRef-Package-4c5239cca5f64a0b
+PackageVersion: v0.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1
+PackageAttributionText: LayerDigest: sha256:a933ef5729e31fdda4fcc3c5b68689b0dc11807568dc93bacf0e757367b44a18
+PackageAttributionText: LayerDiffID: sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-f42b9ab5e3a10de9
+Relationship: SPDXRef-ContainerImage-f42b9ab5e3a10de9 CONTAINS SPDXRef-Application-7a2accd920e5f90c
+Relationship: SPDXRef-Application-7a2accd920e5f90c CONTAINS SPDXRef-Package-4c5239cca5f64a0b
+Relationship: SPDXRef-Application-7a2accd920e5f90c CONTAINS SPDXRef-Package-1c138c232b5e453b
+

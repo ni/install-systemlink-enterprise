@@ -1,0 +1,184 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:39ad3a32-836a-4e4c-8186-f26af435d9cb",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2022-09-29T14:18:48+00:00",
+    "tools": [
+      {
+        "vendor": "aquasecurity",
+        "name": "trivy",
+        "version": "0.32.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "pkg:oci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fkube-scheduler\u0026arch=amd64",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13",
+      "purl": "pkg:oci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fkube-scheduler\u0026arch=amd64",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        },
+        {
+          "name": "aquasecurity:trivy:ImageID",
+          "value": "sha256:35036a0cd23a85559f3b6662bd6c608c09e9496ce1c041838457999168ab76c7"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoDigest",
+          "value": "niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:825221c7273a634aea2f82cc040134a0aa363bb7a5b2049e7fbfde935791260b"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:3022be91a6d8c6cc9a0bcaceff4f5007e1efb5da8cbba9b673b9460dc4509f17"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoTag",
+          "value": "niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:deb/debian/base-files@10.3+deb10u10?distro=debian-10.10",
+      "type": "library",
+      "name": "base-files",
+      "version": "10.3+deb10u10",
+      "licenses": [
+        {
+          "expression": "GPL-3.0"
+        }
+      ],
+      "purl": "pkg:deb/debian/base-files@10.3+deb10u10?distro=debian-10.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "base-files"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "10.3+deb10u10"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/netbase@5.6?distro=debian-10.10",
+      "type": "library",
+      "name": "netbase",
+      "version": "5.6",
+      "licenses": [
+        {
+          "expression": "GPL-2.0"
+        }
+      ],
+      "purl": "pkg:deb/debian/netbase@5.6?distro=debian-10.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "netbase"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "5.6"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:deb/debian/tzdata@2021a-0+deb10u1?distro=debian-10.10",
+      "type": "library",
+      "name": "tzdata",
+      "version": "2021a-0+deb10u1",
+      "purl": "pkg:deb/debian/tzdata@2021a-0+deb10u1?distro=debian-10.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcName",
+          "value": "tzdata"
+        },
+        {
+          "name": "aquasecurity:trivy:SrcVersion",
+          "value": "2021a-0+deb10u1"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+        }
+      ]
+    },
+    {
+      "bom-ref": "d927aba7-7b4f-42b7-8029-9380f9ddc56b",
+      "type": "operating-system",
+      "name": "debian",
+      "version": "10.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "debian"
+        },
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "os-pkgs"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "d927aba7-7b4f-42b7-8029-9380f9ddc56b",
+      "dependsOn": [
+        "pkg:deb/debian/base-files@10.3+deb10u10?distro=debian-10.10",
+        "pkg:deb/debian/netbase@5.6?distro=debian-10.10",
+        "pkg:deb/debian/tzdata@2021a-0+deb10u1?distro=debian-10.10"
+      ]
+    },
+    {
+      "ref": "pkg:oci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fkube-scheduler\u0026arch=amd64",
+      "dependsOn": [
+        "d927aba7-7b4f-42b7-8029-9380f9ddc56b"
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}

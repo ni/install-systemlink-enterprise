@@ -1,0 +1,2453 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16-9c9b6997-8041-40d7-8398-cab3624b709c
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:59:01.543795Z
+
+##### Package: dotnet-core
+
+PackageName: dotnet-core
+SPDXID: SPDXRef-Application-621c2d12e44843e1
+FilesAnalyzed: false
+PackageSourceInfo: usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.9/Microsoft.AspNetCore.App.deps.json
+
+##### Package: dotnet-core
+
+PackageName: dotnet-core
+SPDXID: SPDXRef-Application-86688df0be01afa1
+FilesAnalyzed: false
+PackageSourceInfo: usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.9/Microsoft.NETCore.App.deps.json
+
+##### Package: dotnet-core
+
+PackageName: dotnet-core
+SPDXID: SPDXRef-Application-cfbddf7a3796ff12
+FilesAnalyzed: false
+PackageSourceInfo: app/NationalInstruments.RoutineEngine.deps.json
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16
+SPDXID: SPDXRef-ContainerImage-4f817573aaea668d
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/routineengine@sha256:2e4e4bf17e15a83dcf5aa817420c245707edd8a4c22621576e466993f6b3fa8c?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fni%2Fsystemlink%2Froutineengine&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:cae2d2c17b047c9b940822f9bad36c47a5febb5cf51e99138f76ac5511dbe43e
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine@sha256:2e4e4bf17e15a83dcf5aa817420c245707edd8a4c22621576e466993f6b3fa8c
+PackageAttributionText: DiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+PackageAttributionText: DiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+PackageAttributionText: DiffID: sha256:f2d2d69f709e673de6c95124c664791aafcd4521cbdf60ff917d05dac62654b5
+PackageAttributionText: DiffID: sha256:68335ec7248b93b10e9e6a1e0abd94c32ee3a2ec5d6139ca5943d7dfc333c634
+PackageAttributionText: DiffID: sha256:ed5457c40c5032e50189e7d0a9b1e2dd156e59b097a59dbe77a209ca603bf668
+PackageAttributionText: DiffID: sha256:e427606a537849320a8b738c8ffbe3f5d8d2fdc486ad25ee125e10613cffa36a
+PackageAttributionText: DiffID: sha256:bee0d954b7bc0c72f9d4f19d9c5b61925dd6ca74ff9668b800df9cb820103098
+PackageAttributionText: DiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16
+
+##### Package: alpine
+
+PackageName: alpine
+SPDXID: SPDXRef-OperatingSystem-16ffdefd5b3bd47
+PackageVersion: 3.16.2
+FilesAnalyzed: false
+
+##### Package: Microsoft.Extensions.Logging.Debug
+
+PackageName: Microsoft.Extensions.Logging.Debug
+SPDXID: SPDXRef-Package-10bc660353489095
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.Debug@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Buffers
+
+PackageName: System.Buffers
+SPDXID: SPDXRef-Package-10c7c96159129bea
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Buffers@4.5.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.Handles
+
+PackageName: System.Runtime.Handles
+SPDXID: SPDXRef-Package-11500d7daa833e51
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Handles@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: keyutils-libs
+
+PackageName: keyutils-libs
+SPDXID: SPDXRef-Package-133f65fd32778e4
+PackageVersion: 1.6.3-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: keyutils 1.6.3-r1
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/keyutils-libs@1.6.3-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: System.Resources.ResourceManager
+
+PackageName: System.Resources.ResourceManager
+SPDXID: SPDXRef-Package-180c8767cf82c006
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Resources.ResourceManager@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection
+
+PackageName: System.Reflection
+SPDXID: SPDXRef-Package-1b1177698b45825f
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: NI.CSharp.Analyzers
+
+PackageName: NI.CSharp.Analyzers
+SPDXID: SPDXRef-Package-1b3c9eaa11a17301
+PackageVersion: 2.0.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NI.CSharp.Analyzers@2.0.4
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: scanelf
+
+PackageName: scanelf
+SPDXID: SPDXRef-Package-1c9f757e08c67536
+PackageVersion: 1.3.4-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pax-utils 1.3.4-r0
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/scanelf@1.3.4-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: System.Security.Cryptography.X509Certificates
+
+PackageName: System.Security.Cryptography.X509Certificates
+SPDXID: SPDXRef-Package-1f6453af8fb45b7d
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.X509Certificates@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Text.RegularExpressions
+
+PackageName: System.Text.RegularExpressions
+SPDXID: SPDXRef-Package-20eb87f97f7feb4b
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.RegularExpressions@4.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.CodeQuality.Analyzers
+
+PackageName: Microsoft.CodeQuality.Analyzers
+SPDXID: SPDXRef-Package-2158734ef9c96582
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CodeQuality.Analyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.AppContext
+
+PackageName: System.AppContext
+SPDXID: SPDXRef-Package-253c22c8c1d9bea5
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.AppContext@4.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Globalization.Calendars
+
+PackageName: System.Globalization.Calendars
+SPDXID: SPDXRef-Package-266bb5e697a0d76d
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Globalization.Calendars@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Dynamic.Runtime
+
+PackageName: System.Dynamic.Runtime
+SPDXID: SPDXRef-Package-2a0ceabdb2e7e12c
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Dynamic.Runtime@4.0.11
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Routing.Abstractions
+
+PackageName: Microsoft.AspNetCore.Routing.Abstractions
+SPDXID: SPDXRef-Package-2b30ba94225c303d
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Routing.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: musl
+
+PackageName: musl
+SPDXID: SPDXRef-Package-2c3882041685b41b
+PackageVersion: 1.2.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.3-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl@1.2.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.Extensions.Logging.Abstractions
+
+PackageName: Microsoft.Extensions.Logging.Abstractions
+SPDXID: SPDXRef-Package-2c60a5cc004d21a6
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.Abstractions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: NationalInstruments.SystemLink.EventBus
+
+PackageName: NationalInstruments.SystemLink.EventBus
+SPDXID: SPDXRef-Package-2e15c16a87803547
+PackageVersion: 1.119.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.EventBus@1.119.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Authorization.Policy
+
+PackageName: Microsoft.AspNetCore.Authorization.Policy
+SPDXID: SPDXRef-Package-2fdac164d25a6a55
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authorization.Policy@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: krb5-libs
+
+PackageName: krb5-libs
+SPDXID: SPDXRef-Package-30284e001a0c44f1
+PackageVersion: 1.19.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: krb5 1.19.3-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/krb5-libs@1.19.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: krb5-conf
+
+PackageName: krb5-conf
+SPDXID: SPDXRef-Package-305175990c325f80
+PackageVersion: 1.0-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: krb5-conf 1.0-r2
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/krb5-conf@1.0-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: Microsoft.AspNetCore.Hosting.Abstractions
+
+PackageName: Microsoft.AspNetCore.Hosting.Abstractions
+SPDXID: SPDXRef-Package-306ceee3dfd92aea
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Hosting.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-30d133479c965be2
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Xml.XDocument
+
+PackageName: System.Xml.XDocument
+SPDXID: SPDXRef-Package-3130fc56e7575bd3
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Xml.XDocument@4.0.11
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.App.Runtime.linux-musl-x64
+
+PackageName: Microsoft.AspNetCore.App.Runtime.linux-musl-x64
+SPDXID: SPDXRef-Package-317f7952bb627d41
+PackageVersion: 6.0.9
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.App.Runtime.linux-musl-x64@6.0.9
+PackageAttributionText: LayerDigest: sha256:aed8e91ef80d40f670fd007854d1e0c0079685c1b825092c80720e9456a0da83
+PackageAttributionText: LayerDiffID: sha256:68335ec7248b93b10e9e6a1e0abd94c32ee3a2ec5d6139ca5943d7dfc333c634
+
+##### Package: runtime.native.System.Net.Http
+
+PackageName: runtime.native.System.Net.Http
+SPDXID: SPDXRef-Package-32766f56f138c7cd
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System.Net.Http@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection.Emit
+
+PackageName: System.Reflection.Emit
+SPDXID: SPDXRef-Package-335584b48f23e8f7
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Emit@4.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.AccessControl
+
+PackageName: System.Security.AccessControl
+SPDXID: SPDXRef-Package-35409091823a4000
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.AccessControl@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Encoding
+
+PackageName: System.Security.Cryptography.Encoding
+SPDXID: SPDXRef-Package-3717f33b8a0f96a2
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Encoding@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Diagnostics.Tracing
+
+PackageName: System.Diagnostics.Tracing
+SPDXID: SPDXRef-Package-3ab9d44d0fe2fd9d
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.Tracing@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: RabbitMQ.Client
+
+PackageName: RabbitMQ.Client
+SPDXID: SPDXRef-Package-3bba7e4804286a56
+PackageVersion: 6.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/RabbitMQ.Client@6.4.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Collections
+
+PackageName: System.Collections
+SPDXID: SPDXRef-Package-3c6ccf124c846df9
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Collections@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.IO.FileSystem.Primitives
+
+PackageName: System.IO.FileSystem.Primitives
+SPDXID: SPDXRef-Package-401d3c03eee2f433
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.IO.FileSystem.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Net.Primitives
+
+PackageName: System.Net.Primitives
+SPDXID: SPDXRef-Package-41303583fe60a2e2
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Net.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Hosting
+
+PackageName: Microsoft.Extensions.Hosting
+SPDXID: SPDXRef-Package-42c88754bf10bc2b
+PackageVersion: 6.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Hosting@6.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: zlib
+
+PackageName: zlib
+SPDXID: SPDXRef-Package-43055220bd4c4e34
+PackageVersion: 1.2.12-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: zlib 1.2.12-r3
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/zlib@1.2.12-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: System.Text.Encoding.Extensions
+
+PackageName: System.Text.Encoding.Extensions
+SPDXID: SPDXRef-Package-4348a997421416c7
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encoding.Extensions@4.0.11
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Net.Http.Headers
+
+PackageName: Microsoft.Net.Http.Headers
+SPDXID: SPDXRef-Package-450cb335c5d8329b
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Net.Http.Headers@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Authentication.Core
+
+PackageName: Microsoft.AspNetCore.Authentication.Core
+SPDXID: SPDXRef-Package-46340f23e207c75
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authentication.Core@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.DotNet.PlatformAbstractions
+
+PackageName: Microsoft.DotNet.PlatformAbstractions
+SPDXID: SPDXRef-Package-4764bb2b2e18ee83
+PackageVersion: 2.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.DotNet.PlatformAbstractions@2.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Routing
+
+PackageName: Microsoft.AspNetCore.Routing
+SPDXID: SPDXRef-Package-48963d9f41df600e
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Routing@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.InteropServices
+
+PackageName: System.Runtime.InteropServices
+SPDXID: SPDXRef-Package-49ca0ecaa5c0a28b
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.InteropServices@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime
+
+PackageName: System.Runtime
+SPDXID: SPDXRef-Package-49ef6abc25e7d9da
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.DependencyModel
+
+PackageName: Microsoft.Extensions.DependencyModel
+SPDXID: SPDXRef-Package-4af8dd683301849
+PackageVersion: 2.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.DependencyModel@2.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.CompilerServices.Unsafe
+
+PackageName: System.Runtime.CompilerServices.Unsafe
+SPDXID: SPDXRef-Package-4b66b8b6bed0f42b
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.CompilerServices.Unsafe@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.IO
+
+PackageName: System.IO
+SPDXID: SPDXRef-Package-4f696c26f173c431
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.IO@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection.Emit.Lightweight
+
+PackageName: System.Reflection.Emit.Lightweight
+SPDXID: SPDXRef-Package-511f24f8f5ca0e74
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Emit.Lightweight@4.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Windows.Extensions
+
+PackageName: System.Windows.Extensions
+SPDXID: SPDXRef-Package-520ee253b1c3eaa5
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Windows.Extensions@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Diagnostics.Tools
+
+PackageName: System.Diagnostics.Tools
+SPDXID: SPDXRef-Package-54d4ac6298160597
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.Tools@4.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Collections.Concurrent
+
+PackageName: System.Collections.Concurrent
+SPDXID: SPDXRef-Package-54f1207843944732
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Collections.Concurrent@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libcrypto1.1
+
+PackageName: libcrypto1.1
+SPDXID: SPDXRef-Package-558d021893e01fcd
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libcrypto1.1@1.1.1q-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.AspNetCore.Cryptography.Internal
+
+PackageName: Microsoft.AspNetCore.Cryptography.Internal
+SPDXID: SPDXRef-Package-56994166fd65ff59
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Cryptography.Internal@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Linq.Dynamic.Core
+
+PackageName: System.Linq.Dynamic.Core
+SPDXID: SPDXRef-Package-57a5ee1e0e285180
+PackageVersion: 1.2.19
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Linq.Dynamic.Core@1.2.19
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-57f40da367f46136
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-588a7adf2d1fbee0
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.DataProtection.Abstractions
+
+PackageName: Microsoft.AspNetCore.DataProtection.Abstractions
+SPDXID: SPDXRef-Package-59487bd6804344cd
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.DataProtection.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.ProtectedData
+
+PackageName: System.Security.Cryptography.ProtectedData
+SPDXID: SPDXRef-Package-598946317e850c
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.ProtectedData@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.ObjectPool
+
+PackageName: Microsoft.Extensions.ObjectPool
+SPDXID: SPDXRef-Package-5a71ed3f9f9d34d6
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.ObjectPool@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libcom_err
+
+PackageName: libcom_err
+SPDXID: SPDXRef-Package-5bd949ea3f5f247d
+PackageVersion: 1.46.5-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.46.5-r0
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0-or-later, BSD-3-Clause, MIT
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0-or-later, BSD-3-Clause, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libcom_err@1.46.5-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-5d38876a6664c278
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Text.Json
+
+PackageName: System.Text.Json
+SPDXID: SPDXRef-Package-5de10edb2a3545a6
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Json@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Configuration.ConfigurationManager
+
+PackageName: System.Configuration.ConfigurationManager
+SPDXID: SPDXRef-Package-616cfadad31fca94
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Configuration.ConfigurationManager@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-61f182a242888de1
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.ObjectModel
+
+PackageName: System.ObjectModel
+SPDXID: SPDXRef-Package-6238d421ceb7b1ab
+PackageVersion: 4.0.12
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.ObjectModel@4.0.12
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.Extensions
+
+PackageName: System.Runtime.Extensions
+SPDXID: SPDXRef-Package-63cff5f470e94655
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: apk-tools
+
+PackageName: apk-tools
+SPDXID: SPDXRef-Package-671b071a2e6334f0
+PackageVersion: 2.12.9-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apk-tools 2.12.9-r3
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/apk-tools@2.12.9-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: NationalInstruments.SystemLink.Auth
+
+PackageName: NationalInstruments.SystemLink.Auth
+SPDXID: SPDXRef-Package-67dfc707ae49daed
+PackageVersion: 1.137.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.Auth@1.137.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Configuration.UserSecrets
+
+PackageName: Microsoft.Extensions.Configuration.UserSecrets
+SPDXID: SPDXRef-Package-68acfdea372b037e
+PackageVersion: 6.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.UserSecrets@6.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Drawing.Common
+
+PackageName: System.Drawing.Common
+SPDXID: SPDXRef-Package-6a43aca12df5107a
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Drawing.Common@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Options
+
+PackageName: Microsoft.Extensions.Options
+SPDXID: SPDXRef-Package-6a4ac54f591926dc
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Options@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: alpine-keys
+
+PackageName: alpine-keys
+SPDXID: SPDXRef-Package-6b7ab4739bd113a0
+PackageVersion: 2.4-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-keys 2.4-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-keys@2.4-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.AspNetCore.Mvc.Abstractions
+
+PackageName: Microsoft.AspNetCore.Mvc.Abstractions
+SPDXID: SPDXRef-Package-6dfd6c18839cc22c
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Mvc.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.native.System
+
+PackageName: runtime.native.System
+SPDXID: SPDXRef-Package-6f3251b07bca5f60
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libverto
+
+PackageName: libverto
+SPDXID: SPDXRef-Package-70ca3aef5ee04bff
+PackageVersion: 0.3.2-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libverto 0.3.2-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libverto@0.3.2-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: Microsoft.VisualStudio.Threading.Analyzers
+
+PackageName: Microsoft.VisualStudio.Threading.Analyzers
+SPDXID: SPDXRef-Package-70f0aeb803a53c85
+PackageVersion: 16.3.52
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.VisualStudio.Threading.Analyzers@16.3.52
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: ca-certificates
+
+PackageName: ca-certificates
+SPDXID: SPDXRef-Package-74aafdc98109fc29
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates@20220614-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: Microsoft.Extensions.WebEncoders
+
+PackageName: Microsoft.Extensions.WebEncoders
+SPDXID: SPDXRef-Package-7533eed27b62edc0
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.WebEncoders@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection.Extensions
+
+PackageName: System.Reflection.Extensions
+SPDXID: SPDXRef-Package-75bd0f6d89a1027d
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Extensions@4.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Mvc.Core
+
+PackageName: Microsoft.AspNetCore.Mvc.Core
+SPDXID: SPDXRef-Package-7651b36bd80e8da0
+PackageVersion: 2.2.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Mvc.Core@2.2.5
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.DataProtection
+
+PackageName: Microsoft.AspNetCore.DataProtection
+SPDXID: SPDXRef-Package-76ff85f887b1ca59
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.DataProtection@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: musl-utils
+
+PackageName: musl-utils
+SPDXID: SPDXRef-Package-77d9144ba03ed632
+PackageVersion: 1.2.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.3-r0
+PackageLicenseConcluded: MIT, BSD-3-Clause, GPL-2.0
+PackageLicenseDeclared: MIT, BSD-3-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl-utils@1.2.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.Extensions.Configuration.CommandLine
+
+PackageName: Microsoft.Extensions.Configuration.CommandLine
+SPDXID: SPDXRef-Package-78067230147a592e
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.CommandLine@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Authentication.Abstractions
+
+PackageName: Microsoft.AspNetCore.Authentication.Abstractions
+SPDXID: SPDXRef-Package-781231662fb6c2ca
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authentication.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Polly.Contrib.WaitAndRetry
+
+PackageName: Polly.Contrib.WaitAndRetry
+SPDXID: SPDXRef-Package-7bcd003bdf86cb2e
+PackageVersion: 1.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Polly.Contrib.WaitAndRetry@1.1.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Text.Encoding
+
+PackageName: System.Text.Encoding
+SPDXID: SPDXRef-Package-7bfbb758120ab8bf
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encoding@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Threading
+
+PackageName: System.Threading
+SPDXID: SPDXRef-Package-7c75e4376661d237
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Diagnostics.Debug
+
+PackageName: System.Diagnostics.Debug
+SPDXID: SPDXRef-Package-7d6d1ccbfe232ebb
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.Debug@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection.Emit.ILGeneration
+
+PackageName: System.Reflection.Emit.ILGeneration
+SPDXID: SPDXRef-Package-7dc0152a390112f2
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Emit.ILGeneration@4.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.Numerics
+
+PackageName: System.Runtime.Numerics
+SPDXID: SPDXRef-Package-7f636779ce1df363
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Numerics@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.DependencyInjection
+
+PackageName: Microsoft.Extensions.DependencyInjection
+SPDXID: SPDXRef-Package-7ff495af3a30507
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.DependencyInjection@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Http
+
+PackageName: Microsoft.Extensions.Http
+SPDXID: SPDXRef-Package-82b8ac690661ddfb
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Http@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Configuration.Json
+
+PackageName: Microsoft.Extensions.Configuration.Json
+SPDXID: SPDXRef-Package-858f0769852af8d7
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.Json@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Cng
+
+PackageName: System.Security.Cryptography.Cng
+SPDXID: SPDXRef-Package-892f7673badcae89
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Cng@4.5.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Options.ConfigurationExtensions
+
+PackageName: Microsoft.Extensions.Options.ConfigurationExtensions
+SPDXID: SPDXRef-Package-898cf0dce1655013
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Options.ConfigurationExtensions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Diagnostics.DiagnosticSource
+
+PackageName: System.Diagnostics.DiagnosticSource
+SPDXID: SPDXRef-Package-8bbc28614218ed8
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.DiagnosticSource@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Hosting.Abstractions
+
+PackageName: Microsoft.Extensions.Hosting.Abstractions
+SPDXID: SPDXRef-Package-8cf1fc11fe58dd09
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Hosting.Abstractions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.NETCore.App.Runtime.linux-musl-x64
+
+PackageName: Microsoft.NETCore.App.Runtime.linux-musl-x64
+SPDXID: SPDXRef-Package-8f270af8ca38909
+PackageVersion: 6.0.9
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NETCore.App.Runtime.linux-musl-x64@6.0.9
+PackageAttributionText: LayerDigest: sha256:b6e19b5e6f7fcd59f109b5e453904c8d17b6e07bbdab3fa903f1b05f952209ab
+PackageAttributionText: LayerDiffID: sha256:f2d2d69f709e673de6c95124c664791aafcd4521cbdf60ff917d05dac62654b5
+
+##### Package: System.Security.Cryptography.OpenSsl
+
+PackageName: System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-92511b6f64cfe3d9
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.OpenSsl@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Threading.Tasks
+
+PackageName: System.Threading.Tasks
+SPDXID: SPDXRef-Package-94578fa10fca4f92
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading.Tasks@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Algorithms
+
+PackageName: System.Security.Cryptography.Algorithms
+SPDXID: SPDXRef-Package-99d0ca59f3320644
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Algorithms@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Configuration.EnvironmentVariables
+
+PackageName: Microsoft.Extensions.Configuration.EnvironmentVariables
+SPDXID: SPDXRef-Package-9a7d62284487169f
+PackageVersion: 6.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.EnvironmentVariables@6.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.DependencyInjection.Abstractions
+
+PackageName: Microsoft.Extensions.DependencyInjection.Abstractions
+SPDXID: SPDXRef-Package-9b43fd861da2cf33
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.DependencyInjection.Abstractions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Threading.Channels
+
+PackageName: System.Threading.Channels
+SPDXID: SPDXRef-Package-9b7d5591fb78c773
+PackageVersion: 4.7.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading.Channels@4.7.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Polly
+
+PackageName: Polly
+SPDXID: SPDXRef-Package-9ce94145d309397
+PackageVersion: 7.2.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Polly@7.2.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: StyleCop.Analyzers
+
+PackageName: StyleCop.Analyzers
+SPDXID: SPDXRef-Package-9dec1bb961e85096
+PackageVersion: 1.1.118
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/StyleCop.Analyzers@1.1.118
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple
+
+PackageName: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple
+SPDXID: SPDXRef-Package-9ec7bd7b80d96111
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Text.Encodings.Web
+
+PackageName: System.Text.Encodings.Web
+SPDXID: SPDXRef-Package-9ed5c8ee33e0b28e
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encodings.Web@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Pkcs
+
+PackageName: System.Security.Cryptography.Pkcs
+SPDXID: SPDXRef-Package-a0e274f536922fcc
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Pkcs@4.5.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-a19af572adc5ced3
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: NationalInstruments.SystemLink.ServiceBase
+
+PackageName: NationalInstruments.SystemLink.ServiceBase
+SPDXID: SPDXRef-Package-a26b5a52b75cd075
+PackageVersion: 1.124.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.ServiceBase@1.124.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Csp
+
+PackageName: System.Security.Cryptography.Csp
+SPDXID: SPDXRef-Package-a3fa55b6a651eac7
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Csp@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.ResponseCaching.Abstractions
+
+PackageName: Microsoft.AspNetCore.ResponseCaching.Abstractions
+SPDXID: SPDXRef-Package-a42f4397f40bbfd7
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.ResponseCaching.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Win32.Registry
+
+PackageName: Microsoft.Win32.Registry
+SPDXID: SPDXRef-Package-a684064aec345b92
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Win32.Registry@4.5.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.WebUtilities
+
+PackageName: Microsoft.AspNetCore.WebUtilities
+SPDXID: SPDXRef-Package-ac0e6db264799b
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.WebUtilities@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Win32.SystemEvents
+
+PackageName: Microsoft.Win32.SystemEvents
+SPDXID: SPDXRef-Package-ad5d51abae23b199
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Win32.SystemEvents@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: ca-certificates-bundle
+
+PackageName: ca-certificates-bundle
+SPDXID: SPDXRef-Package-ae1e5be4a78c13d1
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates-bundle@20220614-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.Extensions.Primitives
+
+PackageName: Microsoft.Extensions.Primitives
+SPDXID: SPDXRef-Package-b0ae3c78eb14e421
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Primitives@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Roslynator.Analyzers
+
+PackageName: Roslynator.Analyzers
+SPDXID: SPDXRef-Package-b25646bacfc4ae07
+PackageVersion: 2.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Roslynator.Analyzers@2.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-b62bd60aaf535504
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Linq
+
+PackageName: System.Linq
+SPDXID: SPDXRef-Package-b6c3787ab0c55a53
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Linq@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Hosting.Server.Abstractions
+
+PackageName: Microsoft.AspNetCore.Hosting.Server.Abstractions
+SPDXID: SPDXRef-Package-b6d7558867c7f57e
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Hosting.Server.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.VisualStudio.Azure.Containers.Tools.Targets
+
+PackageName: Microsoft.VisualStudio.Azure.Containers.Tools.Targets
+SPDXID: SPDXRef-Package-b7230cb5cd2ac76e
+PackageVersion: 1.15.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.VisualStudio.Azure.Containers.Tools.Targets@1.15.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Xml
+
+PackageName: System.Security.Cryptography.Xml
+SPDXID: SPDXRef-Package-b74ff0432e424d37
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Xml@4.5.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: alpine-baselayout
+
+PackageName: alpine-baselayout
+SPDXID: SPDXRef-Package-b9b73a8df6c20b7b
+PackageVersion: 3.2.0-r22
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r22
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout@3.2.0-r22?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.Extensions.Configuration.Abstractions
+
+PackageName: Microsoft.Extensions.Configuration.Abstractions
+SPDXID: SPDXRef-Package-bc0bbc07291c4d4c
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.Abstractions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: NationalInstruments.SystemLink.Logging
+
+PackageName: NationalInstruments.SystemLink.Logging
+SPDXID: SPDXRef-Package-bd4ee9201a64810a
+PackageVersion: 1.137.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.Logging@1.137.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Permissions
+
+PackageName: System.Security.Permissions
+SPDXID: SPDXRef-Package-be450ffae846809e
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Permissions@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.NetCore.Analyzers
+
+PackageName: Microsoft.NetCore.Analyzers
+SPDXID: SPDXRef-Package-be6d417be509a8dc
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NetCore.Analyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libstdc++
+
+PackageName: libstdc++
+SPDXID: SPDXRef-Package-c034912fe5d0a38b
+PackageVersion: 11.2.1_git20220219-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc 11.2.1_git20220219-r2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libstdc++@11.2.1_git20220219-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: Microsoft.NetFramework.Analyzers
+
+PackageName: Microsoft.NetFramework.Analyzers
+SPDXID: SPDXRef-Package-c0692196c816647d
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NetFramework.Analyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-c09ff063ad0631ad
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-c31c56d602de603e
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.InteropServices.RuntimeInformation
+
+PackageName: System.Runtime.InteropServices.RuntimeInformation
+SPDXID: SPDXRef-Package-c3f180e18574c7b5
+PackageVersion: 4.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.InteropServices.RuntimeInformation@4.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.native.System.Security.Cryptography.Apple
+
+PackageName: runtime.native.System.Security.Cryptography.Apple
+SPDXID: SPDXRef-Package-c61428d47c7d3126
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System.Security.Cryptography.Apple@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.FileSystemGlobbing
+
+PackageName: Microsoft.Extensions.FileSystemGlobbing
+SPDXID: SPDXRef-Package-c70aa3f328869f7c
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.FileSystemGlobbing@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Security.Cryptography.Primitives
+
+PackageName: System.Security.Cryptography.Primitives
+SPDXID: SPDXRef-Package-cc33aa51c56587a7
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Net.Http
+
+PackageName: System.Net.Http
+SPDXID: SPDXRef-Package-ce985a323b45efac
+PackageVersion: 4.3.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Net.Http@4.3.4
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Configuration.FileExtensions
+
+PackageName: Microsoft.Extensions.Configuration.FileExtensions
+SPDXID: SPDXRef-Package-cee252df8afc4233
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.FileExtensions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Runtime.Caching
+
+PackageName: System.Runtime.Caching
+SPDXID: SPDXRef-Package-d14948b95c37107e
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Caching@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Http.Abstractions
+
+PackageName: Microsoft.AspNetCore.Http.Abstractions
+SPDXID: SPDXRef-Package-d1e5631e08c20a4
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection.Primitives
+
+PackageName: System.Reflection.Primitives
+SPDXID: SPDXRef-Package-d2ed8cf9ea989e82
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.NETCore.Targets
+
+PackageName: Microsoft.NETCore.Targets
+SPDXID: SPDXRef-Package-d5ea18f582aff796
+PackageVersion: 1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NETCore.Targets@1.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Logging.Console
+
+PackageName: Microsoft.Extensions.Logging.Console
+SPDXID: SPDXRef-Package-d676d22861320602
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.Console@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Globalization.Extensions
+
+PackageName: System.Globalization.Extensions
+SPDXID: SPDXRef-Package-d7078c7afc81154e
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Globalization.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.FileProviders.Abstractions
+
+PackageName: Microsoft.Extensions.FileProviders.Abstractions
+SPDXID: SPDXRef-Package-d72d8bc03c3a9f44
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.FileProviders.Abstractions@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.CodeAnalysis.FxCopAnalyzers
+
+PackageName: Microsoft.CodeAnalysis.FxCopAnalyzers
+SPDXID: SPDXRef-Package-d9e0a3ee5bd3a30b
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CodeAnalysis.FxCopAnalyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Authorization
+
+PackageName: Microsoft.AspNetCore.Authorization
+SPDXID: SPDXRef-Package-dc4884fc557c03f6
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authorization@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-dcdeacd832dfc2e
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Http
+
+PackageName: Microsoft.AspNetCore.Http
+SPDXID: SPDXRef-Package-dcfbe1f5ac4b2010
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Reflection.TypeExtensions
+
+PackageName: System.Reflection.TypeExtensions
+SPDXID: SPDXRef-Package-ddfb0b1c3e5afc04
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.TypeExtensions@4.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libintl
+
+PackageName: libintl
+SPDXID: SPDXRef-Package-deb51f532918ce94
+PackageVersion: 0.21-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gettext 0.21-r2
+PackageLicenseConcluded: LGPL-2.1-or-later
+PackageLicenseDeclared: LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libintl@0.21-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: System.Runtime.Serialization.Primitives
+
+PackageName: System.Runtime.Serialization.Primitives
+SPDXID: SPDXRef-Package-e15ba312ae44a825
+PackageVersion: 4.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Serialization.Primitives@4.1.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Configuration
+
+PackageName: Microsoft.Extensions.Configuration
+SPDXID: SPDXRef-Package-e24ed2d78ad9c2b0
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.NETCore.Platforms
+
+PackageName: Microsoft.NETCore.Platforms
+SPDXID: SPDXRef-Package-e34c0da4f9eae61a
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NETCore.Platforms@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libc-utils
+
+PackageName: libc-utils
+SPDXID: SPDXRef-Package-e4008ecaa6c1d39a
+PackageVersion: 0.7.2-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libc-dev 0.7.2-r3
+PackageLicenseConcluded: BSD-2-Clause, BSD-3-Clause
+PackageLicenseDeclared: BSD-2-Clause, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: ssl_client
+
+PackageName: ssl_client
+SPDXID: SPDXRef-Package-e96020d9856468f
+PackageVersion: 1.35.0-r17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.35.0-r17
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ssl_client@1.35.0-r17?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: libssl1.1
+
+PackageName: libssl1.1
+SPDXID: SPDXRef-Package-eab04bc506ca1930
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libssl1.1@1.1.1q-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: Microsoft.AspNetCore.Authentication
+
+PackageName: Microsoft.AspNetCore.Authentication
+SPDXID: SPDXRef-Package-eacc85067d695100
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authentication@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Xml.ReaderWriter
+
+PackageName: System.Xml.ReaderWriter
+SPDXID: SPDXRef-Package-eae284b1b4fd9241
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Xml.ReaderWriter@4.0.11
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Logging
+
+PackageName: Microsoft.Extensions.Logging
+SPDXID: SPDXRef-Package-eb456042a7d79917
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: FluentValidation
+
+PackageName: FluentValidation
+SPDXID: SPDXRef-Package-ec79b93b9d566134
+PackageVersion: 10.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/FluentValidation@10.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: libgcc
+
+PackageName: libgcc
+SPDXID: SPDXRef-Package-ed849f8b6273d723
+PackageVersion: 11.2.1_git20220219-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc 11.2.1_git20220219-r2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libgcc@11.2.1_git20220219-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b
+PackageAttributionText: LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225
+
+##### Package: System.IO.FileSystem
+
+PackageName: System.IO.FileSystem
+SPDXID: SPDXRef-Package-ed8d5e5a14ba7ff
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.IO.FileSystem@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Http.Features
+
+PackageName: Microsoft.AspNetCore.Http.Features
+SPDXID: SPDXRef-Package-edf17e75acabfa4a
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http.Features@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Threading.Tasks.Extensions
+
+PackageName: System.Threading.Tasks.Extensions
+SPDXID: SPDXRef-Package-ef09e7ffe153642e
+PackageVersion: 4.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading.Tasks.Extensions@4.5.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Configuration.Binder
+
+PackageName: Microsoft.Extensions.Configuration.Binder
+SPDXID: SPDXRef-Package-ef2157248c65f048
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.Binder@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Logging.EventSource
+
+PackageName: Microsoft.Extensions.Logging.EventSource
+SPDXID: SPDXRef-Package-f13e4c5ef614557
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.EventSource@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.CodeAnalysis.VersionCheckAnalyzer
+
+PackageName: Microsoft.CodeAnalysis.VersionCheckAnalyzer
+SPDXID: SPDXRef-Package-f17dae26bc289bf5
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CodeAnalysis.VersionCheckAnalyzer@2.9.10
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Newtonsoft.Json
+
+PackageName: Newtonsoft.Json
+SPDXID: SPDXRef-Package-f3da42a45a5eec5d
+PackageVersion: 9.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Newtonsoft.Json@9.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.AspNetCore.Http.Extensions
+
+PackageName: Microsoft.AspNetCore.Http.Extensions
+SPDXID: SPDXRef-Package-f45f30724ed60cf5
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http.Extensions@2.2.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Logging.Configuration
+
+PackageName: Microsoft.Extensions.Logging.Configuration
+SPDXID: SPDXRef-Package-f4c4437e476d73d9
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.Configuration@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.Logging.EventLog
+
+PackageName: Microsoft.Extensions.Logging.EventLog
+SPDXID: SPDXRef-Package-f4c48528e285dfb0
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.EventLog@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: busybox
+
+PackageName: busybox
+SPDXID: SPDXRef-Package-f55a39846a8dc061
+PackageVersion: 1.35.0-r17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.35.0-r17
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/busybox@1.35.0-r17?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: System.Diagnostics.EventLog
+
+PackageName: System.Diagnostics.EventLog
+SPDXID: SPDXRef-Package-f5779c13bb6ef291
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.EventLog@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Memory
+
+PackageName: System.Memory
+SPDXID: SPDXRef-Package-f7efe27468d0f37d
+PackageVersion: 4.5.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Memory@4.5.4
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-f8dd30594bccddc0
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Globalization
+
+PackageName: System.Globalization
+SPDXID: SPDXRef-Package-f949457d4b807c7c
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Globalization@4.3.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.CSharp
+
+PackageName: Microsoft.CSharp
+SPDXID: SPDXRef-Package-fa9626b9f04205ba
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CSharp@4.0.1
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: alpine-baselayout-data
+
+PackageName: alpine-baselayout-data
+SPDXID: SPDXRef-Package-fab92f85b0031558
+PackageVersion: 3.2.0-r22
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r22
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout-data@3.2.0-r22?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: System.Security.Principal.Windows
+
+PackageName: System.Security.Principal.Windows
+SPDXID: SPDXRef-Package-fd019f706a1d3a7b
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Principal.Windows@5.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: Microsoft.Extensions.FileProviders.Physical
+
+PackageName: Microsoft.Extensions.FileProviders.Physical
+SPDXID: SPDXRef-Package-fef9d5946d3db0a2
+PackageVersion: 6.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.FileProviders.Physical@6.0.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Package: System.Linq.Expressions
+
+PackageName: System.Linq.Expressions
+SPDXID: SPDXRef-Package-ff27cd8b50fbe3f2
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Linq.Expressions@4.1.0
+PackageAttributionText: LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407
+PackageAttributionText: LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-4f817573aaea668d
+Relationship: SPDXRef-ContainerImage-4f817573aaea668d CONTAINS SPDXRef-OperatingSystem-16ffdefd5b3bd47
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-b9b73a8df6c20b7b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-fab92f85b0031558
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-6b7ab4739bd113a0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-671b071a2e6334f0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-f55a39846a8dc061
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-74aafdc98109fc29
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ae1e5be4a78c13d1
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-133f65fd32778e4
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-305175990c325f80
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-30284e001a0c44f1
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e4008ecaa6c1d39a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-5bd949ea3f5f247d
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-558d021893e01fcd
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ed849f8b6273d723
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-deb51f532918ce94
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-eab04bc506ca1930
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-c034912fe5d0a38b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-70ca3aef5ee04bff
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-2c3882041685b41b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-77d9144ba03ed632
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-1c9f757e08c67536
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e96020d9856468f
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-43055220bd4c4e34
+Relationship: SPDXRef-ContainerImage-4f817573aaea668d CONTAINS SPDXRef-Application-86688df0be01afa1
+Relationship: SPDXRef-Application-86688df0be01afa1 CONTAINS SPDXRef-Package-8f270af8ca38909
+Relationship: SPDXRef-ContainerImage-4f817573aaea668d CONTAINS SPDXRef-Application-621c2d12e44843e1
+Relationship: SPDXRef-Application-621c2d12e44843e1 CONTAINS SPDXRef-Package-317f7952bb627d41
+Relationship: SPDXRef-ContainerImage-4f817573aaea668d CONTAINS SPDXRef-Application-cfbddf7a3796ff12
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ec79b93b9d566134
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-eacc85067d695100
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-781231662fb6c2ca
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-46340f23e207c75
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-dc4884fc557c03f6
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-2fdac164d25a6a55
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-56994166fd65ff59
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-76ff85f887b1ca59
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-59487bd6804344cd
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-306ceee3dfd92aea
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b6d7558867c7f57e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-dcfbe1f5ac4b2010
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d1e5631e08c20a4
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f45f30724ed60cf5
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-edf17e75acabfa4a
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-6dfd6c18839cc22c
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7651b36bd80e8da0
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-a42f4397f40bbfd7
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-48963d9f41df600e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-2b30ba94225c303d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ac0e6db264799b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-fa9626b9f04205ba
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d9e0a3ee5bd3a30b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f17dae26bc289bf5
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-2158734ef9c96582
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-4764bb2b2e18ee83
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-e24ed2d78ad9c2b0
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-bc0bbc07291c4d4c
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ef2157248c65f048
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-78067230147a592e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9a7d62284487169f
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-cee252df8afc4233
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-858f0769852af8d7
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-68acfdea372b037e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7ff495af3a30507
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9b43fd861da2cf33
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-4af8dd683301849
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d72d8bc03c3a9f44
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-fef9d5946d3db0a2
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-c70aa3f328869f7c
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-42c88754bf10bc2b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-8cf1fc11fe58dd09
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-82b8ac690661ddfb
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-eb456042a7d79917
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-2c60a5cc004d21a6
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f4c4437e476d73d9
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d676d22861320602
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-10bc660353489095
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f4c48528e285dfb0
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f13e4c5ef614557
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-5a71ed3f9f9d34d6
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-6a4ac54f591926dc
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-898cf0dce1655013
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b0ae3c78eb14e421
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7533eed27b62edc0
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-e34c0da4f9eae61a
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d5ea18f582aff796
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-450cb335c5d8329b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-be6d417be509a8dc
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-c0692196c816647d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b7230cb5cd2ac76e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-70f0aeb803a53c85
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-a684064aec345b92
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ad5d51abae23b199
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-1b3c9eaa11a17301
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-67dfc707ae49daed
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-2e15c16a87803547
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-bd4ee9201a64810a
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-a26b5a52b75cd075
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f3da42a45a5eec5d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9ce94145d309397
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7bcd003bdf86cb2e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-3bba7e4804286a56
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b25646bacfc4ae07
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9dec1bb961e85096
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-253c22c8c1d9bea5
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-10c7c96159129bea
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-3c6ccf124c846df9
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-54f1207843944732
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-616cfadad31fca94
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7d6d1ccbfe232ebb
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-8bbc28614218ed8
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f5779c13bb6ef291
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-54d4ac6298160597
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-3ab9d44d0fe2fd9d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-6a43aca12df5107a
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-2a0ceabdb2e7e12c
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f949457d4b807c7c
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-266bb5e697a0d76d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d7078c7afc81154e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-4f696c26f173c431
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ed8d5e5a14ba7ff
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-401d3c03eee2f433
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b6c3787ab0c55a53
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-57a5ee1e0e285180
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ff27cd8b50fbe3f2
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f7efe27468d0f37d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ce985a323b45efac
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-41303583fe60a2e2
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-6238d421ceb7b1ab
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-1b1177698b45825f
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-335584b48f23e8f7
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7dc0152a390112f2
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-511f24f8f5ca0e74
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-75bd0f6d89a1027d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d2ed8cf9ea989e82
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ddfb0b1c3e5afc04
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-180c8767cf82c006
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-49ef6abc25e7d9da
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-d14948b95c37107e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-4b66b8b6bed0f42b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-63cff5f470e94655
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-11500d7daa833e51
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-49ca0ecaa5c0a28b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-c3f180e18574c7b5
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7f636779ce1df363
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-e15ba312ae44a825
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-35409091823a4000
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-99d0ca59f3320644
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-892f7673badcae89
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-a3fa55b6a651eac7
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-3717f33b8a0f96a2
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-92511b6f64cfe3d9
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-a0e274f536922fcc
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-cc33aa51c56587a7
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-598946317e850c
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-1f6453af8fb45b7d
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b74ff0432e424d37
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-be450ffae846809e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-fd019f706a1d3a7b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7bfbb758120ab8bf
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-4348a997421416c7
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9ed5c8ee33e0b28e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-5de10edb2a3545a6
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-20eb87f97f7feb4b
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-7c75e4376661d237
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9b7d5591fb78c773
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-94578fa10fca4f92
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-ef09e7ffe153642e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-520ee253b1c3eaa5
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-eae284b1b4fd9241
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-3130fc56e7575bd3
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-5d38876a6664c278
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-c31c56d602de603e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-30d133479c965be2
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-6f3251b07bca5f60
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-32766f56f138c7cd
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-c61428d47c7d3126
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-57f40da367f46136
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-588a7adf2d1fbee0
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-f8dd30594bccddc0
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-9ec7bd7b80d96111
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-dcdeacd832dfc2e
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-a19af572adc5ced3
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-b62bd60aaf535504
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-c09ff063ad0631ad
+Relationship: SPDXRef-Application-cfbddf7a3796ff12 CONTAINS SPDXRef-Package-61f182a242888de1
+
