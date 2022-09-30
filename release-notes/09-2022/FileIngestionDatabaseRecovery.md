@@ -47,7 +47,8 @@ Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade th
 
 1. Run `kubectl delete pvc datadir-fileingestion-mongodb-configsvr-0 datadir-fileingestion-mongodb-configsvr-1 datadir-fileingestion-mongodb-configsvr-2 datadir-fileingestion-mongodb-shard0-data0 datadir-fileingestion-mongodb-shard0-data1` for all matched PVCs from the previous step. This command can be run multiple times to remove PVCs for all shards.
 
-### Cleaning up the service
+### Cleaning up the service [Optional]
+
 
 Complete the following steps to clean up resources Helm does not remove. 
 
