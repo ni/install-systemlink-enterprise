@@ -18,7 +18,12 @@ The following procedure can be used to backup meta data for files ingested by Sy
 
 ## Exporting the database
 
-1. Export the database contents by running `mongoexport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --out=<path>`
+1. Run the following command to export the database.
+
+  `mongoexport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --out=<path>`
+  
+  Where 
+
 
     **Note** `<root_user>` is should be replaced by the root user, `<root_password>` by the root password, `<path>` to a path on your local computer that will contain the specified database export, and `<port>` by the port specified on the previous step
 
