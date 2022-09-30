@@ -15,28 +15,24 @@ Complete the following steps if you want to back up metadata for files ingested 
 
 1. RUn `kubectl port-forward services/fileingestion-mongodb 57017:27017` to port-forward the service.
 
-
 ## Exporting the database
 
 1. Run the following command to export the database.
 
-  `mongoexport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --out=<path>`
+        `mongoexport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --out=<path>`
   
-  Where 
+    Where
 
+    - `<root_user>` is the root user
+    - `<root_password>` is the root password
+    - `<path>` is a path on your local computer that will contain the specified database export
+    - `<port>` is the port specified in the previous step
 
--  `<root_user>` is the root user
--  `<root_password>` is the root password
-- `<path>` is a path on your local computer that will contain the specified database export
-- `<port>` is the port specified in the previous step
-
-
-        Example: `mongoexport --uri="mongodb://root:RootPassword123@localhost:57017/files?authSource=admin" --collection=files_metadata --out=/mnt/c/dev/files.json`
+                Example: `mongoexport --uri="mongodb://root:RootPassword123@localhost:57017/files?authSource=admin" --collection=files_metadata --out=/mnt/c/dev/files.json`
 
 ## Perform the August SLE Upgrade
 
 Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade the FileIngestion chart. Complete the following steps to clean up resources that will no longer be needed after the upgrade.
-
 
 ### Removing old PVCs
 
@@ -49,9 +45,7 @@ Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade th
 
 ### Cleaning up the service [Optional]
 
-
-Complete the following steps to clean up resources Helm does not remove. 
-
+Complete the following steps to clean up resources Helm does not remove.
 
 1. Run `kubectl get services | grep fileingestion` (or `Select-String` in powershell) to list all the services attached to `fileingestion`
 1. Delete all services that contain `mongodb` in their name.
@@ -62,29 +56,25 @@ Complete the following steps to clean up resources Helm does not remove.
 
 **Note** In these steps we cannot use the service to connect to the database
 
-
 1. Run `kubectl exec -it <replica_name> -- mongo` to find the primary replica. The result will look similar to the following example: `rs0:PRIMARY>`.
-
 
         Example: `kubectl exec -it fileingestion-mongodb-0 -- mongo`
 
 1. Run `kubectl port-forward pods/fileingestion-mongodb-0 50000:27017` replacing the `0` with the index of the primary replica to port-forward the pod locally.
 
-
 ## Importing the database backup into the new MongoDB instance
 
 1. Run the following command to import the database contents.
 
-`mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
+        `mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
 
+    Where
 
-Where
--  `<root_user>` is the root user
-- `<root_password>` is the root password
-- `<path>` is the path on your local computer containing the backup
-- `<port>` is the port specified in the previous step.
+    - `<root_user>` is the root user
+    - `<root_password>` is the root password
+    - `<path>` is the path on your local computer containing the backup
+    - `<port>` is the port specified in the previous step.
 
-
-        Example: `mongoimport --uri="mongodb://admin:RootPassword123:50000/files?authSource=admin" --collection=files_metadata --file=/mnt/c/dev/files.json
+                Example: `mongoimport --uri="mongodb://admin:RootPassword123:50000/files?authSource=admin" --collection=files_metadata --file=/mnt/c/dev/files.json
 
 1. Log into your SLE instance and navigate to `/files`. If the migration was successful you will see the list of files ingested prior to the upgrade. If no files are listed the migration was unsuccessful.
