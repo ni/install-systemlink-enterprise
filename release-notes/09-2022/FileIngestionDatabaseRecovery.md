@@ -76,7 +76,12 @@ Complete the following steps to clean up resources Helm does not remove.
 `mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
 
 
-    **Note** `<root_user>` is should be replaced by the root user, `<root_password>` by the root password, `<path>` to the path on your local computer containing the backup, and `<port>` by the port specified on the previous step.
+Where
+-  `<root_user>` is the root user
+- `<root_password>` is the root password
+- `<path>` is the path on your local computer containing the backup
+- `<port>` is the port specified in the previous step.
+
 
         Example: `mongoimport --uri="mongodb://admin:RootPassword123:50000/files?authSource=admin" --collection=files_metadata --file=/mnt/c/dev/files.json
 
