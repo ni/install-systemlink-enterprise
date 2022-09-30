@@ -2,7 +2,7 @@
 
 The 09-2022 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts.
 
-**Note:**  If you are upgrading from the 07-2022 release or earlier. Complete the steps in [FileIngestionDatabaseRecovery.md](/FileIngestionDatabaseRecovery.md) to avoid losing file metadata.
+**Note:**  If you are upgrading from the 07-2022 release or earlier. Complete the steps in [FileIngestionDatabaseRecovery.md](FileIngestionDatabaseRecovery.md) to avoid losing file metadata.
 
 ## Behavior Changes
 
@@ -19,7 +19,7 @@ The 09-2022 release bundle for SystemLink Enterprise has been published to <http
 
 ## Software Bill of Materials
 
-[SLE-SBOM-09-29-2022](/SLE-SBOM-09-29-2022). SPDX, JSON, and CDX formats of the SBOM are available.
+[SLE-SBOM-09-29-2022](SLE-SBOM-09-29-2022). SPDX, JSON, and CDX formats of the SBOM are available.
 
 ## Versions
 
