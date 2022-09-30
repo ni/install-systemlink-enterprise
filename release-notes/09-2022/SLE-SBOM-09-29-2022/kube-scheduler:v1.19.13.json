@@ -1,0 +1,130 @@
+{
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"creationInfo": {
+		"created": "2022-09-29T20:59:41.864122Z",
+		"creators": [
+			"Tool: trivy",
+			"Organization: aquasecurity"
+		]
+	},
+	"dataLicense": "CC0-1.0",
+	"documentNamespace": "http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13-049b17c5-7bde-40b7-82cf-6fa5f7707dd1",
+	"name": "niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13",
+	"packages": [
+		{
+			"SPDXID": "SPDXRef-ContainerImage-11304a6cc260b98d",
+			"attributionTexts": [
+				"SchemaVersion: 2",
+				"ImageID: sha256:35036a0cd23a85559f3b6662bd6c608c09e9496ce1c041838457999168ab76c7",
+				"RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be",
+				"DiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb",
+				"DiffID: sha256:825221c7273a634aea2f82cc040134a0aa363bb7a5b2049e7fbfde935791260b",
+				"DiffID: sha256:3022be91a6d8c6cc9a0bcaceff4f5007e1efb5da8cbba9b673b9460dc4509f17",
+				"RepoTag: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:oci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fkube-scheduler\u0026arch=amd64",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"name": "niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13"
+		},
+		{
+			"SPDXID": "SPDXRef-OperatingSystem-97379df6dfc11561",
+			"filesAnalyzed": false,
+			"name": "debian",
+			"versionInfo": "10.10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-1d600828c56dcad9",
+			"attributionTexts": [
+				"LayerDigest: sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2",
+				"LayerDiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:deb/debian/base-files@10.3+deb10u10?distro=debian-10.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-3.0",
+			"licenseDeclared": "GPL-3.0",
+			"name": "base-files",
+			"sourceInfo": "built package from: base-files 10.3+deb10u10",
+			"versionInfo": "10.3+deb10u10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7869cfb5c94669e4",
+			"attributionTexts": [
+				"LayerDigest: sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2",
+				"LayerDiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:deb/debian/tzdata@2021a-0+deb10u1?distro=debian-10.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "tzdata",
+			"sourceInfo": "built package from: tzdata 2021a-0+deb10u1",
+			"versionInfo": "2021a-0+deb10u1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-84ead713f142070d",
+			"attributionTexts": [
+				"LayerDigest: sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2",
+				"LayerDiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:deb/debian/netbase@5.6?distro=debian-10.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "netbase",
+			"sourceInfo": "built package from: netbase 5.6",
+			"versionInfo": "5.6"
+		}
+	],
+	"relationships": [
+		{
+			"relatedSpdxElement": "SPDXRef-ContainerImage-11304a6cc260b98d",
+			"relationshipType": "DESCRIBE",
+			"spdxElementId": "SPDXRef-DOCUMENT"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-OperatingSystem-97379df6dfc11561",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-ContainerImage-11304a6cc260b98d"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-1d600828c56dcad9",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-97379df6dfc11561"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-84ead713f142070d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-97379df6dfc11561"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7869cfb5c94669e4",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-97379df6dfc11561"
+		}
+	],
+	"spdxVersion": "SPDX-2.2"
+}

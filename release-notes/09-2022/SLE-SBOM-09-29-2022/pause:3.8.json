@@ -1,0 +1,45 @@
+{
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"creationInfo": {
+		"created": "2022-09-29T21:00:17.567583Z",
+		"creators": [
+			"Tool: trivy",
+			"Organization: aquasecurity"
+		]
+	},
+	"dataLicense": "CC0-1.0",
+	"documentDescribes": [
+		"SPDXRef-ContainerImage-96640fcb157cc1c2"
+	],
+	"documentNamespace": "http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/pause:3.8-5d9faa70-89e0-44b4-abe6-9eb56c832134",
+	"name": "niartifacts.jfrog.io/rnd-docker-ci/pause:3.8",
+	"packages": [
+		{
+			"SPDXID": "SPDXRef-ContainerImage-96640fcb157cc1c2",
+			"attributionTexts": [
+				"SchemaVersion: 2",
+				"ImageID: sha256:4873874c08efc72e9729683a83ffbb7502ee729e9a5ac097723806ea7fa13517",
+				"RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d",
+				"DiffID: sha256:961e93cda9dd918dbe26aca24cccd6c5db05176850d2c53476d881df5d0d4816",
+				"RepoTag: niartifacts.jfrog.io/rnd-docker-ci/pause:3.8"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:oci/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fpause\u0026arch=amd64",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"name": "niartifacts.jfrog.io/rnd-docker-ci/pause:3.8"
+		}
+	],
+	"relationships": [
+		{
+			"relatedSpdxElement": "SPDXRef-ContainerImage-96640fcb157cc1c2",
+			"relationshipType": "DESCRIBE",
+			"spdxElementId": "SPDXRef-DOCUMENT"
+		}
+	],
+	"spdxVersion": "SPDX-2.2"
+}

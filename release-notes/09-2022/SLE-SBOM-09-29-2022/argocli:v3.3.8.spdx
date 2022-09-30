@@ -1,0 +1,1896 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/argoproj/argocli:v3.3.8
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/argoproj/argocli:v3.3.8-a44fa430-a052-40a4-b7ac-dadc1a6c9c43
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:24.422405Z
+
+##### Package: gobinary
+
+PackageName: gobinary
+SPDXID: SPDXRef-Application-71a65e4907ab2f38
+FilesAnalyzed: false
+PackageSourceInfo: bin/argo
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/argoproj/argocli:v3.3.8
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/argoproj/argocli:v3.3.8
+SPDXID: SPDXRef-ContainerImage-35289f38fb559ea3
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/argocli@sha256:41891b95aca23018ba65b320ff3ce10a98ee3cb39261f02fd74867c68414e814?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fargoproj%2Fargocli&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:164db2618c02555da834fe4893b2922dba49f830ff886a4084ad515a2365a19e
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/argoproj/argocli@sha256:41891b95aca23018ba65b320ff3ce10a98ee3cb39261f02fd74867c68414e814
+PackageAttributionText: DiffID: sha256:58139121858c37a372f13eba0fb219319b3171fb43e637de0476328f10c69227
+PackageAttributionText: DiffID: sha256:be31b5f5b3b1cdccf2ef6c82c5a8e2f23655fa06a1e092083102d64b67b56775
+PackageAttributionText: DiffID: sha256:fcd3f2b7f533db76ff1af3a95dd7726d53c6e9e55efec90131641cd53967828c
+PackageAttributionText: DiffID: sha256:ca83574501d7b93098e25ab3c8f485c51aaf7b581c7de425124258cb5a0195a5
+PackageAttributionText: DiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/argoproj/argocli:v3.3.8
+
+##### Package: github.com/josharian/intern
+
+PackageName: github.com/josharian/intern
+SPDXID: SPDXRef-Package-117d4476cc8944bc
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/josharian/intern@v1.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/prometheus/client_model
+
+PackageName: github.com/prometheus/client_model
+SPDXID: SPDXRef-Package-1235a8d269e7e158
+PackageVersion: v0.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/prometheus/client_model@v0.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/beorn7/perks
+
+PackageName: github.com/beorn7/perks
+SPDXID: SPDXRef-Package-1836b73d1c1f67d0
+PackageVersion: v1.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/beorn7/perks@v1.0.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Masterminds/sprig/v3
+
+PackageName: github.com/Masterminds/sprig/v3
+SPDXID: SPDXRef-Package-190e82dc6d81b841
+PackageVersion: v3.2.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/masterminds/sprig/v3@v3.2.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/prometheus/common
+
+PackageName: github.com/prometheus/common
+SPDXID: SPDXRef-Package-1ea63dc1e9283126
+PackageVersion: v0.32.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/prometheus/common@v0.32.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-logr/logr
+
+PackageName: github.com/go-logr/logr
+SPDXID: SPDXRef-Package-1f11378e121eaf94
+PackageVersion: v1.2.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-logr/logr@v1.2.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Azure/go-autorest/logger
+
+PackageName: github.com/Azure/go-autorest/logger
+SPDXID: SPDXRef-Package-208bba1739aa97a5
+PackageVersion: v0.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/azure/go-autorest/logger@v0.2.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/moby/spdystream
+
+PackageName: github.com/moby/spdystream
+SPDXID: SPDXRef-Package-2117e8c44dd3d2de
+PackageVersion: v0.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/moby/spdystream@v0.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/robfig/cron/v3
+
+PackageName: github.com/robfig/cron/v3
+SPDXID: SPDXRef-Package-243719939e12f87f
+PackageVersion: v3.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/robfig/cron/v3@v3.0.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/xanzy/ssh-agent
+
+PackageName: github.com/xanzy/ssh-agent
+SPDXID: SPDXRef-Package-27421eaa3c39c24e
+PackageVersion: v0.3.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/xanzy/ssh-agent@v0.3.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/dustin/go-humanize
+
+PackageName: github.com/dustin/go-humanize
+SPDXID: SPDXRef-Package-275a30cf16bb9ac3
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/dustin/go-humanize@v1.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/magiconair/properties
+
+PackageName: github.com/magiconair/properties
+SPDXID: SPDXRef-Package-2aa4ef63be86668b
+PackageVersion: v1.8.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/magiconair/properties@v1.8.5
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/google/gofuzz
+
+PackageName: github.com/google/gofuzz
+SPDXID: SPDXRef-Package-2b22ebd2a2ff6f38
+PackageVersion: v1.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/google/gofuzz@v1.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/googleapis/gnostic
+
+PackageName: github.com/googleapis/gnostic
+SPDXID: SPDXRef-Package-2f819a492db5056e
+PackageVersion: v0.5.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/googleapis/gnostic@v0.5.5
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: cloud.google.com/go
+
+PackageName: cloud.google.com/go
+SPDXID: SPDXRef-Package-31b4f370a47fde0f
+PackageVersion: v0.100.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/cloud.google.com/go@v0.100.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/jbenet/go-context
+
+PackageName: github.com/jbenet/go-context
+SPDXID: SPDXRef-Package-345bf6d65b6e3667
+PackageVersion: v0.0.0-20150711004518-d14ea06fba99
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jbenet/go-context@v0.0.0-20150711004518-d14ea06fba99
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/jcmturner/rpc.v0
+
+PackageName: gopkg.in/jcmturner/rpc.v0
+SPDXID: SPDXRef-Package-368e8af4de87a838
+PackageVersion: v0.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/jcmturner/rpc.v0@v0.0.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/hashicorp/go-uuid
+
+PackageName: github.com/hashicorp/go-uuid
+SPDXID: SPDXRef-Package-3732ad6c2f53ce25
+PackageVersion: v1.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/hashicorp/go-uuid@v1.0.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/subosito/gotenv
+
+PackageName: github.com/subosito/gotenv
+SPDXID: SPDXRef-Package-3786cf252e86cedc
+PackageVersion: v1.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/subosito/gotenv@v1.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/sirupsen/logrus
+
+PackageName: github.com/sirupsen/logrus
+SPDXID: SPDXRef-Package-3814a01ad37c87eb
+PackageVersion: v1.8.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/sirupsen/logrus@v1.8.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/grpc-ecosystem/grpc-gateway
+
+PackageName: github.com/grpc-ecosystem/grpc-gateway
+SPDXID: SPDXRef-Package-39f77215ca0655d2
+PackageVersion: v1.16.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/grpc-ecosystem/grpc-gateway@v1.16.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: sigs.k8s.io/yaml
+
+PackageName: sigs.k8s.io/yaml
+SPDXID: SPDXRef-Package-3ab8cc1363a10f2f
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/sigs.k8s.io/yaml@v1.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: cloud.google.com/go/compute
+
+PackageName: cloud.google.com/go/compute
+SPDXID: SPDXRef-Package-3ac41dc7433ccd4c
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/cloud.google.com/go/compute@v1.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-git/go-billy/v5
+
+PackageName: github.com/go-git/go-billy/v5
+SPDXID: SPDXRef-Package-3f66e07993b440e1
+PackageVersion: v5.3.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-git/go-billy/v5@v5.3.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/prometheus/procfs
+
+PackageName: github.com/prometheus/procfs
+SPDXID: SPDXRef-Package-4216a94be4ec081f
+PackageVersion: v0.7.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/prometheus/procfs@v0.7.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/antonmedv/expr
+
+PackageName: github.com/antonmedv/expr
+SPDXID: SPDXRef-Package-45a9e8367ffadd02
+PackageVersion: v1.9.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/antonmedv/expr@v1.9.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/sergi/go-diff
+
+PackageName: github.com/sergi/go-diff
+SPDXID: SPDXRef-Package-4659ea5274860b2f
+PackageVersion: v1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/sergi/go-diff@v1.1.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: cloud.google.com/go/storage
+
+PackageName: cloud.google.com/go/storage
+SPDXID: SPDXRef-Package-4f2e7540c1808bed
+PackageVersion: v1.20.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/cloud.google.com/go/storage@v1.20.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/time
+
+PackageName: golang.org/x/time
+SPDXID: SPDXRef-Package-4f4c8b5c878bd5f8
+PackageVersion: v0.0.0-20220210224613-90d013bbcef8
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/time@v0.0.0-20220210224613-90d013bbcef8
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/coreos/go-oidc/v3
+
+PackageName: github.com/coreos/go-oidc/v3
+SPDXID: SPDXRef-Package-53ed5260765aceb0
+PackageVersion: v3.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/coreos/go-oidc/v3@v3.1.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/klauspost/pgzip
+
+PackageName: github.com/klauspost/pgzip
+SPDXID: SPDXRef-Package-540c323043d05cdd
+PackageVersion: v1.2.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/klauspost/pgzip@v1.2.5
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/minio/sha256-simd
+
+PackageName: github.com/minio/sha256-simd
+SPDXID: SPDXRef-Package-5584b62c590e8a78
+PackageVersion: v0.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/minio/sha256-simd@v0.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: k8s.io/client-go
+
+PackageName: k8s.io/client-go
+SPDXID: SPDXRef-Package-56eaf62caa9e6422
+PackageVersion: v0.23.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/k8s.io/client-go@v0.23.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-openapi/jsonreference
+
+PackageName: github.com/go-openapi/jsonreference
+SPDXID: SPDXRef-Package-5890e6716d4b4505
+PackageVersion: v0.19.6
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-openapi/jsonreference@v0.19.6
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/soheilhy/cmux
+
+PackageName: github.com/soheilhy/cmux
+SPDXID: SPDXRef-Package-5a9df374743989f9
+PackageVersion: v0.1.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/soheilhy/cmux@v0.1.5
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/yaml.v3
+
+PackageName: gopkg.in/yaml.v3
+SPDXID: SPDXRef-Package-5ad8a591cee5219c
+PackageVersion: v3.0.0-20210107192922-496545a6307b
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/spf13/cobra
+
+PackageName: github.com/spf13/cobra
+SPDXID: SPDXRef-Package-5cf4fd93a869addc
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/cobra@v1.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/matttproud/golang_protobuf_extensions
+
+PackageName: github.com/matttproud/golang_protobuf_extensions
+SPDXID: SPDXRef-Package-5e308b05c9120505
+PackageVersion: v1.0.2-0.20181231171920-c182affec369
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/matttproud/golang_protobuf_extensions@v1.0.2-0.20181231171920-c182affec369
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/rs/xid
+
+PackageName: github.com/rs/xid
+SPDXID: SPDXRef-Package-5f32038825bbd28d
+PackageVersion: v1.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/rs/xid@v1.2.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/term
+
+PackageName: golang.org/x/term
+SPDXID: SPDXRef-Package-603c282c7258d955
+PackageVersion: v0.0.0-20210927222741-03fcf44c2211
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/term@v0.0.0-20210927222741-03fcf44c2211
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/pelletier/go-toml
+
+PackageName: github.com/pelletier/go-toml
+SPDXID: SPDXRef-Package-60aa305887f3cc41
+PackageVersion: v1.9.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/pelletier/go-toml@v1.9.4
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: google.golang.org/grpc
+
+PackageName: google.golang.org/grpc
+SPDXID: SPDXRef-Package-613810606502ed33
+PackageVersion: v1.44.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/google.golang.org/grpc@v1.44.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/xerrors
+
+PackageName: golang.org/x/xerrors
+SPDXID: SPDXRef-Package-637418987af56537
+PackageVersion: v0.0.0-20200804184101-5ec99f83aff1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/xerrors@v0.0.0-20200804184101-5ec99f83aff1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/square/go-jose.v2
+
+PackageName: gopkg.in/square/go-jose.v2
+SPDXID: SPDXRef-Package-63e12ca2d36fc870
+PackageVersion: v2.6.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/square/go-jose.v2@v2.6.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/prometheus/client_golang
+
+PackageName: github.com/prometheus/client_golang
+SPDXID: SPDXRef-Package-642b90229eb2cfca
+PackageVersion: v1.12.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/prometheus/client_golang@v1.12.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/json-iterator/go
+
+PackageName: github.com/json-iterator/go
+SPDXID: SPDXRef-Package-66095dc9d1150ca2
+PackageVersion: v1.1.12
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/json-iterator/go@v1.1.12
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/pkg/errors
+
+PackageName: github.com/pkg/errors
+SPDXID: SPDXRef-Package-67d997523c2c777b
+PackageVersion: v0.9.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/pkg/errors@v0.9.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-jose/go-jose/v3
+
+PackageName: github.com/go-jose/go-jose/v3
+SPDXID: SPDXRef-Package-6a4f633861805157
+PackageVersion: v3.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-jose/go-jose/v3@v3.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-openapi/jsonpointer
+
+PackageName: github.com/go-openapi/jsonpointer
+SPDXID: SPDXRef-Package-6a55a97920077655
+PackageVersion: v0.19.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/modern-go/reflect2
+
+PackageName: github.com/modern-go/reflect2
+SPDXID: SPDXRef-Package-6b0b6df229e6e84e
+PackageVersion: v1.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/modern-go/reflect2@v1.0.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/mitchellh/mapstructure
+
+PackageName: github.com/mitchellh/mapstructure
+SPDXID: SPDXRef-Package-6c33063d89c3d071
+PackageVersion: v1.4.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mitchellh/mapstructure@v1.4.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/emirpasic/gods
+
+PackageName: github.com/emirpasic/gods
+SPDXID: SPDXRef-Package-6cbd637977d16933
+PackageVersion: v1.12.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/emirpasic/gods@v1.12.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/klauspost/cpuid
+
+PackageName: github.com/klauspost/cpuid
+SPDXID: SPDXRef-Package-6cd8862c6ec70203
+PackageVersion: v1.3.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/klauspost/cpuid@v1.3.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Azure/go-autorest/autorest/date
+
+PackageName: github.com/Azure/go-autorest/autorest/date
+SPDXID: SPDXRef-Package-6d453591bd1bdf8c
+PackageVersion: v0.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/azure/go-autorest/autorest/date@v0.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/net
+
+PackageName: golang.org/x/net
+SPDXID: SPDXRef-Package-70d8bfd829100ff2
+PackageVersion: v0.0.0-20220127200216-cd36cc0744dd
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/emicklei/go-restful
+
+PackageName: github.com/emicklei/go-restful
+SPDXID: SPDXRef-Package-7385e25b48d064fa
+PackageVersion: v2.15.0+incompatible
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/emicklei/go-restful@v2.15.0+incompatible
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/form3tech-oss/jwt-go
+
+PackageName: github.com/form3tech-oss/jwt-go
+SPDXID: SPDXRef-Package-75d295fd0bb26c9f
+PackageVersion: v3.2.3+incompatible
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/form3tech-oss/jwt-go@v3.2.3+incompatible
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/argoproj/argo-events
+
+PackageName: github.com/argoproj/argo-events
+SPDXID: SPDXRef-Package-7a7f43c9a1f92d82
+PackageVersion: v0.17.1-0.20220223155401-ddda8800f9f8
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/argoproj/argo-events@v0.17.1-0.20220223155401-ddda8800f9f8
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/google/go-cmp
+
+PackageName: github.com/google/go-cmp
+SPDXID: SPDXRef-Package-7b655665c75678ff
+PackageVersion: v0.5.7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/google/go-cmp@v0.5.7
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: k8s.io/kube-openapi
+
+PackageName: k8s.io/kube-openapi
+SPDXID: SPDXRef-Package-7bd2de0ec0460210
+PackageVersion: v0.0.0-20220124234850-424119656bbf
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/k8s.io/kube-openapi@v0.0.0-20220124234850-424119656bbf
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/minio/md5-simd
+
+PackageName: github.com/minio/md5-simd
+SPDXID: SPDXRef-Package-7d0646483dec2d7a
+PackageVersion: v1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/minio/md5-simd@v1.1.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/jcmturner/dnsutils.v1
+
+PackageName: gopkg.in/jcmturner/dnsutils.v1
+SPDXID: SPDXRef-Package-7d1bb0dbd493553
+PackageVersion: v1.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/jcmturner/dnsutils.v1@v1.0.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: google.golang.org/api
+
+PackageName: google.golang.org/api
+SPDXID: SPDXRef-Package-7d2043f5717ef420
+PackageVersion: v0.70.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/google.golang.org/api@v0.70.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: k8s.io/klog/v2
+
+PackageName: k8s.io/klog/v2
+SPDXID: SPDXRef-Package-7d85fbd85d437e39
+PackageVersion: v2.40.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/k8s.io/klog/v2@v2.40.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/shopspring/decimal
+
+PackageName: github.com/shopspring/decimal
+SPDXID: SPDXRef-Package-7d9aa3be4e1f7902
+PackageVersion: v1.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/shopspring/decimal@v1.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/PuerkitoBio/purell
+
+PackageName: github.com/PuerkitoBio/purell
+SPDXID: SPDXRef-Package-815feb0ad4d284ac
+PackageVersion: v1.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/puerkitobio/purell@v1.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: k8s.io/utils
+
+PackageName: k8s.io/utils
+SPDXID: SPDXRef-Package-81714b18f4e30718
+PackageVersion: v0.0.0-20220210201930-3a6ce19ff2f9
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/k8s.io/utils@v0.0.0-20220210201930-3a6ce19ff2f9
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/davecgh/go-spew
+
+PackageName: github.com/davecgh/go-spew
+SPDXID: SPDXRef-Package-84162b909581e504
+PackageVersion: v1.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/davecgh/go-spew@v1.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/aws/aws-sdk-go
+
+PackageName: github.com/aws/aws-sdk-go
+SPDXID: SPDXRef-Package-846a087105667b1d
+PackageVersion: v1.42.50
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/aws/aws-sdk-go@v1.42.50
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/argoproj-labs/argo-dataflow
+
+PackageName: github.com/argoproj-labs/argo-dataflow
+SPDXID: SPDXRef-Package-858303afa783a6af
+PackageVersion: v0.10.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/argoproj-labs/argo-dataflow@v0.10.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-sql-driver/mysql
+
+PackageName: github.com/go-sql-driver/mysql
+SPDXID: SPDXRef-Package-864cbdf8e376e8ac
+PackageVersion: v1.6.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-sql-driver/mysql@v1.6.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/aliyun/aliyun-oss-go-sdk
+
+PackageName: github.com/aliyun/aliyun-oss-go-sdk
+SPDXID: SPDXRef-Package-87427da944ce4dff
+PackageVersion: v2.2.1+incompatible
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/aliyun/aliyun-oss-go-sdk@v2.2.1+incompatible
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/PuerkitoBio/urlesc
+
+PackageName: github.com/PuerkitoBio/urlesc
+SPDXID: SPDXRef-Package-8872460f67ef0e3b
+PackageVersion: v0.0.0-20170810143723-de5bf2ad4578
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/puerkitobio/urlesc@v0.0.0-20170810143723-de5bf2ad4578
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/jcmturner/gofork
+
+PackageName: github.com/jcmturner/gofork
+SPDXID: SPDXRef-Package-8bebe4755b9a5a7c
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jcmturner/gofork@v1.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: sigs.k8s.io/controller-runtime
+
+PackageName: sigs.k8s.io/controller-runtime
+SPDXID: SPDXRef-Package-8e4d811c20a31f07
+PackageVersion: v0.11.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/sigs.k8s.io/controller-runtime@v0.11.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: cloud.google.com/go/iam
+
+PackageName: cloud.google.com/go/iam
+SPDXID: SPDXRef-Package-90bd8d00a56aedba
+PackageVersion: v0.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/cloud.google.com/go/iam@v0.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/felixge/httpsnoop
+
+PackageName: github.com/felixge/httpsnoop
+SPDXID: SPDXRef-Package-91aee9c1628afbd7
+PackageVersion: v1.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/felixge/httpsnoop@v1.0.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: sigs.k8s.io/structured-merge-diff/v4
+
+PackageName: sigs.k8s.io/structured-merge-diff/v4
+SPDXID: SPDXRef-Package-91cca3cadb1d0a82
+PackageVersion: v4.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.2.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/mailru/easyjson
+
+PackageName: github.com/mailru/easyjson
+SPDXID: SPDXRef-Package-93778c70496c6708
+PackageVersion: v0.7.7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mailru/easyjson@v0.7.7
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/imdario/mergo
+
+PackageName: github.com/imdario/mergo
+SPDXID: SPDXRef-Package-95ec645d2def4d7b
+PackageVersion: v0.3.12
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/imdario/mergo@v0.3.12
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/spf13/pflag
+
+PackageName: github.com/spf13/pflag
+SPDXID: SPDXRef-Package-9b60f1c3f7234e69
+PackageVersion: v1.0.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/pflag@v1.0.5
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: k8s.io/apimachinery
+
+PackageName: k8s.io/apimachinery
+SPDXID: SPDXRef-Package-9cf346a1d07ab7f7
+PackageVersion: v0.23.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/k8s.io/apimachinery@v0.23.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: google.golang.org/genproto
+
+PackageName: google.golang.org/genproto
+SPDXID: SPDXRef-Package-a079ad65ff7da4c6
+PackageVersion: v0.0.0-20220218161850-94dd64e39d7c
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/google.golang.org/genproto@v0.0.0-20220218161850-94dd64e39d7c
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/jcmturner/gokrb5.v5
+
+PackageName: gopkg.in/jcmturner/gokrb5.v5
+SPDXID: SPDXRef-Package-a1577ff62d5149fa
+PackageVersion: v5.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/jcmturner/gokrb5.v5@v5.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Azure/go-autorest/autorest
+
+PackageName: github.com/Azure/go-autorest/autorest
+SPDXID: SPDXRef-Package-a29b80715ae5fc6d
+PackageVersion: v0.11.18
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/azure/go-autorest/autorest@v0.11.18
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/sys
+
+PackageName: golang.org/x/sys
+SPDXID: SPDXRef-Package-a391ff0b1228b0f0
+PackageVersion: v0.0.0-20220209214540-3681064d5158
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/sys@v0.0.0-20220209214540-3681064d5158
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/valyala/fasttemplate
+
+PackageName: github.com/valyala/fasttemplate
+SPDXID: SPDXRef-Package-a39a66917f19cff9
+PackageVersion: v1.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/valyala/fasttemplate@v1.2.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/gorilla/handlers
+
+PackageName: github.com/gorilla/handlers
+SPDXID: SPDXRef-Package-a5a8c61404d9531
+PackageVersion: v1.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/gorilla/handlers@v1.5.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: upper.io/db.v3
+
+PackageName: upper.io/db.v3
+SPDXID: SPDXRef-Package-a760a7bfdb959407
+PackageVersion: v3.8.0+incompatible
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/upper.io/db.v3@v3.8.0+incompatible
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/TwinProduction/go-color
+
+PackageName: github.com/TwinProduction/go-color
+SPDXID: SPDXRef-Package-a768890df751d7ca
+PackageVersion: v0.0.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/twinproduction/go-color@v0.0.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-git/gcfg
+
+PackageName: github.com/go-git/gcfg
+SPDXID: SPDXRef-Package-a86fe85aee6b28ab
+PackageVersion: v1.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-git/gcfg@v1.5.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: google.golang.org/protobuf
+
+PackageName: google.golang.org/protobuf
+SPDXID: SPDXRef-Package-a9967db92451ac48
+PackageVersion: v1.27.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/google.golang.org/protobuf@v1.27.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/grpc-ecosystem/go-grpc-middleware
+
+PackageName: github.com/grpc-ecosystem/go-grpc-middleware
+SPDXID: SPDXRef-Package-ab2649e52da028a6
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/inf.v0
+
+PackageName: gopkg.in/inf.v0
+SPDXID: SPDXRef-Package-adb1aaee544d2e1d
+PackageVersion: v0.9.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/inf.v0@v0.9.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/golang/protobuf
+
+PackageName: github.com/golang/protobuf
+SPDXID: SPDXRef-Package-b0834102cea5a6c4
+PackageVersion: v1.5.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/golang/protobuf@v1.5.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/valyala/bytebufferpool
+
+PackageName: github.com/valyala/bytebufferpool
+SPDXID: SPDXRef-Package-b222ecd0d5dde249
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/valyala/bytebufferpool@v1.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/jcmturner/aescts.v1
+
+PackageName: gopkg.in/jcmturner/aescts.v1
+SPDXID: SPDXRef-Package-b35b935d88fa1277
+PackageVersion: v1.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/jcmturner/aescts.v1@v1.0.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/ProtonMail/go-crypto
+
+PackageName: github.com/ProtonMail/go-crypto
+SPDXID: SPDXRef-Package-b66862aa911be009
+PackageVersion: v0.0.0-20210428141323-04723f9f07d7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/protonmail/go-crypto@v0.0.0-20210428141323-04723f9f07d7
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/modern-go/concurrent
+
+PackageName: github.com/modern-go/concurrent
+SPDXID: SPDXRef-Package-b7022619f9b6e03b
+PackageVersion: v0.0.0-20180306012644-bacd9c7ef1dd
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/cespare/xxhash/v2
+
+PackageName: github.com/cespare/xxhash/v2
+SPDXID: SPDXRef-Package-b7cf88fdcf12d648
+PackageVersion: v2.1.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/cespare/xxhash/v2@v2.1.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/oliveagle/jsonpath
+
+PackageName: github.com/oliveagle/jsonpath
+SPDXID: SPDXRef-Package-bb949aa8b95c0b1
+PackageVersion: v0.0.0-20180606110733-2e52cf6e6852
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/oliveagle/jsonpath@v0.0.0-20180606110733-2e52cf6e6852
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/mitchellh/reflectwalk
+
+PackageName: github.com/mitchellh/reflectwalk
+SPDXID: SPDXRef-Package-bbac6176f59e276c
+PackageVersion: v1.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mitchellh/reflectwalk@v1.0.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/klauspost/compress
+
+PackageName: github.com/klauspost/compress
+SPDXID: SPDXRef-Package-bbf559c5eac9a6bb
+PackageVersion: v1.14.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/klauspost/compress@v1.14.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/yaml.v2
+
+PackageName: gopkg.in/yaml.v2
+SPDXID: SPDXRef-Package-bc95cfb3fa60e369
+PackageVersion: v2.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/yaml.v2@v2.4.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/whilp/git-urls
+
+PackageName: github.com/whilp/git-urls
+SPDXID: SPDXRef-Package-bd046b53b593543f
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/whilp/git-urls@v1.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/warnings.v0
+
+PackageName: gopkg.in/warnings.v0
+SPDXID: SPDXRef-Package-be7fc1c30030f4
+PackageVersion: v0.1.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/warnings.v0@v0.1.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: go.opencensus.io
+
+PackageName: go.opencensus.io
+SPDXID: SPDXRef-Package-c3d0d4c053d59da2
+PackageVersion: v0.23.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/go.opencensus.io@v0.23.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/skratchdot/open-golang
+
+PackageName: github.com/skratchdot/open-golang
+SPDXID: SPDXRef-Package-c5f62b43bd660d1f
+PackageVersion: v0.0.0-20200116055534-eef842397966
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/skratchdot/open-golang@v0.0.0-20200116055534-eef842397966
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/go-openapi/swag
+
+PackageName: github.com/go-openapi/swag
+SPDXID: SPDXRef-Package-c6733ac9421f1233
+PackageVersion: v0.19.15
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/go-openapi/swag@v0.19.15
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/crypto
+
+PackageName: golang.org/x/crypto
+SPDXID: SPDXRef-Package-c6f0f561cef28ea3
+PackageVersion: v0.0.0-20220128200615-198e4374d7ed
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/crypto@v0.0.0-20220128200615-198e4374d7ed
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/oauth2
+
+PackageName: golang.org/x/oauth2
+SPDXID: SPDXRef-Package-c7c2d0be36b1231f
+PackageVersion: v0.0.0-20211104180415-d3ed0bb246c8
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/oauth2@v0.0.0-20211104180415-d3ed0bb246c8
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/google/uuid
+
+PackageName: github.com/google/uuid
+SPDXID: SPDXRef-Package-c9acd7dac3625464
+PackageVersion: v1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/google/uuid@v1.3.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Masterminds/goutils
+
+PackageName: github.com/Masterminds/goutils
+SPDXID: SPDXRef-Package-cafbd56309cf0f6f
+PackageVersion: v1.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/masterminds/goutils@v1.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/kevinburke/ssh_config
+
+PackageName: github.com/kevinburke/ssh_config
+SPDXID: SPDXRef-Package-ce32f29ed09cd622
+PackageVersion: v0.0.0-20201106050909-4977a11b4351
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/kevinburke/ssh_config@v0.0.0-20201106050909-4977a11b4351
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/doublerebel/bellows
+
+PackageName: github.com/doublerebel/bellows
+SPDXID: SPDXRef-Package-cf27774070cc92b9
+PackageVersion: v0.0.0-20160303004610-f177d92a03d3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/doublerebel/bellows@v0.0.0-20160303004610-f177d92a03d3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/argoproj/pkg
+
+PackageName: github.com/argoproj/pkg
+SPDXID: SPDXRef-Package-d166c744d27e3825
+PackageVersion: v0.11.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/argoproj/pkg@v0.11.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/hashicorp/hcl
+
+PackageName: github.com/hashicorp/hcl
+SPDXID: SPDXRef-Package-d185b1d2273af141
+PackageVersion: v1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/hashicorp/hcl@v1.0.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/jmespath/go-jmespath
+
+PackageName: github.com/jmespath/go-jmespath
+SPDXID: SPDXRef-Package-d285e77cc26b23af
+PackageVersion: v0.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/jmespath/go-jmespath@v0.4.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Azure/go-autorest/autorest/adal
+
+PackageName: github.com/Azure/go-autorest/autorest/adal
+SPDXID: SPDXRef-Package-d38759dcd702c8dc
+PackageVersion: v0.9.13
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/azure/go-autorest/autorest/adal@v0.9.13
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/argoproj-labs/go-git/v5
+
+PackageName: github.com/argoproj-labs/go-git/v5
+SPDXID: SPDXRef-Package-d4cb604be035c6d2
+PackageVersion: v5.4.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/argoproj-labs/go-git/v5@v5.4.4
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/go-playground/webhooks.v5
+
+PackageName: gopkg.in/go-playground/webhooks.v5
+SPDXID: SPDXRef-Package-d76287786a10b9d8
+PackageVersion: v5.17.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/go-playground/webhooks.v5@v5.17.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/lib/pq
+
+PackageName: github.com/lib/pq
+SPDXID: SPDXRef-Package-d79e3189bbc253d
+PackageVersion: v1.10.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/lib/pq@v1.10.4
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/spf13/afero
+
+PackageName: github.com/spf13/afero
+SPDXID: SPDXRef-Package-db62ad848236b4e8
+PackageVersion: v1.8.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/afero@v1.8.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/mitchellh/go-homedir
+
+PackageName: github.com/mitchellh/go-homedir
+SPDXID: SPDXRef-Package-e0e1d3764ec78492
+PackageVersion: v1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mitchellh/go-homedir@v1.1.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: sigs.k8s.io/json
+
+PackageName: sigs.k8s.io/json
+SPDXID: SPDXRef-Package-e20ec87fc500fd77
+PackageVersion: v0.0.0-20211208200746-9f7c6b3444d2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/sigs.k8s.io/json@v0.0.0-20211208200746-9f7c6b3444d2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/spf13/viper
+
+PackageName: github.com/spf13/viper
+SPDXID: SPDXRef-Package-e3e9485bc909b359
+PackageVersion: v1.10.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/viper@v1.10.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: golang.org/x/text
+
+PackageName: golang.org/x/text
+SPDXID: SPDXRef-Package-e4c727548af389b8
+PackageVersion: v0.3.7
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/golang.org/x/text@v0.3.7
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: k8s.io/api
+
+PackageName: k8s.io/api
+SPDXID: SPDXRef-Package-e5275aa82386993a
+PackageVersion: v0.23.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/k8s.io/api@v0.23.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/fsnotify/fsnotify
+
+PackageName: github.com/fsnotify/fsnotify
+SPDXID: SPDXRef-Package-e650f69aefdfdf71
+PackageVersion: v1.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/fsnotify/fsnotify@v1.5.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/spf13/jwalterweatherman
+
+PackageName: github.com/spf13/jwalterweatherman
+SPDXID: SPDXRef-Package-e9c5aae7e85d64a
+PackageVersion: v1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/jwalterweatherman@v1.1.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/golang/groupcache
+
+PackageName: github.com/golang/groupcache
+SPDXID: SPDXRef-Package-ea9067887fc9cb7f
+PackageVersion: v0.0.0-20210331224755-41bb18bfe9da
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/golang/groupcache@v0.0.0-20210331224755-41bb18bfe9da
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/grpc-ecosystem/go-grpc-prometheus
+
+PackageName: github.com/grpc-ecosystem/go-grpc-prometheus
+SPDXID: SPDXRef-Package-eb187bd86e20cba1
+PackageVersion: v1.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/grpc-ecosystem/go-grpc-prometheus@v1.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Azure/go-autorest/tracing
+
+PackageName: github.com/Azure/go-autorest/tracing
+SPDXID: SPDXRef-Package-efeef8313403254c
+PackageVersion: v0.6.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/azure/go-autorest/tracing@v0.6.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/spf13/cast
+
+PackageName: github.com/spf13/cast
+SPDXID: SPDXRef-Package-f2d4f9d31c45faaa
+PackageVersion: v1.4.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/spf13/cast@v1.4.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/colinmarc/hdfs
+
+PackageName: github.com/colinmarc/hdfs
+SPDXID: SPDXRef-Package-f341cb706c1b8e19
+PackageVersion: v1.1.4-0.20180805212432-9746310a4d31
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/colinmarc/hdfs@v1.1.4-0.20180805212432-9746310a4d31
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/googleapis/gax-go/v2
+
+PackageName: github.com/googleapis/gax-go/v2
+SPDXID: SPDXRef-Package-f421f00577d53304
+PackageVersion: v2.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/googleapis/gax-go/v2@v2.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/minio/minio-go/v7
+
+PackageName: github.com/minio/minio-go/v7
+SPDXID: SPDXRef-Package-f4382d3d6d376b21
+PackageVersion: v7.0.24
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/minio/minio-go/v7@v7.0.24
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/Masterminds/semver/v3
+
+PackageName: github.com/Masterminds/semver/v3
+SPDXID: SPDXRef-Package-f5d21ce48cb4a46c
+PackageVersion: v3.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/masterminds/semver/v3@v3.1.1
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/huandu/xstrings
+
+PackageName: github.com/huandu/xstrings
+SPDXID: SPDXRef-Package-f914cfc32eb43239
+PackageVersion: v1.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/huandu/xstrings@v1.3.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/gorilla/websocket
+
+PackageName: github.com/gorilla/websocket
+SPDXID: SPDXRef-Package-f9f9e3699266804f
+PackageVersion: v1.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/gorilla/websocket@v1.5.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/gogo/protobuf
+
+PackageName: github.com/gogo/protobuf
+SPDXID: SPDXRef-Package-fc15547d732d5afc
+PackageVersion: v1.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/gogo/protobuf@v1.3.2
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: gopkg.in/ini.v1
+
+PackageName: gopkg.in/ini.v1
+SPDXID: SPDXRef-Package-fe00c469da8fcc37
+PackageVersion: v1.66.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/gopkg.in/ini.v1@v1.66.3
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Package: github.com/mitchellh/copystructure
+
+PackageName: github.com/mitchellh/copystructure
+SPDXID: SPDXRef-Package-ff2270ac69841485
+PackageVersion: v1.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:golang/github.com/mitchellh/copystructure@v1.2.0
+PackageAttributionText: LayerDigest: sha256:1fd04101383161ecd622c46a956dccffcd1936774bae050d4b93fb484ea1a082
+PackageAttributionText: LayerDiffID: sha256:30e715f35225ef1507935fafd438290269f6cd389903da0a3a9a56bf64088a5a
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-35289f38fb559ea3
+Relationship: SPDXRef-ContainerImage-35289f38fb559ea3 CONTAINS SPDXRef-Application-71a65e4907ab2f38
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-31b4f370a47fde0f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-3ac41dc7433ccd4c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-90bd8d00a56aedba
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-4f2e7540c1808bed
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a29b80715ae5fc6d
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d38759dcd702c8dc
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6d453591bd1bdf8c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-208bba1739aa97a5
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-efeef8313403254c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-cafbd56309cf0f6f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f5d21ce48cb4a46c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-190e82dc6d81b841
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-b66862aa911be009
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-815feb0ad4d284ac
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-8872460f67ef0e3b
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a768890df751d7ca
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-87427da944ce4dff
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-45a9e8367ffadd02
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-858303afa783a6af
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d4cb604be035c6d2
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7a7f43c9a1f92d82
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d166c744d27e3825
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-846a087105667b1d
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-1836b73d1c1f67d0
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-b7cf88fdcf12d648
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f341cb706c1b8e19
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-53ed5260765aceb0
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-84162b909581e504
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-cf27774070cc92b9
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-275a30cf16bb9ac3
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7385e25b48d064fa
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6cbd637977d16933
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-91aee9c1628afbd7
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-75d295fd0bb26c9f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e650f69aefdfdf71
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a86fe85aee6b28ab
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-3f66e07993b440e1
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6a4f633861805157
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-1f11378e121eaf94
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6a55a97920077655
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5890e6716d4b4505
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-c6733ac9421f1233
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-864cbdf8e376e8ac
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-fc15547d732d5afc
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-ea9067887fc9cb7f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-b0834102cea5a6c4
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7b655665c75678ff
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-2b22ebd2a2ff6f38
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-c9acd7dac3625464
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f421f00577d53304
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-2f819a492db5056e
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a5a8c61404d9531
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f9f9e3699266804f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-ab2649e52da028a6
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-eb187bd86e20cba1
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-39f77215ca0655d2
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-3732ad6c2f53ce25
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d185b1d2273af141
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f914cfc32eb43239
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-95ec645d2def4d7b
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-345bf6d65b6e3667
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-8bebe4755b9a5a7c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d285e77cc26b23af
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-117d4476cc8944bc
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-66095dc9d1150ca2
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-ce32f29ed09cd622
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-bbf559c5eac9a6bb
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6cd8862c6ec70203
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-540c323043d05cdd
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d79e3189bbc253d
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-2aa4ef63be86668b
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-93778c70496c6708
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5e308b05c9120505
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7d0646483dec2d7a
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f4382d3d6d376b21
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5584b62c590e8a78
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-ff2270ac69841485
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e0e1d3764ec78492
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6c33063d89c3d071
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-bbac6176f59e276c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-2117e8c44dd3d2de
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-b7022619f9b6e03b
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-6b0b6df229e6e84e
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-bb949aa8b95c0b1
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-60aa305887f3cc41
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-67d997523c2c777b
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-642b90229eb2cfca
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-1235a8d269e7e158
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-1ea63dc1e9283126
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-4216a94be4ec081f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-243719939e12f87f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5f32038825bbd28d
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-4659ea5274860b2f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7d9aa3be4e1f7902
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-3814a01ad37c87eb
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-c5f62b43bd660d1f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5a9df374743989f9
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-db62ad848236b4e8
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-f2d4f9d31c45faaa
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5cf4fd93a869addc
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e9c5aae7e85d64a
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-9b60f1c3f7234e69
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e3e9485bc909b359
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-3786cf252e86cedc
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-b222ecd0d5dde249
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a39a66917f19cff9
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-bd046b53b593543f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-27421eaa3c39c24e
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-c3d0d4c053d59da2
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-c6f0f561cef28ea3
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-70d8bfd829100ff2
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-c7c2d0be36b1231f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a391ff0b1228b0f0
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-603c282c7258d955
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e4c727548af389b8
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-4f4c8b5c878bd5f8
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-637418987af56537
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7d2043f5717ef420
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a079ad65ff7da4c6
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-613810606502ed33
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a9967db92451ac48
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-d76287786a10b9d8
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-adb1aaee544d2e1d
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-fe00c469da8fcc37
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-b35b935d88fa1277
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7d1bb0dbd493553
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a1577ff62d5149fa
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-368e8af4de87a838
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-63e12ca2d36fc870
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-be7fc1c30030f4
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-bc95cfb3fa60e369
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-5ad8a591cee5219c
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e5275aa82386993a
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-9cf346a1d07ab7f7
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-56eaf62caa9e6422
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7d85fbd85d437e39
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-7bd2de0ec0460210
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-81714b18f4e30718
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-8e4d811c20a31f07
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-e20ec87fc500fd77
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-91cca3cadb1d0a82
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-3ab8cc1363a10f2f
+Relationship: SPDXRef-Application-71a65e4907ab2f38 CONTAINS SPDXRef-Package-a760a7bfdb959407
+

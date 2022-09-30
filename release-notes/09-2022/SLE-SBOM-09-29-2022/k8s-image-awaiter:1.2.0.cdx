@@ -1,0 +1,98 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:d0db2d84-4707-49e4-8c5c-33b3ec0ed24c",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2022-09-29T14:18:43+00:00",
+    "tools": [
+      {
+        "vendor": "aquasecurity",
+        "name": "trivy",
+        "version": "0.32.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "pkg:oci/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fjupyterhub%2Fk8s-image-awaiter\u0026arch=amd64",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0",
+      "purl": "pkg:oci/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fjupyterhub%2Fk8s-image-awaiter\u0026arch=amd64",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        },
+        {
+          "name": "aquasecurity:trivy:ImageID",
+          "value": "sha256:230c59f2c1264b0ad41bf210d6b15f0260e5a887472bd84bef8a939971cf17a2"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoDigest",
+          "value": "niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoTag",
+          "value": "niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/k8s-image-awaiter:1.2.0"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1",
+      "type": "library",
+      "name": "github.com/hashicorp/go-cleanhttp",
+      "version": "v0.5.1",
+      "purl": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gobinary"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a933ef5729e31fdda4fcc3c5b68689b0dc11807568dc93bacf0e757367b44a18"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.6.7",
+      "type": "library",
+      "name": "github.com/hashicorp/go-retryablehttp",
+      "version": "v0.6.7",
+      "purl": "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.6.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gobinary"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDigest",
+          "value": "sha256:a933ef5729e31fdda4fcc3c5b68689b0dc11807568dc93bacf0e757367b44a18"
+        },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:9d201dba4cf862b60e3fe3c3a440ff31f34cf7717e2f9c443984006df4e5290d"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:oci/k8s-image-awaiter@sha256:37e977ff314b0b17e49dfffb9bb0b7e359d0064e390f6253eeeb5bf3a5e5c9a0?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fjupyterhub%2Fk8s-image-awaiter\u0026arch=amd64",
+      "dependsOn": [
+        "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1",
+        "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.6.7"
+      ]
+    }
+  ],
+  "vulnerabilities": []
+}

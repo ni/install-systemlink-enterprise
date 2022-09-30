@@ -1,0 +1,1027 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/configurable-http-proxy:4.5.3
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/configurable-http-proxy:4.5.3-2d149b3d-5952-44a4-abd6-b60f08bf69c3
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:36.824456Z
+
+##### Package: node-pkg
+
+PackageName: node-pkg
+SPDXID: SPDXRef-Application-24f8a80152e2c0fc
+FilesAnalyzed: false
+PackageSourceInfo: Node.js
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/configurable-http-proxy:4.5.3
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/configurable-http-proxy:4.5.3
+SPDXID: SPDXRef-ContainerImage-f7efa56e2e8392f3
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/configurable-http-proxy@sha256:9e2c0107c7a35410bb89b22dd037bd6be748eb23c838941ae6fb30254d53d2e6?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fjupyterhub%2Fconfigurable-http-proxy&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:bd8b5f4d1eb10b4f198ba5a9fdd40563d9b8a300b33c5f61c85c26cc0c317f99
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/configurable-http-proxy@sha256:9e2c0107c7a35410bb89b22dd037bd6be748eb23c838941ae6fb30254d53d2e6
+PackageAttributionText: DiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+PackageAttributionText: DiffID: sha256:cb6eda6d73f0f21d599fdbbb0507ba983c6a2f37b9f9ab401741fa458f9e15f2
+PackageAttributionText: DiffID: sha256:2808ff9120f2e2c13e5b6fbe524a9d727c6f53ccfafb29222e82ebbe73569252
+PackageAttributionText: DiffID: sha256:f1ed0bba63149b5715b0eafe2d21015435ceba90ce81e4ea501f6e7215e5cbf3
+PackageAttributionText: DiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+PackageAttributionText: DiffID: sha256:33f85ccb088946483e4a7500c1bc1cc94fe2661d978ce93f1782b01530b13e4c
+PackageAttributionText: DiffID: sha256:b684aa355bdd1c5c4e52033a50f975192523a250fa1d4256a5f5611b1f59c225
+PackageAttributionText: DiffID: sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+PackageAttributionText: DiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/jupyterhub/configurable-http-proxy:4.5.3
+
+##### Package: alpine
+
+PackageName: alpine
+SPDXID: SPDXRef-OperatingSystem-16ffdefd5b3bd47
+PackageVersion: 3.16.2
+FilesAnalyzed: false
+
+##### Package: corepack
+
+PackageName: corepack
+SPDXID: SPDXRef-Package-11d66693157130c7
+PackageVersion: 0.12.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/corepack@0.12.1
+PackageAttributionText: LayerDigest: sha256:864b973d1bf1f32e9e7938e6f158ecf7b2503fbbe7799aacbf1fe853f506f398
+PackageAttributionText: LayerDiffID: sha256:cb6eda6d73f0f21d599fdbbb0507ba983c6a2f37b9f9ab401741fa458f9e15f2
+
+FileName: usr/local/lib/node_modules/corepack/package.json
+SPDXID: SPDXRef-File-bdfe3b4e6b68ae66
+
+##### Package: eventemitter3
+
+PackageName: eventemitter3
+SPDXID: SPDXRef-Package-12801a437b113023
+PackageVersion: 4.0.7
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/eventemitter3@4.0.7
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/eventemitter3/package.json
+SPDXID: SPDXRef-File-43ab37f298130e86
+
+##### Package: bintrees
+
+PackageName: bintrees
+SPDXID: SPDXRef-Package-1bf3d1fb26e194c2
+PackageVersion: 1.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/bintrees@1.0.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/bintrees/package.json
+SPDXID: SPDXRef-File-f6672c687186ae6f
+
+##### Package: scanelf
+
+PackageName: scanelf
+SPDXID: SPDXRef-Package-1c9f757e08c67536
+PackageVersion: 1.3.4-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pax-utils 1.3.4-r0
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/scanelf@1.3.4-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: commander
+
+PackageName: commander
+SPDXID: SPDXRef-Package-1f65e890a68934a6
+PackageVersion: 7.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/commander@7.2.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/commander/package.json
+SPDXID: SPDXRef-File-aed322aac648bf8f
+
+##### Package: simple-swizzle
+
+PackageName: simple-swizzle
+SPDXID: SPDXRef-Package-2205aed5cb19223d
+PackageVersion: 0.2.2
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/simple-swizzle@0.2.2
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/simple-swizzle/package.json
+SPDXID: SPDXRef-File-661e06c202a33dec
+
+##### Package: text-hex
+
+PackageName: text-hex
+SPDXID: SPDXRef-Package-279c09b315eb44d7
+PackageVersion: 1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/text-hex@1.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/text-hex/package.json
+SPDXID: SPDXRef-File-27ba8f7b581c86c2
+
+##### Package: musl
+
+PackageName: musl
+SPDXID: SPDXRef-Package-2c3882041685b41b
+PackageVersion: 1.2.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.3-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl@1.2.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: async
+
+PackageName: async
+SPDXID: SPDXRef-Package-303dd7a9ef7f2784
+PackageVersion: 3.2.3
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/async@3.2.3
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/async/package.json
+SPDXID: SPDXRef-File-282d1bc8ee0e46b9
+
+##### Package: libgcc
+
+PackageName: libgcc
+SPDXID: SPDXRef-Package-3279233164cf3362
+PackageVersion: 11.2.1_git20220219-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc 11.2.1_git20220219-r2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libgcc@11.2.1_git20220219-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:864b973d1bf1f32e9e7938e6f158ecf7b2503fbbe7799aacbf1fe853f506f398
+PackageAttributionText: LayerDiffID: sha256:cb6eda6d73f0f21d599fdbbb0507ba983c6a2f37b9f9ab401741fa458f9e15f2
+
+##### Package: is-arrayish
+
+PackageName: is-arrayish
+SPDXID: SPDXRef-Package-3307727f843f0b15
+PackageVersion: 0.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/is-arrayish@0.3.2
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/is-arrayish/package.json
+SPDXID: SPDXRef-File-6a90c4ab8b6d4875
+
+##### Package: libstdc++
+
+PackageName: libstdc++
+SPDXID: SPDXRef-Package-340797aa97740650
+PackageVersion: 11.2.1_git20220219-r2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc 11.2.1_git20220219-r2
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1-or-later
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libstdc++@11.2.1_git20220219-r2?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:864b973d1bf1f32e9e7938e6f158ecf7b2503fbbe7799aacbf1fe853f506f398
+PackageAttributionText: LayerDiffID: sha256:cb6eda6d73f0f21d599fdbbb0507ba983c6a2f37b9f9ab401741fa458f9e15f2
+
+##### Package: one-time
+
+PackageName: one-time
+SPDXID: SPDXRef-Package-37bef27beff45fb1
+PackageVersion: 1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/one-time@1.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/one-time/package.json
+SPDXID: SPDXRef-File-a81297ff0d1da783
+
+##### Package: color-convert
+
+PackageName: color-convert
+SPDXID: SPDXRef-Package-37dc965031c945b2
+PackageVersion: 1.9.3
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/color-convert@1.9.3
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/color-convert/package.json
+SPDXID: SPDXRef-File-3e049eba3270477c
+
+##### Package: libcurl
+
+PackageName: libcurl
+SPDXID: SPDXRef-Package-37f135032dfad350
+PackageVersion: 7.83.1-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: curl 7.83.1-r3
+PackageLicenseConcluded: curl
+PackageLicenseDeclared: curl
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libcurl@7.83.1-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: zlib
+
+PackageName: zlib
+SPDXID: SPDXRef-Package-43055220bd4c4e34
+PackageVersion: 1.2.12-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: zlib 1.2.12-r3
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/zlib@1.2.12-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: @colors/colors
+
+PackageName: @colors/colors
+SPDXID: SPDXRef-Package-4a4f69fc3d268b2c
+PackageVersion: 1.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/%40colors/colors@1.5.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/@colors/colors/package.json
+SPDXID: SPDXRef-File-e691509af009dc78
+
+##### Package: fecha
+
+PackageName: fecha
+SPDXID: SPDXRef-Package-4ca9aa3845aaeeb1
+PackageVersion: 4.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/fecha@4.2.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/fecha/package.json
+SPDXID: SPDXRef-File-4582ad7109354798
+
+##### Package: brotli-libs
+
+PackageName: brotli-libs
+SPDXID: SPDXRef-Package-4cbcecff3b492208
+PackageVersion: 1.0.9-r6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: brotli 1.0.9-r6
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/brotli-libs@1.0.9-r6?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: winston
+
+PackageName: winston
+SPDXID: SPDXRef-Package-538acb1a058e7ac9
+PackageVersion: 3.8.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/winston@3.8.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/winston/package.json
+SPDXID: SPDXRef-File-7d3ff8b0374a3281
+
+##### Package: libcrypto1.1
+
+PackageName: libcrypto1.1
+SPDXID: SPDXRef-Package-558d021893e01fcd
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libcrypto1.1@1.1.1q-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: colorspace
+
+PackageName: colorspace
+SPDXID: SPDXRef-Package-56f0f093ac252eff
+PackageVersion: 1.1.2
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/colorspace@1.1.2
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/colorspace/package.json
+SPDXID: SPDXRef-File-1150b0b99085eebe
+
+##### Package: color-string
+
+PackageName: color-string
+SPDXID: SPDXRef-Package-5fbeef4c48cd3db9
+PackageVersion: 1.5.5
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/color-string@1.5.5
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/color-string/package.json
+SPDXID: SPDXRef-File-cfb31e052645524a
+
+##### Package: yarn
+
+PackageName: yarn
+SPDXID: SPDXRef-Package-62aa64e254eb6a69
+PackageVersion: 1.22.19
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/yarn@1.22.19
+PackageAttributionText: LayerDigest: sha256:80fe61ad56f50607679112c84f9b17b0dc5f9f2c130e875aa8d2d49d43a8fbbd
+PackageAttributionText: LayerDiffID: sha256:2808ff9120f2e2c13e5b6fbe524a9d727c6f53ccfafb29222e82ebbe73569252
+
+FileName: opt/yarn-v1.22.19/package.json
+SPDXID: SPDXRef-File-ef5600986fb01a9e
+
+##### Package: logform
+
+PackageName: logform
+SPDXID: SPDXRef-Package-631afeb450af7c2a
+PackageVersion: 2.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/logform@2.4.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/logform/package.json
+SPDXID: SPDXRef-File-6275f3417286df51
+
+##### Package: apk-tools
+
+PackageName: apk-tools
+SPDXID: SPDXRef-Package-671b071a2e6334f0
+PackageVersion: 2.12.9-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apk-tools 2.12.9-r3
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/apk-tools@2.12.9-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: requires-port
+
+PackageName: requires-port
+SPDXID: SPDXRef-Package-6ac6cd14b26ec3ea
+PackageVersion: 1.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/requires-port@1.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/requires-port/package.json
+SPDXID: SPDXRef-File-925f6d709179ce99
+
+##### Package: alpine-keys
+
+PackageName: alpine-keys
+SPDXID: SPDXRef-Package-6b7ab4739bd113a0
+PackageVersion: 2.4-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-keys 2.4-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-keys@2.4-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: oniguruma
+
+PackageName: oniguruma
+SPDXID: SPDXRef-Package-6fbb99bf212a114
+PackageVersion: 6.9.8-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: oniguruma 6.9.8-r0
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/oniguruma@6.9.8-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: is-stream
+
+PackageName: is-stream
+SPDXID: SPDXRef-Package-76edcef71055c389
+PackageVersion: 2.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/is-stream@2.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/is-stream/package.json
+SPDXID: SPDXRef-File-2cfea179d4fd1462
+
+##### Package: musl-utils
+
+PackageName: musl-utils
+SPDXID: SPDXRef-Package-77d9144ba03ed632
+PackageVersion: 1.2.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.3-r0
+PackageLicenseConcluded: MIT, BSD-3-Clause, GPL-2.0
+PackageLicenseDeclared: MIT, BSD-3-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl-utils@1.2.3-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: @dabh/diagnostics
+
+PackageName: @dabh/diagnostics
+SPDXID: SPDXRef-Package-7a0d898241a6a3df
+PackageVersion: 2.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/%40dabh/diagnostics@2.0.2
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/@dabh/diagnostics/package.json
+SPDXID: SPDXRef-File-bb9fcc942feef01b
+
+##### Package: configurable-http-proxy
+
+PackageName: configurable-http-proxy
+SPDXID: SPDXRef-Package-7b912309b7832cd
+PackageVersion: 4.5.3
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/configurable-http-proxy@4.5.3
+PackageAttributionText: LayerDigest: sha256:af68f93331b878a3501690075037709ae86d32b13c484c74a7bb3d96a6800c3e
+PackageAttributionText: LayerDiffID: sha256:b684aa355bdd1c5c4e52033a50f975192523a250fa1d4256a5f5611b1f59c225
+
+FileName: srv/configurable-http-proxy/package.json
+SPDXID: SPDXRef-File-5252ceeb6d9a7985
+
+##### Package: strftime
+
+PackageName: strftime
+SPDXID: SPDXRef-Package-9106fc299d1f6fd5
+PackageVersion: 0.10.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/strftime@0.10.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/strftime/package.json
+SPDXID: SPDXRef-File-b999a6b754b4d4cf
+
+##### Package: kuler
+
+PackageName: kuler
+SPDXID: SPDXRef-Package-929397f336793659
+PackageVersion: 2.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/kuler@2.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/kuler/package.json
+SPDXID: SPDXRef-File-8cebd90f23322cfe
+
+##### Package: inherits
+
+PackageName: inherits
+SPDXID: SPDXRef-Package-99ec439518446eb9
+PackageVersion: 2.0.4
+FilesAnalyzed: false
+PackageLicenseConcluded: ISC
+PackageLicenseDeclared: ISC
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/inherits@2.0.4
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/inherits/package.json
+SPDXID: SPDXRef-File-2df6185aeba2a081
+
+##### Package: http-proxy
+
+PackageName: http-proxy
+SPDXID: SPDXRef-Package-9fea3fd5761f6807
+PackageVersion: 1.18.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/http-proxy@1.18.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/http-proxy/package.json
+SPDXID: SPDXRef-File-fe29965fed3da80
+
+##### Package: ca-certificates-bundle
+
+PackageName: ca-certificates-bundle
+SPDXID: SPDXRef-Package-ae1e5be4a78c13d1
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates-bundle@20220614-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: safe-stable-stringify
+
+PackageName: safe-stable-stringify
+SPDXID: SPDXRef-Package-b0a0cc77badea745
+PackageVersion: 2.3.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/safe-stable-stringify@2.3.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/safe-stable-stringify/package.json
+SPDXID: SPDXRef-File-5d6472ef2eb743f6
+
+##### Package: jq
+
+PackageName: jq
+SPDXID: SPDXRef-Package-b8bc8fb937629886
+PackageVersion: 1.6-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: jq 1.6-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/jq@1.6-r1?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: alpine-baselayout
+
+PackageName: alpine-baselayout
+SPDXID: SPDXRef-Package-b9b73a8df6c20b7b
+PackageVersion: 3.2.0-r22
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r22
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout@3.2.0-r22?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: ms
+
+PackageName: ms
+SPDXID: SPDXRef-Package-c55c1e2a2389ae72
+PackageVersion: 2.1.3
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/ms@2.1.3
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/ms/package.json
+SPDXID: SPDXRef-File-8afbe4e1622ad85d
+
+##### Package: util-deprecate
+
+PackageName: util-deprecate
+SPDXID: SPDXRef-Package-c6bc6cff3b1cbbb7
+PackageVersion: 1.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/util-deprecate@1.0.2
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/util-deprecate/package.json
+SPDXID: SPDXRef-File-c07d481bd59b79b3
+
+##### Package: fn.name
+
+PackageName: fn.name
+SPDXID: SPDXRef-Package-c82c79c32fe494a0
+PackageVersion: 1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/fn.name@1.1.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/fn.name/package.json
+SPDXID: SPDXRef-File-b9744811fc9a4860
+
+##### Package: color
+
+PackageName: color
+SPDXID: SPDXRef-Package-cb65824325e7357b
+PackageVersion: 3.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/color@3.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/color/package.json
+SPDXID: SPDXRef-File-116e17d6b42666ee
+
+##### Package: ca-certificates
+
+PackageName: ca-certificates
+SPDXID: SPDXRef-Package-ce20633c24adedc6
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates@20220614-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: curl
+
+PackageName: curl
+SPDXID: SPDXRef-Package-cf05be6a04712110
+PackageVersion: 7.83.1-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: curl 7.83.1-r3
+PackageLicenseConcluded: curl
+PackageLicenseDeclared: curl
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/curl@7.83.1-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: tdigest
+
+PackageName: tdigest
+SPDXID: SPDXRef-Package-d0cc61e2f4ff2123
+PackageVersion: 0.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/tdigest@0.1.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/tdigest/package.json
+SPDXID: SPDXRef-File-2502e35886dd7915
+
+##### Package: readable-stream
+
+PackageName: readable-stream
+SPDXID: SPDXRef-Package-d385d5fbe9eb48c7
+PackageVersion: 3.6.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/readable-stream@3.6.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/readable-stream/package.json
+SPDXID: SPDXRef-File-807213f33512043a
+
+##### Package: safe-buffer
+
+PackageName: safe-buffer
+SPDXID: SPDXRef-Package-d884abc370969080
+PackageVersion: 5.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/safe-buffer@5.2.1
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/safe-buffer/package.json
+SPDXID: SPDXRef-File-3921c1b2c48ef31f
+
+##### Package: libc-utils
+
+PackageName: libc-utils
+SPDXID: SPDXRef-Package-e4008ecaa6c1d39a
+PackageVersion: 0.7.2-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libc-dev 0.7.2-r3
+PackageLicenseConcluded: BSD-2-Clause, BSD-3-Clause
+PackageLicenseDeclared: BSD-2-Clause, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: ssl_client
+
+PackageName: ssl_client
+SPDXID: SPDXRef-Package-e96020d9856468f
+PackageVersion: 1.35.0-r17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.35.0-r17
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ssl_client@1.35.0-r17?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: libssl1.1
+
+PackageName: libssl1.1
+SPDXID: SPDXRef-Package-eab04bc506ca1930
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libssl1.1@1.1.1q-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: winston-transport
+
+PackageName: winston-transport
+SPDXID: SPDXRef-Package-ed1b3e6432dad0f9
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/winston-transport@4.5.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/winston-transport/package.json
+SPDXID: SPDXRef-File-46778c5c906fd931
+
+##### Package: string_decoder
+
+PackageName: string_decoder
+SPDXID: SPDXRef-Package-ed29161d54a701e7
+PackageVersion: 1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/string_decoder@1.3.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/string_decoder/package.json
+SPDXID: SPDXRef-File-69ff29098a389dbb
+
+##### Package: follow-redirects
+
+PackageName: follow-redirects
+SPDXID: SPDXRef-Package-f20e118e56ddd807
+PackageVersion: 1.14.8
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/follow-redirects@1.14.8
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/follow-redirects/package.json
+SPDXID: SPDXRef-File-d3f716eedcc41fc0
+
+##### Package: busybox
+
+PackageName: busybox
+SPDXID: SPDXRef-Package-f55a39846a8dc061
+PackageVersion: 1.35.0-r17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.35.0-r17
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/busybox@1.35.0-r17?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: prom-client
+
+PackageName: prom-client
+SPDXID: SPDXRef-Package-f7976006ffdebca8
+PackageVersion: 14.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/prom-client@14.1.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/prom-client/package.json
+SPDXID: SPDXRef-File-44ce4cd07cfef5c3
+
+##### Package: triple-beam
+
+PackageName: triple-beam
+SPDXID: SPDXRef-Package-fa5976a06095aa43
+PackageVersion: 1.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/triple-beam@1.3.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/triple-beam/package.json
+SPDXID: SPDXRef-File-5d503a681b5c89b9
+
+##### Package: alpine-baselayout-data
+
+PackageName: alpine-baselayout-data
+SPDXID: SPDXRef-Package-fab92f85b0031558
+PackageVersion: 3.2.0-r22
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r22
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout-data@3.2.0-r22?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49
+PackageAttributionText: LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7
+
+##### Package: nghttp2-libs
+
+PackageName: nghttp2-libs
+SPDXID: SPDXRef-Package-fb18353949221fef
+PackageVersion: 1.47.0-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: nghttp2 1.47.0-r0
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/nghttp2-libs@1.47.0-r0?distro=3.16.2
+PackageAttributionText: LayerDigest: sha256:63809558ffd870dfab17374cd3f33a8983288700bcbbd0acd98b16f63f597da2
+PackageAttributionText: LayerDiffID: sha256:9dc347ed67e642efcb711f66d081a35ecb446a7a47f1ca50614eefd8a4bc2abd
+
+##### Package: enabled
+
+PackageName: enabled
+SPDXID: SPDXRef-Package-fb40e056d85f2fc8
+PackageVersion: 2.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/enabled@2.0.0
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/enabled/package.json
+SPDXID: SPDXRef-File-e0cc8776a0d66c64
+
+##### Package: color-name
+
+PackageName: color-name
+SPDXID: SPDXRef-Package-fdad9c78a6e7b2e4
+PackageVersion: 1.1.3
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/color-name@1.1.3
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/color-name/package.json
+SPDXID: SPDXRef-File-148856e31a8cbc80
+
+##### Package: stack-trace
+
+PackageName: stack-trace
+SPDXID: SPDXRef-Package-fdda0c30c3790c5d
+PackageVersion: 0.0.10
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/stack-trace@0.0.10
+PackageAttributionText: LayerDigest: sha256:5fe2238f2127c31bd7dd666581de097f8b3b135173a86f1258d09462234fc921
+PackageAttributionText: LayerDiffID: sha256:1be7bfe3945a9f69b537b3d4112245b7290837feadb68fca2214cc5f33a6386d
+
+FileName: srv/configurable-http-proxy/node_modules/stack-trace/package.json
+SPDXID: SPDXRef-File-e16ebd8b79ffdf29
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-f7efa56e2e8392f3
+Relationship: SPDXRef-ContainerImage-f7efa56e2e8392f3 CONTAINS SPDXRef-OperatingSystem-16ffdefd5b3bd47
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-b9b73a8df6c20b7b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-fab92f85b0031558
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-6b7ab4739bd113a0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-671b071a2e6334f0
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-4cbcecff3b492208
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-f55a39846a8dc061
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ce20633c24adedc6
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-ae1e5be4a78c13d1
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-cf05be6a04712110
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-b8bc8fb937629886
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e4008ecaa6c1d39a
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-558d021893e01fcd
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-37f135032dfad350
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-3279233164cf3362
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-eab04bc506ca1930
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-340797aa97740650
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-2c3882041685b41b
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-77d9144ba03ed632
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-fb18353949221fef
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-6fbb99bf212a114
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-1c9f757e08c67536
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-e96020d9856468f
+Relationship: SPDXRef-OperatingSystem-16ffdefd5b3bd47 CONTAINS SPDXRef-Package-43055220bd4c4e34
+Relationship: SPDXRef-ContainerImage-f7efa56e2e8392f3 CONTAINS SPDXRef-Application-24f8a80152e2c0fc
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-11d66693157130c7
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-62aa64e254eb6a69
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-7b912309b7832cd
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-cb65824325e7357b
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-6ac6cd14b26ec3ea
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-d884abc370969080
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-ed29161d54a701e7
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-ed1b3e6432dad0f9
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-fb40e056d85f2fc8
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-9fea3fd5761f6807
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-c55c1e2a2389ae72
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-37bef27beff45fb1
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-9106fc299d1f6fd5
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-fdda0c30c3790c5d
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-279c09b315eb44d7
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-c6bc6cff3b1cbbb7
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-37dc965031c945b2
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-4ca9aa3845aaeeb1
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-c82c79c32fe494a0
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-f7976006ffdebca8
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-2205aed5cb19223d
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-56f0f093ac252eff
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-f20e118e56ddd807
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-76edcef71055c389
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-631afeb450af7c2a
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-b0a0cc77badea745
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-4a4f69fc3d268b2c
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-303dd7a9ef7f2784
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-929397f336793659
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-5fbeef4c48cd3db9
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-d0cc61e2f4ff2123
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-538acb1a058e7ac9
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-99ec439518446eb9
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-3307727f843f0b15
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-d385d5fbe9eb48c7
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-7a0d898241a6a3df
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-1bf3d1fb26e194c2
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-fdad9c78a6e7b2e4
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-1f65e890a68934a6
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-12801a437b113023
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-fa5976a06095aa43
+
