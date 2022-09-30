@@ -66,7 +66,8 @@ Complete the following steps to clean up resources Helm does not remove.
 
         Example: `kubectl exec -it fileingestion-mongodb-0 -- mongo`
 
-1. Port-forward the pod locally by running `kubectl port-forward pods/fileingestion-mongodb-0 50000:27017`, replacing the `0` with the index of the primary replica.
+1. Run `kubectl port-forward pods/fileingestion-mongodb-0 50000:27017` replacing the `0` with the index of the primary replica to port-forward the pod locally.
+
 
 ## Importing the database backup into the new MongoDB instance
 
