@@ -11,7 +11,8 @@ The following procedure can be used to backup meta data for files ingested by Sy
 
 ## Forwarding the MongoDB service
 
-1. Get the service name by running `kubectl get services`, and locate `fileingestion-mongodb`
+1. Run `kubectl get services` and locate `fileingestion-mongodb`, to get the service name.
+
 1. Port-forward the service locally by running `kubectl port-forward services/fileingestion-mongodb 57017:27017`
 
 ## Exporting the database
