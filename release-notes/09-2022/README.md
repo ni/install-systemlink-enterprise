@@ -146,7 +146,7 @@ strimzi/operator/0.31.1
     - Removed `nbexecworker-apikey` and added `nbexec-argo-workflow-apikey`
     - `nbexecservice` depends on a new bucket for the service: `systemlink-notebook-execution`
     - Added configuration for `argoworkflows` and `nbexecservice`. See [getting-started/templates/systemlink-values.yaml](/getting-started/templates/systemlink-values.yaml) for an example configuration.
-    - The default PVC storage size for the MongoDB replica set for `nbexecservice` has increased to 50Gi, which causes Helm upgrade to fail. You manually patch these PVC sizes to allow for Helm upgrade complete successfully. Refer to [increase_nbexec_mongo_storage.sh](/increase_nbexec_mongo_storage.sh) for a script to patch there PVCs You may also delete the existing PVCs if losing notebook execution history is not an issue for your installation. Refer to [delete_nbexec_mongo_storage.sh](/delete_nbexec_mongo_storage.sh) for a script to delete the existing PVCs.
+    - The default PVC storage size for the MongoDB replica set for `nbexecservice` has increased to 50Gi, which causes Helm upgrade to fail. You manually patch these PVC sizes to allow for Helm upgrade complete successfully. Refer to [increase_nbexec_mongo_storage.sh](increase_nbexec_mongo_storage.sh) for a script to patch there PVCs You may also delete the existing PVCs if losing notebook execution history is not an issue for your installation. Refer to [delete_nbexec_mongo_storage.sh](delete_nbexec_mongo_storage.sh) for a script to delete the existing PVCs.
 - DataFrameService 0.7.x
     - The requirement from the previous release to set `dataframeservice.schema-registry.externalKafka.auth.jaas.password` in the `systemlink-values.yaml` file or via `--set` has been resolved. This setting can be removed from  your values files.
 - Admin Helm chart 0.7.x
@@ -156,7 +156,7 @@ strimzi/operator/0.31.1
 
 Only customer facing bugs have been included in this list.
 
-[closed-bugs-sle-09-2022.xlsx](/closed-bugs-sle-09-2022.xlsx)
+[closed-bugs-sle-09-2022.xlsx](closed-bugs-sle-09-2022.xlsx)
 
 ## Vulnerabilities Fixed
 
@@ -166,4 +166,4 @@ See bugs with **XRay** in the title in the list above of closed bugs.
 
 This data is a snapshot from September 27, 2022, and lists the components responsible for Critical or High severity security issues where there is a fix available.
 
-[issues-sle-09-27-2022.xlsx](/issues-sle-09-27-2022.xlsx)
+[issues-sle-09-27-2022.xlsx](issues-sle-09-27-2022.xlsx)
