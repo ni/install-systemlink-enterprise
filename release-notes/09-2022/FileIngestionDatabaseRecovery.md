@@ -11,20 +11,32 @@ Complete the following steps if you want to back up metadata for files ingested 
 
 ## Forwarding the MongoDB service
 
-1. Get the service name by running `kubectl get services`, and locate `fileingestion-mongodb`
-1. Port-forward the service locally by running `kubectl port-forward services/fileingestion-mongodb 57017:27017`
+1. Run `kubectl get services` and locate `fileingestion-mongodb`, to get the service name.
+
+1. RUn `kubectl port-forward services/fileingestion-mongodb 57017:27017` to port-forward the service.
+
 
 ## Exporting the database
 
-1. Export the database contents by running `mongoexport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --out=<path>`
+1. Run the following command to export the database.
 
-    **Note** `<root_user>` is should be replaced by the root user, `<root_password>` by the root password, `<path>` to a path on your local computer that will contain the specified database export, and `<port>` by the port specified on the previous step
+  `mongoexport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --out=<path>`
+  
+  Where 
+
+
+-  `<root_user>` is the root user
+-  `<root_password>` is the root password
+- `<path>` is a path on your local computer that will contain the specified database export
+- `<port>` is the port specified in the previous step
+
 
         Example: `mongoexport --uri="mongodb://root:RootPassword123@localhost:57017/files?authSource=admin" --collection=files_metadata --out=/mnt/c/dev/files.json`
 
 ## Perform the August SLE Upgrade
 
-Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade the FileIngestion chart. You can use the following procedure to clean up resources that will no longer be needed after the upgrade.
+Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade the FileIngestion chart. Complete the following steps to clean up resources that will no longer be needed after the upgrade.
+
 
 ### Removing old PVCs
 
@@ -37,7 +49,8 @@ Upgrade to the new release bundle of SystemLink Enterprise. This will upgrade th
 
 ### Cleaning up the service
 
-This step must be completed because Helm does not to remove these resources. If they are not removed the upgraded version of the service will not be affected. All dependencies of the service will be created as needed during the upgrade.
+Complete the following steps to clean up resources Helm does not remove. 
+
 
 1. Run `kubectl get services | grep fileingestion` (or `Select-String` in powershell) to list all the services attached to `fileingestion`
 1. Delete all services that contain `mongodb` in their name.
@@ -48,17 +61,27 @@ This step must be completed because Helm does not to remove these resources. If 
 
 **Note** In these steps we cannot use the cannot use the service to connect to the database
 
-1. Find the primary replica by running `kubectl exec -it <replica_name> -- mongo`, which should print something like `rs0:PRIMARY>`.
+1. Run `kubectl exec -it <replica_name> -- mongo` to find the primary replica. The result will look similar to the following example: `rs0:PRIMARY>`.
+
 
         Example: `kubectl exec -it fileingestion-mongodb-0 -- mongo`
 
-1. Port-forward the pod locally by running `kubectl port-forward pods/fileingestion-mongodb-0 50000:27017`, replacing the `0` with the index of the primary replica.
+1. Run `kubectl port-forward pods/fileingestion-mongodb-0 50000:27017` replacing the `0` with the index of the primary replica to port-forward the pod locally.
+
 
 ## Importing the database backup into the new MongoDB instance
 
-1. Import the database contents back by running `mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
+1. Run the following command to import the database contents.
 
-    **Note** `<root_user>` is should be replaced by the root user, `<root_password>` by the root password, `<path>` to the path on your local computer containing the backup, and `<port>` by the port specified on the previous step.
+`mongoimport --uri="mongodb://<root_user>:<root_password>@localhost:<port>/files?authSource=admin" --collection=files_metadata --file=<path>`
+
+
+Where
+-  `<root_user>` is the root user
+- `<root_password>` is the root password
+- `<path>` is the path on your local computer containing the backup
+- `<port>` is the port specified in the previous step.
+
 
         Example: `mongoimport --uri="mongodb://admin:RootPassword123:50000/files?authSource=admin" --collection=files_metadata --file=/mnt/c/dev/files.json
 
