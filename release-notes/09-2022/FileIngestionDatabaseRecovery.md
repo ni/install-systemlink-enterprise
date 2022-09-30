@@ -1,6 +1,6 @@
 # Retaining File Ingestion Metadata through the August SLE Upgrade
 
-The following procedure can be used to backup meta data for files ingested by SystemLink. If losing this data is not a concern this process can be skipped. This process does not affect any other instances of MongoDB used by other services.
+Complete the following steps if you want to back up metadata for files ingested by SystemLink. This process does not affect any other instances of MongoDB used by other services.
 
 **IMPORTANT! This procedure must be completed before upgrading to the August release of SLE. The export process cannot be completed after the mongodb-sharded instance is terminated during the upgrade.**
 
