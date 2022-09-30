@@ -25,7 +25,11 @@ The following procedure can be used to backup meta data for files ingested by Sy
   Where 
 
 
-    **Note** `<root_user>` is should be replaced by the root user, `<root_password>` by the root password, `<path>` to a path on your local computer that will contain the specified database export, and `<port>` by the port specified on the previous step
+-  `<root_user>` is the root user
+-  `<root_password>` is the root password
+- `<path>` is a path on your local computer that will contain the specified database export
+- `<port>` is the port specified in the previous step
+
 
         Example: `mongoexport --uri="mongodb://root:RootPassword123@localhost:57017/files?authSource=admin" --collection=files_metadata --out=/mnt/c/dev/files.json`
 
