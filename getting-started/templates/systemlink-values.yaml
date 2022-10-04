@@ -626,6 +626,18 @@ argoworkflows:
     controller:
       image:
         registry: *imageRegistryRef
+      ## Maximum number of workflows that can run in parallel.
+      ##
+      parallelism: 300
+      workflowDefaults:
+        spec:
+          ttlStrategy:
+            ## How long should the workflow live in case of a failure.
+            ##
+            secondsAfterFailure: 600
+            ## How long should the workflow live in case of a success.
+            ##
+            secondsAfterSuccess: 0
     executor:
       image:
         registry: *imageRegistryRef
