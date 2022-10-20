@@ -21,7 +21,7 @@ global:
   ## Overrides the default image registry.
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
-  imageRegistry: "niedge01.jfrog.io/ni-docker"
+  imageRegistry: &imageRegistryRef "niedge01.jfrog.io/ni-docker"
   ##
   ## Defines a secret containing the credentials for a repo hosting miscellaneous artifacts
   ##
@@ -181,7 +181,7 @@ minio:
     hostname: "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
-  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe"
+  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe;systemlink-notebook-execution"
 
 ## Configuration for test result storage.
 ##
@@ -603,7 +603,7 @@ fileingestion:
     ##
     upload: 3
 
-## Configuration for JupyterHub
+## Configuration for JupyterHub.
 ##
 sl-jupyterhub:
   jupyterhub:
@@ -617,29 +617,66 @@ sl-jupyterhub:
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 100m
 
-## Configuration for Notebook Execution workers
+## Configuration for Argo Workflows.
 ##
-nbexecworker:
-  ## Customize routes to back-end APIs
-  ##
-  apiRoutes:
-    ## Sets the release name prefix for the Jupyter Enterprise Gateway service running on the cluster.
-    # <ATTENTION> This must be set to the release name used to install the ni-helm/systemlinkadmin chart.
+argoworkflows:
+  argo-workflows:
+    images:
+      pullSecrets: *pullSecrets
+    controller:
+      image:
+        registry: *imageRegistryRef
+      ## Maximum number of workflows that can run in parallel.
+      ##
+      parallelism: 300
+      workflowDefaults:
+        spec:
+          ttlStrategy:
+            ## How long should the workflow live in case of a failure.
+            ##
+            secondsAfterFailure: 600
+            ## How long should the workflow live in case of a success.
+            ##
+            secondsAfterSuccess: 0
+    executor:
+      image:
+        registry: *imageRegistryRef
+    server:
+      image:
+        registry: *imageRegistryRef
+
+## Configuration for Notebook Execution service.
+##
+nbexecservice:
+  argo:
+    ## Configure S3/MinIO access.
     ##
-    jupyterEnterpriseGatewayReleaseName: "systemlink-admin"
-    ## Sets the service name for the Jupyter Enterprise Gateway instance running on the cluster.
-    ##
-    jupyterEnterpriseGatewayServiceName: "enterprise-gateway"
-    ## Sets the namespace name for the Jupyter Enterprise Gateway service running on the cluster.
-    # <ATTENTION> This must be set to the namespace where the ni-helm/systemlinkadmin chart was installed.
-    ##
-    jupyterEnterpriseGatewayNamespace: "systemlink-admin"
-    ## Sets the port number of for the Jupyter Enterprise Gateway service running on the cluster.
-    ##
-    jupyterEnterpriseGatewayPort: "8888"
-    ## If set, overrides the other jupyterEnterpriseGateway options and configures the service URL directly.
-    ##
-    jupyterEnterpriseGatewayUrl: ""
+    artifactRepository:
+      s3:
+        ## The name of the S3 or MinIO bucket that the service should connect to.
+        ##
+        bucket: "systemlink-notebook-execution"
+        ## Set this value to connect to an external S3 instance.
+        # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the insecure and port.
+        ##
+        host: ""
+        ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+        ##
+        service: *minioServiceName
+        ## S3 Port
+        # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
+        ##
+        port: *minioPort
+        ## Set this value to enable/disable insecure connection: http or https.
+        ##
+        insecure: true
+        ## Secret PATH containing the credentials.
+        accessKeySecret:
+          name: "notebookexecution-s3-credentials"
+          key: "username"
+        secretKeySecret:
+          name: "notebookexecution-s3-credentials"
+          key: "password"
 
 ## Configuration for licensing
 ##

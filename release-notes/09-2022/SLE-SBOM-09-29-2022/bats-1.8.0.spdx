@@ -1,0 +1,360 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/bats/bats:1.8.0
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/bats/bats:1.8.0-c7619b8d-23be-444f-8bb9-54d65e35109b
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:28.28751Z
+
+##### Package: node-pkg
+
+PackageName: node-pkg
+SPDXID: SPDXRef-Application-24f8a80152e2c0fc
+FilesAnalyzed: false
+PackageSourceInfo: Node.js
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/bats/bats:1.8.0
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/bats/bats:1.8.0
+SPDXID: SPDXRef-ContainerImage-f9fe1ec6e9b65a7f
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/bats@sha256:e55754287cebf1b91f3fc30f32f81edd0ccd78fa99fdb7c02510ca7a545a3e5d?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fbats%2Fbats&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:7b6e9596262816d0d44aff4992ddc2bc4c21de94be0610bebecd62b5c7d4ee2a
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/bats/bats@sha256:e55754287cebf1b91f3fc30f32f81edd0ccd78fa99fdb7c02510ca7a545a3e5d
+PackageAttributionText: DiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+PackageAttributionText: DiffID: sha256:0f9d26f2773fd6f749cf48c065e2d7d4b787c496bfce4963373f0066b3aa5c92
+PackageAttributionText: DiffID: sha256:650864124fb47f49142ba6ae4279faed873b80686cdcc74b058bc12416007641
+PackageAttributionText: DiffID: sha256:46c718efee7577c59d7bc1faf6da683ef86538a58442d33a5fd3035efba214e1
+PackageAttributionText: DiffID: sha256:ffa340113981eae9359bd48a2f73aaabc603b6451db50ea1859543d6ed114362
+PackageAttributionText: DiffID: sha256:fff445e4f9eb63c98d32e82e4ace4dc106fd7837afb9b44640a18101b578c90e
+PackageAttributionText: DiffID: sha256:73982df1e77fad5a1d84cac580c23d7237d7fb5e89cd7092d50b239d6c78fff0
+PackageAttributionText: DiffID: sha256:46b51193c92e5f489cd9d4d801b6405e73e519c7916e3786bd33f0ab767754df
+PackageAttributionText: DiffID: sha256:1761ba4e446fcb40627042d41b6bd50234b2753719339445d1ee888caf2f0f93
+PackageAttributionText: DiffID: sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/bats/bats:1.8.0
+
+##### Package: alpine
+
+PackageName: alpine
+SPDXID: SPDXRef-OperatingSystem-189472cde0101cde
+PackageVersion: 3.15.6
+FilesAnalyzed: false
+
+##### Package: libretls
+
+PackageName: libretls
+SPDXID: SPDXRef-Package-10074f0a3c52dfec
+PackageVersion: 3.3.4-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libretls 3.3.4-r3
+PackageLicenseConcluded: ISC, BSD-3-Clause, MIT
+PackageLicenseDeclared: ISC, BSD-3-Clause, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libretls@3.3.4-r3?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: musl
+
+PackageName: musl
+SPDXID: SPDXRef-Package-1595995313c18ad2
+PackageVersion: 1.2.2-r7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.2-r7
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl@1.2.2-r7?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: libc-utils
+
+PackageName: libc-utils
+SPDXID: SPDXRef-Package-1cdc73710fe7de57
+PackageVersion: 0.7.2-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libc-dev 0.7.2-r3
+PackageLicenseConcluded: BSD-2-Clause, BSD-3-Clause
+PackageLicenseDeclared: BSD-2-Clause, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: ncurses-libs
+
+PackageName: ncurses-libs
+SPDXID: SPDXRef-Package-226cde920526eb89
+PackageVersion: 6.3_p20211120-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.3_p20211120-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ncurses-libs@6.3_p20211120-r1?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:036cbbed31189b3686b98872d55d31c74ce571df257b35a751f7ed460235c609
+PackageAttributionText: LayerDiffID: sha256:0f9d26f2773fd6f749cf48c065e2d7d4b787c496bfce4963373f0066b3aa5c92
+
+##### Package: libcrypto1.1
+
+PackageName: libcrypto1.1
+SPDXID: SPDXRef-Package-2fdbd2974fb823c7
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libcrypto1.1@1.1.1q-r0?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: scanelf
+
+PackageName: scanelf
+SPDXID: SPDXRef-Package-3fe496c1882ac43f
+PackageVersion: 1.3.3-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pax-utils 1.3.3-r0
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/scanelf@1.3.3-r0?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: .bash-rundeps
+
+PackageName: .bash-rundeps
+SPDXID: SPDXRef-Package-5f36f9f66c32c027
+PackageVersion: 20220809.175539
+FilesAnalyzed: false
+PackageSourceInfo: built package from:  
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/.bash-rundeps@20220809.175539?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:036cbbed31189b3686b98872d55d31c74ce571df257b35a751f7ed460235c609
+PackageAttributionText: LayerDiffID: sha256:0f9d26f2773fd6f749cf48c065e2d7d4b787c496bfce4963373f0066b3aa5c92
+
+##### Package: ssl_client
+
+PackageName: ssl_client
+SPDXID: SPDXRef-Package-6758acfaa6d50841
+PackageVersion: 1.34.1-r7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.34.1-r7
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ssl_client@1.34.1-r7?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: libssl1.1
+
+PackageName: libssl1.1
+SPDXID: SPDXRef-Package-6870017ee2828071
+PackageVersion: 1.1.1q-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1q-r0
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libssl1.1@1.1.1q-r0?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: zlib
+
+PackageName: zlib
+SPDXID: SPDXRef-Package-6cfc508e049d3a16
+PackageVersion: 1.2.12-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: zlib 1.2.12-r3
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/zlib@1.2.12-r3?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: apk-tools
+
+PackageName: apk-tools
+SPDXID: SPDXRef-Package-753d2697bb413d60
+PackageVersion: 2.12.7-r3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apk-tools 2.12.7-r3
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/apk-tools@2.12.7-r3?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: busybox
+
+PackageName: busybox
+SPDXID: SPDXRef-Package-775544f07c9bd4bd
+PackageVersion: 1.34.1-r7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: busybox 1.34.1-r7
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/busybox@1.34.1-r7?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: alpine-baselayout
+
+PackageName: alpine-baselayout
+SPDXID: SPDXRef-Package-8a4ebf0a2b721caf
+PackageVersion: 3.2.0-r18
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-baselayout 3.2.0-r18
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout@3.2.0-r18?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: ncurses
+
+PackageName: ncurses
+SPDXID: SPDXRef-Package-91aae3161b6a82c9
+PackageVersion: 6.3_p20211120-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.3_p20211120-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ncurses@6.3_p20211120-r1?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:27edc8fd441ff62d3a172bc7800ce14c6c9d27295128ebf804fca1b9b6f56f55
+PackageAttributionText: LayerDiffID: sha256:fff445e4f9eb63c98d32e82e4ace4dc106fd7837afb9b44640a18101b578c90e
+
+##### Package: ca-certificates-bundle
+
+PackageName: ca-certificates-bundle
+SPDXID: SPDXRef-Package-939d139910174f51
+PackageVersion: 20220614-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20220614-r0
+PackageLicenseConcluded: MPL-2.0, MIT
+PackageLicenseDeclared: MPL-2.0, MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates-bundle@20220614-r0?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: musl-utils
+
+PackageName: musl-utils
+SPDXID: SPDXRef-Package-9caac0ee6a8d42e0
+PackageVersion: 1.2.2-r7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: musl 1.2.2-r7
+PackageLicenseConcluded: MIT, BSD-3-Clause, GPL-2.0
+PackageLicenseDeclared: MIT, BSD-3-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/musl-utils@1.2.2-r7?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: libbz2
+
+PackageName: libbz2
+SPDXID: SPDXRef-Package-bc44c9bf2ad1b29e
+PackageVersion: 1.0.8-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bzip2 1.0.8-r1
+PackageLicenseConcluded: bzip2-1.0.6
+PackageLicenseDeclared: bzip2-1.0.6
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/libbz2@1.0.8-r1?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:27edc8fd441ff62d3a172bc7800ce14c6c9d27295128ebf804fca1b9b6f56f55
+PackageAttributionText: LayerDiffID: sha256:fff445e4f9eb63c98d32e82e4ace4dc106fd7837afb9b44640a18101b578c90e
+
+##### Package: ncurses-terminfo-base
+
+PackageName: ncurses-terminfo-base
+SPDXID: SPDXRef-Package-c0039df8f0483782
+PackageVersion: 6.3_p20211120-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.3_p20211120-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ncurses-terminfo-base@6.3_p20211120-r1?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:036cbbed31189b3686b98872d55d31c74ce571df257b35a751f7ed460235c609
+PackageAttributionText: LayerDiffID: sha256:0f9d26f2773fd6f749cf48c065e2d7d4b787c496bfce4963373f0066b3aa5c92
+
+##### Package: alpine-keys
+
+PackageName: alpine-keys
+SPDXID: SPDXRef-Package-cab1380837e13ced
+PackageVersion: 2.4-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: alpine-keys 2.4-r1
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-keys@2.4-r1?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca
+PackageAttributionText: LayerDiffID: sha256:34d5ebaa5410d2ab4154bbd7c3c99c385ec509eb9c1d03d5486aff01bbd618c5
+
+##### Package: parallel
+
+PackageName: parallel
+SPDXID: SPDXRef-Package-e23fe495d6b9197c
+PackageVersion: 20211122-r0
+FilesAnalyzed: false
+PackageSourceInfo: built package from: parallel 20211122-r0
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/parallel@20211122-r0?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:27edc8fd441ff62d3a172bc7800ce14c6c9d27295128ebf804fca1b9b6f56f55
+PackageAttributionText: LayerDiffID: sha256:fff445e4f9eb63c98d32e82e4ace4dc106fd7837afb9b44640a18101b578c90e
+
+##### Package: bats
+
+PackageName: bats
+SPDXID: SPDXRef-Package-eb38efa675d12ada
+PackageVersion: 1.8.0
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+ExternalRef: PACKAGE-MANAGER purl pkg:npm/bats@1.8.0
+PackageAttributionText: LayerDigest: sha256:cd6ee8fd8b725c18d6cc5ffe4d2f9f3e310a61d666e4e8dfb2d54ddfbcc20ac1
+PackageAttributionText: LayerDiffID: sha256:46b51193c92e5f489cd9d4d801b6405e73e519c7916e3786bd33f0ab767754df
+
+FileName: opt/bats/package.json
+SPDXID: SPDXRef-File-93d583e98b26ddde
+
+##### Package: perl
+
+PackageName: perl
+SPDXID: SPDXRef-Package-fd129a9591f5cff9
+PackageVersion: 5.34.0-r1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: perl 5.34.0-r1
+PackageLicenseConcluded: Artistic-Perl, GPL-1.0-or-later
+PackageLicenseDeclared: Artistic-Perl, GPL-1.0-or-later
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/perl@5.34.0-r1?distro=3.15.6
+PackageAttributionText: LayerDigest: sha256:27edc8fd441ff62d3a172bc7800ce14c6c9d27295128ebf804fca1b9b6f56f55
+PackageAttributionText: LayerDiffID: sha256:fff445e4f9eb63c98d32e82e4ace4dc106fd7837afb9b44640a18101b578c90e
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-f9fe1ec6e9b65a7f
+Relationship: SPDXRef-ContainerImage-f9fe1ec6e9b65a7f CONTAINS SPDXRef-OperatingSystem-189472cde0101cde
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-5f36f9f66c32c027
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-8a4ebf0a2b721caf
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-cab1380837e13ced
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-753d2697bb413d60
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-775544f07c9bd4bd
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-939d139910174f51
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-bc44c9bf2ad1b29e
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-1cdc73710fe7de57
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-2fdbd2974fb823c7
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-10074f0a3c52dfec
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-6870017ee2828071
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-1595995313c18ad2
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-9caac0ee6a8d42e0
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-91aae3161b6a82c9
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-226cde920526eb89
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-c0039df8f0483782
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-e23fe495d6b9197c
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-fd129a9591f5cff9
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-3fe496c1882ac43f
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-6758acfaa6d50841
+Relationship: SPDXRef-OperatingSystem-189472cde0101cde CONTAINS SPDXRef-Package-6cfc508e049d3a16
+Relationship: SPDXRef-ContainerImage-f9fe1ec6e9b65a7f CONTAINS SPDXRef-Application-24f8a80152e2c0fc
+Relationship: SPDXRef-Application-24f8a80152e2c0fc CONTAINS SPDXRef-Package-eb38efa675d12ada
+

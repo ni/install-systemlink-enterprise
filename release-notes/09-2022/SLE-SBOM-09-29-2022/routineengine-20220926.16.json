@@ -1,0 +1,4484 @@
+{
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"creationInfo": {
+		"created": "2022-09-29T21:00:02.802388Z",
+		"creators": [
+			"Tool: trivy",
+			"Organization: aquasecurity"
+		]
+	},
+	"dataLicense": "CC0-1.0",
+	"documentNamespace": "http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16-037e5632-3390-49bd-86b9-b7315a50f038",
+	"name": "niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16",
+	"packages": [
+		{
+			"SPDXID": "SPDXRef-Application-621c2d12e44843e1",
+			"filesAnalyzed": false,
+			"name": "dotnet-core",
+			"sourceInfo": "usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.9/Microsoft.AspNetCore.App.deps.json"
+		},
+		{
+			"SPDXID": "SPDXRef-Application-86688df0be01afa1",
+			"filesAnalyzed": false,
+			"name": "dotnet-core",
+			"sourceInfo": "usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.9/Microsoft.NETCore.App.deps.json"
+		},
+		{
+			"SPDXID": "SPDXRef-Application-cfbddf7a3796ff12",
+			"filesAnalyzed": false,
+			"name": "dotnet-core",
+			"sourceInfo": "app/NationalInstruments.RoutineEngine.deps.json"
+		},
+		{
+			"SPDXID": "SPDXRef-ContainerImage-4f817573aaea668d",
+			"attributionTexts": [
+				"SchemaVersion: 2",
+				"ImageID: sha256:cae2d2c17b047c9b940822f9bad36c47a5febb5cf51e99138f76ac5511dbe43e",
+				"RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine@sha256:2e4e4bf17e15a83dcf5aa817420c245707edd8a4c22621576e466993f6b3fa8c",
+				"DiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7",
+				"DiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225",
+				"DiffID: sha256:f2d2d69f709e673de6c95124c664791aafcd4521cbdf60ff917d05dac62654b5",
+				"DiffID: sha256:68335ec7248b93b10e9e6a1e0abd94c32ee3a2ec5d6139ca5943d7dfc333c634",
+				"DiffID: sha256:ed5457c40c5032e50189e7d0a9b1e2dd156e59b097a59dbe77a209ca603bf668",
+				"DiffID: sha256:e427606a537849320a8b738c8ffbe3f5d8d2fdc486ad25ee125e10613cffa36a",
+				"DiffID: sha256:bee0d954b7bc0c72f9d4f19d9c5b61925dd6ca74ff9668b800df9cb820103098",
+				"DiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f",
+				"RepoTag: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:oci/routineengine@sha256:2e4e4bf17e15a83dcf5aa817420c245707edd8a4c22621576e466993f6b3fa8c?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fni%2Fsystemlink%2Froutineengine\u0026arch=amd64",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"name": "niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/routineengine:20220926.16"
+		},
+		{
+			"SPDXID": "SPDXRef-OperatingSystem-16ffdefd5b3bd47",
+			"filesAnalyzed": false,
+			"name": "alpine",
+			"versionInfo": "3.16.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-10bc660353489095",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging.Debug@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging.Debug",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-10c7c96159129bea",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Buffers@4.5.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Buffers",
+			"versionInfo": "4.5.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-11500d7daa833e51",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.Handles@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.Handles",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-133f65fd32778e4",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/keyutils-libs@1.6.3-r1?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0, LGPL-2.0-or-later",
+			"licenseDeclared": "GPL-2.0, LGPL-2.0-or-later",
+			"name": "keyutils-libs",
+			"sourceInfo": "built package from: keyutils 1.6.3-r1",
+			"versionInfo": "1.6.3-r1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-180c8767cf82c006",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Resources.ResourceManager@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Resources.ResourceManager",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-1b1177698b45825f",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-1b3c9eaa11a17301",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/NI.CSharp.Analyzers@2.0.4",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "NI.CSharp.Analyzers",
+			"versionInfo": "2.0.4"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-1c9f757e08c67536",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/scanelf@1.3.4-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "scanelf",
+			"sourceInfo": "built package from: pax-utils 1.3.4-r0",
+			"versionInfo": "1.3.4-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-1f6453af8fb45b7d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.X509Certificates@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.X509Certificates",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-20eb87f97f7feb4b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Text.RegularExpressions@4.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Text.RegularExpressions",
+			"versionInfo": "4.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2158734ef9c96582",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.CodeQuality.Analyzers@2.9.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.CodeQuality.Analyzers",
+			"versionInfo": "2.9.10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-253c22c8c1d9bea5",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.AppContext@4.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.AppContext",
+			"versionInfo": "4.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-266bb5e697a0d76d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Globalization.Calendars@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Globalization.Calendars",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2a0ceabdb2e7e12c",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Dynamic.Runtime@4.0.11",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Dynamic.Runtime",
+			"versionInfo": "4.0.11"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2b30ba94225c303d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Routing.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Routing.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2c3882041685b41b",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/musl@1.2.3-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MIT",
+			"licenseDeclared": "MIT",
+			"name": "musl",
+			"sourceInfo": "built package from: musl 1.2.3-r0",
+			"versionInfo": "1.2.3-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2c60a5cc004d21a6",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging.Abstractions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging.Abstractions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2e15c16a87803547",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/NationalInstruments.SystemLink.EventBus@1.119.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "NationalInstruments.SystemLink.EventBus",
+			"versionInfo": "1.119.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-2fdac164d25a6a55",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Authorization.Policy@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Authorization.Policy",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-30284e001a0c44f1",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/krb5-libs@1.19.3-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MIT",
+			"licenseDeclared": "MIT",
+			"name": "krb5-libs",
+			"sourceInfo": "built package from: krb5 1.19.3-r0",
+			"versionInfo": "1.19.3-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-305175990c325f80",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/krb5-conf@1.0-r2?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MIT",
+			"licenseDeclared": "MIT",
+			"name": "krb5-conf",
+			"sourceInfo": "built package from: krb5-conf 1.0-r2",
+			"versionInfo": "1.0-r2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-306ceee3dfd92aea",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Hosting.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Hosting.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-30d133479c965be2",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-3130fc56e7575bd3",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Xml.XDocument@4.0.11",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Xml.XDocument",
+			"versionInfo": "4.0.11"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-317f7952bb627d41",
+			"attributionTexts": [
+				"LayerDigest: sha256:aed8e91ef80d40f670fd007854d1e0c0079685c1b825092c80720e9456a0da83",
+				"LayerDiffID: sha256:68335ec7248b93b10e9e6a1e0abd94c32ee3a2ec5d6139ca5943d7dfc333c634"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.App.Runtime.linux-musl-x64@6.0.9",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+			"versionInfo": "6.0.9"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-32766f56f138c7cd",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.native.System.Net.Http@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.native.System.Net.Http",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-335584b48f23e8f7",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection.Emit@4.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection.Emit",
+			"versionInfo": "4.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-35409091823a4000",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.AccessControl@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.AccessControl",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-3717f33b8a0f96a2",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Encoding@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Encoding",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-3ab9d44d0fe2fd9d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Diagnostics.Tracing@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Diagnostics.Tracing",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-3bba7e4804286a56",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/RabbitMQ.Client@6.4.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "RabbitMQ.Client",
+			"versionInfo": "6.4.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-3c6ccf124c846df9",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Collections@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Collections",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-401d3c03eee2f433",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.IO.FileSystem.Primitives@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.IO.FileSystem.Primitives",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-41303583fe60a2e2",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Net.Primitives@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Net.Primitives",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-42c88754bf10bc2b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Hosting@6.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Hosting",
+			"versionInfo": "6.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-43055220bd4c4e34",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/zlib@1.2.12-r3?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "Zlib",
+			"licenseDeclared": "Zlib",
+			"name": "zlib",
+			"sourceInfo": "built package from: zlib 1.2.12-r3",
+			"versionInfo": "1.2.12-r3"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-4348a997421416c7",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Text.Encoding.Extensions@4.0.11",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Text.Encoding.Extensions",
+			"versionInfo": "4.0.11"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-450cb335c5d8329b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Net.Http.Headers@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Net.Http.Headers",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-46340f23e207c75",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Authentication.Core@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Authentication.Core",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-4764bb2b2e18ee83",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.DotNet.PlatformAbstractions@2.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.DotNet.PlatformAbstractions",
+			"versionInfo": "2.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-48963d9f41df600e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Routing@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Routing",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-49ca0ecaa5c0a28b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.InteropServices@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.InteropServices",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-49ef6abc25e7d9da",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-4af8dd683301849",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.DependencyModel@2.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.DependencyModel",
+			"versionInfo": "2.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-4b66b8b6bed0f42b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.CompilerServices.Unsafe@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.CompilerServices.Unsafe",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-4f696c26f173c431",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.IO@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.IO",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-511f24f8f5ca0e74",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection.Emit.Lightweight@4.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection.Emit.Lightweight",
+			"versionInfo": "4.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-520ee253b1c3eaa5",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Windows.Extensions@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Windows.Extensions",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-54d4ac6298160597",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Diagnostics.Tools@4.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Diagnostics.Tools",
+			"versionInfo": "4.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-54f1207843944732",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Collections.Concurrent@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Collections.Concurrent",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-558d021893e01fcd",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libcrypto1.1@1.1.1q-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "OpenSSL",
+			"licenseDeclared": "OpenSSL",
+			"name": "libcrypto1.1",
+			"sourceInfo": "built package from: openssl 1.1.1q-r0",
+			"versionInfo": "1.1.1q-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-56994166fd65ff59",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Cryptography.Internal@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Cryptography.Internal",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-57a5ee1e0e285180",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Linq.Dynamic.Core@1.2.19",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Linq.Dynamic.Core",
+			"versionInfo": "1.2.19"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-57f40da367f46136",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-588a7adf2d1fbee0",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-59487bd6804344cd",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.DataProtection.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.DataProtection.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-598946317e850c",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.ProtectedData@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.ProtectedData",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-5a71ed3f9f9d34d6",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.ObjectPool@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.ObjectPool",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-5bd949ea3f5f247d",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libcom_err@1.46.5-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0, LGPL-2.0-or-later, BSD-3-Clause, MIT",
+			"licenseDeclared": "GPL-2.0, LGPL-2.0-or-later, BSD-3-Clause, MIT",
+			"name": "libcom_err",
+			"sourceInfo": "built package from: e2fsprogs 1.46.5-r0",
+			"versionInfo": "1.46.5-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-5d38876a6664c278",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-5de10edb2a3545a6",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Text.Json@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Text.Json",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-616cfadad31fca94",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Configuration.ConfigurationManager@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Configuration.ConfigurationManager",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-61f182a242888de1",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-6238d421ceb7b1ab",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.ObjectModel@4.0.12",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.ObjectModel",
+			"versionInfo": "4.0.12"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-63cff5f470e94655",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.Extensions@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.Extensions",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-671b071a2e6334f0",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/apk-tools@2.12.9-r3?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "apk-tools",
+			"sourceInfo": "built package from: apk-tools 2.12.9-r3",
+			"versionInfo": "2.12.9-r3"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-67dfc707ae49daed",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/NationalInstruments.SystemLink.Auth@1.137.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "NationalInstruments.SystemLink.Auth",
+			"versionInfo": "1.137.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-68acfdea372b037e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.UserSecrets@6.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.UserSecrets",
+			"versionInfo": "6.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-6a43aca12df5107a",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Drawing.Common@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Drawing.Common",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-6a4ac54f591926dc",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Options@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Options",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-6b7ab4739bd113a0",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/alpine-keys@2.4-r1?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MIT",
+			"licenseDeclared": "MIT",
+			"name": "alpine-keys",
+			"sourceInfo": "built package from: alpine-keys 2.4-r1",
+			"versionInfo": "2.4-r1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-6dfd6c18839cc22c",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Mvc.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Mvc.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-6f3251b07bca5f60",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.native.System@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.native.System",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-70ca3aef5ee04bff",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libverto@0.3.2-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MIT",
+			"licenseDeclared": "MIT",
+			"name": "libverto",
+			"sourceInfo": "built package from: libverto 0.3.2-r0",
+			"versionInfo": "0.3.2-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-70f0aeb803a53c85",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.VisualStudio.Threading.Analyzers@16.3.52",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.VisualStudio.Threading.Analyzers",
+			"versionInfo": "16.3.52"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-74aafdc98109fc29",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/ca-certificates@20220614-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MPL-2.0, MIT",
+			"licenseDeclared": "MPL-2.0, MIT",
+			"name": "ca-certificates",
+			"sourceInfo": "built package from: ca-certificates 20220614-r0",
+			"versionInfo": "20220614-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7533eed27b62edc0",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.WebEncoders@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.WebEncoders",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-75bd0f6d89a1027d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection.Extensions@4.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection.Extensions",
+			"versionInfo": "4.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7651b36bd80e8da0",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Mvc.Core@2.2.5",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Mvc.Core",
+			"versionInfo": "2.2.5"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-76ff85f887b1ca59",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.DataProtection@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.DataProtection",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-77d9144ba03ed632",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/musl-utils@1.2.3-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MIT, BSD-3-Clause, GPL-2.0",
+			"licenseDeclared": "MIT, BSD-3-Clause, GPL-2.0",
+			"name": "musl-utils",
+			"sourceInfo": "built package from: musl 1.2.3-r0",
+			"versionInfo": "1.2.3-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-78067230147a592e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.CommandLine@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.CommandLine",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-781231662fb6c2ca",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Authentication.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Authentication.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7bcd003bdf86cb2e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Polly.Contrib.WaitAndRetry@1.1.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Polly.Contrib.WaitAndRetry",
+			"versionInfo": "1.1.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7bfbb758120ab8bf",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Text.Encoding@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Text.Encoding",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7c75e4376661d237",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Threading@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Threading",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7d6d1ccbfe232ebb",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Diagnostics.Debug@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Diagnostics.Debug",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7dc0152a390112f2",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection.Emit.ILGeneration@4.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection.Emit.ILGeneration",
+			"versionInfo": "4.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7f636779ce1df363",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.Numerics@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.Numerics",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-7ff495af3a30507",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.DependencyInjection@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.DependencyInjection",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-82b8ac690661ddfb",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Http@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Http",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-858f0769852af8d7",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.Json@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.Json",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-892f7673badcae89",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Cng@4.5.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Cng",
+			"versionInfo": "4.5.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-898cf0dce1655013",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Options.ConfigurationExtensions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Options.ConfigurationExtensions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-8bbc28614218ed8",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Diagnostics.DiagnosticSource@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Diagnostics.DiagnosticSource",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-8cf1fc11fe58dd09",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Hosting.Abstractions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Hosting.Abstractions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-8f270af8ca38909",
+			"attributionTexts": [
+				"LayerDigest: sha256:b6e19b5e6f7fcd59f109b5e453904c8d17b6e07bbdab3fa903f1b05f952209ab",
+				"LayerDiffID: sha256:f2d2d69f709e673de6c95124c664791aafcd4521cbdf60ff917d05dac62654b5"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.NETCore.App.Runtime.linux-musl-x64@6.0.9",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.NETCore.App.Runtime.linux-musl-x64",
+			"versionInfo": "6.0.9"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-92511b6f64cfe3d9",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.OpenSsl@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-94578fa10fca4f92",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Threading.Tasks@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Threading.Tasks",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-99d0ca59f3320644",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Algorithms@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Algorithms",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9a7d62284487169f",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.EnvironmentVariables@6.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+			"versionInfo": "6.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9b43fd861da2cf33",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.DependencyInjection.Abstractions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9b7d5591fb78c773",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Threading.Channels@4.7.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Threading.Channels",
+			"versionInfo": "4.7.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9ce94145d309397",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Polly@7.2.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Polly",
+			"versionInfo": "7.2.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9dec1bb961e85096",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/StyleCop.Analyzers@1.1.118",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "StyleCop.Analyzers",
+			"versionInfo": "1.1.118"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9ec7bd7b80d96111",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-9ed5c8ee33e0b28e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Text.Encodings.Web@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Text.Encodings.Web",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-a0e274f536922fcc",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Pkcs@4.5.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Pkcs",
+			"versionInfo": "4.5.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-a19af572adc5ced3",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-a26b5a52b75cd075",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/NationalInstruments.SystemLink.ServiceBase@1.124.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "NationalInstruments.SystemLink.ServiceBase",
+			"versionInfo": "1.124.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-a3fa55b6a651eac7",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Csp@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Csp",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-a42f4397f40bbfd7",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.ResponseCaching.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.ResponseCaching.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-a684064aec345b92",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Win32.Registry@4.5.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Win32.Registry",
+			"versionInfo": "4.5.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ac0e6db264799b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.WebUtilities@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.WebUtilities",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ad5d51abae23b199",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Win32.SystemEvents@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Win32.SystemEvents",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ae1e5be4a78c13d1",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/ca-certificates-bundle@20220614-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "MPL-2.0, MIT",
+			"licenseDeclared": "MPL-2.0, MIT",
+			"name": "ca-certificates-bundle",
+			"sourceInfo": "built package from: ca-certificates 20220614-r0",
+			"versionInfo": "20220614-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b0ae3c78eb14e421",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Primitives@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Primitives",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b25646bacfc4ae07",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Roslynator.Analyzers@2.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Roslynator.Analyzers",
+			"versionInfo": "2.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b62bd60aaf535504",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b6c3787ab0c55a53",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Linq@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Linq",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b6d7558867c7f57e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Hosting.Server.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b7230cb5cd2ac76e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.VisualStudio.Azure.Containers.Tools.Targets@1.15.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets",
+			"versionInfo": "1.15.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b74ff0432e424d37",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Xml@4.5.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Xml",
+			"versionInfo": "4.5.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-b9b73a8df6c20b7b",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/alpine-baselayout@3.2.0-r22?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "alpine-baselayout",
+			"sourceInfo": "built package from: alpine-baselayout 3.2.0-r22",
+			"versionInfo": "3.2.0-r22"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-bc0bbc07291c4d4c",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.Abstractions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.Abstractions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-bd4ee9201a64810a",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/NationalInstruments.SystemLink.Logging@1.137.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "NationalInstruments.SystemLink.Logging",
+			"versionInfo": "1.137.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-be450ffae846809e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Permissions@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Permissions",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-be6d417be509a8dc",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.NetCore.Analyzers@2.9.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.NetCore.Analyzers",
+			"versionInfo": "2.9.10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c034912fe5d0a38b",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libstdc++@11.2.1_git20220219-r2?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0, LGPL-2.1-or-later",
+			"licenseDeclared": "GPL-2.0, LGPL-2.1-or-later",
+			"name": "libstdc++",
+			"sourceInfo": "built package from: gcc 11.2.1_git20220219-r2",
+			"versionInfo": "11.2.1_git20220219-r2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c0692196c816647d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.NetFramework.Analyzers@2.9.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.NetFramework.Analyzers",
+			"versionInfo": "2.9.10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c09ff063ad0631ad",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c31c56d602de603e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c3f180e18574c7b5",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.InteropServices.RuntimeInformation@4.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.InteropServices.RuntimeInformation",
+			"versionInfo": "4.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c61428d47c7d3126",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.native.System.Security.Cryptography.Apple@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.native.System.Security.Cryptography.Apple",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-c70aa3f328869f7c",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.FileSystemGlobbing@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.FileSystemGlobbing",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-cc33aa51c56587a7",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Cryptography.Primitives@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Cryptography.Primitives",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ce985a323b45efac",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Net.Http@4.3.4",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Net.Http",
+			"versionInfo": "4.3.4"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-cee252df8afc4233",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.FileExtensions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.FileExtensions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d14948b95c37107e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.Caching@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.Caching",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d1e5631e08c20a4",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Http.Abstractions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Http.Abstractions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d2ed8cf9ea989e82",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection.Primitives@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection.Primitives",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d5ea18f582aff796",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.NETCore.Targets@1.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.NETCore.Targets",
+			"versionInfo": "1.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d676d22861320602",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging.Console@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging.Console",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d7078c7afc81154e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Globalization.Extensions@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Globalization.Extensions",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d72d8bc03c3a9f44",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.FileProviders.Abstractions@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.FileProviders.Abstractions",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-d9e0a3ee5bd3a30b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.CodeAnalysis.FxCopAnalyzers@2.9.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.CodeAnalysis.FxCopAnalyzers",
+			"versionInfo": "2.9.10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-dc4884fc557c03f6",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Authorization@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Authorization",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-dcdeacd832dfc2e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-dcfbe1f5ac4b2010",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Http@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Http",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ddfb0b1c3e5afc04",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Reflection.TypeExtensions@4.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Reflection.TypeExtensions",
+			"versionInfo": "4.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-deb51f532918ce94",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libintl@0.21-r2?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "LGPL-2.1-or-later",
+			"licenseDeclared": "LGPL-2.1-or-later",
+			"name": "libintl",
+			"sourceInfo": "built package from: gettext 0.21-r2",
+			"versionInfo": "0.21-r2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-e15ba312ae44a825",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Runtime.Serialization.Primitives@4.1.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Runtime.Serialization.Primitives",
+			"versionInfo": "4.1.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-e24ed2d78ad9c2b0",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-e34c0da4f9eae61a",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.NETCore.Platforms@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.NETCore.Platforms",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-e4008ecaa6c1d39a",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "BSD-2-Clause, BSD-3-Clause",
+			"licenseDeclared": "BSD-2-Clause, BSD-3-Clause",
+			"name": "libc-utils",
+			"sourceInfo": "built package from: libc-dev 0.7.2-r3",
+			"versionInfo": "0.7.2-r3"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-e96020d9856468f",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/ssl_client@1.35.0-r17?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "ssl_client",
+			"sourceInfo": "built package from: busybox 1.35.0-r17",
+			"versionInfo": "1.35.0-r17"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-eab04bc506ca1930",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libssl1.1@1.1.1q-r0?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "OpenSSL",
+			"licenseDeclared": "OpenSSL",
+			"name": "libssl1.1",
+			"sourceInfo": "built package from: openssl 1.1.1q-r0",
+			"versionInfo": "1.1.1q-r0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-eacc85067d695100",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Authentication@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Authentication",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-eae284b1b4fd9241",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Xml.ReaderWriter@4.0.11",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Xml.ReaderWriter",
+			"versionInfo": "4.0.11"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-eb456042a7d79917",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ec79b93b9d566134",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/FluentValidation@10.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "FluentValidation",
+			"versionInfo": "10.1.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ed849f8b6273d723",
+			"attributionTexts": [
+				"LayerDigest: sha256:c020f65418fd36509d1f650dfc0b93a170930612338b4ae5f3e07360c921076b",
+				"LayerDiffID: sha256:112c16b6b202e89e08318ffd65c93af786049c4b79ac5a75e6cd6129dd32b225"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/libgcc@11.2.1_git20220219-r2?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0, LGPL-2.1-or-later",
+			"licenseDeclared": "GPL-2.0, LGPL-2.1-or-later",
+			"name": "libgcc",
+			"sourceInfo": "built package from: gcc 11.2.1_git20220219-r2",
+			"versionInfo": "11.2.1_git20220219-r2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ed8d5e5a14ba7ff",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.IO.FileSystem@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.IO.FileSystem",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-edf17e75acabfa4a",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Http.Features@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Http.Features",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ef09e7ffe153642e",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Threading.Tasks.Extensions@4.5.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Threading.Tasks.Extensions",
+			"versionInfo": "4.5.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ef2157248c65f048",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Configuration.Binder@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Configuration.Binder",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f13e4c5ef614557",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging.EventSource@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging.EventSource",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f17dae26bc289bf5",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.CodeAnalysis.VersionCheckAnalyzer@2.9.10",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.CodeAnalysis.VersionCheckAnalyzer",
+			"versionInfo": "2.9.10"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f3da42a45a5eec5d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Newtonsoft.Json@9.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Newtonsoft.Json",
+			"versionInfo": "9.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f45f30724ed60cf5",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.AspNetCore.Http.Extensions@2.2.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.AspNetCore.Http.Extensions",
+			"versionInfo": "2.2.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f4c4437e476d73d9",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging.Configuration@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging.Configuration",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f4c48528e285dfb0",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.Logging.EventLog@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.Logging.EventLog",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f55a39846a8dc061",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/busybox@1.35.0-r17?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "busybox",
+			"sourceInfo": "built package from: busybox 1.35.0-r17",
+			"versionInfo": "1.35.0-r17"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f5779c13bb6ef291",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Diagnostics.EventLog@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Diagnostics.EventLog",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f7efe27468d0f37d",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Memory@4.5.4",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Memory",
+			"versionInfo": "4.5.4"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f8dd30594bccddc0",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+			"versionInfo": "4.3.2"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-f949457d4b807c7c",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Globalization@4.3.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Globalization",
+			"versionInfo": "4.3.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-fa9626b9f04205ba",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.CSharp@4.0.1",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.CSharp",
+			"versionInfo": "4.0.1"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-fab92f85b0031558",
+			"attributionTexts": [
+				"LayerDigest: sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49",
+				"LayerDiffID: sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:apk/alpine/alpine-baselayout-data@3.2.0-r22?distro=3.16.2",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "GPL-2.0",
+			"licenseDeclared": "GPL-2.0",
+			"name": "alpine-baselayout-data",
+			"sourceInfo": "built package from: alpine-baselayout 3.2.0-r22",
+			"versionInfo": "3.2.0-r22"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-fd019f706a1d3a7b",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Security.Principal.Windows@5.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Security.Principal.Windows",
+			"versionInfo": "5.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-fef9d5946d3db0a2",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/Microsoft.Extensions.FileProviders.Physical@6.0.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "Microsoft.Extensions.FileProviders.Physical",
+			"versionInfo": "6.0.0"
+		},
+		{
+			"SPDXID": "SPDXRef-Package-ff27cd8b50fbe3f2",
+			"attributionTexts": [
+				"LayerDigest: sha256:6fbf3eb7b149fef5b05c3fa27b920745f9e26aad983e6b622c9e2db98c873407",
+				"LayerDiffID: sha256:bcdc048e2d783b7775d2460672fdbf333140fd4515f491db8e4552c9ebc7258f"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:dotnet-core/System.Linq.Expressions@4.1.0",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"licenseConcluded": "NONE",
+			"licenseDeclared": "NONE",
+			"name": "System.Linq.Expressions",
+			"versionInfo": "4.1.0"
+		}
+	],
+	"relationships": [
+		{
+			"relatedSpdxElement": "SPDXRef-ContainerImage-4f817573aaea668d",
+			"relationshipType": "DESCRIBE",
+			"spdxElementId": "SPDXRef-DOCUMENT"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-OperatingSystem-16ffdefd5b3bd47",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-ContainerImage-4f817573aaea668d"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b9b73a8df6c20b7b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-fab92f85b0031558",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-6b7ab4739bd113a0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-671b071a2e6334f0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f55a39846a8dc061",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-74aafdc98109fc29",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ae1e5be4a78c13d1",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-133f65fd32778e4",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-305175990c325f80",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-30284e001a0c44f1",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-e4008ecaa6c1d39a",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-5bd949ea3f5f247d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-558d021893e01fcd",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ed849f8b6273d723",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-deb51f532918ce94",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-eab04bc506ca1930",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c034912fe5d0a38b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-70ca3aef5ee04bff",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2c3882041685b41b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-77d9144ba03ed632",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-1c9f757e08c67536",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-e96020d9856468f",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-43055220bd4c4e34",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-OperatingSystem-16ffdefd5b3bd47"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Application-86688df0be01afa1",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-ContainerImage-4f817573aaea668d"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-8f270af8ca38909",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-86688df0be01afa1"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Application-621c2d12e44843e1",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-ContainerImage-4f817573aaea668d"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-317f7952bb627d41",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-621c2d12e44843e1"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Application-cfbddf7a3796ff12",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-ContainerImage-4f817573aaea668d"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ec79b93b9d566134",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-eacc85067d695100",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-781231662fb6c2ca",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-46340f23e207c75",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-dc4884fc557c03f6",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2fdac164d25a6a55",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-56994166fd65ff59",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-76ff85f887b1ca59",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-59487bd6804344cd",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-306ceee3dfd92aea",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b6d7558867c7f57e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-dcfbe1f5ac4b2010",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d1e5631e08c20a4",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f45f30724ed60cf5",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-edf17e75acabfa4a",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-6dfd6c18839cc22c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7651b36bd80e8da0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-a42f4397f40bbfd7",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-48963d9f41df600e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2b30ba94225c303d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ac0e6db264799b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-fa9626b9f04205ba",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d9e0a3ee5bd3a30b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f17dae26bc289bf5",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2158734ef9c96582",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-4764bb2b2e18ee83",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-e24ed2d78ad9c2b0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-bc0bbc07291c4d4c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ef2157248c65f048",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-78067230147a592e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9a7d62284487169f",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-cee252df8afc4233",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-858f0769852af8d7",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-68acfdea372b037e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7ff495af3a30507",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9b43fd861da2cf33",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-4af8dd683301849",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d72d8bc03c3a9f44",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-fef9d5946d3db0a2",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c70aa3f328869f7c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-42c88754bf10bc2b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-8cf1fc11fe58dd09",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-82b8ac690661ddfb",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-eb456042a7d79917",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2c60a5cc004d21a6",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f4c4437e476d73d9",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d676d22861320602",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-10bc660353489095",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f4c48528e285dfb0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f13e4c5ef614557",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-5a71ed3f9f9d34d6",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-6a4ac54f591926dc",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-898cf0dce1655013",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b0ae3c78eb14e421",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7533eed27b62edc0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-e34c0da4f9eae61a",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d5ea18f582aff796",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-450cb335c5d8329b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-be6d417be509a8dc",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c0692196c816647d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b7230cb5cd2ac76e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-70f0aeb803a53c85",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-a684064aec345b92",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ad5d51abae23b199",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-1b3c9eaa11a17301",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-67dfc707ae49daed",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2e15c16a87803547",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-bd4ee9201a64810a",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-a26b5a52b75cd075",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f3da42a45a5eec5d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9ce94145d309397",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7bcd003bdf86cb2e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-3bba7e4804286a56",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b25646bacfc4ae07",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9dec1bb961e85096",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-253c22c8c1d9bea5",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-10c7c96159129bea",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-3c6ccf124c846df9",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-54f1207843944732",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-616cfadad31fca94",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7d6d1ccbfe232ebb",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-8bbc28614218ed8",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f5779c13bb6ef291",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-54d4ac6298160597",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-3ab9d44d0fe2fd9d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-6a43aca12df5107a",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-2a0ceabdb2e7e12c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f949457d4b807c7c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-266bb5e697a0d76d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d7078c7afc81154e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-4f696c26f173c431",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ed8d5e5a14ba7ff",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-401d3c03eee2f433",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b6c3787ab0c55a53",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-57a5ee1e0e285180",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ff27cd8b50fbe3f2",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f7efe27468d0f37d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ce985a323b45efac",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-41303583fe60a2e2",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-6238d421ceb7b1ab",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-1b1177698b45825f",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-335584b48f23e8f7",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7dc0152a390112f2",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-511f24f8f5ca0e74",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-75bd0f6d89a1027d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d2ed8cf9ea989e82",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ddfb0b1c3e5afc04",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-180c8767cf82c006",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-49ef6abc25e7d9da",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-d14948b95c37107e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-4b66b8b6bed0f42b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-63cff5f470e94655",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-11500d7daa833e51",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-49ca0ecaa5c0a28b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c3f180e18574c7b5",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7f636779ce1df363",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-e15ba312ae44a825",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-35409091823a4000",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-99d0ca59f3320644",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-892f7673badcae89",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-a3fa55b6a651eac7",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-3717f33b8a0f96a2",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-92511b6f64cfe3d9",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-a0e274f536922fcc",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-cc33aa51c56587a7",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-598946317e850c",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-1f6453af8fb45b7d",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b74ff0432e424d37",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-be450ffae846809e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-fd019f706a1d3a7b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7bfbb758120ab8bf",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-4348a997421416c7",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9ed5c8ee33e0b28e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-5de10edb2a3545a6",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-20eb87f97f7feb4b",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-7c75e4376661d237",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9b7d5591fb78c773",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-94578fa10fca4f92",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-ef09e7ffe153642e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-520ee253b1c3eaa5",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-eae284b1b4fd9241",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-3130fc56e7575bd3",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-5d38876a6664c278",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c31c56d602de603e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-30d133479c965be2",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-6f3251b07bca5f60",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-32766f56f138c7cd",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c61428d47c7d3126",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-57f40da367f46136",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-588a7adf2d1fbee0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-f8dd30594bccddc0",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-9ec7bd7b80d96111",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-dcdeacd832dfc2e",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-a19af572adc5ced3",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-b62bd60aaf535504",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-c09ff063ad0631ad",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		},
+		{
+			"relatedSpdxElement": "SPDXRef-Package-61f182a242888de1",
+			"relationshipType": "CONTAINS",
+			"spdxElementId": "SPDXRef-Application-cfbddf7a3796ff12"
+		}
+	],
+	"spdxVersion": "SPDX-2.2"
+}

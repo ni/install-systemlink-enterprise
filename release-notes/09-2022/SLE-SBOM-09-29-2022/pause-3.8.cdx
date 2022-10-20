@@ -1,0 +1,51 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:1f452a87-6fbb-4ae0-b976-8fbb7b08ebfc",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2022-09-29T14:21:31+00:00",
+    "tools": [
+      {
+        "vendor": "aquasecurity",
+        "name": "trivy",
+        "version": "0.32.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "pkg:oci/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fpause\u0026arch=amd64",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-ci/pause:3.8",
+      "purl": "pkg:oci/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fpause\u0026arch=amd64",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        },
+        {
+          "name": "aquasecurity:trivy:ImageID",
+          "value": "sha256:4873874c08efc72e9729683a83ffbb7502ee729e9a5ac097723806ea7fa13517"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoDigest",
+          "value": "niartifacts.jfrog.io/rnd-docker-ci/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:961e93cda9dd918dbe26aca24cccd6c5db05176850d2c53476d881df5d0d4816"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoTag",
+          "value": "niartifacts.jfrog.io/rnd-docker-ci/pause:3.8"
+        }
+      ]
+    }
+  },
+  "components": null,
+  "dependencies": [
+    {
+      "ref": "pkg:oci/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fpause\u0026arch=amd64"
+    }
+  ],
+  "vulnerabilities": []
+}

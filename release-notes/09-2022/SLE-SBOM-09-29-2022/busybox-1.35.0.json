@@ -1,0 +1,45 @@
+{
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"creationInfo": {
+		"created": "2022-09-29T20:59:36.173685Z",
+		"creators": [
+			"Tool: trivy",
+			"Organization: aquasecurity"
+		]
+	},
+	"dataLicense": "CC0-1.0",
+	"documentDescribes": [
+		"SPDXRef-ContainerImage-4001d956fcb82906"
+	],
+	"documentNamespace": "http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0-5c8d6659-6612-41e5-9efc-9bb0350885c2",
+	"name": "niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0",
+	"packages": [
+		{
+			"SPDXID": "SPDXRef-ContainerImage-4001d956fcb82906",
+			"attributionTexts": [
+				"SchemaVersion: 2",
+				"ImageID: sha256:8eb744de25204ff0d56f8197e43be8684f0ba3b7e25050a3c68d772632aab13f",
+				"RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/busybox@sha256:80548a8d85fa32ce25b126657e29e6caf92ce8aa6b4a0bb5708c58a8d6a751f3",
+				"DiffID: sha256:98b8e9422b95d82ef10e913dd6a5444fe910c8505984648555bac770d8a98936",
+				"RepoTag: niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0"
+			],
+			"externalRefs": [
+				{
+					"referenceCategory": "PACKAGE-MANAGER",
+					"referenceLocator": "pkg:oci/busybox@sha256:80548a8d85fa32ce25b126657e29e6caf92ce8aa6b4a0bb5708c58a8d6a751f3?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fbusybox\u0026arch=amd64",
+					"referenceType": "purl"
+				}
+			],
+			"filesAnalyzed": false,
+			"name": "niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0"
+		}
+	],
+	"relationships": [
+		{
+			"relatedSpdxElement": "SPDXRef-ContainerImage-4001d956fcb82906",
+			"relationshipType": "DESCRIBE",
+			"spdxElementId": "SPDXRef-DOCUMENT"
+		}
+	],
+	"spdxVersion": "SPDX-2.2"
+}

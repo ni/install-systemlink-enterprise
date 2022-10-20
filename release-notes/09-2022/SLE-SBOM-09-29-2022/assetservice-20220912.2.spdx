@@ -1,0 +1,3690 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/assetservice:20220912.2
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/assetservice:20220912.2-32e17e37-df77-4494-8a14-f55680f41d17
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:43.061526Z
+
+##### Package: dotnet-core
+
+PackageName: dotnet-core
+SPDXID: SPDXRef-Application-2d0ae03c24e8ed3
+FilesAnalyzed: false
+PackageSourceInfo: app/NationalInstruments.AssetService.WebApi.deps.json
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/assetservice:20220912.2
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/assetservice:20220912.2
+SPDXID: SPDXRef-ContainerImage-722bbd8bc7183cc
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/assetservice@sha256:69cd4de9b3608dbf1d50eb7f236734a7e33d5236d5240676a02e67f65767e599?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fni%2Fsystemlink%2Fassetservice&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:2cfda2c7ac12f897dd6a874b2f2d08e01149b8a24237fdf5367d8593e7f9e219
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/assetservice@sha256:69cd4de9b3608dbf1d50eb7f236734a7e33d5236d5240676a02e67f65767e599
+PackageAttributionText: DiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+PackageAttributionText: DiffID: sha256:e546ea1f99de66d4b06c794a2249370cfde3ebd1dda19884d220dccb90abaea8
+PackageAttributionText: DiffID: sha256:e86d584f18821930c91f5b7feeae3497ec45380aeea8721be18743e622062d27
+PackageAttributionText: DiffID: sha256:fde839282ef81d5e3f936840aa982fdb93c59102c1b2dbf3902d0c7f1d391a6a
+PackageAttributionText: DiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+PackageAttributionText: DiffID: sha256:f1fce122bb9ea6a79f2b5d8b82851c5ade02c9325c6c0e161fde36ecb7ff86c2
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/ni/systemlink/assetservice:20220912.2
+
+##### Package: ubuntu
+
+PackageName: ubuntu
+SPDXID: SPDXRef-OperatingSystem-1788cd15e606d8ee
+PackageVersion: 20.04
+FilesAnalyzed: false
+
+##### Package: System.AppContext
+
+PackageName: System.AppContext
+SPDXID: SPDXRef-Package-12ea7d7fc503962f
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.AppContext@4.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: AutoMapper
+
+PackageName: AutoMapper
+SPDXID: SPDXRef-Package-12f2f567d8f634ed
+PackageVersion: 10.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/AutoMapper@10.1.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Windows.Extensions
+
+PackageName: System.Windows.Extensions
+SPDXID: SPDXRef-Package-1446edc9be4c38f3
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Windows.Extensions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.Logging.Abstractions
+
+PackageName: Microsoft.Extensions.Logging.Abstractions
+SPDXID: SPDXRef-Package-1584c6e7e2ba44c5
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging.Abstractions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Runtime
+
+PackageName: runtime.any.System.Runtime
+SPDXID: SPDXRef-Package-15ace38ae0eeb489
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Runtime@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libbz2-1.0
+
+PackageName: libbz2-1.0
+SPDXID: SPDXRef-Package-15d3ebd218cb750c
+PackageVersion: 1.0.8-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bzip2 1.0.8-2
+PackageLicenseConcluded: BSD-variant, GPL-2.0
+PackageLicenseDeclared: BSD-variant, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libbz2-1.0@1.0.8-2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libpcre3
+
+PackageName: libpcre3
+SPDXID: SPDXRef-Package-163ead0da8909e05
+PackageVersion: 2:8.39-12ubuntu0.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pcre3 2:8.39-12ubuntu0.1
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libpcre3@2:8.39-12ubuntu0.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.Http.Features
+
+PackageName: Microsoft.AspNetCore.Http.Features
+SPDXID: SPDXRef-Package-168f8079a81deb86
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http.Features@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Reflection.Primitives
+
+PackageName: runtime.any.System.Reflection.Primitives
+SPDXID: SPDXRef-Package-17e2182398e3ed82
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Reflection.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Text.Json
+
+PackageName: System.Text.Json
+SPDXID: SPDXRef-Package-18e8f80a1cdeba0e
+PackageVersion: 5.0.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Json@5.0.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Runtime.Handles
+
+PackageName: runtime.any.System.Runtime.Handles
+SPDXID: SPDXRef-Package-199e7cfd270fb542
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Runtime.Handles@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Newtonsoft.Json
+
+PackageName: Newtonsoft.Json
+SPDXID: SPDXRef-Package-1bb3d0ce8dd7d131
+PackageVersion: 9.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Newtonsoft.Json@9.0.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Http
+
+PackageName: Microsoft.AspNetCore.Http
+SPDXID: SPDXRef-Package-1bcda5da4127a111
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libunistring2
+
+PackageName: libunistring2
+SPDXID: SPDXRef-Package-1bd76d328f4c5094
+PackageVersion: 0.9.10-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libunistring 0.9.10-2
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0, FreeSoftware, GPL-2+ with distribution exception, GPL-3.0, GFDL-1.2+, MIT, GFDL-1.2
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0, FreeSoftware, GPL-2+ with distribution exception, GPL-3.0, GFDL-1.2+, MIT, GFDL-1.2
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libunistring2@0.9.10-2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: ca-certificates
+
+PackageName: ca-certificates
+SPDXID: SPDXRef-Package-1c6383c2fc965cc4
+PackageVersion: 20211016~20.04.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ca-certificates 20211016~20.04.1
+PackageLicenseConcluded: GPL-2.0, MPL-2.0
+PackageLicenseDeclared: GPL-2.0, MPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/ca-certificates@20211016~20.04.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:570c8274b679e974dc1f93479c9b377db98e3412d29a3f5abcfe7552235ec9fa
+PackageAttributionText: LayerDiffID: sha256:fde839282ef81d5e3f936840aa982fdb93c59102c1b2dbf3902d0c7f1d391a6a
+
+##### Package: System.Security.Cryptography.Algorithms
+
+PackageName: System.Security.Cryptography.Algorithms
+SPDXID: SPDXRef-Package-1c71f796da73801f
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Algorithms@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libssl1.1
+
+PackageName: libssl1.1
+SPDXID: SPDXRef-Package-2221f322213b4db6
+PackageVersion: 1.1.1f-1ubuntu2.16
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1f-1ubuntu2.16
+PackageLicenseConcluded: OpenSSL
+PackageLicenseDeclared: OpenSSL
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libssl1.1@1.1.1f-1ubuntu2.16?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:570c8274b679e974dc1f93479c9b377db98e3412d29a3f5abcfe7552235ec9fa
+PackageAttributionText: LayerDiffID: sha256:fde839282ef81d5e3f936840aa982fdb93c59102c1b2dbf3902d0c7f1d391a6a
+
+##### Package: Microsoft.CodeAnalysis.FxCopAnalyzers
+
+PackageName: Microsoft.CodeAnalysis.FxCopAnalyzers
+SPDXID: SPDXRef-Package-2244bb196ddfe321
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CodeAnalysis.FxCopAnalyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libcrypt1
+
+PackageName: libcrypt1
+SPDXID: SPDXRef-Package-234f5a4feba9993e
+PackageVersion: 1:4.4.10-10ubuntu4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libxcrypt 1:4.4.10-10ubuntu4
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libcrypt1@1:4.4.10-10ubuntu4?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: bzip2
+
+PackageName: bzip2
+SPDXID: SPDXRef-Package-24031aff47a8fe53
+PackageVersion: 1.0.8-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bzip2 1.0.8-2
+PackageLicenseConcluded: BSD-variant, GPL-2.0
+PackageLicenseDeclared: BSD-variant, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/bzip2@1.0.8-2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: perl-base
+
+PackageName: perl-base
+SPDXID: SPDXRef-Package-24540fe8ff1759c7
+PackageVersion: 5.30.0-9ubuntu0.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: perl 5.30.0-9ubuntu0.2
+PackageLicenseConcluded: GPL-1.0, Artistic, Expat, REGCOMP, GPL-2.0-with-bison-exception, Unicode, BZIP, Zlib, GPL-2.0, RRA-KEEP-THIS-NOTICE, BSD-3-clause-with-weird-numbering, CC0-1.0, TEXT-TABS, BSD-4-clause-POWERDOG, BSD-3-clause-GENERIC, BSD-3-Clause, SDBM-PUBLIC-DOMAIN, DONT-CHANGE-THE-GPL, Artistic-dist, LGPL-2.1, Artistic-2, HSIEH-DERIVATIVE, HSIEH-BSD
+PackageLicenseDeclared: GPL-1.0, Artistic, Expat, REGCOMP, GPL-2.0-with-bison-exception, Unicode, BZIP, Zlib, GPL-2.0, RRA-KEEP-THIS-NOTICE, BSD-3-clause-with-weird-numbering, CC0-1.0, TEXT-TABS, BSD-4-clause-POWERDOG, BSD-3-clause-GENERIC, BSD-3-Clause, SDBM-PUBLIC-DOMAIN, DONT-CHANGE-THE-GPL, Artistic-dist, LGPL-2.1, Artistic-2, HSIEH-DERIVATIVE, HSIEH-BSD
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/perl-base@5.30.0-9ubuntu0.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.Authorization
+
+PackageName: Microsoft.AspNetCore.Authorization
+SPDXID: SPDXRef-Package-2466b21b4992cdf0
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authorization@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-25172ff1ef9c1a65
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Security.AccessControl
+
+PackageName: System.Security.AccessControl
+SPDXID: SPDXRef-Package-259497bdf8d0bdd6
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.AccessControl@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Runtime.Extensions
+
+PackageName: System.Runtime.Extensions
+SPDXID: SPDXRef-Package-26886383fc0d1aec
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Routing.Abstractions
+
+PackageName: Microsoft.AspNetCore.Routing.Abstractions
+SPDXID: SPDXRef-Package-26ed72b07aa89232
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Routing.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Xml.ReaderWriter
+
+PackageName: System.Xml.ReaderWriter
+SPDXID: SPDXRef-Package-26efaf9cbf363365
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Xml.ReaderWriter@4.0.11
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Globalization
+
+PackageName: System.Globalization
+SPDXID: SPDXRef-Package-277ad26ec0af8a0a
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Globalization@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.unix.System.Diagnostics.Debug
+
+PackageName: runtime.unix.System.Diagnostics.Debug
+SPDXID: SPDXRef-Package-27b102ec0cee1cf9
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.unix.System.Diagnostics.Debug@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Diagnostics.DiagnosticSource
+
+PackageName: System.Diagnostics.DiagnosticSource
+SPDXID: SPDXRef-Package-27c7a9f888e151a5
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.DiagnosticSource@4.5.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: apt
+
+PackageName: apt
+SPDXID: SPDXRef-Package-2b408ebd84ad4013
+PackageVersion: 2.0.9
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apt 2.0.9
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/apt@2.0.9?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: login
+
+PackageName: login
+SPDXID: SPDXRef-Package-2b94d6c0b5994878
+PackageVersion: 1:4.8.1-1ubuntu5.20.04.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: shadow 1:4.8.1-1ubuntu5.20.04.2
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/login@1:4.8.1-1ubuntu5.20.04.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Reflection.Emit.ILGeneration
+
+PackageName: System.Reflection.Emit.ILGeneration
+SPDXID: SPDXRef-Package-2ba9417699fd86fd
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Emit.ILGeneration@4.0.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: grep
+
+PackageName: grep
+SPDXID: SPDXRef-Package-2c9ecb8f31df17f8
+PackageVersion: 3.4-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: grep 3.4-1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/grep@3.4-1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.any.System.Diagnostics.Tracing
+
+PackageName: runtime.any.System.Diagnostics.Tracing
+SPDXID: SPDXRef-Package-2cb925d98af84b3a
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Diagnostics.Tracing@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: sysvinit-utils
+
+PackageName: sysvinit-utils
+SPDXID: SPDXRef-Package-2d4d131e1fd8f494
+PackageVersion: 2.96-2.1ubuntu1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sysvinit 2.96-2.1ubuntu1
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/sysvinit-utils@2.96-2.1ubuntu1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Runtime
+
+PackageName: System.Runtime
+SPDXID: SPDXRef-Package-2e181fa3f100f6a9
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Globalization
+
+PackageName: runtime.any.System.Globalization
+SPDXID: SPDXRef-Package-2e66ba11b802535f
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Globalization@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.WebEncoders
+
+PackageName: Microsoft.Extensions.WebEncoders
+SPDXID: SPDXRef-Package-2eb957a3913d9fa1
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.WebEncoders@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Buffers
+
+PackageName: System.Buffers
+SPDXID: SPDXRef-Package-3117db4332723ecf
+PackageVersion: 4.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Buffers@4.5.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Net.Http
+
+PackageName: System.Net.Http
+SPDXID: SPDXRef-Package-317f331449e1f230
+PackageVersion: 4.3.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Net.Http@4.3.4
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Text.Encoding
+
+PackageName: System.Text.Encoding
+SPDXID: SPDXRef-Package-31cc826ad335a113
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encoding@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: init-system-helpers
+
+PackageName: init-system-helpers
+SPDXID: SPDXRef-Package-359295d123f1ee32
+PackageVersion: 1.57
+FilesAnalyzed: false
+PackageSourceInfo: built package from: init-system-helpers 1.57
+PackageLicenseConcluded: BSD-3-Clause, GPL-2.0
+PackageLicenseDeclared: BSD-3-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/init-system-helpers@1.57?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.unix.System.Net.Primitives
+
+PackageName: runtime.unix.System.Net.Primitives
+SPDXID: SPDXRef-Package-36f13f09ed90fba8
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.unix.System.Net.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: logsave
+
+PackageName: logsave
+SPDXID: SPDXRef-Package-3777d281944ad4b5
+PackageVersion: 1.45.5-2ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.45.5-2ubuntu1.1
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/logsave@1.45.5-2ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: dpkg
+
+PackageName: dpkg
+SPDXID: SPDXRef-Package-37fc5d715090d6d7
+PackageVersion: 1.19.7ubuntu3.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: dpkg 1.19.7ubuntu3.2
+PackageLicenseConcluded: GPL-2.0, BSD-2-Clause, public-domain-s-s-d, public-domain-md5
+PackageLicenseDeclared: GPL-2.0, BSD-2-Clause, public-domain-s-s-d, public-domain-md5
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/dpkg@1.19.7ubuntu3.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: MongoDB.Driver.signed
+
+PackageName: MongoDB.Driver.signed
+SPDXID: SPDXRef-Package-38f1aab9291481c4
+PackageVersion: 2.13.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/MongoDB.Driver.signed@2.13.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: debconf
+
+PackageName: debconf
+SPDXID: SPDXRef-Package-390724120c3c115b
+PackageVersion: 1.5.73
+FilesAnalyzed: false
+PackageSourceInfo: built package from: debconf 1.5.73
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/debconf@1.5.73?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Extensions.Caching.Abstractions
+
+PackageName: Microsoft.Extensions.Caching.Abstractions
+SPDXID: SPDXRef-Package-3a98f9abb1416b15
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Caching.Abstractions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Security.Cryptography.X509Certificates
+
+PackageName: System.Security.Cryptography.X509Certificates
+SPDXID: SPDXRef-Package-3aad37ec81036878
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.X509Certificates@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.VisualStudio.Threading.Analyzers
+
+PackageName: Microsoft.VisualStudio.Threading.Analyzers
+SPDXID: SPDXRef-Package-3aeba1048b25a73d
+PackageVersion: 16.3.52
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.VisualStudio.Threading.Analyzers@16.3.52
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.DependencyInjection.Abstractions
+
+PackageName: Microsoft.Extensions.DependencyInjection.Abstractions
+SPDXID: SPDXRef-Package-3b15432ea1d16f7f
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.DependencyInjection.Abstractions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Net.Http.Headers
+
+PackageName: Microsoft.Net.Http.Headers
+SPDXID: SPDXRef-Package-3c252000d8b0022c
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Net.Http.Headers@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-3c2fda7d9b7f788d
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.Http
+
+PackageName: Microsoft.Extensions.Http
+SPDXID: SPDXRef-Package-3d4633030719ef7a
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Http@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libncurses6
+
+PackageName: libncurses6
+SPDXID: SPDXRef-Package-3f3f552906c8b8d2
+PackageVersion: 6.2-0ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2-0ubuntu2
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libncurses6@6.2-0ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Extensions.FileProviders.Abstractions
+
+PackageName: Microsoft.Extensions.FileProviders.Abstractions
+SPDXID: SPDXRef-Package-3fae8f1da64b6123
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.FileProviders.Abstractions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: debianutils
+
+PackageName: debianutils
+SPDXID: SPDXRef-Package-4047b1e2661e1147
+PackageVersion: 4.9.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: debianutils 4.9.1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/debianutils@4.9.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: LibGit2Sharp
+
+PackageName: LibGit2Sharp
+SPDXID: SPDXRef-Package-417b9adbc9a3c739
+PackageVersion: 0.26.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/LibGit2Sharp@0.26.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Globalization.Calendars
+
+PackageName: runtime.any.System.Globalization.Calendars
+SPDXID: SPDXRef-Package-43b86d589a317d0e
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Globalization.Calendars@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libhogweed5
+
+PackageName: libhogweed5
+SPDXID: SPDXRef-Package-45e8ca7a7cd6989f
+PackageVersion: 3.5.1+really3.5.1-2ubuntu0.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: nettle 3.5.1+really3.5.1-2ubuntu0.2
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libhogweed5@3.5.1+really3.5.1-2ubuntu0.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Runtime.Caching
+
+PackageName: System.Runtime.Caching
+SPDXID: SPDXRef-Package-466c0281e06f2cd4
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Caching@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libuuid1
+
+PackageName: libuuid1
+SPDXID: SPDXRef-Package-48968c5752bf1dca
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libuuid1@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: openssl
+
+PackageName: openssl
+SPDXID: SPDXRef-Package-494d2a6581822310
+PackageVersion: 1.1.1f-1ubuntu2.16
+FilesAnalyzed: false
+PackageSourceInfo: built package from: openssl 1.1.1f-1ubuntu2.16
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/openssl@1.1.1f-1ubuntu2.16?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:570c8274b679e974dc1f93479c9b377db98e3412d29a3f5abcfe7552235ec9fa
+PackageAttributionText: LayerDiffID: sha256:fde839282ef81d5e3f936840aa982fdb93c59102c1b2dbf3902d0c7f1d391a6a
+
+##### Package: runtime.unix.System.Private.Uri
+
+PackageName: runtime.unix.System.Private.Uri
+SPDXID: SPDXRef-Package-49de9e65c3ecde2
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.unix.System.Private.Uri@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.Hosting.Abstractions
+
+PackageName: Microsoft.Extensions.Hosting.Abstractions
+SPDXID: SPDXRef-Package-4ad0e58167551fe4
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Hosting.Abstractions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Memory
+
+PackageName: System.Memory
+SPDXID: SPDXRef-Package-4d270a19e4ca4e1c
+PackageVersion: 4.5.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Memory@4.5.4
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: liblzma5
+
+PackageName: liblzma5
+SPDXID: SPDXRef-Package-4eab39d9caa9b23b
+PackageVersion: 5.2.4-1ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: xz-utils 5.2.4-1ubuntu1.1
+PackageLicenseConcluded: PD, probably-PD, GPL-2.0, LGPL-2.1, permissive-fsf, Autoconf, permissive-nowarranty, none, config-h, LGPL-2.0, noderivs, PD-debian, GPL-3.0
+PackageLicenseDeclared: PD, probably-PD, GPL-2.0, LGPL-2.1, permissive-fsf, Autoconf, permissive-nowarranty, none, config-h, LGPL-2.0, noderivs, PD-debian, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/liblzma5@5.2.4-1ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Text.Encoding.CodePages
+
+PackageName: System.Text.Encoding.CodePages
+SPDXID: SPDXRef-Package-4ebe2db522f54a24
+PackageVersion: 4.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encoding.CodePages@4.5.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-4fe5b49035d4ef7
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.CSharp
+
+PackageName: Microsoft.CSharp
+SPDXID: SPDXRef-Package-5035d23a3e1435f5
+PackageVersion: 4.7.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CSharp@4.7.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libgcc-s1
+
+PackageName: libgcc-s1
+SPDXID: SPDXRef-Package-519628d9b30d18a
+PackageVersion: 10.3.0-1ubuntu1~20.04
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc-10 10.3.0-1ubuntu1~20.04
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libgcc-s1@10.3.0-1ubuntu1~20.04?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.unix.Microsoft.Win32.Primitives
+
+PackageName: runtime.unix.Microsoft.Win32.Primitives
+SPDXID: SPDXRef-Package-52070b323a99309a
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.unix.Microsoft.Win32.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: mawk
+
+PackageName: mawk
+SPDXID: SPDXRef-Package-53be4230cd7f705c
+PackageVersion: 1.3.4.20200120-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: mawk 1.3.4.20200120-2
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/mawk@1.3.4.20200120-2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Resources.ResourceManager
+
+PackageName: System.Resources.ResourceManager
+SPDXID: SPDXRef-Package-54cd724dcead612
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Resources.ResourceManager@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libcom-err2
+
+PackageName: libcom-err2
+SPDXID: SPDXRef-Package-55fd8ee5fd3252fd
+PackageVersion: 1.45.5-2ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.45.5-2ubuntu1.1
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libcom-err2@1.45.5-2ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Security.Cryptography.Xml
+
+PackageName: System.Security.Cryptography.Xml
+SPDXID: SPDXRef-Package-55fdc5a8518092ed
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Xml@4.5.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.DependencyInjection
+
+PackageName: Microsoft.Extensions.DependencyInjection
+SPDXID: SPDXRef-Package-560fe9fd6d705fd5
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.DependencyInjection@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: ncurses-base
+
+PackageName: ncurses-base
+SPDXID: SPDXRef-Package-568ebbef1b11cdd4
+PackageVersion: 6.2-0ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2-0ubuntu2
+PackageLicenseConcluded: MIT, BSD-3-Clause
+PackageLicenseDeclared: MIT, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/ncurses-base@6.2-0ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple
+
+PackageName: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple
+SPDXID: SPDXRef-Package-56bf630e2e750565
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Diagnostics.Tracing
+
+PackageName: System.Diagnostics.Tracing
+SPDXID: SPDXRef-Package-573fd5dd5a1f9dc7
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.Tracing@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: diffutils
+
+PackageName: diffutils
+SPDXID: SPDXRef-Package-5814db5549fffff5
+PackageVersion: 1:3.7-3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: diffutils 1:3.7-3
+PackageLicenseConcluded: GPL-3.0, GFDL
+PackageLicenseDeclared: GPL-3.0, GFDL
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/diffutils@1:3.7-3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.DataProtection.Abstractions
+
+PackageName: Microsoft.AspNetCore.DataProtection.Abstractions
+SPDXID: SPDXRef-Package-5886c88f2ccf5291
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.DataProtection.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: hostname
+
+PackageName: hostname
+SPDXID: SPDXRef-Package-58e4ee2e531ed238
+PackageVersion: 3.23
+FilesAnalyzed: false
+PackageSourceInfo: built package from: hostname 3.23
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/hostname@3.23?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-58eb0214944e97e2
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: StyleCop.Analyzers
+
+PackageName: StyleCop.Analyzers
+SPDXID: SPDXRef-Package-59a32603981de3e2
+PackageVersion: 1.1.118
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/StyleCop.Analyzers@1.1.118
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.NETCore.Targets
+
+PackageName: Microsoft.NETCore.Targets
+SPDXID: SPDXRef-Package-5a91a73600c62796
+PackageVersion: 1.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NETCore.Targets@1.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libc6
+
+PackageName: libc6
+SPDXID: SPDXRef-Package-5ae1d1b96305e9fe
+PackageVersion: 2.31-0ubuntu9.9
+FilesAnalyzed: false
+PackageSourceInfo: built package from: glibc 2.31-0ubuntu9.9
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libc6@2.31-0ubuntu9.9?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libgmp10
+
+PackageName: libgmp10
+SPDXID: SPDXRef-Package-5e19f3ffdec30749
+PackageVersion: 2:6.2.0+dfsg-4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gmp 2:6.2.0+dfsg-4
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libgmp10@2:6.2.0+dfsg-4?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Linq.Expressions
+
+PackageName: System.Linq.Expressions
+SPDXID: SPDXRef-Package-5f2c807a72c5799e
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Linq.Expressions@4.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Http.Abstractions
+
+PackageName: Microsoft.AspNetCore.Http.Abstractions
+SPDXID: SPDXRef-Package-5f410798e1bc4851
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Net.Primitives
+
+PackageName: System.Net.Primitives
+SPDXID: SPDXRef-Package-5f492840a636e05e
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Net.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Private.Uri
+
+PackageName: System.Private.Uri
+SPDXID: SPDXRef-Package-5f8a7a2e348497d3
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Private.Uri@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libidn2-0
+
+PackageName: libidn2-0
+SPDXID: SPDXRef-Package-602a73636fc19727
+PackageVersion: 2.2.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libidn2 2.2.0-2
+PackageLicenseConcluded: GPL-3.0, LGPL-3.0, GPL-2.0, Unicode
+PackageLicenseDeclared: GPL-3.0, LGPL-3.0, GPL-2.0, Unicode
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libidn2-0@2.2.0-2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: NationalInstruments.SystemLink.Auth
+
+PackageName: NationalInstruments.SystemLink.Auth
+SPDXID: SPDXRef-Package-6052a3cbe360a224
+PackageVersion: 1.127.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.Auth@1.127.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Text.Encoding
+
+PackageName: runtime.any.System.Text.Encoding
+SPDXID: SPDXRef-Package-605cf4391e569231
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Text.Encoding@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libgpg-error0
+
+PackageName: libgpg-error0
+SPDXID: SPDXRef-Package-61309936cc9e5c89
+PackageVersion: 1.37-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libgpg-error 1.37-1
+PackageLicenseConcluded: LGPL-2.1, BSD-3-Clause, g10-permissive, GPL-3.0
+PackageLicenseDeclared: LGPL-2.1, BSD-3-Clause, g10-permissive, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libgpg-error0@1.37-1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Extensions.Logging
+
+PackageName: Microsoft.Extensions.Logging
+SPDXID: SPDXRef-Package-61378a077483a27e
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Logging@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: MongoDB.Driver.Core.signed
+
+PackageName: MongoDB.Driver.Core.signed
+SPDXID: SPDXRef-Package-6167c4093faa6aef
+PackageVersion: 2.13.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/MongoDB.Driver.Core.signed@2.13.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: gpgv
+
+PackageName: gpgv
+SPDXID: SPDXRef-Package-61bb2aad8d5e1296
+PackageVersion: 2.2.19-3ubuntu2.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gnupg2 2.2.19-3ubuntu2.2
+PackageLicenseConcluded: GPL-3.0, permissive, LGPL-2.1, Expat, BSD-3-Clause, LGPL-3.0, RFC-Reference, TinySCHEME, CC0-1.0
+PackageLicenseDeclared: GPL-3.0, permissive, LGPL-2.1, Expat, BSD-3-Clause, LGPL-3.0, RFC-Reference, TinySCHEME, CC0-1.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/gpgv@2.2.19-3ubuntu2.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Globalization.Extensions
+
+PackageName: System.Globalization.Extensions
+SPDXID: SPDXRef-Package-629b04e26608e498
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Globalization.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libsemanage1
+
+PackageName: libsemanage1
+SPDXID: SPDXRef-Package-636ff549f8edf056
+PackageVersion: 3.0-1build2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libsemanage 3.0-1build2
+PackageLicenseConcluded: LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libsemanage1@3.0-1build2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.Authentication.Core
+
+PackageName: Microsoft.AspNetCore.Authentication.Core
+SPDXID: SPDXRef-Package-650e1f5a94cd27fe
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authentication.Core@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Threading.Tasks
+
+PackageName: System.Threading.Tasks
+SPDXID: SPDXRef-Package-65c004e9aa0a3661
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading.Tasks@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: NI.CSharp.Analyzers
+
+PackageName: NI.CSharp.Analyzers
+SPDXID: SPDXRef-Package-66389809b18a839
+PackageVersion: 2.0.4
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NI.CSharp.Analyzers@2.0.4
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.native.System.Net.Http
+
+PackageName: runtime.native.System.Net.Http
+SPDXID: SPDXRef-Package-6a5a3abc824b964b
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System.Net.Http@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libdebconfclient0
+
+PackageName: libdebconfclient0
+SPDXID: SPDXRef-Package-6ac4db37194c7452
+PackageVersion: 0.251ubuntu1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: cdebconf 0.251ubuntu1
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libdebconfclient0@0.251ubuntu1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libseccomp2
+
+PackageName: libseccomp2
+SPDXID: SPDXRef-Package-6b6634642e83bad6
+PackageVersion: 2.5.1-1ubuntu1~20.04.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libseccomp 2.5.1-1ubuntu1~20.04.2
+PackageLicenseConcluded: LGPL-2.1
+PackageLicenseDeclared: LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libseccomp2@2.5.1-1ubuntu1~20.04.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Reflection.Extensions
+
+PackageName: System.Reflection.Extensions
+SPDXID: SPDXRef-Package-6b67deded87581c5
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Extensions@4.0.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libpam0g
+
+PackageName: libpam0g
+SPDXID: SPDXRef-Package-6cbd8185c0f90815
+PackageVersion: 1.3.1-5ubuntu4.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.3.1-5ubuntu4.3
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libpam0g@1.3.1-5ubuntu4.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Collections.Concurrent
+
+PackageName: System.Collections.Concurrent
+SPDXID: SPDXRef-Package-6cc6d0a610fdb26d
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Collections.Concurrent@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Security.Cryptography.Pkcs
+
+PackageName: System.Security.Cryptography.Pkcs
+SPDXID: SPDXRef-Package-6fe72a0010651fd0
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Pkcs@4.5.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libsmartcols1
+
+PackageName: libsmartcols1
+SPDXID: SPDXRef-Package-7104610d6b669bea
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libsmartcols1@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Extensions.Options
+
+PackageName: Microsoft.Extensions.Options
+SPDXID: SPDXRef-Package-710abf8755c69a8f
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Options@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Runtime.Numerics
+
+PackageName: System.Runtime.Numerics
+SPDXID: SPDXRef-Package-71511cba1f2d2df5
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Numerics@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.unix.System.Runtime.Extensions
+
+PackageName: runtime.unix.System.Runtime.Extensions
+SPDXID: SPDXRef-Package-73e404fbc6fb0f33
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.unix.System.Runtime.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: dash
+
+PackageName: dash
+SPDXID: SPDXRef-Package-741178dada0f293f
+PackageVersion: 0.5.10.2-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: dash 0.5.10.2-6
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/dash@0.5.10.2-6?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Extensions.Http.Polly
+
+PackageName: Microsoft.Extensions.Http.Polly
+SPDXID: SPDXRef-Package-76af28e876410080
+PackageVersion: 5.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Http.Polly@5.0.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Configuration.ConfigurationManager
+
+PackageName: System.Configuration.ConfigurationManager
+SPDXID: SPDXRef-Package-773a4b66705e433f
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Configuration.ConfigurationManager@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libgnutls30
+
+PackageName: libgnutls30
+SPDXID: SPDXRef-Package-784e702727bc9ac3
+PackageVersion: 3.6.13-2ubuntu1.7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gnutls28 3.6.13-2ubuntu1.7
+PackageLicenseConcluded: The main library is licensed under GNU Lesser, LGPL-3.0, GPL-3.0, GFDL-1.3, CC0 license, Expat, Apache-2.0, LGPLv3+, GPL-2.0, LGPL-2.1, BSD-3-Clause
+PackageLicenseDeclared: The main library is licensed under GNU Lesser, LGPL-3.0, GPL-3.0, GFDL-1.3, CC0 license, Expat, Apache-2.0, LGPLv3+, GPL-2.0, LGPL-2.1, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libgnutls30@3.6.13-2ubuntu1.7?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.CodeAnalysis.VersionCheckAnalyzer
+
+PackageName: Microsoft.CodeAnalysis.VersionCheckAnalyzer
+SPDXID: SPDXRef-Package-78da492fc3255bd0
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CodeAnalysis.VersionCheckAnalyzer@2.9.10
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Diagnostics.Debug
+
+PackageName: System.Diagnostics.Debug
+SPDXID: SPDXRef-Package-78e4a5671f5a63ac
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.Debug@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libattr1
+
+PackageName: libattr1
+SPDXID: SPDXRef-Package-78f7fc4c85847e3c
+PackageVersion: 1:2.4.48-5
+FilesAnalyzed: false
+PackageSourceInfo: built package from: attr 1:2.4.48-5
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0, LGPL-2.1
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0, LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libattr1@1:2.4.48-5?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Polly
+
+PackageName: Polly
+SPDXID: SPDXRef-Package-7ae902c618b82273
+PackageVersion: 7.2.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Polly@7.2.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libss2
+
+PackageName: libss2
+SPDXID: SPDXRef-Package-7dec7a3538dab0a
+PackageVersion: 1.45.5-2ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.45.5-2ubuntu1.1
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libss2@1.45.5-2ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-809566ec9485bc77
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-82275ca2b356667b
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: gcc-10-base
+
+PackageName: gcc-10-base
+SPDXID: SPDXRef-Package-8339d1bf3d85328
+PackageVersion: 10.3.0-1ubuntu1~20.04
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc-10 10.3.0-1ubuntu1~20.04
+PackageLicenseConcluded: GPL-3.0, GFDL-1.2, GPL-2.0, Artistic, LGPL-3.0
+PackageLicenseDeclared: GPL-3.0, GFDL-1.2, GPL-2.0, Artistic, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/gcc-10-base@10.3.0-1ubuntu1~20.04?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: MongoDB.Libmongocrypt.signed
+
+PackageName: MongoDB.Libmongocrypt.signed
+SPDXID: SPDXRef-Package-84de09b0042e0cba
+PackageVersion: 1.2.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/MongoDB.Libmongocrypt.signed@1.2.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Text.Encoding.Extensions
+
+PackageName: System.Text.Encoding.Extensions
+SPDXID: SPDXRef-Package-85155e890e56bc70
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encoding.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Reflection
+
+PackageName: System.Reflection
+SPDXID: SPDXRef-Package-85e446ff0046ee6f
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Threading.Channels
+
+PackageName: System.Threading.Channels
+SPDXID: SPDXRef-Package-87835970b59cc6b6
+PackageVersion: 4.7.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading.Channels@4.7.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Diagnostics.Tools
+
+PackageName: System.Diagnostics.Tools
+SPDXID: SPDXRef-Package-87915332adf19e8f
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Diagnostics.Tools@4.0.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Authentication
+
+PackageName: Microsoft.AspNetCore.Authentication
+SPDXID: SPDXRef-Package-88b1d44ff172c566
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authentication@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Win32.SystemEvents
+
+PackageName: Microsoft.Win32.SystemEvents
+SPDXID: SPDXRef-Package-89408c12ff73aada
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Win32.SystemEvents@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Routing
+
+PackageName: Microsoft.AspNetCore.Routing
+SPDXID: SPDXRef-Package-89cac8723817f016
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Routing@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libudev1
+
+PackageName: libudev1
+SPDXID: SPDXRef-Package-8a98f4c610031b3c
+PackageVersion: 245.4-4ubuntu3.17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: systemd 245.4-4ubuntu3.17
+PackageLicenseConcluded: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+PackageLicenseDeclared: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libudev1@245.4-4ubuntu3.17?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: zlib1g
+
+PackageName: zlib1g
+SPDXID: SPDXRef-Package-8ad2c10b56e87c1a
+PackageVersion: 1:1.2.11.dfsg-2ubuntu1.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: zlib 1:1.2.11.dfsg-2ubuntu1.3
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/zlib1g@1:1.2.11.dfsg-2ubuntu1.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: MongoDB.Bson.signed
+
+PackageName: MongoDB.Bson.signed
+SPDXID: SPDXRef-Package-8b43a13716c3e049
+PackageVersion: 2.13.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/MongoDB.Bson.signed@2.13.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Hosting.Abstractions
+
+PackageName: Microsoft.AspNetCore.Hosting.Abstractions
+SPDXID: SPDXRef-Package-8c678c9fb6c4d748
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Hosting.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Drawing.Common
+
+PackageName: System.Drawing.Common
+SPDXID: SPDXRef-Package-8ccf368bd510e5bd
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Drawing.Common@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Runtime.InteropServices
+
+PackageName: System.Runtime.InteropServices
+SPDXID: SPDXRef-Package-8d385289446b92cb
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.InteropServices@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: tar
+
+PackageName: tar
+SPDXID: SPDXRef-Package-8d4329bb65a800e2
+PackageVersion: 1.30+dfsg-7ubuntu0.20.04.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: tar 1.30+dfsg-7ubuntu0.20.04.2
+PackageLicenseConcluded: GPL-3.0, GPL-2.0
+PackageLicenseDeclared: GPL-3.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/tar@1.30+dfsg-7ubuntu0.20.04.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libpam-modules-bin
+
+PackageName: libpam-modules-bin
+SPDXID: SPDXRef-Package-8e7af5deb335e209
+PackageVersion: 1.3.1-5ubuntu4.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.3.1-5ubuntu4.3
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libpam-modules-bin@1.3.1-5ubuntu4.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libgcrypt20
+
+PackageName: libgcrypt20
+SPDXID: SPDXRef-Package-8ecd70a074c706d
+PackageVersion: 1.8.5-5ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libgcrypt20 1.8.5-5ubuntu1.1
+PackageLicenseConcluded: LGPL-3.0, GPL-2.0
+PackageLicenseDeclared: LGPL-3.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libgcrypt20@1.8.5-5ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Security.Cryptography.ProtectedData
+
+PackageName: System.Security.Cryptography.ProtectedData
+SPDXID: SPDXRef-Package-8ed95563bb4b5017
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.ProtectedData@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Security.Cryptography.Csp
+
+PackageName: System.Security.Cryptography.Csp
+SPDXID: SPDXRef-Package-90b91b340e669ab8
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Csp@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.NetCore.Analyzers
+
+PackageName: Microsoft.NetCore.Analyzers
+SPDXID: SPDXRef-Package-91034405f2c94c6c
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NetCore.Analyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-91c9044eef624bcb
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.IO.FileSystem
+
+PackageName: System.IO.FileSystem
+SPDXID: SPDXRef-Package-923c512820e450fe
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.IO.FileSystem@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: ubuntu-keyring
+
+PackageName: ubuntu-keyring
+SPDXID: SPDXRef-Package-92ba1c76850e9c71
+PackageVersion: 2020.02.11.4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ubuntu-keyring 2020.02.11.4
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/ubuntu-keyring@2020.02.11.4?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.Authentication.Abstractions
+
+PackageName: Microsoft.AspNetCore.Authentication.Abstractions
+SPDXID: SPDXRef-Package-933491937c27d83b
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authentication.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: ncurses-bin
+
+PackageName: ncurses-bin
+SPDXID: SPDXRef-Package-94653cece11aea11
+PackageVersion: 6.2-0ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2-0ubuntu2
+PackageLicenseConcluded: MIT, BSD-3-Clause
+PackageLicenseDeclared: MIT, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/ncurses-bin@6.2-0ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: sed
+
+PackageName: sed
+SPDXID: SPDXRef-Package-94b46fbd65f9fc1b
+PackageVersion: 4.7-1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sed 4.7-1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/sed@4.7-1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libaudit1
+
+PackageName: libaudit1
+SPDXID: SPDXRef-Package-963a2b1b3ddac706
+PackageVersion: 1:2.8.5-2ubuntu6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: audit 1:2.8.5-2ubuntu6
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1, GPL-1.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1, GPL-1.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libaudit1@1:2.8.5-2ubuntu6?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libpam-runtime
+
+PackageName: libpam-runtime
+SPDXID: SPDXRef-Package-974b4951ed7e3e09
+PackageVersion: 1.3.1-5ubuntu4.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.3.1-5ubuntu4.3
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libpam-runtime@1.3.1-5ubuntu4.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Security.Cryptography.Cng
+
+PackageName: System.Security.Cryptography.Cng
+SPDXID: SPDXRef-Package-9810fc20c04f8cec
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Cng@4.5.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-9879b10c9632a109
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libncursesw6
+
+PackageName: libncursesw6
+SPDXID: SPDXRef-Package-99723fb66ceebcc4
+PackageVersion: 6.2-0ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2-0ubuntu2
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libncursesw6@6.2-0ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Security.Cryptography.Primitives
+
+PackageName: System.Security.Cryptography.Primitives
+SPDXID: SPDXRef-Package-9d5c7c02e7dbb482
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.Primitives
+
+PackageName: Microsoft.Extensions.Primitives
+SPDXID: SPDXRef-Package-9e6b511306a1700d
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Primitives@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-9ed110d68bb73b78
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Threading.Tasks
+
+PackageName: runtime.any.System.Threading.Tasks
+SPDXID: SPDXRef-Package-a02a9a584c1d8da4
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Threading.Tasks@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Collections
+
+PackageName: System.Collections
+SPDXID: SPDXRef-Package-a13dcf490385d830
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Collections@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: procps
+
+PackageName: procps
+SPDXID: SPDXRef-Package-a187d74c72b2f4e
+PackageVersion: 2:3.3.16-1ubuntu2.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: procps 2:3.3.16-1ubuntu2.3
+PackageLicenseConcluded: LGPL-2.1, LGPL-2.0, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, LGPL-2.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/procps@2:3.3.16-1ubuntu2.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Win32.Primitives
+
+PackageName: Microsoft.Win32.Primitives
+SPDXID: SPDXRef-Package-a1ada82749deee3e
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Win32.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Hosting.Server.Abstractions
+
+PackageName: Microsoft.AspNetCore.Hosting.Server.Abstractions
+SPDXID: SPDXRef-Package-a3312860026a82e4
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Hosting.Server.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Reflection.TypeExtensions
+
+PackageName: System.Reflection.TypeExtensions
+SPDXID: SPDXRef-Package-a4e3e0886a939994
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.TypeExtensions@4.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.DataProtection
+
+PackageName: Microsoft.AspNetCore.DataProtection
+SPDXID: SPDXRef-Package-a5cb3254536d06bb
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.DataProtection@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Security.Cryptography.Encoding
+
+PackageName: System.Security.Cryptography.Encoding
+SPDXID: SPDXRef-Package-a718eb326ac15219
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.Encoding@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libnettle7
+
+PackageName: libnettle7
+SPDXID: SPDXRef-Package-a814788e382c33cf
+PackageVersion: 3.5.1+really3.5.1-2ubuntu0.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: nettle 3.5.1+really3.5.1-2ubuntu0.2
+PackageLicenseConcluded: LGPL-2.1, LGPL-2.0, other, GPL-2.0, GPL-2.0-with-autoconf-exception, public-domain, GAP, LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-2.1, LGPL-2.0, other, GPL-2.0, GPL-2.0-with-autoconf-exception, public-domain, GAP, LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libnettle7@3.5.1+really3.5.1-2ubuntu0.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Security.Cryptography.OpenSsl
+
+PackageName: System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-aa63ac2ee7f88c17
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Cryptography.OpenSsl@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.Caching.Memory
+
+PackageName: Microsoft.Extensions.Caching.Memory
+SPDXID: SPDXRef-Package-aa9b6ebcd7120b44
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Caching.Memory@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Runtime.Serialization.Primitives
+
+PackageName: System.Runtime.Serialization.Primitives
+SPDXID: SPDXRef-Package-ae1fc7223d561a90
+PackageVersion: 4.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Serialization.Primitives@4.1.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: NationalInstruments.SystemLink.EventBus
+
+PackageName: NationalInstruments.SystemLink.EventBus
+SPDXID: SPDXRef-Package-ae2abf48d13af1d1
+PackageVersion: 1.103.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.EventBus@1.103.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libfdisk1
+
+PackageName: libfdisk1
+SPDXID: SPDXRef-Package-aea34326afc444bf
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libfdisk1@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: NationalInstruments.SystemLink.Logging
+
+PackageName: NationalInstruments.SystemLink.Logging
+SPDXID: SPDXRef-Package-aecc3ddf01bfa7f5
+PackageVersion: 1.127.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.Logging@1.127.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: mount
+
+PackageName: mount
+SPDXID: SPDXRef-Package-af2e2d2b1fc0c5d
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/mount@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libzstd1
+
+PackageName: libzstd1
+SPDXID: SPDXRef-Package-afadd3e079fe48f3
+PackageVersion: 1.4.4+dfsg-3ubuntu0.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libzstd 1.4.4+dfsg-3ubuntu0.1
+PackageLicenseConcluded: BSD-3-Clause, GPL-2.0, Zlib, Expat
+PackageLicenseDeclared: BSD-3-Clause, GPL-2.0, Zlib, Expat
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libzstd1@1.4.4+dfsg-3ubuntu0.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libsepol1
+
+PackageName: libsepol1
+SPDXID: SPDXRef-Package-afd85a4769c235f2
+PackageVersion: 3.0-1ubuntu0.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libsepol 3.0-1ubuntu0.1
+PackageLicenseConcluded: LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libsepol1@3.0-1ubuntu0.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.ObjectModel
+
+PackageName: System.ObjectModel
+SPDXID: SPDXRef-Package-b11847ede48d4d94
+PackageVersion: 4.0.12
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.ObjectModel@4.0.12
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Cryptography.Internal
+
+PackageName: Microsoft.AspNetCore.Cryptography.Internal
+SPDXID: SPDXRef-Package-b1321d2536e2099b
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Cryptography.Internal@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Mvc.Core
+
+PackageName: Microsoft.AspNetCore.Mvc.Core
+SPDXID: SPDXRef-Package-b200d2c3babd2e4d
+PackageVersion: 2.2.5
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Mvc.Core@2.2.5
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: fdisk
+
+PackageName: fdisk
+SPDXID: SPDXRef-Package-b2a8214f4ae87b0e
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/fdisk@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: base-files
+
+PackageName: base-files
+SPDXID: SPDXRef-Package-b54c21bfa7121d8a
+PackageVersion: 11ubuntu5.6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: base-files 11ubuntu5.6
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/base-files@11ubuntu5.6?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: FluentValidation
+
+PackageName: FluentValidation
+SPDXID: SPDXRef-Package-b5d2ce8002269009
+PackageVersion: 10.3.3
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/FluentValidation@10.3.3
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libcap-ng0
+
+PackageName: libcap-ng0
+SPDXID: SPDXRef-Package-b5f8d34b47d6cc7a
+PackageVersion: 0.7.9-2.1build1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libcap-ng 0.7.9-2.1build1
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0, GPL-3.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libcap-ng0@0.7.9-2.1build1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.any.System.Runtime.InteropServices
+
+PackageName: runtime.any.System.Runtime.InteropServices
+SPDXID: SPDXRef-Package-b63a5b3809bf3511
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Runtime.InteropServices@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: passwd
+
+PackageName: passwd
+SPDXID: SPDXRef-Package-b89c631cbd800824
+PackageVersion: 1:4.8.1-1ubuntu5.20.04.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: shadow 1:4.8.1-1ubuntu5.20.04.2
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/passwd@1:4.8.1-1ubuntu5.20.04.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libpam-modules
+
+PackageName: libpam-modules
+SPDXID: SPDXRef-Package-b8b3e05d745037d4
+PackageVersion: 1.3.1-5ubuntu4.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pam 1.3.1-5ubuntu4.3
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libpam-modules@1.3.1-5ubuntu4.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.native.System.Security.Cryptography.Apple
+
+PackageName: runtime.native.System.Security.Cryptography.Apple
+SPDXID: SPDXRef-Package-b8ffdfa4d624cc9a
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System.Security.Cryptography.Apple@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Roslynator.Analyzers
+
+PackageName: Roslynator.Analyzers
+SPDXID: SPDXRef-Package-b97bb03a69517b94
+PackageVersion: 2.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Roslynator.Analyzers@2.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.NetFramework.Analyzers
+
+PackageName: Microsoft.NetFramework.Analyzers
+SPDXID: SPDXRef-Package-b9dcbab0330edba1
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NetFramework.Analyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libp11-kit0
+
+PackageName: libp11-kit0
+SPDXID: SPDXRef-Package-b9fb2368333bd4de
+PackageVersion: 0.23.20-1ubuntu0.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: p11-kit 0.23.20-1ubuntu0.1
+PackageLicenseConcluded: BSD-3-Clause, permissive-like-automake-output, ISC, ISC+IBM, same-as-rest-of-p11kit
+PackageLicenseDeclared: BSD-3-Clause, permissive-like-automake-output, ISC, ISC+IBM, same-as-rest-of-p11kit
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libp11-kit0@0.23.20-1ubuntu0.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Win32.Registry
+
+PackageName: Microsoft.Win32.Registry
+SPDXID: SPDXRef-Package-bab49abbaf982718
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Win32.Registry@4.5.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.NETCore.Platforms
+
+PackageName: Microsoft.NETCore.Platforms
+SPDXID: SPDXRef-Package-bd422959e3e89aa7
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.NETCore.Platforms@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libblkid1
+
+PackageName: libblkid1
+SPDXID: SPDXRef-Package-bdb2f49219e46080
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libblkid1@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: bsdutils
+
+PackageName: bsdutils
+SPDXID: SPDXRef-Package-be74abd0684e3303
+PackageVersion: 1:2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/bsdutils@1:2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Polly.Extensions.Http
+
+PackageName: Polly.Extensions.Http
+SPDXID: SPDXRef-Package-bf399e47ae635955
+PackageVersion: 3.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Polly.Extensions.Http@3.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.unix.System.IO.FileSystem
+
+PackageName: runtime.unix.System.IO.FileSystem
+SPDXID: SPDXRef-Package-bfee3479393c6d31
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.unix.System.IO.FileSystem@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Xml.XDocument
+
+PackageName: System.Xml.XDocument
+SPDXID: SPDXRef-Package-c02e711bd1abadba
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Xml.XDocument@4.0.11
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.Configuration.Abstractions
+
+PackageName: Microsoft.Extensions.Configuration.Abstractions
+SPDXID: SPDXRef-Package-c02e88d7bf9b7e7f
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.Configuration.Abstractions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Resources.ResourceManager
+
+PackageName: runtime.any.System.Resources.ResourceManager
+SPDXID: SPDXRef-Package-c03b6ccd111c8ad5
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Resources.ResourceManager@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Authorization.Policy
+
+PackageName: Microsoft.AspNetCore.Authorization.Policy
+SPDXID: SPDXRef-Package-c151d21eed2aaeec
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Authorization.Policy@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Reflection.Emit.Lightweight
+
+PackageName: System.Reflection.Emit.Lightweight
+SPDXID: SPDXRef-Package-c224199b88e8db9f
+PackageVersion: 4.0.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Emit.Lightweight@4.0.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: gzip
+
+PackageName: gzip
+SPDXID: SPDXRef-Package-c2b2e7772e859974
+PackageVersion: 1.10-0ubuntu4.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gzip 1.10-0ubuntu4.1
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/gzip@1.10-0ubuntu4.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libtinfo6
+
+PackageName: libtinfo6
+SPDXID: SPDXRef-Package-c5e78bb93dd20f9e
+PackageVersion: 6.2-0ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: ncurses 6.2-0ubuntu2
+PackageLicenseConcluded: MIT, BSD-3-Clause
+PackageLicenseDeclared: MIT, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libtinfo6@6.2-0ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.IO.FileSystem.Primitives
+
+PackageName: System.IO.FileSystem.Primitives
+SPDXID: SPDXRef-Package-c656a68d76c77978
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.IO.FileSystem.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libmount1
+
+PackageName: libmount1
+SPDXID: SPDXRef-Package-c6779e98fe947679
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libmount1@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Runtime.InteropServices.RuntimeInformation
+
+PackageName: System.Runtime.InteropServices.RuntimeInformation
+SPDXID: SPDXRef-Package-c774e28c774efc84
+PackageVersion: 4.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.InteropServices.RuntimeInformation@4.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Linq
+
+PackageName: System.Linq
+SPDXID: SPDXRef-Package-c87bffd915eb5159
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Linq@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Runtime.Handles
+
+PackageName: System.Runtime.Handles
+SPDXID: SPDXRef-Package-c8e5264fbe922f11
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.Handles@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libtasn1-6
+
+PackageName: libtasn1-6
+SPDXID: SPDXRef-Package-c96fa9feaa9c73d
+PackageVersion: 4.16.0-2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libtasn1-6 4.16.0-2
+PackageLicenseConcluded: LGPL-3.0, LGPL-2.1, GPL-3.0, GFDL-1.3
+PackageLicenseDeclared: LGPL-3.0, LGPL-2.1, GPL-3.0, GFDL-1.3
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libtasn1-6@4.16.0-2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libffi7
+
+PackageName: libffi7
+SPDXID: SPDXRef-Package-cade021727fe99f3
+PackageVersion: 3.3-4
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libffi 3.3-4
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libffi7@3.3-4?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.Http.Extensions
+
+PackageName: Microsoft.AspNetCore.Http.Extensions
+SPDXID: SPDXRef-Package-cb9658661cefe7e7
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Http.Extensions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libsystemd0
+
+PackageName: libsystemd0
+SPDXID: SPDXRef-Package-cc0cd7774b6fa073
+PackageVersion: 245.4-4ubuntu3.17
+FilesAnalyzed: false
+PackageSourceInfo: built package from: systemd 245.4-4ubuntu3.17
+PackageLicenseConcluded: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+PackageLicenseDeclared: LGPL-2.1, CC0-1.0, GPL-2.0, GPL-2 with Linux-syscall-note exception, Expat, public-domain
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libsystemd0@245.4-4ubuntu3.17?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libselinux1
+
+PackageName: libselinux1
+SPDXID: SPDXRef-Package-cc241b1ce30bda34
+PackageVersion: 3.0-1build2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libselinux 3.0-1build2
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libselinux1@3.0-1build2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Dynamic.Runtime
+
+PackageName: System.Dynamic.Runtime
+SPDXID: SPDXRef-Package-cc2f67f9fe28df98
+PackageVersion: 4.0.11
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Dynamic.Runtime@4.0.11
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Diagnostics.Tools
+
+PackageName: runtime.any.System.Diagnostics.Tools
+SPDXID: SPDXRef-Package-cd2d6c7bed68b4ae
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Diagnostics.Tools@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libc-bin
+
+PackageName: libc-bin
+SPDXID: SPDXRef-Package-cd4400d7055c1e30
+PackageVersion: 2.31-0ubuntu9.9
+FilesAnalyzed: false
+PackageSourceInfo: built package from: glibc 2.31-0ubuntu9.9
+PackageLicenseConcluded: LGPL-2.1, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libc-bin@2.31-0ubuntu9.9?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libprocps8
+
+PackageName: libprocps8
+SPDXID: SPDXRef-Package-cef069c8fd19a63e
+PackageVersion: 2:3.3.16-1ubuntu2.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: procps 2:3.3.16-1ubuntu2.3
+PackageLicenseConcluded: LGPL-2.1, LGPL-2.0, GPL-2.0
+PackageLicenseDeclared: LGPL-2.1, LGPL-2.0, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libprocps8@2:3.3.16-1ubuntu2.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: CsvHelper
+
+PackageName: CsvHelper
+SPDXID: SPDXRef-Package-cf25362cddc4c4eb
+PackageVersion: 27.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/CsvHelper@27.1.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libdb5.3
+
+PackageName: libdb5.3
+SPDXID: SPDXRef-Package-cf6f7a1c78e18816
+PackageVersion: 5.3.28+dfsg1-0.6ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: db5.3 5.3.28+dfsg1-0.6ubuntu2
+PackageLicenseConcluded: BSD-3-Clause, Sleepycat
+PackageLicenseDeclared: BSD-3-Clause, Sleepycat
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libdb5.3@5.3.28+dfsg1-0.6ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.any.System.Reflection.Extensions
+
+PackageName: runtime.any.System.Reflection.Extensions
+SPDXID: SPDXRef-Package-d01280dd5c14565b
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Reflection.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Reflection.Emit
+
+PackageName: System.Reflection.Emit
+SPDXID: SPDXRef-Package-d136ea52aa6b2839
+PackageVersion: 4.7.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Emit@4.7.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: DnsClient
+
+PackageName: DnsClient
+SPDXID: SPDXRef-Package-d1822d93b61c591b
+PackageVersion: 1.4.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/DnsClient@1.4.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.IO
+
+PackageName: System.IO
+SPDXID: SPDXRef-Package-d341424b5fccd85
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.IO@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.Extensions.ObjectPool
+
+PackageName: Microsoft.Extensions.ObjectPool
+SPDXID: SPDXRef-Package-d3aa393f43a9b2a0
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.ObjectPool@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Threading
+
+PackageName: System.Threading
+SPDXID: SPDXRef-Package-d43ca89352ffc5ef
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libapt-pkg6.0
+
+PackageName: libapt-pkg6.0
+SPDXID: SPDXRef-Package-d471be2346393657
+PackageVersion: 2.0.9
+FilesAnalyzed: false
+PackageSourceInfo: built package from: apt 2.0.9
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libapt-pkg6.0@2.0.9?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Linq.Dynamic.Core
+
+PackageName: System.Linq.Dynamic.Core
+SPDXID: SPDXRef-Package-d7024a7863ae7e04
+PackageVersion: 1.2.13
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Linq.Dynamic.Core@1.2.13
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libstdc++6
+
+PackageName: libstdc++6
+SPDXID: SPDXRef-Package-d85cbe39bf580c62
+PackageVersion: 10.3.0-1ubuntu1~20.04
+FilesAnalyzed: false
+PackageSourceInfo: built package from: gcc-10 10.3.0-1ubuntu1~20.04
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libstdc++6@10.3.0-1ubuntu1~20.04?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: findutils
+
+PackageName: findutils
+SPDXID: SPDXRef-Package-d8bb3d8816ff9842
+PackageVersion: 4.7.0-1ubuntu1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: findutils 4.7.0-1ubuntu1
+PackageLicenseConcluded: GPL-3.0, GFDL-1.3
+PackageLicenseDeclared: GPL-3.0, GFDL-1.3
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/findutils@4.7.0-1ubuntu1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Text.RegularExpressions
+
+PackageName: System.Text.RegularExpressions
+SPDXID: SPDXRef-Package-da7dad3054210379
+PackageVersion: 4.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.RegularExpressions@4.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: e2fsprogs
+
+PackageName: e2fsprogs
+SPDXID: SPDXRef-Package-db6d83ef237cb70c
+PackageVersion: 1.45.5-2ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.45.5-2ubuntu1.1
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/e2fsprogs@1.45.5-2ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.any.System.Collections
+
+PackageName: runtime.any.System.Collections
+SPDXID: SPDXRef-Package-dc4cfa39ae57b7f0
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Collections@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-dc75f8aa85ff44d1
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: coreutils
+
+PackageName: coreutils
+SPDXID: SPDXRef-Package-dd28dd5cdd36419d
+PackageVersion: 8.30-3ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: coreutils 8.30-3ubuntu2
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/coreutils@8.30-3ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.DotNet.PlatformAbstractions
+
+PackageName: Microsoft.DotNet.PlatformAbstractions
+SPDXID: SPDXRef-Package-df704daf949ecdd
+PackageVersion: 2.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.DotNet.PlatformAbstractions@2.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.WebUtilities
+
+PackageName: Microsoft.AspNetCore.WebUtilities
+SPDXID: SPDXRef-Package-dffd80300c280969
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.WebUtilities@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.CodeQuality.Analyzers
+
+PackageName: Microsoft.CodeQuality.Analyzers
+SPDXID: SPDXRef-Package-e198b51f93b03798
+PackageVersion: 2.9.10
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.CodeQuality.Analyzers@2.9.10
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Text.Encodings.Web
+
+PackageName: System.Text.Encodings.Web
+SPDXID: SPDXRef-Package-e38a9ee2450d9d1a
+PackageVersion: 4.5.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Text.Encodings.Web@4.5.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Globalization.Calendars
+
+PackageName: System.Globalization.Calendars
+SPDXID: SPDXRef-Package-e3d68adcf88351e0
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Globalization.Calendars@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: LibGit2Sharp.NativeBinaries
+
+PackageName: LibGit2Sharp.NativeBinaries
+SPDXID: SPDXRef-Package-e44e65ba46ae5bf8
+PackageVersion: 2.0.306
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/LibGit2Sharp.NativeBinaries@2.0.306
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Threading.Tasks.Extensions
+
+PackageName: System.Threading.Tasks.Extensions
+SPDXID: SPDXRef-Package-e6a2778f028340b5
+PackageVersion: 4.5.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Threading.Tasks.Extensions@4.5.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: SharpCompress
+
+PackageName: SharpCompress
+SPDXID: SPDXRef-Package-e73fb1cb42cf8d74
+PackageVersion: 0.23.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/SharpCompress@0.23.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: base-passwd
+
+PackageName: base-passwd
+SPDXID: SPDXRef-Package-e7f12a16ffadcfe2
+PackageVersion: 3.5.47
+FilesAnalyzed: false
+PackageSourceInfo: built package from: base-passwd 3.5.47
+PackageLicenseConcluded: GPL-2.0, PD
+PackageLicenseDeclared: GPL-2.0, PD
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/base-passwd@3.5.47?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Security.Permissions
+
+PackageName: System.Security.Permissions
+SPDXID: SPDXRef-Package-e88fa8f314500725
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Permissions@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libaudit-common
+
+PackageName: libaudit-common
+SPDXID: SPDXRef-Package-e8e050b750e0bef1
+PackageVersion: 1:2.8.5-2ubuntu6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: audit 1:2.8.5-2ubuntu6
+PackageLicenseConcluded: GPL-2.0, LGPL-2.1, GPL-1.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.1, GPL-1.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libaudit-common@1:2.8.5-2ubuntu6?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: util-linux
+
+PackageName: util-linux
+SPDXID: SPDXRef-Package-eb71157be694e1c1
+PackageVersion: 2.34-0.1ubuntu9.3
+FilesAnalyzed: false
+PackageSourceInfo: built package from: util-linux 2.34-0.1ubuntu9.3
+PackageLicenseConcluded: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+PackageLicenseDeclared: GPL-2.0, public-domain, BSD-4-Clause, MIT, BSD-2-Clause, BSD-3-Clause, LGPL-2.0, LGPL-2.1, GPL-3.0, LGPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/util-linux@2.34-0.1ubuntu9.3?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: runtime.any.System.Text.Encoding.Extensions
+
+PackageName: runtime.any.System.Text.Encoding.Extensions
+SPDXID: SPDXRef-Package-eb9bf085abb18166
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Text.Encoding.Extensions@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: RabbitMQ.Client
+
+PackageName: RabbitMQ.Client
+SPDXID: SPDXRef-Package-ebe71f2290965558
+PackageVersion: 6.2.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/RabbitMQ.Client@6.2.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.Reflection
+
+PackageName: runtime.any.System.Reflection
+SPDXID: SPDXRef-Package-ebfa51cfdc3f207b
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.Reflection@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.native.System
+
+PackageName: runtime.native.System
+SPDXID: SPDXRef-Package-ec30d12a6e1faefe
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.native.System@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: NationalInstruments.SystemLink.ServiceBase
+
+PackageName: NationalInstruments.SystemLink.ServiceBase
+SPDXID: SPDXRef-Package-ec56e4cf44b5dca2
+PackageVersion: 1.108.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/NationalInstruments.SystemLink.ServiceBase@1.108.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Polly.Contrib.WaitAndRetry
+
+PackageName: Polly.Contrib.WaitAndRetry
+SPDXID: SPDXRef-Package-ece2c66056506f2b
+PackageVersion: 1.1.1
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Polly.Contrib.WaitAndRetry@1.1.1
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: adduser
+
+PackageName: adduser
+SPDXID: SPDXRef-Package-edcc48d0fce1fdce
+PackageVersion: 3.118ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: adduser 3.118ubuntu2
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/adduser@3.118ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Reflection.Primitives
+
+PackageName: System.Reflection.Primitives
+SPDXID: SPDXRef-Package-ef56b85707cece63
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Reflection.Primitives@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: Microsoft.AspNetCore.Mvc.Abstractions
+
+PackageName: Microsoft.AspNetCore.Mvc.Abstractions
+SPDXID: SPDXRef-Package-f01c0f17d7e49aad
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.Mvc.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: System.Security.Principal.Windows
+
+PackageName: System.Security.Principal.Windows
+SPDXID: SPDXRef-Package-f0dc0ccdbcc257e8
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Security.Principal.Windows@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libpcre2-8-0
+
+PackageName: libpcre2-8-0
+SPDXID: SPDXRef-Package-f0e4edd8a7d43440
+PackageVersion: 10.34-7
+FilesAnalyzed: false
+PackageSourceInfo: built package from: pcre2 10.34-7
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libpcre2-8-0@10.34-7?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: bash
+
+PackageName: bash
+SPDXID: SPDXRef-Package-f27b4b114e99542a
+PackageVersion: 5.0-6ubuntu1.2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: bash 5.0-6ubuntu1.2
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/bash@5.0-6ubuntu1.2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: System.Runtime.CompilerServices.Unsafe
+
+PackageName: System.Runtime.CompilerServices.Unsafe
+SPDXID: SPDXRef-Package-f297e1c46f4a49db
+PackageVersion: 5.0.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/System.Runtime.CompilerServices.Unsafe@5.0.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl
+
+PackageName: runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl
+SPDXID: SPDXRef-Package-f51af90741c27628
+PackageVersion: 4.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl@4.3.2
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libacl1
+
+PackageName: libacl1
+SPDXID: SPDXRef-Package-f940e1f195bdb84f
+PackageVersion: 2.2.53-6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: acl 2.2.53-6
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0, LGPL-2.1
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0, LGPL-2.1
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libacl1@2.2.53-6?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: lsb-base
+
+PackageName: lsb-base
+SPDXID: SPDXRef-Package-fb45f159a1ed23eb
+PackageVersion: 11.1.0ubuntu2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: lsb 11.1.0ubuntu2
+PackageLicenseConcluded: GPL-2.0, BSD-3-Clause
+PackageLicenseDeclared: GPL-2.0, BSD-3-Clause
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/lsb-base@11.1.0ubuntu2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: sensible-utils
+
+PackageName: sensible-utils
+SPDXID: SPDXRef-Package-fbdaed9b5727bb2d
+PackageVersion: 0.0.12+nmu1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: sensible-utils 0.0.12+nmu1
+PackageLicenseConcluded: GPL-2.0, All-permissive, configure, installsh
+PackageLicenseDeclared: GPL-2.0, All-permissive, configure, installsh
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/sensible-utils@0.0.12+nmu1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: libext2fs2
+
+PackageName: libext2fs2
+SPDXID: SPDXRef-Package-fcc8f0bb13385f48
+PackageVersion: 1.45.5-2ubuntu1.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: e2fsprogs 1.45.5-2ubuntu1.1
+PackageLicenseConcluded: GPL-2.0, LGPL-2.0
+PackageLicenseDeclared: GPL-2.0, LGPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libext2fs2@1.45.5-2ubuntu1.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.AspNetCore.ResponseCaching.Abstractions
+
+PackageName: Microsoft.AspNetCore.ResponseCaching.Abstractions
+SPDXID: SPDXRef-Package-fd1153dadf8e7d6f
+PackageVersion: 2.2.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.AspNetCore.ResponseCaching.Abstractions@2.2.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: liblz4-1
+
+PackageName: liblz4-1
+SPDXID: SPDXRef-Package-fd8f32f8555bb874
+PackageVersion: 1.9.2-2ubuntu0.20.04.1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: lz4 1.9.2-2ubuntu0.20.04.1
+PackageLicenseConcluded: BSD-2-Clause, GPL-2.0
+PackageLicenseDeclared: BSD-2-Clause, GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/liblz4-1@1.9.2-2ubuntu0.20.04.1?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Package: Microsoft.Extensions.DependencyModel
+
+PackageName: Microsoft.Extensions.DependencyModel
+SPDXID: SPDXRef-Package-fe7b709e8c2855f0
+PackageVersion: 2.1.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/Microsoft.Extensions.DependencyModel@2.1.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: runtime.any.System.IO
+
+PackageName: runtime.any.System.IO
+SPDXID: SPDXRef-Package-ff8d0f292f5ce46a
+PackageVersion: 4.3.0
+FilesAnalyzed: false
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:dotnet-core/runtime.any.System.IO@4.3.0
+PackageAttributionText: LayerDigest: sha256:f6896331e2e5e1f0f6097bceb95d6250ab53aeb89e3979404ffa03af109b8f67
+PackageAttributionText: LayerDiffID: sha256:bb4794d56aeb82cdcd54d1d535b4853ca6ab23b1f42af5ff0f91b9afc3199fbb
+
+##### Package: libsemanage-common
+
+PackageName: libsemanage-common
+SPDXID: SPDXRef-Package-ffbca68468a775a1
+PackageVersion: 3.0-1build2
+FilesAnalyzed: false
+PackageSourceInfo: built package from: libsemanage 3.0-1build2
+PackageLicenseConcluded: LGPL-3.0, GPL-3.0
+PackageLicenseDeclared: LGPL-3.0, GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/ubuntu/libsemanage-common@3.0-1build2?distro=ubuntu-20.04
+PackageAttributionText: LayerDigest: sha256:675920708c8bf10fbd02693dc8f43ee7dbe0a99cdfd55e06e6f1a8b43fd08e3f
+PackageAttributionText: LayerDiffID: sha256:b40ed86654e59e1012e1716d5384910f8c3bb58274b7b00fca564a53e9897ba3
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-722bbd8bc7183cc
+Relationship: SPDXRef-ContainerImage-722bbd8bc7183cc CONTAINS SPDXRef-OperatingSystem-1788cd15e606d8ee
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-edcc48d0fce1fdce
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-2b408ebd84ad4013
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-b54c21bfa7121d8a
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-e7f12a16ffadcfe2
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-f27b4b114e99542a
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-be74abd0684e3303
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-24031aff47a8fe53
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-1c6383c2fc965cc4
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-dd28dd5cdd36419d
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-741178dada0f293f
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-390724120c3c115b
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-4047b1e2661e1147
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-5814db5549fffff5
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-37fc5d715090d6d7
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-db6d83ef237cb70c
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-b2a8214f4ae87b0e
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-d8bb3d8816ff9842
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-8339d1bf3d85328
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-61bb2aad8d5e1296
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-2c9ecb8f31df17f8
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-c2b2e7772e859974
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-58e4ee2e531ed238
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-359295d123f1ee32
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-f940e1f195bdb84f
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-d471be2346393657
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-78f7fc4c85847e3c
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-e8e050b750e0bef1
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-963a2b1b3ddac706
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-bdb2f49219e46080
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-15d3ebd218cb750c
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-cd4400d7055c1e30
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-5ae1d1b96305e9fe
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-b5f8d34b47d6cc7a
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-55fd8ee5fd3252fd
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-234f5a4feba9993e
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-cf6f7a1c78e18816
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-6ac4db37194c7452
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-fcc8f0bb13385f48
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-aea34326afc444bf
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-cade021727fe99f3
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-519628d9b30d18a
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-8ecd70a074c706d
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-5e19f3ffdec30749
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-784e702727bc9ac3
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-61309936cc9e5c89
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-45e8ca7a7cd6989f
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-602a73636fc19727
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-fd8f32f8555bb874
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-4eab39d9caa9b23b
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-c6779e98fe947679
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-3f3f552906c8b8d2
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-99723fb66ceebcc4
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-a814788e382c33cf
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-b9fb2368333bd4de
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-b8b3e05d745037d4
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-8e7af5deb335e209
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-974b4951ed7e3e09
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-6cbd8185c0f90815
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-f0e4edd8a7d43440
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-163ead0da8909e05
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-cef069c8fd19a63e
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-6b6634642e83bad6
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-cc241b1ce30bda34
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-ffbca68468a775a1
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-636ff549f8edf056
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-afd85a4769c235f2
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-7104610d6b669bea
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-7dec7a3538dab0a
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-2221f322213b4db6
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-d85cbe39bf580c62
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-cc0cd7774b6fa073
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-c96fa9feaa9c73d
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-c5e78bb93dd20f9e
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-8a98f4c610031b3c
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-1bd76d328f4c5094
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-48968c5752bf1dca
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-afadd3e079fe48f3
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-2b94d6c0b5994878
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-3777d281944ad4b5
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-fb45f159a1ed23eb
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-53be4230cd7f705c
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-af2e2d2b1fc0c5d
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-568ebbef1b11cdd4
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-94653cece11aea11
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-494d2a6581822310
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-b89c631cbd800824
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-24540fe8ff1759c7
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-a187d74c72b2f4e
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-94b46fbd65f9fc1b
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-fbdaed9b5727bb2d
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-2d4d131e1fd8f494
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-8d4329bb65a800e2
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-92ba1c76850e9c71
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-eb71157be694e1c1
+Relationship: SPDXRef-OperatingSystem-1788cd15e606d8ee CONTAINS SPDXRef-Package-8ad2c10b56e87c1a
+Relationship: SPDXRef-ContainerImage-722bbd8bc7183cc CONTAINS SPDXRef-Application-2d0ae03c24e8ed3
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-12f2f567d8f634ed
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-cf25362cddc4c4eb
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d1822d93b61c591b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b5d2ce8002269009
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-417b9adbc9a3c739
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e44e65ba46ae5bf8
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-88b1d44ff172c566
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-933491937c27d83b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-650e1f5a94cd27fe
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2466b21b4992cdf0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c151d21eed2aaeec
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b1321d2536e2099b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a5cb3254536d06bb
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5886c88f2ccf5291
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-8c678c9fb6c4d748
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a3312860026a82e4
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-1bcda5da4127a111
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5f410798e1bc4851
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-cb9658661cefe7e7
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-168f8079a81deb86
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-f01c0f17d7e49aad
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b200d2c3babd2e4d
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-fd1153dadf8e7d6f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-89cac8723817f016
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-26ed72b07aa89232
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-dffd80300c280969
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5035d23a3e1435f5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2244bb196ddfe321
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-78da492fc3255bd0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e198b51f93b03798
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-df704daf949ecdd
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3a98f9abb1416b15
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-aa9b6ebcd7120b44
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c02e88d7bf9b7e7f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-560fe9fd6d705fd5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3b15432ea1d16f7f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-fe7b709e8c2855f0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3fae8f1da64b6123
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-4ad0e58167551fe4
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3d4633030719ef7a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-76af28e876410080
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-61378a077483a27e
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-1584c6e7e2ba44c5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d3aa393f43a9b2a0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-710abf8755c69a8f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-9e6b511306a1700d
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2eb957a3913d9fa1
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-bd422959e3e89aa7
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5a91a73600c62796
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3c252000d8b0022c
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-91034405f2c94c6c
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b9dcbab0330edba1
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3aeba1048b25a73d
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a1ada82749deee3e
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-bab49abbaf982718
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-89408c12ff73aada
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-8b43a13716c3e049
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-6167c4093faa6aef
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-38f1aab9291481c4
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-84de09b0042e0cba
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-66389809b18a839
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-6052a3cbe360a224
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ae2abf48d13af1d1
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-aecc3ddf01bfa7f5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ec56e4cf44b5dca2
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-1bb3d0ce8dd7d131
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-7ae902c618b82273
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ece2c66056506f2b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-bf399e47ae635955
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ebe71f2290965558
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b97bb03a69517b94
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e73fb1cb42cf8d74
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-59a32603981de3e2
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-12ea7d7fc503962f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3117db4332723ecf
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a13dcf490385d830
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-6cc6d0a610fdb26d
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-773a4b66705e433f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-78e4a5671f5a63ac
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-27c7a9f888e151a5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-87915332adf19e8f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-573fd5dd5a1f9dc7
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-8ccf368bd510e5bd
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-cc2f67f9fe28df98
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-277ad26ec0af8a0a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e3d68adcf88351e0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-629b04e26608e498
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d341424b5fccd85
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-923c512820e450fe
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c656a68d76c77978
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c87bffd915eb5159
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d7024a7863ae7e04
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5f2c807a72c5799e
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-4d270a19e4ca4e1c
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-317f331449e1f230
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5f492840a636e05e
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b11847ede48d4d94
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-5f8a7a2e348497d3
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-85e446ff0046ee6f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d136ea52aa6b2839
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2ba9417699fd86fd
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c224199b88e8db9f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-6b67deded87581c5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ef56b85707cece63
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a4e3e0886a939994
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-54cd724dcead612
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2e181fa3f100f6a9
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-466c0281e06f2cd4
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-f297e1c46f4a49db
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-26886383fc0d1aec
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c8e5264fbe922f11
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-8d385289446b92cb
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c774e28c774efc84
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-71511cba1f2d2df5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ae1fc7223d561a90
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-259497bdf8d0bdd6
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-1c71f796da73801f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-9810fc20c04f8cec
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-90b91b340e669ab8
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a718eb326ac15219
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-aa63ac2ee7f88c17
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-6fe72a0010651fd0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-9d5c7c02e7dbb482
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-8ed95563bb4b5017
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3aad37ec81036878
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-55fdc5a8518092ed
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e88fa8f314500725
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-f0dc0ccdbcc257e8
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-31cc826ad335a113
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-4ebe2db522f54a24
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-85155e890e56bc70
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e38a9ee2450d9d1a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-18e8f80a1cdeba0e
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-da7dad3054210379
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d43ca89352ffc5ef
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-87835970b59cc6b6
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-65c004e9aa0a3661
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-e6a2778f028340b5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-1446edc9be4c38f3
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-26efaf9cbf363365
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c02e711bd1abadba
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-dc4cfa39ae57b7f0
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-cd2d6c7bed68b4ae
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2cb925d98af84b3a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-2e66ba11b802535f
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-43b86d589a317d0e
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ff8d0f292f5ce46a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ebfa51cfdc3f207b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-d01280dd5c14565b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-17e2182398e3ed82
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-c03b6ccd111c8ad5
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-15ace38ae0eeb489
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-199e7cfd270fb542
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b63a5b3809bf3511
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-605cf4391e569231
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-eb9bf085abb18166
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-a02a9a584c1d8da4
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-809566ec9485bc77
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-dc75f8aa85ff44d1
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-91c9044eef624bcb
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-ec30d12a6e1faefe
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-6a5a3abc824b964b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-b8ffdfa4d624cc9a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-82275ca2b356667b
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-f51af90741c27628
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-25172ff1ef9c1a65
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-56bf630e2e750565
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-58eb0214944e97e2
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-4fe5b49035d4ef7
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-3c2fda7d9b7f788d
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-9879b10c9632a109
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-9ed110d68bb73b78
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-52070b323a99309a
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-27b102ec0cee1cf9
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-bfee3479393c6d31
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-36f13f09ed90fba8
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-49de9e65c3ecde2
+Relationship: SPDXRef-Application-2d0ae03c24e8ed3 CONTAINS SPDXRef-Package-73e404fbc6fb0f33
+

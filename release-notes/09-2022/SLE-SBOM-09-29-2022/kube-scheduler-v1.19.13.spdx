@@ -1,0 +1,77 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13
+DocumentNamespace: http://aquasecurity.github.io/trivy/container_image/niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13-fcfc33f1-acdd-43fe-aac9-8ec95e11a455
+Creator: Organization: aquasecurity
+Creator: Tool: trivy
+Created: 2022-09-29T20:58:42.117149Z
+
+##### Package: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13
+
+PackageName: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13
+SPDXID: SPDXRef-ContainerImage-11304a6cc260b98d
+FilesAnalyzed: false
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be?repository_url=niartifacts.jfrog.io%2Frnd-docker-ci%2Fkube-scheduler&arch=amd64
+PackageAttributionText: SchemaVersion: 2
+PackageAttributionText: ImageID: sha256:35036a0cd23a85559f3b6662bd6c608c09e9496ce1c041838457999168ab76c7
+PackageAttributionText: RepoDigest: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler@sha256:1810844d782c996ca17cd8795e2605aae6c7cbc123f7933fbc273bc6643d12be
+PackageAttributionText: DiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb
+PackageAttributionText: DiffID: sha256:825221c7273a634aea2f82cc040134a0aa363bb7a5b2049e7fbfde935791260b
+PackageAttributionText: DiffID: sha256:3022be91a6d8c6cc9a0bcaceff4f5007e1efb5da8cbba9b673b9460dc4509f17
+PackageAttributionText: RepoTag: niartifacts.jfrog.io/rnd-docker-ci/kube-scheduler:v1.19.13
+
+##### Package: debian
+
+PackageName: debian
+SPDXID: SPDXRef-OperatingSystem-97379df6dfc11561
+PackageVersion: 10.10
+FilesAnalyzed: false
+
+##### Package: base-files
+
+PackageName: base-files
+SPDXID: SPDXRef-Package-1d600828c56dcad9
+PackageVersion: 10.3+deb10u10
+FilesAnalyzed: false
+PackageSourceInfo: built package from: base-files 10.3+deb10u10
+PackageLicenseConcluded: GPL-3.0
+PackageLicenseDeclared: GPL-3.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/base-files@10.3+deb10u10?distro=debian-10.10
+PackageAttributionText: LayerDigest: sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2
+PackageAttributionText: LayerDiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb
+
+##### Package: tzdata
+
+PackageName: tzdata
+SPDXID: SPDXRef-Package-7869cfb5c94669e4
+PackageVersion: 2021a-0+deb10u1
+FilesAnalyzed: false
+PackageSourceInfo: built package from: tzdata 2021a-0+deb10u1
+PackageLicenseConcluded: NONE
+PackageLicenseDeclared: NONE
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/tzdata@2021a-0+deb10u1?distro=debian-10.10
+PackageAttributionText: LayerDigest: sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2
+PackageAttributionText: LayerDiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb
+
+##### Package: netbase
+
+PackageName: netbase
+SPDXID: SPDXRef-Package-84ead713f142070d
+PackageVersion: 5.6
+FilesAnalyzed: false
+PackageSourceInfo: built package from: netbase 5.6
+PackageLicenseConcluded: GPL-2.0
+PackageLicenseDeclared: GPL-2.0
+ExternalRef: PACKAGE-MANAGER purl pkg:deb/debian/netbase@5.6?distro=debian-10.10
+PackageAttributionText: LayerDigest: sha256:b49b96595fd4bd6de7cb7253fe5e89d242d0eb4f993b2b8280c0581c3a62ddc2
+PackageAttributionText: LayerDiffID: sha256:16679402dc206c982b5552ab8de7d898547100e5468be29d4f67d393c0eadfdb
+
+##### Relationships
+
+Relationship: SPDXRef-DOCUMENT DESCRIBE SPDXRef-ContainerImage-11304a6cc260b98d
+Relationship: SPDXRef-ContainerImage-11304a6cc260b98d CONTAINS SPDXRef-OperatingSystem-97379df6dfc11561
+Relationship: SPDXRef-OperatingSystem-97379df6dfc11561 CONTAINS SPDXRef-Package-1d600828c56dcad9
+Relationship: SPDXRef-OperatingSystem-97379df6dfc11561 CONTAINS SPDXRef-Package-84ead713f142070d
+Relationship: SPDXRef-OperatingSystem-97379df6dfc11561 CONTAINS SPDXRef-Package-7869cfb5c94669e4
+
