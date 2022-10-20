@@ -677,3 +677,14 @@ nbexecservice:
         secretKeySecret:
           name: "notebookexecution-s3-credentials"
           key: "password"
+
+## Configuration for licensing
+##
+licenseservicelimo:
+  ## Persistent Volume configuration
+  ##
+  persistentVolume:
+    # <ATTENTION> Set this value to the name of the persistent storage class that supports ReadWriteMany access.
+    ## Leave this value as empty, to use the default storage class, if it already supports ReadWriteMany access.
+    ##
+    storageClassName: ""
