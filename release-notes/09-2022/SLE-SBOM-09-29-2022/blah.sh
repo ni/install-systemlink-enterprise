@@ -1,0 +1,1 @@
+for f in *:*; do mv "$f" "$(echo "$f" | sed s/:/-/)"; done
