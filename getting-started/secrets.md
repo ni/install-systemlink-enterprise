@@ -1,3 +1,3 @@
 # Required Secrets for SystemLink Enterprise
 
-Visit the NI Documentation portal for info about [SystemLink Enterprise secrets](https://ni-staging.zoominsoftware.io/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-E695319B-F7BF-478C-8A7D-4803C1D439F1__GUID-6C46946D-E8BC-420A-991E-45427056E9BC)
+Visit the NI Documentation portal for info about [SystemLink Enterprise secrets](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-266C7E70-0DBE-4577-A6B3-4E1FC5926989__GUID-8B60105C-6129-4236-8FA3-E554F02434F7)
