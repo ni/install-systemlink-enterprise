@@ -358,6 +358,7 @@ dashboardhost:
     ##
     plugins:
       - http://localhost:8080/ni/plugins/systemlink-notebook-datasource/1.1.0.zip;ni-slnotebook-datasource
+      - http://localhost:8080/ni/plugins/systemlink-dataframe-datasource/1.4.0.zip;ni-sldataframe-datasource
 
     ## Customize the grafana.ini file.
     ##
@@ -438,6 +439,8 @@ grafanaprovisioning:
         enabled: true
         datasources:
           ni-slnotebook-datasource:
+            enabled: true
+          ni-sldataframe-datasource:
             enabled: true
 
 ## Configuration for the Data Frame service.
@@ -537,50 +540,10 @@ dataframeservice:
             <value>false</value>
           </property>
 
-  ## Configure Kafka cluster
-  ##
-  # kafkacluster:
-  #   kafka:
-        ## Configure metrics and exporter
-        ## Default jmx options port 9404
-  #     jmxOptions: {}
-  #     metricsConfig:
-  #       deployDefault: true
-  #       name: dfs-kafka-metrics
-  #       key: kafka-metrics-config.yml
-        ## Enable kafkaExporter
-  #     kafkaExporter:
-  #       topicRegex: ".*"
-  #       groupRegex: ".*"
-
-  #   zookeeper:
-        ## Configure metrics and exporter
-        ## Default jmx options port 9404
-  #     jmxOptions: {}
-  #     metricsConfig:
-  #       deployDefault: true
-  #       name: dfs-zookeeper-metrics
-  #       key: zookeeper-metrics-config.yml
-        ## Enable kafkaExporter
-  #     kafkaExporter:
-  #       topicRegex: ".*"
-  #       groupRegex: ".*"
-
   ## Configure Kafka access
   ##
   kafkaconnect:
     spec:
-      ## Configure metrics and exporter
-      ## Default jmx options port 9404
-      # jmxOptions: {}
-      # metricsConfig:
-      #   deployDefault: true
-      #   name: dfs-kafka-connect-metrics
-      #   key: kafka-connect-metrics-config.yml
-      ## Enable kafkaExporter
-      # kafkaExporter:
-      #   topicRegex: ".*"
-      #   groupRegex: ".*"
       template:
         pod:
           ## Configure image pull secrets for the Kafka container.
