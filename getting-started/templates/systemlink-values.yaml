@@ -577,10 +577,10 @@ dataframeservice:
       #   deployDefault: true
       #   name: dfs-kafka-connect-metrics
       #   key: kafka-connect-metrics-config.yml
-      # Enable kafkaExporter
-      kafkaExporter:
-        topicRegex: ".*"
-        groupRegex: ".*"
+      ## Enable kafkaExporter
+      # kafkaExporter:
+      #   topicRegex: ".*"
+      #   groupRegex: ".*"
       template:
         pod:
           ## Configure image pull secrets for the Kafka container.
