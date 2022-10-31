@@ -6,13 +6,11 @@ The 11-2022 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Feature
 
-- Initial inclusion of the SystemLink License service. This service does not yet enforce licensing.
 - OpenAPI documentation for the Products service is now included and available at `api-hostname`/niapis
 
 ## Behavior Changes
 
 - Files up to 10GB can be uploaded through the web interface.
-- The SystemLink License service requires a persistent storage class with ""ReadWriteMany"" in the cluster hosting SystemLink.
 
 
 ## Software Bill of Materials
@@ -40,7 +38,6 @@ TODO
 ## Helm Chart Breaking Changes
 
 - Top Level Helm Chart <version???>
-     - You must set the name of the persistent storage class that supports `ReadWriteMany` in the `licenseservicelimo` section.
 
 ## Bugs Fixed
 
