@@ -355,7 +355,7 @@ dashboardhost:
 
     ## This sets the GF_INSTALL_PLUGINS env variable
     ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
-    ## Uncomment to configure additional plugins. This will override the plugins included by default
+    ## <ATTENTION> - Uncomment to configure additional plugins. This will override the plugins included by default
     ## so ensure you update with the latest versions listed in the default values file.
     ##
     # plugins:
@@ -407,7 +407,7 @@ dashboardhost:
       ##
       # plugins:
         ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
-        ## Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
+        ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
         ## the list of plugins listed in the default values file.
         ##
         # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
@@ -441,7 +441,7 @@ grafanaprovisioning:
       #       type: some-datasource
       #       ## Each datasource is then copied as written into the template. You can follow the format here to define an entry: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L462
       #       ## The main difference is that instead of a list of datasources we use a key-value pair. The values for it can be defined the same way as in the grafana docs.
-      ## Uncomment to override the enabled plugins. This will override the plugins enabled by default so ensure you enable the plugins listed in the default values file.
+      ## <ATTENTION> - Uncomment to override the enabled plugins. This will override the plugins enabled by default so ensure you enable the plugins listed in the default values file.
       # systemlink:
       #   enabled: true
       #   datasources:
