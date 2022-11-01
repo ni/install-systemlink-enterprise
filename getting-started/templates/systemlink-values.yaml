@@ -667,7 +667,7 @@ nbexecservice:
         # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
         ##
         port: *minioPort
-        ## Set this value to enable/disable insecure connection: http or https.
+        ## Set this value to true for an http (insecure) connection, or false for an https (secure) connection.
         ##
         insecure: true
         ## Secret PATH containing the credentials.
