@@ -1,8 +1,6 @@
-# SystemLink Enterprise 11-2022 Release Notes
+# SystemLink Enterprise 2022-11 Release Notes
 
-The 11-2022 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts.
-
-**Note:**  If you are upgrading from the 07-2022 release or earlier. Complete the steps in [FileIngestionDatabaseRecovery.md](FileIngestionDatabaseRecovery.md) to avoid losing file metadata.
+The 2022-11 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts.
 
 ## New Feature
 
@@ -19,10 +17,9 @@ The 11-2022 release bundle for SystemLink Enterprise has been published to <http
 
 ## Versions
 
-**Top Level Helm Chart:** systemlink: 0.8.108
+**Top Level Helm Chart:** `systemlink 0.8.111`
 
-
-**Admin Helm Chart:** systemlink-admin: 0.8.6
+**Admin Helm Chart:** `systemlink-admin 0.8.6`
 
 ### NI Containers
 
@@ -47,7 +44,7 @@ TODO
 
 Only customer facing bugs have been included in this list.
 
-[closed-bugs-sle-11-2022.xlsx](closed-bugs-sle-11-2022.xlsx)
+[closed-bugs-sle-2022-11.xlsx](closed-bugs-sle-2022-11.xlsx)
 
 ## Vulnerabilities Fixed
 
@@ -59,11 +56,13 @@ This data is a snapshot from MONTH DAY, 2022, and lists the components responsib
 
 <!-- [issues-sle-09-27-2022.xlsx](issues-sle-09-27-2022.xlsx) -->
 
-## Upgrading from the 09-2022 Release to the 11-2022 Release
+## Upgrading from the 09-2022 Release to the 2022-11 Release
 
 Due to breaking changes in the top level SystemLink and SystemLink-Admin Helm chart the following procedure is required to upgrade the application. Note, this upgrade will cause any currently executing notebooks to fail.
 
-1. Run the Helm upgrade command to remove existing Argo CRDs using the 11-2022 release against your cluster running the 09-2022 release. 
+1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm charts to the 2022-11 release.
+
+1. Run the Helm upgrade command to remove existing Argo CRDs.
 
     **Note:** This wil result in an expected failure: `PGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
 
