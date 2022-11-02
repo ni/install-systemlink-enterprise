@@ -56,7 +56,7 @@ This data is a snapshot from MONTH DAY, 2022, and lists the components responsib
 
 <!-- [issues-sle-09-27-2022.xlsx](issues-sle-09-27-2022.xlsx) -->
 
-## Upgrading from the 09-2022 Release to the 2022-11 Release
+## Upgrading from the 2022-09 Release to the 2022-11 Release
 
 Due to breaking changes in the top level SystemLink and SystemLink-Admin Helm chart the following procedure is required to upgrade the application. Note, this upgrade will cause any currently executing notebooks to fail.
 
