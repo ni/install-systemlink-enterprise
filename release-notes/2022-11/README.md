@@ -17,7 +17,7 @@ The 2022-11 release bundle for SystemLink Enterprise has been published to <http
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.8.111`
+**Top Level Helm Chart:** `systemlink 0.8.112`
 
 **Admin Helm Chart:** `systemlink-admin 0.8.6`
 
@@ -35,8 +35,9 @@ TODO
 
 ## Helm Chart Breaking Changes
 
-- SystemLink Helm Chart 0.8.108
+- SystemLink Helm Chart 0.8.112
     - Argo custom resource definitions (CRD) are removed from the `argoworkflows 0.1.53` chart
+    - You no longer need to specify SystemLink Grafana plugin configuration unless you also intend on installing additional plugins.
 - SystemLink-Admin Helm Chart 0.8.6
     - `argoworkflowscrd` chart added as a dependency. This chart installs SystemLink required CRDs
 
@@ -64,7 +65,7 @@ Due to breaking changes in the top level SystemLink and SystemLink-Admin Helm ch
 
 1. Run the Helm upgrade command to remove existing Argo CRDs.
 
-    **Note:** This wil result in an expected failure: `PGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
+    **Note:** This wil result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
 
 1. Run the command `kubectl get crds | grep argo` to verify the argo CRDs have been deleted.
 
