@@ -52,9 +52,7 @@ See bugs with **XRay** in the title in the list above of closed bugs.
 
 ## Known Vulnerabilities
 
-This data is a snapshot from MONTH DAY, 2022, and lists the components responsible for Critical or High severity security issues where there is a fix available.
-
-<!-- [issues-sle-09-27-2022.xlsx](issues-sle-09-27-2022.xlsx) -->
+This information is available upon request. Work with your account representative to request this report.
 
 ## Upgrading from the 2022-09 Release to the 2022-11 Release
 
@@ -62,7 +60,7 @@ Due to breaking changes in the top level SystemLink and SystemLink-Admin Helm ch
 
 1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm charts to the 2022-11 release.
 
-1. Run the Helm upgrade command to remove existing Argo CRDs.
+1. Run the Helm upgrade command to remove existing Argo CRDs. This command should include all flags and value file references you would expect to use for a typical upgrade of the application.
 
     **Note:** This wil result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
 
