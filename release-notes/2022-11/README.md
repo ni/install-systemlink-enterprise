@@ -4,7 +4,7 @@ The 2022-11 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Feature
 
-- OpenAPI documentation for the Products service is now included and available at `api-hostname/niapis`.
+There are no new features in this release.
 
 ## Behavior Changes
 
