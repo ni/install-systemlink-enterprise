@@ -16,7 +16,7 @@ There are no new features in this release.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.8.112`
+**Top Level Helm Chart:** `systemlink 0.8.113`
 
 **Admin Helm Chart:** `systemlink-admin 0.8.6`
 
@@ -34,7 +34,7 @@ TODO
 
 ## Helm Chart Breaking Changes
 
-- SystemLink Helm Chart 0.8.112
+- SystemLink Helm Chart 0.8.113
     - Argo custom resource definitions (CRD) are removed from the `argoworkflows 0.1.53` chart
     - You no longer need to specify SystemLink Grafana plugin configuration unless you also intend on installing additional plugins.
 - SystemLink-Admin Helm Chart 0.8.6
