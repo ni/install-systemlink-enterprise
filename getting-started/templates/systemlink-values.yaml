@@ -520,7 +520,7 @@ dataframeservice:
         extraProperties: |
           <property>
             <name>fs.s3a.endpoint</name>
-            <value><ATTENTION> - set to the FQDN of the S3 endpoint, including the port, but without an HTTP or HTTPS prefix. Example: {svc-name}-{namespace}.svc.cluster.local:9000</value>
+            <value><ATTENTION> - set to the FQDN of the S3 endpoint, including the port, but without an HTTP or HTTPS prefix. Example: {svc-name}.{namespace}.svc.cluster.local:9000</value>
           </property>
           <property>
             <name>fs.s3a.path.style.access</name>
