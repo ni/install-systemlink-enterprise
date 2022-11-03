@@ -45,7 +45,7 @@ Only customer facing bugs have been included in this list.
 
 ## Vulnerabilities Fixed
 
-See bugs with **XRay** in the title in the list above of closed bugs.
+See bugs with **XRay** in the title in the above list of closed bugs.
 
 ## Known Vulnerabilities
 
