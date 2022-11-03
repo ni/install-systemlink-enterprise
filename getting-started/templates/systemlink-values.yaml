@@ -390,7 +390,8 @@ dashboardhost:
         ##
         host: $__file{/etc/secrets/dashboardhost/host}
         ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
-        ##
+        ## <ATTENTION> - You must create the database manually ahead of time. If you are using
+        ## the default database name, you must create a database named "grafana".
         # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
@@ -529,7 +530,7 @@ dataframeservice:
         extraProperties: |
           <property>
             <name>fs.s3a.endpoint</name>
-            <value><ATTENTION> - set to the FQDN of the S3 endpoint, including the port, but without an HTTP or HTTPS prefix. Example: {svc-name}-{namespace}.svc.cluster.local:9000</value>
+            <value><ATTENTION> - set to the FQDN of the S3 endpoint, including the port, but without an HTTP or HTTPS prefix. Example: {svc-name}.{namespace}.svc.cluster.local:9000</value>
           </property>
           <property>
             <name>fs.s3a.path.style.access</name>
