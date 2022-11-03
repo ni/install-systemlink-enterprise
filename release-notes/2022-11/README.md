@@ -33,7 +33,7 @@ There are no new features in this release.
 
 - SystemLink Helm Chart 0.8.113
     - Argo custom resource definitions (CRD) are removed from the `argoworkflows 0.1.53` chart
-    - You no longer need to specify SystemLink Grafana plugin configuration unless you also intend on installing additional plugins.
+    - You no longer need to specify SystemLink Grafana plugin configuration unless you also intend to install additional plugins.
 - SystemLink-Admin Helm Chart 0.8.6
     - `argoworkflowscrd` chart added as a dependency. This chart installs SystemLink required CRDs
 
