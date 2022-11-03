@@ -60,14 +60,14 @@ Due to breaking changes in the top level SystemLink and SystemLink-Admin Helm ch
 
 1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm charts to the 2022-11 release.
 
-1. Run the Helm upgrade command to remove existing Argo CRDs. This command should include all flags and value file references you would expect to use for a typical upgrade of the application.
+1. Run the Helm upgrade command on the `systemlink` chart to remove existing Argo CRDs. This must be done before upgrading the `systemlink-admin` chart. This command should include all flags and value file references you would expect to use for a typical upgrade of the application.
 
     **Note:** This wil result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
 
-1. Run the command `kubectl get crds | grep argo` to verify the argo CRDs have been deleted.
+1. Run the command `kubectl get crds | grep argo` to verify the argo CRDs have been deleted. You may need to manually delete remaining CRDs if the Helm upgrade command does not remove all of these objects.
 
 1. Run the Helm upgrade command for the `systemlink-admin` helm chart.
 
 1. Run the command `kubectl get crds | grep argo` to verify the new argo CRDs have been installed.
 
-1. Run the helm upgrade command for the `systemlink` Helm chart.
+1. Run the Helm upgrade command for the `systemlink` Helm chart.
