@@ -386,7 +386,7 @@ dashboardhost:
         ##
         host: $__file{/etc/secrets/dashboardhost/host}
         ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
-        ## <ATTENTION> - the database must be manually created ahead of time. If using
+        ## <ATTENTION> - You must create the database manually ahead of time. If you are using
         ## the default database name, a database named "grafana" must be created.
         # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
