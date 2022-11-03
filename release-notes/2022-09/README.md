@@ -1,6 +1,6 @@
 # SystemLink Enterprise 9-2022 Release Notes
 
-The 09-2022 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts.
+The 2022-09 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts.
 
 **Note:**  If you are upgrading from the 07-2022 release or earlier. Complete the steps in [FileIngestionDatabaseRecovery.md](FileIngestionDatabaseRecovery.md) to avoid losing file metadata.
 
@@ -10,12 +10,12 @@ The 09-2022 release bundle for SystemLink Enterprise has been published to <http
 - New **Routines** application is available under **Analysis and Reporting**. Routines enable you to automate the execution of Jupyter notebooks in response to file upload or update events.
 - New **Executions** application is available under **Analysis and Reporting**. Executions enable you to view current and past Jupyter notebook executions and the results, properties, and parameters of an execution.
 - Clicking **Visualize** on selected data tables in a test result will open the tables in Grafana Explore mode.
-- The Data Frame Service plugin for Grafana now supports Lossy, Min/Max, and Entry/Exit/Min/Max decimation strategies. Lossy decimation will not work on tables created prior to the 09-2022 release.
+- The Data Frame Service plugin for Grafana now supports Lossy, Min/Max, and Entry/Exit/Min/Max decimation strategies. Lossy decimation will not work on tables created prior to the 2022-09 release.
 - A test result property can be displayed as a hyperlink in test result grid columns and detail pages. Use hyperlink markdown syntax for the property value to render the hyperlink. Only hyperlinks that are same origin as the SLE web application can be displayed.
 - View and edit test result properties from the test results grid or a test result's detail's page.
 - In JupyterHub you can view published notebooks and pull a local copy of a notebook into your JuypterHub workspace.
 - In JupyterHub you can choose the SystemLink workspace to publish a notebook.
-- Analysis routines cannot be run against data tables created prior to the 09-2022 release.
+- Analysis routines cannot be run against data tables created prior to the 2022-09 release.
 
 ## Software Bill of Materials
 
