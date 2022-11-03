@@ -20,7 +20,6 @@ When you upgrade, you must complete the following steps to avoid breaking change
 
 1. Run the Helm upgrade command for the `systemlink` Helm chart.
 
-- Files up to 10GB can be uploaded through the web interface.
 
 ## New Features
 
