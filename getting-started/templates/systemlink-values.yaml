@@ -387,7 +387,7 @@ dashboardhost:
         host: $__file{/etc/secrets/dashboardhost/host}
         ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
         ## <ATTENTION> - You must create the database manually ahead of time. If you are using
-        ## the default database name, a database named "grafana" must be created.
+        ## the default database name, you must create a database named "grafana".
         # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
