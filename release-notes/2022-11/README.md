@@ -10,7 +10,7 @@ When you upgrade, you must complete the following steps to avoid breaking change
 
 1. Before you upgrade the `systemlink-admin` chart, run the Helm upgrade command on the `systemlink` chart to remove existing Argo CRDs. This command must include all flags and value file references you would use for a typical application upgrade.
 
-    **Note:** This wil result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
+    **Note:** This will result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. Ignore this error.
 
 1. Run the command `kubectl get crds | grep argo` to verify the argo CRDs have been deleted. You may need to manually delete remaining CRDs if the Helm upgrade command does not remove all of these objects.
 
