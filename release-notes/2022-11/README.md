@@ -4,7 +4,7 @@ The 2022-11 release bundle for SystemLink Enterprise has been published to <http
 
 ## Upgrading from the 2022-09 Release to the 2022-11 Release
 
-Due to breaking changes in the top level SystemLink and SystemLink-Admin Helm chart the following procedure is required to upgrade the application. Note, this upgrade will cause any currently executing notebooks to fail.
+When you upgrade, you must complete the following steps to avoid breaking changes in the top-level SystemLink and SystemLink-Admin Helm chart. Note, this upgrade will cause any currently executing notebooks to fail.
 
 1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm charts to the 2022-11 release.
 
