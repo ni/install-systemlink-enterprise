@@ -1,6 +1,6 @@
 # SystemLink Enterprise 2022-11 Release Notes
 
-The 2022-11 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release please review past refer to past release notes to ensure all required configuration changes are addressed.
+The 2022-11 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## Upgrading from the 2022-09 Release to the 2022-11 Release
 
