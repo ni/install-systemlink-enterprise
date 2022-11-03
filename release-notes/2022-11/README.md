@@ -8,7 +8,7 @@ When you upgrade, you must complete the following steps to avoid breaking change
 
 1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm charts to the 2022-11 release.
 
-1. Run the Helm upgrade command on the `systemlink` chart to remove existing Argo CRDs. This must be done before upgrading the `systemlink-admin` chart. This command should include all flags and value file references you would expect to use for a typical upgrade of the application.
+1. Before you upgrade the `systemlink-admin` chart, run the Helm upgrade command on the `systemlink` chart to remove existing Argo CRDs. This command must include all flags and value file references you would use for a typical application upgrade.
 
     **Note:** This wil result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. This error can be ignored.
 
