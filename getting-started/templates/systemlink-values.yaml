@@ -691,7 +691,7 @@ nbexecservice:
 
 ## Configuration for licensing
 ##
-licenseservicelimo:
+license:
   ## Persistent Volume configuration
   ##
   persistentVolume:
