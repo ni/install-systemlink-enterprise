@@ -355,8 +355,8 @@ dashboardhost:
 
     ## This sets the GF_INSTALL_PLUGINS env variable
     ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
-    ## <ATTENTION> - Uncomment to configure additional plugins. This will override the plugins included by default
-    ## so ensure you update with the latest versions listed in the default values file.
+    ## <ATTENTION> - To include additional Grafana plugins, uncomment this section, update the existing URLs where
+    ## X.X.X.zip is the latest version in the values.yaml file, and add the URLs for any additional plugins.
     ##
     # plugins:
     #   - http://localhost:8080/ni/plugins/systemlink-notebook-datasource/X.X.X.zip;ni-slnotebook-datasource
