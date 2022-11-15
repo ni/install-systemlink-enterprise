@@ -699,3 +699,17 @@ license:
     ## Leave this value as empty, to use the default storage class, if it already supports ReadWriteMany access.
     ##
     storageClassName: ""
+
+## Configuration for event-based routine triggering.
+##
+routineeventtrigger:
+  ## Number of routine event trigger replicas to deploy.
+  ##
+  replicaCount: 2
+
+## Configuration for time-based routine triggering.
+##
+routinescheduletrigger:
+  ## Number of routine schedule trigger replicas to deploy.
+  ##
+  replicaCount: 2
