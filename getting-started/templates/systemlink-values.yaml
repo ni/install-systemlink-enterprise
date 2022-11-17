@@ -703,13 +703,15 @@ license:
 ## Configuration for SMTP
 smtp:
   smtpServer:
-    ## Optional - The SMTP server host.
+    # <ATTENTION> Set the following values to enable email notifications.
+    ##
+    ## Required - The SMTP server host name.
     ##
     # host: "example"
-    ## Optional - The SMTP server port.
+    ## Required - The SMTP server port.
     ##
     # port: 1025
-    ## Optional - The from address used in notification emails.
+    ## Required - The from address used in notification emails.
     ##
     # fromAddress: "noreply@example.com"
     ## Optional - Whether SSL should be enabled or not.
