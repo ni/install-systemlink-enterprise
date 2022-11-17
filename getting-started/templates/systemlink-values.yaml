@@ -714,13 +714,13 @@ smtp:
     ## Required - The from address used in notification emails.
     ##
     # fromAddress: "noreply@example.com"
-    ## Optional - Whether SSL should be enabled or not.
+    ## Optional - Whether SSL should be enabled.
     ##
     # enableSsl: true
     ## Optional - Whether credentials are required to connect to the SMTP server. If this is true, the smtp-server-credentials secret must exist.
     ##
     # requireAuthentication: true
-    ## Optional - The timeout in seconds when communicating with the SMTP server.
+    ## Optional - The timeout, in seconds, when communicating with the SMTP server.
     ##
     # timeoutSeconds: 100
 
