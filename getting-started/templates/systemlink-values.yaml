@@ -699,3 +699,26 @@ license:
     ## Leave this value as empty, to use the default storage class, if it already supports ReadWriteMany access.
     ##
     storageClassName: ""
+
+## Configuration for SMTP
+smtp:
+  smtpServer:
+    ## Optional - The SMTP server host.
+    ##
+    # host: "example"
+    ## Optional - The SMTP server port.
+    ##
+    # port: 1025
+    ## Optional - The from address used in notification emails.
+    ##
+    # fromAddress: "noreply@example.com"
+    ## Optional - Whether SSL should be enabled or not.
+    ##
+    # enableSsl: true
+    ## Optional - Whether credentials are required to connect to the SMTP server. If this is true, the smtp-server-credentials secret must exist.
+    ##
+    # requireAuthentication: true
+    ## Optional - The timeout in seconds when communicating with the SMTP server.
+    ##
+    # timeoutSeconds: 100
+
