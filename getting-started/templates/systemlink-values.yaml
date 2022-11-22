@@ -713,3 +713,27 @@ routinescheduletrigger:
   ## Number of routine schedule trigger replicas to deploy.
   ##
   # replicaCount: 2
+
+## Configuration for SMTP
+smtp:
+  smtpServer:
+    # <ATTENTION> Set the following values to enable email notifications.
+    ##
+    ## Required - The SMTP server host name.
+    ##
+    # host: "example"
+    ## Required - The SMTP server port.
+    ##
+    # port: 1025
+    ## Required - The from address used in notification emails.
+    ##
+    # fromAddress: "noreply@example.com"
+    ## Optional - Whether SSL should be enabled.
+    ##
+    # enableSsl: true
+    ## Optional - Whether credentials are required to connect to the SMTP server. If this is true, the smtp-server-credentials secret must exist.
+    ##
+    # requireAuthentication: true
+    ## Optional - The timeout, in seconds, when communicating with the SMTP server.
+    ##
+    # timeoutSeconds: 100
