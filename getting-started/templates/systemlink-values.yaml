@@ -700,6 +700,20 @@ license:
     ##
     storageClassName: ""
 
+## Configuration for event-based routine triggering.
+##
+routineeventtrigger:
+  ## Number of routine event trigger replicas to deploy.
+  ##
+  # replicaCount: 5
+
+## Configuration for time-based routine triggering.
+##
+routinescheduletrigger:
+  ## Number of routine schedule trigger replicas to deploy.
+  ##
+  # replicaCount: 2
+
 ## Configuration for SMTP
 smtp:
   smtpServer:
@@ -723,4 +737,3 @@ smtp:
     ## Optional - The timeout, in seconds, when communicating with the SMTP server.
     ##
     # timeoutSeconds: 100
-
