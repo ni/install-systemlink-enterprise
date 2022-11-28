@@ -38,7 +38,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
     - The contents of the `routineservice` helm chart have been split into two charts": `routineservice` and `routineeventtrigger`
     - There are no breaking changes to the existing chart but some values and secrets can be removed or renamed.
         - Within `userservices.secrets.whitelistedApiKeys`, `routines` can be removed and `routineeventtrigger` should be added.
-        - The `routineservice.engine` configuration is deprecated. If you used this configuration, migrate by moving it under `routineeventtrigger`. 
+        - The `routineservice.engine` configuration is deprecated. If you used this configuration, migrate by moving it under `routineeventtrigger`.
 - `routineeventtrigger 0.2.0`
     - Some components from the "routineservice" into the `routineeventtrigger` chart.
     - Refer to [systemlink-secrets.yaml](TODO Link) for required changes
@@ -52,7 +52,6 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 - `notification 0.1.0`
     - Newly included chart
     - You must configure a secret for MongoDB credentials in `notification.secrets.mongodb`
-
 
 ## Bugs Fixed
 
@@ -74,18 +73,138 @@ This information is available upon request. Work with your account representativ
 
 ## Versions
 
-<!-- **Top Level Helm Chart:** `systemlink 0.8.113` -->TODO
+**Top Level Helm Chart:** `systemlink 0.9.86`
 
-<!-- **Admin Helm Chart:** `systemlink-admin 0.8.6` -->TODO
+**Admin Helm Chart:** `systemlink-admin 0.9.4`
 
 ### NI Containers
 
-TODO
+assetservice/20221118.6
+
+dashboardsui/20221111.2
+
+dataframeservice/20221118.4
+
+dataframeservice-kafka-connect/20221020.2
+
+dremio-apache/23.0.1
+
+executionsui/20221121.3
+
+filesui/20221122.1
+
+grafana-auth-proxy/20220823.49
+
+grafana-rbac-integrator/20221026.4
+
+helium-fileingestionservices/dc33be88fa6bb48bc2579c1388f7813f4898ae4d.1
+
+helium-serviceregistry/73420f07fb9b610a8b50243690300af644852736.1
+
+helium-userservices/b0bf0d034f0fecf7ab35170b408a8b7fbb89cd36.1
+
+helium-webappservices/3ba5384cc64762f3e2701e0f5d81f6d658537548.1
+
+helium-webserver/9ec4fb54f928a14c96fce899e063cc05b1b4de7e.1
+
+jupyter-notebook-userpod/20221118.9
+
+landingpageui/20221122.3
+
+license/20221121.2
+
+nbexec-execution-helpers/20221117.1
+
+nbexec-notebook-runner/20221118.2
+
+nbexecservice/20221123.4
+
+nbparsingservice/20221117.1
+
+ni-grafana/v9.2.0-01545b402a-ni
+
+notification/20221119.6
+
+routineeventtrigger/20221122.3
+
+routineexecutor/20221122.7
+
+routinescheduletrigger/20221122.15
+
+routineservice/20221122.10
+
+routinesui/20221122.4
+
+saltmaster/20221121.4
+
+saltmaster-init/20221121.4
+
+securityui/d9bf470abbab0d89f3fc331025235bc092ad0bc0.1
+
+session-manager-service/20221119.4
+
+sl-k8s-hub/20221118.7
+
+smtp/20221119.2
+
+sysmgmtevent/20221116.7
+
+systemsmanagementservice/20221121.2
+
+systemsui/20221122.4
+
+testinsightsui/20221125.4
+
+testmonitorservice/20221122.10
+
+userdata/20221121.2
+
+userservice-setup/20221118.2
 
 ### Non Container/Chart Artifacts
 
-TODO
+plotly-panel/1.1.2.zip
+
+systemlink-dataframe-datasource/1.6.0.zip
+
+systemlink-notebook-datasource/1.1.0.zip
 
 ### 3rd Party Containers
 
-TODO
+argoproj/argocli/v3.4.3-linux-amd64
+
+argoproj/argoexec/v3.4.3-linux-amd64
+
+argoproj/workflow-controller/v3.4.3-linux-amd64
+
+bats/bats/1.8.2
+
+bitnami/minio/2022.11.11-debian-11-r0
+
+bitnami/mongodb/5.0.13-debian-11-r9
+
+bitnami/rabbitmq/3.10.8-debian-11-r4
+
+bitnami/redis-cluster/7.0.5-debian-11-r9
+
+bitnami/schema-registry/7.2.2-debian-11-r11
+
+busybox/1.35.0
+
+jupyterhub/configurable-http-proxy/4.5.3
+
+jupyterhub/k8s-image-awaiter/2.0.0
+
+kiwigrid/k8s-sidecar/1.21.0
+
+kube-scheduler/v1.23.10
+
+pause/3.8
+
+strimzi/kafka/0.32.0-kafka-3.2.3
+
+strimzi/kafka/0.32.0-kafka-3.3.1
+
+zookeeper/3.8.0-temurin
+
+strimzi/operator/0.32.0
