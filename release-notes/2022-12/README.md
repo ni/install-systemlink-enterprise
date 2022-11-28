@@ -2,19 +2,17 @@
 
 The 2022-12 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## New Features
+## New Features and Behavior changes
 
 - License service now included in the top level helm chart. Refer to **Helm Chart Breaking Changes** for details on the required configuration for this service.
-
-## Behavior Changes
-
-- TODO
+- Users may specify data table IDs as variables in dashboards.
+- Users may customize columns, filter, save, and load views in the Products grid.
+- Users may now upload and view files associated with a product.
+- Users can now filter the Executions grid by date ranges and workspaces.
 
 ## Helm Chart Breaking Changes
 
-- TODO
-
-- All Charts `TODO top level chart version`
+- All Charts `systemlink 0.9.86`
     - Containers inside a Pod now use a stricter `securityContext` configuration by default.
     - The new default `securityContext` configuration for containers is as follows:
         - `allowPrivilegeEscalation` defaults to `false`
@@ -41,7 +39,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
         - The `routineservice.engine` configuration is deprecated. If you used this configuration, migrate by moving it under `routineeventtrigger`.
 - `routineeventtrigger 0.2.0`
     - Some components from the "routineservice" into the `routineeventtrigger` chart.
-    - Refer to [systemlink-secrets.yaml](TODO Link) for required changes
+    - Refer to [systemlink-secrets.yaml](templates/systemlink-secrets.yaml) for required changes
 - `routinescheduletrigger 0.2.0`
     - Newly included chart
     - You must configure the `userservices.secrets.whitelistedApiKeys` value with an entry for `routinescheduletrigger` `serviceName`.
@@ -57,7 +55,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 
 Only customer facing bugs have been included in this list.
 
-<!-- [closed-bugs-sle-2022-12.xlsx](closed-bugs-sle-2022-12.xlsx) --> TODO
+[closed-bugs-sle-2022-12.xlsx](closed-bugs-sle-2022-12.xlsx)
 
 ## Vulnerabilities Fixed
 
