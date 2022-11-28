@@ -46,7 +46,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
     - You must configure MongoDB credentials in `routinescheduletrigger.secrets.mongodb`.
 - `routineexecutor 0.2.0`
     - Newly included chart
-    - You must configure the `userservices.secrets.whitelistedApiKeys` value with a n entry for `routineexecutor` `serviceName`.
+    - You must configure the `userservices.secrets.whitelistedApiKeys` value with an entry for `routineexecutor` `serviceName`.
 - `notification 0.1.0`
     - Newly included chart
     - You must configure a secret for MongoDB credentials in `notification.secrets.mongodb`
