@@ -4,22 +4,22 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- License service now included in the top level helm chart. Refer to **Helm Chart Breaking Changes** for details on the required configuration for this service.
-- Users may specify data table IDs as variables in dashboards.
-- Users may customize columns, filter, save, and load views in the Products grid.
-- Users may now upload and view files associated with a product.
-- Users can now filter the Executions grid by date ranges and workspaces.
+- The License service now included in the top level helm chart. Refer to **Helm Chart Breaking Changes** for details on the required configuration for this service.
+- Users can specify data table IDs as variables in dashboards.
+- Users can customize columns, filter, save, and load views in the Products grid.
+- Users can upload and view files associated with a product.
+- Users can filter the Executions grid by date ranges and workspaces.
 
 ## Helm Chart Breaking Changes
 
-- All Charts `systemlink 0.9.86`
-    - Containers inside a Pod now use a stricter `securityContext` configuration by default.
+- `systemlink 0.9.86`, `systemlink-admin 0.9.4`
+    - Containers inside a Pod now use a more strict `securityContext` configuration by default.
     - The new default `securityContext` configuration for containers is as follows:
         - `allowPrivilegeEscalation` defaults to `false`
         - `readOnlyRootFilesystem` defaults to `true`
         - `privileged` defaults to `false`
         - `capabilities.drop` defaults to `[all]`.
-    - This change only affects the default values of _Containers_. The default values for the _Pod_ `securityContext` remain the same.
+    - This change only affects the default values of _Containers_. The default values for _Pod_ `securityContext` remains the same.
 - `license 0.1.0`
     - This service requires the persistent storage class `ReadWriteMany`.
     - Configure secrets for the service
@@ -30,13 +30,13 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
         - Refer to [What Do You Need to Use SystemLink Enterprise?](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-requirements.html)
 - `nbexecservice 0.1.312`
     - Config map renamed from `nbexec-service-argo-configmap` to `<helm_release_name>-nbexecservice-argo-configmap`.
-    - Service names were moved from config map to workflow-template.
+    - Service names have been moved from config map to workflow-template.
     - During helm upgrade in progress executions may fail.
-- `routineservice 0.2.0`
+<!-- - `routineservice 0.2.0`
     - The contents of the `routineservice` helm chart have been split into two charts": `routineservice` and `routineeventtrigger`
     - There are no breaking changes to the existing chart but some values and secrets can be removed or renamed.
-        - Within `userservices.secrets.whitelistedApiKeys`, `routines` can be removed and `routineeventtrigger` should be added.
-        - The `routineservice.engine` configuration is deprecated. If you used this configuration, migrate by moving it under `routineeventtrigger`.
+        Within `userservices.secrets.whitelistedApiKeys`, `routines` can be removed and `routineeventtrigger` should be added.
+        - The `routineservice.engine` configuration is deprecated. If you used this configuration, migrate by moving it under `routineeventtrigger`. -->
 - `routineeventtrigger 0.2.0`
     - Some components from the "routineservice" into the `routineeventtrigger` chart.
     - Refer to [systemlink-secrets.yaml](templates/systemlink-secrets.yaml) for required changes
