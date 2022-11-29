@@ -33,7 +33,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
     - Service names have been moved from config map to workflow-template.
     - During helm upgrade in progress executions may fail.
 - `routineeventtrigger 0.2.0`
-    - Some components from the "routineservice" into the `routineeventtrigger` chart.
+    - Values have moved from the `routineservice.engine` into the `routineeventtrigger` chart.
     - Refer to [systemlink-secrets.yaml](templates/systemlink-secrets.yaml) for required changes
 - `routinescheduletrigger 0.2.0`
     - Newly included chart
