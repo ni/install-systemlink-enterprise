@@ -6,7 +6,7 @@ This repository constitutes a basic getting-started guide for installing the Sys
 
 Visit the [NI Documentation portal](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-configuration-and-installation.html) for info about configuring SystemLink Enterprise.
 
-Starter YAML templates are available at  in the [templates directory](getting-started/templates). Refer to [Releases](https://github.com/ni/install-systemlink-enterprise/releases) to obtain the version of these documents corresponding to the version of SystemLink Enterprise you intend to install.
+YAML templates are available in the [templates directory](getting-started/templates). Refer to [Releases](https://github.com/ni/install-systemlink-enterprise/releases) to find the documents for the version of SystemLink Enterprise you want to install.
 
 ## Contributing to the Handbook
 
