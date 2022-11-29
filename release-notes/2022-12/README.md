@@ -6,7 +6,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 
 - The License service now included in the top level helm chart. Refer to **Helm Chart Breaking Changes** for details on the required configuration for this service.
 - Users can specify data table IDs as variables in dashboards.
-- Users can customize columns, filter, save, and load views in the Products grid.
+- Users can customize, filter, save, and load views in the Products grid.
 - Users can upload and view files associated with a product.
 - Users can filter the Executions grid by date ranges and workspaces.
 
