@@ -12,7 +12,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 
 ## Helm Chart Breaking Changes
 
-- `systemlink 0.9.88`, `systemlink-admin 0.9.4`
+- `systemlink 0.9.89`, `systemlink-admin 0.9.4`
     - Containers inside a Pod now use a more strict `securityContext` configuration by default.
     - The new default `securityContext` configuration for containers is as follows:
         - `allowPrivilegeEscalation` defaults to `false`
@@ -68,7 +68,7 @@ This information is available upon request. Work with your account representativ
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.9.88`
+**Top Level Helm Chart:** `systemlink 0.9.89`
 
 **Admin Helm Chart:** `systemlink-admin 0.9.4`
 
