@@ -23,10 +23,10 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 - `license 0.1.0`
     - This service requires the persistent storage class `ReadWriteMany`.
     - Configure secrets for the service
-        - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-secrets.yaml)
+        - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-secrets.yaml)
         - Refer to [Required Secrets](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/required-secrets.html)
     - Configure values for the service
-        - Refer to [systemlink-values.yaml](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml)
+        - Refer to [systemlink-values.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-values.yaml)
         - Refer to [What Do You Need to Use SystemLink Enterprise?](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-requirements.html)
 - `nbexecservice 0.1.312`
     - Config map renamed from `nbexec-service-argo-configmap` to `<helm_release_name>-nbexecservice-argo-configmap`.
@@ -36,7 +36,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
     - Remove the whitelisted API key
 - `routineeventtrigger 0.2.0`
     - Values have moved from the `routineservice.engine` into the `routineeventtrigger` chart.
-    - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-secrets.yaml) for required changes
+    - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-secrets.yaml) for required changes
 - `routinescheduletrigger 0.2.0`
     - Newly included chart
     - You must configure the `userservices.secrets.whitelistedApiKeys` value with an entry for `routinescheduletrigger` `serviceName`.
