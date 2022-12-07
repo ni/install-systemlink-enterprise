@@ -32,6 +32,8 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
     - Config map renamed from `nbexec-service-argo-configmap` to `<helm_release_name>-nbexecservice-argo-configmap`.
     - Service names have been moved from config map to workflow-template.
     - During helm upgrade in progress executions may fail.
+- `routines`
+    - Remove the whitelisted API key
 - `routineeventtrigger 0.2.0`
     - Values have moved from the `routineservice.engine` into the `routineeventtrigger` chart.
     - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-secrets.yaml) for required changes

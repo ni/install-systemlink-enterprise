@@ -718,6 +718,7 @@ routinescheduletrigger:
 smtp:
   smtpServer:
     # <ATTENTION> Set the following values to enable email notifications.
+    ## Exclude this section to leave the SMTP service disabled,
     ##
     ## Required - The SMTP server host name.
     ##
