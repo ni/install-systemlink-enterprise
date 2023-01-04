@@ -4,7 +4,9 @@ The 2023-01 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- TODO
+- Schedule a Jupyter notebook to run at a specific time or on a repeating schedule.
+- View detailed information about individual test steps for a test result. Refer to Viewing Test Steps by Result.
+- Access SystemLink navigation and user account settings when using the Jupyter environment.
 
 ## Helm Chart Breaking Changes
 
