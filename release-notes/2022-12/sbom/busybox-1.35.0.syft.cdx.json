@@ -1,0 +1,82 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:b0db6419-579c-4022-b0b8-52b8cba33e41",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-01-09T15:48:51-06:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.62.3"
+      }
+    ],
+    "component": {
+      "bom-ref": "a3dea896e0110672",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-ci/busybox:1.35.0",
+      "version": "sha256:0d5a701f0ca53f38723108687add000e1922f812d4187dea7feaee85d2f5a6c5"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "ace24631b11e4e58",
+      "type": "library",
+      "name": "busybox",
+      "version": "1.35.0",
+      "cpe": "cpe:2.3:a:busybox:busybox:1.35.0:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:language",
+          "value": "binary"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "BinaryMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "binary"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:352a410538a379df37bf2d85e40a4fc407f2d4772c686634def77a3962bad45c"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/["
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "name": "busybox",
+      "version": "1.35.0",
+      "description": "BusyBox v1.35.0",
+      "swid": {
+        "tagId": "busybox",
+        "name": "busybox",
+        "version": "1.35.0"
+      },
+      "properties": [
+        {
+          "name": "syft:distro:id",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:distro:idLike:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:distro:prettyName",
+          "value": "BusyBox v1.35.0"
+        },
+        {
+          "name": "syft:distro:versionID",
+          "value": "1.35.0"
+        }
+      ]
+    }
+  ]
+}
