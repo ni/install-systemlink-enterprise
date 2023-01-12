@@ -48,7 +48,7 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
     - Newly included chart
     - You must configure a secret for MongoDB credentials in `notification.secrets.mongodb`
 - `sl-jupyterhub 0.2.0`
-    - The default configuration doesn't allow anymore user pods to establish outbound connections to private IPs (for example accessing SystemLink APIs that are exposed on a private IP from Jupyter Notebooks or the Jupyter terminal). To allow this, you must explicitly set `jupyterhub.singleuser.networkPolicy.egressAllowRules.privateIPs=true`.
+    - To enable JupyterHub user pods to establish outbound connections to private IP addresses by default, set `jupyterhub.singleuser.networkPolicy.egressAllowRules.privateIPs=true`.
 
 ## Bugs Fixed
 
