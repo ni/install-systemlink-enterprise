@@ -18,6 +18,12 @@ Only customer facing bugs have been included in this list.
 
 [closed-bugs-sle-2023-01.xlsx](closed-bugs-sle-2023-01.xlsx)
 
+## Software Bill of Materials and Notices
+
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2023-01/release-notes/2023-01/sbom)
+
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2023-01/release-notes/2023-01/notices)
+
 ## Versions
 
 **Top Level Helm Chart:** TODO
