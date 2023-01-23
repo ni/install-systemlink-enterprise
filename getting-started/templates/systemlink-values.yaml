@@ -619,6 +619,11 @@ fileingestion:
 sl-jupyterhub:
   jupyterhub:
     imagePullSecrets: *pullSecrets
+    singleuser:
+      networkPolicy:
+        egressAllowRules:
+          # <ATTENTION> - Set to true to enable JupyterHub user pods to establish outbound connections to private IP addresses.
+          privateIPs: false
 
   ## Ingress configuration.
   ##
