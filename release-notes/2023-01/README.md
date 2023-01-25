@@ -54,7 +54,7 @@ helium-serviceregistry/50d2e8921bd19f4794ef8f79ba60d089768e5737.1
 
 helium-userservices/cf8c5a4ec9c63dd98585dec2de364cd8d4e91b56.1
 
-helium-webappservices/4772a238370543d2bc31c30f8d018b77da7dafb1.1
+helium-webappservices/03c2246e94932bc07f367b8c66cc16f190abe6a6.1
 
 helium-webserver/9d275e79c073c39e02d617e9a3ce80777b18054e.2
 
