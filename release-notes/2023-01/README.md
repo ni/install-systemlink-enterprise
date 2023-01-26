@@ -1,6 +1,6 @@
 # SystemLink Enterprise 2023-01 Release Notes
 
-The 2023-01 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update include new feature, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-01 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## New Features and Behavior changes
 
