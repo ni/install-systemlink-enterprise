@@ -48,6 +48,15 @@ global:
   # <ATTENTION> - Set to false if you do not want to manage secrets as part of the Helm installation.
   ##
   deploySecrets: true
+  ## Customize telemetry data collection.
+  ##
+  telemetry:
+    ## Turn telemetry data collection on or off.
+    ##
+    enabled: false
+    ## Url target of OpenTelemetry exporter. Corresponds to OTEL_EXPORTER_OTLP_ENDPOINT.
+    ##
+    openTelemetryExporterOtlpEndpoint: ""
 
 ## Core configuration for the SystemLink web application.
 ##
