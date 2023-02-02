@@ -55,6 +55,7 @@ global:
     ##
     enabled: false
     ## Url target of OpenTelemetry exporter. Corresponds to OTEL_EXPORTER_OTLP_ENDPOINT.
+    ## https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_endpoint
     ##
     openTelemetryExporterOtlpEndpoint: ""
 
