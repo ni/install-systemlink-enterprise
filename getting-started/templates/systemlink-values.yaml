@@ -514,6 +514,15 @@ dataframeservice:
     #   cpu: 15
     #   memory: 122800
     #   volumeSize: 128Gi
+    ## CPU and memory allocated to each zookeeper pod, expressed in CPU cores and MB respectively.
+    ## Count should correspond with the number of nodes that received the "high.mem" label.
+    # zookeeper:
+    #   cpu: 0.5
+    #   memory: 1024
+    #   count: 3
+    ## Nodes to select for Dremio pods.
+    # nodeSelector:
+    #   high.mem: "true"
     auth:
       ## Name of the secret containing the Dremio login credentials
       ##
