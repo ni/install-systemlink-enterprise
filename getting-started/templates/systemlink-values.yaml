@@ -84,6 +84,9 @@ webserver:
     ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
     ##
     scope: "openid email profile"
+    # Optional - Enable the user-info end-point to return the user's claims
+    ##
+    # enableUserInfo: "false"
   ## If access to the OpenID Connect provider requires a proxy server, provide proxy service configuration here.
   # <ATTENTION> - Configure the proxy server for OpenID connect access here.
   ##
@@ -381,7 +384,7 @@ dashboardhost:
         # <ATTENTION> - The DNS address of the SystemLink application must be duplicated here.
         ##
         domain: *primaryUIHost
-      
+
       ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
       # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
       ##
@@ -624,9 +627,9 @@ fileingestion:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
-   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service 
-   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the 
-   ## individual rates configured here. 
+   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
+   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
+   ## individual rates configured here.
   ##
   rateLimits:
     ## Upload file
