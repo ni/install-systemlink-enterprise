@@ -58,6 +58,11 @@ global:
     ## https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_endpoint
     ##
     openTelemetryExporterOtlpEndpoint: ""
+    ## Specify whether to include user IDs in traces.
+    ## Turned off by default per recommendation of the OpenTelemetry Specification.
+    ## https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/span-general.md#general-identity-attributes
+    ##
+    includeUserInfo: false
 
 ## Core configuration for the SystemLink web application.
 ##
