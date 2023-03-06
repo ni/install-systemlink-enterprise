@@ -69,8 +69,8 @@ global:
 rabbitmq:
   ## Policy used when starting pods in the stateful set.
   # <ATTENTION> - RabbitMQ pods must start in reverse shutdown order.
-  #               After an unexpected shutdown of the cluster, temporarily set podManagementPolicy
-  #               to "Parallel" and forceBoot to true to restore the cluster to a healthy state.
+  #               To restore the cluster to a healthy state after an unexpected shutdown, temporarily set
+  #               podManagementPolicy to "Parallel" and forceBoot to true.
   #               https://github.com/bitnami/charts/tree/main/bitnami/rabbitmq#recover-the-cluster-from-complete-shutdown
   ##
   podManagementPolicy: "OrderedReady"
