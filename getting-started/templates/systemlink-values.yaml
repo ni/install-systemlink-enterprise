@@ -585,6 +585,12 @@ dataframeservice:
           ##
           imagePullSecrets: *pullSecrets
 
+  ## Configure Kafka UI
+  ##
+  kafka-ui:
+    image:
+      registry: *imageRegistryRef
+
 ## Salt configuration.
 ##
 saltmaster:
