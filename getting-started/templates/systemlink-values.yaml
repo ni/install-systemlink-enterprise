@@ -64,6 +64,22 @@ global:
     ##
     includeUserInfo: false
 
+## Core configuration for the RabbitMQ message broker
+##
+rabbitmq:
+  ## Policy used when starting pods in the stateful set.
+  # <ATTENTION> - RabbitMQ pods must start in reverse shutdown order.
+  #               To restore the cluster to a healthy state after an unexpected shutdown, temporarily set
+  #               podManagementPolicy to "Parallel" and forceBoot to true.
+  #               https://github.com/bitnami/charts/tree/main/bitnami/rabbitmq#recover-the-cluster-from-complete-shutdown
+  ##
+  podManagementPolicy: "OrderedReady"
+  # podManagementPolicy: "Parallel"
+  clustering:
+    ## Force cluster to boot after an unexpected shutdown (in an unexpected order).
+    ##
+    forceBoot: false
+
 ## Core configuration for the SystemLink web application.
 ##
 webserver:
