@@ -76,7 +76,7 @@ rabbitmq:
   podManagementPolicy: "OrderedReady"
   # podManagementPolicy: "Parallel"
   clustering:
-    ## Force boot of a cluster after an unexpected shutdown (in an unexpected order).
+    ## Force cluster to boot after an unexpected shutdown (in an unexpected order).
     ##
     forceBoot: false
 
