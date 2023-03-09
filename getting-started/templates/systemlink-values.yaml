@@ -607,6 +607,7 @@ dataframeservice:
     image:
       registry: *imageRegistryRef
     imagePullSecrets:
+      # <ATTENTION> - Update this value when updating global imagePullSecrets
       - name: niartifacts-secret
 
 ## Salt configuration.
