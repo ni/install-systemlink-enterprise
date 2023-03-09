@@ -15,9 +15,12 @@ global:
   ##
   apiHosts: &apiHosts
     - &primaryApiHost "systemlink-api.example.com"
+  ## Defines the secret required to pull containers hosted on a private image repository.
+  ##
+  niImagePullSecret: &niPullSecret "niartifacts-secret"
   ## Defines secrets required if containers are hosted on a private image repository.
   ##
-  imagePullSecrets: &pullSecrets ["niartifacts-secret"]
+  imagePullSecrets: &pullSecrets [*niPullSecret]
   ## Overrides the default image registry.
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
@@ -607,8 +610,7 @@ dataframeservice:
     image:
       registry: *imageRegistryRef
     imagePullSecrets:
-      # <ATTENTION> - Update this value when updating global imagePullSecrets
-      - name: niartifacts-secret
+      - name: *niPullSecret
 
 ## Salt configuration.
 ##
