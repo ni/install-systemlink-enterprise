@@ -6,44 +6,49 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - Support for Kubernetes 1.23
 
-- TODO CSV EXPORT
-
 - Support for both PostgreSQL 13 and 14.
+
+- Users can now export data tables to CSV
 
 - Product, results, and steps tables can be queried using the table query builder.
 
-- OpenTelemetry metrics available for the following services
+- OpenTelemetry metrics are now available for the following services
     - testmonitor
     - dataframeservice
     - Kafka
 
-- The endpoint to view claims for the current logged in user `/oidc/userinfo` has been removed and replaced with `oidc/user-info`.
+- The endpoint to view claims for the current logged in user, `/oidc/userinfo`, has been removed and replaced with `oidc/user-info`.
 
-- Kafka UI is now available
+- Kafka UI is now available for debugging and monitoring
 
-- Increase the default memory provided to Kafka connect from 256 to 512. JVM Heap size
+- Kafka S3 sink connectors are automatically deleted if a data table is marked `endOfData`.
 
-- TODO Describe Kafka connector reconnect and deletion
+- Deleted Kafka S3 sink connectors are automatically reestablished if connectors are manually deleted.
+
+- The default memory provided to Kafka topic operator has increased from 256MB to 512MB to increase the total number of tables that can be written to by the Data Frame Service.
 
 ## Helm Chart Breaking Changes
 
-- systemlink TODO Version
+- `systemlink 0.11.81`
     - Enabling Kafka OpenTelemetry metrics
         - Set `global.telemetry.enabled` flag to `true`.
-        - You are no longer required to also set options in `kafka.metricsConfigs`, `kafka.jmxOptions`, and `kafka.kafkaExporter` configurations
+        - You are no longer required to also set options in `kafka.metricsConfigs`, `kafka.jmxOptions`, and `kafka.kafkaExporter` configurations.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L56)
 
-    - Enabling user claims to be returned in a web browser
-        - Set `webserver.oidc.enableUserInfo` to `true`
+    - Enabling user claims to be returned in a web browser.
+        - Set `webserver.oidc.enableUserInfo` to `true`.
         - You should remove `offline_access` from `webserver.oidc.scope`.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110)
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110).
 
     - Enabling Kafka UI
         - To enable the Kafka UI you must override the image pull repository to the repository you are installing SystemLink Enterprise from.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L606)
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L606).
 
-
-webappservices	N/A	Not really a breaking change nor new, but the webappservices.secrets.continuationTokenEncryptionKey secret must be set to a 256-bit random value which is base64 encoded. Failure to base64 encode the value stored in the Helm chart will result in errors from the service. This was not documented and we've found internal deployments with invalid keys. Having an invalid key should not cause issues with this release but likely will be an issue in the future.	https://github.com/ni/install-systemlink-enterprise/pull/117
+    - Encryption key secret for webappservices
+        - The `webappservices.secrets.continuationTokenEncryptionKey` secret must be set to a 256-bit random value which is base64 encoded.
+        - Failure to base64 encode the value stored in the Helm chart will result in errors from the service.
+        - An invalid key will causes issues in future releases.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-secrets.yaml#L409)
 
 ## Bugs Fixed
 
@@ -52,8 +57,6 @@ Only customer facing bugs have been included in this list.
 [closed-bugs-sle-2023-03](TODO link to closed bugs)
 
 ## Software Bill of Materials and Notices
-
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
 [SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2023-03/release-notes/2023-03/sbom)
 
