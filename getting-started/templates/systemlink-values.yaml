@@ -424,7 +424,7 @@ dashboardhost:
         ##
         host: $__file{/etc/secrets/dashboardhost/host}
         ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
-        ## <ATTENTION> - You must create the database manually ahead of time. If you are using the default database
+        ## <ATTENTION> - You must create the database manually before deploying. If you are using the default database
         ## name, you must create a database named "grafana". The database user, if not a superuser, will require USAGE
         ## and CREATE privileges on the "public" schema and SELECT, INSERT, UPDATE, and DELETE privileges on all tables
         ## in the "public" schema. 
