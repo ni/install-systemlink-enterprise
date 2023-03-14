@@ -19,7 +19,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - `oidc/user-info` replaced `/oidc/userinfo` as the endpoint to view claims for the current logged in user
 
-- Kafka UI is now available for debugging and monitoring
+- Kafka UI is available for debugging and monitoring
 
 - Kafka S3 sink connectors are automatically deleted if a data table is marked `endOfData`.
 
