@@ -609,8 +609,6 @@ dataframeservice:
   ## Configure Kafka UI
   ##
   kafka-ui:
-    image:
-      registry: *imageRegistryRef
     imagePullSecrets:
       - name: *niPullSecret
 
