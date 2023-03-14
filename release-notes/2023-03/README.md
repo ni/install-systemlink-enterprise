@@ -12,7 +12,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - You can query product, results, and steps tables with the table query builder
 
-- OpenTelemetry metrics are available for the following services
+- Telemetry metrics are available for the following services
     - testmonitor
     - dataframeservice
     - Kafka
@@ -46,8 +46,8 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110).
 
     - Enabling Kafka UI
-        - To enable the Kafka UI, you must override the image pull repository and specify the repository you are installing SystemLink Enterprise from.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L606).
+        - To enable the Kafka UI, you specify `kafka-ui.imagePullSecrets`.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L611).
 
     - Encryption key secret for webappservices
         - The `webappservices.secrets.continuationTokenEncryptionKey` secret must be set to a 256-bit random value which is base64 encoded.
@@ -69,7 +69,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.11.81`
+**Top Level Helm Chart:** `systemlink 0.11.85`
 
 **Admin Helm Chart:** `systemlink-admin 0.11.12`
 
