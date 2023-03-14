@@ -45,8 +45,9 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
         - You should remove `offline_access` from `webserver.oidc.scope`.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110).
 
-    - Enabling Kafka UI
-        - To enable the Kafka UI, you specify `kafka-ui.imagePullSecrets`.
+    - Enabling Kafka UI for the Data Frame Service
+        - Set `dataframeservice.kafka-ui.imagePullSecrets`.
+        - You are encouraged to used the YAML alias for your global image pull secret to specify this value.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L611).
 
     - Encryption key secret for webappservices
