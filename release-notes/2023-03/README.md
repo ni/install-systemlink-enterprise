@@ -46,7 +46,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110).
 
     - Enabling Kafka UI
-        - To enable the Kafka UI you must override the image pull repository to the repository you are installing SystemLink Enterprise from.
+        - To enable the Kafka UI, you must override the image pull repository and specify the repository you are installing SystemLink Enterprise from.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L606).
 
     - Encryption key secret for webappservices
