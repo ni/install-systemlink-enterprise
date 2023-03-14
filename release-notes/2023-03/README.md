@@ -21,7 +21,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - Kafka UI is available for debugging and monitoring
 
-- Kafka S3 sink connectors are automatically deleted if a data table is marked `endOfData`.
+- Kafka S3 sink connectors are automatically deleted if a data table is marked `endOfData`
 
 - Deleted Kafka S3 sink connectors are automatically reestablished if connectors are manually deleted
 
