@@ -35,7 +35,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
         - You must specify the single required image pull secret in a new value `global.niImagePullSecret` and reference this value in `global.imagePullSecrets`.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L18)
 
-    - Enabling Kafka OpenTelemetry metrics
+    - Enabling Kafka metrics
         - Set `global.telemetry.enabled` flag to `true`.
         - You are no longer required to also set options in `kafka.metricsConfigs`, `kafka.jmxOptions`, and `kafka.kafkaExporter` configurations.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L56)
