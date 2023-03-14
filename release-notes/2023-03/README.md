@@ -23,7 +23,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - Kafka S3 sink connectors are automatically deleted if a data table is marked `endOfData`.
 
-- Deleted Kafka S3 sink connectors are automatically reestablished if connectors are manually deleted.
+- Deleted Kafka S3 sink connectors are automatically reestablished if connectors are manually deleted
 
 - The default memory provided to Kafka topic operator has increased from 256MB to 512MB to increase the total number of tables that can be written to by the Data Frame Service.
 
