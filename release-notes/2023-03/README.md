@@ -6,7 +6,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - Support for Kubernetes 1.23
 
-- Support for both PostgreSQL 13 and 14.
+- Support for PostgreSQL 13 and 14
 
 - Users can now export data tables to CSV
 
