@@ -17,7 +17,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
     - dataframeservice
     - Kafka
 
-- The endpoint to view claims for the current logged in user, `/oidc/userinfo`, has been removed and replaced with `oidc/user-info`.
+- `oidc/user-info` replaced `/oidc/userinfo` as the endpoint to view claims for the current logged in user
 
 - Kafka UI is now available for debugging and monitoring
 
