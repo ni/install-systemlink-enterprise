@@ -15,9 +15,12 @@ global:
   ##
   apiHosts: &apiHosts
     - &primaryApiHost "systemlink-api.example.com"
+  ## Defines the secret required to pull containers hosted on a private image repository.
+  ##
+  niImagePullSecret: &niPullSecret "niartifacts-secret"
   ## Defines secrets required if containers are hosted on a private image repository.
   ##
-  imagePullSecrets: &pullSecrets ["niartifacts-secret"]
+  imagePullSecrets: &pullSecrets [*niPullSecret]
   ## Overrides the default image registry.
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
@@ -424,8 +427,10 @@ dashboardhost:
         ##
         host: $__file{/etc/secrets/dashboardhost/host}
         ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
-        ## <ATTENTION> - You must create the database manually ahead of time. If you are using
-        ## the default database name, you must create a database named "grafana".
+        ## <ATTENTION> - You must create the database manually before deploying. If you are using the default database
+        ## name, you must create a database named "grafana". The database user, if not a superuser, will require USAGE
+        ## and CREATE privileges on the "public" schema and SELECT, INSERT, UPDATE, and DELETE privileges on all tables
+        ## in the "public" schema. 
         # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
@@ -604,8 +609,8 @@ dataframeservice:
   ## Configure Kafka UI
   ##
   kafka-ui:
-    image:
-      registry: *imageRegistryRef
+    imagePullSecrets:
+      - name: *niPullSecret
 
 ## Salt configuration.
 ##
