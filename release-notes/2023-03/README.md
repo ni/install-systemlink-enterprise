@@ -32,7 +32,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 - `systemlink 0.11.81`
     - Setting image pull secrets
         - Image pull secret specification has been split into two separate global values.
-        - You must specifying the single required image pull secret in a new value `global.niImagePullSecret` and reference this value in `global.imagePullSecrets`.
+        - You must specify the single required image pull secret in a new value `global.niImagePullSecret` and reference this value in `global.imagePullSecrets`.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L18)
 
     - Enabling Kafka OpenTelemetry metrics
