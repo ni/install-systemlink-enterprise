@@ -10,7 +10,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - You can export data tables to CSV
 
-- Product, results, and steps tables can be queried using the table query builder.
+- You can query product, results, and steps tables with the table query builder
 
 - OpenTelemetry metrics are now available for the following services
     - testmonitor
