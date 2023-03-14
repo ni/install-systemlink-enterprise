@@ -12,7 +12,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - You can query product, results, and steps tables with the table query builder
 
-- OpenTelemetry metrics are now available for the following services
+- OpenTelemetry metrics are available for the following services
     - testmonitor
     - dataframeservice
     - Kafka
