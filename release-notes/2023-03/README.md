@@ -8,7 +8,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 - Support for PostgreSQL 13 and 14
 
-- Users can now export data tables to CSV
+- You can export data tables to CSV
 
 - Product, results, and steps tables can be queried using the table query builder.
 
