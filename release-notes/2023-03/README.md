@@ -210,6 +210,8 @@ kube-scheduler/v1.23.10
 
 pause/3.8
 
+provectuslabs/kafka-ui/v0.5.0
+
 zookeeper/3.8.1-temurin
 
 kube-scheduler/v1.23.10
