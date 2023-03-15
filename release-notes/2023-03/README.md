@@ -80,7 +80,7 @@ dashboardsui/20230303.2
 
 dataframeservice-kafka-connect/20230303.2
 
-dataframeservice/20230303.20
+dataframeservice/20230313.19
 
 dremio-apache/23.0.1
 
