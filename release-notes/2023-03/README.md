@@ -80,7 +80,7 @@ dashboardsui/20230303.2
 
 dataframeservice-kafka-connect/20230303.2
 
-dataframeservice/20230303.20
+dataframeservice/20230313.19
 
 dremio-apache/23.0.1
 
@@ -209,6 +209,8 @@ kiwigrid/k8s-sidecar/1.22.4
 kube-scheduler/v1.23.10
 
 pause/3.8
+
+provectuslabs/kafka-ui/v0.5.0
 
 zookeeper/3.8.1-temurin
 
