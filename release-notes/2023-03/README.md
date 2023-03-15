@@ -60,7 +60,7 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 
 Only customer facing bugs have been included in this list.
 
-[closed-bugs-sle-2023-03](TODO link to closed bugs)
+[closed-bugs-sle-2023-03](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/release-notes/2023-03/closed-bugs-sle-2023-03.xlsx)
 
 ## Software Bill of Materials and Notices
 
