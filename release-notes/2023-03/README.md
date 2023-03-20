@@ -215,3 +215,25 @@ provectuslabs/kafka-ui/v0.5.0
 zookeeper/3.8.1-temurin
 
 kube-scheduler/v1.23.10
+
+strimzi/jmxtrans-0.33.2
+
+strimzi/kafka-0.33.2-kafka-3.2.0
+
+strimzi/kafka-0.33.2-kafka-3.2.1
+
+strimzi/kafka-0.33.2-kafka-3.2.3
+
+strimzi/kafka-0.33.2-kafka-3.3.1
+
+strimzi/kafka-0.33.2-kafka-3.3.2
+
+strimzi/kafka-0.33.2-kafka-3.4.0
+
+strimzi/kafka-bridge-0.24.0
+
+strimzi/kaniko-executor-0.33.2
+
+strimzi/maven-builder-0.33.2
+
+strimzi/operator-0.33.2
