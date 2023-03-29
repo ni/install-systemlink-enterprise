@@ -496,9 +496,9 @@ dataframeservice:
   ## Ingress configuration
   ##
   ingress:
-    ## Increase the maximum HTTP request body size from the nginx default. Should be
-    ## set to the same size as requestBodySizeLimitMegabytes. For more information,
-    ## see requestBodySizeLimitMegabytes.
+    ## Increase the maximum HTTP request body size from the nginx default. Only applies if an nginx
+    ## ingress controller is used. Should be set to the same size as requestBodySizeLimitMegabytes.
+    ## For more information, see requestBodySizeLimitMegabytes.
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 250m
