@@ -171,6 +171,13 @@ database:
 ## MinIO block storage configuration.
 ##
 minio:
+  ## Set to false to disable deployment of the minio service. If minio is not deployed, an alternative S3 provider
+  ## must be configured. Refer to the fileingestion.s3, nbexecservice.argo.s3, and dataframeservice.s3 sections
+  ## to configure an S3 provider.
+  # <ATTENTION> - Set to false if not using minio for S3 storage.
+  ##
+  enabled: true
+
   ## String to partially override common.names.fullname template (will maintain the release name)
   ##
   nameOverride: &minioServiceName "minio"
