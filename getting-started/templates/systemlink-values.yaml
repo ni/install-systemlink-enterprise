@@ -644,6 +644,8 @@ fileingestion:
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 2000m
+      nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
+      nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
   ## Configure S3/MinIO access.
   ##
@@ -679,6 +681,8 @@ fileingestion:
     ## Upload file
     ##
     upload: 3
+  # Configure the maximum accepted size of uploaded files, expressed in gigabytes.
+  uploadLimitGB: 10
 
 ## Configuration for JupyterHub.
 ##
