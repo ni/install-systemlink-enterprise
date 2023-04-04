@@ -496,10 +496,22 @@ dataframeservice:
   ## Ingress configuration
   ##
   ingress:
-    ## Override the default request size limit for an nginx ingress controller.
+    ## Increase the maximum HTTP request body size from the nginx default. Only applies if an nginx
+    ## ingress controller is used. Should be set to the same size as requestBodySizeLimitMegabytes.
+    ## For more information, see requestBodySizeLimitMegabytes.
     ##
     annotations:
-      nginx.ingress.kubernetes.io/proxy-body-size: 256m
+      nginx.ingress.kubernetes.io/proxy-body-size: 250m
+
+  ## Limits the body size for requests in megabytes. Value can be adjusted based on allocated pod memory
+  ## and expected concurrent request volume. It is suggested to keep table data append requests within the
+  ## following calculated limits:​
+  ## - For single requests: 250MB * (pod memory limit in GB / 2)​
+  ## - For concurrent requests: 250MB * (pod memory limit in GB / 2) / (# of concurrent requests / replica count)​
+  ## The ingress may also impose a request body size limit, which should be set to the same value.
+  ##
+  requestBodySizeLimitMegabytes: 250
+
   ## Configure S3/MinIO access.
   ##
   s3:
@@ -632,6 +644,8 @@ fileingestion:
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 2000m
+      nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
+      nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
   ## Configure S3/MinIO access.
   ##
@@ -667,6 +681,8 @@ fileingestion:
     ## Upload file
     ##
     upload: 3
+  # Configure the maximum accepted size of uploaded files, expressed in gigabytes.
+  uploadLimitGB: 10
 
 ## Configuration for JupyterHub.
 ##
