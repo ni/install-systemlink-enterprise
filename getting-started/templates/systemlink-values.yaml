@@ -315,7 +315,6 @@ dashboardhost:
   ## for more documentation and examples for these values.
   ##
   grafana:
-
     ## Configure access to the Grafana container.
     ##
     image:
@@ -335,14 +334,14 @@ dashboardhost:
       minReplicas: 2
       maxReplicas: 10
       metrics:
-      - type: "Resource"
-        resource:
-          name: "cpu"
-          targetAverageUtilization: 60
-      - type: "Resource"
-        resource:
-          name: "memory"
-          targetAverageUtilization: 70
+        - type: "Resource"
+          resource:
+            name: "cpu"
+            targetAverageUtilization: 60
+        - type: "Resource"
+          resource:
+            name: "memory"
+            targetAverageUtilization: 70
 
     ## Use an existing secret for the admin user.
     # <ATTENTION> - Uncomment this section to use a different secret to configure the admin user.
@@ -430,7 +429,7 @@ dashboardhost:
         ## <ATTENTION> - You must create the database manually before deploying. If you are using the default database
         ## name, you must create a database named "grafana". The database user, if not a superuser, will require USAGE
         ## and CREATE privileges on the "public" schema and SELECT, INSERT, UPDATE, and DELETE privileges on all tables
-        ## in the "public" schema. 
+        ## in the "public" schema.
         # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
@@ -446,11 +445,11 @@ dashboardhost:
       ## Uncomment to set Grafana plugin configuration.
       ##
       # plugins:
-        ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
-        ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
-        ## the list of plugins listed in the default values file.
-        ##
-        # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
+      ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
+      ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
+      ## the list of plugins listed in the default values file.
+      ##
+      # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
 
 ## Grafana provisioning
 ##
@@ -498,19 +497,14 @@ dataframeservice:
   ingress:
     ## Increase the maximum HTTP request body size from the nginx default. Only applies if an nginx
     ## ingress controller is used. Should be set to the same size as requestBodySizeLimitMegabytes.
-    ## For more information, see requestBodySizeLimitMegabytes.
     ##
     annotations:
-      nginx.ingress.kubernetes.io/proxy-body-size: 250m
+      nginx.ingress.kubernetes.io/proxy-body-size: 256m
 
-  ## Limits the body size for requests in megabytes. Value can be adjusted based on allocated pod memory
-  ## and expected concurrent request volume. It is suggested to keep table data append requests within the
-  ## following calculated limits:​
-  ## - For single requests: 250MB * (pod memory limit in GB / 2)​
-  ## - For concurrent requests: 250MB * (pod memory limit in GB / 2) / (# of concurrent requests / replica count)​
-  ## The ingress may also impose a request body size limit, which should be set to the same value.
+  ## Limits the body size for requests in megabytes. The ingress may also impose a request body size
+  ## limit, which should be set to the same value.
   ##
-  requestBodySizeLimitMegabytes: 250
+  requestBodySizeLimitMegabytes: 256
 
   ## Configure S3/MinIO access.
   ##
@@ -673,9 +667,9 @@ fileingestion:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
-   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
-   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
-   ## individual rates configured here.
+    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
+    ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
+    ## individual rates configured here.
   ##
   rateLimits:
     ## Upload file
