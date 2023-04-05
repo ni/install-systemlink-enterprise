@@ -694,11 +694,11 @@ sl-jupyterhub:
         egressAllowRules:
           # <ATTENTION> - Set to true to enable JupyterHub user pods to establish outbound connections to private IP addresses.
           privateIPs: false
-    # JupyterHub storage configuration.    
-    storage:
-      ## PVC Storage Request for every JupyterHub userpod.
-      # <ATTENTION> - Adjust this size to match the needs of your application.
-      capacity: 1Gi
+      # JupyterHub storage configuration.    
+      storage:
+        ## PVC Storage Request for every JupyterHub userpod.
+        # <ATTENTION> - Adjust this size to match the needs of your application.
+        capacity: 1Gi
       
   ## Ingress configuration.
   ##
