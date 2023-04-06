@@ -507,6 +507,23 @@ dataframeservice:
   ##
   requestBodySizeLimitMegabytes: 256
 
+  ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica. 
+  ## Each replica of the dataframe service applies its own limit. 
+  ## Considering load-balancing, the effective rate will be higher than the
+  ## individual rates configured here.
+  ##
+  rateLimits:
+    ## Configure rate limits for ingestion
+    ##
+    ingestion:
+      ## Number of concurrent requests that a single replica can serve for ingesting data.
+      ## Subsequent requests will be put in a queue.
+      ##
+      requestsLimit: 20
+      ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
+      ## the replica will return a 429 Error code.
+      queueSize: 0
+
   ## Configure S3/MinIO access.
   ##
   s3:
