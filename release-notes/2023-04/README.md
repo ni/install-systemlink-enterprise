@@ -15,7 +15,7 @@ The 2023-04 release bundle for SystemLink Enterprise has been published to <http
 ## Helm Chart Breaking Changes
 
 - userservices 0.2.0
-    - Added userservices-contiuation-token secret. This secret is required for deployment and must either be defined in the Helm chart or manually configured prior to upgrade. 
+    - Added userservices-contiuation-token secret. This secret is required for deployment and must either be defined in the Helm chart or manually configured prior to upgrade.
 - webserver 0.7.0
     - Renamed the rateLimit.apiRequestsPerSecond Helm value to rateLimit.byUser.apiRequestsPerSecond. Deployments which customized the value previously will need to be updated to use the new name. (NOTE: I am not aware of any affected deployments.)
 - routineservice 0.2.0
@@ -27,15 +27,15 @@ The 2023-04 release bundle for SystemLink Enterprise has been published to <http
 - sl-jupyterhub 1.0.0
     - The resource allocation for user pods changed. The guarantee (request) for CPU is 0.5, the guarantee and the limit for memory is 2G (2Gi). This are helm configurable: sl-jupyterhub.jupyterhub.singleuser.cpu.guarantee, sl-jupyterhub.jupyterhub.singleuser.memory.limit and sl-jupyterhub.jupyterhub.singleuser.memory.guarantee. (Note: Jupyter has specific notation for userpod resources, so for CPU use values like .5, 1, and for memory use values like 2G, 3G, so G instead of Gi, otherwise the pods won't start). Because of this and the previous breaking change, we bumped the major version of the helm chart.
 - dataframeservice 0.8.163
-	- We modified the Dremio S3 source configuration to enable a setting for automatically promoting missing datasets on query. This will make the DFS more robust in rare occasions where a dataset is deleted at the same time that someone tries to query it. It is recommended, but not required, to uptake this change. To uptake this change, delete all of the Dremio PVCs and bounce all of the Dremio pods. After doing this, a DFS pod also needs to be bounced so that the Dremio admin user can be bootstrapped.
+    - We modified the Dremio S3 source configuration to enable a setting for automatically promoting missing datasets on query. This will make the DFS more robust in rare occasions where a dataset is deleted at the same time that someone tries to query it. It is recommended, but not required, to uptake this change. To uptake this change, delete all of the Dremio PVCs and bounce all of the Dremio pods. After doing this, a DFS pod also needs to be bounced so that the Dremio admin user can be bootstrapped.
 - dataframeservice 0.8.165
-	- We added a hard limit on the request body size for all requests to the DataFrame service. The value can be adjusted based on allocated pod memory and expected concurrent request volume.
+    - We added a hard limit on the request body size for all requests to the DataFrame service. The value can be adjusted based on allocated pod memory and expected concurrent request volume.
 - dataframeservice 0.8.195
-	- We added a limit on the number of appendable tables, configurable via dataframeservice.ingestion.appendableTableLimit. The value should not be adjusted without the direction of NI, as increasing it can get Kafka Connect into a bad state. If the value is increased, dataframeservice.kafkaconnect.spec.replicas must also be increased (ratio TBD). See ni.com/r/setendofdata for more information (KB is a work-in-progress).
+    - We added a limit on the number of appendable tables, configurable via dataframeservice.ingestion.appendableTableLimit. The value should not be adjusted without the direction of NI, as increasing it can get Kafka Connect into a bad state. If the value is increased, dataframeservice.kafkaconnect.spec.replicas must also be increased (ratio TBD). See ni.com/r/setendofdata for more information (KB is a work-in-progress).
 - dataframeservice 0.8.189
-	- We added support for rate limiting requests for data ingestion. Configurable via dataframeservice.ingestion.requestsLimit. The value represents the number of concurrent requests that the service can respond to concurrently while ingesting data. If the value is increased the cpu requests of the service must increase too. When the dataframe service pods become unhealthy while ingesting data this value must be decreased.
+    - We added support for rate limiting requests for data ingestion. Configurable via dataframeservice.ingestion.requestsLimit. The value represents the number of concurrent requests that the service can respond to concurrently while ingesting data. If the value is increased the cpu requests of the service must increase too. When the dataframe service pods become unhealthy while ingesting data this value must be decreased.
 - dataframeservice 0.8.190
-	- We moved the "kafkaCleanupService" config into "ingestion.cleanupService". This is only a breaking change if a user had been overriding the defaults, and this config wasn't deemed worthy of surfacing in the user-facing values file, so there is likely no change necessary for users.
+    - We moved the "kafkaCleanupService" config into "ingestion.cleanupService". This is only a breaking change if a user had been overriding the defaults, and this config wasn't deemed worthy of surfacing in the user-facing values file, so there is likely no change necessary for users.
 
 ## Bugs Fixed
 
