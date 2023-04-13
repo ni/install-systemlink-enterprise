@@ -39,11 +39,9 @@ The 2023-04 release bundle for SystemLink Enterprise has been published to <http
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+[closed-bugs-sle-2023-04](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/release-notes/2023-03/closed-bugs-sle-2023-04.xlsx)
 
 ## Software Bill of Materials and Notices
 
