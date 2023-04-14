@@ -22,6 +22,8 @@ JupyterHub user pod PVCs incorporate a user's email address in the PVC name. Thi
     | Ingestion Rate         | `dataframeservice.rateLimits.ingestion.requestsLimit: 20` | Ingestion requests fail with HTTP 429            | There are too many concurrent requests for a single pod. If this limit's value is increased the CPU requests for the DataFrame Service must also be increased.     | Clients should implement retry logic with exponential back off.                           |
     | Append-able Tables      | `dataframeservice.ingestion.appendableTableLimit: 250`   | Table creation or ingestion fail with HTTP 409   | There are too many open data tables. This value should not be adjusted without the direction of NI. Increasing this limit may cause Kafka Connect to enter a bad state. Refer to [support documentation](ni.com/r/setendofdata) for additional information. [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-values.yaml#L512).               | Mark `endOfData` on data tables that are complete. |
 
+- You can now show custom properties in the Files grid and create saved views.
+
 - You can filter the steps grid by step and measurement name.
 
 - The default image pull policy for `argo-workflows` has changed from `always` to `IfNotPresent`.
