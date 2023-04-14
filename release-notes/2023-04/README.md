@@ -6,7 +6,7 @@ The 2023-04 release for SystemLink Enterprise has been published to <https://nie
 
 - JupyterHub user pod PVCs incorporate a user's email address in the PVC name.
     - This allows you to associate users with JupyterHub PVCs so you can safely remove unused PVCs.
-    - Users will lose access to their personal Jupyter notebooks and other settings in their JupyterHub instance due to this change.
+    - This change removes user access to personal Jupyter notebooks and other settings in their JupyterHub instance. Ensure that you create backups of this content before upgrading.
     - Users are encouraged to backup their personal Jupyter notebooks locally prior to upgrading.
     - Old PVCs are not automatically deleted and can be recovered.
     - You can opt-out of this new behavior.
