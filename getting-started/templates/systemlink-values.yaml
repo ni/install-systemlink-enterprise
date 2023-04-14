@@ -675,7 +675,7 @@ sl-jupyterhub:
     imagePullSecrets: *pullSecrets
     hub:
       extraEnv:
-        ## Setting this to "true" will enable the legacy implementation of Jupyter usernames, which is based on user IDs.
+        ## Setting this to "true" will enable the legacy implementation of Jupyter usernames.
         JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "false"
     singleuser:
       cpu:
