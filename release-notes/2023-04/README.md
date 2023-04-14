@@ -15,7 +15,7 @@ The 2023-04 release for SystemLink Enterprise has been published to <https://nie
 
 ## New Features and Behavior changes
 
-- The new Data Spaces application is available
+- You can use data spaces to find and visualize a subset of your test result data. This allows you to interactively slice data to diagnose issues or discover trends that may not obvious without visual inspection.
     - You can use Data Spaces to find a subset of your test result data and visualize it.
     - Your visualized data can be interactively sliced to diagnose issues or discover trends that may not obvious without visual inspection.
 
