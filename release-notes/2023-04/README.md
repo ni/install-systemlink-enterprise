@@ -61,7 +61,7 @@ The 2023-04 release for SystemLink Enterprise has been published to <https://nie
 - `userservices 0.2.0`
     - New `userservices-continuation-token` secret.
     - This secret is required and must either be defined in the Helm chart or manually configured prior to upgrade.
-    - [View this configuration](lhttps://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L111)
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L111)
 
 - `webserver 0.7.0`
     - The `rateLimit.apiRequestsPerSecond` Helm value is renamed to `rateLimit.byUser.apiRequestsPerSecond`.
