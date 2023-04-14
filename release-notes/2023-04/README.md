@@ -16,7 +16,6 @@ The 2023-04 release for SystemLink Enterprise has been published to <https://nie
 ## New Features and Behavior changes
 
 - You can use data spaces to find and visualize a subset of your test result data. This allows you to interactively slice data to diagnose issues or discover trends that may not obvious without visual inspection.
-    - Your visualized data can be interactively sliced to diagnose issues or discover trends that may not obvious without visual inspection.
 
 - The DataFrame Service now uses streaming data deserialization
     - Use larger batch sizes (more rows per write) to take advantage of the improved service performance.
