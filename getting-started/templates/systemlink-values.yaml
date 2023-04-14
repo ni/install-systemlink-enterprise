@@ -678,13 +678,6 @@ sl-jupyterhub:
         ## Setting this to "true" will enable the legacy implementation of Jupyter usernames.
         JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "false"
     singleuser:
-      cpu:
-        # <ATTENTION> - Use numeric values like .5, 1, 1.5, as Jupyter has this convention for CPU resource allocation.
-        guarantee: .5
-      memory:
-        # <ATTENTION> - Use G as unit, instead of Gi, as Jupyter has this convention for memory resource allocation.
-        limit: 2G
-        guarantee: 2G
       networkPolicy:
         egressAllowRules:
           # <ATTENTION> - Set to true to enable JupyterHub user pods to establish outbound connections to private IP addresses.
