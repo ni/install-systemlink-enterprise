@@ -8,7 +8,9 @@ The 2023-04 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
+- You can filter the steps grid by step and measurement name.
+
+- foo
 
 - Behavior change or new feature description
 
