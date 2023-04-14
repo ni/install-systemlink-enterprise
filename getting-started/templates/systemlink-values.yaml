@@ -509,6 +509,15 @@ dataframeservice:
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 256m
 
+  ## <ATTENTION> - Configure ingestion appendable table limit.
+  ##
+  ingestion:
+    ## The number of distinct tables that can be appended to before table creation will be blocked.
+    ## To stay under this limit, set 'endOfData: true' on tables that don't need to be appended to anymore.
+    ## For more information, visit ni.com/r/setendofdata.
+    ##
+    appendableTableLimit: 250
+
   ## Limits the body size for requests in megabytes. The ingress may also impose a request body size
   ## limit, which should be set to the same value.
   ##
