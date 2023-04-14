@@ -8,11 +8,18 @@ The 2023-04 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
+- The new Data Spaces application is now available
+    - You can use Data Spaces to find a subset of your data and quickly visualize it.
+    - Your visualized data can be interactively sliced to diagnose issues or discover trends that may not obvious without visual inspection.
+
 - You can filter the steps grid by step and measurement name.
 
-- foo
+- The DataFrame Service now uses streaming data deserialization
+    - Use larger batch sizes (more row) per write to take advantage of the improved performance enabled by this change.
 
-- Behavior change or new feature description
+- The default image pull policy for argo-worfklows has changed from `always` to `IfNotPresent`.
+
+
 
 ## Helm Chart Breaking Changes
 
