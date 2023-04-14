@@ -8,7 +8,7 @@ JupyterHub user pod PVCs incorporate a user's email address in the PVC name. Thi
 
 ## New Features and Behavior changes
 
-- You can use data spaces to find and visualize a subset of your test result data. This allows you to interactively slice data to diagnose issues or discover trends that may not obvious without visual inspection.
+- You can use data spaces to find and visualize a subset of your Test Insights result data. This allows you to interactively slice data to diagnose issues or discover trends that may not obvious without visual inspection.
 
 - The DataFrame Service uses streaming data deserialization, which allows you to use larger batch sizes (more rows per write).
 
