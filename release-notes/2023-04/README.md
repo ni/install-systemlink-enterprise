@@ -78,7 +78,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.12.72`
+**Top Level Helm Chart:** `systemlink 0.12.74`
 
 **Admin Helm Chart:** `systemlink-admin 0.12.7`
 
