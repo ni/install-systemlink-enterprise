@@ -18,7 +18,6 @@ The 2023-04 release for SystemLink Enterprise has been published to <https://nie
 - You can use data spaces to find and visualize a subset of your test result data. This allows you to interactively slice data to diagnose issues or discover trends that may not obvious without visual inspection.
 
 - The DataFrame Service uses streaming data deserialization, which allows you to use larger batch sizes (more rows per write).
-    - Use larger batch sizes (more rows per write) to take advantage of the improved service performance.
 
 - The Dremio S3 source configuration has been modified to automatically promote missing data sets on query.
     - This results in improved reliability in scenarios where a dataset is deleted at the same time it is queried.
