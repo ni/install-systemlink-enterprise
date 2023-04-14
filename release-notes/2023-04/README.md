@@ -4,14 +4,7 @@ The 2023-04 release for SystemLink Enterprise has been published to <https://nie
 
 ## Upgrading from the 2023-03 to the 2023-04 release
 
-- JupyterHub user pod PVCs incorporate a user's email address in the PVC name.
-    - This aids in the association of users to JupyterHub PVCs so unused PVCs can be safely removed.
-    - Users will lose access to their personal Jupyter notebooks and other settings in their JupyterHub instance due to this change.
-    - Users are encouraged to backup their personal Jupyter notebooks locally prior to upgrading.
-    - Old PVCs are not automatically deleted and can be recovered.
-    - You can opt-out of this new behavior.
-    - This change does not affect notebooks [published](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/sharing-a-jupyter-notebook.html) to SystemLink
-    - Refer to **`sl-jupyterhub 1.0.0` PVC name change** in **Helm Chart Breaking Changes** for details.
+JupyterHub user pod PVCs incorporate a user's email address in the PVC name. This aids in the association of users to JupyterHub PVCs so unused PVCs can be safely removed. Users will lose access to their personal Jupyter notebooks and other settings in their JupyterHub instance due to this change. Users are encouraged to backup their personal Jupyter notebooks locally prior to upgrading. Old PVCs are not automatically deleted and can be recovered. You can opt-out of this new behavior. This change does not affect notebooks [published](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/sharing-a-jupyter-notebook.html) to SystemLink Refer to **`sl-jupyterhub 1.0.0` PVC name change** in **Helm Chart Breaking Changes** for details.
 
 ## New Features and Behavior changes
 
