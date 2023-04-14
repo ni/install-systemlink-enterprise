@@ -171,6 +171,13 @@ database:
 ## MinIO block storage configuration.
 ##
 minio:
+  ## Set to false to disable deployment of the minio service. If minio is not deployed, an alternative S3 provider
+  ## must be configured. Refer to the fileingestion.s3, nbexecservice.argo.s3, and dataframeservice.s3 sections
+  ## to configure an S3 provider.
+  # <ATTENTION> - Set to false if not using minio for S3 storage.
+  ##
+  enabled: true
+
   ## String to partially override common.names.fullname template (will maintain the release name)
   ##
   nameOverride: &minioServiceName "minio"
@@ -496,10 +503,34 @@ dataframeservice:
   ## Ingress configuration
   ##
   ingress:
-    ## Override the default request size limit for an nginx ingress controller.
+    ## Increase the maximum HTTP request body size from the nginx default. Only applies if an nginx
+    ## ingress controller is used. Should be set to the same size as requestBodySizeLimitMegabytes.
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 256m
+
+  ## Limits the body size for requests in megabytes. The ingress may also impose a request body size
+  ## limit, which should be set to the same value.
+  ##
+  requestBodySizeLimitMegabytes: 256
+
+  ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica. 
+  ## Each replica of the dataframe service applies its own limit. 
+  ## Considering load-balancing, the effective rate will be higher than the
+  ## individual rates configured here.
+  ##
+  rateLimits:
+    ## Configure rate limits for ingestion
+    ##
+    ingestion:
+      ## Number of concurrent requests that a single replica can serve for ingesting data.
+      ## Subsequent requests will be put in a queue.
+      ##
+      requestsLimit: 20
+      ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
+      ## the replica will return a 429 Error code.
+      queueSize: 0
+
   ## Configure S3/MinIO access.
   ##
   s3:
@@ -632,6 +663,8 @@ fileingestion:
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 2000m
+      nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
+      nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
   ## Configure S3/MinIO access.
   ##
@@ -667,6 +700,8 @@ fileingestion:
     ## Upload file
     ##
     upload: 3
+  # Configure the maximum accepted size of uploaded files, expressed in gigabytes.
+  uploadLimitGB: 10
 
 ## Configuration for JupyterHub.
 ##
@@ -682,7 +717,12 @@ sl-jupyterhub:
         egressAllowRules:
           # <ATTENTION> - Set to true to enable JupyterHub user pods to establish outbound connections to private IP addresses.
           privateIPs: false
-
+      # JupyterHub storage configuration.    
+      storage:
+        ## PVC Storage Request for every JupyterHub userpod.
+        # <ATTENTION> - Adjust this size to match the needs of your application.
+        capacity: 1Gi
+      
   ## Ingress configuration.
   ##
   ingress:

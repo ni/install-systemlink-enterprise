@@ -28,9 +28,9 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.10.0`
+**Top Level Helm Chart:** `systemlink 0.10.92`
 
-**Admin Helm Chart:** `systemlink-admin 0.10.0`
+**Admin Helm Chart:** `systemlink-admin 0.10.4`
 
 ### NI Containers
 
