@@ -1,0 +1,23 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:b1196684-a680-4dca-a1b1-65694a76673d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-04-13T09:03:51-05:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.74.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "f470cd36412a9178",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-ci/pause:3.8",
+      "version": "sha256:c08f6fa3d7af00d3a4fc2d5fe2f07b953a2fb26087149f5b8a77a8063086d736"
+    }
+  },
+  "components": []
+}
