@@ -1,71 +1,80 @@
 # SystemLink Enterprise 2023-04 Release Notes
 
-The 2023-04 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-04 release for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## Upgrading from the 2023-03 to the 2023-04 release
 
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
+- JupyterHub user pod PVCs incorporate a user's email address in the PVC name.
+    - This aids in the association of users to JupyterHub PVCs so unused PVCs can be safely removed.
+    - Users will lose access to their personal Jupyter notebooks and other settings in their JupyterHub instance due to this change.
+    - Users are encouraged to backup their personal Jupyter notebooks locally prior to upgrading.
+    - Old PVCs are not automatically deleted and can be recovered.
+    - You can opt-out of this new behavior.
+    - This change does not affect notebooks [published](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/sharing-a-jupyter-notebook.html) to SystemLink
+    - Refer to **`sl-jupyterhub 1.0.0` PVC name change** in **Helm Chart Breaking Changes** for details.
 
 ## New Features and Behavior changes
 
-- The new Data Spaces application is now available
-    - You can use Data Spaces to find a subset of your data and quickly visualize it.
+- The new Data Spaces application is available
+    - You can use Data Spaces to find a subset of your test result data and visualize it.
     - Your visualized data can be interactively sliced to diagnose issues or discover trends that may not obvious without visual inspection.
+
+- The DataFrame Service now uses streaming data deserialization
+    - Use larger batch sizes (more rows per write) to take advantage of the improved service performance.
+
+- The Dremio S3 source configuration has been modified to automatically promote missing data sets on query.
+    - This results in improved reliability in scenarios where a dataset is deleted at the same time it is queried.
+    - To uptake this change delete all Dremio PVCs and restart all Dremio and DataFrame Service pods.
+
+- The DataFrame Service has new limits intended to ensure availability of the service
+
+    | Category               | Default Limit                                             | Error returned at limit                          |  Details                                          | Prevention                                                                               |
+    |------------------------|-----------------------------------------------------------|--------------------------------------------------|---------------------------------------------------|------------------------------------------------------------------------------------------|
+    | Ingestion Request Size | `dataframeservice.requestBodySizeLimitMegabytes: 256`     | Ingestion requests fail with HTTP 413            | The client sent too much data in a single request. | Ingest data in smaller batch sizes.                                                       |
+    | Ingestion Rate         | `dataframeservice.rateLimits.ingestion.requestsLimit: 20` | Ingestion requests fail with HTTP 429            | There are too many concurrent requests for a single pod. If this limit's value is increased the CPU requests for the DataFrame Service must also be increased.     | Clients should implement retry logic with exponential back off.                           |
+    | Append-able Tables      | `dataframeservice.ingestion.appendableTableLimit: 250`   | Table creation or ingestion fail with HTTP 409   | There are too many open data tables. This value should not be adjusted without the direction of NI. Increasing this limit may cause Kafka Connect to enter a bad state. Refer to [support documentation](ni.com/r/setendofdata) for additional information.               | Mark `endOfData` on data tables that are complete. |
 
 - You can filter the steps grid by step and measurement name.
 
-- The DataFrame Service now uses streaming data deserialization
-    - Use larger batch sizes (more row) per write to take advantage of the improved performance enabled by this change.
+- The default image pull policy for `argo-workflows` has changed from `always` to `IfNotPresent`.
 
-- The default image pull policy for argo-worfklows has changed from `always` to `IfNotPresent`.
+- The executions grid groups by status by default.
 
-
+- Schedule routines are enabled by default.
+    - The feature flag `routineservice.featureToggle.publishScheduleEvent` has been removed from the SystemLink Helm chart.
 
 ## Helm Chart Breaking Changes
 
-- userservices 0.2.0
-    - Added userservices-contiuation-token secret. This secret is required for deployment and must either be defined in the Helm chart or manually configured prior to upgrade.
-    - [View this configuration](link)
+- `sl-jupyterhub 1.0.0` PVC name change
+    - You can opt-out of this behavior by setting `sl-jupyterhub.jupyterhub.hub.extraEnv.JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "true"`.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-values.yaml#L713)
 
-- webserver 0.7.0
-    - Renamed the rateLimit.apiRequestsPerSecond Helm value to rateLimit.byUser.apiRequestsPerSecond. Deployments which customized the value previously will need to be updated to use the new name. (NOTE: I am not aware of any affected deployments.)
-    - [View this configuration](link)
+- `sl-jupyterhub 1.0.0` resource allocation
+    - The default resource allocation for JupyterHub user pods has changed.
+    - The default CPU request is now `0.5`.
+        - Set `sl-jupyterhub.jupyterhub.singleuser.cpu.guarantee` to override this request as needed.
+    - The default memory request and limit it now `2G`.
+        - Note the `G` notation used rather than `Gi` used by other resources.
+        - Set `sl-jupyterhub.jupyterhub.singleuser.memory.limit` and `sl-jupyterhub.jupyterhub.singleuser.memory.guarantee` to override this limit as needed.
+            - Ensure these two configurations are set to the same value.
 
-- routineservice 0.2.0
-    - A feature flag for scheduled routines was removed becasue this fucntioanlity is now always enabled (The "routineservice.featureToggle.publishScheduleEvent" value has been removed from the helm chart). No user action is required
-    - [View this configuration](link)
+- `userservices 0.2.0`
+    - New `userservices-continuation-token` secret.
+    - This secret is required and must either be defined in the Helm chart or manually configured prior to upgrade.
+    - [View this configuration](lhttps://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L111)
 
-- nbexecservice 0.2.0
-    - We added support to deploy s3 secrets similar with other services. Users will need to update their secret value files and remove s3 secret name overrides in helm chart.
-    - [View this configuration](link)
+- `webserver 0.7.0`
+    - The `rateLimit.apiRequestsPerSecond` Helm value is renamed to `rateLimit.byUser.apiRequestsPerSecond`.
+    - Deployments that set the old value must be be updated to use the new value.
 
-- sl-jupyterhub 1.0.0
-    - Jupyter usernames are now based on user emails instead of user IDs. This is reflected in how the Jupyter user pods and persistent volume claims are named. Since the PVC naming changed, users will lose access to their personal Jupyter notebooks and other settings in their Jupyter accounts, so a backup before upgrade is recommended. The old PVCs aren't deleted, so if data wants to be recovered, clients can opt-out and use the legacy implementation by setting this in the helm chart: sl-jupyterhub.jupyterhub.hub.extraEnv.JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "true" (note that "true" is a string, not a boolean value).
-    - [View this configuration](link)
+- `nbexecservice 0.2.0`
+    - S3 secrets used by this service are deployed by Helm.
+    - You will need to update your secret value files and remove s3 secret name overrides.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L287)
 
-- sl-jupyterhub 1.0.0
-    - The resource allocation for user pods changed. The guarantee (request) for CPU is 0.5, the guarantee and the limit for memory is 2G (2Gi). This are helm configurable: sl-jupyterhub.jupyterhub.singleuser.cpu.guarantee, sl-jupyterhub.jupyterhub.singleuser.memory.limit and sl-jupyterhub.jupyterhub.singleuser.memory.guarantee. (Note: Jupyter has specific notation for userpod resources, so for CPU use values like .5, 1, and for memory use values like 2G, 3G, so G instead of Gi, otherwise the pods won't start). Because of this and the previous breaking change, we bumped the major version of the helm chart.
-    - [View this configuration](link)
-
-- dataframeservice 0.8.163
-    - We modified the Dremio S3 source configuration to enable a setting for automatically promoting missing datasets on query. This will make the DFS more robust in rare occasions where a dataset is deleted at the same time that someone tries to query it. It is recommended, but not required, to uptake this change. To uptake this change, delete all of the Dremio PVCs and bounce all of the Dremio pods. After doing this, a DFS pod also needs to be bounced so that the Dremio admin user can be bootstrapped.
-    - [View this configuration](link)
-
-- dataframeservice 0.8.165
-    - We added a hard limit on the request body size for all requests to the DataFrame service. The value can be adjusted based on allocated pod memory and expected concurrent request volume.
-    - [View this configuration](link)
-
-- dataframeservice 0.8.195
-    - We added a limit on the number of appendable tables, configurable via dataframeservice.ingestion.appendableTableLimit. The value should not be adjusted without the direction of NI, as increasing it can get Kafka Connect into a bad state. If the value is increased, dataframeservice.kafkaconnect.spec.replicas must also be increased (ratio TBD). See ni.com/r/setendofdata for more information (KB is a work-in-progress).
-    - [View this configuration](link)
-
-- dataframeservice 0.8.189
-    - We added support for rate limiting requests for data ingestion. Configurable via dataframeservice.ingestion.requestsLimit. The value represents the number of concurrent requests that the service can respond to concurrently while ingesting data. If the value is increased the cpu requests of the service must increase too. When the dataframe service pods become unhealthy while ingesting data this value must be decreased.
-    - [View this configuration](link)
-
-- dataframeservice 0.8.190
-    - We moved the "kafkaCleanupService" config into "ingestion.cleanupService". This is only a breaking change if a user had been overriding the defaults, and this config wasn't deemed worthy of surfacing in the user-facing values file, so there is likely no change necessary for users.
-    - [View this configuration](link)
+- `dataframeservice 0.8.195` Kakfa configuration
+    - `kafkaCleanupService` configuration has been moved into `ingestion.cleanupService`.
+    - This is not a breaking change unless this value was previously used to override defaults..
 
 ## Bugs Fixed
 
@@ -81,7 +90,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.12.71`
+**Top Level Helm Chart:** `systemlink 0.12.72`
 
 **Admin Helm Chart:** `systemlink-admin 0.12.7`
 
@@ -171,7 +180,6 @@ userdata/20230407.1
 
 userservice-setup/20230403.2
 
-
 ### Non Container/Chart Artifacts
 
 systemlink-notebook-datasource/1.1.1.zip
@@ -179,7 +187,6 @@ systemlink-notebook-datasource/1.1.1.zip
 systemlink-dataframe-datasource/1.6.2.zip
 
 plotly-panel/1.1.2.zip
-
 
 ### 3rd Party Containers
 
