@@ -13,7 +13,6 @@ JupyterHub user pod PVCs incorporate a user's email address in the PVC name. Thi
 - The DataFrame Service uses streaming data deserialization, which allows you to use larger batch sizes (more rows per write).
 
 - The Dremio S3 automatically promotes missing data sets on query, which improves reliability in scenarios where a dataset is deleted at the same time it is queried. To uptake this change, delete all Dremio PVCs and restart all Dremio and DataFrame Service pods.
-    - To uptake this change delete all Dremio PVCs and restart all Dremio and DataFrame Service pods.
 
 - The DataFrame Service has new limits intended to ensure availability of the service
 
