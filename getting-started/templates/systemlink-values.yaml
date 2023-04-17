@@ -73,6 +73,7 @@ global:
   ##
   userTelemetry:
     ## Allow the SystemLink web application to send usage data to NI.
+    # <ATTENTION> - Opt out of usage data collection by setting this value to false.
     ##
     enableFrontEndTelemetry: true
     ## Data will be uploaded to this URL. NI does not recommend changing this value.
