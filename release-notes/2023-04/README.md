@@ -90,7 +90,7 @@ dashboardsui/20230403.2
 
 dataframeservice-kafka-connect/20230323.3
 
-dataframeservice/20230406.31
+dataframeservice/20230414.7
 
 dremio-apache/23.0.1-ni-0
 
