@@ -66,6 +66,22 @@ global:
     ## https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/span-general.md#general-identity-attributes
     ##
     includeUserInfo: false
+  ## Allow the SystemLink web application to collect usage data to help our engineers improve the performance and
+  ## capabilities of the product. NI will not share this information with third parties or use it to identify or
+  ## contact users.
+  ## https://www.ni.com/en/about-ni/legal/ceip.html
+  ##
+  userTelemetry:
+    ## Allow the SystemLink web application to send usage data to NI.
+    # <ATTENTION> - Opt out of usage data collection by setting this value to false.
+    ##
+    enableFrontEndTelemetry: true
+    ## Data will be uploaded to this URL. NI does not recommend changing this value.
+    ##
+    telemetryEndpoint: "https://esp.ni.com/"
+    ## CDN endpoint for telemetry-driven content. NI does not recommend changing this value.
+    ##
+    cdnEndpoint: "https://web-sdk.ni.com/"
 
 ## Core configuration for the RabbitMQ message broker
 ##
