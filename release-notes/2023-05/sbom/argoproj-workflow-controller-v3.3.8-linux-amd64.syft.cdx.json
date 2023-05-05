@@ -1,0 +1,5773 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:2e1cef0d-3924-4986-9efb-3222cf1be47f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-05-05T16:09:23-05:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.77.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "c1c2be1122042009",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/argoproj/workflow-controller:v3.3.8-linux-amd64",
+      "version": "sha256:a5b7cd6c3f6c69af4b3ad44cc83bbc1e062fc0975dd8c88f990558c7a13523bf"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/cloud.google.com/go/compute@v1.3.0?package-id=38be9d91fc7917d8",
+      "type": "library",
+      "name": "cloud.google.com/go/compute",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:go:compute:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/cloud.google.com/go/compute@v1.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:mPL/MzDDYHsh5tHRS9mhmhWlcgClCrCa6ApQCU6wnHI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/azure/go-autorest/autorest@v0.11.18?package-id=e030a521a0489435",
+      "type": "library",
+      "name": "github.com/Azure/go-autorest/autorest",
+      "version": "v0.11.18",
+      "cpe": "cpe:2.3:a:Azure:go-autorest\\/autorest:v0.11.18:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Azure/go-autorest/autorest@v0.11.18",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:Azure:go_autorest\\/autorest:v0.11.18:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:90Y4srNYrwOtAgVo3ndrQkTYn6kf1Eg/AjTFJ8Is2aM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/azure/go-autorest/autorest/adal@v0.9.13?package-id=443f37188cbcda14",
+      "type": "library",
+      "name": "github.com/Azure/go-autorest/autorest/adal",
+      "version": "v0.9.13",
+      "cpe": "cpe:2.3:a:Azure:go-autorest\\/autorest\\/adal:v0.9.13:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Azure/go-autorest/autorest/adal@v0.9.13",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:Azure:go_autorest\\/autorest\\/adal:v0.9.13:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:Mp5hbtOePIzM8pJVRa3YLrWWmZtoxRXqUEzCfJt3+/Q="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/azure/go-autorest/autorest/date@v0.3.0?package-id=4760cf0b1a7e71fd",
+      "type": "library",
+      "name": "github.com/Azure/go-autorest/autorest/date",
+      "version": "v0.3.0",
+      "cpe": "cpe:2.3:a:Azure:go-autorest\\/autorest\\/date:v0.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Azure/go-autorest/autorest/date@v0.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:Azure:go_autorest\\/autorest\\/date:v0.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:7gUk1U5M/CQbp9WoqinNzJar+8KY+LPI6wiWrP/myHw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/azure/go-autorest/logger@v0.2.1?package-id=3fb56900e7614ca7",
+      "type": "library",
+      "name": "github.com/Azure/go-autorest/logger",
+      "version": "v0.2.1",
+      "cpe": "cpe:2.3:a:Azure:go-autorest\\/logger:v0.2.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Azure/go-autorest/logger@v0.2.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:Azure:go_autorest\\/logger:v0.2.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:IG7i4p/mDa2Ce4TRyAO8IHnVhAVF3RFU+ZtXWSmf4Tg="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/azure/go-autorest/tracing@v0.6.0?package-id=68ebeb387c28bb3d",
+      "type": "library",
+      "name": "github.com/Azure/go-autorest/tracing",
+      "version": "v0.6.0",
+      "cpe": "cpe:2.3:a:Azure:go-autorest\\/tracing:v0.6.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Azure/go-autorest/tracing@v0.6.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:Azure:go_autorest\\/tracing:v0.6.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:TYi4+3m5t6K48TGI9AUdb+IzbnSxvnvUMfuitfgcfuo="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/knetic/govaluate@v3.0.1-0.20171022003610-9aa49832a739+incompatible?package-id=11e4b2f378e06502",
+      "type": "library",
+      "name": "github.com/Knetic/govaluate",
+      "version": "v3.0.1-0.20171022003610-9aa49832a739+incompatible",
+      "cpe": "cpe:2.3:a:Knetic:govaluate:v3.0.1-0.20171022003610-9aa49832a739\\+incompatible:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Knetic/govaluate@v3.0.1-0.20171022003610-9aa49832a739+incompatible",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:1G1pk05UrOh0NlF1oeaaix1x8XzrfjIDK47TY0Zehcw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/masterminds/goutils@v1.1.1?package-id=992b5e7891ff48db",
+      "type": "library",
+      "name": "github.com/Masterminds/goutils",
+      "version": "v1.1.1",
+      "cpe": "cpe:2.3:a:Masterminds:goutils:v1.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Masterminds/goutils@v1.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:5nUrii3FMTL5diU80unEVvNevw1nH4+ZV4DSLVJLSYI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/masterminds/semver/v3@v3.1.1?package-id=8b30142c345fc74c",
+      "type": "library",
+      "name": "github.com/Masterminds/semver/v3",
+      "version": "v3.1.1",
+      "cpe": "cpe:2.3:a:Masterminds:semver\\/v3:v3.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Masterminds/semver/v3@v3.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:hLg3sBzpNErnxhQtUy/mmLR2I9foDujNK030IGemrRc="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/masterminds/sprig/v3@v3.2.2?package-id=ba9a1df721c3d6e0",
+      "type": "library",
+      "name": "github.com/Masterminds/sprig/v3",
+      "version": "v3.2.2",
+      "cpe": "cpe:2.3:a:Masterminds:sprig\\/v3:v3.2.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/Masterminds/sprig/v3@v3.2.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:17jRggJu518dr3QaafizSXOjKYp94wKfABxUmyxvxX8="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/puerkitobio/purell@v1.1.1?package-id=ff7d1beb733b3aba",
+      "type": "library",
+      "name": "github.com/PuerkitoBio/purell",
+      "version": "v1.1.1",
+      "cpe": "cpe:2.3:a:PuerkitoBio:purell:v1.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/PuerkitoBio/purell@v1.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:WEQqlqaGbrPkxLJWfBwQmfEAE1Z7ONdDLqrN38tNFfI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/puerkitobio/urlesc@v0.0.0-20170810143723-de5bf2ad4578?package-id=3d7af3e81c6b904d",
+      "type": "library",
+      "name": "github.com/PuerkitoBio/urlesc",
+      "version": "v0.0.0-20170810143723-de5bf2ad4578",
+      "cpe": "cpe:2.3:a:PuerkitoBio:urlesc:v0.0.0-20170810143723-de5bf2ad4578:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/PuerkitoBio/urlesc@v0.0.0-20170810143723-de5bf2ad4578",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:d+Bc7a5rLufV/sSk/8dngufqelfh6jnri85riMAaF/M="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/antonmedv/expr@v1.9.0?package-id=2e76453f6b8517f5",
+      "type": "library",
+      "name": "github.com/antonmedv/expr",
+      "version": "v1.9.0",
+      "cpe": "cpe:2.3:a:antonmedv:expr:v1.9.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/antonmedv/expr@v1.9.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:j4HI3NHEdgDnN9p6oI6Ndr0G5QryMY0FNxT4ONrFDGU="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/argoproj/argo-events@v0.17.1-0.20220223155401-ddda8800f9f8?package-id=5834113471d177d0",
+      "type": "library",
+      "name": "github.com/argoproj/argo-events",
+      "version": "v0.17.1-0.20220223155401-ddda8800f9f8",
+      "cpe": "cpe:2.3:a:argoproj:argo-events:v0.17.1-0.20220223155401-ddda8800f9f8:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/argoproj/argo-events@v0.17.1-0.20220223155401-ddda8800f9f8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:argoproj:argo_events:v0.17.1-0.20220223155401-ddda8800f9f8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:LqF/eUExbdTg7MEHUJt4DfZIg5hJN5lneybM7u7MbWI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/argoproj/argo-workflows/v3@(devel)?package-id=ee9fb8e8c827e1a6",
+      "type": "library",
+      "name": "github.com/argoproj/argo-workflows/v3",
+      "version": "(devel)",
+      "cpe": "cpe:2.3:a:argoproj:argo-workflows\\/v3:\\(devel\\):*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/argoproj/argo-workflows/v3@(devel)",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:argoproj:argo_workflows\\/v3:\\(devel\\):*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/argoproj/pkg@v0.11.0?package-id=16f3ce5b880c083b",
+      "type": "library",
+      "name": "github.com/argoproj/pkg",
+      "version": "v0.11.0",
+      "cpe": "cpe:2.3:a:argoproj:pkg:v0.11.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/argoproj/pkg@v0.11.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:kho8cjBRe/K7tFiMfNG7vnF6VBy9+p0idV21f9bbUO4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/beorn7/perks@v1.0.1?package-id=912ef0f14fef4d82",
+      "type": "library",
+      "name": "github.com/beorn7/perks",
+      "version": "v1.0.1",
+      "cpe": "cpe:2.3:a:beorn7:perks:v1.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/beorn7/perks@v1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/cespare/xxhash/v2@v2.1.2?package-id=5bec92c152657e45",
+      "type": "library",
+      "name": "github.com/cespare/xxhash/v2",
+      "version": "v2.1.2",
+      "cpe": "cpe:2.3:a:cespare:xxhash\\/v2:v2.1.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/cespare/xxhash/v2@v2.1.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:YRXhKfTDauu4ajMg1TPgFO5jnlC2HCbmLXMcTG5cbYE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/colinmarc/hdfs@v1.1.4-0.20180805212432-9746310a4d31?package-id=45fc4826579e560e",
+      "type": "library",
+      "name": "github.com/colinmarc/hdfs",
+      "version": "v1.1.4-0.20180805212432-9746310a4d31",
+      "cpe": "cpe:2.3:a:colinmarc:hdfs:v1.1.4-0.20180805212432-9746310a4d31:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/colinmarc/hdfs@v1.1.4-0.20180805212432-9746310a4d31",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:ow7T77012NSZVW0uOWoQxz3yj9fHKYeZ4QmNrMtWMbM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/coreos/go-oidc/v3@v3.1.0?package-id=92c1e251c315b5b2",
+      "type": "library",
+      "name": "github.com/coreos/go-oidc/v3",
+      "version": "v3.1.0",
+      "cpe": "cpe:2.3:a:coreos:go-oidc\\/v3:v3.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/coreos/go-oidc/v3@v3.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:coreos:go_oidc\\/v3:v3.1.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:6avEvcdvTa1qYsOZ6I5PRkSYHzpTNWgKYmaJfaYbrRw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/davecgh/go-spew@v1.1.1?package-id=5545618f9e08e69f",
+      "type": "library",
+      "name": "github.com/davecgh/go-spew",
+      "version": "v1.1.1",
+      "cpe": "cpe:2.3:a:davecgh:go-spew:v1.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:davecgh:go_spew:v1.1.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/doublerebel/bellows@v0.0.0-20160303004610-f177d92a03d3?package-id=be32d1c3f3628e47",
+      "type": "library",
+      "name": "github.com/doublerebel/bellows",
+      "version": "v0.0.0-20160303004610-f177d92a03d3",
+      "cpe": "cpe:2.3:a:doublerebel:bellows:v0.0.0-20160303004610-f177d92a03d3:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/doublerebel/bellows@v0.0.0-20160303004610-f177d92a03d3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:7nllYTGLnq4CqBL27lV6oNfXzM2tJ2mrKF8E+aBXOV0="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/dustin/go-humanize@v1.0.0?package-id=f268d428d9cd713",
+      "type": "library",
+      "name": "github.com/dustin/go-humanize",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:dustin:go-humanize:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/dustin/go-humanize@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:dustin:go_humanize:v1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:VSnTsYCnlFHaM2/igO1h6X3HA71jcobQuxemgkq4zYo="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/emicklei/go-restful@v2.15.0+incompatible?package-id=32a1828ec43f1cec",
+      "type": "library",
+      "name": "github.com/emicklei/go-restful",
+      "version": "v2.15.0+incompatible",
+      "cpe": "cpe:2.3:a:emicklei:go-restful:v2.15.0\\+incompatible:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/emicklei/go-restful@v2.15.0+incompatible",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:emicklei:go_restful:v2.15.0\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:8KpYO/Xl/ZudZs5RNOEhWMBY4hmzlZhhRd9cu+jrZP4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/evanphx/json-patch@v5.6.0+incompatible?package-id=446bd6102ee30d90",
+      "type": "library",
+      "name": "github.com/evanphx/json-patch",
+      "version": "v5.6.0+incompatible",
+      "cpe": "cpe:2.3:a:evanphx:json-patch:v5.6.0\\+incompatible:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/evanphx/json-patch@v5.6.0+incompatible",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:evanphx:json_patch:v5.6.0\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:jBYDEEiFBPxA0v50tFdvOzQQTCvpL6mnFh5mB2/l16U="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/felixge/httpsnoop@v1.0.2?package-id=be570564bb054845",
+      "type": "library",
+      "name": "github.com/felixge/httpsnoop",
+      "version": "v1.0.2",
+      "cpe": "cpe:2.3:a:felixge:httpsnoop:v1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/felixge/httpsnoop@v1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:+nS9g82KMXccJ/wp0zyRW9ZBHFETmMGtkk+2CTTrW4o="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/form3tech-oss/jwt-go@v3.2.3+incompatible?package-id=13df90ae8f756922",
+      "type": "library",
+      "name": "github.com/form3tech-oss/jwt-go",
+      "version": "v3.2.3+incompatible",
+      "cpe": "cpe:2.3:a:form3tech-oss:jwt-go:v3.2.3\\+incompatible:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/form3tech-oss/jwt-go@v3.2.3+incompatible",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form3tech-oss:jwt_go:v3.2.3\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form3tech_oss:jwt-go:v3.2.3\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form3tech_oss:jwt_go:v3.2.3\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form3tech:jwt-go:v3.2.3\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form3tech:jwt_go:v3.2.3\\+incompatible:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:7ZaBxOI7TMoYBfyA3cQHErNNyAWIKUMIwqxEtgHOs5c="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/fsnotify/fsnotify@v1.5.1?package-id=2774feb4a455a84b",
+      "type": "library",
+      "name": "github.com/fsnotify/fsnotify",
+      "version": "v1.5.1",
+      "cpe": "cpe:2.3:a:fsnotify:fsnotify:v1.5.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/fsnotify/fsnotify@v1.5.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:mZcQUHVQUQWoPXXtuf9yuEXKudkV2sx1E06UadKWpgI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.0?package-id=b8d171e49786d30d",
+      "type": "library",
+      "name": "github.com/go-jose/go-jose/v3",
+      "version": "v3.0.0",
+      "cpe": "cpe:2.3:a:go-jose:go-jose\\/v3:v3.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go-jose:go_jose\\/v3:v3.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_jose:go-jose\\/v3:v3.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_jose:go_jose\\/v3:v3.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:go-jose\\/v3:v3.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:go_jose\\/v3:v3.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:s6rrhirfEP/CGIoc6p+PZAeogN2SxKav6Wp7+dyMWVo="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-logr/logr@v1.2.2?package-id=53301ff87e5a78fe",
+      "type": "library",
+      "name": "github.com/go-logr/logr",
+      "version": "v1.2.2",
+      "cpe": "cpe:2.3:a:go-logr:logr:v1.2.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/go-logr/logr@v1.2.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_logr:logr:v1.2.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:logr:v1.2.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:ahHml/yUpnlb96Rp8HCvtYVPY8ZYpxq3g7UYchIYwbs="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5?package-id=b6826ed0d104d2c",
+      "type": "library",
+      "name": "github.com/go-openapi/jsonpointer",
+      "version": "v0.19.5",
+      "cpe": "cpe:2.3:a:go-openapi:jsonpointer:v0.19.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_openapi:jsonpointer:v0.19.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:jsonpointer:v0.19.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:gZr+CIYByUqjcgeLXnQu2gHYQC9o73G2XUeOFYEICuY="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/jsonreference@v0.19.6?package-id=ef15f289ed3dcdfb",
+      "type": "library",
+      "name": "github.com/go-openapi/jsonreference",
+      "version": "v0.19.6",
+      "cpe": "cpe:2.3:a:go-openapi:jsonreference:v0.19.6:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/go-openapi/jsonreference@v0.19.6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_openapi:jsonreference:v0.19.6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:jsonreference:v0.19.6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:UBIxjkht+AWIgYzCDSv2GN+E/togfwXUJFRTWhl2Jjs="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-openapi/swag@v0.19.15?package-id=dbca4ffbfeedde9f",
+      "type": "library",
+      "name": "github.com/go-openapi/swag",
+      "version": "v0.19.15",
+      "cpe": "cpe:2.3:a:go-openapi:swag:v0.19.15:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/go-openapi/swag@v0.19.15",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_openapi:swag:v0.19.15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:swag:v0.19.15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:D2NRCBzS9/pEY3gP9Nl8aDqGUcPFrwG2p+CNFrLyrCM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-sql-driver/mysql@v1.6.0?package-id=488c800f065b827b",
+      "type": "library",
+      "name": "github.com/go-sql-driver/mysql",
+      "version": "v1.6.0",
+      "cpe": "cpe:2.3:a:go-sql-driver:mysql:v1.6.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/go-sql-driver/mysql@v1.6.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_sql_driver:mysql:v1.6.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go-sql:mysql:v1.6.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go_sql:mysql:v1.6.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:go:mysql:v1.6.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/gogo/protobuf@v1.3.2?package-id=56668456105b282e",
+      "type": "library",
+      "name": "github.com/gogo/protobuf",
+      "version": "v1.3.2",
+      "cpe": "cpe:2.3:a:gogo:protobuf:v1.3.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/gogo/protobuf@v1.3.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:Ov1cvc58UF3b5XjBnZv7+opcTcQFZebYjWzi34vdm4Q="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/golang/groupcache@v0.0.0-20210331224755-41bb18bfe9da?package-id=82c4fb4b83728f14",
+      "type": "library",
+      "name": "github.com/golang/groupcache",
+      "version": "v0.0.0-20210331224755-41bb18bfe9da",
+      "cpe": "cpe:2.3:a:golang:groupcache:v0.0.0-20210331224755-41bb18bfe9da:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/golang/groupcache@v0.0.0-20210331224755-41bb18bfe9da",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:oI5xCqsCo564l8iNU+DwB5epxmsaqB+rhGL0m5jtYqE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/golang/protobuf@v1.5.2?package-id=d6d864af348cfb67",
+      "type": "library",
+      "name": "github.com/golang/protobuf",
+      "version": "v1.5.2",
+      "cpe": "cpe:2.3:a:golang:protobuf:v1.5.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/golang/protobuf@v1.5.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:ROPKBNFfQgOUMifHyP+KYbvpjbdoFNs+aK7DXlji0Tw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/google/go-cmp@v0.5.7?package-id=be6432bcb4afef57",
+      "type": "library",
+      "name": "github.com/google/go-cmp",
+      "version": "v0.5.7",
+      "cpe": "cpe:2.3:a:google:go-cmp:v0.5.7:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/google/go-cmp@v0.5.7",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:google:go_cmp:v0.5.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:81/ik6ipDQS2aGcBfIN5dHDB36BwrStyeAQquSYCV4o="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/google/gofuzz@v1.2.0?package-id=2b0eb65d1eabbf8e",
+      "type": "library",
+      "name": "github.com/google/gofuzz",
+      "version": "v1.2.0",
+      "cpe": "cpe:2.3:a:google:gofuzz:v1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/google/gofuzz@v1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:xRy4A+RhZaiKjJ1bPfwQ8sedCA+YS2YcCHW6ec7JMi0="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/google/uuid@v1.3.0?package-id=812f86ca1035b078",
+      "type": "library",
+      "name": "github.com/google/uuid",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:google:uuid:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/google/uuid@v1.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/googleapis/gnostic@v0.5.5?package-id=cf589a7a93ef65fc",
+      "type": "library",
+      "name": "github.com/googleapis/gnostic",
+      "version": "v0.5.5",
+      "cpe": "cpe:2.3:a:googleapis:gnostic:v0.5.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/googleapis/gnostic@v0.5.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:9fHAtK0uDfpveeqqo1hkEZJcFvYXAiCN3UutL8F9xHw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/gorilla/websocket@v1.5.0?package-id=4e966fc21a06d482",
+      "type": "library",
+      "name": "github.com/gorilla/websocket",
+      "version": "v1.5.0",
+      "cpe": "cpe:2.3:a:gorilla:websocket:v1.5.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/gorilla/websocket@v1.5.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:PPwGk2jz7EePpoHN/+ClbZu8SPxiqlu12wZP/3sWmnc="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/grpc-ecosystem/grpc-gateway@v1.16.0?package-id=fd1b7cdec0adaf91",
+      "type": "library",
+      "name": "github.com/grpc-ecosystem/grpc-gateway",
+      "version": "v1.16.0",
+      "cpe": "cpe:2.3:a:grpc-ecosystem:grpc-gateway:v1.16.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/grpc-ecosystem/grpc-gateway@v1.16.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:grpc-ecosystem:grpc_gateway:v1.16.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:grpc_ecosystem:grpc-gateway:v1.16.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:grpc_ecosystem:grpc_gateway:v1.16.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:grpc:grpc-gateway:v1.16.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:grpc:grpc_gateway:v1.16.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:gmcG1KaJ57LophUzW0Hy8NmPhnMZb4M0+kPpLofRdBo="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/hashicorp/go-uuid@v1.0.2?package-id=d2b3fd658c32e46e",
+      "type": "library",
+      "name": "github.com/hashicorp/go-uuid",
+      "version": "v1.0.2",
+      "cpe": "cpe:2.3:a:hashicorp:go-uuid:v1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/hashicorp/go-uuid@v1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hashicorp:go_uuid:v1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:cfejS+Tpcp13yd5nYHWDI6qVCny6wyX2Mt5SGur2IGE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/hashicorp/hcl@v1.0.0?package-id=e18daca875c90d61",
+      "type": "library",
+      "name": "github.com/hashicorp/hcl",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:hashicorp:hcl:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/hashicorp/hcl@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:0Anlzjpi4vEasTeNFn2mLJgTSwt0+6sfsiTG8qcWGx4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/huandu/xstrings@v1.3.2?package-id=158b78146d2b5347",
+      "type": "library",
+      "name": "github.com/huandu/xstrings",
+      "version": "v1.3.2",
+      "cpe": "cpe:2.3:a:huandu:xstrings:v1.3.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/huandu/xstrings@v1.3.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:L18LIDzqlW6xN2rEkpdV8+oL/IXWJ1APd+vsdYy4Wdw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/imdario/mergo@v0.3.12?package-id=f8ab34a61d889218",
+      "type": "library",
+      "name": "github.com/imdario/mergo",
+      "version": "v0.3.12",
+      "cpe": "cpe:2.3:a:imdario:mergo:v0.3.12:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/imdario/mergo@v0.3.12",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:b6R2BslTbIEToALKP7LxUvijTsNI9TAe80pLWN2g/HU="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/jcmturner/gofork@v1.0.0?package-id=41da4fa6bcdd9811",
+      "type": "library",
+      "name": "github.com/jcmturner/gofork",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:jcmturner:gofork:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/jcmturner/gofork@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:J7uCkflzTEhUZ64xqKnkDxq3kzc96ajM1Gli5ktUem8="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/josharian/intern@v1.0.0?package-id=132023958305e2c9",
+      "type": "library",
+      "name": "github.com/josharian/intern",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:josharian:intern:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/josharian/intern@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:vlS4z54oSdjm0bgjRigI+G1HpF+tI+9rE5LLzOg8HmY="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/json-iterator/go@v1.1.12?package-id=498a96549534d7ab",
+      "type": "library",
+      "name": "github.com/json-iterator/go",
+      "version": "v1.1.12",
+      "cpe": "cpe:2.3:a:json-iterator:go:v1.1.12:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/json-iterator/go@v1.1.12",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:json_iterator:go:v1.1.12:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:json:go:v1.1.12:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnrnM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/klauspost/compress@v1.14.2?package-id=40b27d3bed9074d5",
+      "type": "library",
+      "name": "github.com/klauspost/compress",
+      "version": "v1.14.2",
+      "cpe": "cpe:2.3:a:klauspost:compress:v1.14.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/klauspost/compress@v1.14.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:S0OHlFk/Gbon/yauFJ4FfJJF5V0fc5HbBTJazi28pRw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/klauspost/pgzip@v1.2.5?package-id=bdb5b2600b63c153",
+      "type": "library",
+      "name": "github.com/klauspost/pgzip",
+      "version": "v1.2.5",
+      "cpe": "cpe:2.3:a:klauspost:pgzip:v1.2.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/klauspost/pgzip@v1.2.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:qnWYvvKqedOF2ulHpMG72XQol4ILEJ8k2wwRl/Km8oE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/lib/pq@v1.10.4?package-id=b8f14091b547593a",
+      "type": "library",
+      "name": "github.com/lib/pq",
+      "version": "v1.10.4",
+      "cpe": "cpe:2.3:a:lib:pq:v1.10.4:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/lib/pq@v1.10.4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:SO9z7FRPzA03QhHKJrH5BXA6HU1rS4V2nIVrrNC1iYk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/magiconair/properties@v1.8.5?package-id=973e24552d901e34",
+      "type": "library",
+      "name": "github.com/magiconair/properties",
+      "version": "v1.8.5",
+      "cpe": "cpe:2.3:a:magiconair:properties:v1.8.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/magiconair/properties@v1.8.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:b6kJs+EmPFMYGkow9GiUyCyOvIwYetYJ3fSaWak/Gls="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/mailru/easyjson@v0.7.7?package-id=91116ca84f4ed60d",
+      "type": "library",
+      "name": "github.com/mailru/easyjson",
+      "version": "v0.7.7",
+      "cpe": "cpe:2.3:a:mailru:easyjson:v0.7.7:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/mailru/easyjson@v0.7.7",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/matttproud/golang_protobuf_extensions@v1.0.2-0.20181231171920-c182affec369?package-id=410477bc355e0142",
+      "type": "library",
+      "name": "github.com/matttproud/golang_protobuf_extensions",
+      "version": "v1.0.2-0.20181231171920-c182affec369",
+      "cpe": "cpe:2.3:a:matttproud:golang-protobuf-extensions:v1.0.2-0.20181231171920-c182affec369:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/matttproud/golang_protobuf_extensions@v1.0.2-0.20181231171920-c182affec369",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:matttproud:golang_protobuf_extensions:v1.0.2-0.20181231171920-c182affec369:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:I0XW9+e1XWDxdcEniV4rQAIOPUGDq67JSCiRCgGCZLI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/mitchellh/copystructure@v1.2.0?package-id=5c34fe1cd1f8d1d7",
+      "type": "library",
+      "name": "github.com/mitchellh/copystructure",
+      "version": "v1.2.0",
+      "cpe": "cpe:2.3:a:mitchellh:copystructure:v1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/mitchellh/copystructure@v1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:vpKXTN4ewci03Vljg/q9QvCGUDttBOGBIa15WveJJGw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/mitchellh/mapstructure@v1.4.3?package-id=13958076a540d65c",
+      "type": "library",
+      "name": "github.com/mitchellh/mapstructure",
+      "version": "v1.4.3",
+      "cpe": "cpe:2.3:a:mitchellh:mapstructure:v1.4.3:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/mitchellh/mapstructure@v1.4.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:OVowDSCllw/YjdLkam3/sm7wEtOy59d8ndGgCcyj8cs="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/mitchellh/reflectwalk@v1.0.2?package-id=d2cfb1832a35cb1e",
+      "type": "library",
+      "name": "github.com/mitchellh/reflectwalk",
+      "version": "v1.0.2",
+      "cpe": "cpe:2.3:a:mitchellh:reflectwalk:v1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/mitchellh/reflectwalk@v1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:G2LzWKi524PWgd3mLHV8Y5k7s6XUvT0Gef6zxSIeXaQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/moby/spdystream@v0.2.0?package-id=e52b37ec3523175d",
+      "type": "library",
+      "name": "github.com/moby/spdystream",
+      "version": "v0.2.0",
+      "cpe": "cpe:2.3:a:moby:spdystream:v0.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/moby/spdystream@v0.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:cjW1zVyyoiM0T7b6UoySUFqzXMoqRckQtXwGPiBhOM8="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd?package-id=b6d3f62957bc7432",
+      "type": "library",
+      "name": "github.com/modern-go/concurrent",
+      "version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+      "cpe": "cpe:2.3:a:modern-go:concurrent:v0.0.0-20180306012644-bacd9c7ef1dd:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:modern_go:concurrent:v0.0.0-20180306012644-bacd9c7ef1dd:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:modern:concurrent:v0.0.0-20180306012644-bacd9c7ef1dd:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:TRLaZ9cD/w8PVh93nsPXa1VrQ6jlwL5oN8l14QlcNfg="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/modern-go/reflect2@v1.0.2?package-id=7a268569fcfe3ec7",
+      "type": "library",
+      "name": "github.com/modern-go/reflect2",
+      "version": "v1.0.2",
+      "cpe": "cpe:2.3:a:modern-go:reflect2:v1.0.2:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/modern-go/reflect2@v1.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:modern_go:reflect2:v1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:modern:reflect2:v1.0.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9Gz0M="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/oliveagle/jsonpath@v0.0.0-20180606110733-2e52cf6e6852?package-id=5e67633901fc47bb",
+      "type": "library",
+      "name": "github.com/oliveagle/jsonpath",
+      "version": "v0.0.0-20180606110733-2e52cf6e6852",
+      "cpe": "cpe:2.3:a:oliveagle:jsonpath:v0.0.0-20180606110733-2e52cf6e6852:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/oliveagle/jsonpath@v0.0.0-20180606110733-2e52cf6e6852",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:Yl0tPBa8QPjGmesFh1D0rDy+q1Twx6FyU7VWHi8wZbI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/pelletier/go-toml@v1.9.4?package-id=4b0803c168dd5ffc",
+      "type": "library",
+      "name": "github.com/pelletier/go-toml",
+      "version": "v1.9.4",
+      "cpe": "cpe:2.3:a:pelletier:go-toml:v1.9.4:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/pelletier/go-toml@v1.9.4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pelletier:go_toml:v1.9.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:tjENF6MfZAg8e4ZmZTeWaWiT2vXtsoO6+iuOjFhECwM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/pkg/errors@v0.9.1?package-id=39f85564ffcce652",
+      "type": "library",
+      "name": "github.com/pkg/errors",
+      "version": "v0.9.1",
+      "cpe": "cpe:2.3:a:pkg:errors:v0.9.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/pkg/errors@v0.9.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/prometheus/client_golang@v1.12.1?package-id=f610a6d110bf1c26",
+      "type": "library",
+      "name": "github.com/prometheus/client_golang",
+      "version": "v1.12.1",
+      "cpe": "cpe:2.3:a:prometheus:client-golang:v1.12.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/prometheus/client_golang@v1.12.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:prometheus:client_golang:v1.12.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:ZiaPsmm9uiBeaSMRznKsCDNtPCS0T3JVDGF+06gjBzk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/prometheus/client_model@v0.2.0?package-id=3ae7a62962302953",
+      "type": "library",
+      "name": "github.com/prometheus/client_model",
+      "version": "v0.2.0",
+      "cpe": "cpe:2.3:a:prometheus:client-model:v0.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/prometheus/client_model@v0.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:prometheus:client_model:v0.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:uq5h0d+GuxiXLJLNABMgp2qUWDPiLvgCzz2dUR+/W/M="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/prometheus/common@v0.32.1?package-id=5cd77f7764516733",
+      "type": "library",
+      "name": "github.com/prometheus/common",
+      "version": "v0.32.1",
+      "cpe": "cpe:2.3:a:prometheus:common:v0.32.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/prometheus/common@v0.32.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:hWIdL3N2HoUx3B8j3YN9mWor0qhY/NlEKZEaXxuIRh4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/prometheus/procfs@v0.7.3?package-id=aaafb614b215bc6a",
+      "type": "library",
+      "name": "github.com/prometheus/procfs",
+      "version": "v0.7.3",
+      "cpe": "cpe:2.3:a:prometheus:procfs:v0.7.3:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/prometheus/procfs@v0.7.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:4jVXhlkAyzOScmCkXBTOLRLTz8EeU+eyjrwB/EPq0VU="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/robfig/cron/v3@v3.0.1?package-id=bf9b472e0f56532f",
+      "type": "library",
+      "name": "github.com/robfig/cron/v3",
+      "version": "v3.0.1",
+      "cpe": "cpe:2.3:a:robfig:cron\\/v3:v3.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/robfig/cron/v3@v3.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/shopspring/decimal@v1.2.0?package-id=ccb4a6f16a4322ac",
+      "type": "library",
+      "name": "github.com/shopspring/decimal",
+      "version": "v1.2.0",
+      "cpe": "cpe:2.3:a:shopspring:decimal:v1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/shopspring/decimal@v1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:abSATXmQEYyShuxI4/vyW3tV1MrKAJzCZ/0zLUXYbsQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/sirupsen/logrus@v1.8.1?package-id=1a968b7490d2922f",
+      "type": "library",
+      "name": "github.com/sirupsen/logrus",
+      "version": "v1.8.1",
+      "cpe": "cpe:2.3:a:sirupsen:logrus:v1.8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/sirupsen/logrus@v1.8.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:dJKuHgqk1NNQlqoA6BTlM1Wf9DOH3NBjQyu0h9+AZZE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/afero@v1.8.0?package-id=eb152e813d55e688",
+      "type": "library",
+      "name": "github.com/spf13/afero",
+      "version": "v1.8.0",
+      "cpe": "cpe:2.3:a:spf13:afero:v1.8.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/afero@v1.8.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:5MmtuhAgYeU6qpa7w7bP0dv6MBYuup0vekhSpSkoq60="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/cast@v1.4.1?package-id=514a39617a79b55e",
+      "type": "library",
+      "name": "github.com/spf13/cast",
+      "version": "v1.4.1",
+      "cpe": "cpe:2.3:a:spf13:cast:v1.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/cast@v1.4.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:s0hze+J0196ZfEMTs80N7UlFt0BDuQ7Q+JDnHiMWKdA="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/cobra@v1.3.0?package-id=3107f0997f42b3b5",
+      "type": "library",
+      "name": "github.com/spf13/cobra",
+      "version": "v1.3.0",
+      "cpe": "cpe:2.3:a:spf13:cobra:v1.3.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/cobra@v1.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:R7cSvGu+Vv+qX0gW5R/85dx2kmmJT5z5NM8ifdYjdn0="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/jwalterweatherman@v1.1.0?package-id=d357a02ae80e2078",
+      "type": "library",
+      "name": "github.com/spf13/jwalterweatherman",
+      "version": "v1.1.0",
+      "cpe": "cpe:2.3:a:spf13:jwalterweatherman:v1.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/jwalterweatherman@v1.1.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:ue6voC5bR5F8YxI5S67j9i582FU4Qvo2bmqnqMYADFk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/pflag@v1.0.5?package-id=e846a26872e2c457",
+      "type": "library",
+      "name": "github.com/spf13/pflag",
+      "version": "v1.0.5",
+      "cpe": "cpe:2.3:a:spf13:pflag:v1.0.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/viper@v1.10.1?package-id=40a2decb311c3598",
+      "type": "library",
+      "name": "github.com/spf13/viper",
+      "version": "v1.10.1",
+      "cpe": "cpe:2.3:a:spf13:viper:v1.10.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/spf13/viper@v1.10.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:nuJZuYpG7gTj/XqiUwg8bA0cp1+M2mC3J4g5luUYBKk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/subosito/gotenv@v1.2.0?package-id=8a08c11a5ac88650",
+      "type": "library",
+      "name": "github.com/subosito/gotenv",
+      "version": "v1.2.0",
+      "cpe": "cpe:2.3:a:subosito:gotenv:v1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/subosito/gotenv@v1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:Slr1R9HxAlEKefgq5jn9U+DnETlIUa6HfgEzj0g5d7s="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/valyala/bytebufferpool@v1.0.0?package-id=c6ec460122b4708f",
+      "type": "library",
+      "name": "github.com/valyala/bytebufferpool",
+      "version": "v1.0.0",
+      "cpe": "cpe:2.3:a:valyala:bytebufferpool:v1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/valyala/bytebufferpool@v1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/valyala/fasttemplate@v1.2.1?package-id=9dee1fc3886596d1",
+      "type": "library",
+      "name": "github.com/valyala/fasttemplate",
+      "version": "v1.2.1",
+      "cpe": "cpe:2.3:a:valyala:fasttemplate:v1.2.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/valyala/fasttemplate@v1.2.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:TVEnxayobAdVkhQfrfes2IzOB6o+z4roRkPF52WA1u4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/crypto@v0.0.0-20220128200615-198e4374d7ed?package-id=2f938fe2b9bf5d18",
+      "type": "library",
+      "name": "golang.org/x/crypto",
+      "version": "v0.0.0-20220128200615-198e4374d7ed",
+      "cpe": "cpe:2.3:a:golang:x\\/crypto:v0.0.0-20220128200615-198e4374d7ed:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/crypto@v0.0.0-20220128200615-198e4374d7ed",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:YoWVYYAfvQ4ddHv3OKmIvX7NCAhFGTj62VP2l2kfBbA="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd?package-id=1066e5a325d633bb",
+      "type": "library",
+      "name": "golang.org/x/net",
+      "version": "v0.0.0-20220127200216-cd36cc0744dd",
+      "cpe": "cpe:2.3:a:golang:x\\/net:v0.0.0-20220127200216-cd36cc0744dd:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:O7DYs+zxREGLKzKoMQrtrEacpb0ZVXA5rIwylE2Xchk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/oauth2@v0.0.0-20211104180415-d3ed0bb246c8?package-id=173aea481ffc9adc",
+      "type": "library",
+      "name": "golang.org/x/oauth2",
+      "version": "v0.0.0-20211104180415-d3ed0bb246c8",
+      "cpe": "cpe:2.3:a:golang:x\\/oauth2:v0.0.0-20211104180415-d3ed0bb246c8:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/oauth2@v0.0.0-20211104180415-d3ed0bb246c8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:RerP+noqYHUQ8CMRcPlC2nvTa4dcBIjegkuWdcUDuqg="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/sync@v0.0.0-20210220032951-036812b2e83c?package-id=64fa700bb8abf433",
+      "type": "library",
+      "name": "golang.org/x/sync",
+      "version": "v0.0.0-20210220032951-036812b2e83c",
+      "cpe": "cpe:2.3:a:golang:x\\/sync:v0.0.0-20210220032951-036812b2e83c:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/sync@v0.0.0-20210220032951-036812b2e83c",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:5KslGYwFpkhGh+Q16bwMP3cOontH8FOep7tGV86Y7SQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.0.0-20220209214540-3681064d5158?package-id=846c0482b522bcbc",
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.0.0-20220209214540-3681064d5158",
+      "cpe": "cpe:2.3:a:golang:x\\/sys:v0.0.0-20220209214540-3681064d5158:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20220209214540-3681064d5158",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:rm+CHSpPEEW2IsXUib1ThaHIjuBVZjxNgSKmBLFfD4c="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/term@v0.0.0-20210927222741-03fcf44c2211?package-id=7cbc9f17985d1489",
+      "type": "library",
+      "name": "golang.org/x/term",
+      "version": "v0.0.0-20210927222741-03fcf44c2211",
+      "cpe": "cpe:2.3:a:golang:x\\/term:v0.0.0-20210927222741-03fcf44c2211:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/term@v0.0.0-20210927222741-03fcf44c2211",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:JGgROgKl9N8DuW20oFS5gxc+lE67/N3FcwmBPMe7ArY="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.7?package-id=5ed717de7a6c0f53",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.3.7",
+      "cpe": "cpe:2.3:a:golang:x\\/text:v0.3.7:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:olpwvP2KacW1ZWvsR7uQhoyTYvKAupfQrRGBFM352Gk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/time@v0.0.0-20220210224613-90d013bbcef8?package-id=7e60230befdce22d",
+      "type": "library",
+      "name": "golang.org/x/time",
+      "version": "v0.0.0-20220210224613-90d013bbcef8",
+      "cpe": "cpe:2.3:a:golang:x\\/time:v0.0.0-20220210224613-90d013bbcef8:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/time@v0.0.0-20220210224613-90d013bbcef8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:vVKdlvoWBphwdxWKrFZEuM0kGgGLxUOYcY4U/2Vjg44="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/google.golang.org/genproto@v0.0.0-20220218161850-94dd64e39d7c?package-id=a8fd105612682d36",
+      "type": "library",
+      "name": "google.golang.org/genproto",
+      "version": "v0.0.0-20220218161850-94dd64e39d7c",
+      "cpe": "cpe:2.3:a:google:genproto:v0.0.0-20220218161850-94dd64e39d7c:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/google.golang.org/genproto@v0.0.0-20220218161850-94dd64e39d7c",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:TU4rFa5APdKTq0s6B7WTsH6Xmx0Knj86s6Biz56mErE="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/google.golang.org/grpc@v1.44.0?package-id=16dcff8150c56c98",
+      "type": "library",
+      "name": "google.golang.org/grpc",
+      "version": "v1.44.0",
+      "cpe": "cpe:2.3:a:google:grpc:v1.44.0:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/google.golang.org/grpc@v1.44.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:weqSxi/TMs1SqFRMHCtBgXRs8k3X39QIDEZ0pRcttUg="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/google.golang.org/protobuf@v1.27.1?package-id=21a3ce9561fa25b6",
+      "type": "library",
+      "name": "google.golang.org/protobuf",
+      "version": "v1.27.1",
+      "cpe": "cpe:2.3:a:google:protobuf:v1.27.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/google.golang.org/protobuf@v1.27.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:SnqbnDw1V7RiZcXPx5MEeqPv2s79L9i7BJUlG/+RurQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/inf.v0@v0.9.1?package-id=967dcb90ec063fee",
+      "type": "library",
+      "name": "gopkg.in/inf.v0",
+      "version": "v0.9.1",
+      "purl": "pkg:golang/gopkg.in/inf.v0@v0.9.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:73M5CoZyi3ZLMOyDlQh031Cx6N9NDJ2Vvfl76EDAgDc="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/ini.v1@v1.66.3?package-id=367294eaa3b51503",
+      "type": "library",
+      "name": "gopkg.in/ini.v1",
+      "version": "v1.66.3",
+      "purl": "pkg:golang/gopkg.in/ini.v1@v1.66.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:jRskFVxYaMGAMUbN0UZ7niA9gzL9B49DOqE78vg0k3w="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/jcmturner/aescts.v1@v1.0.1?package-id=18909811c1c4288d",
+      "type": "library",
+      "name": "gopkg.in/jcmturner/aescts.v1",
+      "version": "v1.0.1",
+      "purl": "pkg:golang/gopkg.in/jcmturner/aescts.v1@v1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:cVVZBK2b1zY26haWB4vbBiZrfFQnfbTVrE3xZq6hrEw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/jcmturner/dnsutils.v1@v1.0.1?package-id=a91c157b3e9350cf",
+      "type": "library",
+      "name": "gopkg.in/jcmturner/dnsutils.v1",
+      "version": "v1.0.1",
+      "purl": "pkg:golang/gopkg.in/jcmturner/dnsutils.v1@v1.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:cIuC1OLRGZrld+16ZJvvZxVJeKPsvd5eUIvxfoN5hSM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/jcmturner/gokrb5.v5@v5.3.0?package-id=a8dd735dafbbbb1",
+      "type": "library",
+      "name": "gopkg.in/jcmturner/gokrb5.v5",
+      "version": "v5.3.0",
+      "purl": "pkg:golang/gopkg.in/jcmturner/gokrb5.v5@v5.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:RS1MYApX27Hx1Xw7NECs7XxGxxrm69/4OmaRuX9kwec="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/jcmturner/rpc.v0@v0.0.2?package-id=7cda1c3484681603",
+      "type": "library",
+      "name": "gopkg.in/jcmturner/rpc.v0",
+      "version": "v0.0.2",
+      "purl": "pkg:golang/gopkg.in/jcmturner/rpc.v0@v0.0.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:wBTgrbL1qmLBUPsYVCqdJiI5aJgQhexmK+JkTHPUNJI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/square/go-jose.v2@v2.6.0?package-id=d9868450e71cbea2",
+      "type": "library",
+      "name": "gopkg.in/square/go-jose.v2",
+      "version": "v2.6.0",
+      "purl": "pkg:golang/gopkg.in/square/go-jose.v2@v2.6.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:NGk74WTnPKBNUhNzQX7PYcTLUjoq7mzKk2OKbvwk2iI="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v2@v2.4.0?package-id=a47bbb98cf4cc241",
+      "type": "library",
+      "name": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "purl": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b?package-id=97e34790e199da57",
+      "type": "library",
+      "name": "gopkg.in/yaml.v3",
+      "version": "v3.0.0-20210107192922-496545a6307b",
+      "purl": "pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:h8qDotaEPuJATrMmW04NCwg7v22aHH28wwpauUhK9Oo="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/api@v0.23.3?package-id=cafd09e061a72c7",
+      "type": "library",
+      "name": "k8s.io/api",
+      "version": "v0.23.3",
+      "purl": "pkg:golang/k8s.io/api@v0.23.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:KNrME8KHGr12Ozjf8ytOewKzZh6hl/hHUZeHddT3a38="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/apimachinery@v0.23.3?package-id=e51377c3db474e37",
+      "type": "library",
+      "name": "k8s.io/apimachinery",
+      "version": "v0.23.3",
+      "purl": "pkg:golang/k8s.io/apimachinery@v0.23.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:7IW6jxNzrXTsP0c8yXz2E5Yx/WTzVPTsHIx/2Vm0cIk="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/client-go@v0.23.3?package-id=3a62d1286211931e",
+      "type": "library",
+      "name": "k8s.io/client-go",
+      "version": "v0.23.3",
+      "purl": "pkg:golang/k8s.io/client-go@v0.23.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:23QYUmCQ/W6hW78xIwm3XqZrrKZM+LWDqW2zfo+szJs="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/klog/v2@v2.40.1?package-id=26ab1d69fdf7e473",
+      "type": "library",
+      "name": "k8s.io/klog/v2",
+      "version": "v2.40.1",
+      "cpe": "cpe:2.3:a:klog:v2:v2.40.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/k8s.io/klog/v2@v2.40.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:P4RRucWk/lFOlDdkAr3mc7iWFkgKrZY9qZMAgek06S4="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/kube-openapi@v0.0.0-20220124234850-424119656bbf?package-id=aeb2ba71a3f4513c",
+      "type": "library",
+      "name": "k8s.io/kube-openapi",
+      "version": "v0.0.0-20220124234850-424119656bbf",
+      "purl": "pkg:golang/k8s.io/kube-openapi@v0.0.0-20220124234850-424119656bbf",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:M9XBsiMslw2lb2ZzglC0TOkBPK5NQi0/noUrdnoFwUg="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/utils@v0.0.0-20220210201930-3a6ce19ff2f9?package-id=f14cd5be7cd89f9f",
+      "type": "library",
+      "name": "k8s.io/utils",
+      "version": "v0.0.0-20220210201930-3a6ce19ff2f9",
+      "purl": "pkg:golang/k8s.io/utils@v0.0.0-20220210201930-3a6ce19ff2f9",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:HNSDgDCrr/6Ly3WEGKZftiE7IY19Vz2GdbOCyI4qqhc="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/sigs.k8s.io/json@v0.0.0-20211208200746-9f7c6b3444d2?package-id=ad05f78107279971",
+      "type": "library",
+      "name": "sigs.k8s.io/json",
+      "version": "v0.0.0-20211208200746-9f7c6b3444d2",
+      "purl": "pkg:golang/sigs.k8s.io/json@v0.0.0-20211208200746-9f7c6b3444d2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:kDi4JBNAsJWfz1aEXhO8Jg87JJaPNLh5tIzYHgStQ9Y="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.2.1?package-id=ed034c36cd77f46a",
+      "type": "library",
+      "name": "sigs.k8s.io/structured-merge-diff/v4",
+      "version": "v4.2.1",
+      "cpe": "cpe:2.3:a:structured-merge-diff:v4:v4.2.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.2.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:structured_merge_diff:v4:v4.2.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:structured-merge:v4:v4.2.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:structured_merge:v4:v4.2.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:structured:v4:v4.2.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:bKCqE9GvQ5tiVHn5rfn1r+yao3aLQEaLzkkmAkf+A6Y="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/sigs.k8s.io/yaml@v1.3.0?package-id=177ee91ccea30a18",
+      "type": "library",
+      "name": "sigs.k8s.io/yaml",
+      "version": "v1.3.0",
+      "purl": "pkg:golang/sigs.k8s.io/yaml@v1.3.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:a2VclLzOGrwOHDiV8EfBGhvjHvP46CtW5j6POvhYGGo="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/upper.io/db.v3@v3.8.0+incompatible?package-id=f825a81d313d1fdb",
+      "type": "library",
+      "name": "upper.io/db.v3",
+      "version": "v3.8.0+incompatible",
+      "purl": "pkg:golang/upper.io/db.v3@v3.8.0+incompatible",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d5a791a44ab56ea505d2c1e147328bbac5a2fb70b7403de3001cde2d134735ff"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/workflow-controller"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "x86_64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.17.11"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:XNeEO2vQRVqq70M98ghzq6M30F5Bzo+99ess5v+eVYw="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/argoproj/argo-workflows/v3"
+        }
+      ]
+    }
+  ]
+}
