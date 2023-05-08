@@ -6,7 +6,7 @@ The 2023-05 release for SystemLink Enterprise has been published to <https://nie
 
 - Added tags. Publish and view the current value of tags from your test systems. Monitor the status of your test fleet with automatically published system health data on the System Details page.
 
-- You can save and load views from steps grid
+- You can save and load views from the steps grid.
 
 ## Helm Chart Breaking Changes
 
