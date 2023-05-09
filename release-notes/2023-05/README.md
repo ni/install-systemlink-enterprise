@@ -163,3 +163,5 @@ pause/3.8
 provectuslabs/kafka-ui/v0.6.2
 
 zookeeper/3.8.1-temurin
+
+bats/bats:1.9.0
