@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:7c1ec88d-1341-4b5c-b8eb-91e20e5287c5",
+  "serialNumber": "urn:uuid:2b318ff4-f5fd-4603-8717-5571059d76fe",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:14:12-05:00",
+    "timestamp": "2023-05-10T10:56:52-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "5f40467014a7f8b9",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/ni/systemlink/dremio-apache:23.0.1-ni-0",
-      "version": "sha256:1f23c3831471767e9a6a452441b541fe994886967d617381156bfe2ee870865a"
+      "version": "sha256:0b5349581c73a9ecb82ef1260ee6d95354a274e818c7f7ed9821eb4cdb342da7"
     }
   },
   "components": [
@@ -70621,32 +70621,13 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.jline/jline-reader@3.9.0?package-id=14fb0daee6b11236",
+      "bom-ref": "pkg:maven/org.jline/jline-reader@3.9.0?package-id=ebeca71f80cf9020",
       "type": "library",
       "group": "org.jline",
       "name": "jline-reader",
       "version": "3.9.0",
-      "licenses": [
-        {
-          "license": {
-            "name": "http://www.opensource.org/licenses/bsd-license.php"
-          }
-        }
-      ],
       "cpe": "cpe:2.3:a:jline-reader:jline-reader:3.9.0:*:*:*:*:*:*:*",
       "purl": "pkg:maven/org.jline/jline-reader@3.9.0",
-      "externalReferences": [
-        {
-          "url": "",
-          "hashes": [
-            {
-              "alg": "SHA-1",
-              "content": "da6eb8ebdd131ec41f7e42e7e77b257868279698"
-            }
-          ],
-          "type": "build-meta"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -70702,7 +70683,7 @@
         },
         {
           "name": "syft:metadata:virtualPath",
-          "value": "/opt/dremio/jars/3rdparty/jline-3.9.0.jar"
+          "value": "/opt/dremio/jars/3rdparty/jline-3.9.0.jar:jline-reader"
         }
       ]
     },
@@ -70774,13 +70755,32 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.jline/jline-remote-ssh@3.9.0?package-id=e244b4d77deb3b1e",
+      "bom-ref": "pkg:maven/org.jline/jline-remote-ssh@3.9.0?package-id=f254a51dded724e7",
       "type": "library",
       "group": "org.jline",
       "name": "jline-remote-ssh",
       "version": "3.9.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "http://www.opensource.org/licenses/bsd-license.php"
+          }
+        }
+      ],
       "cpe": "cpe:2.3:a:jline-remote-ssh:jline-remote-ssh:3.9.0:*:*:*:*:*:*:*",
       "purl": "pkg:maven/org.jline/jline-remote-ssh@3.9.0",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "da6eb8ebdd131ec41f7e42e7e77b257868279698"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -70852,7 +70852,7 @@
         },
         {
           "name": "syft:metadata:virtualPath",
-          "value": "/opt/dremio/jars/3rdparty/jline-3.9.0.jar:jline-remote-ssh"
+          "value": "/opt/dremio/jars/3rdparty/jline-3.9.0.jar"
         }
       ]
     },
@@ -120175,6 +120175,97 @@
       ]
     },
     {
+      "bom-ref": "pkg:maven/org.wildfly.openssl/wildfly-openssl@1.1.3.Final?package-id=a4559ac32f4ce769",
+      "type": "library",
+      "group": "org.wildfly.openssl",
+      "name": "wildfly-openssl",
+      "version": "1.1.3.Final",
+      "cpe": "cpe:2.3:a:wildfly-openssl:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.wildfly.openssl/wildfly-openssl@1.1.3.Final",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly-openssl:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly_openssl:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly_openssl:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:openssl:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:openssl:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly-openssl:openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly_openssl:openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:openssl:openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:wildfly:openssl:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:eaf122734a2d76503b1ba81cc6d75e123233230d7a4f5243a886a3fbb42df1ee"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/opt/dremio/jars/3rdparty/wildfly-openssl-1.1.3.Final.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "wildfly-openssl"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.wildfly.openssl"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/opt/dremio/jars/3rdparty/wildfly-openssl-1.1.3.Final.jar:wildfly-openssl"
+        }
+      ]
+    },
+    {
       "bom-ref": "pkg:maven/org.wildfly.openssl/wildfly-openssl@1.1.3.Final?package-id=68f94077a61b5400",
       "type": "library",
       "group": "org.wildfly.openssl",
@@ -120357,25 +120448,13 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.wildfly.openssl/wildfly-openssl-java@1.1.3.Final?package-id=a3b69a1f01e8c85f",
+      "bom-ref": "pkg:maven/org.wildfly.openssl/wildfly-openssl-java@1.1.3.Final?package-id=f4f6bff304d113ab",
       "type": "library",
       "group": "org.wildfly.openssl",
       "name": "wildfly-openssl-java",
       "version": "1.1.3.Final",
       "cpe": "cpe:2.3:a:wildfly-openssl-java:wildfly-openssl-java:1.1.3.Final:*:*:*:*:*:*:*",
       "purl": "pkg:maven/org.wildfly.openssl/wildfly-openssl-java@1.1.3.Final",
-      "externalReferences": [
-        {
-          "url": "",
-          "hashes": [
-            {
-              "alg": "SHA-1",
-              "content": "7ef25e94db74d85fa7e9271b064a3c7d9ef7add5"
-            }
-          ],
-          "type": "build-meta"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -120407,30 +120486,6 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly-openssl-java:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly_openssl_java:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly-openssl-java:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly_openssl_java:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly-openssl-java:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly-openssl-java:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
           "value": "cpe:2.3:a:wildfly-openssl:wildfly-openssl-java:1.1.3.Final:*:*:*:*:*:*:*"
         },
         {
@@ -120447,46 +120502,6 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly_openssl_java:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly_openssl_java:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly-openssl:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly-openssl:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly_openssl:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly_openssl:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
           "value": "cpe:2.3:a:openssl:wildfly-openssl-java:1.1.3.Final:*:*:*:*:*:*:*"
         },
         {
@@ -120495,59 +120510,11 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly-openssl-java:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
           "value": "cpe:2.3:a:wildfly:wildfly-openssl-java:1.1.3.Final:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
           "value": "cpe:2.3:a:wildfly:wildfly_openssl_java:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly_openssl_java:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss-by-red-hat:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jboss_by_red_hat:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:openssl:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:openssl:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly-openssl:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly:wildfly-openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly:wildfly_openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly_openssl:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:openssl:openssl:1.1.3.Final:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wildfly:openssl:1.1.3.Final:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:layerID",
@@ -120559,7 +120526,7 @@
         },
         {
           "name": "syft:metadata:-:artifactID",
-          "value": "wildfly-openssl"
+          "value": "wildfly-openssl-java"
         },
         {
           "name": "syft:metadata:-:groupID",
@@ -120567,7 +120534,7 @@
         },
         {
           "name": "syft:metadata:virtualPath",
-          "value": "/opt/dremio/jars/3rdparty/wildfly-openssl-1.1.3.Final.jar"
+          "value": "/opt/dremio/jars/3rdparty/wildfly-openssl-1.1.3.Final.jar:wildfly-openssl-java"
         }
       ]
     },
@@ -122125,13 +122092,25 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.wildfly.openssl/wildfly-openssl-solaris-x86_64@1.1.3.Final?package-id=77cecb6f7a4dec23",
+      "bom-ref": "pkg:maven/org.wildfly.openssl/wildfly-openssl-solaris-x86_64@1.1.3.Final?package-id=1edd68bab45285f8",
       "type": "library",
       "group": "org.wildfly.openssl",
       "name": "wildfly-openssl-solaris-x86_64",
       "version": "1.1.3.Final",
       "cpe": "cpe:2.3:a:wildfly-openssl-solaris-x86-64:wildfly-openssl-solaris-x86-64:1.1.3.Final:*:*:*:*:*:*:*",
       "purl": "pkg:maven/org.wildfly.openssl/wildfly-openssl-solaris-x86_64@1.1.3.Final",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "7ef25e94db74d85fa7e9271b064a3c7d9ef7add5"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -122231,6 +122210,30 @@
         },
         {
           "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly-openssl-solaris-x86-64:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly-openssl-solaris-x86_64:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jboss-by-red-hat:wildfly_openssl_solaris_x86_64:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly-openssl-solaris-x86-64:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly-openssl-solaris-x86_64:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jboss_by_red_hat:wildfly_openssl_solaris_x86_64:1.1.3.Final:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
           "value": "cpe:2.3:a:wildfly-openssl:wildfly-openssl-solaris-x86-64:1.1.3.Final:*:*:*:*:*:*:*"
         },
         {
@@ -122295,7 +122298,7 @@
         },
         {
           "name": "syft:metadata:virtualPath",
-          "value": "/opt/dremio/jars/3rdparty/wildfly-openssl-1.1.3.Final.jar:wildfly-openssl-solaris-x86_64"
+          "value": "/opt/dremio/jars/3rdparty/wildfly-openssl-1.1.3.Final.jar"
         }
       ]
     },
@@ -123858,12 +123861,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.apache.xerces.xni/xercesImpl@2.12.2?package-id=cabb4bbe8490bb9",
+      "bom-ref": "pkg:maven/org.w3c.dom/xercesImpl@2.12.2?package-id=cabb4bbe8490bb9",
       "type": "library",
       "name": "xercesImpl",
       "version": "2.12.2",
       "cpe": "cpe:2.3:a:apache:xercesImpl:2.12.2:*:*:*:*:*:*:*",
-      "purl": "pkg:maven/org.apache.xerces.xni/xercesImpl@2.12.2",
+      "purl": "pkg:maven/org.w3c.dom/xercesImpl@2.12.2",
       "externalReferences": [
         {
           "url": "",
@@ -123936,12 +123939,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.apache.xmlcommons.Version/xml-apis@1.4.01?package-id=2f8139109eea9fc4",
+      "bom-ref": "pkg:maven/org.w3c.dom.ls/xml-apis@1.4.01?package-id=2f8139109eea9fc4",
       "type": "library",
       "name": "xml-apis",
       "version": "1.4.01",
       "cpe": "cpe:2.3:a:apache:xmlcommons:1.4.01:*:*:*:*:*:*:*",
-      "purl": "pkg:maven/org.apache.xmlcommons.Version/xml-apis@1.4.01",
+      "purl": "pkg:maven/org.w3c.dom.ls/xml-apis@1.4.01",
       "externalReferences": [
         {
           "url": "",

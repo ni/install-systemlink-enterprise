@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:bf6ea8da-35e1-4180-a7e1-149590e0f95d",
+  "serialNumber": "urn:uuid:493eecf6-3c78-4b03-b29b-724733539c00",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:10:17-05:00",
+    "timestamp": "2023-05-10T10:55:29-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "6aaa7b7a6a8227bc",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/ni/systemlink/sl-k8s-hub:20230329.2",
-      "version": "sha256:98f6cd004c55eda0d0571ae082fc5b2d4d37726706b50fb9b715ad3376b3505e"
+      "version": "sha256:e1ea3aa356b10dad13e52b8ff39737397dc4bf09ab62e8f295c8ccb3180f7fcc"
     }
   },
   "components": [

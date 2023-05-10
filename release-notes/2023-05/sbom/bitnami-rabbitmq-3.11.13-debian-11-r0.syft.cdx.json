@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:e481cdb8-05c1-420f-a8bd-dd33f67ff529",
+  "serialNumber": "urn:uuid:562bda1a-7545-4a39-8edf-c4a2145503c2",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:09:56-05:00",
+    "timestamp": "2023-05-10T10:57:21-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "3d31137b726b9217",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/bitnami/rabbitmq:3.11.13-debian-11-r0",
-      "version": "sha256:14c65175efebd0dbebe83633da1fe3483e3d10c3c304d692b7929fb7acee430a"
+      "version": "sha256:9c512436457627b842a746c973467e10866963ec664efd76337d7257495165cc"
     }
   },
   "components": [

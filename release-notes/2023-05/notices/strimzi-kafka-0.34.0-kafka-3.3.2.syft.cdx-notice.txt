@@ -197,6 +197,7 @@ Copyright 2016-2019 The OpenTracing Authors
 Copyright 2016-2019 The OpenTracing Authors
 ** io.opentracing/opentracing-util; version 0.33.0 -- 
 ** io.prometheus.jmx/collector; version 0.17.2 -- 
+** io.prometheus.jmx/jmx_prometheus_javaagent; version 0.17.2 -- 
 ** io.prometheus/simpleclient; version 0.16.0 -- 
 ** io.prometheus/simpleclient_common; version 0.16.0 -- 
 ** io.prometheus/simpleclient_hotspot; version 0.16.0 -- 

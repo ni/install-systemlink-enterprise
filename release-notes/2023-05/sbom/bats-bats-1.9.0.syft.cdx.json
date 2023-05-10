@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:c87fd704-7a53-4a90-8b11-63b43dd89a54",
+  "serialNumber": "urn:uuid:bd7f678d-e92d-473d-9ff7-885b959a4094",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:08:40-05:00",
+    "timestamp": "2023-05-10T10:55:53-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "1e88925cdd88d0ae",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/bats/bats:1.9.0",
-      "version": "sha256:acd28536088c346bc81f1a01d0c4c166d2a244f86ecaa486d92d6edfbf5bd258"
+      "version": "sha256:f3ba0f808a8ad4e3fadeafe3870cee80897ba8c954d37f4aa70d1a7c316d431c"
     }
   },
   "components": [

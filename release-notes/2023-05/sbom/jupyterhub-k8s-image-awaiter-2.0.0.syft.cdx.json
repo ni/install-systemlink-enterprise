@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:64cc6ddf-7922-493a-b119-768030a48c8e",
+  "serialNumber": "urn:uuid:efcda4e0-45c1-4f8e-9f78-c24e2f3b243c",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:08:14-05:00",
+    "timestamp": "2023-05-10T10:56:07-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "501ac291d0782717",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/jupyterhub/k8s-image-awaiter:2.0.0",
-      "version": "sha256:f7bfa6bce3337c487527d1a91fa29e0d34ff2607f576ffc769a2608e691c1335"
+      "version": "sha256:0838c93ac0bdf3e69735c60ad1dcdbb982e71cb6b1068fda2c433b35d51d5399"
     }
   },
   "components": [

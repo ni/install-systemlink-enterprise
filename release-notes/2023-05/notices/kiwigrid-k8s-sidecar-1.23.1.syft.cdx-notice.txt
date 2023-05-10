@@ -180,75 +180,6 @@ Copyright (c) Ahmed TAHRI Ousret (https://github.com/Ousret)
 (c) https://stackoverflow.com/questions/3041986/apt-command-line-interface-like-yes-no-input
 ** logfmter; version 0.0.6 -- 
 Copyright (c) 2022 Joshua Taylor Eppinette
-** pip; version 23.0.1 -- 
-2015 Eric Larson
-2021 Taneli Hukkinen
-copyright 2014-2019 s
-(c) 2006 Entrust, Inc.
-Copyright 2013-2014 Ray
-Copyright Kenneth Reitz
-Copyright 2015 Eric Larson
-Copyright 2017 Elisey Zanko
-(c) 1999 Entrust.net Limited
-(c) 2009 Entrust, Inc. - for
-(c) 2012 Entrust, Inc. - for
-(c) 2015 Entrust, Inc. - for
-Copyright 2016 Joshua Harlow
-Copyright 2016 Julien Danjou
-Copyright (c) Simple Launcher
-Copyright 2012 by Simon Sapin
-Copyright 2016 Etienne Bersac
-Copyright (c) 2006-2022 by the
-Copyright (c) 2013 Vinay Sajip
-Copyright 2021 Taneli Hukkinen
-Copyright (c) 2008-2020 The pip
-Copyright (c) 2020 Will McGugan
-Copyright 2012-2021 Eric Larson
-Copyright Jonathan Hartley 2013
-Copyright (c) 2012 by Simon Sapin
-Copyright (c) 2017 Thomas Kluyver
-Copyright 2016-2018 Julien Danjou
-Copyright 2016-2021 Julien Danjou
-Copyright (c) 2008-present The pip
-Copyright (c) 2021 Taneli Hukkinen
-Copyright 2015,2016,2017 Nir Cohen
-Copyright (c) 2010 Jonathan Hartley
-Copyright (c) 2012-2015 Vinay Sajip
-Copyright (c) 2012-2017 Vinay Sajip
-Copyright (c) 2012-2022 Vinay Sajip
-Copyright (c) 2013-2015 Vinay Sajip
-Copyright (c) 2013-2017 Vinay Sajip
-Copyright (c) 2013-2020 Vinay Sajip
-Copyright (c) 2013-2021, Kim Davies
-copyright (c) 2012 by Kenneth Reitz
-copyright (c) 2017 by Kenneth Reitz
-Copyright (c) 2003-2022 Paul T. McGuire
-Copyright (c) 1998 the Initial Developer
-Copyright (c) 2001 the Initial Developer
-Copyright (c) 2005 the Initial Developer
-Copyright (c) 2010-202x The platformdirs
-Copyright 2006-2022 by the Pygments team
-Copyright (c) 2010-2020 Benjamin Peterson
-copyrighted by the Free Software Foundation
-Copyright (c) 2012 The Python Software Foundation
-Copyright (c) 2012-2013 Python Software Foundation
-Copyright (c) 2015-2016 Will Bond <will@wbond.net>
-Copyright (c) 2016 Jason R Coombs <jaraco@jaraco.com>
-Copyright (c) 2008-2020 Andrey Petrov and contributors
-Copyright (c) 2012-2017 The Python Software Foundation
-Copyright (c) 2012-2021 The Python Software Foundation
-(c) 2006 Entrust, Inc. Label Entrust Root Certification
-Copyright (c) 1991, 1999 Free Software Foundation, Inc.
-Copyright (c) 2018, Tzu-ping Chung <uranusjr@gmail.com>
-Copyright (c) Donald Stufft and individual contributors
-Copyright (c) 2008-2011 INADA Naoki <songofacandy@gmail.com>
-(c) 2006-2022 by Georg Brandl, Matthaus Chajdas and contributors
-Copyright (c) 1995-2001 Corporation for National Research Initiatives
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-(c) 1999 Entrust.net Limited Label Entrust.net Premium 2048 Secure Server CA Serial
-Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The Netherlands
-Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Python Software Foundation
-Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 Python Software Foundation
 ** pip; version 22.3.1 -- 
 2015 Eric Larson
 2021 Taneli Hukkinen
@@ -301,6 +232,75 @@ Copyright 2006-2022 by the Pygments team
 Copyright (c) 2010-2020 Benjamin Peterson
 copyrighted by the Free Software Foundation
 Copyright (c) 2010 ActiveState Software Inc.
+Copyright (c) 2012 The Python Software Foundation
+Copyright (c) 2012-2013 Python Software Foundation
+Copyright (c) 2015-2016 Will Bond <will@wbond.net>
+Copyright (c) 2016 Jason R Coombs <jaraco@jaraco.com>
+Copyright (c) 2008-2020 Andrey Petrov and contributors
+Copyright (c) 2012-2017 The Python Software Foundation
+Copyright (c) 2012-2021 The Python Software Foundation
+(c) 2006 Entrust, Inc. Label Entrust Root Certification
+Copyright (c) 1991, 1999 Free Software Foundation, Inc.
+Copyright (c) 2018, Tzu-ping Chung <uranusjr@gmail.com>
+Copyright (c) Donald Stufft and individual contributors
+Copyright (c) 2008-2011 INADA Naoki <songofacandy@gmail.com>
+(c) 2006-2022 by Georg Brandl, Matthaus Chajdas and contributors
+Copyright (c) 1995-2001 Corporation for National Research Initiatives
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+(c) 1999 Entrust.net Limited Label Entrust.net Premium 2048 Secure Server CA Serial
+Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The Netherlands
+Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Python Software Foundation
+Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 Python Software Foundation
+** pip; version 23.0.1 -- 
+2015 Eric Larson
+2021 Taneli Hukkinen
+copyright 2014-2019 s
+(c) 2006 Entrust, Inc.
+Copyright 2013-2014 Ray
+Copyright Kenneth Reitz
+Copyright 2015 Eric Larson
+Copyright 2017 Elisey Zanko
+(c) 1999 Entrust.net Limited
+(c) 2009 Entrust, Inc. - for
+(c) 2012 Entrust, Inc. - for
+(c) 2015 Entrust, Inc. - for
+Copyright 2016 Joshua Harlow
+Copyright 2016 Julien Danjou
+Copyright (c) Simple Launcher
+Copyright 2012 by Simon Sapin
+Copyright 2016 Etienne Bersac
+Copyright (c) 2006-2022 by the
+Copyright (c) 2013 Vinay Sajip
+Copyright 2021 Taneli Hukkinen
+Copyright (c) 2008-2020 The pip
+Copyright (c) 2020 Will McGugan
+Copyright 2012-2021 Eric Larson
+Copyright Jonathan Hartley 2013
+Copyright (c) 2012 by Simon Sapin
+Copyright (c) 2017 Thomas Kluyver
+Copyright 2016-2018 Julien Danjou
+Copyright 2016-2021 Julien Danjou
+Copyright (c) 2008-present The pip
+Copyright (c) 2021 Taneli Hukkinen
+Copyright 2015,2016,2017 Nir Cohen
+Copyright (c) 2010 Jonathan Hartley
+Copyright (c) 2012-2015 Vinay Sajip
+Copyright (c) 2012-2017 Vinay Sajip
+Copyright (c) 2012-2022 Vinay Sajip
+Copyright (c) 2013-2015 Vinay Sajip
+Copyright (c) 2013-2017 Vinay Sajip
+Copyright (c) 2013-2020 Vinay Sajip
+Copyright (c) 2013-2021, Kim Davies
+copyright (c) 2012 by Kenneth Reitz
+copyright (c) 2017 by Kenneth Reitz
+Copyright (c) 2003-2022 Paul T. McGuire
+Copyright (c) 1998 the Initial Developer
+Copyright (c) 2001 the Initial Developer
+Copyright (c) 2005 the Initial Developer
+Copyright (c) 2010-202x The platformdirs
+Copyright 2006-2022 by the Pygments team
+Copyright (c) 2010-2020 Benjamin Peterson
+copyrighted by the Free Software Foundation
 Copyright (c) 2012 The Python Software Foundation
 Copyright (c) 2012-2013 Python Software Foundation
 Copyright (c) 2015-2016 Will Bond <will@wbond.net>

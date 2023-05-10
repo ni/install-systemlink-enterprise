@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:a6b86a84-35df-4cf5-a1d3-a14336f7231e",
+  "serialNumber": "urn:uuid:a463ddff-1a7d-457c-ba43-c735ab04ef5f",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:09:28-05:00",
+    "timestamp": "2023-05-10T10:56:56-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "82a962cfa7f20e29",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/ni/systemlink/grafana-auth-proxy:20230404.4",
-      "version": "sha256:df11bd711fe9f44bd6d17afb3a6740be04b99e123cc315d62aa4c6bc16a18631"
+      "version": "sha256:0e9e747e547b971e5b944c12f7666f6c7ffe08b844d697ef0d1066fd25e5934e"
     }
   },
   "components": [

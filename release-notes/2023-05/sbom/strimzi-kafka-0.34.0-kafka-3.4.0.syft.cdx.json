@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:8603034d-c722-421f-8735-7cac0c32514d",
+  "serialNumber": "urn:uuid:9eace70d-0e55-4c87-b0bb-291c3f357e09",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T15:22:48-05:00",
+    "timestamp": "2023-05-10T10:49:22-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "88e2095e479026a5",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/strimzi/kafka:0.34.0-kafka-3.4.0",
-      "version": "sha256:9c34add325d7393c52e997c369fab1b86173e7b5b169ff2aaf5c9e41c1232866"
+      "version": "sha256:628edfdfdd4b015133aed108907c1d24c99def7f0754910ee1f15e97abd57083"
     }
   },
   "components": [
@@ -19477,32 +19477,13 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.jline/jline-remote-ssh@3.21.0?package-id=6ca41b887b4a20c0",
+      "bom-ref": "pkg:maven/org.jline/jline-remote-ssh@3.21.0?package-id=e561df8d4b2a9bd3",
       "type": "library",
       "group": "org.jline",
       "name": "jline-remote-ssh",
       "version": "3.21.0",
-      "licenses": [
-        {
-          "license": {
-            "name": "https://opensource.org/licenses/BSD-3-Clause"
-          }
-        }
-      ],
       "cpe": "cpe:2.3:a:jline-remote-ssh:jline-remote-ssh:3.21.0:*:*:*:*:*:*:*",
       "purl": "pkg:maven/org.jline/jline-remote-ssh@3.21.0",
-      "externalReferences": [
-        {
-          "url": "",
-          "hashes": [
-            {
-              "alg": "SHA-1",
-              "content": "2bf6f2311356f309fda0412e9389d2499346b5a1"
-            }
-          ],
-          "type": "build-meta"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -19574,7 +19555,7 @@
         },
         {
           "name": "syft:metadata:virtualPath",
-          "value": "/opt/kafka/libs/jline-3.21.0.jar"
+          "value": "/opt/kafka/libs/jline-3.21.0.jar:jline-remote-ssh"
         }
       ]
     },
@@ -19879,13 +19860,32 @@
       ]
     },
     {
-      "bom-ref": "pkg:maven/org.jline/jline-terminal-jna@3.21.0?package-id=dbe0d0f8ad77fd0",
+      "bom-ref": "pkg:maven/org.jline/jline-terminal-jna@3.21.0?package-id=84053dd4b7d78d4b",
       "type": "library",
       "group": "org.jline",
       "name": "jline-terminal-jna",
       "version": "3.21.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
       "cpe": "cpe:2.3:a:jline-terminal-jna:jline-terminal-jna:3.21.0:*:*:*:*:*:*:*",
       "purl": "pkg:maven/org.jline/jline-terminal-jna@3.21.0",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "2bf6f2311356f309fda0412e9389d2499346b5a1"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -19957,30 +19957,18 @@
         },
         {
           "name": "syft:metadata:virtualPath",
-          "value": "/opt/kafka/libs/jline-3.21.0.jar:jline-terminal-jna"
+          "value": "/opt/kafka/libs/jline-3.21.0.jar"
         }
       ]
     },
     {
-      "bom-ref": "pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent_common@0.17.2?package-id=a5e7e1689f8053b3",
+      "bom-ref": "pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent@0.17.2?package-id=88336a28e9744327",
       "type": "library",
       "group": "io.prometheus.jmx",
-      "name": "jmx_prometheus_javaagent_common",
+      "name": "jmx_prometheus_javaagent",
       "version": "0.17.2",
-      "cpe": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*",
-      "purl": "pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent_common@0.17.2",
-      "externalReferences": [
-        {
-          "url": "",
-          "hashes": [
-            {
-              "alg": "SHA-1",
-              "content": "614e3c13696f1df9f87640a67c80dc3d5a7f9619"
-            }
-          ],
-          "type": "build-meta"
-        }
-      ],
+      "cpe": "cpe:2.3:a:jmx-prometheus-javaagent:jmx-prometheus-javaagent:0.17.2:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent@0.17.2",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -20000,54 +19988,6 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx-prometheus-javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx_prometheus_javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx-prometheus-javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx_prometheus_javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx-prometheus-javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
           "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx_prometheus_javaagent:0.17.2:*:*:*:*:*:*:*"
         },
         {
@@ -20057,30 +19997,6 @@
         {
           "name": "syft:cpe23",
           "value": "cpe:2.3:a:jmx_prometheus_javaagent:jmx_prometheus_javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:prometheus:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:prometheus:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
@@ -20097,22 +20013,6 @@
         {
           "name": "syft:cpe23",
           "value": "cpe:2.3:a:jmx_prometheus:jmx_prometheus_javaagent:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
-        },
-        {
-          "name": "syft:cpe23",
-          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx:0.17.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
@@ -20165,6 +20065,157 @@
         {
           "name": "syft:metadata:-:artifactID",
           "value": "jmx_prometheus_javaagent"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "io.prometheus.jmx"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/opt/kafka/libs/jmx_prometheus_javaagent-0.17.2.jar:jmx_prometheus_javaagent"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent_common@0.17.2?package-id=6604e9f7eb6d7bd6",
+      "type": "library",
+      "group": "io.prometheus.jmx",
+      "name": "jmx_prometheus_javaagent_common",
+      "version": "0.17.2",
+      "cpe": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent_common@0.17.2",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "614e3c13696f1df9f87640a67c80dc3d5a7f9619"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "JavaMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus_javaagent:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus_javaagent:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:prometheus:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:prometheus:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus-javaagent-common:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx:jmx-prometheus-javaagent-common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx:jmx_prometheus_javaagent_common:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus_javaagent_common:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus-javaagent:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus_javaagent:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx-prometheus:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx_prometheus:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:prometheus:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jmx:jmx:0.17.2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:ca1995fbc032043532f3a736804f1417651a01c682304716d2d12f21892911b2"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/opt/kafka/libs/jmx_prometheus_javaagent-0.17.2.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "jmx_prometheus_javaagent_common"
         },
         {
           "name": "syft:metadata:-:groupID",

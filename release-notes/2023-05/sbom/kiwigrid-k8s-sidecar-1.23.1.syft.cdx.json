@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:dbafd1f8-a69e-41fa-b2af-b714a89afad4",
+  "serialNumber": "urn:uuid:ce91f2a9-8d66-43f7-bb05-faf315839c1c",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:09:15-05:00",
+    "timestamp": "2023-05-10T10:56:17-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "70e0ad735c2418a6",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/kiwigrid/k8s-sidecar:1.23.1",
-      "version": "sha256:b47fa6ba1f8b37afffccc009afbeeed3cd8385ce33c816b2265155585d92dd66"
+      "version": "sha256:800a29600f880e7ac44ae14d2fdd9b8601031172d308c313528ea4f75be5e174"
     }
   },
   "components": [

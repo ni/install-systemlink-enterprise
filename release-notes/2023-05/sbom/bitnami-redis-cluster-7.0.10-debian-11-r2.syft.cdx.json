@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:e94358d8-72de-4dcc-8e57-895cc9ab95d9",
+  "serialNumber": "urn:uuid:f70674d6-e0fe-4ff0-8a2e-516e722df488",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:08:25-05:00",
+    "timestamp": "2023-05-10T10:56:43-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "d317c019dd1a4c0e",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/bitnami/redis-cluster:7.0.10-debian-11-r2",
-      "version": "sha256:1dccd0b4439935b399e076e002e1a7c63d8ecabc207666da53dd5f27c0a77d8b"
+      "version": "sha256:4494b8653c5b2a3643024de1e1d4338506af68c94a23f6bd489b4de3378991ce"
     }
   },
   "components": [

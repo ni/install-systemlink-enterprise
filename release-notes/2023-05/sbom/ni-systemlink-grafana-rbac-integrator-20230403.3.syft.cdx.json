@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:637e2a9b-9854-47e6-b567-a51303538dd5",
+  "serialNumber": "urn:uuid:bd18c5e8-308f-4c4f-aec7-cfc0789ff5ef",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:09:12-05:00",
+    "timestamp": "2023-05-10T10:56:35-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "eaedfdd0540c2b73",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/ni/systemlink/grafana-rbac-integrator:20230403.3",
-      "version": "sha256:36fbc9a5eb10e60f4af024c804ba862285c0de66cf978daa907af65c6eae2a2d"
+      "version": "sha256:e91a9f0b6c24e5326ecc67aad164e907e0a6a8987820b4d20c3c99af73f43d8b"
     }
   },
   "components": [
