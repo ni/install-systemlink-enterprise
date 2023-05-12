@@ -312,27 +312,18 @@ dashboardhost:
   ## The Grafana ingress is disabled by default so no further configuration is required under the "grafana" section.
   ##
   ingress:
-    ## Enable the ingress.
-    ##
-    enabled: true
-    ## For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
-    ## See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
-    # <ATTENTION> - Configure you ingress controller class name.
-    ##
-    ingressClassName: "nginx"
     ## Values can be templated.
     ##
     annotations: {}
-    labels: {}
-    path: "/dashboardhost"
-    ## pathType is only for k8s >= 1.1=.
-    ##
-    pathType: "Prefix"
     hosts: *uiHosts
-    ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
+
+  ## This API ingress makes it possible to expose elements of the Grafana backend API via the API ingress.
+  ##
+  apiIngress:
+    ## Values can be templated.
     ##
-    extraPaths: []
-    tls: []
+    annotations: {}
+    hosts: *apiHosts
 
   ## Grafana community chart configuration. See https://github.com/grafana/helm-charts/blob/main/charts/grafana/README.md
   ## for more documentation and examples for these values.
