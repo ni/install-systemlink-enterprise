@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:34b42533-331b-4c95-ad7c-257c7b039ab2",
+  "serialNumber": "urn:uuid:f094a0b3-07ff-4e70-9427-302361a090e7",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-05-05T16:08:20-05:00",
+    "timestamp": "2023-05-10T10:57:00-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -16,7 +16,7 @@
       "bom-ref": "ebfb24c9c393075c",
       "type": "container",
       "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/kube-scheduler:v1.23.10",
-      "version": "sha256:dec74af39e253476dc11c5133f4378b0e68522ddac02a36a275d04eeeae56cdc"
+      "version": "sha256:78097a33f65fd17d34eb34f3f3356792220e63d57fd006e9e6285d9b39f419ab"
     }
   },
   "components": [
