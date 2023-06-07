@@ -17,7 +17,7 @@ The 2023-06 release bundle for SystemLink Enterprise has been published to <http
 
 ## Helm Chart Breaking Changes
 
-- 'dashboardhost 0.1.207' 
+- 'dashboardhost 0.1.207'
     - Added `apiIngress` section to expose the Grafana API on the API ingress. (A Grafana API route is needed for Service Registry to determine Grafana's status, which then controls whether to show Dashboards in the navigation tree.)
     - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
 
@@ -83,7 +83,6 @@ Only customer facing bugs have been included in this list.
 - testmonitorservice/v0.11.12
 - userdata/v0.2.11
 - userservice-setup/v0.3.1
-
 
 ### Non Container/Chart Artifacts
 
