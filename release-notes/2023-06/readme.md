@@ -21,15 +21,12 @@ The 2023-06 release bundle for SystemLink Enterprise has been published to <http
 - 'dashboardhost 0.1.207' 
     - Added `apiIngress` section to expose the Grafana API on the API ingress. (A Grafana API route is needed for Service Registry to determine Grafana's status, which then controls whether to show Dashboards in the navigation tree.)
     - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
-    - [View this configuration](pending link)
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+[closed-bugs-sle-2023-06](https://github.com/ni/install-systemlink-enterprise/blob/2023-06/release-notes/2023-06/closed-bugs-sle-2023-06.xlsx)
 
 ## Software Bill of Materials and Notices
 
@@ -43,7 +40,7 @@ Only customer facing bugs have been included in this list.
 
 **Top Level Helm Chart:** `systemlink 0.14.35`
 
-**Admin Helm Chart:** `systemlink-admin 0.14.6`
+**Admin Helm Chart:** `systemlink-admin 0.14.7`
 
 ### NI Containers
 
@@ -138,7 +135,11 @@ userservice-setup/v0.3.1
 
 ### Non Container/Chart Artifacts
 
-artifact:version - TODO
+systemlink-notebook-datasource/1.1.1.zip
+
+systemlink-dataframe-datasource/1.6.2.zip
+
+plotly-panel/1.1.2.zip
 
 ### 3rd Party Containers
 
@@ -157,6 +158,8 @@ bitnami/rabbitmq/3.11.16-debian-11-r3
 bitnami/redis-cluster/7.0.10-debian-11-r2
 
 bitnami/schema-registry/7.3.3-debian-11-r9
+
+busybox/stable@sha256:51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
 
 jupyterhub/k8s-image-awaiter/2.0.0
 
