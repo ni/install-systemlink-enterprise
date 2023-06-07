@@ -7,8 +7,8 @@ The 2023-06 release bundle for SystemLink Enterprise has been published to <http
 <!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
 - 'assetservice >= 0.0.283'
-  - Description: New service was introduced in SystemLink chart. Any PVC that contains assetservice in its name needs to be removed prior to the upgrade. The following privileges are being used: asset:Query, asset:Create, asset:Update, asset:Delete.
-  - Installation guide: Remove pvc that have assetservice in its name.
+    - Description: New service was introduced in SystemLink chart. Any PVC that contains assetservice in its name needs to be removed prior to the upgrade. The following privileges are being used: asset:Query, asset:Create, asset:Update, asset:Delete.
+    - Installation guide: Remove pvc that have assetservice in its name.
 
 ## New Features and Behavior changes
 
@@ -19,9 +19,9 @@ The 2023-06 release bundle for SystemLink Enterprise has been published to <http
 
 ## Helm Chart Breaking Changes
 
-- 'dashboardhost 0.1.207'
-  - Added `apiIngress` section to expose the Grafana API on the API ingress. (A Grafana API route is needed for Service Registry to determine Grafana's status, which then controls whether to show Dashboards in the navigation tree.)
-  - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
+- 'dashboardhost 0.1.207' 
+    - Added `apiIngress` section to expose the Grafana API on the API ingress. (A Grafana API route is needed for Service Registry to determine Grafana's status, which then controls whether to show Dashboards in the navigation tree.)
+    - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
 
 ## Bugs Fixed
 
@@ -87,6 +87,7 @@ Only customer facing bugs have been included in this list.
 - testmonitorservice/v0.11.12
 - userdata/v0.2.11
 - userservice-setup/v0.3.1
+
 
 ### Non Container/Chart Artifacts
 
