@@ -12,9 +12,10 @@ The 2023-06 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Track the location and status of assets on the Assets tab for your system.
+- Manually add assets to your system to track third-party devices and devices without drivers.
+- Edit and delete data spaces from the data spaces table and from an individual data space.
+- The PostgreSQL backend for the Test Insights Service is more resilient.
 
 ## Helm Chart Breaking Changes
 
