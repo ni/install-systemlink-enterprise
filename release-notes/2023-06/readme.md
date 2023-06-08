@@ -1,12 +1,6 @@
 # SystemLink Enterprise release 2023-06 Release Notes
 
-The 2023-06 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
-
-## Upgrading from the release year-release-month to the release year-release-month
-
-- 'assetservice >= 0.0.283'
-    - Description: New service was introduced in SystemLink chart. Any PVC that contains assetservice in its name needs to be removed prior to the upgrade. The following privileges are being used: asset:Query, asset:Create, asset:Update, asset:Delete.
-    - Installation guide: Remove pvc that have assetservice in its name.
+The 2023-06 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## New Features and Behavior changes
 
@@ -17,7 +11,12 @@ The 2023-06 release bundle for SystemLink Enterprise has been published to <http
 
 ## Helm Chart Breaking Changes
 
-- 'dashboardhost 0.1.207'
+- `assetservice 0.0.283`
+    - New in 2023-06 release
+    - This service uses the following privileges: asset:Query, asset:Create, asset:Update, asset:Delete
+    - Before you upgrade, remove any PersistentVolumeClaims (PVCs) with `assetservice` in its name
+
+- `dashboardhost 0.1.207`
     - Added `apiIngress` section to expose the Grafana API on the API ingress. (A Grafana API route is needed for Service Registry to determine Grafana's status, which then controls whether to show Dashboards in the navigation tree.)
     - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
 
