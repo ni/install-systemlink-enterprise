@@ -4,7 +4,7 @@ The current release is introduces a breaking change regarding the systems connec
 
 ## Prior to upgrading to SLE 2023-07
 
-The old salt-master has a pair of RSA keys that are used for securing the communication. The public key is already cached on all the
+The old salt-master uses a pair of RSA keys to secure communication. The public key is already cached on all
 accepted clients. We need to persist these keys between all the SLE versions, otherwise the client systems will reject the new salt-master
 that would have a different public key.
 
