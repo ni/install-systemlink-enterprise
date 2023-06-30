@@ -37,7 +37,7 @@ This release includes Dremio Enterprise. This upgrade requires the removal of pr
 ## Helm Chart Breaking Changes
 
 - `dataframeservice 0.11.21`
-    - Dremio community edition has been replaced with Dremio Enterprise. Refer to [Upgrading from the 2023-06 or previous release to 2023-07](/#upgrading-from-the-2023-06-or-previous-release-to-2023-07) for details steps required to accommodate this upgrade.
+    - Dremio community edition has been replaced with Dremio Enterprise. Refer to [Upgrading from the 2023-06 or previous release to 2023-07](#upgrading-from-the-2023-06-or-previous-release-to-2023-07) for details steps required to accommodate this upgrade.
 
 - `saltmaster 1.0.0`
     - A secret for MongoDB credentials (`saltmaster.secrets.mongodb`) must be provided.
