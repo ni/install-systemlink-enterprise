@@ -32,10 +32,6 @@ The 2023-07 release bundle for SystemLink Enterprise has been published to <http
 		1. It is now using mongo so we will need to provide the mongodb credentials for the secret to be created: "saltmaster.secrets.mongodb"
 		2. The helm chart now needs a pair of RSA keys (private & public) for securing the communication with the SL clients. There are instructions in the migration plan for getting the current pair of keys and setting them accordingly to "saltmaster.secrets.saltmaster" in order to create the necessary secret.
 
-	
-- Chart Name and version
-    - Description of breaking change.
-
 ## Bugs Fixed
 
 Only customer facing bugs have been included in this list.
