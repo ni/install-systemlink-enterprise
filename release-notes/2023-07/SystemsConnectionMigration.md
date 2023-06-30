@@ -1,6 +1,6 @@
 # Migrating Connected Systems to SLE 2023-07 or later
 
-The current release is introducing a breaking change regarding the systems connectivity. This means that SLE releases prior to SLE 2023-07 are affected by this change. The saltmaster service which manages the connectivity with the client systems has been replaced with a new implementation which causes all the connected clients to become disconnected. The next steps will describe how to re-approve and re-connect all the previously connected clients
+The current release is introduces a breaking change regarding the systems connectivity that affects releases prior to SLE 2023-07. The saltmaster service which manages the connectivity with the client systems has been replaced with a new implementation that disconnects all connected clients. Complete the following steps to re-approve and re-connect all previously connected clients.
 
 ## Prior to upgrading to SLE 2023-07
 
