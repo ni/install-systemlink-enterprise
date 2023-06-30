@@ -1,24 +1,23 @@
 # Migrating Connected Systems to SLE 2023-07 or later
 
-The current release is introduces a breaking change regarding the systems connectivity that affects releases prior to SLE 2023-07. The saltmaster service which manages the connectivity with the client systems has been replaced with a new implementation that disconnects all connected clients. Complete the following steps to re-approve and re-connect all previously connected clients.
+The 2023-07 release introduces a breaking change in systems connectivity that affects prior releases. The saltmaster service which manages the connectivity with the client systems has been replaced with a new implementation that disconnects all connected clients upon upgrade. Complete the following steps to re-approve and re-connect all previously connected clients.
 
 ## Prior to upgrading to SLE 2023-07
 
-The old salt-master uses a pair of RSA keys to secure communication. The public key is already cached on all
-accepted clients. You must persist these keys between all versions of SLE, so the client systems do not reject the new salt-master
-that would have a different public key.
+The old saltmaster uses a pair of RSA keys to secure communication. The public key is already cached on all
+accepted clients. You must persist these keys between the upgrade of SLE, so the client systems do not reject the new saltmaster's public key.
 
-1. Open a terminal to the current 'saltmaster-0' pod.
-2. Navigate to '/etc/salt/pki/master'
-3. Make a note of the master.pem (private key) and master.pub (public key) values.
+1. Open a terminal to the current `saltmaster-0` pod.
+2. Navigate to `/etc/salt/pki/master`
+3. Make a note of the `master.pem` (private key) and `master.pub` (public key) values.
 4. Set these values to the secrets definition object of the saltmaster chart in the top level secrets values yaml file. Make sure
-you use the '|' indicator because these are multiline strings. See more info here: <https://yaml-multiline.info/>
+you use the '|' indicator because these are multiline strings. Refer to <https://yaml-multiline.info/> for details on this character's usage.
 
 The updated chart will create a Kubernetes secret using these two keys.
 
 ## Post SLE Upgrade
 
-After the upgrade, all previously connected (green/orange systems) will be shown as **Disconnected**. Additionally, all these clients will also be shown in the **Pending systems** list. You can use the [Jupyter Notebook](./NewSaltMaster-SystemsMigration.ipynb) provided to automate system approval. This notebook will add systems to the workspace they were previously a member of. The user who runs the notebook must have the **Add systems** privilege in all the necessary workspaces.  
+After the upgrade, all previously connected (green/orange systems) will be shown as **Disconnected**. Additionally, these clients will also be shown in the **Pending systems** list. You can use the [Jupyter Notebook](./NewSaltMaster-SystemsMigration.ipynb) provided to automate system approval. This notebook will add systems to the workspace they were previously a member of. The user who runs the notebook must have the **Add systems** privilege in all the necessary workspaces.  
 
 1. Ensure all systems are disconnected and appear in the pending systems list.
 1. Upload **NewSaltMaster-SystemsMigration.ipynb** to JupyterHub.
@@ -44,7 +43,7 @@ contains this line, we only need to uncomment it and add the id and workspace:
 
 1. Validate that the selected system is now connected (green).
 
-    **Note** Misconfiguration of the RSA keys for the salt master may cause this operation to fail. Review the new secrets and [logs on the system](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000kGcSSAU&l=en-US)
+    **Note** Misconfiguration of the RSA keys for the salt master may cause this operation to fail. Review the new secrets and [logs on the client system](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000kGcSSAU&l=en-US)
 1. After connecting this single system, you can now uncomment the override of `managed_systems_to_approve` and run the notebook again.
 
     ```python
