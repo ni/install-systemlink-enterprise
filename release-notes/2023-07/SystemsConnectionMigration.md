@@ -53,3 +53,4 @@ contains this line, we only need to uncomment it and add the id and workspace:
 
     **Note** The new run will re-approve all the systems in batches of 50 (this can also be modified in the notebook)
 1. Ensure all the previously connected clients are connected (green).
+1. [Optional] Delete the PVCs and volumes used by the old implementation. PVC names: `saltmaster-pillar-saltmaster-0` and `saltmaster-pki-saltmaster-0`.
