@@ -10,7 +10,7 @@ This release includes an updated saltmaster service that will cause previously c
 This release includes Dremio Enterprise. This upgrade requires the removal of previous Dremio volumes.
 
 1. Prior to upgrade, mark for deletion all persistent volume claims with `dremio` in their name.
-2. Upgrade using the`systemlink 0.15.48` chart.
+2. Upgrade using the`systemlink 0.15.52` chart.
 3. Kubernetes will automatically create new Dremio persistent volume claims.
 
 **Note:** If this procedure was not completed prior to upgrade you must delete all `dremio` persistent volume claims, delete all `dremio` pods, and delete all `dataframeservice` pods. Kubernetes will automatically schedule new pods to replaced the deleted pods and new PVCs will be automatically created.
@@ -142,7 +142,7 @@ systemsmanagementservice/0.3.13
 
 systemsui/0.4.60
 
-testinsightsui/0.3.89
+testinsightsui/0.3.96
 
 testmonitorservice/0.12.1
 
