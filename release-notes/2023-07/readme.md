@@ -176,7 +176,7 @@ bitnami/redis-cluster/7.0.10-debian-11-r2
 
 bitnami/schema-registry/7.4.0-debian-11-r9
 
-busybox/stable@sha256:51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
+busybox/stable@sha256:1b0a26bd07a3d17473d8d8468bea84015e27f87124b283b91d781bce13f61370
 
 jupyterhub/k8s-image-awaiter/2.0.0
 
