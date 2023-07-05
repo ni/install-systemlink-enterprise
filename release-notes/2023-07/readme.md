@@ -10,7 +10,7 @@ This release includes an updated saltmaster service that will cause previously c
 This release includes Dremio Enterprise. This upgrade requires the removal of previous Dremio volumes.
 
 1. Prior to upgrade, mark for deletion all persistent volume claims with `dremio` in their name.
-2. Upgrade using the`systemlink 0.15.48` chart.
+2. Upgrade using the`systemlink 0.15.52` chart.
 3. Kubernetes will automatically create new Dremio persistent volume claims.
 
 **Note:** If this procedure was not completed prior to upgrade you must delete all `dremio` persistent volume claims, delete all `dremio` pods, and delete all `dataframeservice` pods. Kubernetes will automatically schedule new pods to replaced the deleted pods and new PVCs will be automatically created.
@@ -58,7 +58,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.15.48`
+**Top Level Helm Chart:** `systemlink 0.15.52`
 
 **Admin Helm Chart:** `systemlink-admin 0.15.5`
 
@@ -142,7 +142,7 @@ systemsmanagementservice/0.3.13
 
 systemsui/0.4.60
 
-testinsightsui/0.3.89
+testinsightsui/0.3.96
 
 testmonitorservice/0.12.1
 
@@ -176,7 +176,7 @@ bitnami/redis-cluster/7.0.10-debian-11-r2
 
 bitnami/schema-registry/7.4.0-debian-11-r9
 
-busybox/stable@sha256:51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
+busybox/stable@sha256:1b0a26bd07a3d17473d8d8468bea84015e27f87124b283b91d781bce13f61370
 
 jupyterhub/k8s-image-awaiter/2.0.0
 
