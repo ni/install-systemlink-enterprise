@@ -82,6 +82,14 @@ global:
     ## CDN endpoint for telemetry-driven content. NI does not recommend changing this value.
     ##
     cdnEndpoint: "https://web-sdk.ni.com/"
+    ## Additional image sources required by push-content from the telemetry provider.
+    ## These values will be included in some Content-Security-Policy headers for this application.
+    ##
+    additionalImageSources: []
+    ## Additional style sources required by push-content from the telemetry provider.
+    ## These values will be included in some Content-Security-Policy headers for this application.
+    ##
+    additionalStyleSources: []
 
 ## Core configuration for the RabbitMQ message broker
 ##
