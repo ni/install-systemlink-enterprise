@@ -346,17 +346,6 @@ dashboardhost:
     autoscaling:
       # <ATTENTION> - If not using an external database, you must disable autoscaling and use a single Grafana instance.
       enabled: true
-      minReplicas: 2
-      maxReplicas: 10
-      metrics:
-      - type: "Resource"
-        resource:
-          name: "cpu"
-          targetAverageUtilization: 60
-      - type: "Resource"
-        resource:
-          name: "memory"
-          targetAverageUtilization: 70
 
     ## Use an existing secret for the admin user.
     # <ATTENTION> - Uncomment this section to use a different secret to configure the admin user.
