@@ -106,7 +106,7 @@ webserver:
   ##
   ingress:
     ## Increase the read timeout from the nginx default to give more time to proxied services for responding to requests.
-    ## Only applies if an nginx ingress controller is used.
+    ## Applies only if you are using an nginx ingress controller.
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-read-timeout: '90'
