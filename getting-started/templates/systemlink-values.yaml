@@ -105,7 +105,7 @@ webserver:
   ## Ingress configuration
   ##
   ingress:
-    ## Increase the read timeout from the nginx default to give more time to proxied services for responding to requests.
+    ## Increase the read timeout from the nginx default to give proxied services more time to respond to requests.
     ## Applies only if you are using an nginx ingress controller.
     ##
     annotations:
