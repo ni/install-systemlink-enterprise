@@ -102,6 +102,14 @@ rabbitmq:
 ## Core configuration for the SystemLink web application.
 ##
 webserver:
+  ## Ingress configuration
+  ##
+  ingress:
+    ## Increase the read timeout from the nginx default to give proxied services more time to respond to requests.
+    ## Applies only if you are using an nginx ingress controller.
+    ##
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-read-timeout: '90'
   ## Values used to configure OpenID Connect providers.
   # <ATTENTION> - Configure your OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
   #    Consult your provider's documentation regarding exposing scopes to clients.
