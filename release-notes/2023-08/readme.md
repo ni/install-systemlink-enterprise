@@ -9,7 +9,25 @@ TODO
 
 ## New Features and Behavior changes
 
-- TODO
+- systemlink 16.31
+    - We have update our RabbitMQ dependency from 3.11.x to 3.12.x. RabbitMQ minor version changes can cause breaking issues on upgrade. In this instance, it is likely RabbitMQ will fail to launch after upgrade if they user is not upgrading from the previous SLE release. A topic on RabbitMQ upgrade issues is being added to the installation guide.
+    - [Added discussion to the Updating SystemLink Enterprise topic](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+- systemlink 16.35
+    - Dependent services are updated to use HorizontalPodAutoscaler v2 Kubernetes API. This change is affecting to minimum Kubernetes version support, because dependencies are no longer support 1.22 or older versions. Minimum Kubernetes version for systemlink will be 1.23 or newer. Existing systemlink-values.yaml file also need to be updated before upgrading an existing installation, either by removing the existing grafana autoscaling config (as in the linked pull request) or update to v2 syntax (https://dev.azure.com/ni/DevCentral/_git/Skyline/pullrequest/527579?_a=files&path=/Enterprise/SystemLink/systemlink-rancher-values.yaml).
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/pull/153)
+- systemlink 16.60
+    - SystemLink now supports user telemetry tracking via gainsight. Telemetry is enabled by default and must be explicitly disabled using the userTelemetry.enableFrontEndTelemetry flag in your Helm values configuration. Deploying with user telemetry enabled will cause usage data for the SystemLink web UI to be uploaded to https://esp.ni.com and for some content to be injected into the web application from https://web-sdk.ni.com.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/pull/138)
+- repository 0.1.0
+    - Added a new helm chart. 
+      1. It is required to set new MongoDB credentials in `repository.secrets.mongodb`.
+      2. This service needs to access external resources (ni.com feeds - "https://download.ni.com/support/nipkg/products/ni-package-manager/released") so make sure the networking of the cluster allows that.
+- testmonitorservice 0.13.2
+    - TestMonitor service requires a new EF Core PostgreSQL migration to support an upcoming feature. No actions are required. This migration does not change any tables or modify any data. The documented PostgreSQL user privileges are sufficient to perform this migration; no addition privileges are required.  The migration will happen automatically on first launch of the service and should complete immediately. If the version of testmonitorservice is rolled back to a prior version after this migration has been performed the service will fail to start with an "Invalid database configuration" error presented in the service logs.
+- assetui 0.2.227
+    - Added new helm chart for assets UI. The new app is not yet exposed in navigator, but can be reached to by url (/assets). There are no breaking changes
+- dataframeservice 0.12.60
+    - This new version restarts the service pods on every helm upgrade in order to detect changes to the S3 credentials and update the connection between dependencies like Dremio and Kafka Connect to S3. This decreases the down time while rotating S3 credentials.
 
 ## Helm Chart Breaking Changes
 
