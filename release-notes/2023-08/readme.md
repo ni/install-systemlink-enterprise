@@ -17,7 +17,9 @@ TODO
 
 ## Bugs Fixed
 
-- TODO
+Only customer facing bugs have been included in this list.
+
+- [closed-bugs-sle-2023-08](https://github.com/ni/install-systemlink-enterprise/tree/2023-08/release-notes/2023-08/closed-bugs-sle-2023-08.xlsx)
 
 ## Software Bill of Materials and Notices
 
