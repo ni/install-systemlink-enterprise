@@ -13,7 +13,8 @@ TODO
 
 ## Helm Chart Breaking Changes
 
-- TODO
+- `dataframeservice 0.12.67`
+    - To reduce the likelihood that Dremio's volumes will fill up after too many undecimated queries are run in a 24-hour period, we increased the default size of Dremio's volumes to 256 gigs, up from 128 gigs. Before upgrading, delete all stateful sets with "dremio" in their names. After upgrading, bounce a DFS pod to reinitialize Dremio. Alternatively, to opt-out of this change, override dataframeservice.sldremio.coordinator.volumeSize and dataframeservice.sldremio.executor.volumeSize to "128Gi".
 
 ## Bugs Fixed
 
