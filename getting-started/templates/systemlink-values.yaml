@@ -870,10 +870,10 @@ comments:
   ##
   maximumCommentsPerResource: 1000
 
-  ## Maximum number of comments to query in a request.
+  ## Maximum number of comments to query in a single request.
   ##
   maximumNumberOfCommentsToQuery: 1000
 
-  ## Maximum number of comments to delete in a request.
+  ## Maximum number of comments supported per delete comments request.
   ##
-  maximumNumberOfCommentsToDelete: 1000
+  maximumCommentsPerDeleteRequest: 1000
