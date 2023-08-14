@@ -854,3 +854,26 @@ smtp:
     ## Optional - The timeout, in seconds, when communicating with the SMTP server.
     ##
     # timeoutSeconds: 100
+
+## Configuration for comments service.
+##
+comments:
+  ## Maximum number of characters supported by a comment message.
+  ##
+  commentMessageSizeLimitCharacters: 10000
+
+  ## Maximum number of comments supported per create comments request.
+  ##
+  maximumCommentsPerCreateRequest: 1000
+
+  ## Maximum number of comments supported per resource.
+  ##
+  maximumCommentsPerResource: 1000
+
+  ## Maximum number of comments to query in a single request.
+  ##
+  maximumNumberOfCommentsToQuery: 1000
+
+  ## Maximum number of comments supported per delete comments request.
+  ##
+  maximumCommentsPerDeleteRequest: 1000
