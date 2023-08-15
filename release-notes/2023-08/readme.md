@@ -18,7 +18,7 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 ### Minimum supported Kubernetes version
 
-This release of SystemLink Enterprise changes the minimum supported version of Kubernetes to 1.23. Refer to [Helm chart breaking changes](#Helm-chart-breaking-changes) for required changes to your systemlink-values.yaml file.
+This release of SystemLink Enterprise changes the minimum supported version of Kubernetes to 1.23. Refer to [Helm chart breaking changes](#helm-chart-breaking-changes) for required changes to your systemlink-values.yaml file.
 
 ## New features and behavior changes
 
