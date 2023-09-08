@@ -42,7 +42,7 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2023-09](https://github.com/ni/install-systemlink-enterprise/tree/2023-09/release-notes/2023-09/closed-bugs-sle-2023-09.xlsx)
 
 ## Software Bill of Materials and Notices
 
