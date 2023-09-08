@@ -10,14 +10,18 @@ The release_year-release_month release bundle for SystemLink Enterprise has been
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Systemsui 0.6.73
+    - Software installation workflows - Changing and removing the installed software of a system have been enabled in the product.
+- Dataframeservice 0.13.33
+    - The maximum number of simultaneous connections to S3 storage that a DataFrame service pod will make is now configurable via the "dataframeservice.s3.maximumConnections" value in the helm chart. Previously the service always limited connections to 6. The new default is 32.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- Comments 0.1.152
+    - Included the Comments Helm chart in the SystemLink top level chart. This chart requires a new mongoDB secret. The default configuration for comments service can be overrided before deployment.
+    - The Comments service will not be utilized by the test insights application, because the "Comments" tab is hidden behind the feature flag. (ff-comments)
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-secrets.yaml#L545)
+    - [View this comments service configuration](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml#L858)
 
 ## Upgrade Considerations
 
