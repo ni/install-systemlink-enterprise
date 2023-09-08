@@ -196,18 +196,6 @@ provectuslabs/kafka-ui:v0.7.1
 
 zookeeper:3.8.1-temurin
 
-strimzi/jmxtrans:0.34.0
-
-strimzi/kafka-bridge:0.25.0
-
-strimzi/kafka:0.34.0-kafka-3.3.1
-
-strimzi/kafka:0.34.0-kafka-3.3.2
-
 strimzi/kafka:0.34.0-kafka-3.4.0
-
-strimzi/kaniko-executor:0.34.0
-
-strimzi/maven-builder:0.34.0
 
 strimzi/operator:0.34.0
