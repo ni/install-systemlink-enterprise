@@ -48,9 +48,8 @@ Only customer facing bugs have been included in this list.
 
 <!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+- [SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2023-09/release-notes/2023-09/sbom)
+- [Notices](https://github.com/ni/install-systemlink-enterprise/tree/2023-09/release-notes/2023-09/notices)
 
 ## Versions
 
