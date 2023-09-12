@@ -53,7 +53,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.17.54`
+**Top Level Helm Chart:** `systemlink 0.17.56`
 
 **Admin Helm Chart:** `systemlink-admin 0.17.7`
 
@@ -107,11 +107,11 @@ license:0.5.38
 
 licensesui:0.2.37
 
-nbexec-execution-helpers:20230804.2
+nbexec-execution-helpers:20230912.1
 
-nbexec-notebook-runner:20230824.1
+nbexec-notebook-runner:20230905.2
 
-nbexecservice:0.6.22
+nbexecservice:0.6.29
 
 nbparsingservice:0.5.6
 
