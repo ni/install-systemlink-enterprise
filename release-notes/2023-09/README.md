@@ -8,14 +8,14 @@ The 2023-09 release bundle for SystemLink Enterprise has been published to <http
 - Systems Management
     - You can install and uninstall software on a managed system from the Systems Management web application.
 - Dataframe Service
-    - The maximum number of simultaneous connections from a DataFrame service pod to S3 storage can be configured with `dataframeservice.s3.maximumConnections`. Previously, the service limited connections to 6. The new default is 32.
+    - You can use `dataframeservice.s3.maximumConnections` to configure the maximum number of simultaneous connections from a DataFrame service pod to S3 storage. The default service limited connections has increased from 6 to 32.
 
 ## Helm Chart Breaking Changes
 
 - Comments service
     - The Comments service Helm chart is now included in the the SystemLink top level chart. This chart requires a new MongoDB secret.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-09/getting-started/templates/systemlink-secrets.yaml#L545)
-    - The UIs that leverage this service have not yet been included in the product.
+    - The UIs that leverage this service are not yet included in the product.
 
 ## Upgrade Considerations
 
