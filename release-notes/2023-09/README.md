@@ -1,27 +1,21 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
 
 # SystemLink Enterprise release 2023-09 Release Notes
 
-The release_year-release_month release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
-
-## Upgrading from the release 2023-08 to the release 2023-09
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
+The 2023-09 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Systemsui 0.6.73
-    - Software installation workflows - Changing and removing the installed software of a system have been enabled in the product.
-- Dataframeservice 0.13.33
-    - The maximum number of simultaneous connections to S3 storage that a DataFrame service pod will make is now configurable via the "dataframeservice.s3.maximumConnections" value in the helm chart. Previously the service always limited connections to 6. The new default is 32.
+- Systems Management
+    - You can install and uninstall software on a managed system from the Systems Management web application.
+- Dataframe Service
+    - The maximum number of simultaneous connections from a DataFrame service pod to S3 storage can be configured with `dataframeservice.s3.maximumConnections`. Previously, the service limited connections to 6. The new default is 32.
 
 ## Helm Chart Breaking Changes
 
-- Comments 0.1.152
-    - Included the Comments Helm chart in the SystemLink top level chart. This chart requires a new mongoDB secret. The default configuration for comments service can be overrided before deployment.
-    - The Comments service will not be utilized by the test insights application, because the "Comments" tab is hidden behind the feature flag. (ff-comments)
-    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-secrets.yaml#L545)
-    - [View this comments service configuration](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml#L858)
+- Comments service
+    - The Comments service Helm chart is now included in the the SystemLink top level chart. This chart requires a new MongoDB secret.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-09/getting-started/templates/systemlink-secrets.yaml#L545)
+    - The UIs that leverage this service have not yet been included in the product.
 
 ## Upgrade Considerations
 
@@ -38,15 +32,11 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
 - [closed-bugs-sle-2023-09](https://github.com/ni/install-systemlink-enterprise/tree/2023-09/release-notes/2023-09/closed-bugs-sle-2023-09.xlsx)
 
 ## Software Bill of Materials and Notices
-
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
 - [SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2023-09/release-notes/2023-09/sbom)
 - [Notices](https://github.com/ni/install-systemlink-enterprise/tree/2023-09/release-notes/2023-09/notices)
