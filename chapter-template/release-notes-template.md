@@ -30,8 +30,6 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
-
 ## Bugs Fixed
 
 <!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
