@@ -86,7 +86,7 @@ global:
     cdnEndpoint: "https://web-sdk.ni.com/"
   ##
   ## MongoDB Database Configuration.
-  ## Systemlink Enterprise' various services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance
+  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance
   ## or utilize a managed solution such as MongoDB Atlas. Once provisioned provide the connection details in the values below.
   ##
   mongodb:
