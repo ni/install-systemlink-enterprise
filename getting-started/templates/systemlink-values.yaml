@@ -515,6 +515,25 @@ dataframeservice:
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 256m
 
+  ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica.
+  ## Each replica of the dataframe service applies its own limit.
+  ## Considering load-balancing, the effective rate will be higher than the
+  ## individual rates configured here.
+  ##
+  rateLimits:
+    ## Configure rate limits for ingestion
+    ##
+    ingestion:
+      ## Number of concurrent requests that a single replica can serve for ingesting data.
+      ## Subsequent requests will be put in a queue.
+      ## If you increase the request limit, you may need to increase "resources.requests.memory" proportionally.
+      ## Should be configured to the same value as "ingestion.s3StreamPool.maximumPooledStreams".
+      ##
+      requestsLimit: &dataFrameIngestionRateLimit 20
+      ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
+      ## the replica will return a 429 Error code.
+      queueSize: 0
+
   ingestion:
     ## The number of distinct tables using the Kafka ingestion backend that can be appended to before
     ## table creation will be blocked. To stay under this limit, set 'endOfData: true' on tables that
@@ -542,31 +561,12 @@ dataframeservice:
       ## If you increase the number of pooled streams, you may need to increase "resources.requests.memory" proportionally.
       ## WARNING: Setting this value to 0 would leave the pool unbounded, which could cause high memory usage.
       ##
-      maximumPooledStreams: 20
+      maximumPooledStreams: *dataFrameIngestionRateLimit
 
   ## Limits the body size for requests. The ingress may also impose a request body size
   ## limit, which should be set to the same value.
   ## Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 256MiB
-
-  ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica. 
-  ## Each replica of the dataframe service applies its own limit. 
-  ## Considering load-balancing, the effective rate will be higher than the
-  ## individual rates configured here.
-  ##
-  rateLimits:
-    ## Configure rate limits for ingestion
-    ##
-    ingestion:
-      ## Number of concurrent requests that a single replica can serve for ingesting data.
-      ## Subsequent requests will be put in a queue.
-      ## If you increase the request limit, you may need to increase "resources.requests.memory" proportionally.
-      ## Should be configured to the same value as "ingestion.s3StreamPool.maximumPooledStreams".
-      ##
-      requestsLimit: 20
-      ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
-      ## the replica will return a 429 Error code.
-      queueSize: 0
 
   ## Configure S3/MinIO access.
   ##
@@ -592,7 +592,7 @@ dataframeservice:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
-    ## Maximum number of concurrent connections to S3.
+    ## Maximum number of concurrent connections to S3 per replica.
     ##
     maximumConnections: 32
 
