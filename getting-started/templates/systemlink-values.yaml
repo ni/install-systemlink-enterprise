@@ -536,21 +536,10 @@ dataframeservice:
     ## Configuration for the pool of streams used to upload the data to S3.
     ##
     s3StreamPool:
-      ## Number of blocks from the stream pool to use to buffer the data.
-      ## This value must be greater than zero.
-      ## The product of this value and "blockSize" must be greater or equal to "s3.minimumPartSize"
-      ##
-      blocksPerBuffer: 3
-      ## Size of each of the blocks in the stream pool used to buffer the data.
-      ## This must be a positive value.
-      ## The product of this value and "blocksPerBuffer" must be greater or equal to "s3.minimumPartSize".
-      ##
-      blockSize: 5MiB
       ## Maximum number of streams that will be pooled.
       ## The recommendation is to provide the same number of pool streams as the limit of requests that
       ## can be processed in "rateLimits.ingestion.requestsLimit".
-      ## The product of this value, "blocksPerBuffer", and "blockSize" must be less than the memory requested
-      ## for the service in "resources.requests.memory".
+      ## If you increase the number of pooled streams, you may need to increase "resources.requests.memory" proportionally.
       ## WARNING: Setting this value to 0 would leave the pool unbounded, which could cause high memory usage.
       ##
       maximumPooledStreams: 20
@@ -571,6 +560,7 @@ dataframeservice:
     ingestion:
       ## Number of concurrent requests that a single replica can serve for ingesting data.
       ## Subsequent requests will be put in a queue.
+      ## If you increase the request limit, you may need to increase "resources.requests.memory" proportionally.
       ## Should be configured to the same value as "ingestion.s3StreamPool.maximumPooledStreams".
       ##
       requestsLimit: 20
@@ -602,10 +592,6 @@ dataframeservice:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
-    ## Minimum part size in a multi-part upload.
-    ## For more information, see: https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html
-    ##
-    minimumPartSize: 5MiB
     ## Maximum number of concurrent connections to S3.
     ##
     maximumConnections: 32
