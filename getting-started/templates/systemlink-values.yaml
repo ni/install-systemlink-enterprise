@@ -86,30 +86,14 @@ global:
     cdnEndpoint: "https://web-sdk.ni.com/"
   ##
   ## MongoDB Database Configuration.
-  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance
-  ## or utilize a managed solution such as MongoDB Atlas. Once provisioned provide the connection details in the values below.
+  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance 
+  ## or utilize a managed solution such as MongoDB Atlas. Once provisioned provide the connection details in global.secrets.mongodb.connection_string.
   ##
   mongodb:
     ## Enable or disable installation of per-service MongoDB instances. 
     #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
     ##
     install: false 
-    ## <ATTENTION> - If `global.mongodb.install` is false, configure the external MongoDB connection string to be used by services in this deployment.
-    #
-    # If you are setting credentials per service (e.g. assetservice.secrets.mongodb.servicePassword) leave the placeholders
-    # <username> and <password> in the connection string. These will be replaced dynamically when deploying.
-    #
-    # If you have provisioned MongoDB to use a single set of credentials replace <username>:<password> with the values desired.
-    #
-    # <database> is required and will be replaced dynamically.
-    #
-    # examples:
-    # - MongoDB Atlas: mongodb+srv://<username>:<password>@my-atlas-cluster.mongodb.net/<database>
-    # - MongoDB Community: mongodb://<username>:<password>@my-mongodb-cluster-0,my-mongodb-cluster-1,my-mongodb-cluster-2/<database>?replicaSet=rs0
-    # - MongoDB Community (single set of credentials): mongodb://myusername:myPassw0rD@my-mongodb-cluster-0,my-mongodb-cluster-1,my-mongodb-cluster-2/<database>?replicaSet=rs0
-    #
-    # If `global.mongodb.install` is `true` leave the connection string as a blank string or comment it out.
-    connection_string: ""
 
 ## Core configuration for the RabbitMQ message broker
 ##
