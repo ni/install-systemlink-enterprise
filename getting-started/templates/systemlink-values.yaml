@@ -538,12 +538,12 @@ dataframeservice:
     s3StreamPool:
       ## Number of blocks from the stream pool to use to buffer the data.
       ## This value must be greater than zero.
-      ## The product of this value and "poolBlockSize" must be greater or equal to "s3.minimumPartSize"
+      ## The product of this value and "blockSize" must be greater or equal to "s3.minimumPartSize"
       ##
       blocksPerBuffer: 3
       ## Size of each of the blocks in the stream pool used to buffer the data.
       ## This must be a positive value.
-      ## The product of this value and "bufferBlocks" must be greater or equal to "s3.minimumPartSize".
+      ## The product of this value and "blocksPerBuffer" must be greater or equal to "s3.minimumPartSize".
       ##
       blockSize: 5MiB
       ## Maximum number of streams that will be pooled.
