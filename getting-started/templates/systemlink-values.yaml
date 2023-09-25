@@ -550,7 +550,7 @@ dataframeservice:
       ## <ATTENTION> - Before disabling the Kafka backend, review the information in
       ## the 2023-10 release notes on when Kafka can safely be disabled and removed.
       ##
-      enabled: true
+      enabled: &kafkaEnabled true
 
     ## Configuration for the pool of streams used to upload the data to S3.
     ##
@@ -691,7 +691,7 @@ dataframeservice:
       ## When false, this resource is not deployed.
       ## See the documentation for "ingestion.kafkaBackend.enabled" before setting this to false.
       ##
-      enabled: true
+      enabled: *kafkaEnabled
 
   ## Configure Schema Registry for Kafka
   ##
@@ -699,7 +699,7 @@ dataframeservice:
     ## When false, this resource is not deployed.
     ## See the documentation for "ingestion.kafkaBackend.enabled" before setting this to false.
     ##
-    enabled: true
+    enabled: *kafkaEnabled
 
 ## Salt configuration.
 ##
