@@ -510,27 +510,13 @@ dataframeservice:
   ##
   ingress:
     ## Increase the maximum HTTP request body size from the nginx default. Only applies if an nginx
-    ## ingress controller is used. Should be set to the same size as requestBodySizeLimitMegabytes.
+    ## ingress controller is used. Should be set to the same size as requestBodySizeLimit.
     ##
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 256m
 
-  ## <ATTENTION> - Configure ingestion appendable table limit.
-  ##
-  ingestion:
-    ## The number of distinct tables that can be appended to before table creation will be blocked.
-    ## To stay under this limit, set 'endOfData: true' on tables that don't need to be appended to anymore.
-    ## For more information, visit ni.com/r/setendofdata.
-    ##
-    appendableTableLimit: 250
-
-  ## Limits the body size for requests in megabytes. The ingress may also impose a request body size
-  ## limit, which should be set to the same value.
-  ##
-  requestBodySizeLimitMegabytes: 256
-
-  ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica. 
-  ## Each replica of the dataframe service applies its own limit. 
+  ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica.
+  ## Each replica of the dataframe service applies its own limit.
   ## Considering load-balancing, the effective rate will be higher than the
   ## individual rates configured here.
   ##
@@ -540,11 +526,47 @@ dataframeservice:
     ingestion:
       ## Number of concurrent requests that a single replica can serve for ingesting data.
       ## Subsequent requests will be put in a queue.
+      ## If you increase the request limit, you may need to increase "resources.requests.memory" proportionally.
+      ## Should be configured to the same value as "ingestion.s3StreamPool.maximumPooledStreams".
       ##
-      requestsLimit: 20
+      requestsLimit: &dataFrameIngestionRateLimit 20
       ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       ## the replica will return a 429 Error code.
       queueSize: 0
+
+  ingestion:
+    ## The number of distinct tables using the Kafka ingestion backend that can be appended to before
+    ## table creation will be blocked. To stay under this limit, set 'endOfData: true' on tables that
+    ## don't need to be appended to anymore. For more information, visit ni.com/r/setendofdata.
+    ## Ignored when kafkaBackend.enabled is false.
+    ##
+    appendableTableLimit: 250
+
+    ## Configuration for the Kafka ingestion backend.
+    ##
+    kafkaBackend:
+      ## When true, Kafka and related resources are deployed. When set to false, you must also
+      ## set kafkacluster.kafka.enabled and schema-registry.enabled to false.
+      ## <ATTENTION> - Before disabling the Kafka backend, review the information in
+      ## the 2023-10 release notes on when Kafka can safely be disabled and removed.
+      ##
+      enabled: &kafkaEnabled true
+
+    ## Configuration for the pool of streams used to upload the data to S3.
+    ##
+    s3StreamPool:
+      ## Maximum number of streams that will be pooled.
+      ## The recommendation is to provide the same number of pool streams as the limit of requests that
+      ## can be processed in "rateLimits.ingestion.requestsLimit".
+      ## If you increase the number of pooled streams, you may need to increase "resources.requests.memory" proportionally.
+      ## WARNING: Setting this value to 0 would leave the pool unbounded, which could cause high memory usage.
+      ##
+      maximumPooledStreams: *dataFrameIngestionRateLimit
+
+  ## Limits the body size for requests. The ingress may also impose a request body size
+  ## limit, which should be set to the same value.
+  ## Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
+  requestBodySizeLimit: 256MiB
 
   ## Configure S3/MinIO access.
   ##
@@ -570,6 +592,10 @@ dataframeservice:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
+    ## Maximum number of concurrent connections to S3 per replica.
+    ##
+    maximumConnections: 32
+
   ## Configure Dremio access
   ##
   sldremio:
@@ -657,6 +683,23 @@ dataframeservice:
   kafka-ui:
     imagePullSecrets:
       - name: *niPullSecret
+
+  ## Configure the Kafka cluster
+  ##
+  kafkacluster:
+    kafka:
+      ## When false, this resource is not deployed.
+      ## See the documentation for "ingestion.kafkaBackend.enabled" before setting this to false.
+      ##
+      enabled: *kafkaEnabled
+
+  ## Configure Schema Registry for Kafka
+  ##
+  schema-registry:
+    ## When false, this resource is not deployed.
+    ## See the documentation for "ingestion.kafkaBackend.enabled" before setting this to false.
+    ##
+    enabled: *kafkaEnabled
 
 ## Salt configuration.
 ##

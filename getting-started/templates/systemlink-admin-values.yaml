@@ -21,6 +21,10 @@ global:
 ## https://github.com/strimzi/strimzi-kafka-operator/tree/main/helm-charts/helm3/strimzi-kafka-operator#configuration
 ##
 strimzi-kafka-operator:
+  ## <ATTENTION> - Before disabling, review the information in the 2023-10 release
+  ## notes on the procedure for removing Kafka and on when Kafka can safely be disabled.
+  ##
+  enabled: true
   ## Watch the whole Kubernetes cluster.
   ##
   watchAnyNamespace: true
