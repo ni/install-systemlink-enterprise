@@ -1,4 +1,4 @@
-{{- range $service := keys .Values.migrating_from.services }}
+{{- range $service := keys .Values.migrating_from.services }} # yamllint disable-line
 ---
 apiVersion: batch/v1
 kind: Job
@@ -51,4 +51,4 @@ spec:
         runAsGroup: 20001
         seccompProfile:
           type: RuntimeDefault
-{{- end }}
+{{- end }} # yamllint disable-line
