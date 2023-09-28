@@ -1,3 +1,5 @@
+# Existing MongoDB Data Migration to a Single Instance
+
 ## Do you need to worry about what is in this folder?
 
 The content in this folder can help you if you have recognized a need to migrate existing SystemLink Enterprise MongoDB data to a single MongoDB instance. You should not need this content if deploying a new installation of SystemLink Enterprise.
@@ -24,7 +26,7 @@ From inside the cluster we need to run a `mongodump` piped into a `mongorestore`
 
 The command we want to run is:
 
-```
+```sh
 mongodump --config=/etc/mongodump_config.yaml --archive | mongorestore --archive --config=/etc/mongorestore_config.yaml
 ```
 
