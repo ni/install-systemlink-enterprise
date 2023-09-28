@@ -1,0 +1,20 @@
+{{- range $name, $data := .Values.migrating_from.services }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodump-{{ $name }}-config-yaml
+data:
+  mongodump_config.yaml: |-
+    password: {{ $data.dump.password }}
+    uri: mongodb://{{ $data.username }}@{{ $data.dump.db0 }}:27017,{{ $data.dump.db1 }}:27017,{{ $data.dump.db2 }}:27017/{{ $data.database }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongorestore-{{ $name }}-config-yaml
+data:
+  mongorestore_config.yaml: |-
+    password: {{ $.Values.migrating_to.admin_password }}
+    uri: {{ trimSuffix "/" $.Values.migrating_to.connection_string_including_admin_username}}/{{ $data.database }}?authSource=admin
+{{- end }}
