@@ -7,7 +7,7 @@ description: Creates Jobs in the cluster to migrate data from individual service
 # Application charts are a collection of templates that you can package into versioned archives
 # and deploy.
 #
-# Library charts provide useful utilities or functions for the chart developer. They're included as
+# Library charts provide utilities or functions for the chart developer. They are included as
 # a dependency of application charts to inject those utilities and functions into the rendering
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
