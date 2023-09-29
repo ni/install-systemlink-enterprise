@@ -1,0 +1,165 @@
+migrating_to:
+  admin_password: '' # <ATTENTION>
+  connection_string_including_admin_username: 'mongodb://...' # <ATTENTION>
+migrating_from:
+  services:
+    assetservice:
+      database: niapm
+      username: niapm
+      dump:
+        password: '' # <ATTENTION> Replace with value from assetservice.secrets.mongodb.servicePassword
+        db0: 'assetmanagementservice-mongodb-0.assetmanagementservice-mongodb-headless'
+        db1: 'assetmanagementservice-mongodb-1.assetmanagementservice-mongodb-headless'
+        db2: 'assetmanagementservice-mongodb-2.assetmanagementservice-mongodb-headless'
+    fileingestionservices:
+      database: files
+      username: files
+      dump:
+        password: '' # <ATTENTION> Replace with value from fileingestion.secrets.mongodb.servicePassword
+        db0: 'fileingestion-fileingestion-mongodb-0.fileingestion-fileingestion-mongodb-headless'
+        db1: 'fileingestion-fileingestion-mongodb-1.fileingestion-fileingestion-mongodb-headless'
+        db2: 'fileingestion-fileingestion-mongodb-2.fileingestion-fileingestion-mongodb-headless'
+    license:
+      database: nilicense
+      username: nilicense
+      dump:
+        password: '' # <ATTENTION> Replace with value from license.secrets.mongodb.servicePassword
+        db0: 'license-license-mongodb-0.license-license-mongodb-headless'
+        db1: 'license-license-mongodb-1.license-license-mongodb-headless'
+        db2: 'license-license-mongodb-2.license-license-mongodb-headless'
+    nbexecservice:
+      database: ninbexec
+      username: ninbexec
+      dump:
+        password: '' # <ATTENTION> Replace with value from nbexecservice.secrets.mongodb.servicePassword
+        db0: 'nbexecservice-mongodb-0.nbexecservice-mongodb-headless'
+        db1: 'nbexecservice-mongodb-1.nbexecservice-mongodb-headless'
+        db2: 'nbexecservice-mongodb-2.nbexecservice-mongodb-headless'
+    nicomments:
+      database: comments
+      username: nicomments
+      dump:
+        password: '' # <ATTENTION> Replace with value from comments.secrets.mongodb.servicePassword
+        db0: 'comments-comments-mongodb-0.comments-comments-mongodb-headless'
+        db1: 'comments-comments-mongodb-1.comments-comments-mongodb-headless'
+        db2: 'comments-comments-mongodb-2.comments-comments-mongodb-headless'
+    nidataframe:
+      database: nidataframe
+      username: nidataframe
+      dump:
+        password: '' # <ATTENTION> Replace with value from dataframeservice.secrets.mongodb.servicePassword
+        db0: 'dataframeservice-mongodb-0.dataframeservice-mongodb-headless'
+        db1: 'dataframeservice-mongodb-1.dataframeservice-mongodb-headless'
+        db2: 'dataframeservice-mongodb-2.dataframeservice-mongodb-headless'
+    notification:
+      database: ninotification
+      username: ninotification
+      dump:
+        password: '' # <ATTENTION> Replace with value from notification.secrets.mongodb.servicePassword
+        db0: 'notification-notification-mongodb-0.notification-notification-mongodb-headless'
+        db1: 'notification-notification-mongodb-1.notification-notification-mongodb-headless'
+        db2: 'notification-notification-mongodb-2.notification-notification-mongodb-headless'
+    repositoryservice:
+      database: nirepo
+      username: nirepo
+      dump:
+        password: '' # <ATTENTION> Replace with value from repository.secrets.mongodb.servicePassword
+        db0: 'repository-repository-mongodb-0.repository-repository-mongodb-headless'
+        db1: 'repository-repository-mongodb-1.repository-repository-mongodb-headless'
+        db2: 'repository-repository-mongodb-2.repository-repository-mongodb-headless'
+    routines:
+      database: niroutines
+      username: niroutines
+      dump:
+        password: '' # <ATTENTION> Replace with value from routineservice.secrets.mongodb.servicePassword
+        db0: 'routineservice-routines-mongodb-0.routineservice-routines-mongodb-headless'
+        db1: 'routineservice-routines-mongodb-1.routineservice-routines-mongodb-headless'
+        db2: 'routineservice-routines-mongodb-2.routineservice-routines-mongodb-headless'
+    routinescheduletrigger:
+      database: niroutinescheduletrigger
+      username: niroutinescheduletrigger
+      dump:
+        password: '' # <ATTENTION> Replace with value from routinescheduletrigger.secrets.mongodb.servicePassword
+        db0: 'routinescheduletrigger-routineschedule-mongodb-0.routinescheduletrigger-routineschedule-mongodb-headless'
+        db1: 'routinescheduletrigger-routineschedule-mongodb-1.routinescheduletrigger-routineschedule-mongodb-headless'
+        db2: 'routinescheduletrigger-routineschedule-mongodb-2.routinescheduletrigger-routineschedule-mongodb-headless'
+    saltmaster-minions:
+      database: minions
+      username: minions
+      dump:
+        password: '' # <ATTENTION> Replace with value from saltmaster.secrets.mongodb.minionsPassword
+        db0: 'saltmaster-saltmaster-mongodb-0.saltmaster-saltmaster-mongodb-headless'
+        db1: 'saltmaster-saltmaster-mongodb-1.saltmaster-saltmaster-mongodb-headless'
+        db2: 'saltmaster-saltmaster-mongodb-2.saltmaster-saltmaster-mongodb-headless'
+    saltmaster-pillars:
+      database: pillars
+      username: pillars
+      dump:
+        password: '' # <ATTENTION> Replace with value from saltmaster.secrets.mongodb.pillarsPassword
+        db0: 'saltmaster-saltmaster-mongodb-0.saltmaster-saltmaster-mongodb-headless'
+        db1: 'saltmaster-saltmaster-mongodb-1.saltmaster-saltmaster-mongodb-headless'
+        db2: 'saltmaster-saltmaster-mongodb-2.saltmaster-saltmaster-mongodb-headless'
+    sysmgmtevent:
+      database: nisysmgmtevent
+      username: nisysmgmtevent
+      dump:
+        password: '' # <ATTENTION> Replace with value from sysmgmtevent.secrets.mongodb.servicePassword
+        db0: 'sysmgmtevent-sysmgmtevent-mongodb-0.sysmgmtevent-sysmgmtevent-mongodb-headless'
+        db1: 'sysmgmtevent-sysmgmtevent-mongodb-1.sysmgmtevent-sysmgmtevent-mongodb-headless'
+        db2: 'sysmgmtevent-sysmgmtevent-mongodb-2.sysmgmtevent-sysmgmtevent-mongodb-headless'
+    systemsmanagementservice:
+      database: nisystemsmanagement
+      username: nisystems
+      dump:
+        password: '' # <ATTENTION> Replace with value from systems.secrets.mongodb.servicePassword
+        db0: 'systemsmanagementservice-systems-mongodb-0.systemsmanagementservice-systems-mongodb-headless'
+        db1: 'systemsmanagementservice-systems-mongodb-1.systemsmanagementservice-systems-mongodb-headless'
+        db2: 'systemsmanagementservice-systems-mongodb-2.systemsmanagementservice-systems-mongodb-headless'
+    taghistorian:
+      database: taghistorian
+      username: taghistorian
+      dump:
+        password: '' # <ATTENTION> Replace with value from taghistorian.secrets.mongodb.servicePassword
+        db0: 'taghistorian-taghistorian-mongodb-0.taghistorian-taghistorian-mongodb-headless'
+        db1: 'taghistorian-taghistorian-mongodb-1.taghistorian-taghistorian-mongodb-headless'
+        db2: 'taghistorian-taghistorian-mongodb-2.taghistorian-taghistorian-mongodb-headless'
+    tags:
+      database: tags
+      username: tags
+      dump:
+        password: '' # <ATTENTION> Replace with value from tags.secrets.mongodb.servicePassword
+        db0: 'tags-tags-mongodb-0.tags-tags-mongodb-headless'
+        db1: 'tags-tags-mongodb-1.tags-tags-mongodb-headless'
+        db2: 'tags-tags-mongodb-2.tags-tags-mongodb-headless'
+    userdata:
+      database: niuserdata
+      username: niuserdata
+      dump:
+        password: '' # <ATTENTION> Replace with value from userdata.secrets.mongodb.servicePassword
+        db0: 'userdata-userdata-mongodb-0.userdata-userdata-mongodb-headless'
+        db1: 'userdata-userdata-mongodb-1.userdata-userdata-mongodb-headless'
+        db2: 'userdata-userdata-mongodb-2.userdata-userdata-mongodb-headless'
+    userservices-users:
+      database: users
+      username: userservice
+      dump:
+        password: '' # <ATTENTION> Replace with value from userservices.secrets.mongodb.userServicePassword
+        db0: 'userservices-userservices-mongodb-0.userservices-userservices-mongodb-headless'
+        db1: 'userservices-userservices-mongodb-1.userservices-userservices-mongodb-headless'
+        db2: 'userservices-userservices-mongodb-2.userservices-userservices-mongodb-headless'
+    userservices-keyservices:
+      database: keyservices
+      username: keyservice
+      dump:
+        password: '' # <ATTENTION> Replace with value from userservices.secrets.mongodb.keyServicePassword
+        db0: 'userservices-userservices-mongodb-0.userservices-userservices-mongodb-headless'
+        db1: 'userservices-userservices-mongodb-1.userservices-userservices-mongodb-headless'
+        db2: 'userservices-userservices-mongodb-2.userservices-userservices-mongodb-headless'
+    webappservices:
+      database: webapps
+      username: webapps
+      dump:
+        password: '' # <ATTENTION> Replace with value from webappservices.secrets.mongodb.servicePassword
+        db0: 'webappservices-mongodb-0.webappservices-mongodb-headless'
+        db1: 'webappservices-mongodb-1.webappservices-mongodb-headless'
+        db2: 'webappservices-mongodb-2.webappservices-mongodb-headless'

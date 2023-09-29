@@ -1,0 +1,54 @@
+{{- range $service := keys .Values.migrating_from.services }}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mongodb-migration-{{ $service }}
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: mongodb-migration-{{ $service }}
+          image: bitnami/mongodb:5.0.19-debian-11-r3
+          command: ['bin/bash']
+          args:
+            [
+              '-c',
+              'mongodump --config=/etc/mongodump_config.yaml --archive | mongorestore --archive --config=/etc/mongorestore_config.yaml',
+            ]
+          volumeMounts:
+            - name: mongodump-config-yaml
+              mountPath: /etc/mongodump_config.yaml
+              subPath: mongodump_config.yaml
+            - name: mongorestore-config-yaml
+              mountPath: /etc/mongorestore_config.yaml
+              subPath: mongorestore_config.yaml
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: 2
+              memory: 8Gi
+            limits:
+              memory: 8Gi
+      volumes:
+        - name: mongodump-config-yaml
+          configMap:
+            name: mongodump-{{ $service }}-config-yaml
+        - name: mongorestore-config-yaml
+          configMap:
+            name: mongorestore-{{ $service }}-config-yaml
+      restartPolicy: Never
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 20001
+        seccompProfile:
+          type: RuntimeDefault
+{{- end }}
