@@ -2,17 +2,15 @@
 
 ## Do you need to worry about what is in this folder?
 
-This content is for users who need to migrate existing SystemLink Enterprise MongoDB data to a single MongoDB instance. You do not need to do this if you are deploying a new installation of SystemLink Enterprise.
-
-## Process
-
-SystemLink Enterprise installations prior to 2023-10 deployed a MongoDB instance per service. Version 2023-10 uses a global MongoDB connection string that allows customers to consolidate over 20 different MongoDB instances down to one.
-
-Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for instructions on editing the Helm values that determine this functionality.
+SystemLink Enterprise installations prior to 2023-10 deployed a MongoDB instance per service. Version 2023-10 uses a global MongoDB connection string that allows customers to consolidate over 20 different MongoDB instances down to one. This content is for users who need to migrate existing SystemLink Enterprise MongoDB data to a single MongoDB instance. You do not need to perform the following if you are deploying a new installation of SystemLink Enterprise.
 
 ## Prerequisites
 
 Before you begin, you must provision your MongoDB instance with databases and users. Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for a list of databases and password fields to update if using separate credentials per database. NOTE: Ensure that you backup the current database passwords for the migration.
+
+## Enable a Single Instance
+
+Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for instructions on editing the Helm values that determine this functionality.
 
 ## Migration Plan
 
