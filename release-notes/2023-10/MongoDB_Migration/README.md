@@ -24,23 +24,22 @@ If you are using a [MongoDB Atlas](https://www.ni.com/r/mongodbatalas) cluster u
 
 Run the following command from inside the cluster to migrate the documents to the new MongoDB instance.
 
-
 ```sh
 mongodump --config=/etc/mongodump_config.yaml --archive | mongorestore --archive --config=/etc/mongorestore_config.yaml
 ```
+
 Where
--  `mongo*_config.yaml` is where the connection string and password are configured.
-`--archive` allows you to pipe (`|`) the output directly into the `mongorestore` command
+
+- `mongo*_config.yaml` is where the connection string and password are configured.
+- `--archive` allows you to pipe (`|`) the output directly into the `mongorestore` command
 
 #### Helm Chart
 
 This folder includes a Helm Chart to install into your existing Kubernetes cluster to execute the plan described above for self-hosted MongoDB. Your Kubernetes cluster must be able to pull the `bitnami/mongodb:5.0.19-debian-11-r3` Docker image.
 
 1. Fill out the `values.yaml` file with MongoDB password secrets stored in `systemlink-secrets.yaml`. Refer to all `<ATTENTION>` comments.
-
-
-1. Change active directory on command line to the folder containing this file.
-2. Run `helm install ni_systemlink_enterprise_migrate_mongodb .`
+2. Change active directory on command line to the folder containing this file.
+3. Run `helm install ni_systemlink_enterprise_migrate_mongodb .`
 
 You can observe the progress of each command Job through the Pod logs.
 
