@@ -2,35 +2,34 @@
 
 ## Do you need to worry about what is in this folder?
 
-The content in this folder can help you if you have recognized a need to migrate existing SystemLink Enterprise MongoDB data to a single MongoDB instance. You should not need this content if deploying a new installation of SystemLink Enterprise.
+This content is for users who need to migrate existing SystemLink Enterprise MongoDB data to a single MongoDB instance. You do not need to do this if you are deploying a new installation of SystemLink Enterprise.
 
-## Background
+## Process
 
-Prior to version 2023-10 installations of SystemLink Enterprise deployed a MongoDB instance per service. In version 2023-10 the services were refactored to use a global MongoDB connection string allowing customers to go from running over twenty (20) different MongoDB instances down to one.
+SystemLink Enterprise installations prior to 2023-10 deployed a MongoDB instance per service. Version 2023-10 uses a global MongoDB connection string that allows customers to consolidate over 20 different MongoDB instances down to one.
 
-Controlling this functionality is done through global Helm values. Configure `global.mongodb.install` to `false` to enable this feature. You will also need to configure `global.secrets.mongodb.connection_string`. Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for more information.
+Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for instructions on editing the Helm values that determine this functionality.
 
 ## Prerequisites
 
-Your MongoDB instance will need to be provisioned with databases and users. Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for a list of databases. It also lists password fields to update (if using separate credentials per database). NOTE: You will need the current database passwords for the migration. Be sure to backup these values somewhere safe.
+Before you begin, you must provision your MongoDB instance with databases and users. Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for a list of databases and password fields to update if using separate credentials per database. NOTE: Ensure that you backup the current database passwords for the migration.
 
 ## Migration Plan
 
 ### MongoDB Atlas
 
-If you are using a [MongoDB Atlas](https://www.ni.com/r/mongodbatalas) cluster use MongoDB's Atlas migration tools to move data between the service databases and MongoDB Atlas.
+If you are using a [MongoDB Atlas](https://www.ni.com/r/mongodbatalas) cluster use the MongoDB Atlas migration tools to move data between the service databases and MongoDB Atlas.
 
 ### Self-hosted MongoDB
 
-From inside the cluster we need to run a `mongodump` piped into a `mongorestore` so that we can migrate the documents to the new MongoDB instance.
+Run the following command from inside the cluster to migrate the documents to the new MongoDB instance.
 
-The command we want to run is:
 
 ```sh
 mongodump --config=/etc/mongodump_config.yaml --archive | mongorestore --archive --config=/etc/mongorestore_config.yaml
 ```
-
-- The `mongo*_config.yaml` files are where the connection string and password is configured.
+Where
+-  `mongo*_config.yaml` is where the connection string and password are configured.
 `--archive` allows you to pipe (`|`) the output directly into the `mongorestore` command
 
 #### Helm Chart
