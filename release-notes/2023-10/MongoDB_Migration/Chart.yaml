@@ -12,7 +12,7 @@ description: Creates Jobs in the cluster to migrate data from individual service
 # pipeline. You cannot deploy library charts because they do not define any templates.
 type: application
 
-# This is the chart version. This version number should be incremented each time you make changes
+# This is the chart version. Increment the version number each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.1.0
