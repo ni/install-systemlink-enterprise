@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ni_systemlink_enterprise_migrate_mongodb
-description: Creates Jobs in the cluster to migrate data from individual service MongoDB instances to a central instance. See README.md for more details.
+description: Creates jobs in the cluster to migrate data from individual service MongoDB instances to a central instance. See README.md for more details.
 
 # A chart can be an 'application' or a 'library' chart.
 #
