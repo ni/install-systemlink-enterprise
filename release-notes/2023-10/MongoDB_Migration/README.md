@@ -31,7 +31,7 @@ mongodump --config=/etc/mongodump_config.yaml --archive | mongorestore --archive
 ```
 
 - The `mongo*_config.yaml` files are where the connection string and password is configured.
-- `--archive` is used so that we can pipe (`|`) the output directly into the `mongorestore` command
+`--archive` allows you to pipe (`|`) the output directly into the `mongorestore` command
 
 #### Helm Chart
 
