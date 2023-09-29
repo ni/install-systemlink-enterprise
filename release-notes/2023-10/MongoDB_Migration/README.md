@@ -6,7 +6,7 @@ SystemLink Enterprise installations prior to 2023-10 deployed a MongoDB instance
 
 ## Prerequisites
 
-Before you begin, you must provision your MongoDB instance with databases and users. Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for a list of databases and password fields to update if using separate credentials per database. NOTE: Ensure that you backup the current database passwords for the migration.
+Before you begin, you must provision your MongoDB instance with databases and users. Refer to [Configuring Systemlink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html) for a list of databases and password fields to update if using separate credentials per database. NOTE: Ensure that you backup the current database passwords before the migration.
 
 ## Enable a Single Instance
 
