@@ -37,7 +37,7 @@ This folder includes a Helm Chart to install into your existing Kubernetes clust
 
 1. Fill out the `values.yaml` file with MongoDB password secrets stored in `systemlink-secrets.yaml`. Refer to all `<ATTENTION>` comments.
 2. Change active directory on command line to the folder containing this file.
-3. Run `helm install ni_systemlink_enterprise_migrate_mongodb .`
+3. Run `helm install ni-systemlink-enterprise-migrate-mongodb .`
 
 You can observe the progress of each command Job through the Pod logs.
 
