@@ -4,7 +4,7 @@ description: Creates Jobs in the cluster to migrate data from individual service
 
 # A chart can be an 'application' or a 'library' chart.
 #
-# Application charts are a collection of templates that can be packaged into versioned archives
+# Application charts are a collection of templates that you can package into versioned archives
 # to be deployed.
 #
 # Library charts provide useful utilities or functions for the chart developer. They're included as
