@@ -37,7 +37,7 @@ mongodump --config=/etc/mongodump_config.yaml --archive | mongorestore --archive
 
 This folder includes a Helm Chart to install into your existing Kubernetes cluster to execute the plan described above for self-hosted MongoDB. Your Kubernetes cluster must be able to pull the `bitnami/mongodb:5.0.19-debian-11-r3` Docker image.
 
-You will need to fill out the `values.yaml` file with MongoDB password secrets typically stored in `systemlink-secrets.yaml`. Refer to all `<ATTENTION>` comments.
+1. Fill out the `values.yaml` file with MongoDB password secrets stored in `systemlink-secrets.yaml`. Refer to all `<ATTENTION>` comments.
 
 After configuring `values.yaml` install via helm command
 
