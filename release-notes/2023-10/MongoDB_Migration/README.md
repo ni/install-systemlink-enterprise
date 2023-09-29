@@ -41,4 +41,4 @@ This folder includes a Helm Chart to install into your existing Kubernetes clust
 
 You can observe the progress of each command Job through the Pod logs.
 
-Before continuing, run `kubectl get jobs` and observe the `COMPLETIONS` column to ensure all jobs have completed. `1/1` indicates the job completed successfully.
+Before continuing, run `kubectl get jobs` and observe the `COMPLETIONS` column to ensure all Jobs have completed. `1/1` indicates the Job completed successfully.
