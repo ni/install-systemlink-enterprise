@@ -46,4 +46,4 @@ After configuring `values.yaml` install via helm command
 
 You can observe the progress of each command Job through the Pod logs.
 
-Before continuing ensure all Jobs have completed by running `kubectl get jobs` and observe the `COMPLETIONS` column. `1/1` indicates the Job completed successfully.
+Before continuing, run `kubectl get jobs` and observe the `COMPLETIONS` column to ensure all jobs have completed. `1/1` indicates the job completed successfully.
