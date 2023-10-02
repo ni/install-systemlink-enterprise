@@ -1,0 +1,24 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:e0da26c7-9abb-48ed-8e80-252b62477605",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-09-20T10:43:03-05:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.89.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "759a9b027cd177e1",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/pause",
+      "version": "3.8"
+    }
+  },
+  "components": []
+}
