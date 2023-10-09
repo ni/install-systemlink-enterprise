@@ -2,15 +2,15 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:c368bee3-0e60-4a75-92ba-fb7fad9a421e",
+  "serialNumber": "urn:uuid:58fa5493-46a2-44d6-a1a2-0e94fc1bb514",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-09-20T10:45:03-05:00",
+    "timestamp": "2023-10-09T12:58:32-05:00",
     "tools": [
       {
         "vendor": "anchore",
         "name": "syft",
-        "version": "0.89.0"
+        "version": "0.92.0"
       }
     ],
     "component": {

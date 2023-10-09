@@ -2,15 +2,15 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:f49dba4b-6dbf-4e2c-b463-702b42f38067",
+  "serialNumber": "urn:uuid:2947d09f-b867-4d28-a1a5-40f9d71b47ff",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-09-20T10:45:14-05:00",
+    "timestamp": "2023-10-09T14:39:57-05:00",
     "tools": [
       {
         "vendor": "anchore",
         "name": "syft",
-        "version": "0.89.0"
+        "version": "0.92.0"
       }
     ],
     "component": {
@@ -418,10 +418,6 @@
       "cpe": "cpe:2.3:a:\\@eslint\\/eslintrc:\\@eslint\\/eslintrc:0.4.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/%40eslint/eslintrc@0.4.3",
       "externalReferences": [
-        {
-          "url": "eslint/eslintrc",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/eslint/eslintrc#readme",
           "type": "website"
@@ -4459,12 +4455,6 @@
       ],
       "cpe": "cpe:2.3:a:accepts:accepts:1.3.8:*:*:*:*:*:*:*",
       "purl": "pkg:npm/accepts@1.3.8",
-      "externalReferences": [
-        {
-          "url": "jshttp/accepts",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4910,12 +4900,6 @@
       ],
       "cpe": "cpe:2.3:a:aggregate-error:aggregate-error:3.1.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/aggregate-error@3.1.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/aggregate-error",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5037,10 +5021,6 @@
       "cpe": "cpe:2.3:a:ajv:ajv:8.12.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ajv@8.12.0",
       "externalReferences": [
-        {
-          "url": "ajv-validator/ajv",
-          "type": "distribution"
-        },
         {
           "url": "https://ajv.js.org",
           "type": "website"
@@ -5370,10 +5350,6 @@
       "purl": "pkg:npm/ansi-colors@4.1.3",
       "externalReferences": [
         {
-          "url": "doowb/ansi-colors",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/doowb/ansi-colors",
           "type": "website"
         }
@@ -5449,12 +5425,6 @@
       ],
       "cpe": "cpe:2.3:a:ansi-regex_project:ansi-regex:5.0.1:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/ansi-regex@5.0.1",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-regex",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5498,12 +5468,6 @@
       ],
       "cpe": "cpe:2.3:a:ansi-regex_project:ansi-regex:5.0.1:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/ansi-regex@5.0.1",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-regex",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5547,12 +5511,6 @@
       ],
       "cpe": "cpe:2.3:a:ansi-styles:ansi-styles:3.2.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ansi-styles@3.2.1",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-styles",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5616,12 +5574,6 @@
       ],
       "cpe": "cpe:2.3:a:ansi-styles:ansi-styles:4.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ansi-styles@4.3.0",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-styles",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5685,12 +5637,6 @@
       ],
       "cpe": "cpe:2.3:a:ansi-styles:ansi-styles:4.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ansi-styles@4.3.0",
-      "externalReferences": [
-        {
-          "url": "chalk/ansi-styles",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6094,12 +6040,6 @@
       ],
       "cpe": "cpe:2.3:a:arg:arg:4.1.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/arg@4.1.3",
-      "externalReferences": [
-        {
-          "url": "zeit/arg",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6142,12 +6082,6 @@
       ],
       "cpe": "cpe:2.3:a:argparse:argparse:1.0.10:*:*:*:*:*:*:*",
       "purl": "pkg:npm/argparse@1.0.10",
-      "externalReferences": [
-        {
-          "url": "nodeca/argparse",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6462,12 +6396,6 @@
       ],
       "cpe": "cpe:2.3:a:array-union:array-union:2.1.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/array-union@2.1.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/array-union",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6689,12 +6617,6 @@
       ],
       "cpe": "cpe:2.3:a:astral-regex:astral-regex:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/astral-regex@2.0.0",
-      "externalReferences": [
-        {
-          "url": "kevva/astral-regex",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -7147,12 +7069,6 @@
       ],
       "cpe": "cpe:2.3:a:binary-extensions:binary-extensions:2.2.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/binary-extensions@2.2.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/binary-extensions",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -7215,12 +7131,6 @@
       ],
       "cpe": "cpe:2.3:a:body-parser:body-parser:1.20.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/body-parser@1.20.1",
-      "externalReferences": [
-        {
-          "url": "expressjs/body-parser",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -7610,10 +7520,6 @@
       "purl": "pkg:npm/braces@3.0.2",
       "externalReferences": [
         {
-          "url": "micromatch/braces",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/micromatch/braces",
           "type": "website"
         }
@@ -7660,12 +7566,6 @@
       ],
       "cpe": "cpe:2.3:a:builtins:builtins:5.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/builtins@5.0.1",
-      "externalReferences": [
-        {
-          "url": "juliangruber/builtins",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -7879,12 +7779,6 @@
       ],
       "cpe": "cpe:2.3:a:bytes:bytes:3.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/bytes@3.1.2",
-      "externalReferences": [
-        {
-          "url": "visionmedia/bytes.js",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8173,12 +8067,6 @@
       ],
       "cpe": "cpe:2.3:a:callsites:callsites:3.1.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/callsites@3.1.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/callsites",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8221,12 +8109,6 @@
       ],
       "cpe": "cpe:2.3:a:chalk:chalk:2.4.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/chalk@2.4.2",
-      "externalReferences": [
-        {
-          "url": "chalk/chalk",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8269,12 +8151,6 @@
       ],
       "cpe": "cpe:2.3:a:chalk:chalk:4.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/chalk@4.1.2",
-      "externalReferences": [
-        {
-          "url": "chalk/chalk",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8317,12 +8193,6 @@
       ],
       "cpe": "cpe:2.3:a:chalk:chalk:4.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/chalk@4.1.2",
-      "externalReferences": [
-        {
-          "url": "chalk/chalk",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8419,12 +8289,6 @@
       ],
       "cpe": "cpe:2.3:a:cidr-regex:cidr-regex:3.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/cidr-regex@3.1.1",
-      "externalReferences": [
-        {
-          "url": "silverwind/cidr-regex",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8488,12 +8352,6 @@
       ],
       "cpe": "cpe:2.3:a:clean-stack:clean-stack:2.2.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/clean-stack@2.2.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/clean-stack",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8558,10 +8416,6 @@
       "cpe": "cpe:2.3:a:shannonmoeller:cli-columns:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/cli-columns@4.0.0",
       "externalReferences": [
-        {
-          "url": "shannonmoeller/cli-columns",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/shannonmoeller/cli-columns#readme",
           "type": "website"
@@ -8849,12 +8703,6 @@
       ],
       "cpe": "cpe:2.3:a:color-convert:color-convert:1.9.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/color-convert@1.9.3",
-      "externalReferences": [
-        {
-          "url": "Qix-/color-convert",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8918,12 +8766,6 @@
       ],
       "cpe": "cpe:2.3:a:color-convert:color-convert:2.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/color-convert@2.0.1",
-      "externalReferences": [
-        {
-          "url": "Qix-/color-convert",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -8987,12 +8829,6 @@
       ],
       "cpe": "cpe:2.3:a:color-convert:color-convert:2.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/color-convert@2.0.1",
-      "externalReferences": [
-        {
-          "url": "Qix-/color-convert",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -9057,10 +8893,6 @@
       "cpe": "cpe:2.3:a:color-name:color-name:1.1.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/color-name@1.1.3",
       "externalReferences": [
-        {
-          "url": "git@github.com:dfcreative/color-name.git",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/dfcreative/color-name",
           "type": "website"
@@ -9139,10 +8971,6 @@
       "purl": "pkg:npm/color-name@1.1.4",
       "externalReferences": [
         {
-          "url": "git@github.com:colorjs/color-name.git",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/colorjs/color-name",
           "type": "website"
         }
@@ -9219,10 +9047,6 @@
       "cpe": "cpe:2.3:a:color-name:color-name:1.1.4:*:*:*:*:*:*:*",
       "purl": "pkg:npm/color-name@1.1.4",
       "externalReferences": [
-        {
-          "url": "git@github.com:colorjs/color-name.git",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/colorjs/color-name",
           "type": "website"
@@ -9902,12 +9726,6 @@
       ],
       "cpe": "cpe:2.3:a:content-disposition:content-disposition:0.5.4:*:*:*:*:*:*:*",
       "purl": "pkg:npm/content-disposition@0.5.4",
-      "externalReferences": [
-        {
-          "url": "jshttp/content-disposition",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -9971,12 +9789,6 @@
       ],
       "cpe": "cpe:2.3:a:content-type:content-type:1.0.5:*:*:*:*:*:*:*",
       "purl": "pkg:npm/content-type@1.0.5",
-      "externalReferences": [
-        {
-          "url": "jshttp/content-type",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -10040,12 +9852,6 @@
       ],
       "cpe": "cpe:2.3:a:cookie:cookie:0.4.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/cookie@0.4.1",
-      "externalReferences": [
-        {
-          "url": "jshttp/cookie",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -10089,12 +9895,6 @@
       ],
       "cpe": "cpe:2.3:a:cookie:cookie:0.5.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/cookie@0.5.0",
-      "externalReferences": [
-        {
-          "url": "jshttp/cookie",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -10138,12 +9938,6 @@
       ],
       "cpe": "cpe:2.3:a:cookie-parser:cookie-parser:1.4.6:*:*:*:*:*:*:*",
       "purl": "pkg:npm/cookie-parser@1.4.6",
-      "externalReferences": [
-        {
-          "url": "expressjs/cookie-parser",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -10310,12 +10104,6 @@
       ],
       "cpe": "cpe:2.3:a:create-require:create-require:1.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/create-require@1.1.1",
-      "externalReferences": [
-        {
-          "url": "nuxt-contrib/create-require",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -10380,10 +10168,6 @@
       "cpe": "cpe:2.3:a:cross-spawn:cross-spawn:7.0.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/cross-spawn@7.0.3",
       "externalReferences": [
-        {
-          "url": "git@github.com:moxystudio/node-cross-spawn.git",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/moxystudio/node-cross-spawn",
           "type": "website"
@@ -11217,12 +11001,6 @@
       ],
       "cpe": "cpe:2.3:a:delegates:delegates:1.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/delegates@1.0.0",
-      "externalReferences": [
-        {
-          "url": "visionmedia/node-delegates",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -11266,12 +11044,6 @@
       ],
       "cpe": "cpe:2.3:a:depd:depd:1.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/depd@1.1.2",
-      "externalReferences": [
-        {
-          "url": "dougwilson/nodejs-depd",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -11315,12 +11087,6 @@
       ],
       "cpe": "cpe:2.3:a:depd:depd:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/depd@2.0.0",
-      "externalReferences": [
-        {
-          "url": "dougwilson/nodejs-depd",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -11364,12 +11130,6 @@
       ],
       "cpe": "cpe:2.3:a:destroy:destroy:1.2.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/destroy@1.2.0",
-      "externalReferences": [
-        {
-          "url": "stream-utils/destroy",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -11574,12 +11334,6 @@
       ],
       "cpe": "cpe:2.3:a:dir-glob:dir-glob:3.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/dir-glob@3.0.1",
-      "externalReferences": [
-        {
-          "url": "kevva/dir-glob",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -11644,10 +11398,6 @@
       "purl": "pkg:npm/doctrine@2.1.0",
       "externalReferences": [
         {
-          "url": "eslint/doctrine",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/eslint/doctrine",
           "type": "website"
         }
@@ -11700,10 +11450,6 @@
       "purl": "pkg:npm/doctrine@3.0.0",
       "externalReferences": [
         {
-          "url": "eslint/doctrine",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/eslint/doctrine",
           "type": "website"
         }
@@ -11755,12 +11501,6 @@
       ],
       "cpe": "cpe:2.3:a:ee-first:ee-first:1.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ee-first@1.1.1",
-      "externalReferences": [
-        {
-          "url": "jonathanong/ee-first",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -11985,12 +11725,6 @@
       ],
       "cpe": "cpe:2.3:a:encodeurl:encodeurl:1.0.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/encodeurl@1.0.2",
-      "externalReferences": [
-        {
-          "url": "pillarjs/encodeurl",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -12089,10 +11823,6 @@
       "purl": "pkg:npm/enquirer@2.3.6",
       "externalReferences": [
         {
-          "url": "enquirer/enquirer",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/enquirer/enquirer",
           "type": "website"
         }
@@ -12140,12 +11870,6 @@
       ],
       "cpe": "cpe:2.3:a:env-paths:env-paths:2.2.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/env-paths@2.2.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/env-paths",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -12649,12 +12373,6 @@
       ],
       "cpe": "cpe:2.3:a:escape-html:escape-html:1.0.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/escape-html@1.0.3",
-      "externalReferences": [
-        {
-          "url": "component/escape-html",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -12718,12 +12436,6 @@
       ],
       "cpe": "cpe:2.3:a:escape-string-regexp:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
       "purl": "pkg:npm/escape-string-regexp@1.0.5",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/escape-string-regexp",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -12803,12 +12515,6 @@
       ],
       "cpe": "cpe:2.3:a:escape-string-regexp:escape-string-regexp:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/escape-string-regexp@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/escape-string-regexp",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -12889,10 +12595,6 @@
       "cpe": "cpe:2.3:a:eslint:eslint:7.32.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/eslint@7.32.0",
       "externalReferences": [
-        {
-          "url": "eslint/eslint",
-          "type": "distribution"
-        },
         {
           "url": "https://eslint.org",
           "type": "website"
@@ -13362,10 +13064,6 @@
       "purl": "pkg:npm/eslint-scope@5.1.1",
       "externalReferences": [
         {
-          "url": "eslint/eslint-scope",
-          "type": "distribution"
-        },
-        {
           "url": "http://github.com/eslint/eslint-scope",
           "type": "website"
         }
@@ -13541,10 +13239,6 @@
       "purl": "pkg:npm/eslint-visitor-keys@1.3.0",
       "externalReferences": [
         {
-          "url": "eslint/eslint-visitor-keys",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/eslint/eslint-visitor-keys#readme",
           "type": "website"
         }
@@ -13629,10 +13323,6 @@
       "cpe": "cpe:2.3:a:eslint-visitor-keys:eslint-visitor-keys:1.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/eslint-visitor-keys@1.3.0",
       "externalReferences": [
-        {
-          "url": "eslint/eslint-visitor-keys",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/eslint/eslint-visitor-keys#readme",
           "type": "website"
@@ -13719,10 +13409,6 @@
       "purl": "pkg:npm/eslint-visitor-keys@2.1.0",
       "externalReferences": [
         {
-          "url": "eslint/eslint-visitor-keys",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/eslint/eslint-visitor-keys#readme",
           "type": "website"
         }
@@ -13807,10 +13493,6 @@
       "cpe": "cpe:2.3:a:eslint:espree:7.3.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/espree@7.3.1",
       "externalReferences": [
-        {
-          "url": "eslint/espree",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/eslint/espree",
           "type": "website"
@@ -14256,12 +13938,6 @@
       ],
       "cpe": "cpe:2.3:a:etag:etag:1.8.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/etag@1.8.1",
-      "externalReferences": [
-        {
-          "url": "jshttp/etag",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -14359,10 +14035,6 @@
       "cpe": "cpe:2.3:a:express:express:4.18.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/express@4.18.2",
       "externalReferences": [
-        {
-          "url": "expressjs/express",
-          "type": "distribution"
-        },
         {
           "url": "http://expressjs.com/",
           "type": "website"
@@ -14508,12 +14180,6 @@
       ],
       "cpe": "cpe:2.3:a:fast-glob:fast-glob:3.2.12:*:*:*:*:*:*:*",
       "purl": "pkg:npm/fast-glob@3.2.12",
-      "externalReferences": [
-        {
-          "url": "mrmlnc/fast-glob",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -14905,12 +14571,6 @@
       ],
       "cpe": "cpe:2.3:a:file-entry-cache:file-entry-cache:6.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/file-entry-cache@6.0.1",
-      "externalReferences": [
-        {
-          "url": "royriojas/file-entry-cache",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -14992,10 +14652,6 @@
       "purl": "pkg:npm/fill-range@7.0.1",
       "externalReferences": [
         {
-          "url": "jonschlinkert/fill-range",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/jonschlinkert/fill-range",
           "type": "website"
         }
@@ -15071,12 +14727,6 @@
       ],
       "cpe": "cpe:2.3:a:finalhandler:finalhandler:1.2.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/finalhandler@1.2.0",
-      "externalReferences": [
-        {
-          "url": "pillarjs/finalhandler",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -15120,12 +14770,6 @@
       ],
       "cpe": "cpe:2.3:a:flat-cache:flat-cache:3.0.4:*:*:*:*:*:*:*",
       "purl": "pkg:npm/flat-cache@3.0.4",
-      "externalReferences": [
-        {
-          "url": "royriojas/flat-cache",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -15247,10 +14891,6 @@
       "cpe": "cpe:2.3:a:follow-redirects:follow-redirects:1.15.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/follow-redirects@1.15.2",
       "externalReferences": [
-        {
-          "url": "git@github.com:follow-redirects/follow-redirects.git",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/follow-redirects/follow-redirects",
           "type": "website"
@@ -15399,12 +15039,6 @@
       ],
       "cpe": "cpe:2.3:a:forwarded_project:forwarded:0.2.0:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/forwarded@0.2.0",
-      "externalReferences": [
-        {
-          "url": "jshttp/forwarded",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -15448,12 +15082,6 @@
       ],
       "cpe": "cpe:2.3:a:fresh_project:fresh:0.5.2:*:*:*:*:node.js:*:*",
       "purl": "pkg:npm/fresh@0.5.2",
-      "externalReferences": [
-        {
-          "url": "jshttp/fresh",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -16544,12 +16172,6 @@
       ],
       "cpe": "cpe:2.3:a:glob-parent:glob-parent:5.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/glob-parent@5.1.2",
-      "externalReferences": [
-        {
-          "url": "gulpjs/glob-parent",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -16613,12 +16235,6 @@
       ],
       "cpe": "cpe:2.3:a:globals:globals:13.20.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/globals@13.20.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/globals",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -16715,12 +16331,6 @@
       ],
       "cpe": "cpe:2.3:a:globby:globby:11.1.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/globby@11.1.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/globby",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -17162,12 +16772,6 @@
       ],
       "cpe": "cpe:2.3:a:has-flag:has-flag:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/has-flag@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/has-flag",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -17231,12 +16835,6 @@
       ],
       "cpe": "cpe:2.3:a:has-flag:has-flag:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/has-flag@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/has-flag",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -17300,12 +16898,6 @@
       ],
       "cpe": "cpe:2.3:a:has-flag:has-flag:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/has-flag@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/has-flag",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -17944,12 +17536,6 @@
       ],
       "cpe": "cpe:2.3:a:http-errors:http-errors:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/http-errors@2.0.0",
-      "externalReferences": [
-        {
-          "url": "jshttp/http-errors",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -18540,12 +18126,6 @@
       ],
       "cpe": "cpe:2.3:a:ignore:ignore:4.0.6:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ignore@4.0.6",
-      "externalReferences": [
-        {
-          "url": "git@github.com:kaelzhang/node-ignore.git",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -18589,12 +18169,6 @@
       ],
       "cpe": "cpe:2.3:a:ignore:ignore:4.0.6:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ignore@4.0.6",
-      "externalReferences": [
-        {
-          "url": "git@github.com:kaelzhang/node-ignore.git",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -18638,12 +18212,6 @@
       ],
       "cpe": "cpe:2.3:a:ignore:ignore:5.2.4:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ignore@5.2.4",
-      "externalReferences": [
-        {
-          "url": "git@github.com:kaelzhang/node-ignore.git",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -18764,12 +18332,6 @@
       ],
       "cpe": "cpe:2.3:a:import-fresh:import-fresh:3.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/import-fresh@3.3.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/import-fresh",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -18947,12 +18509,6 @@
       ],
       "cpe": "cpe:2.3:a:indent-string:indent-string:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/indent-string@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/indent-string",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -19598,12 +19154,6 @@
       ],
       "cpe": "cpe:2.3:a:ip-regex:ip-regex:4.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ip-regex@4.3.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/ip-regex",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -20068,12 +19618,6 @@
       ],
       "cpe": "cpe:2.3:a:is-cidr:is-cidr:4.0.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/is-cidr@4.0.2",
-      "externalReferences": [
-        {
-          "url": "silverwind/is-cidr",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -20426,10 +19970,6 @@
       "purl": "pkg:npm/is-extglob@2.1.1",
       "externalReferences": [
         {
-          "url": "jonschlinkert/is-extglob",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/jonschlinkert/is-extglob",
           "type": "website"
         }
@@ -20505,12 +20045,6 @@
       ],
       "cpe": "cpe:2.3:a:is-fullwidth-code-point:is-fullwidth-code-point:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/is-fullwidth-code-point",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -20606,12 +20140,6 @@
       ],
       "cpe": "cpe:2.3:a:is-fullwidth-code-point:is-fullwidth-code-point:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/is-fullwidth-code-point",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -20708,10 +20236,6 @@
       "cpe": "cpe:2.3:a:micromatch:is-glob:4.0.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/is-glob@4.0.3",
       "externalReferences": [
-        {
-          "url": "micromatch/is-glob",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/micromatch/is-glob",
           "type": "website"
@@ -20968,10 +20492,6 @@
       "purl": "pkg:npm/is-number@7.0.0",
       "externalReferences": [
         {
-          "url": "jonschlinkert/is-number",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/jonschlinkert/is-number",
           "type": "website"
         }
@@ -21144,12 +20664,6 @@
       ],
       "cpe": "cpe:2.3:a:is-plain-obj:is-plain-obj:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/is-plain-obj@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/is-plain-obj",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -21865,12 +21379,6 @@
       ],
       "cpe": "cpe:2.3:a:js-tokens:js-tokens:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/js-tokens@4.0.0",
-      "externalReferences": [
-        {
-          "url": "lydell/js-tokens",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -21935,10 +21443,6 @@
       "cpe": "cpe:2.3:a:js-yaml:js-yaml:3.14.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/js-yaml@3.14.1",
       "externalReferences": [
-        {
-          "url": "nodeca/js-yaml",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/nodeca/js-yaml",
           "type": "website"
@@ -23919,10 +23423,6 @@
       "purl": "pkg:npm/lodash.merge@4.6.2",
       "externalReferences": [
         {
-          "url": "lodash/lodash",
-          "type": "distribution"
-        },
-        {
           "url": "https://lodash.com/",
           "type": "website"
         }
@@ -23971,10 +23471,6 @@
       "cpe": "cpe:2.3:a:lodash.truncate:lodash.truncate:4.4.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/lodash.truncate@4.4.2",
       "externalReferences": [
-        {
-          "url": "lodash/lodash",
-          "type": "distribution"
-        },
         {
           "url": "https://lodash.com/",
           "type": "website"
@@ -24428,12 +23924,6 @@
       ],
       "cpe": "cpe:2.3:a:media-typer:media-typer:0.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/media-typer@0.3.0",
-      "externalReferences": [
-        {
-          "url": "jshttp/media-typer",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -24497,12 +23987,6 @@
       ],
       "cpe": "cpe:2.3:a:merge-descriptors:merge-descriptors:1.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/merge-descriptors@1.0.1",
-      "externalReferences": [
-        {
-          "url": "component/merge-descriptors",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -24567,10 +24051,6 @@
       "purl": "pkg:npm/merge2@1.4.1",
       "externalReferences": [
         {
-          "url": "git@github.com:teambition/merge2.git",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/teambition/merge2",
           "type": "website"
         }
@@ -24621,12 +24101,6 @@
       ],
       "cpe": "cpe:2.3:a:methods:methods:1.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/methods@1.1.2",
-      "externalReferences": [
-        {
-          "url": "jshttp/methods",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -24671,10 +24145,6 @@
       "cpe": "cpe:2.3:a:micromatch:micromatch:4.0.5:*:*:*:*:*:*:*",
       "purl": "pkg:npm/micromatch@4.0.5",
       "externalReferences": [
-        {
-          "url": "micromatch/micromatch",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/micromatch/micromatch",
           "type": "website"
@@ -24771,12 +24241,6 @@
       ],
       "cpe": "cpe:2.3:a:mime-db:mime-db:1.52.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/mime-db@1.52.0",
-      "externalReferences": [
-        {
-          "url": "jshttp/mime-db",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -24839,12 +24303,6 @@
       ],
       "cpe": "cpe:2.3:a:mime-types:mime-types:2.1.35:*:*:*:*:*:*:*",
       "purl": "pkg:npm/mime-types@2.1.35",
-      "externalReferences": [
-        {
-          "url": "jshttp/mime-types",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -25914,12 +25372,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.0.0",
-      "externalReferences": [
-        {
-          "url": "zeit/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -25962,12 +25414,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.0.0",
-      "externalReferences": [
-        {
-          "url": "zeit/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26010,12 +25456,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.0.0",
-      "externalReferences": [
-        {
-          "url": "zeit/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26058,12 +25498,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.0.0",
-      "externalReferences": [
-        {
-          "url": "zeit/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26106,12 +25540,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.1.2",
-      "externalReferences": [
-        {
-          "url": "zeit/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26154,12 +25582,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.1.2",
-      "externalReferences": [
-        {
-          "url": "zeit/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26202,12 +25624,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.1.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.1.3",
-      "externalReferences": [
-        {
-          "url": "vercel/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26250,12 +25666,6 @@
       ],
       "cpe": "cpe:2.3:a:ms:ms:2.1.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/ms@2.1.3",
-      "externalReferences": [
-        {
-          "url": "vercel/ms",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26689,12 +26099,6 @@
       ],
       "cpe": "cpe:2.3:a:negotiator:negotiator:0.6.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/negotiator@0.6.3",
-      "externalReferences": [
-        {
-          "url": "jshttp/negotiator",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -26737,12 +26141,6 @@
       ],
       "cpe": "cpe:2.3:a:negotiator:negotiator:0.6.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/negotiator@0.6.3",
-      "externalReferences": [
-        {
-          "url": "jshttp/negotiator",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29016,12 +28414,6 @@
       ],
       "cpe": "cpe:2.3:a:on-finished:on-finished:2.4.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/on-finished@2.4.1",
-      "externalReferences": [
-        {
-          "url": "jshttp/on-finished",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29184,12 +28576,6 @@
       "description": "Opens stuff, like webpages and files and executables, cross-platform",
       "cpe": "cpe:2.3:a:opener:opener:1.5.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/opener@1.5.2",
-      "externalReferences": [
-        {
-          "url": "domenic/opener",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29290,12 +28676,6 @@
       ],
       "cpe": "cpe:2.3:a:p-map:p-map:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/p-map@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/p-map",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29412,12 +28792,6 @@
       ],
       "cpe": "cpe:2.3:a:parent-module:parent-module:1.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/parent-module@1.0.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/parent-module",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29573,12 +28947,6 @@
       ],
       "cpe": "cpe:2.3:a:parseurl:parseurl:1.3.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/parseurl@1.3.3",
-      "externalReferences": [
-        {
-          "url": "pillarjs/parseurl",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29622,12 +28990,6 @@
       ],
       "cpe": "cpe:2.3:a:path-is-absolute:path-is-absolute:1.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/path-is-absolute@1.0.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/path-is-absolute",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29707,12 +29069,6 @@
       ],
       "cpe": "cpe:2.3:a:path-is-absolute:path-is-absolute:1.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/path-is-absolute@1.0.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/path-is-absolute",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -29792,12 +29148,6 @@
       ],
       "cpe": "cpe:2.3:a:path-key:path-key:3.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/path-key@3.1.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/path-key",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -30006,12 +29356,6 @@
       ],
       "cpe": "cpe:2.3:a:path-type:path-type:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/path-type@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/path-type",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -30077,10 +29421,6 @@
       "purl": "pkg:npm/picomatch@2.3.1",
       "externalReferences": [
         {
-          "url": "micromatch/picomatch",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/micromatch/picomatch",
           "type": "website"
         }
@@ -30131,10 +29471,6 @@
       "cpe": "cpe:2.3:a:postcss-selector-parser:postcss-selector-parser:6.0.10:*:*:*:*:*:*:*",
       "purl": "pkg:npm/postcss-selector-parser@6.0.10",
       "externalReferences": [
-        {
-          "url": "postcss/postcss-selector-parser",
-          "type": "distribution"
-        },
         {
           "url": "https://github.com/postcss/postcss-selector-parser",
           "type": "website"
@@ -30821,12 +30157,6 @@
       ],
       "cpe": "cpe:2.3:a:proxy-addr:proxy-addr:2.0.7:*:*:*:*:*:*:*",
       "purl": "pkg:npm/proxy-addr@2.0.7",
-      "externalReferences": [
-        {
-          "url": "jshttp/proxy-addr",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -31160,12 +30490,6 @@
       ],
       "cpe": "cpe:2.3:a:range-parser:range-parser:1.2.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/range-parser@1.2.1",
-      "externalReferences": [
-        {
-          "url": "jshttp/range-parser",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -31229,12 +30553,6 @@
       ],
       "cpe": "cpe:2.3:a:raw-body:raw-body:2.5.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/raw-body@2.5.1",
-      "externalReferences": [
-        {
-          "url": "stream-utils/raw-body",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -31925,12 +31243,6 @@
       ],
       "cpe": "cpe:2.3:a:require-from-string:require-from-string:2.0.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/require-from-string@2.0.2",
-      "externalReferences": [
-        {
-          "url": "floatdrop/require-from-string",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -32144,12 +31456,6 @@
       ],
       "cpe": "cpe:2.3:a:resolve-from:resolve-from:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/resolve-from@4.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/resolve-from",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -33130,12 +32436,6 @@
       ],
       "cpe": "cpe:2.3:a:send:send:0.18.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/send@0.18.0",
-      "externalReferences": [
-        {
-          "url": "pillarjs/send",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -33179,12 +32479,6 @@
       ],
       "cpe": "cpe:2.3:a:serve-static:serve-static:1.15.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/serve-static@1.15.0",
-      "externalReferences": [
-        {
-          "url": "expressjs/serve-static",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -33386,12 +32680,6 @@
       ],
       "cpe": "cpe:2.3:a:shebang-command:shebang-command:2.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/shebang-command@2.0.0",
-      "externalReferences": [
-        {
-          "url": "kevva/shebang-command",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -33455,12 +32743,6 @@
       ],
       "cpe": "cpe:2.3:a:shebang-regex:shebang-regex:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/shebang-regex@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/shebang-regex",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -33686,12 +32968,6 @@
       ],
       "cpe": "cpe:2.3:a:slash:slash:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/slash@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/slash",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -33734,12 +33010,6 @@
       ],
       "cpe": "cpe:2.3:a:slice-ansi:slice-ansi:4.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/slice-ansi@4.0.0",
-      "externalReferences": [
-        {
-          "url": "chalk/slice-ansi",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34038,12 +33308,6 @@
       ],
       "cpe": "cpe:2.3:a:spdx-correct:spdx-correct:3.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/spdx-correct@3.1.1",
-      "externalReferences": [
-        {
-          "url": "jslicense/spdx-correct.js",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34107,12 +33371,6 @@
       ],
       "cpe": "cpe:2.3:a:spdx-exceptions:spdx-exceptions:2.3.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/spdx-exceptions@2.3.0",
-      "externalReferences": [
-        {
-          "url": "kemitchell/spdx-exceptions.json",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34176,12 +33434,6 @@
       ],
       "cpe": "cpe:2.3:a:spdx-expression-parse:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/spdx-expression-parse@3.0.1",
-      "externalReferences": [
-        {
-          "url": "jslicense/spdx-expression-parse.js",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34261,12 +33513,6 @@
       ],
       "cpe": "cpe:2.3:a:spdx-license-ids:spdx-license-ids:3.0.11:*:*:*:*:*:*:*",
       "purl": "pkg:npm/spdx-license-ids@3.0.11",
-      "externalReferences": [
-        {
-          "url": "jslicense/spdx-license-ids",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34576,12 +33822,6 @@
       ],
       "cpe": "cpe:2.3:a:statuses:statuses:2.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/statuses@2.0.1",
-      "externalReferences": [
-        {
-          "url": "jshttp/statuses",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34625,12 +33865,6 @@
       ],
       "cpe": "cpe:2.3:a:string-width:string-width:4.2.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/string-width@4.2.3",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/string-width",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -34694,12 +33928,6 @@
       ],
       "cpe": "cpe:2.3:a:string-width:string-width:4.2.3:*:*:*:*:*:*:*",
       "purl": "pkg:npm/string-width@4.2.3",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/string-width",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35002,12 +34230,6 @@
       ],
       "cpe": "cpe:2.3:a:strip-ansi:strip-ansi:6.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/strip-ansi@6.0.1",
-      "externalReferences": [
-        {
-          "url": "chalk/strip-ansi",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35071,12 +34293,6 @@
       ],
       "cpe": "cpe:2.3:a:strip-ansi:strip-ansi:6.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/strip-ansi@6.0.1",
-      "externalReferences": [
-        {
-          "url": "chalk/strip-ansi",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35140,12 +34356,6 @@
       ],
       "cpe": "cpe:2.3:a:strip-bom:strip-bom:3.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/strip-bom@3.0.0",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/strip-bom",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35209,12 +34419,6 @@
       ],
       "cpe": "cpe:2.3:a:strip-json-comments:strip-json-comments:3.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/strip-json-comments@3.1.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/strip-json-comments",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35294,12 +34498,6 @@
       ],
       "cpe": "cpe:2.3:a:supports-color:supports-color:5.5.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/supports-color@5.5.0",
-      "externalReferences": [
-        {
-          "url": "chalk/supports-color",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35363,12 +34561,6 @@
       ],
       "cpe": "cpe:2.3:a:supports-color:supports-color:7.2.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/supports-color@7.2.0",
-      "externalReferences": [
-        {
-          "url": "chalk/supports-color",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35432,12 +34624,6 @@
       ],
       "cpe": "cpe:2.3:a:supports-color:supports-color:7.2.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/supports-color@7.2.0",
-      "externalReferences": [
-        {
-          "url": "chalk/supports-color",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -35973,10 +35159,6 @@
       "purl": "pkg:npm/to-regex-range@5.0.1",
       "externalReferences": [
         {
-          "url": "micromatch/to-regex-range",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/micromatch/to-regex-range",
           "type": "website"
         }
@@ -36068,12 +35250,6 @@
       ],
       "cpe": "cpe:2.3:a:toidentifier:toidentifier:1.0.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/toidentifier@1.0.1",
-      "externalReferences": [
-        {
-          "url": "component/toidentifier",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -36512,12 +35688,6 @@
       "description": "A collection of essential TypeScript types",
       "cpe": "cpe:2.3:a:type-fest:type-fest:0.20.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/type-fest@0.20.2",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/type-fest",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -36580,12 +35750,6 @@
       ],
       "cpe": "cpe:2.3:a:type-is:type-is:1.6.18:*:*:*:*:*:*:*",
       "purl": "pkg:npm/type-is@1.6.18",
-      "externalReferences": [
-        {
-          "url": "jshttp/type-is",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -37050,12 +36214,6 @@
       ],
       "cpe": "cpe:2.3:a:unpipe:unpipe:1.0.0:*:*:*:*:*:*:*",
       "purl": "pkg:npm/unpipe@1.0.0",
-      "externalReferences": [
-        {
-          "url": "stream-utils/unpipe",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -37512,12 +36670,6 @@
       ],
       "cpe": "cpe:2.3:a:validate-npm-package-license:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
       "purl": "pkg:npm/validate-npm-package-license@3.0.4",
-      "externalReferences": [
-        {
-          "url": "kemitchell/validate-npm-package-license.js",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -37726,12 +36878,6 @@
       ],
       "cpe": "cpe:2.3:a:vary:vary:1.1.2:*:*:*:*:*:*:*",
       "purl": "pkg:npm/vary@1.1.2",
-      "externalReferences": [
-        {
-          "url": "jshttp/vary",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -38292,10 +37438,6 @@
       "purl": "pkg:npm/word-wrap@1.2.3",
       "externalReferences": [
         {
-          "url": "jonschlinkert/word-wrap",
-          "type": "distribution"
-        },
-        {
           "url": "https://github.com/jonschlinkert/word-wrap",
           "type": "website"
         }
@@ -38651,12 +37793,6 @@
       ],
       "cpe": "cpe:2.3:a:yarn:yarn:1.22.19:*:*:*:*:*:*:*",
       "purl": "pkg:npm/yarn@1.22.19",
-      "externalReferences": [
-        {
-          "url": "yarnpkg/yarn",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -38700,12 +37836,6 @@
       ],
       "cpe": "cpe:2.3:a:yn:yn:3.1.1:*:*:*:*:*:*:*",
       "purl": "pkg:npm/yn@3.1.1",
-      "externalReferences": [
-        {
-          "url": "sindresorhus/yn",
-          "type": "distribution"
-        }
-      ],
       "properties": [
         {
           "name": "syft:package:foundBy",
