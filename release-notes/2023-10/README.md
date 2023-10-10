@@ -61,10 +61,17 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 ## Helm Chart Breaking Changes
 
-
-- 
-- Chart Name and version
-    - Description of breaking change.
+- New - mongodb connection string global value override.
+    - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/<database>") (<> will be replaced during per-service Helm install/upgrade)
+    - Customers can use per-service user/password combinations ("mongodb+srv://<username>:<password>@host/<database>") (<> will be replaced during per-service Helm install/upgrade)
+- CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
+    - If you have an existing installation of SLE you MUST etiher set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
+- dataframeservice
+    - dataframeservice.requestBodySizeLimitMegabytes was renamed to dataframeservice.requestBodySizeLimit. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB). [https://github.com/ni/install-systemlink-enterprise/pull/165]
+- taghistorian
+    - The TagHistorian service was added as part of the top level helm chart of SystemLink Enterprise. The service enables the users to see historical values for their tags.
+    - Before running the service, please configure the values according to the instructions from the helm chart.
+    - The service requires a continuationTokenEncryptionKey to be configured. When creating the continuationTokenEncryptionKey, use a 32-byte cryptographically random value which is base64 encoded.
 
 ## Upgrade Considerations
 
