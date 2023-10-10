@@ -10,12 +10,59 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- webserver 0.13.4
+    - Upgraded Redis dependency from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the entire cluster in parallel, which is not something Kubernetes will do automatically.
+    - Option #1: Set webserver.redis-cluster.redis.update-strategy.type = OnDelete
+        - Run the upgrade deployment
+        - Run kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 <release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5
+        - The pods of the stateful set will be deleted and should be automatically recreated in parallel.
+        - Remove the overide of the redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
+    - Option #2: Prior to upgrade, run: kubectl -n <namespace> delete statefulset <release>-webserver-redis
+        - This will delete the redis cluster, preventing UI access to the application.
+        - Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
+    - Once upgraded, Redis storage will be incompatibile with older versions of the software. If it is necessary to downgrade to an older version, you must perform a hard reset on the redis cluster: https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/32476/How-to-repair-a-Redis-cluster?anchor=perform-a-hard-reset-of-a-redis-cluster-without-deleting-the-helm-deployment#
+- dataframeservice 0.14.14
+    - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
+    - Customers are not required to uptake this change, but doing so will be beneficial as the net result in load reduction.
+    - The following steps cover what the customer needs to do: https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/83721/How-to-reset-Dremio
+- dataframeservice 0.14.39
+    - The DataFrame Service now uses a more efficient method for writing data to new tables, replacing Kafka. The DataFrame Service will still use Kafka for data ingestion for tables created before the 2023-10 release, while tables created after upgrading to the 2023-10 release will have data written directly to S3 storage.
+    - After upgrading to the 2023-10 release, you can safely remove Kafka from your cluster once all pre-upgrade tables are set to readonly. Please note that disabling Kafka may lead to data loss if pre-upgrade tables are not readonly, because any buffered data may not get written to storage.
+    - To remove Kafka from the cluster:
+        1. Upgrade to the 2023-10 release.
+        2. Confirm that you do not have any remaining appendable tables that were created prior to upgrade that you do not want to be made readonly. To check if any remaining appendable tables exist:
+            - Use kubectl or a GUI like Lens to find the pod containing `dfs-kafka-ui`.
+            - Enable port forwarding for port `8080` to access the Kafka UI on your localhost.
+            - Open the Kafka UI in a browser using the port obtained in the previous step.
+            - Navigate to "Topics" in the left-hand navigation.
+            - Search for topics starting with `dfs` followed by a data table ID.
+            - If no Kafka topics exist for data tables, it's safe to proceed with disabling and removing Kafka from the cluster.
+        3. Remove the DataFrame Service Kafka pods from the cluster
+            - Set the following three Helm values to `false` in the `systemlink-values.yaml` file:
+                - `dataframeservice.ingestion.kafkaBackend.enabled`
+                - `dataframeservice.kafkacluster.kafka.enabled`
+                - `dataframeservice.schema-registry.enabled`
+            - Run a Helm upgrade
+            - Wait for the `dfs-kafka` pods to disappear from the cluster
+        4. Remove the Strimzi Kafka Operator from the cluster
+            - Set the following Helm value to false in the `systemlink-admin-values.yaml` file:
+                - `strimzi-kafka-operator.enabled`
+            - Run a Helm upgrade
+        5. Remove the CRDs for the Strimzi Kafka Operator from the cluster. By design, these are not removed when the operator is uninstalled, so they need to be cleaned up manually. Run `kubectl delete -f systemlinkadmin/charts/strimzi-kafka-operator/crds` to delete the CRDs.
+        6. Delete the Persistent Volume Claims (PVCs) for the Kafka-related pods. Looks for PVCs containing "dfs-kafka" in Lens.
+    - After completing these steps, if you need to update SystemLink Enterprise again, you should skip steps 2 and 3 of the updating instructions for updating the Strimzi Kafka Operator CRDs, to avoid recreating the unneeded CDs.
+- dataframeservice 0.14.39
+    - Default memory request and limit increased from 2GB per DataFrame Service pod to 4GB. Disabling Kafka (see separate instructions) will greatly reduce overall resource usage for the cluster.
+    - Since data tables created after updating won't consume additional Kafka resources, you can likely decrease the dataframeservice.kafkaconnect.spec.resources.requests.memory and/or dataframeservice.kafkacluster.kafka.resources.requests.memory values if required to fit the larger DataFrame Service pods until Kafka is disabled.
+    - Note that appendable tables created prior to the update will continue to consume Kafka resources.
+- The Test Analytics privilege category has been added, and includes the Query Measurements privilege. This privilege is not currently functional and is being added in support of features that will release in a future version.
+- testinsightsui 0.6.107
+    - Comments service was added to top level helm chart in previous release 2023-09. In this release, feature flag is removed and comments tab will be visible in result details page and user can add/view/edit/delete comments under a test result.
 
 ## Helm Chart Breaking Changes
 
+
+- 
 - Chart Name and version
     - Description of breaking change.
 
