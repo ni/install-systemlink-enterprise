@@ -14,10 +14,10 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - Upgraded Redis dependency from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the entire cluster in parallel, which is not something Kubernetes will do automatically.
     - Option #1: Set webserver.redis-cluster.redis.update-strategy.type = OnDelete
         - Run the upgrade deployment
-        - Run kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 <release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5
+        - Run 'kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 <release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5'
         - The pods of the stateful set will be deleted and should be automatically recreated in parallel.
         - Remove the overide of the redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
-    - Option #2: Prior to upgrade, run: kubectl -n <namespace> delete statefulset <release>-webserver-redis
+    - Option #2: Prior to upgrade, run: 'kubectl -n <namespace> delete statefulset <release>-webserver-redis'
         - This will delete the redis cluster, preventing UI access to the application.
         - Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
     - Once upgraded, Redis storage will be incompatibile with older versions of the software. If it is necessary to downgrade to an older version, you must perform a hard reset on the redis cluster: https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/32476/How-to-repair-a-Redis-cluster?anchor=perform-a-hard-reset-of-a-redis-cluster-without-deleting-the-helm-deployment#
