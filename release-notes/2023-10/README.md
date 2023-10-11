@@ -14,10 +14,10 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - Upgraded Redis dependency from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the entire cluster in parallel, which is not something Kubernetes will do automatically.
     - Option #1: Set webserver.redis-cluster.redis.update-strategy.type = OnDelete
         - Run the upgrade deployment
-        - Run 'kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 <release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5'
+        - Run kubectl -n <`namespace`> delete pods <`release`>-webserver-redis-0 <`release`>-webserver-redis-1 <`release`>-webserver-redis-2 <`release`>-webserver-redis-3 <`release`>-webserver-redis-4 <`release`>-webserver-redis-5
         - The pods of the stateful set will be deleted and should be automatically recreated in parallel.
         - Remove the overide of the redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
-    - Option #2: Prior to upgrade, run: 'kubectl -n <namespace> delete statefulset <release>-webserver-redis'
+    - Option #2: Prior to upgrade, run: kubectl -n <`namespace`> delete statefulset <`release`>-webserver-redis
         - This will delete the redis cluster, preventing UI access to the application.
         - Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
     - Once upgraded, Redis storage will be incompatibile with older versions of the software. If it is necessary to downgrade to an older version, you must perform a hard reset on the redis cluster: https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/32476/How-to-repair-a-Redis-cluster?anchor=perform-a-hard-reset-of-a-redis-cluster-without-deleting-the-helm-deployment#
@@ -37,6 +37,8 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
             - Navigate to "Topics" in the left-hand navigation.
             - Search for topics starting with `dfs` followed by a data table ID.
             - If no Kafka topics exist for data tables, it's safe to proceed with disabling and removing Kafka from the cluster.
+            
+            The presence of `dfs` topics in Kafka indicates that the associated tables are still open for writing data. By default, newly-created data tables have "SupportsAppend" set to "true." To mark a data table as readonly, use the route `POST /nidataframe/v1/tables/{id}/data` with the table's ID and `endOfData: true` in the JSON request body. This action sets the data table's "SupportsAppend" field to "False," making it readonly. Once a table is readonly, it cannot be reopened, so ensure you've finished appending data before setting `endOfData: true`.
         3. Remove the DataFrame Service Kafka pods from the cluster
             - Set the following three Helm values to `false` in the `systemlink-values.yaml` file:
                 - `dataframeservice.ingestion.kafkaBackend.enabled`
@@ -62,8 +64,8 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 ## Helm Chart Breaking Changes
 
 - New - mongodb connection string global value override.
-    - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/<database>") (<> will be replaced during per-service Helm install/upgrade)
-    - Customers can use per-service user/password combinations ("mongodb+srv://<username>:<password>@host/<database>") (<> will be replaced during per-service Helm install/upgrade)
+    - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/<`database`>") (<> will be replaced during per-service Helm install/upgrade)
+    - Customers can use per-service user/password combinations ("mongodb+srv://<`username`>:<`password`>@host/<`database`>") (<> will be replaced during per-service Helm install/upgrade)
 - CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
     - If you have an existing installation of SLE you MUST etiher set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
 - dataframeservice
