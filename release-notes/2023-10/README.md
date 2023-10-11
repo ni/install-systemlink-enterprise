@@ -212,7 +212,7 @@ userservice-setup:0.7.3
 
 ### Non Container/Chart Artifacts
 
-artifact:version
+There aren't any Non Container/Chart Artifacts.
 
 ### 3rd Party Containers
 
