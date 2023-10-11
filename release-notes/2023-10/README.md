@@ -25,7 +25,8 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 - dataframeservice 0.14.14
     - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
     - Customers are not required to uptake this change, but doing so will be beneficial as the net result in load reduction.
-    - The following steps cover what the customer needs to do: https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/83721/How-to-reset-Dremio
+    - The following steps cover what the customer needs to do:
+        - [How-to-reset-Dremio.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/How-to-reset-Dremio.md)
 - dataframeservice 0.14.39
     - The DataFrame Service now uses a more efficient method for writing data to new tables, replacing Kafka. The DataFrame Service will still use Kafka for data ingestion for tables created before the 2023-10 release, while tables created after upgrading to the 2023-10 release will have data written directly to S3 storage.
     - After upgrading to the 2023-10 release, you can safely remove Kafka from your cluster once all pre-upgrade tables are set to readonly. Please note that disabling Kafka may lead to data loss if pre-upgrade tables are not readonly, because any buffered data may not get written to storage.
