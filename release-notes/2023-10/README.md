@@ -37,7 +37,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
             - Navigate to "Topics" in the left-hand navigation.
             - Search for topics starting with `dfs` followed by a data table ID.
             - If no Kafka topics exist for data tables, it's safe to proceed with disabling and removing Kafka from the cluster.
-            
+
             The presence of `dfs` topics in Kafka indicates that the associated tables are still open for writing data. By default, newly-created data tables have "SupportsAppend" set to "true." To mark a data table as readonly, use the route `POST /nidataframe/v1/tables/{id}/data` with the table's ID and `endOfData: true` in the JSON request body. This action sets the data table's "SupportsAppend" field to "False," making it readonly. Once a table is readonly, it cannot be reopened, so ensure you've finished appending data before setting `endOfData: true`.
         3. Remove the DataFrame Service Kafka pods from the cluster
             - Set the following three Helm values to `false` in the `systemlink-values.yaml` file:
