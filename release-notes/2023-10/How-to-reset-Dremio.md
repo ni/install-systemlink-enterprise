@@ -15,7 +15,7 @@ of the following tasks:
 - Upgrade from `dremio-apache` to `dremio-ee`
 - Downgrade from `dremio-ee` to `dremio-apache`
 
-# Prerequisites
+## Prerequisites
 
 Each deployment of the DataFrame Service (DFS) comes with a dedicated deployment
 of Dremio. The DFS and Dremio are deployed to the same Kubernetes cluster by the
@@ -25,14 +25,13 @@ following permissions in the Kubernetes cluster that the DFS is deployed to:
 - The ability to delete pods
 - The ability to delete Persistent Volume Claims (PVCs)
 
-This guide assumes [OpenLens](https://github.com/MuhammedKalkan/OpenLens) is installed, but the instructions can be adapted
-for `kubectl` and other tools as well. 
+This guide assumes [OpenLens](https://github.com/MuhammedKalkan/OpenLens) is installed, but the instructions can be adapted for `kubectl` and other tools as well.
 >For instructions on how to install
 OpenLens and get Kubernetes access to the NI-internal AWS clusters, follow the
 instructions in
 [Getting started visualizing the cluster](../../Tutorials/Getting-started-visualizing-the-cluster.md).
 
-# Resetting Dremio
+## Resetting Dremio
 
 The DFS's usage of Dremio is mostly stateless, and the service is tolerant to
 datasets disappearing if Dremio is reset. Dremio's state is persisted to its
