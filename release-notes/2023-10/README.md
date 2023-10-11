@@ -21,7 +21,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
         - This will delete the redis cluster, preventing UI access to the application.
         - Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
     - Once upgraded, Redis storage will be incompatibile with older versions of the software. If it is necessary to downgrade to an older version, you must perform a hard reset on the redis cluster:
-        - [Perform-a-hard-reset-on-the-redis-cluster](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Perform-a-hard-reset-on-the-redis-cluster.md)
+        - [Perform-a-hard-reset-on-the-redis-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Perform-a-hard-reset-on-the-redis-cluster.md)
 - dataframeservice 0.14.14
     - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
     - Customers are not required to uptake this change, but doing so will be beneficial as the net result in load reduction.
