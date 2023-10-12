@@ -96,15 +96,14 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2023-10](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/closed-bugs-sle-2023-10.xlsx)
 
 ## Software Bill of Materials and Notices
 
 <!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+- [SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/sbom)
+- [Notices](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/notices)
 
 ## Versions
 
