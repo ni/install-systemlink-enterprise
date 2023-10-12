@@ -26,10 +26,6 @@ following permissions in the Kubernetes cluster that the DFS is deployed to:
 - The ability to delete Persistent Volume Claims (PVCs)
 
 This guide assumes [OpenLens](https://github.com/MuhammedKalkan/OpenLens) is installed, but the instructions can be adapted for `kubectl` and other tools as well.
->For instructions on how to install
-OpenLens and get Kubernetes access to the NI-internal AWS clusters, follow the
-instructions in
-[Getting started visualizing the cluster](../../Tutorials/Getting-started-visualizing-the-cluster.md).
 
 ## Resetting Dremio
 
