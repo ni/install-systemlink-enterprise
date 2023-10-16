@@ -70,7 +70,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
     - Customers can use per-service user/password combinations ("mongodb+srv://`<username>`:`<password>`@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
 - dataframeservice
-    - dataframeservice.requestBodySizeLimitMegabytes was renamed to dataframeservice.requestBodySizeLimit. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB). [https://github.com/ni/install-systemlink-enterprise/pull/165]
+    - `dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB). [https://github.com/ni/install-systemlink-enterprise/pull/165]
 - taghistorian
     - The TagHistorian service was added as part of the top level helm chart of SystemLink Enterprise. The service enables the users to see historical values for their tags.
     - Before running the service, please configure the values according to the instructions from the helm chart.
