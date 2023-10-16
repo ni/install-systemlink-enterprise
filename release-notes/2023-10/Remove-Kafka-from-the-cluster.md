@@ -30,3 +30,5 @@ To remove Kafka from the cluster:
 5. Remove the CRDs for the Strimzi Kafka Operator from the cluster. By design, these are not removed when the operator is uninstalled, so they need to be cleaned up manually. Run `kubectl delete -f systemlinkadmin/charts/strimzi-kafka-operator/crds` to delete the CRDs.
 
 6. Delete the Persistent Volume Claims (PVCs) for the Kafka-related pods. Looks for PVCs containing "dfs-kafka" in Lens.
+
+After completing these steps, if you need to update SystemLink Enterprise again, you should skip steps 2 and 3 of the updating instructions for updating the Strimzi Kafka Operator CRDs, to avoid recreating the unneeded CDs.
