@@ -207,10 +207,6 @@ userdata:0.6.19
 
 userservice-setup:0.7.3
 
-### Non Container/Chart Artifacts
-
-There aren't any Non Container/Chart Artifacts.
-
 ### 3rd Party Containers
 
 alpine:3.18.3
