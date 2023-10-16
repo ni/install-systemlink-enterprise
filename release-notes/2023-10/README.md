@@ -23,7 +23,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 - dataframeservice 0.14.14
     - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
     - Customers are not required to uptake this change, but doing so will be beneficial as the net result in load reduction.
-    - The following steps cover what the customer needs to do:
+    - Refer to [How-to-reset-Dremio.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/How-to-reset-Dremio.md) to uptake this change.
         - [How-to-reset-Dremio.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/How-to-reset-Dremio.md)
 - dataframeservice 0.14.39
     - The DataFrame Service now uses a more efficient method for writing data to new tables, replacing Kafka. The DataFrame Service will still use Kafka for data ingestion for tables created before the 2023-10 release, while tables created after upgrading to the 2023-10 release will have data written directly to S3 storage.
