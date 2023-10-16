@@ -60,8 +60,6 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-
-
 ## Helm Chart Breaking Changes
 
 - CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
@@ -75,6 +73,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - The TagHistorian service was added as part of the top level helm chart of SystemLink Enterprise. The service enables the users to see historical values for their tags.
     - Before running the service, please configure the values according to the instructions from the helm chart.
     - The service requires a `continuationTokenEncryptionKey` to be configured. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L566)
 
 ## Upgrade Considerations
 
