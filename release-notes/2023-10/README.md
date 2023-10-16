@@ -6,8 +6,6 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 <!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
-## New Features and Behavior changes
-
 - webserver 0.13.4
     - Upgraded Redis dependency from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the entire cluster in parallel, which is not something Kubernetes will do automatically.
         1. Option #1: Set webserver.redis-cluster.redis.update-strategy.type = OnDelete
@@ -60,13 +58,17 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 - testinsightsui 0.6.107
     - Comments service was added to top level helm chart in previous release 2023-09. In this release, feature flag is removed and comments tab will be visible in result details page and user can add/view/edit/delete comments under a test result.
 
+## New Features and Behavior changes
+
+
+
 ## Helm Chart Breaking Changes
 
+- CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
+    - If you have an existing installation of SLE you MUST etiher set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
 - New - mongodb connection string global value override.
     - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
     - Customers can use per-service user/password combinations ("mongodb+srv://`<username>`:`<password>`@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
-- CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
-    - If you have an existing installation of SLE you MUST etiher set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
 - dataframeservice
     - dataframeservice.requestBodySizeLimitMegabytes was renamed to dataframeservice.requestBodySizeLimit. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB). [https://github.com/ni/install-systemlink-enterprise/pull/165]
 - taghistorian
