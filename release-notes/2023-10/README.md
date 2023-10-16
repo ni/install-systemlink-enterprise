@@ -20,11 +20,11 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
             - Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
     - Once upgraded, Redis storage will be incompatibile with older versions of the software. If it is necessary to downgrade to an older version, you must perform a hard reset on the redis cluster:
         - [Perform-a-hard-reset-on-the-redis-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Perform-a-hard-reset-on-the-redis-cluster.md)
-- dataframeservice 0.14.14
+- dataframeservice 0.14.49
     - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
     - Customers are not required to uptake this change, but doing so will be beneficial as the net result in load reduction.
     - Refer to [How-to-reset-Dremio.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/How-to-reset-Dremio.md) to uptake this change.
-- dataframeservice 0.14.39
+- dataframeservice 0.14.49
     - The DataFrame Service now uses a more efficient method for writing data to new tables, replacing Kafka. The DataFrame Service will still use Kafka for data ingestion for tables created before the 2023-10 release, while tables created after upgrading to the 2023-10 release will have data written directly to S3 storage.
     - After upgrading to the 2023-10 release, you can safely remove Kafka from your cluster once all pre-upgrade tables are set to readonly. Please note that disabling Kafka may lead to data loss if pre-upgrade tables are not readonly, because any buffered data may not get written to storage.
     - To remove Kafka from the cluster:
@@ -52,7 +52,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
         5. Remove the CRDs for the Strimzi Kafka Operator from the cluster. By design, these are not removed when the operator is uninstalled, so they need to be cleaned up manually. Run `kubectl delete -f systemlinkadmin/charts/strimzi-kafka-operator/crds` to delete the CRDs.
         6. Delete the Persistent Volume Claims (PVCs) for the Kafka-related pods. Looks for PVCs containing "dfs-kafka" in Lens.
     - After completing these steps, if you need to update SystemLink Enterprise again, you should skip steps 2 and 3 of the updating instructions for updating the Strimzi Kafka Operator CRDs, to avoid recreating the unneeded CDs.
-- dataframeservice 0.14.39
+- dataframeservice 0.14.49
     - Default memory request and limit increased from 2GB per DataFrame Service pod to 4GB. Disabling Kafka (see separate instructions) will greatly reduce overall resource usage for the cluster.
     - Since data tables created after updating won't consume additional Kafka resources, you can likely decrease the dataframeservice.kafkaconnect.spec.resources.requests.memory and/or dataframeservice.kafkacluster.kafka.resources.requests.memory values if required to fit the larger DataFrame Service pods until Kafka is disabled.
     - Note that appendable tables created prior to the update will continue to consume Kafka resources.
