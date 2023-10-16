@@ -4,7 +4,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 ## Upgrading from the release 2023-09 to the release 2023-10
 
-- webserver 0.13.4
+- webserver 0.13.12
     - Upgraded Redis dependency from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the entire cluster in parallel, which is not something Kubernetes will do automatically.
         1. Option #1: Set webserver.redis-cluster.redis.update-strategy.type = OnDelete
             - Run the upgrade deployment
