@@ -4,8 +4,6 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 ## Upgrading from the release 2023-09 to the release 2023-10
 
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 - webserver 0.13.4
     - Upgraded Redis dependency from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the entire cluster in parallel, which is not something Kubernetes will do automatically.
         1. Option #1: Set webserver.redis-cluster.redis.update-strategy.type = OnDelete
@@ -18,6 +16,32 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
             - Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
     - Once upgraded, Redis storage will be incompatibile with older versions of the software. If it is necessary to downgrade to an older version, you must perform a hard reset on the redis cluster:
         - [Perform-a-hard-reset-on-the-redis-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Perform-a-hard-reset-on-the-redis-cluster.md)
+
+## New Features and Behavior changes
+
+- testinsightsui 0.6.112
+    - Comments service was added to top level helm chart in previous release 2023-09. In this release, feature flag is removed and comments tab will be visible in result details page and user can add/view/edit/delete comments under a test result.
+- The Test Analytics privilege category has been added, and includes the Query Measurements privilege. This privilege is not currently functional and is being added in support of features that will release in a future version.
+
+## Helm Chart Breaking Changes
+
+- CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
+    - If you have an existing installation of SLE you MUST etiher set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
+- New - mongodb connection string global value override.
+    - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
+    - Customers can use per-service user/password combinations ("mongodb+srv://`<username>`:`<password>`@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
+- dataframeservice
+    - `dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB).
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-values.yaml#L579)
+- taghistorian
+    - The TagHistorian service was added as part of the top level helm chart of SystemLink Enterprise. The service enables the users to see historical values for their tags.
+    - Before running the service, please configure the values according to the instructions from the helm chart.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L549)
+    - The service requires a `continuationTokenEncryptionKey` to be configured. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L566)
+
+## Upgrade Considerations
+
 - dataframeservice 0.14.49
     - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
     - Customers are not required to uptake this change, but doing so will be beneficial as the net result in load reduction.
@@ -54,30 +78,6 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - Default memory request and limit increased from 2GB per DataFrame Service pod to 4GB. Disabling Kafka (see separate instructions) will greatly reduce overall resource usage for the cluster.
     - Since data tables created after updating won't consume additional Kafka resources, you can likely decrease the dataframeservice.kafkaconnect.spec.resources.requests.memory and/or dataframeservice.kafkacluster.kafka.resources.requests.memory values if required to fit the larger DataFrame Service pods until Kafka is disabled.
     - Note that appendable tables created prior to the update will continue to consume Kafka resources.
-- The Test Analytics privilege category has been added, and includes the Query Measurements privilege. This privilege is not currently functional and is being added in support of features that will release in a future version.
-- testinsightsui 0.6.107
-    - Comments service was added to top level helm chart in previous release 2023-09. In this release, feature flag is removed and comments tab will be visible in result details page and user can add/view/edit/delete comments under a test result.
-
-## New Features and Behavior changes
-
-## Helm Chart Breaking Changes
-
-- CRITICAL - The systemlink Helm chart defaults to connect to an external MongoDB instance
-    - If you have an existing installation of SLE you MUST etiher set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
-- New - mongodb connection string global value override.
-    - Customers can specify the user/password directly in the global ("mongodb+srv://user:pass@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
-    - Customers can use per-service user/password combinations ("mongodb+srv://`<username>`:`<password>`@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
-- dataframeservice
-    - `dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB).
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-values.yaml#L579)
-- taghistorian
-    - The TagHistorian service was added as part of the top level helm chart of SystemLink Enterprise. The service enables the users to see historical values for their tags.
-    - Before running the service, please configure the values according to the instructions from the helm chart.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L549)
-    - The service requires a `continuationTokenEncryptionKey` to be configured. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L566)
-
-## Upgrade Considerations
 
 ### RabbitMQ Version
 
