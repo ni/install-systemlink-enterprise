@@ -1,14 +1,9 @@
 # Perform a hard reset of a Redis cluster without deleting the Helm deployment
 
-The following procedure can be used when things have gone very wrong and cannot
-be recovered using the CLI. This will cause downtime and will result in full
-data loss, so you do not want to do this if you can find any way to avoid it.
+The following procedure can be used when Redis is in a failure mode cannot
+be recovered using the Redis CLI. This will cause downtime of the SystemLink application.
 
-NOTE: For the current helium-webserver usage of Redis, the data stored in the
-cluster is ephemeral and can be lost without any long-term consequences. This
-may not be true for all future uses of Redis.
-
-If you have no other option, do the following:
+To perform a hard reset of Redis:
 
 1. Determine the name of the stateful set used to manage this cluster.
 
