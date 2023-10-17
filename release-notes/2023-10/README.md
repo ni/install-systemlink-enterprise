@@ -1,33 +1,32 @@
-# SystemLink Enterprise release 2023-10 Release Notes
+# SystemLink Enterprise 2023-10 Release Notes
 
-The 2023-10 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-10 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## New Features and Behavior changes
 
-- You can view the current and historical values of a tag in dashboards.
+- You can view the current and historical values of tags in dashboards.
 - Data tables have improved reliability and scalability and can support thousands of concurrent writers.
 - Systems data can be visualized in dashboards.
 - You can change the version of a package installed on a managed system.
 - You can view all tracked assets on the Assets page
 - You can add comments to a test result
 - You can connect to external MongoDB instances.
-    - SystemLink Enterprise now supports connecting to a single MongoDB replica set. This replaces the replica set per service pattern in previous releases of SystemLink Enterprise. This results in lower resource utilization and streamlines administration of the application.
     - This is a breaking change. Refer to **Helm Chart Breaking Changes** for detail on how to opt-out of this capability or migrate to a new MongoDB instance.
 - New Test Analytics privilege category is available.
     - The Test Analytics privilege category has been added, and includes the Query Measurements privilege. This privilege is not currently functional and is being added in support of features that will release in a future version.
 
 ## Upgrading from the release 2023-09 to the release 2023-10
 
-- This release upgrade Redis from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the Redis cluster in parallel, which is not something Kubernetes will do automatically.
+- This release upgrade Redis from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the Redis cluster. Helm will not perform this upgrade automatically.
 - Option #1
     1. Set `webserver.redis-cluster.redis.update-strategy.type = OnDelete`
     1. Run the Helm command to upgrade your deployment to this release.
-    1. Run `kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5`. The pods of the stateful set will be deleted and will be automatically recreated in parallel.
-    1. Remove the override of the redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
+    1. Run `kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5`. The pods of the stateful set will be deleted and will be automatically recreated.
+    1. Remove the override of the Redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
 - Option #2
     1. Prior to upgrade, run: `kubectl -n <namespace> delete statefulset <release>-webserver-redis`
     1. This will delete the redis cluster, preventing UI access to the application.
-    1. Now run the upgrade deployment. The redis cluster will be recreated and deployed in parallel.
+    1. Run the Helm command to upgrade your deployment to this release. The Redis cluster will be recreated and deployed in parallel.
 - Once upgraded, Redis storage will be incompatible with older versions of the software. If it is necessary to downgrade to an older version of SystemLink Enterprise, you must perform a hard reset on the redis cluster. These steps are not required if you are only upgrading to the latest release.
     - Refer to [Perform-a-hard-reset-on-the-redis-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Perform-a-hard-reset-on-the-redis-cluster.md) for steps to reset Redis.
 
@@ -37,13 +36,13 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - The systemlink Helm chart defaults to connect to an external MongoDB instance
     - If you have an existing installation of SLE you MUST either set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
 - MongoDB connection string global value override.
-    - You can specify the username and password in the global ("mongodb+srv://user:pass@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade). This forces SystemLink Enterprise to use the same username and password for all databases hosted in your MongoDB instance.
-    - You can use per-service username and password combinations ("mongodb+srv://`<username>`:`<password>`@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade). This forces SystemLink Enterprise to your specified usernames and passwords for each database hosted in your MongoDB instance.
+    - You can specify the username and password in the global (`mongodb+srv://user:pass@host/<database>`). `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use the same username and password for all databases hosted in your MongoDB instance.
+    - You can also use per-service username and password combinations (`mongodb+srv://<username>:<password>@host/<database>`) `<username>`, `<password>`, and `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use your specified usernames and passwords for each database hosted in your MongoDB instance.
 - Data Frame Service
     - `dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB).
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-values.yaml#L579)
 - Tag Historian service
-    - The TagHistorian service is included in the SystemLink Enterprise top level helm chart.
+    - The Tag Historian service is included in the SystemLink Enterprise top level Helm chart.
     - You must configure the secrets for MongoDB required by this service.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-secrets.yaml#L549)
     - The service requires a `continuationTokenEncryptionKey` to be configured. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
@@ -51,7 +50,7 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
 
 ## Upgrade Considerations
 
-- DataFrame Service removed Kafka dependency
+- DataFrame Service Kafka dependency has been removed
     - The DataFrame Service now uses a more efficient method for writing data to new tables, replacing Kafka. The DataFrame Service will still use Kafka for data ingestion for tables created before the 2023-10 release, while tables created after upgrading to the 2023-10 release will have data written directly to S3 storage. This changes leads to greatly reduced resource utilization.
     - After upgrading to the 2023-10 release, you can safely remove Kafka from your cluster once all pre-upgrade tables are set to readonly. Please note that disabling Kafka may lead to data loss if pre-upgrade tables are not readonly, because any buffered data may not get written to storage.
     - Refer to [Remove-Kafka-from-the-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Remove-Kafka-from-the-cluster.md) for detailed instructions.
