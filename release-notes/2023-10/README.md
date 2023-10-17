@@ -32,13 +32,13 @@ The 2023-10 release bundle for SystemLink Enterprise has been published to <http
     - Customers can use per-service user/password combinations ("mongodb+srv://`<username>`:`<password>`@host/`<database>`") (<> will be replaced during per-service Helm install/upgrade)
 - dataframeservice
     - `dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB).
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-values.yaml#L579)
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-values.yaml#L579)
 - taghistorian
     - The TagHistorian service was added as part of the top level helm chart of SystemLink Enterprise. The service enables the users to see historical values for their tags.
     - Before running the service, please configure the values according to the instructions from the helm chart.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L549)
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-secrets.yaml#L549)
     - The service requires a `continuationTokenEncryptionKey` to be configured. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/4da6c60d63ef48a663e78efd9b393e41b6c40ba4/getting-started/templates/systemlink-secrets.yaml#L566)
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-secrets.yaml#L566)
 
 ## Upgrade Considerations
 
