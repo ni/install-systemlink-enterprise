@@ -32,9 +32,14 @@ The 2023-10 release for SystemLink Enterprise has been published to <https://dow
 
 ## Helm Chart Breaking Changes
 
-- Support for single external MongoDB replica set
-    - The systemlink Helm chart defaults to connect to an external MongoDB instance
-    - If you have an existing installation of SLE you MUST either set `global.mongodb.install` to `true` or migrate your existing data to an external MongoDB instance and provide the connection string in `global.mongodb.connection_string`
+- Support for single external MongoDB instance
+    - The systemlink Helm chart now supports an external MongoDB instance
+    - If you have an existing installation of SLE you should set `global.mongodb.install` to `true` in order to maintain the same behavior in future versions of the Helm chart.
+	- If you desire to use a single external MongoDB instance:
+		- Consult the [Configuring SystemLink Enterprise documentation](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-125A1E48-1B3B-4EC8-99FF-808E36EF1586)
+		- Migrate your existing data to the external MongoDB instance. See the [MongoDB_Migration README file](https://github.com/ni/install-systemlink-enterprise/tree/main/release-notes/2023-10/MongoDB_Migration) for more information.
+		- Configure `global.mongodb.install` to `false`.
+		- Provide the connection string in `global.mongodb.connection_string`.
 - MongoDB connection string global value override.
     - You can specify the username and password in the global (`mongodb+srv://user:pass@host/<database>`). `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use the same username and password for all databases hosted in your MongoDB instance.
     - You can also use per-service username and password combinations (`mongodb+srv://<username>:<password>@host/<database>`) `<username>`, `<password>`, and `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use your specified usernames and passwords for each database hosted in your MongoDB instance.
