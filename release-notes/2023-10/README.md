@@ -37,7 +37,7 @@ The 2023-10 release for SystemLink Enterprise has been published to <https://dow
     - If you have an existing installation of SLE you should set `global.mongodb.install` to `true` in order to maintain the same behavior in future versions of the Helm chart.
     - If you desire to use a single external MongoDB instance:
         - Consult the [Configuring SystemLink Enterprise documentation](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-125A1E48-1B3B-4EC8-99FF-808E36EF1586)
-        - Migrate your existing data to the external MongoDB instance. See the [MongoDB_Migration README file](https://github.com/ni/install-systemlink-enterprise/tree/main/release-notes/2023-10/MongoDB_Migration) for more information.
+        - Migrate your existing data to the external MongoDB instance. See the [MongoDB_Migration README file](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/MongoDB_Migration) for more information.
         - Configure `global.mongodb.install` to `false`.
         - Provide the connection string in `global.mongodb.connection_string`.
 - MongoDB connection string global value override.
