@@ -559,23 +559,6 @@ dataframeservice:
       queueSize: 0
 
   ingestion:
-    ## The number of distinct tables using the Kafka ingestion backend that can be appended to before
-    ## table creation will be blocked. To stay under this limit, set 'endOfData: true' on tables that
-    ## don't need to be appended to anymore. For more information, visit ni.com/r/setendofdata.
-    ## Ignored when kafkaBackend.enabled is false.
-    ##
-    appendableTableLimit: 250
-
-    ## Configuration for the Kafka ingestion backend.
-    ##
-    kafkaBackend:
-      ## When true, Kafka and related resources are deployed. When set to false, you must also
-      ## set kafkacluster.kafka.enabled and schema-registry.enabled to false.
-      ## <ATTENTION> - Before disabling the Kafka backend, review the information in
-      ## the 2023-10 release notes on when Kafka can safely be disabled and removed.
-      ##
-      enabled: &kafkaEnabled true
-
     ## Configuration for the pool of streams used to upload the data to S3.
     ##
     s3StreamPool:
@@ -691,39 +674,6 @@ dataframeservice:
             <description>Value can either be true or false, set to true to use SSL with a secure Minio server.</description>
             <value>false</value>
           </property>
-
-  ## Configure Kafka access
-  ##
-  kafkaconnect:
-    spec:
-      template:
-        pod:
-          ## Configure image pull secrets for the Kafka container.
-          ##
-          imagePullSecrets: *pullSecrets
-
-  ## Configure Kafka UI
-  ##
-  kafka-ui:
-    imagePullSecrets:
-      - name: *niPullSecret
-
-  ## Configure the Kafka cluster
-  ##
-  kafkacluster:
-    kafka:
-      ## When false, this resource is not deployed.
-      ## See the documentation for "ingestion.kafkaBackend.enabled" before setting this to false.
-      ##
-      enabled: *kafkaEnabled
-
-  ## Configure Schema Registry for Kafka
-  ##
-  schema-registry:
-    ## When false, this resource is not deployed.
-    ## See the documentation for "ingestion.kafkaBackend.enabled" before setting this to false.
-    ##
-    enabled: *kafkaEnabled
 
 ## Salt configuration.
 ##
