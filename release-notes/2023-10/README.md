@@ -90,7 +90,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.18.70`
+**Top Level Helm Chart:** `systemlink 0.18.71`
 
 **Admin Helm Chart:** `systemlink-admin 0.18.9`
 
@@ -190,7 +190,7 @@ tagsui:0.2.48
 
 testinsightsui:0.6.112
 
-testmonitorservice:0.15.19
+testmonitorservice:0.15.21
 
 userdata:0.6.19
 
