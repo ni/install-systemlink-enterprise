@@ -72,7 +72,7 @@ The Tag Historian service is included in the SystemLink Enterprise top level Hel
     - Refer to [Remove-Kafka-from-the-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Remove-Kafka-from-the-cluster.md) for detailed instructions.
 - DataFrame Service Dremio refresh interval
     - The Dremio data set refresh job interval was increased from 2 minutes to 1 hour. This reduces overall load on Dremio.
-    - Customers are not required to uptake this change, but doing so will result in lower load and lower resource utilization.
+    - Customers are required to uptake this change. This change prevents Dremio's volumes from filling up, which can get it into a bad state.
     - Refer to [How-to-reset-Dremio.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/How-to-reset-Dremio.md) to uptake this change.
 - DataFrame Service increased memory limit.
     - The default memory request and limit increased from 2GB per DataFrame Service pod to 4GB.
