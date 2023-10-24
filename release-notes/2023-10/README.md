@@ -18,16 +18,14 @@ The 2023-10 release for SystemLink Enterprise has been published to <https://dow
 
 ### Redis upgrade from 7.0 to 7.2
 
-This release upgrades Redis from 7.0 to 7.2. This is a breaking change. Redis cluster needs to be upgraded as Helm will not perform this upgrade automatically. You can choose one of the options and follow the instructions below to perform the upgrade.
-
-Option #1
+This release upgrades Redis from 7.0 to 7.2. This is a breaking change. Redis cluster needs to be upgraded as Helm will not perform this upgrade automatically. You can perform the upgrade using the below steps, 
     1. Set `webserver.redis-cluster.redis.update-strategy.type = OnDelete`
     1. Run the Helm command to upgrade your deployment to this release.
     1. Run `kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5`. The pods of the stateful set will be deleted and will be automatically recreated.
     1. Remove the override of the Redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
 
-Option #2
-    1. Prior to upgrade, Run `kubectl -n <namespace> delete statefulset <release>-webserver-redis`. This will delete the redis cluster, preventing UI access to the application.
+If the above upgrade fails, you should reset redis deployment using the below steps,
+    1. Run `kubectl -n <namespace> delete statefulset <release>-webserver-redis`. This will delete the redis cluster, preventing UI access to the application.
     1. Run the Helm command to upgrade your deployment to this release. The Redis cluster will be recreated and deployed in parallel.
 
 Once upgraded, Redis storage will be incompatible with older versions of the software. If it is necessary to downgrade to an older version of SystemLink Enterprise, you must perform a hard reset on the redis cluster. These steps are not required if you are only upgrading to the latest release.
