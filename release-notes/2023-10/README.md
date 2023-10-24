@@ -35,25 +35,35 @@ Once upgraded, Redis storage will be incompatible with older versions of the sof
 
 ## Helm Chart Breaking Changes
 
-- Support for single external MongoDB instance
-    - The systemlink Helm chart now supports an external MongoDB instance
-    - If you have an existing installation of SLE you should set `global.mongodb.install` to `true` in order to maintain the same behavior in future versions of the Helm chart.
-    - If you want to use a single external MongoDB instance:
-        - Consult the [Configuring SystemLink Enterprise documentation](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-125A1E48-1B3B-4EC8-99FF-808E36EF1586)
-        - Migrate your existing data to the external MongoDB instance. See the [MongoDB_Migration README file](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/MongoDB_Migration) for more information.
-        - Configure `global.mongodb.install` to `false`.
-        - Provide the connection string in `global.mongodb.connection_string`.
-- MongoDB connection string global value override.
-    - You can specify the username and password in the global (`mongodb+srv://user:pass@host/<database>`). `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use the same username and password for all databases hosted in your MongoDB instance.
-    - You can also use per-service username and password combinations (`mongodb+srv://<username>:<password>@host/<database>`) `<username>`, `<password>`, and `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use your specified usernames and passwords for each database hosted in your MongoDB instance.
-- Data Frame Service
-    - `dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB).
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-values.yaml#L579)
-- Tag Historian service
-    - The Tag Historian service is included in the SystemLink Enterprise top level Helm chart.
+### Support for single external MongoDB instance
+
+The systemlink Helm chart now supports an external MongoDB instance
+
+If you have an existing installation of SLE you should set `global.mongodb.install` to `true` in order to maintain the same behavior in future versions of the Helm chart.
+
+If you want to use a single external MongoDB instance:
+    - Consult the [Configuring SystemLink Enterprise documentation](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-125A1E48-1B3B-4EC8-99FF-808E36EF1586)
+    - Migrate your existing data to the external MongoDB instance. See the [MongoDB_Migration README file](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/MongoDB_Migration) for more information.
+    - Configure `global.mongodb.install` to `false`.
+    - Provide the connection string in `global.mongodb.connection_string`.
+
+### MongoDB connection string global value override.
+
+You can specify the username and password in the global (`mongodb+srv://user:pass@host/<database>`) `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use the same username and password for all databases hosted in your MongoDB instance.
+
+You can also use per-service username and password combinations (`mongodb+srv://<username>:<password>@host/<database>`) `<username>`, `<password>`, and `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use your specified usernames and passwords for each database hosted in your MongoDB instance.
+
+### Data Frame Service
+
+`dataframeservice.requestBodySizeLimitMegabytes` has been renamed to `dataframeservice.requestBodySizeLimit`. It now accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB).
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-values.yaml#L579)
+
+### Tag Historian service
+
+The Tag Historian service is included in the SystemLink Enterprise top level Helm chart.
     - You must configure the secrets for MongoDB required by this service.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-secrets.yaml#L549)
-    - The service requires a `continuationTokenEncryptionKey` to be configured. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
+    - You must also configure a `continuationTokenEncryptionKey`. When creating the `continuationTokenEncryptionKey`, use a 32-byte cryptographically random value which is base64 encoded.
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-10/getting-started/templates/systemlink-secrets.yaml#L566)
 
 ## Upgrade Considerations
