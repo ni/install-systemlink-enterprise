@@ -1,38 +1,16 @@
 # How to reset Dremio
 
-## Problem statement
-
-This document describes how to reset the deployment of Dremio that comes bundled
-with the DataFrame Service (DFS). This is useful when needing to accomplish any
-of the following tasks:
-
-- Resolve unknown issues with queries in the DataFrame Service after other
-  debugging steps have failed
-- Restore Dremio when it's in a bad state
-- Restore Dremio after changing the directory or bucket used for its distributed
-  storage cache
-- Reinitialize Dremio when the S3 credentials are changed (only an issue in
-  pre-August 2023 versions of the DFS)
-- Recover from the failure mode where one of Dremio's volumes becomes full
-- Upgrade from `dremio-apache` to `dremio-ee`
-- Downgrade from `dremio-ee` to `dremio-apache`
+This document describes how to reset the deployment of Dremio if you want to reduce overall load and lower resource utilization. 
 
 ## Prerequisites
 
-Each deployment of the DataFrame Service (DFS) comes with a dedicated deployment
-of Dremio. The DFS and Dremio are deployed to the same Kubernetes cluster by the
-DFS's Helm chart. To reset the Dremio deployment, ensure you have permission
-to delete pods and Persistent Volume Claims (PVCs) in the Kubernetes cluster.
+Before you begin, ensure you have permission to delete pods and Persistent Volume Claims (PVCs) in the Kubernetes cluster.
 
 ## Resetting Dremio
 
-Dremio's state is persisted to its
-Persistent Volumes (PV), and the volumes can be deleted by deleting the associated
-Persistent Volume Claims (PVCs). To reset Dremio, you must delete all of
-PVCs with `dremio` in the name, delete all Dremio pods, and delete a DFS pod to trigger
-logic in the DFS to reinitialize Dremio.
-
-To reset Dremio:
+To reset Dremio, you must delete all of
+PVCs with `dremio` in the name, delete all Dremio pods and delete a DFS pod to trigger
+logic in the DFS to reinitialize Dremio. Please follow below steps to reset Dremio -
 
 1. Connect to your Kubernetes cluster with kubectl or another tool of your choosing.
 1. Run `kubectl get pvc` to list the PVCs in the cluster.
