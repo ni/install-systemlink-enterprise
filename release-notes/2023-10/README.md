@@ -6,28 +6,31 @@ The 2023-10 release for SystemLink Enterprise has been published to <https://dow
 
 - You can view the current and historical values of tags in dashboards.
 - Data tables have improved reliability and scalability and can support thousands of concurrent writers.
-- Systems data can be visualized in dashboards.
+- You can visualize systems data in dashboards.
 - You can change the version of a package installed on a managed system.
 - You can view all tracked assets on the Assets page
 - You can add comments to a test result
-- You can connect to external MongoDB instances.
-    - This is a breaking change. Refer to **Helm Chart Breaking Changes** for detail on how to opt-out of this capability or migrate to a new MongoDB instance.
+- You can connect to external MongoDB instances. This is a breaking change. Refer to **Helm Chart Breaking Changes** for detail on how to opt-out of this capability or migrate to a new MongoDB instance.
 - New Test Analytics privilege category is available.
     - The Test Analytics privilege category has been added, and includes the Query Measurements privilege. This privilege is not currently functional and is being added in support of features that will release in a future version.
 
 ## Upgrading from the release 2023-09 to the release 2023-10
 
-- This release upgrade Redis from 7.0 to 7.2. This is a breaking change. It is necessary to upgrade the Redis cluster. Helm will not perform this upgrade automatically.
-- Option #1
+### Redis upgrade from 7.0 to 7.2
+
+This release upgrades Redis from 7.0 to 7.2. This is a breaking change. Redis cluster needs to be upgraded as Helm will not perform this upgrade automatically. You can choose one of the options and follow the instructions below to perform the upgrade.
+
+Option #1
     1. Set `webserver.redis-cluster.redis.update-strategy.type = OnDelete`
     1. Run the Helm command to upgrade your deployment to this release.
     1. Run `kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5`. The pods of the stateful set will be deleted and will be automatically recreated.
     1. Remove the override of the Redis update-strategy from the configuration. You can re-deploy to apply this change but it is not required.
-- Option #2
-    1. Prior to upgrade, run: `kubectl -n <namespace> delete statefulset <release>-webserver-redis`
-    1. This will delete the redis cluster, preventing UI access to the application.
+
+Option #2
+    1. Prior to upgrade, Run `kubectl -n <namespace> delete statefulset <release>-webserver-redis`. This will delete the redis cluster, preventing UI access to the application.
     1. Run the Helm command to upgrade your deployment to this release. The Redis cluster will be recreated and deployed in parallel.
-- Once upgraded, Redis storage will be incompatible with older versions of the software. If it is necessary to downgrade to an older version of SystemLink Enterprise, you must perform a hard reset on the redis cluster. These steps are not required if you are only upgrading to the latest release.
+
+Once upgraded, Redis storage will be incompatible with older versions of the software. If it is necessary to downgrade to an older version of SystemLink Enterprise, you must perform a hard reset on the redis cluster. These steps are not required if you are only upgrading to the latest release.
     - Refer to [Perform-a-hard-reset-on-the-redis-cluster.md](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/Perform-a-hard-reset-on-the-redis-cluster.md) for steps to reset Redis.
 
 ## Helm Chart Breaking Changes
@@ -35,7 +38,7 @@ The 2023-10 release for SystemLink Enterprise has been published to <https://dow
 - Support for single external MongoDB instance
     - The systemlink Helm chart now supports an external MongoDB instance
     - If you have an existing installation of SLE you should set `global.mongodb.install` to `true` in order to maintain the same behavior in future versions of the Helm chart.
-    - If you desire to use a single external MongoDB instance:
+    - If you want to use a single external MongoDB instance:
         - Consult the [Configuring SystemLink Enterprise documentation](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-125A1E48-1B3B-4EC8-99FF-808E36EF1586)
         - Migrate your existing data to the external MongoDB instance. See the [MongoDB_Migration README file](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/MongoDB_Migration) for more information.
         - Configure `global.mongodb.install` to `false`.
