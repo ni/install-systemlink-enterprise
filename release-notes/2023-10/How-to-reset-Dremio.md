@@ -1,6 +1,6 @@
 # How to reset Dremio
 
-This document describes how to reset the deployment of Dremio if you want to reduce overall load and lower resource utilization. 
+This document describes how to reset the deployment of Dremio if you want to reduce overall load and lower resource utilization.
 
 ## Prerequisites
 
