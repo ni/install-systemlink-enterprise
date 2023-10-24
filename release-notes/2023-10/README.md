@@ -47,7 +47,7 @@ If you want to use a single external MongoDB instance:
     - Configure `global.mongodb.install` to `false`.
     - Provide the connection string in `global.mongodb.connection_string`.
 
-### MongoDB connection string global value override.
+### MongoDB connection string global value override
 
 You can specify the username and password in the global (`mongodb+srv://user:pass@host/<database>`) `<database>` will be replaced during per-service Helm install/upgrade. This forces SystemLink Enterprise to use the same username and password for all databases hosted in your MongoDB instance.
 

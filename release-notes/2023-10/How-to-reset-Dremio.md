@@ -21,7 +21,7 @@ of the following tasks:
 
 Each deployment of the DataFrame Service (DFS) comes with a dedicated deployment
 of Dremio. The DFS and Dremio are deployed to the same Kubernetes cluster by the
-DFS's Helm chart. To reset the Dremio deployment, ensure you have permission 
+DFS's Helm chart. To reset the Dremio deployment, ensure you have permission
 to delete pods and Persistent Volume Claims (PVCs) in the Kubernetes cluster.
 
 ## Resetting Dremio
