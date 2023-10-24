@@ -18,7 +18,7 @@ The 2023-10 release for SystemLink Enterprise has been published to <https://dow
 
 ### Redis upgrade from 7.0 to 7.2
 
-This release upgrades Redis from 7.0 to 7.2. This is a breaking change. Redis cluster needs to be upgraded as Helm will not perform this upgrade automatically. You can perform the upgrade using the below steps, 
+This release upgrades Redis from 7.0 to 7.2. This is a breaking change. Redis cluster needs to be upgraded as Helm will not perform this upgrade automatically. You can perform the upgrade using the below steps,
     1. Set `webserver.redis-cluster.redis.update-strategy.type = OnDelete`
     1. Run the Helm command to upgrade your deployment to this release.
     1. Run `kubectl -n <namespace> delete pods <release>-webserver-redis-0 <release>-webserver-redis-1 release>-webserver-redis-2 <release>-webserver-redis-3 <release>-webserver-redis-4 <release>-webserver-redis-5`. The pods of the stateful set will be deleted and will be automatically recreated.
