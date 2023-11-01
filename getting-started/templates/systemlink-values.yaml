@@ -270,15 +270,21 @@ testmonitorservice:
   ##
   database:
     ## The PostgreSQL database connection string
-    ## NOTE: If specified, the `database.connectionInfo` parameters are ignored.
-    ## If `database.tls.enabled` is set to `true`, the connection string must include the
-    ## appropriate SSL Mode (Prefer or Require).
+    ## NOTE: If specified, the `database.connectionInfo` parameters are ignored. If
+    ## `database.tls.enabled` is set to `true`, the connection string must include the
+    ## appropriate SSL Mode (Prefer, Require, VerifyCA, or VerifyFull).
     # <ATTENTION> - If connecting to an external PostgresSQL database, you must configure one of
     #    the connectionString and connectionInfo sections with the details of your database.
     ##
     connectionString:
       secretName: "testmonitorservicedb-connection"
+      ## Key from the secret to retrieve the connection string the service will use to connect to PostgreSQL.
+      ## NOTE: Ignored unless `database.connectionstring.secretName` parameter is set.
       connectionStringKey: "connection-string"
+      ## Key from the secret to retrieve the connection string that will be used to perform migrations managed by this chart.
+      ## If unset database.connectionString.connectionStringKey is used instead.
+      ## NOTE: Ignored unless `database.connectionstring.secretName` parameter is set.
+      migrationConnectionStringKey: null
     ## The PostgreSQL database connection info.
     ## NOTE: If the `database.connectionString` parameters are specified, the `database.connectionInfo`
     ## parameters are ignored.
@@ -296,13 +302,21 @@ testmonitorservice:
     #     ## PostgreSQL user name.
     #     ##
     #     user: "nisystemlink"
+    #     ## PostgreSQL username used to perform migration managed by this chart.
+    #     ## If unset database.connectionInfo.user is used instead.
+    #     migrationUser: ""
     #     ## The name of an existing secret with PostgreSQL connection credentials.
     #     ##
     #     secretName: "testmonitorservicedb-connection"
-    #     ## Password key to be retrieved from existing secret.
+    #     ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     passwordKey: "password"
+    #     ## @param database.connectionInfo.migrationPasswordKey Password key for database.connectionInfo.migrationUser to be retrieved from existing secret
+    #     ## If unset database.connectionInfo.passwordKey is used instead.
+    #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    #     ##
+    #     migrationPasswordKey: null
     ## The PostgreSQL database TLS configuration
     ##
     tls:
