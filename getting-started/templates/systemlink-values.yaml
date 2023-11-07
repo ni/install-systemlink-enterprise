@@ -909,6 +909,18 @@ smtp:
     ## Optional - The timeout, in seconds, when communicating with the SMTP server.
     ##
     # timeoutSeconds: 100
+  ## Settings related to individual SMTP messages
+  ##
+  messages:
+    ## @param maxRecipients Limit on the number of recipients a single message can be addressed to. Default is 100.
+    ##
+    maxRecipients: "100"
+    ## @param maxBodyBytes Limits the size of the message body. Default is 1 Megabyte.
+    ##
+    maxBodyBytes: "1048576"
+    ## @param maxSubjectBytes Limits the size of the subject line. Default is 10 kilobytes.
+    ##
+    maxSubjectBytes: "10240"
 
 ## Configuration for comments service.
 ##
