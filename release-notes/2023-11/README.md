@@ -1,12 +1,6 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
-
 # SystemLink Enterprise release 2023-11 Release Notes
 
 The 2023-11 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
-
-## Upgrading from the release 2023-10 to the release 2023-11
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
 ## New Features and Behavior changes
 
@@ -16,10 +10,18 @@ The 2023-11 release bundle for SystemLink Enterprise has been published to <http
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- sl-jupyterhub
+  - Notebooks are now running on Python 3.11.
 
-## Upgrade Considerations
+- nbexecservice
+  - Notebooks are now running on Python 3.11.
+
+- testmonitorservice 0.16.37
+  - The update includes a new database schema migration to support future features. This migration adds a new column to the `results` table. It is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
+  - The migration requires permission to ALTER TABLE, which is an elevated privileges beyond the minimal set needed by the service. To ALTER TABLE the PostgreSQL user must be the owner of the table, or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods will fail to start. See below for new options to facilitate this requirement.
+  - Database migrations are now managed by a Kubernetes Job that runs prior to deploy of the TestMonitor pods. This will allow rolling updates to TestMonitor to be peformed more consistently.
+  - The testmonitorservice helm chart includes new options to specify the PostgreSQL user used for migration separately from the user used by the service. This allows a lower privileged user to be used day-to-day by the service while a higher privileged user is only used during application updates.
+  - The new helm chart options are `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword` in the secrets values file [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-secrets.yaml#L549), and `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-values.yaml#L549).
 
 ### RabbitMQ Version
 
