@@ -6,7 +6,9 @@ The 2023-11 release bundle for SystemLink Enterprise has been published to <http
 
 - Behavior change or new feature description
 
-- Behavior change or new feature description
+- workorderservice
+  - The following privilege is added in the workorder to enable the "schedule" access to the test plan: `testplan:Schedule`.
+  - Note that the workorder service is not added in the helm chart. Hence, both workorder and testplan will not be accessible in the application.
 
 ## Helm Chart Breaking Changes
 
