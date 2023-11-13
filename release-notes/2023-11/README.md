@@ -76,9 +76,9 @@ filesui:0.8.51
 
 grafana-auth-proxy:20230404.4
 
-grafana-plugins:3.9.0
+grafana-plugins:3.9.1
 
-grafana-rbac-integrator:0.7.24
+grafana-rbac-integrator:0.7.25
 
 helium-dataservices:0.6.22
 
