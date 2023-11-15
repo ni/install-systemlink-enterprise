@@ -17,17 +17,18 @@ The 2023-11 release for SystemLink Enterprise has been published to <https://dow
     - Notebooks now support Python 3.11 in notebooks executed by Routines.
 
 - `testmonitorservice 0.16.37`
-    - The update includes a new database schema migration to support future features. This migration adds a new column to the `results` table. The migration is expected to complete without downtime. Downgrading to prior versions of the TestMonitor service after updating to this version is not supported.
-    - The migration requires permission for `ALTER TABLE`, which is an elevated privileges beyond the minimal set required by the service's normal operation. To use `ALTER TABLE` the PostgreSQL user must be the owner of the table or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. See below for new options to facilitate this requirement.
+    - The update includes a new database schema migration to support future features. The migration is expected to complete without downtime. Downgrading to prior versions of the TestMonitor service after updating to this version is not supported.
+    - The migration requires permission to alter tables in the Test Monitor schema, which is an elevated privileges beyond the minimal set required by the service's normal operation. To alter tables the PostgreSQL user must be the owner of the schema or be a member of the role that owns the schema. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. See below for new options to facilitate this requirement.
+    - If your current PostgreSQL user does not or cannot use these elevated privileges refer to **Setting up an Elevated PostgreSQL User for Migration** for steps to utilize a higher privileged user in this migration.
 
 ### Setting up an Elevated PostgreSQL User for Migration
 
 - The database migrations is performed by a Kubernetes job that runs prior to TestMonitor pod deployment.
-- The `testmonitorservice` Helm chart includes a new options to specify the PostgreSQL user for migration separately from the user for the service's normal operation. This allows the higher privileged user to be used during application updates exclusively.
+- The `testmonitorservice` Helm chart includes a new option to specify the PostgreSQL user for migration separately from the user for the service's normal operation. This allows the higher privileged user to be used during application updates exclusively.
 - New secrets must be defined in Helm for this PostgreSQL user
     - `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword`.
     - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-secrets.yaml#L434)
-- These secretes and a new connection string must be referenced in your values file.
+- These secrets and a new connection string must be referenced in your values file.
     - `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file
     - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-values.yaml#L287).
 
