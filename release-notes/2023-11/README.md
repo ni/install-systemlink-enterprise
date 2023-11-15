@@ -18,7 +18,7 @@ The 2023-11 release for SystemLink Enterprise has been published to <https://dow
 
 - `testmonitorservice 0.16.37`
     - The update includes a new database schema migration to support future features. The migration is expected to complete without downtime. Downgrading to prior versions of the TestMonitor service after updating to this version is not supported.
-    - The migration requires permission to alter tables in the Test Monitor schema, which is an elevated privileges beyond the minimal set required by the service's normal operation. To alter tables the PostgreSQL user must be the owner of the schema or be a member of the role that owns the schema. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. See below for new options to facilitate this requirement.
+    - The migration requires permission to alter tables in the Test Monitor schema, which are elevated privileges beyond the minimal set required by the service's normal operation. To alter tables the PostgreSQL user must be the owner of the schema or be a member of the role that owns the schema. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. See below for new options to facilitate this requirement.
     - If your current PostgreSQL user does not or cannot use these elevated privileges refer to **Setting up an Elevated PostgreSQL User for Migration** for steps to utilize a higher privileged user in this migration.
 
 ### Setting up an Elevated PostgreSQL User for Migration
