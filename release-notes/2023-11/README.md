@@ -1,31 +1,37 @@
 # SystemLink Enterprise release 2023-11 Release Notes
 
-The 2023-11 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-11 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- workorderservice
-    - The following privilege is added in the workorder to enable the "schedule" access to the test plan: `testplan:Schedule`.
-    - Note that the workorder service is not added in the helm chart. Hence, both workorder and testplan will not be accessible in the application.
+- Work Orders
+    - The Work Order's expose a new privilege for scheduling test plans.
+    - The Work Order service and UI is not included in the SystemLink Helm chart and associated privileges can be ignored.
 
 ## Helm Chart Breaking Changes
 
-- sl-jupyterhub
-    - Notebooks are now running on Python 3.11.
+- `sl-jupyterhub`
+    - Notebooks now support Python 3.11 in the JupyterHub development environment.
 
-- nbexecservice
-    - Notebooks are now running on Python 3.11.
+- `nbexecservice`
+    - Notebooks now support Python 3.11 in notebooks executed by Routines.
 
-- testmonitorservice 0.16.37
-    - The update includes a new database schema migration to support future features. This migration adds a new column to the `results` table. It is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
-    - The migration requires permission to ALTER TABLE, which is an elevated privileges beyond the minimal set needed by the service. To ALTER TABLE the PostgreSQL user must be the owner of the table, or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods will fail to start. See below for new options to facilitate this requirement.
-    - Database migrations are now managed by a Kubernetes Job that runs prior to deploy of the TestMonitor pods. This will allow rolling updates to TestMonitor to be peformed more consistently.
-    - The testmonitorservice helm chart includes new options to specify the PostgreSQL user used for migration separately from the user used by the service. This allows a lower privileged user to be used day-to-day by the service while a higher privileged user is only used during application updates.
-    - The new helm chart options are `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword` in the secrets values file [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-secrets.yaml#L434), and `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-values.yaml#L287).
+- `testmonitorservice 0.16.37`
+    - The update includes a new database schema migration to support future features. This migration adds a new column to the `results` table. The migration is expected to complete without downtime. Downgrading to prior versions of the TestMonitor service after updating to this version is not supported.
+    - The migration requires permission for `ALTER TABLE`, which is an elevated privileges beyond the minimal set required by the service's normal operation. To use `ALTER TABLE` the PostgreSQL user must be the owner of the table or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. See below for new options to facilitate this requirement.
 
-### RabbitMQ Version
+### Setting up an Elevated PostgreSQL User for Migration
+
+- The database migrations is performed by a Kubernetes job that runs prior to TestMonitor pod deployment.
+- The `testmonitorservice` Helm chart includes a new options to specify the PostgreSQL user for migration separately from the user for the service's normal operation. This allows the higher privileged user to be used during application updates exclusively.
+- New secrets must be defined in Helm for this PostgreSQL user
+    - `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword`.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-secrets.yaml#L434)
+- These secretes and a new connection string must be referenced in your values file.
+    - `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-values.yaml#L287).
+
+## RabbitMQ Version
 
 SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
 
@@ -38,15 +44,11 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
 - [closed-bugs-sle-2023-11](https://github.com/ni/install-systemlink-enterprise/tree/2023-11/release-notes/2023-11/closed-bugs-sle-2023-11.xlsx)
 
 ## Software Bill of Materials and Notices
-
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
 [SBOM](link to SBOM)
 
