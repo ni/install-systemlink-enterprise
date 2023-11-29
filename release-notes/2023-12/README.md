@@ -8,14 +8,45 @@ The 2023-12 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
+- `systemsui`
+    - Configuring feeds on a system has been enabled in the System Details Page.
+    - Reinstalling packages is available in the Software Page.
 
-- Behavior change or new feature description
+- `saltmaster`
+    - SaltMaster service now supports the v2 of the salt communication model.
+    - Starting with SystemLink Enterprise 2023-12 you will be able to connect systems that have SystemLink Client 2024 Q1 (24.0) or newer installed.
+    - Starting with 2024 Q1 (24.0), the SystemLink Client will use the v2 and it will only be compatible with the versions of SaltMaster that are implementing v2.
+
+- `tagsui`
+    - The Utilities section now includes a new Tags application, which allows end users to view tags in their organization.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `smtp`
+    - The SMTP service now enforces limits on the size of individual messages. These limits can be configured in the Helm values file - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-12/getting-started/templates/systemlink-values.yaml#L912).
+        - `smtp.messages.maxRecipients` - Maximum number of recipients for a message (default is 100)
+        - `smtp.messages.maxBodyBytes` - Maximum length of the message body in bytes (defaults to 1 Megabyte)
+        - `smtp.messages.maxSubjectBytes` - Maximum length of the subject line in bytes (defaults to 10 kilobytes)
+    - Additionally, the SMTP service now requires that the subject line of a message contain at least one non-whitespace character.
+
+- `dataframeservice`
+    - Support for Kafka-based data table ingestion has been removed.
+    - Any appendable tables that are still backed by Kafka will become read-only on upgrade.
+    - If the Kafka is still enabled on your cluster, first review the information in the 2023-10 release notes on the procedure for removing Kafka and on when Kafka can safely be disabled prior to installing this update.
+    - The following Helm values are obsolete and should be removed from YAML values files:
+        - `dataframeservice.ingestion.appendableTableLimit`
+        - `dataframeservice.ingestion.producer.*`
+        - `dataframeservice.ingestion.kafkaBackend.*`
+        - `dataframeservice.kafkacluster.*`
+        - `dataframeservice.kafka-ui.*`
+        - `dataframeservice.schema-registry.*`
+        - `dataframeservice.kafkaconnect.*`
+
+- `systemlinkadmin`
+    - The Kafka operator has been removed (previously an optional dependency enabled by default).
+    - Any appendable data tables that are still backed by Kafka will become read-only on upgrade.
+    - If the operator is still enabled on your cluster, first review the information in the 2023-10 release notes on the procedure for removing Kafka and on when Kafka can safely be disabled prior to installing this update.
+    - Helm values under the `strimzi-kafka-operator` key are obsolete and should be removed from YAML values files.
 
 ## Upgrade Considerations
 
