@@ -144,6 +144,11 @@ webserver:
     ## At minimum, "openid" scope is required, "email" and "profile" are required to populate user preferences
     ##
     scope: "openid email profile"
+    ## Optional - Pass the id_token_hint to provider when logging out.
+    ## https://openid.net/specs/openid-connect-rpinitiated-1_0.html#RPLogout
+    ## The id_token_hint parameter is recommended but may cause issues with some identity provider configurations.
+    # <ATTENTION> - Set enableLogoutToken to "true" if the identity provider supports it.
+    enableLogoutToken: "false"
     # Optional - Enable the user-info end-point to return the user's claims
     ##
     # enableUserInfo: "false"
