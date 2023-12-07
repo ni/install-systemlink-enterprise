@@ -63,15 +63,11 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2023-12](https://github.com/ni/install-systemlink-enterprise/tree/2023-12/release-notes/2023-12/closed-bugs-sle-2023-12.xlsx)
 
 ## Software Bill of Materials and Notices
-
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
 [SBOM](link to SBOM)
 
