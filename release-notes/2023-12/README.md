@@ -75,18 +75,146 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink <chart version>`
+**Top Level Helm Chart:** `systemlink 0.20.46`
 
-**Admin Helm Chart:** `systemlink-admin <chart version>`
+**Admin Helm Chart:** `systemlink-admin 0.20.7`
 
 ### NI Containers
 
-container:version
+assetservice:0.6.55
 
-### Non Container/Chart Artifacts
+assetui:0.5.80
 
-artifact:version
+comments:0.3.21
+
+dashboardsui:0.8.46
+
+dataframeservice:1.0.5
+
+dremio-ee:24.1.2
+
+executionsui:0.8.49
+
+filesui:0.9.56
+
+grafana-auth-proxy:20230404.4
+
+grafana-plugins:3.9.1
+
+grafana-rbac-integrator:0.8.3
+
+helium-dataservices:0.7.7
+
+helium-fileingestionservices:0.11.7
+
+helium-salt-master:1.5.17
+
+helium-serviceregistry:0.8.9
+
+helium-taghistoriandataretention:0.3.7
+
+helium-taghistorianservices:0.3.7
+
+helium-userservices:0.8.7
+
+helium-webappservices:0.7.6
+
+helium-webserver:0.15.7
+
+jupyter-notebook-userpod:2.1.4
+
+jupyterui:0.8.45
+
+landingpageui:0.8.48
+
+license:0.8.15
+
+licensesui:0.5.46
+
+nbexec-execution-helpers:0.9.5
+
+nbexec-notebook-runner:0.9.7
+
+nbexecservice:0.9.14
+
+nbparsingservice:0.8.11
+
+ni-grafana:v9.5.12-61b4dd6cfd-ni
+
+notification:0.8.7
+
+repository:0.4.11
+
+routineeventtrigger:0.9.4
+
+routineexecutor:0.9.3
+
+routinescheduletrigger:0.9.3
+
+routineservice:0.10.5
+
+routinesui:0.9.55
+
+securityui:0.8.39
+
+session-manager-service:0.9.6
+
+sl-configurable-http-proxy:2.1.3
+
+sl-k8s-hub:2.1.7
+
+smtp:0.8.4
+
+sysmgmtevent:0.9.8
+
+systemsmanagementservice:0.8.11
+
+systemsui:0.9.92
+
+tagsui:0.4.47
+
+testinsightsui:0.8.102
+
+testmonitorservice:0.17.5
+
+userdata:0.8.8
+
+userservice-setup:0.9.1
 
 ### 3rd Party Containers
 
-container:version
+alpine:3.18.4
+
+argoproj/argocli:v3.4.11-linux-amd64
+
+argoproj/argoexec:v3.4.11-linux-amd64
+
+argoproj/workflow-controller:v3.4.11-linux-amd64
+
+bitnami/kubectl:1.28.2-debian-11-r16
+
+bitnami/minio:2023.11.20-debian-11-r0
+
+bitnami/mongodb:5.0.22-debian-11-r0
+
+bitnami/mongodb:5.0.23-debian-11-r0
+
+bitnami/rabbitmq:3.12.10-debian-11-r0
+
+bitnami/redis-cluster:7.2.3-debian-11-r1
+
+busybox:stable@sha256:023917ec6a886d0e8e15f28fb543515a5fcd8d938edb091e8147db4efed388ee
+
+busybox:stable@sha256:51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
+
+jupyterhub/k8s-image-awaiter:3.1.0
+
+kiwigrid/k8s-sidecar:1.25.3
+
+kube-scheduler:v1.26.9
+
+pause:3.9
+
+swaggerapi/swagger-ui:v5.10.3
+
+zookeeper:3.8.1-temurin
