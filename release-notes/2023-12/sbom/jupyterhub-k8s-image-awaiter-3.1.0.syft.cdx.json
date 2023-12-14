@@ -1,0 +1,207 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:9e8eef3a-d072-4f2d-a883-205b97e3d5fe",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-12-01T15:26:55-06:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.92.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "51302827fbf15b84",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/jupyterhub/k8s-image-awaiter",
+      "version": "3.1.0"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1?package-id=783711b6374a545f",
+      "type": "library",
+      "name": "github.com/hashicorp/go-cleanhttp",
+      "version": "v0.5.1",
+      "cpe": "cpe:2.3:a:hashicorp:go-cleanhttp:v0.5.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hashicorp:go_cleanhttp:v0.5.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d0abb792095f964546f43f2bb2348f7bc89d005d278657a6391dcb294c9036f4"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/image-awaiter"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "amd64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.18.10"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:dH3aiDG9Jvb5r5+bYHsikaOUIpcM0xvgMXVoDkXMzJM="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/jupyterhub/zero-to-jupyterhub-k8s/image-awaiter"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.7.1?package-id=5663efb7f22b6ef4",
+      "type": "library",
+      "name": "github.com/hashicorp/go-retryablehttp",
+      "version": "v0.7.1",
+      "cpe": "cpe:2.3:a:hashicorp:go-retryablehttp:v0.7.1:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.7.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:hashicorp:go_retryablehttp:v0.7.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d0abb792095f964546f43f2bb2348f7bc89d005d278657a6391dcb294c9036f4"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/image-awaiter"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "amd64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.18.10"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:sUiuQAnLlbvmExtFQs72iFW/HXeUn8Z1aJLQ4LJJbTQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/jupyterhub/zero-to-jupyterhub-k8s/image-awaiter"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/jupyterhub/zero-to-jupyterhub-k8s/image-awaiter@(devel)?package-id=ecbd0481b31b9da2",
+      "type": "library",
+      "name": "github.com/jupyterhub/zero-to-jupyterhub-k8s/image-awaiter",
+      "version": "(devel)",
+      "cpe": "cpe:2.3:a:jupyterhub:zero-to-jupyterhub-k8s\\/image-awaiter:\\(devel\\):*:*:*:*:*:*:*",
+      "purl": "pkg:golang/github.com/jupyterhub/zero-to-jupyterhub-k8s/image-awaiter@(devel)",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "GolangBinMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jupyterhub:zero_to_jupyterhub_k8s\\/image_awaiter:\\(devel\\):*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:d0abb792095f964546f43f2bb2348f7bc89d005d278657a6391dcb294c9036f4"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/image-awaiter"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "amd64"
+        },
+        {
+          "name": "syft:metadata:goBuildSettings:-compiler",
+          "value": "gc"
+        },
+        {
+          "name": "syft:metadata:goBuildSettings:-ldflags",
+          "value": "-w -s"
+        },
+        {
+          "name": "syft:metadata:goBuildSettings:CGO_ENABLED",
+          "value": "0"
+        },
+        {
+          "name": "syft:metadata:goBuildSettings:GOAMD64",
+          "value": "v1"
+        },
+        {
+          "name": "syft:metadata:goBuildSettings:GOARCH",
+          "value": "amd64"
+        },
+        {
+          "name": "syft:metadata:goBuildSettings:GOOS",
+          "value": "linux"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.18.10"
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "github.com/jupyterhub/zero-to-jupyterhub-k8s/image-awaiter"
+        }
+      ]
+    }
+  ]
+}
