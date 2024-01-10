@@ -823,22 +823,6 @@ nbexecservice:
         secretKeySecret:
           name: "notebookexecution-s3-credentials"
           key: "password"
-
-## Configuration for licensing
-##
-license:
-  ## Persistent Volume configuration
-  ##
-  persistentVolume:
-    # <ATTENTION> Set this value to the name of the persistent storage class that supports ReadWriteMany access.
-    ## Leave this value as empty, to use the default storage class, if it already supports ReadWriteMany access.
-    ##
-    storageClassName: ""
-    
-  ## When enabled the service activates using a mounted activation file instead of contacting ni.com.
-  ##
-  offlineActivation:
-    enabled: false
     
 ## Configuration for event-based routine triggering.
 ##
