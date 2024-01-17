@@ -2,22 +2,23 @@
 
 The 2024-01 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- TestMonitorService Breaking API Changes
+    - Implement support for keywords and properties in Steps APIs. Bumped API Versions.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `systemlink`
+    - The license service and the license UI have been removed from the product.
+    - Settings related to "license:" in the Helm configuration are no longer required and can be removed from existing configurations.
+    - End users should delete persistent volume claims datadir-{release}-license-mongodb-0,  datadir-{release}-license-mongodb-1, and datadir-{release}-license-mongodb-2 if they exist.
 
-## Upgrade Considerations
+- `TestMonitorService`
+    - The update includes a new database schema migration to support future features. This migration adds a new columns (keywords and properties) to the `steps` table. It is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
+    - The migration requires permission to ALTER TABLE, which is an elevated privileges beyond the minimal set needed by the service. To ALTER TABLE the PostgreSQL user must be the owner of the table, or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods will fail to start. See below for new options to facilitate this requirement:
+        - TestMonitorService Breaking API Changes: Implement support for keywords and properties in Steps APIs. Bumped API Versions.
+    - Database migrations are now managed by a Kubernetes Job that runs prior to deploy of the TestMonitor pods. This will allow rolling updates to TestMonitor to be peformed more consistently.
 
 ### RabbitMQ Version
 
@@ -32,15 +33,11 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2024-01](https://github.com/ni/install-systemlink-enterprise/tree/2024-01/release-notes/2024-01/closed-bugs-sle-2024-01.xlsx)
 
 ## Software Bill of Materials and Notices
-
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
 
 [SBOM](link to SBOM)
 
