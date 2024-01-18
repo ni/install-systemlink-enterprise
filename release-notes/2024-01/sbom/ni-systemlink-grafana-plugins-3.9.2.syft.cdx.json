@@ -1,0 +1,87 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:8882218d-063f-4eb1-a950-9a51e34b5620",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-01-16T16:36:52-06:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.92.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "b65d92bb02b11080",
+      "type": "container",
+      "name": "niartifacts.jfrog.io/rnd-docker-prerelease-local/ni/systemlink/grafana-plugins",
+      "version": "3.9.2"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "ecb6dda993e2a156",
+      "type": "application",
+      "name": "busybox",
+      "version": "1.36.1",
+      "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "binary-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "BinaryMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "binary"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:82ae998286b2bba64ce571578647adcabef93d53867748d6046cc844ff193a83"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/["
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "name": "busybox",
+      "version": "1.36.1",
+      "description": "BusyBox v1.36.1",
+      "swid": {
+        "tagId": "busybox",
+        "name": "busybox",
+        "version": "1.36.1"
+      },
+      "properties": [
+        {
+          "name": "syft:distro:id",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:distro:idLike:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:distro:prettyName",
+          "value": "BusyBox v1.36.1"
+        },
+        {
+          "name": "syft:distro:versionID",
+          "value": "1.36.1"
+        }
+      ]
+    }
+  ]
+}
