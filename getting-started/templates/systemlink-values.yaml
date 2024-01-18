@@ -897,3 +897,51 @@ comments:
   ## Maximum number of comments supported per delete comments request.
   ##
   maximumCommentsPerDeleteRequest: 1000
+
+## Configuration for work order service.
+##
+workorder:
+  ## Set to true to enable the deployment of the work order and lab management ui service. By default, 
+  ## this is disabled and the work order and lab management ui service are not deployed.
+  ##
+  enabled: false
+
+  ## Maximum number of work orders per create work orders request.
+  ##
+  maximumWorkOrdersPerCreateRequest: 1000
+
+  ## Maximum query take per query work orders request.
+  ##
+  maximumTakePerQueryWorkOrdersRequest: 1000
+
+  ## Maximum number of work orders per update work orders request.
+  ##
+  maximumWorkOrdersPerUpdateRequest: 1000
+
+  ## Maximum number of work orders per delete work orders request.
+  ##
+  maximumWorkOrdersPerDeleteRequest: 1000
+
+  ## Maximum number of test plans per create test plans request.
+  ##
+  maximumTestPlansPerCreateRequest: 1000
+
+  ## Maximum query take per query test plans request.
+  ##
+  maximumTakePerQueryTestPlansRequest: 1000
+
+  ## Maximum number of test plans per update test plans request.
+  ##
+  maximumTestPlansPerUpdateRequest: 1000
+
+  ## Maximum number of test plans per delete test plans request.
+  ##
+  maximumTestPlansPerDeleteRequest: 1000
+
+  ## Maximum number of test plans per schedule test plans request.
+  ##
+  maximumTestPlansPerScheduleRequest: 1000
+
+  ## Maximum number of test plan templates per create test plan templates request.
+  ##
+  maximumTestPlanTemplatesPerCreateRequest: 1000
