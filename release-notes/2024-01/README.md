@@ -4,21 +4,25 @@ The 2024-01 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- TestMonitorService Breaking API Changes
-    - Implement support for keywords and properties in Steps APIs. Bumped API Versions.
+- Added support for SystemLink Client 2024 Q1.
+- You can @ mention other users in comments on test results and data spaces.
+- You can trigger test data extraction routines from the Product details page.
+- You can trend step data from the Results details page directly into a data space.
+- You can monitor disk utilization for your JupyterHub user data in the main status bar at the bottom of the window.
+- You can add keywords and properties in test result steps.
 
 ## Helm Chart Breaking Changes
 
-- `systemlink`
+- `systemlink 0.21.4`
     - The license service and the license UI have been removed from the product.
-    - Settings related to "license:" in the Helm configuration are no longer required and can be removed from existing configurations.
-    - End users should delete persistent volume claims datadir-{release}-license-mongodb-0,  datadir-{release}-license-mongodb-1, and datadir-{release}-license-mongodb-2 if they exist.
+    - Settings related to `license:` in Helm values files are no longer required and can be removed from existing configurations.
+    - Administrators should delete persistent volume claims `datadir-{release}-license-mongodb-0`,  `datadir-{release}-license-mongodb-1`, and `datadir-{release}-license-mongodb-2` if they exist.
 
-- `TestMonitorService`
-    - The update includes a new database schema migration to support future features. This migration adds a new columns (keywords and properties) to the `steps` table. It is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
-    - The migration requires permission to ALTER TABLE, which is an elevated privileges beyond the minimal set needed by the service. To ALTER TABLE the PostgreSQL user must be the owner of the table, or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods will fail to start. See below for new options to facilitate this requirement:
-        - TestMonitorService Breaking API Changes: Implement support for keywords and properties in Steps APIs. Bumped API Versions.
-    - Database migrations are now managed by a Kubernetes Job that runs prior to deploy of the TestMonitor pods. This will allow rolling updates to TestMonitor to be peformed more consistently.
+- `TestMonitorService 0.18.0`
+    - The update includes a new database schema migration to support future features. This migration adds a new column for keywords and properties to the `steps` table. This migration is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
+    - The migration requires the `ALTER TABLE` privilege, which is an elevated privilege beyond the minimal set needed by the service. To `ALTER TABLE` the PostgreSQL user must be the owner of the table, or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods will fail to start.
+        - This upgrade can be performed by the TestMonitorService directly if its PostgreSQL user for the service has the required `ALTER TABLE` privilege.
+        - If providing elevated privileges to this service is undesirable the upgrade may be performed via a Kubernetes job. The user for this Kubernetes job requires the `ALTER TABLE` privilege to perform this migration.
 
 ### RabbitMQ Version
 
