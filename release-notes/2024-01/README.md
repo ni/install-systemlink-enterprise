@@ -20,9 +20,19 @@ The 2024-01 release bundle for SystemLink Enterprise has been published to <http
 
 - `TestMonitorService 0.18.0`
     - The update includes a new database schema migration to support future features. This migration adds a new column for keywords and properties to the `steps` table. This migration is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
-    - The migration requires the `ALTER TABLE` privilege, which is an elevated privilege beyond the minimal set needed by the service. To `ALTER TABLE` the PostgreSQL user must be the owner of the table, or be a member of the role that owns the table. If your PostgreSQL user does not have the required permissions the updated pods will fail to start.
-        - This upgrade can be performed by the TestMonitorService directly if its PostgreSQL user for the service has the required `ALTER TABLE` privilege.
-        - If providing elevated privileges to this service is undesirable the upgrade may be performed via a Kubernetes job. The user for this Kubernetes job requires the `ALTER TABLE` privilege to perform this migration.
+    - The migration requires permission to alter tables in the Test Monitor schema, which are elevated privileges beyond the minimal set required by the service's normal operation. To alter tables the PostgreSQL user must be the owner of the schema or be a member of the role that owns the schema. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. Refer to [**Setting up an Elevated PostgreSQL User for Migration**](#setting-up-an-elevated-postgresql-user-for-migration) to facilitate this requirement.
+    - Refer to the [SystemLink manual on ni.com](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-22D7F822-FF82-436A-9458-DA1D33334886__GUID-A2CA66A5-7E59-419B-8638-48E7E7A3963A) for details on configuring PostgreSQL.
+
+### Setting up an Elevated PostgreSQL User for Migration
+
+- The database migrations is performed by a Kubernetes job that runs prior to TestMonitor pod deployment.
+- The `testmonitorservice` Helm chart includes a new option to specify the PostgreSQL user for migration separately from the user for the service's normal operation. This allows the higher privileged user to be used during application updates exclusively.
+- New secrets must be defined in Helm for this PostgreSQL user
+    - `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword`.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-01/getting-started/templates/systemlink-secrets.yaml#L434)
+- These secrets and a new connection string must be referenced in your values file.
+    - `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-01/getting-started/templates/systemlink-values.yaml#L287).
 
 ### RabbitMQ Version
 
