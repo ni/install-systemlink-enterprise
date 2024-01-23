@@ -10,6 +10,7 @@ The 2024-01 release bundle for SystemLink Enterprise has been published to <http
 - You can trend step data from the Results details page directly into a data space.
 - You can monitor disk utilization for your JupyterHub user data in the main status bar at the bottom of the window.
 - You can add keywords and properties in test result steps.
+- You can enable dark mode which tracks your device's settings.
 
 ## Helm Chart Breaking Changes
 
