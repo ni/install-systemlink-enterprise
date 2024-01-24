@@ -902,3 +902,22 @@ comments:
   ## Maximum number of comments supported per delete comments request.
   ##
   maximumCommentsPerDeleteRequest: 1000
+
+## Configuration for specification management service.
+##
+specificationmanagement:
+  ## Maximum number of specifications that can be created per request
+  ##
+  maxSpecificationCreationCountPerRequest: 1000
+
+  ## Maximum number of specifications that can be deleted per request
+  ##
+  maxSpecificationDeletionCountPerRequest: 10000
+
+  ## Maximum number of specifications that can be queried per request
+  ##
+  maxSpecificationQueryCountPerRequest: 10000
+
+  ## Maximum number of specifications that can be updated per request
+  ##
+  maxSpecificationUpdateCountPerRequest: 100
