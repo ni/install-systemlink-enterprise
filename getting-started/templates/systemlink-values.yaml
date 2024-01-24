@@ -902,3 +902,12 @@ comments:
   ## Maximum number of comments supported per delete comments request.
   ##
   maximumCommentsPerDeleteRequest: 1000
+
+## Configuration for work order service.
+##
+workorder:
+  ## Set to true to enable the deployment of the work order and lab management UI service. By default, 
+  ## this is disabled and the work order and lab management UI service are not deployed.
+  ## <ATTENTION> - Set to true to use the work order APIs and lab management UI.
+  ##
+  enabled: false
