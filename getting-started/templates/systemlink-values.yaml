@@ -86,14 +86,14 @@ global:
     cdnEndpoint: "https://web-sdk.ni.com/"
   ##
   ## MongoDB Database Configuration.
-  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance 
+  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance
   ## or utilize a managed solution such as MongoDB Atlas. Once provisioned provide the connection details in global.secrets.mongodb.connection_string.
   ##
   mongodb:
-    ## Enable or disable installation of per-service MongoDB instances. 
+    ## Enable or disable installation of per-service MongoDB instances.
     #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
     ##
-    install: false 
+    install: false
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -472,7 +472,7 @@ dashboardhost:
         ## <ATTENTION> - You must create the database manually before deploying. If you are using the default database
         ## name, you must create a database named "grafana". The database user, if not a superuser, will require USAGE
         ## and CREATE privileges on the "public" schema and SELECT, INSERT, UPDATE, and DELETE privileges on all tables
-        ## in the "public" schema. 
+        ## in the "public" schema.
         # name: "database-name"
         ## Use either URL or the other fields above to configure the database.
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
@@ -732,13 +732,44 @@ fileingestion:
    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
    ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
    ## individual rates configured here.
+  ## Configure rate limits.
   ##
   rateLimits:
     ## Upload file
     ##
     upload: 3
+    ## Download file
+    ##
+    download: 3
+    ## Delete file
+    ##
+    delete: 5
+    ## Delete many files
+    ##
+    deleteMany: 5
+    ## Query files
+    ##
+    query: 5
+    ## Get download tokens for downloading file
+    ##
+    getDownloadToken: 5
+    ## Update file
+    ##
+    update: 5
+    ## List files
+    ##
+    list: 5
   # Configure the maximum accepted size of uploaded files, expressed in gigabytes.
   uploadLimitGB: 10
+  ## Default values for the token used in downloading a file
+  ##
+  downloadToken:
+    ## Availability of the token expressed in seconds
+    ##
+    expirySeconds: 60
+    ## The secret used to create the encrypted token used for downloading files from UI
+    ##
+    encryptionKeySecret: "fileingestionservices-download-encryption-key"
 
 ## Configuration for JupyterHub.
 ##
@@ -754,12 +785,12 @@ sl-jupyterhub:
         egressAllowRules:
           # <ATTENTION> - Set to true to enable JupyterHub user pods to establish outbound connections to private IP addresses.
           privateIPs: false
-      # JupyterHub storage configuration.    
+      # JupyterHub storage configuration.
       storage:
         ## PVC Storage Request for every JupyterHub userpod.
         # <ATTENTION> - Adjust this size to match the needs of your application.
         capacity: 1Gi
-      
+
   ## Ingress configuration.
   ##
   ingress:
@@ -828,7 +859,7 @@ nbexecservice:
         secretKeySecret:
           name: "notebookexecution-s3-credentials"
           key: "password"
-    
+
 ## Configuration for event-based routine triggering.
 ##
 routineeventtrigger:
@@ -906,7 +937,7 @@ comments:
 ## Configuration for work order service.
 ##
 workorder:
-  ## Set to true to enable the deployment of the work order and lab management UI service. By default, 
+  ## Set to true to enable the deployment of the work order and lab management UI service. By default,
   ## this is disabled and the work order and lab management UI service are not deployed.
   ## <ATTENTION> - Set to true to use the work order APIs and lab management UI.
   ##
