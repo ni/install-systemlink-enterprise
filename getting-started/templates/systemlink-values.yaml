@@ -767,7 +767,7 @@ fileingestion:
     ## Availability of the token expressed in seconds
     ##
     expirySeconds: 60
-    ## The secret used to create the encrypted token used for download files
+    ## The secret used to create the encrypted token used for downloading files from UI
     ##
     encryptionKeySecret: "fileingestionservices-download-encryption-key"
 
