@@ -5,7 +5,7 @@ The 2024-02 release bundle for SystemLink Enterprise has been published to <http
 ## New Features and Behavior changes
 
 - Use the Lab Management System (LMS) to create, view, and manage work orders and test plans for the products you are testing.
-- Use Specification Management to maintain a central repository of specifications that you can use to analyze test results and measurements.
+- Use Specification Management APIs to maintain a central repository of specifications that you can use to analyze test results and measurements.
 - Create routines to automate an action when an event occurs.
 - Distribute Helm charts through the Docker registry (OCI) to simplify your deployment.
 - Added support for Kubernetes 1.28.
