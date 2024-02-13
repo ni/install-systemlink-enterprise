@@ -7,10 +7,16 @@ The 2024-02 release bundle for SystemLink Enterprise has been published to <http
 - Use the Lab Management System (LMS) to create, view, and manage work orders and test plans for the products you are testing.
 - Use Specification Management to maintain a central repository of specifications that you can use to analyze test results and measurements.
 - Create routines to automate an action when an event occurs.
-- Distribute Helm charts through the Docker registry to simplify your deployment.
+- Distribute Helm charts through the Docker registry (OCI) to simplify your deployment.
 - Added support for Kubernetes 1.28.
 
 ## Helm Chart Breaking Changes
+
+- `systemlink 0.22.55`
+    - SystemLink Helm chart now redistributed through an OCI registry. This requires small changes when staging, installing, or upgrading SystemLink Artifacts.
+    - Refer to [Configuring SystemLink Repositories](https://www.ni.com/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-B2CD4CC1-DFE3-49CB-A45D-C8A59514BF93__GUID-B1E08EC5-361F-4446-BAA5-EAC1E6C0FB4E) for details on staging SystemLink artifacts in your local repository.
+    - Refer to [Installing SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/installing-systemlink-enterprise.html) for details on using OCI registries install SystemLink Enterprise.
+    - Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detail on using OCI registries to upgrade SystemLink Enterprise.
 
 - `workorder 0.1.381` and `labmanagementui 0.1.700`
     - Work Order and Lab Management UI Helm charts are now included in the SystemLink top level chart. This chart requires a new mongoDB secret.
