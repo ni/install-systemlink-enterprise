@@ -13,24 +13,24 @@ The 2024-02 release bundle for SystemLink Enterprise has been published to <http
 ## Helm Chart Breaking Changes
 
 - `systemlink 0.22.55`
-    - SystemLink Helm chart now redistributed through an OCI registry. This requires small changes when staging, installing, or upgrading SystemLink Artifacts.
+    - SystemLink Helm chart is now redistributed through an OCI registry. This requires small changes when staging, installing, or upgrading SystemLink Artifacts.
     - Refer to [Configuring SystemLink Repositories](https://www.ni.com/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-B2CD4CC1-DFE3-49CB-A45D-C8A59514BF93__GUID-B1E08EC5-361F-4446-BAA5-EAC1E6C0FB4E) for details on staging SystemLink artifacts in your local repository.
-    - Refer to [Installing SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/installing-systemlink-enterprise.html) for details on using OCI registries install SystemLink Enterprise.
-    - Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detail on using OCI registries to upgrade SystemLink Enterprise.
+    - Refer to [Installing SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/installing-systemlink-enterprise.html) for details on using OCI registries to install SystemLink Enterprise.
+    - Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for details on using OCI registries to upgrade SystemLink Enterprise.
 
 - `workorder 0.1.381` and `labmanagementui 0.1.700`
-    - Work Order and Lab Management UI Helm charts are now included in the SystemLink top level chart. This chart requires a new mongoDB secret.
+    - Work Order and Lab Management UI Helm charts are now included in the SystemLink top level chart. This chart requires a new MongoDB secret.
     - The Work Order service is an optional installation. By default, it will not be installed. To enable installation, set the `enabled` flag to `true` in the work order service configuration.
     - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-02/getting-started/templates/systemlink-secrets.yaml#L605)
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-02/getting-started/templates/systemlink-values.yaml#L908)
 
 - `fileingestion 0.13.0`
-    - There is a new required Helm value for an encryption key used to encrypt download tokens. This will enable in the future the capability to download large  files through the UI
+    - There is a new required Helm value for an encryption key used to encrypt download tokens. This will enable a future capability to download large  files through the UI
     - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-02/getting-started/templates/systemlink-secrets.yaml#L627)
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-02/getting-started/templates/systemlink-values.yaml#L766)
 
 - `specificationmanagement 0.1.287`
-    - Specification Management Helm chart is now included in the SystemLink top level chart. This chart requires a new mongoDB secret.
+    - Specification Management Helm chart is now included in the SystemLink top level chart. This chart requires a new MongoDB secret.
     - The  Specification Management service is an optional installation. By default, it will not be installed. To enable installation, set the `enabled` flag to `true` in Specification Management service configuration.
     - The UIs to interact with this service are not yet included in the SystemLink top level chart.
     - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-02/getting-started/templates/systemlink-secrets.yaml#L627)
