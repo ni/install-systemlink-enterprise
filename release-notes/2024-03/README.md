@@ -2,7 +2,7 @@
 
 The 2024-03 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the release year-release-month to the 2024-03
+## Upgrading from the release 2024-02 to the 2024-03
 
 <!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
@@ -14,8 +14,9 @@ The 2024-03 release for SystemLink Enterprise has been published to <https://dow
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `systemsstateservice 0.1.56`
+    - Added new chart for Systems State Service. This requires mongodb credentials.
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-03/getting-started/templates/systemlink-secrets.yaml#L629)
 
 ## Upgrade Considerations
 
