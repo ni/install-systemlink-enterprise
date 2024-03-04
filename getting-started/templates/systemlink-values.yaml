@@ -228,12 +228,6 @@ minio:
   auth:
     existingSecret: "minio-credentials"
 
-  ## Port configuration
-  containerPorts:
-    ##  MinIO container port to open for MinIO API
-    ##
-    api: &minioPort 9000
-
   ## Storage configuration.
   persistence:
     ## PVC Storage Request for MinIO data volume
