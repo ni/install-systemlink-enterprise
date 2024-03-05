@@ -47,7 +47,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `0.23.41`
+**Top Level Helm Chart:** `0.23.44`
 
 **Admin Helm Chart:** `0.23.6`
 
@@ -105,7 +105,7 @@ nbexec-execution-helpers:0.10.1
 
 nbexec-notebook-runner:0.12.7
 
-nbexecservice:0.12.15
+nbexecservice:0.12.16
 
 nbparsingservice:0.11.10
 
@@ -139,7 +139,7 @@ specificationmanagement:0.2.7
 
 sysmgmtevent:0.12.10
 
-systemsmanagementservice:0.11.14
+systemsmanagementservice:0.11.16
 
 systemsstateservice:0.1.56
 
