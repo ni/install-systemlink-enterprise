@@ -25,10 +25,6 @@ global:
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
   imageRegistry: &imageRegistryRef "niedge01.jfrog.io/ni-docker"
-  ##
-  ## Defines a secret containing the credentials for a repo hosting miscellaneous artifacts
-  ##
-  genericArtifactPullSecret: "niartifacts-generic"
   ## Ingress settings that apply globally.
   # <ATTENTION> - Use the following section to apply annotation-based configuration to all Systemlink ingresses.
   #    Configuration is specific to the ingress controller, and the defaults will be sufficient for many deployments.
