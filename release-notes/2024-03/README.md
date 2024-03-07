@@ -43,7 +43,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `0.23.44`
+**Top Level Helm Chart:** `0.23.46`
 
 **Admin Helm Chart:** `0.23.6`
 
@@ -119,7 +119,7 @@ routinescheduletrigger:0.12.7
 
 routineservice:0.13.8
 
-routinesui:0.12.40
+routinesui:0.12.41
 
 securityui:0.11.56
 
