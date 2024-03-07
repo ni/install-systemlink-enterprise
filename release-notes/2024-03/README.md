@@ -2,15 +2,10 @@
 
 The 2024-03 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the release 2024-02 to the 2024-03
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `dashboardhost 0.11.0`
+    - Grafana upgraded to [version 10.0](https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v10-0/). Added breadcrumbs for dashboards and 'Explore' link to side nav.
 
 ## Helm Chart Breaking Changes
 
