@@ -4,13 +4,15 @@ The 2024-03 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- `dashboardhost 0.11.0`
-    - Grafana upgraded to [version 10.0](https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v10-0/). Added breadcrumbs for dashboards and 'Explore' link to side nav.
+- Use the Specification Management UI to maintain a central repository of specifications that you can use to analyze your test results and measurements. For more information, refer to [Managing Specifications](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-specifications.html).
+- Extract Standard Test Data Format (STDF) files into SystemLink results, steps, and measurements.
+- Duplicate existing routines so you can create similar routines faster. In the SystemLink web application, navigate to Analysis and Reporting » Routines. Select a routine and click Duplicate.
+- Dashboards upgraded to Grafana [version 10.0](https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v10-0/). Explore mode now available in the navigation menu.
 
 ## Helm Chart Breaking Changes
 
 - `systemsstateservice 0.1.56`
-    - Added new chart for Systems State Service. This requires mongodb credentials.
+    - A new chart for Systems State Service has been added. This requires MongoDB credentials.
     - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-03/getting-started/templates/systemlink-secrets.yaml#L629)
 
 ## Upgrade Considerations
