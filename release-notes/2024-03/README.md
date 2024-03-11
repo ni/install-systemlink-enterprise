@@ -34,9 +34,9 @@ Only customer facing bugs have been included in this list.
 
 ## Software Bill of Materials and Notices
 
-[SBOM](link to SBOM)
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2024-03/release-notes/2024-03/sbom)
 
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2024-03/release-notes/2024-03/notices)
 
 ## Versions
 
