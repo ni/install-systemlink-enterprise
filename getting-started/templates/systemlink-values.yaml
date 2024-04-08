@@ -256,7 +256,7 @@ minio:
     hostname: "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
-  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe;systemlink-notebook-execution"
+  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe;systemlink-notebook-execution;systemlink-feeds"
 
 ## Configuration for test result storage.
 ##
@@ -679,6 +679,33 @@ saltmaster:
     annotations:
       # <ATTENTION> - Set to the name of a MetalLB address group configured to allow TCP access to the Salt API.
       metallb.universe.tf/address-pool: "systemlink"
+
+## Feed configuration.
+##
+feedservice:
+  ## Configure S3/MinIO access.
+  ##
+  s3:
+    ## Secret name for S3 credentials.
+    ##
+    secretName: "feeds-s3-credentials"
+    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ##
+    bucket: "systemlink-feeds"
+    ## S3 connection scheme.
+    ##
+    scheme: "http://"
+    ## Set this value to connect to an external S3 instance.
+    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    ##
+    host: ""
+    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ##
+    service: *minioServiceName
+    ## S3 Port
+    # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
+    ##
+    port: *minioPort
 
 ## File upload configuration.
 ##
