@@ -2,20 +2,28 @@
 
 The 2024-04 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the 2024-03 to the release 2024-04
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `feedservice 0.1.211`
+    - New helm chart added for feeds. The following existing privileges are being used:
+        - feed:Read
+        - feed:Create
+        - feed:Update
+        - feed:Delete
+- `feedsui 0.0.364`
+    - New helm chart added for feeds.
+- `serviceregistry 0.13.12`
+    - Added new `testplan:Execute` permission to allow calling the new `/niworkorder/v1/testplans/{testPlanId}/execute` route. The Work Order service is not installed by default. This route is marked "[Beta]" and is still in development.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `workorder 0.3.79`
+    - workorder database needs to be dropped on upgrade.
+- `workorder 0.3.79`
+    - Status property has been renamed to state in workorder and testplan APIs. In the future, Status will have a different meaning.
+- `systemsstateservice 0.2.15`
+    - Added encryptionKey value for encrypting state content.
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-04/getting-started/templates/systemlink-secrets.yaml#L622)
 
 ## Upgrade Considerations
 
