@@ -94,6 +94,12 @@ global:
     #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
     ##
     install: false
+  ##
+  ## Specify secrets containing trusted certificates that should be installed in all the necessary applications.
+  ## Example:
+  ##  - secretName: "S3Certificate"
+  ##    key: cert
+  trustedCertificatesSecrets: []
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -886,6 +892,10 @@ nbexecservice:
         secretKeySecret:
           name: "notebookexecution-s3-credentials"
           key: "password"
+        ## Secret PATH containing trusted certificate that should be used for s3 communication.
+        # trustedCertificateSecret:
+        #   secretName: S3Certificate
+        #   key: cert
 
 ## Configuration for event-based routine triggering.
 ##
