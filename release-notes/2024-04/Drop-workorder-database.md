@@ -1,4 +1,4 @@
-# Dropping the work order database
+# Dropping the `workorder` service's database
 
 ## Assumptions
 
