@@ -2,7 +2,7 @@
 
 ## Assumptions
 
-- The workorder service is deployed but not in use, no data needs to be retained.
+- The `workorder` service is deployed but not in use, no data needs to be retained.
 
 - Administrator has `kubectl` access to the Kubernetes cluster from a local bash shell.
 
@@ -29,7 +29,7 @@ that were used when
 
 ## Procedure
 
-### Scale down the `workorder` service
+### Stop the `workorder` service
 
 1. Complete the upgrade to the 2024-04 helm chart
 
@@ -49,7 +49,7 @@ Skip this section if SLE connects to an external database.
 
    The fully qualified domain name of the primary replica will be printed. The hostname is the name of the
    pod. For example, if
-   `release-workorder-mongodb-1.-workorder-mongodb-headless.namespace.svc.cluster.local:27017` is
+   `release-workorder-mongodb-1.release-workorder-mongodb-headless.namespace.svc.cluster.local:27017` is
    printed, the primary replica's pod name is `release-workorder-mongodb-1`
 
 1. Start a mongo shell in the primary pod.
