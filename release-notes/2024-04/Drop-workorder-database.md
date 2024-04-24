@@ -10,15 +10,15 @@
 
 - If the SystemLink Enterprise deployment uses in-cluster, per-service MongoDB replica sets.
 
-  - Administrator has command line access to pods via `kubectl exec`.
+    - Administrator has command line access to pods via `kubectl exec`.
 
 - If the SystemLink Enterprise deployment uses an external MongoDB instance.
 
-  - Local bash shell with `mongosh` installed
+    - Local bash shell with `mongosh` installed
 
-  - Network connectivity to the external MongoDB instance.
+    - Network connectivity to the external MongoDB instance.
 
-  - MongoDB connection string w/ credentials for an account that has permission to drop the `workorders` database
+    - MongoDB connection string w/ credentials for an account that has permission to drop the `workorders` database
 
 ## Release and namespace name
 
