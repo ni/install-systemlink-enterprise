@@ -26,7 +26,7 @@ The 2024-04 release bundle for SystemLink Enterprise has been published to <http
 ## Helm Chart Breaking Changes
 
 - `workorder 0.3.79`
-    - workorder database needs to be dropped on upgrade.
+    - workorder database needs to be dropped on upgrade. See instructions [here](./Drop-workorder-database.md).
 - `workorder 0.3.79`
     - The `status` property has been renamed to `state` in `workorder` and `testplan` APIs.
 - `systemsstateservice 0.2.15`
