@@ -12,7 +12,7 @@ The 2024-04 release bundle for SystemLink Enterprise has been published to <http
 - Upload, download, and configure metadata for system state files.
 - Easily move third-party assets between test systems or unmanaged locations.
 
-- `feedservice 0.1.211`
+- `feedservice 0.1.212`
     - New helm chart added for feeds. The following existing privileges are being used:
         - feed:Read
         - feed:Create
@@ -60,9 +60,9 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `0.24.112`
+**Top Level Helm Chart:** `0.24.123`
 
-**Admin Helm Chart:** `0.24.3`
+**Admin Helm Chart:** `0.24.4`
 
 ### NI Containers
 
@@ -80,7 +80,7 @@ dremio-ee:24.1.2
 
 executionsui:0.12.64
 
-feedservice:0.1.211
+feedservice:0.1.212
 
 feedsui:0.0.364
 
@@ -94,7 +94,7 @@ grafana-rbac-integrator:0.12.9
 
 helium-dataservices:0.11.4
 
-helium-fileingestionservices:1.2.5
+helium-fileingestionservices:1.2.6
 
 helium-salt-master:1.9.12
 
@@ -122,7 +122,7 @@ nbexec-execution-helpers:0.10.1
 
 nbexec-notebook-runner:0.13.3
 
-nbexecservice:0.13.8
+nbexecservice:0.13.10
 
 nbparsingservice:0.12.11
 
@@ -180,15 +180,15 @@ workorder:0.3.79
 
 alpine:3.19.1
 
-argoproj/argocli:v3.4.11-linux-amd64
+argoproj/argocli:v3.5.5-linux-amd64
 
-argoproj/argoexec:v3.4.11-linux-amd64
+argoproj/argoexec:v3.5.5-linux-amd64
 
-argoproj/workflow-controller:v3.4.11-linux-amd64
+argoproj/workflow-controller:v3.5.5-linux-amd64
 
 bitnami/kubectl:1.28.2-debian-11-r16
 
-bitnami/minio:2024.1.16-debian-11-r0
+bitnami/minio:2024.4.18-debian-12-r0
 
 bitnami/mongodb:5.0.24-debian-11-r20
 
