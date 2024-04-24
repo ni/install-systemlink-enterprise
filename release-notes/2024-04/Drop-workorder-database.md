@@ -69,7 +69,7 @@ Skip this section if SystemLink Enterprise deploys per-service MongoDB replica s
 
 Run the following commands in the MongoDB shell to drop the `workorder` service's database:
 
-```
+```javascript
 use workorders
 db.dropDatabase()
 exit
