@@ -4,6 +4,14 @@ The 2024-04 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
+- [Create test plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) faster by using a test plan template.
+- [Edit result keywords from a data space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/editing-test-result-keywords-from-a-data-space.html). You can also exclude results from a data space using a keyword that the results have in common.
+- Learn about the [performance metrics for the SystemLink DataFrame service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/dataframe-service-performance-metrics.html).
+- Create feeds and upload custom packages.
+- Replicate feeds from a remote URL.
+- Upload, download, and configure metadata for system state files.
+- Easily move third-party assets between test systems or unmanaged locations.
+
 - `feedservice 0.1.211`
     - New helm chart added for feeds. The following existing privileges are being used:
         - feed:Read
