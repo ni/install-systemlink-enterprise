@@ -96,6 +96,7 @@ global:
     install: false
   ##
   ## Specify secrets containing trusted certificates that should be installed in all the necessary applications.
+  ## The secrets must be deployed manually prior to installing this chart.
   ## Example:
   ##  - secretName: "S3Certificate"
   ##    key: cert
@@ -893,6 +894,7 @@ nbexecservice:
           name: "notebookexecution-s3-credentials"
           key: "password"
         ## Secret PATH containing trusted certificate that should be used for s3 communication.
+        ## The secret must be deployed manually prior to installing this chart.
         # trustedCertificateSecret:
         #   secretName: S3Certificate
         #   key: cert
