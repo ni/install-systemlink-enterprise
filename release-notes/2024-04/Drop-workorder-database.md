@@ -31,7 +31,7 @@ that were used when
 
 ### Stop the `workorder` service
 
-1. Complete the upgrade to the 2024-04 helm chart
+1. Complete the upgrade to the 2024-04 version of the SystemLink Enterprise Helm chart
 
 1. Scale down the `workorder` service deployment
 
