@@ -20,7 +20,7 @@ The 2024-04 release bundle for SystemLink Enterprise has been published to <http
 - `workorder 0.3.79`
     - workorder database needs to be dropped on upgrade.
 - `workorder 0.3.79`
-    - Status property has been renamed to state in workorder and testplan APIs. In the future, Status will have a different meaning.
+    - The `status` property has been renamed to `state` in `workorder` and `testplan` APIs.
 - `systemsstateservice 0.2.15`
     - Added encryptionKey value for encrypting state content.
     - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-04/getting-started/templates/systemlink-secrets.yaml#L622)
