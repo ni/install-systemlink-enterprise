@@ -8,15 +8,15 @@
 
 - Administrator has permission to scale deployments
 
-- If the SystemLink Enterprise deployment uses in-cluster, per-service mongo databases
+- If the SystemLink Enterprise deployment uses in-cluster, per-service MongoDB replica sets.
 
   - Administrator has command line access to pods via `kubectl exec`.
 
-- If the SystemLink Enterprise deployment uses an external mongo database
+- If the SystemLink Enterprise deployment uses an external MongoDB instance.
 
   - Local bash shell with `mongosh` installed
 
-  - Network connectivity to the mongo database
+  - Network connectivity to the external MongoDB instance.
 
   - MongoDB connection string w/ credentials for an account that has permission to drop the `workorders` database
 
@@ -39,9 +39,9 @@ that were used when
 
 1. Wait for all `<release>-workorder` pods to stop.
 
-### Per-service replicasets: Launch a mongo shell - per-service replicasets
+### Launch a MongoDB shell (Per-service MongoDB replica sets)
 
-Skip this section if SLE connects to an external database.
+Skip this section if SystemLink Enterprise connects to an external database.
 
 1. Determine the name of the pod that is running the MongoDB primary replica.
 
@@ -52,22 +52,22 @@ Skip this section if SLE connects to an external database.
    `release-workorder-mongodb-1.release-workorder-mongodb-headless.namespace.svc.cluster.local:27017` is
    printed, the primary replica's pod name is `release-workorder-mongodb-1`
 
-1. Start a mongo shell in the primary pod.
+1. Start a MongoDB shell in the primary pod.
 
    `kubectl --namespace <namespace> exec <primary replica pod name> -it -- bash -c 'mongosh -u $MONGODB_ROOT_USER -p $MONGODB_ROOT_PASSWORD'`
 
-### Launch a mongo shell - external database
+### Launch a MongoDB shell (External MongoDB instance)
 
-Skip this section if SLE deploys per-service replicasets.
+Skip this section if SystemLink Enterprise deploys per-service MongoDB replica sets.
 
-1. Launch a mongo shell to connect to the database, using a connection string w/ user credentials
+1. Launch a MongoDB shell to connect to the database, using a connection string w/ user credentials
    that have permission to drop the `workorders` database.
 
    `mongosh <connection string>`
 
 ### Drop the `workorders` database
 
-Run the following commands in the mongo shell to drop the `workorder` service's database:
+Run the following commands in the MongoDB shell to drop the `workorder` service's database:
 
 ```
 use workorders
