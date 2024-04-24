@@ -4,8 +4,9 @@
 
 - The workorder service is deployed but not in use, no data needs to be retained.
 
-  - Administrator has `kubectl` access to the Kubernetes cluster from a local bash shell.
-  - Administrator has permission to scale deployments
+- Administrator has `kubectl` access to the Kubernetes cluster from a local bash shell.
+
+- Administrator has permission to scale deployments
 
 - If the SystemLink Enterprise deployment uses in-cluster, per-service mongo databases
 
@@ -14,7 +15,9 @@
 - If the SystemLink Enterprise deployment uses an external mongo database
 
   - Local bash shell with `mongosh` installed
+
   - Network connectivity to the mongo database
+
   - MongoDB connection string w/ credentials for an account that has permission to drop the `workorders` database
 
 ## Procedure
