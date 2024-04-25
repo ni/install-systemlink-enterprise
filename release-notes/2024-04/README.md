@@ -10,24 +10,13 @@ The 2024-04 release bundle for SystemLink Enterprise has been published to <http
 - Create feeds and upload custom packages.
 - Replicate feeds from a remote URL.
 - Upload, download, and configure metadata for system state files.
-- Easily move third-party assets between test systems or unmanaged locations.
-
-- `feedservice 0.1.212`
-    - New helm chart added for feeds. The following existing privileges are being used:
-        - feed:Read
-        - feed:Create
-        - feed:Update
-        - feed:Delete
-- `feedsui 0.0.364`
-    - New helm chart added for feeds.
-- `serviceregistry 0.13.12`
-    - Added new `testplan:Execute` permission to allow calling the new `/niworkorder/v1/testplans/{testPlanId}/execute` route. The Work Order service is not installed by default. This route is marked "[Beta]" and is still in development.
+- Easily move third-party assets between test systems or un-managed locations.
+- Work Orders has a new privilege for executing test plans. The Work Order service is not installed by default. This route is marked "[Beta]" and is still in development.
 
 ## Helm Chart Breaking Changes
 
 - `workorder 0.3.79`
-    - workorder database needs to be dropped on upgrade. See instructions [here](./Drop-workorder-database.md).
-- `workorder 0.3.79`
+    - The `workorder` MongoDB database needs to be dropped on upgrade. Refer to [Drop workorder database](./Drop-workorder-database.md) for instructions.
     - The `status` property has been renamed to `state` in `workorder` and `testplan` APIs.
 - `systemsstateservice 0.2.15`
     - Added encryptionKey value for encrypting state content.
