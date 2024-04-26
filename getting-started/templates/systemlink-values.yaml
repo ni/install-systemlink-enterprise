@@ -975,7 +975,7 @@ workorder:
   ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI service. 
   ## By default, this is enabled and the work order and lab management UI service are deployed.
   ##
-  enabled: false
+  enabled: true
 
 ## Configuration for specification management service.
 ##
