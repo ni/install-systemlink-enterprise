@@ -972,8 +972,8 @@ comments:
 ## Configuration for work order service.
 ##
 workorder:
-  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI service. 
-  ## By default, this is enabled and the work order and lab management UI service are deployed.
+  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services. 
+  ## By default, this is enabled and the work order and lab management UI services are deployed.
   ##
   enabled: true
 
