@@ -29,7 +29,7 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 |------------------|-------------------------------------|------------------------------------|
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
-| 3.12.x           | 0.25.x                              | current                            |
+| 3.13.x           | 0.25.x                              | current                            |
 
 ## Bugs Fixed
 
