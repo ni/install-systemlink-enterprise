@@ -972,11 +972,10 @@ comments:
 ## Configuration for work order service.
 ##
 workorder:
-  ## Set to true to enable the deployment of the work order and lab management UI service. By default,
-  ## this is disabled and the work order and lab management UI service are not deployed.
-  ## <ATTENTION> - Set to true to use the work order APIs and lab management UI.
+  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services. 
+  ## By default, this is enabled and the work order and lab management UI services are deployed.
   ##
-  enabled: false
+  enabled: true
 
 ## Configuration for specification management service.
 ##
