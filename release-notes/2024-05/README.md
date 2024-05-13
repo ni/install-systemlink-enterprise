@@ -1,22 +1,34 @@
 
-# SystemLink Enterprise release year-release-month Release Notes
+# SystemLink Enterprise release 2024-05 Release Notes
 
 The 2024-05 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the release 2024-04 to the release 2024-05
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `serviceregistry 0.14.19`
+    -  As the work orders and test plans are unlinked, the privileges are split between workorders and tesplans as follows:
+        - Create work orders -  `workorder: Create`
+        - Modify work orders -  `workorder: Update`
+        - Delete work orders -  `workorder: Delete`
+        - List and view work orders -  `workorder: Query`
+        - Create test plans -  `testplan: Create`
+        - Modify test plans -  `testplan: Update`
+        - Delete test plans -  `testplan: Delete`
+        - List and view test plans -  `testplan: Query`
+        - Access work orders web application - `workorder:AccessApplication`
+        - Access test plans web application - `testplan:AccessApplication`
+- `userservice 0.14.9`
+      - Data Maintainer role has been provided with all actions for test plans and query action for test plan template: `testplan: *`, `testplantemplate:Query`
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `webserver 0.21`
+    - Removed unused and undocumented routes: `/api/keys`, `/api/keys/duplicate`, `/user/api-key`
+- `systemlink 0.25.63` Top Level Helm Chart
+    - We upgraded our RabbitMQ dependency from 3.12.x to 3.13.x. Minor updates to the RabbitMQ version are potentially breaking. We document this in our release notes because customers will need to install a version of the product running version 3.12 before they can successfully upgrade to a version running 3.13.
+- `systemlink 0.25.63` Top Level Helm Chart
+    - Enabled the Work Order and Lab Management services by default. They are still an optional installation. To disable installation, set the enabled flag to false in the Work Order service configuration.
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-05/getting-started/templates/systemlink-values.yaml#L978)
 
 ## Upgrade Considerations
 
@@ -27,9 +39,8 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
 |------------------|-------------------------------------|------------------------------------|
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
-| 3.12.x           | 0.16.x                              | current                            |
-
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+| 3.12.x           | 0.16.x                              | 0.24.x                             |
+| 3.13.x           | 0.25.x                              | current                            |
 
 ## Bugs Fixed
 
