@@ -6,7 +6,7 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
 ## New Features and Behavior changes
 
 - `serviceregistry 0.14.19`
-    -  As the work orders and test plans are unlinked, the privileges are split between workorders and tesplans as follows:
+    - As the work orders and test plans are unlinked, the privileges are split between workorders and tesplans as follows:
         - Create work orders -  `workorder: Create`
         - Modify work orders -  `workorder: Update`
         - Delete work orders -  `workorder: Delete`
