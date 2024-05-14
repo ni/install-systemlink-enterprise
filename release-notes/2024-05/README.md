@@ -23,7 +23,7 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
         - Access work orders web application - `workorder:AccessApplication`
         - Access test plans web application - `testplan:AccessApplication`
 - `userservice 0.14.9`
-      - Data Maintainer role has been provided with all actions for test plans and query action for test plan template: `testplan: *`, `testplantemplate:Query`
+      - The Data Maintainer role has been updated to include all privileges for managing test plans and the privilege to query test plan templates
 
 ## Helm Chart Breaking Changes
 
