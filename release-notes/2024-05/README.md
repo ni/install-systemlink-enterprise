@@ -5,6 +5,11 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
+- Navigate SystemLink Enterprise faster with the intuitively organized UI.
+- Visualize data tables in a data space to gain insights into your time-series data.
+- Analyze test results with Jupyter Notebooks.
+- Annotate steps with keywords from a data space.
+- Save custom column configurations for the product specifications grid.
 - `workorder 0.4.35`
     - As the work orders and test plans are unlinked, the privileges are split between workorders and tesplans as follows:
         - Create work orders -  `workorder: Create`
