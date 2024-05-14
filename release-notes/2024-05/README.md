@@ -10,20 +10,19 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
 - Analyze test results with Jupyter Notebooks.
 - Annotate steps with keywords from a data space.
 - Save custom column configurations for the product specifications grid.
-- `workorder 0.4.35`
-    - The privileges for work orders and test plans have been split into distinct categories.
-        - Create work orders -  `workorder: Create`
-        - Modify work orders -  `workorder: Update`
-        - Delete work orders -  `workorder: Delete`
-        - List and view work orders -  `workorder: Query`
-        - Create test plans -  `testplan: Create`
-        - Modify test plans -  `testplan: Update`
-        - Delete test plans -  `testplan: Delete`
-        - List and view test plans -  `testplan: Query`
-        - Access work orders web application - `workorder:AccessApplication`
-        - Access test plans web application - `testplan:AccessApplication`
-- `userservice 0.14.9`
-      - The Data Maintainer role has been updated to include all privileges for managing test plans and the privilege to query test plan templates
+- Define and apply custom states to a system
+- `workorder 0.4.35` - The privileges for work orders and test plans have been split into distinct categories.
+    - Create work orders
+    - Modify work orders
+    - Delete work orders
+    - List and view work orders
+    - Create test plans
+    - Modify test plans
+    - Delete test plans
+    - List and view test plans
+    - Access work orders web application
+    - Access test plans web application
+- `userservice 0.14.9` - The Data Maintainer role has been updated to include all privileges for managing test plans and the privilege to query test plan templates
 
 ## Helm Chart Breaking Changes
 
