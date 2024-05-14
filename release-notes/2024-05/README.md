@@ -11,7 +11,7 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
 - Annotate steps with keywords from a data space.
 - Save custom column configurations for the product specifications grid.
 - `workorder 0.4.35`
-    - As the work orders and test plans are unlinked, the privileges are split between workorders and tesplans as follows:
+    - The privileges for work orders and test plans have been split into distinct categories.
         - Create work orders -  `workorder: Create`
         - Modify work orders -  `workorder: Update`
         - Delete work orders -  `workorder: Delete`
