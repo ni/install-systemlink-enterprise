@@ -8,9 +8,9 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
 - Navigate SystemLink Enterprise faster with the intuitively organized Home page and the navigation pane.
 - [Visualize data tables in a data space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) to gain insights into your time-series data.
 - [Analyze test results with Jupyter Notebooks](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/analyzing-test-results-with-jupyter-notebooks.html).
-- [Annotate steps with keywords from a data space](⁠https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/editing-test-result-keywords-from-a-data-space.html).
+- [Annotate steps with keywords from a data space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/editing-test-result-keywords-from-a-data-space.html).
 - Save custom column configurations for the product specifications grid.
-- [Create and manage test plans under a product](⁠https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html).
+- [Create and manage test plans under a product](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html).
 - Define and apply custom states to a system.
 - `workorder 0.4.35` - The privileges for work orders and test plans have been split into distinct categories.
     - Create work orders
