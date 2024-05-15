@@ -12,7 +12,7 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
 - Save custom column configurations for the product specifications grid.
 - [Create and manage test plans under a product](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html).
 - Define and apply custom states to a system.
-- `workorder 0.4.35` - The privileges for work orders and test plans have been split into distinct categories.
+- The privileges for work orders and test plans have been split into distinct categories.
     - Create work orders
     - Modify work orders
     - Delete work orders
@@ -23,16 +23,16 @@ The 2024-05 release bundle for SystemLink Enterprise has been published to <http
     - List and view test plans
     - Access work orders web application
     - Access test plans web application
-- `userservice 0.14.9` - The Data Maintainer role has been updated to include all privileges for managing test plans and the privilege to query test plan templates
+- The Data Maintainer role has been updated to include all privileges for managing test plans and the privilege to query test plan templates
 
 ## Helm Chart Breaking Changes
 
 - `webserver 0.21`
     - Removed unused and undocumented routes: `/api/keys`, `/api/keys/duplicate`, `/user/api-key`
 - `systemlink 0.25.63` Top Level Helm Chart
-    - We upgraded our RabbitMQ dependency from 3.12.x to 3.13.x. Minor updates to the RabbitMQ version are potentially breaking. Customers must install a version of SystemLink Enterprise running RabbitMQ 3.12 before they can successfully upgrade to a version running 3.13.
+    - The RabbitMQ dependency has been upgraded from 3.12.x to 3.13.x. Minor updates to the RabbitMQ version are potentially breaking. Customers must install a version of SystemLink Enterprise running RabbitMQ 3.12 before they can successfully upgrade to a version running 3.13.
 - `systemlink 0.25.63` Top Level Helm Chart
-    - The Work Order and Lab Management services are installed by default. You may disable installation for these services by setting the enabled flag to `false` in the Work Order service configuration.
+    - The Work Order and Lab Management services are installed by default. You may disable installation for these services by setting the enabled flag to `false` in the work order service configuration.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-05/getting-started/templates/systemlink-values.yaml#L978)
 
 ## Upgrade Considerations
