@@ -840,16 +840,7 @@ argoworkflows:
         registry: *imageRegistryRef
       ## Maximum number of workflows that can run in parallel.
       ##
-      parallelism: 300
-      workflowDefaults:
-        spec:
-          ttlStrategy:
-            ## How long should the workflow live in case of a failure.
-            ##
-            secondsAfterFailure: 600
-            ## How long should the workflow live in case of a success.
-            ##
-            secondsAfterSuccess: 0
+      parallelism: &workflowParallelism 300
     executor:
       image:
         registry: *imageRegistryRef
@@ -860,6 +851,7 @@ argoworkflows:
 ## Configuration for Notebook Execution service.
 ##
 nbexecservice:
+  maxNumberOfWorkflowsToSchedule: *workflowParallelism
   argo:
     ## Configure S3/MinIO access.
     ##
