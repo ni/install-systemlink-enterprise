@@ -347,70 +347,90 @@ testmonitorservice:
 ##
 alarmservice:
   ## Per-replica rate limiting configuration
+  ##
   rateLimits:
     ## Configuration for the global rate limiter that applies to all requests
-    ## @param rateLimits.global.enabled Enable the rate limiter
-    ## @param rateLimits.global.tokensPerSecond Number of token to replenish per second
-    ## @param rateLimits.global.tokenLimit Maximum number of tokens that can accumulate
-    ## @param rateLimits.global.queueLimit Number of requests that may queue when no tokens are available
     ##
     global:
+      ## Enable the rate limiter
+      ##
       enabled: true
+      ## Number of token to replenish per second
+      ## 
       tokensPerSecond: 750
+      ## Maximum number of tokens that can accumulate
+      ##
       tokenLimit: 200
+      ## Number of requests that may queue when no tokens are available
+      ##
       queueLimit: 0
 
     ## Configuration for the per-user rate limiter for acknowledging alarms
-    ## @param rateLimits.acknowledge.enabled Enable the rate limiter
-    ## @param rateLimits.acknowledge.tokensPerSecond Number of token to replenish per second
-    ## @param rateLimits.acknowledge.tokenLimit Maximum number of tokens that can accumulate
-    ## @param rateLimits.acknowledge.queueLimit Number of requests that may queue when no tokens are available
     ##
     acknowledge:
+      ## Enable the rate limiter
+      ##
       enabled: true
+      ## Number of token to replenish per second
+      ## 
       tokensPerSecond: 5
+      ## Maximum number of tokens that can accumulate
+      ##
       tokenLimit: 5
+      ## Number of requests that may queue when no tokens are available
+      ##
       queueLimit: 1
 
     ## Configuration for the per-API key rate limiter for creating or updating alarms
-    ## @param rateLimits.createOrUpdate.enabled Enable the rate limiter
-    ## @param rateLimits.createOrUpdate.tokensPerSecond Number of token to replenish per second
-    ## @param rateLimits.createOrUpdate.tokenLimit Maximum number of tokens that can accumulate
-    ## @param rateLimits.createOrUpdate.queueLimit Number of requests that may queue when no tokens are available
     ##
     createOrUpdate:
+      ## Enable the rate limiter
+      ##
       enabled: true
+      ## Number of token to replenish per second
+      ## 
       tokensPerSecond: 700
+      ## Maximum number of tokens that can accumulate
+      ##
       tokenLimit: 200
+      ## Number of requests that may queue when no tokens are available
+      ##
       queueLimit: 0
 
     ## Configuration for the per-user rate limiter for deleting alarms
-    ## @param rateLimits.delete.enabled Enable the rate limiter
-    ## @param rateLimits.delete.tokensPerSecond Number of token to replenish per second
-    ## @param rateLimits.delete.tokenLimit Maximum number of tokens that can accumulate
-    ## @param rateLimits.delete.queueLimit Number of requests that may queue when no tokens are available
     ##
     delete:
+      ## Enable the rate limiter
+      ##
       enabled: true
+      ## Number of token to replenish per second
+      ## 
       tokensPerSecond: 10
+      ## Maximum number of tokens that can accumulate
+      ##
       tokenLimit: 10
+      ## Number of requests that may queue when no tokens are available
+      ##
       queueLimit: 2
 
     ## Configuration for the per-user rate limiter for querying alarms
-    ## @param rateLimits.getAndQuery.enabled Enable the rate limiter
-    ## @param rateLimits.getAndQuery.tokensPerSecond Number of token to replenish per second
-    ## @param rateLimits.getAndQuery.tokenLimit Maximum number of tokens that can accumulate
-    ## @param rateLimits.getAndQuery.queueLimit Number of requests that may queue when no tokens are available
     ##
     getAndQuery:
+      ## Enable the rate limiter
+      ##
       enabled: true
+      ## Number of token to replenish per second
+      ## 
       tokensPerSecond: 10
+      ## Maximum number of tokens that can accumulate
+      ##
       tokenLimit: 10
+      ## Number of requests that may queue when no tokens are available
+      ##
       queueLimit: 2
 
   database:
-    ## @param database.inactiveAlarmCleanupInterval The amount of time inactive alarms will
-    ## be retained in the database ([d.]hh:mm[:ss] format).
+    ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
     ##
     inactiveAlarmCleanupInterval: 30.00:00
 
