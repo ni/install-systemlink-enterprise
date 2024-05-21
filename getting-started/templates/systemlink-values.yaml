@@ -90,6 +90,13 @@ global:
     #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
     ##
     install: false
+  ##
+  ## Specify secrets containing trusted certificates that should be installed in all the necessary applications.
+  ## The secrets must be deployed manually prior to installing this chart.
+  ## Example:
+  ##  - secretName: "S3Certificate"
+  ##    key: cert
+  trustedCertificatesSecrets: []
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -882,6 +889,11 @@ nbexecservice:
         secretKeySecret:
           name: "notebookexecution-s3-credentials"
           key: "password"
+        ## Secret PATH containing trusted certificate that should be used for s3 communication.
+        ## The secret must be deployed manually prior to installing this chart.
+        # trustedCertificateSecret:
+        #   secretName: S3Certificate
+        #   key: cert
 
 ## Configuration for event-based routine triggering.
 ##
@@ -960,11 +972,10 @@ comments:
 ## Configuration for work order service.
 ##
 workorder:
-  ## Set to true to enable the deployment of the work order and lab management UI service. By default,
-  ## this is disabled and the work order and lab management UI service are not deployed.
-  ## <ATTENTION> - Set to true to use the work order APIs and lab management UI.
+  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services. 
+  ## By default, this is enabled and the work order and lab management UI services are deployed.
   ##
-  enabled: false
+  enabled: true
 
 ## Configuration for specification management service.
 ##
