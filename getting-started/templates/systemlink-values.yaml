@@ -343,6 +343,77 @@ testmonitorservice:
       ##
       certificateSubPath: *postgresCertificateFileName
 
+## Configuration for the Alarm Service
+##
+alarmservice:
+  ## Per-replica rate limiting configuration
+  rateLimits:
+    ## Configuration for the global rate limiter that applies to all requests
+    ## @param rateLimits.global.enabled Enable the rate limiter
+    ## @param rateLimits.global.tokensPerSecond Number of token to replenish per second
+    ## @param rateLimits.global.tokenLimit Maximum number of tokens that can accumulate
+    ## @param rateLimits.global.queueLimit Number of requests that may queue when no tokens are available
+    ##
+    global:
+      enabled: true
+      tokensPerSecond: 750
+      tokenLimit: 200
+      queueLimit: 0
+
+    ## Configuration for the per-user rate limiter for acknowledging alarms
+    ## @param rateLimits.acknowledge.enabled Enable the rate limiter
+    ## @param rateLimits.acknowledge.tokensPerSecond Number of token to replenish per second
+    ## @param rateLimits.acknowledge.tokenLimit Maximum number of tokens that can accumulate
+    ## @param rateLimits.acknowledge.queueLimit Number of requests that may queue when no tokens are available
+    ##
+    acknowledge:
+      enabled: true
+      tokensPerSecond: 5
+      tokenLimit: 5
+      queueLimit: 1
+
+    ## Configuration for the per-API key rate limiter for creating or updating alarms
+    ## @param rateLimits.createOrUpdate.enabled Enable the rate limiter
+    ## @param rateLimits.createOrUpdate.tokensPerSecond Number of token to replenish per second
+    ## @param rateLimits.createOrUpdate.tokenLimit Maximum number of tokens that can accumulate
+    ## @param rateLimits.createOrUpdate.queueLimit Number of requests that may queue when no tokens are available
+    ##
+    createOrUpdate:
+      enabled: true
+      tokensPerSecond: 700
+      tokenLimit: 200
+      queueLimit: 0
+
+    ## Configuration for the per-user rate limiter for deleting alarms
+    ## @param rateLimits.delete.enabled Enable the rate limiter
+    ## @param rateLimits.delete.tokensPerSecond Number of token to replenish per second
+    ## @param rateLimits.delete.tokenLimit Maximum number of tokens that can accumulate
+    ## @param rateLimits.delete.queueLimit Number of requests that may queue when no tokens are available
+    ##
+    delete:
+      enabled: true
+      tokensPerSecond: 10
+      tokenLimit: 10
+      queueLimit: 2
+
+    ## Configuration for the per-user rate limiter for querying alarms
+    ## @param rateLimits.getAndQuery.enabled Enable the rate limiter
+    ## @param rateLimits.getAndQuery.tokensPerSecond Number of token to replenish per second
+    ## @param rateLimits.getAndQuery.tokenLimit Maximum number of tokens that can accumulate
+    ## @param rateLimits.getAndQuery.queueLimit Number of requests that may queue when no tokens are available
+    ##
+    getAndQuery:
+      enabled: true
+      tokensPerSecond: 10
+      tokenLimit: 10
+      queueLimit: 2
+
+  database:
+    ## @param database.inactiveAlarmCleanupInterval The amount of time inactive alarms will
+    ## be retained in the database ([d.]hh:mm[:ss] format).
+    ##
+    inactiveAlarmCleanupInterval: 30.00:00
+
 ## Configuration for the Grafana dashboard provider.
 ##
 dashboardhost:
