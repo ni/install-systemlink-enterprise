@@ -615,9 +615,6 @@ dataframeservice:
   ##
   sldremio:
     ## Uncomment this section to adjust the default tolerations configured for the Dremio pods.
-    ## Allow the negation of taints that have been applied to some set of nodes
-    ## in the Kubernetes cluster so that pods can be scheduled on those tainted nodes.
-    ##
     # tolerations:
     #   - key: "dremio"
     #     operator: "Equal"
