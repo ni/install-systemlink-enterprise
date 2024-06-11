@@ -1,0 +1,63 @@
+global:
+  ingress:
+    api:
+      annotations:
+        alb.ingress.kubernetes.io/healthcheck-path: '/up'
+        # <ATTENTION> - Enter the group name for the API Application Load Balancer
+        alb.ingress.kubernetes.io/group.name: 
+        alb.ingress.kubernetes.io/listen-ports: '[{ "HTTP" : 80 }]'
+        alb.ingress.kubernetes.io/target-group-attributes: 'deregistration_delay.timeout_seconds=300'
+        alb.ingress.kubernetes.io/target-type: 'ip'
+        kubernetes.io/ingress.class: 'alb'
+    ui:
+      annotations:
+        alb.ingress.kubernetes.io/healthcheck-path: '/up'
+        # <ATTENTION> - Enter the group name for the UI (webui) Application Load Balancer
+        alb.ingress.kubernetes.io/group.name: 
+        alb.ingress.kubernetes.io/listen-ports: '[{ "HTTP" : 80 }]'
+        alb.ingress.kubernetes.io/target-group-attributes: 'deregistration_delay.timeout_seconds=300'
+        alb.ingress.kubernetes.io/target-type: 'ip'
+        kubernetes.io/ingress.class: 'alb'
+
+assetservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/niapm/up'
+
+dashboardhost:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/api/health'
+  apiIngress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/api/health'
+
+testmonitorservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/nitestmonitor/up'
+
+dataframeservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/nidataframe/health'
+
+saltmaster:
+  serviceTCP:
+    type: NodePort
+    # <ATTENTION> - Enter the ARN for the port 4505 target group
+    elbTargetGroup4505ARN: 
+    # <ATTENTION> - Enter the ARN for the port 4506 target group
+    elbTargetGroup4506ARN: 
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: 'external'
+
+nbexecservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/ninbexecution/up'
+
+notification:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: '/ninotification/up'
