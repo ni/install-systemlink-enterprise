@@ -65,4 +65,4 @@ notification:
 swaggerapi:
   ingress:
     annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/niapis"
+      alb.ingress.kubernetes.io/healthcheck-path: "/niapis/"
