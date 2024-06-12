@@ -78,3 +78,11 @@ swaggerapi:
   ingress:
     annotations:
       alb.ingress.kubernetes.io/healthcheck-path: "/niapis/"
+
+sl-jupyterhub:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/jupyterhub/hub/health"
+  apiIngress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/jupyterhub/hub/health"
