@@ -1,0 +1,88 @@
+global:
+  ingress:
+    api:
+      annotations:
+        alb.ingress.kubernetes.io/healthcheck-path: "/up"
+        # <ATTENTION> - Enter the group name for the API Application Load Balancer
+        alb.ingress.kubernetes.io/group.name:
+        alb.ingress.kubernetes.io/target-group-attributes: "deregistration_delay.timeout_seconds=300"
+        alb.ingress.kubernetes.io/target-type: "ip"
+        kubernetes.io/ingress.class: "alb"
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80,"HTTPS": 443}]'
+        # <ATTENTION> - Enter the ARN of the AWS Certificate Manager certificate to associate with this ALB
+        alb.ingress.kubernetes.io/certificate-arn:
+        alb.ingress.kubernetes.io/ssl-policy: "ELBSecurityPolicy-TLS13-1-2-2021-06"
+        alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
+        # <ATTENTION> - Optional - Uncomment and enter the ARN for the WAFv2 ACL if you are using AWS' Web Application Firewall
+        # alb.ingress.kubernetes.io/wafv2-acl-arn:
+    ui:
+      annotations:
+        alb.ingress.kubernetes.io/healthcheck-path: "/up"
+        # <ATTENTION> - Enter the group name for the UI (webui) Application Load Balancer
+        alb.ingress.kubernetes.io/group.name:
+        alb.ingress.kubernetes.io/target-group-attributes: "deregistration_delay.timeout_seconds=300"
+        alb.ingress.kubernetes.io/target-type: "ip"
+        kubernetes.io/ingress.class: "alb"
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80,"HTTPS": 443}]'
+        # <ATTENTION> - Enter the ARN of the AWS Certificate Manager certificate to associate with this ALB
+        alb.ingress.kubernetes.io/certificate-arn:
+        alb.ingress.kubernetes.io/ssl-policy: "ELBSecurityPolicy-TLS13-1-2-2021-06"
+        alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
+        # <ATTENTION> - Optional - Uncomment and enter the ARN for the WAFv2 ACL if you are using AWS' Web Application Firewall
+        # alb.ingress.kubernetes.io/wafv2-acl-arn:
+
+assetservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/niapm/up"
+
+dashboardhost:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/api/health"
+  apiIngress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/api/health"
+
+testmonitorservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/nitestmonitor/up"
+
+dataframeservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/nidataframe/health"
+
+saltmaster:
+  serviceTCP:
+    type: NodePort
+    # <ATTENTION> - Enter the ARN for the port 4505 target group
+    elbTargetGroup4505ARN:
+    # <ATTENTION> - Enter the ARN for the port 4506 target group
+    elbTargetGroup4506ARN:
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: "external"
+
+nbexecservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/ninbexecution/up"
+
+notification:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/ninotification/up"
+
+swaggerapi:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/niapis/"
+
+sl-jupyterhub:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/jupyterhub/hub/health"
+  apiIngress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/jupyterhub/hub/health"
