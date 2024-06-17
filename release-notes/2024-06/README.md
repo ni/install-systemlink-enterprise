@@ -5,9 +5,12 @@ The 2024-06 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- [Create alarms](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/generating-custom-alarms.html) to notify you when an issue occurs in your system.
+- [Delete one or more product specifications](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/deleting-specifications.html) you no longer need.
+- [Select one or more Test Results and send them to a Jupyter Notebook for analysis](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/analyzing-test-results-with-jupyter-notebooks.html).
+- [Select one or more product specifications and send them to a Jupyter Notebook for analysis](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/analyzing-specification-compliance-with-jupyter-notebooks.html).
+- Automatically copy files linked to a test plan template when you [create a test plan](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) from the template.
+- Filter the test plans grid by a test plan.
 
 ## Helm Chart Breaking Changes
 
