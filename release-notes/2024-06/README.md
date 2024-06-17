@@ -11,11 +11,22 @@ The 2024-06 release bundle for SystemLink Enterprise has been published to <http
 - [Select one or more product specifications and send them to a Jupyter Notebook for analysis](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/analyzing-specification-compliance-with-jupyter-notebooks.html).
 - Automatically copy files linked to a test plan template when you [create a test plan](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) from the template.
 - Filter the test plans grid by a test plan.
+- `dataframeservice 1.6.71`
+    - The service now enforces a limit on the number of rows that a single data table can have. The limit defaults to 1 billion rows and can be changed by setting the "dataframeservice.ingestion.maxRowCount" YAML value when installing the helm chart.
+    - When a table reaches the row limit, requests to append more rows to the table will return a 409 Conflict HTTP error. Query performance for tables with such a large number of rows is highly dependent upon the number of columns, the resources available to Dremio, and the number of executors.
+- `workorder 0.5.74`
+    - The parameters field for notebook execution actions in the work order service now supports nested json (not just strings). Any persisted parameter configurations with non-string data will not be loadable in older versions of the service.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `systemlink 0.26.64` Top Level Helm Chart
+    - The Alarm Service was added to the top-level chart.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L346)
+    - Secrets for the service's MongoDB credentials need to be configured.
+        - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-secrets.yaml#L180)
+- `argoworkflows`
+    - The default configuration of workflows TTL Strategy was channed such that `secondsAfterFailure` was replaced with `secondsAfterCompletion`. If these values were overwritten, they might need to be adjusted. If the overwritten values match the default values, they can be removed.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L935)
 
 ## Upgrade Considerations
 
