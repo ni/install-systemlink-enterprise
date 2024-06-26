@@ -24,7 +24,7 @@ The 2024-06 release bundle for SystemLink Enterprise has been published to <http
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L346)
     - Secrets for the service's MongoDB credentials need to be configured.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-secrets.yaml#L180)
-    - The default configuration of workflows TTL Strategy was changed such that `secondsAfterFailure` was replaced with `secondsAfterCompletion`. If these values were overwritten, they might need to be adjusted. If the overwritten values match the default values, they can be removed.
+    - The default configuration of workflows TTL Strategy was changed such that `secondsAfterFailure` was replaced with `secondsAfterCompletion`. The configuration was removed from `getting-started/templates/systemlink-values.yaml` since it matches the default value defined in SystemLink helm chart. If the customer helm values file contains secondsAfterFailure and secondsAfterSuccess set to the default values of 600 and 0, the recommendation is to remove the configuration. If the secondsAfterSuccess does not match default value, the action item is to rename the field to `secondsAfterCompletion`.
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L935)
 
 ## Upgrade Considerations
