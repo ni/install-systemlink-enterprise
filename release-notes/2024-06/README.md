@@ -24,8 +24,9 @@ The 2024-06 release bundle for SystemLink Enterprise has been published to <http
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L346)
     - Secrets for the service's MongoDB credentials need to be configured.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-secrets.yaml#L180)
-    - The default configuration of workflows TTL Strategy was changed such that `secondsAfterFailure` was replaced with `secondsAfterCompletion`. The configuration was removed from `getting-started/templates/systemlink-values.yaml` since it matches the default value defined in SystemLink helm chart. If the customer helm values file contains secondsAfterFailure and secondsAfterSuccess set to the default values of 600 and 0, the recommendation is to remove the configuration. If the secondsAfterSuccess does not match default value, the action item is to rename the field to `secondsAfterCompletion`.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L935)
+    - The `argoworkflows` configuration for `argoworkflows.argo-workflows.controller.workflowDefaults.spec.ttlStrategy.secondAfterFailure` and `secondsAfterSuccess` has been replaced with `secondsAfterCompletion`. This new configuration defaults to 600 seconds (10 minutes)
+        - If `secondAfterFailure` and `secondsAfterSuccess` are set to 600 and 0, these values can be removed since they match the new default for `secondsAfterCompletion`.
+        - This setting enables system administrators to inspect XXXXXX pods after they have completed to to inspect conditions such as a notebook execution failure of time out. This setting ensures those pods exist after completion long enough such than an administrator can connect to them to debug.
 
 ## Upgrade Considerations
 
