@@ -10,11 +10,11 @@ The 2024-06 release bundle for SystemLink Enterprise has been published to <http
 - [Select one or more Test Results and send them to a Jupyter Notebook for analysis](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/analyzing-test-results-with-jupyter-notebooks.html).
 - [Select one or more product specifications and send them to a Jupyter Notebook for analysis](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/analyzing-specification-compliance-with-jupyter-notebooks.html).
 - Automatically copy files linked to a test plan template when you [create a test plan](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) from the template.
-- Filter the test plans grid by a test plan.
+- Filter the test plans table by a test plan.
 - The DataFrame service now enforces a limit on the number of rows a single data table can have. The limit defaults to 1 billion rows and can be changed by setting the `dataframeservice.ingestion.maxRowCount` value when installing the Helm chart.
-    - When a table reaches the row limit, requests to append more rows to the table will return a `409 Conflict` HTTP error. Query performance for tables with such a large number of rows is highly dependent upon the number of columns, the resources available to Dremio, and the number of executors.
-- The parameters field for notebook execution actions for the Work Order service now supports nested json in addition to strings parameters.
-- AWS specific value are provided to integrate SystemLink with AWS ALB ingresses.
+    - When a table reaches the row limit, requests to append more rows to the table will return a `409 Conflict` HTTP error. Query performance for tables with such a large number of rows is dependent upon the number of columns, the resources available to Dremio, and the number of executors.
+- The parameters field for notebook execution actions for the Work Order service now supports nested JSON in addition to strings parameters.
+- AWS specific values are provided to use SystemLink with AWS ALB ingresses.
     - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/AWS/aws_supplemental_values.yml)
 
 ## Helm Chart Breaking Changes
@@ -22,11 +22,11 @@ The 2024-06 release bundle for SystemLink Enterprise has been published to <http
 - `systemlink 0.26.64` Top Level Helm Chart
     - The Alarm Service was added to the top-level chart.
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-values.yaml#L346)
-    - Secrets for the service's MongoDB credentials need to be configured.
+    - Secrets for the service's MongoDB credentials must be configured.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-06/getting-started/templates/systemlink-secrets.yaml#L180)
     - The `argoworkflows` configuration for `argoworkflows.argo-workflows.controller.workflowDefaults.spec.ttlStrategy.secondAfterFailure` and `secondsAfterSuccess` has been replaced with `secondsAfterCompletion`. This new configuration defaults to 600 seconds (10 minutes)
         - If `secondAfterFailure` and `secondsAfterSuccess` are set to 600 and 0, these values can be removed since they match the new default for `secondsAfterCompletion`.
-        - This setting enables system administrators to inspect XXXXXX pods after they have completed to to inspect conditions such as a notebook execution failure of time out. This setting ensures those pods exist after completion long enough such than an administrator can connect to them to debug.
+        - This setting enables system administrators to inspect `execution-<executionID>-<GUID>` pods after they have completed to to inspect conditions such as a notebook execution failure or timeout. This setting ensures those pods exist after completion such than an administrator can connect to them to debug.
 
 ## Upgrade Considerations
 
