@@ -44,7 +44,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.27.58`
+**Top Level Helm Chart:** `systemlink 0.27.62`
 
 **Admin Helm Chart:** `systemlink-admin 0.27.3`
 
@@ -100,7 +100,7 @@ helium-webappservices:0.14.10
 
 helium-webserver:0.23.28
 
-jupyter-notebook-userpod:2.5.6
+jupyter-notebook-userpod:2.6.3
 
 jupyterui:0.15.24
 
@@ -110,9 +110,9 @@ landingpageui:0.15.29
 
 nbexec-execution-helpers:0.14.14
 
-nbexec-notebook-runner:0.14.12
+nbexec-notebook-runner:0.16.3
 
-nbexecservice:0.16.16
+nbexecservice:0.16.17
 
 nbparsingservice:0.15.9
 
@@ -156,7 +156,7 @@ systemsui:0.16.57
 
 tagsui:0.11.29
 
-testinsightsui:0.15.74
+testinsightsui:0.15.78
 
 testmonitorservice:0.24.22
 
@@ -186,11 +186,9 @@ bitnami/rabbitmq:3.13.2-debian-12-r4
 
 bitnami/redis-cluster:7.2.5-debian-12-r0
 
-busybox:stable@sha256:50aa4698fa6262977cff89181b2664b99d8a56dbca847bf6
-2f2ef04854597cf8
+busybox:stable@sha256:50aa4698fa6262977cff89181b2664b99d8a56dbca847bf62f2ef04854597cf8
 
-busybox:stable@sha256:51de9138b0cc394c813df84f334d638499333cac22edd05d
-0300b2c9a2dc80dd
+busybox:stable@sha256:51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
 
 jupyterhub/k8s-image-awaiter:3.3.7
 
