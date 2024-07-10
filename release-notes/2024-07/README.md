@@ -5,13 +5,15 @@ The 2024-07 release bundle for SystemLink Enterprise has been published to <http
 ## New Features and Behavior changes
 
 - Behavior change or new feature description
-
-- Behavior change or new feature description
-
-## Helm Chart Breaking Changes
-
-- Chart Name and version
-    - Description of breaking change.
+- `helium-serviceregistry 0.16.7`
+    - The Alarm Service privileges are exposed under the `Alarms` category in the security UI.
+- `testmonitorservice 0.24.22`
+    - Products have workspaces.
+    - This update includes a PostgreSQL migration to add workspaces to each product.
+    - New helm chart values are added to facilitate this migration.
+        - This includes a new required whitelisted API key secret used to retrieve workspace information used during the migration.
+        - The migration should complete quickly automatically after deployment with no required manual intervention.
+        - After upgrading, downgrading to prior versions is not supported.
 
 ## Upgrade Considerations
 
@@ -22,25 +24,20 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
 |------------------|-------------------------------------|------------------------------------|
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
-| 3.12.x           | 0.16.x                              | current                            |
-
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+| 3.12.x           | 0.16.x                              | 0.24.x                             |
+| 3.13.x           | 0.25.x                              | current                            |
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2024-07](https://github.com/ni/install-systemlink-enterprise/tree/2024-07/release-notes/2024-07/closed-bugs-sle-2024-07.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2024-07/release-notes/2024-07/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2024-07/release-notes/2024-07/notices)
 
 ## Versions
 
