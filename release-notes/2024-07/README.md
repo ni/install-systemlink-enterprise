@@ -4,7 +4,16 @@ The 2024-07 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
+- Align the x-axis of your [data table](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) plots to zero.
+- Decimate the data in your [Data Spaces](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) plots using Lossy, Max/Min, or Entry/Exit modes.
+- Filter and save a custom view of a [test plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) grid.
+- SystemLink Enterprise adds the [workspace](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-workspace.html) property to products. For new products, assign a workspace so you can control access. For products already in your system, SystemLink Enterprise assigns a workspace using the following logic.
+
+| | |
+|--|--|
+| The product has test results. | SystemLink Enterprise assigns the workspace associated with the first test results listed for the product. |
+| The product does not have test results. | SystemLink Enterprise assigns the default workspace.|
+
 - `helium-serviceregistry 0.16.7`
     - The Alarm Service privileges are exposed under the `Alarms` category in the security UI.
 - `testmonitorservice 0.24.22`
