@@ -10,7 +10,7 @@ The 2024-07 release bundle for SystemLink Enterprise has been published to <http
 - `testmonitorservice 0.24.22`
     - Products have workspaces.
     - This update includes a PostgreSQL migration to add workspaces to each product.
-    - New helm chart values are added to facilitate this migration.
+    - Added new Helm chart values to facilitate the PostgreSQL migration.
         - This includes a new required whitelisted API key secret used to retrieve workspace information used during the migration.
         - The migration should complete quickly automatically after deployment with no required manual intervention.
         - After upgrading, downgrading to prior versions is not supported.
