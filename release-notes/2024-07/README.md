@@ -12,7 +12,7 @@ The 2024-07 release bundle for SystemLink Enterprise has been published to <http
     - This update includes a PostgreSQL migration to add workspaces to each product.
     - Added new Helm chart values to facilitate the PostgreSQL migration.
         - This update includes a new required whitelisted API key secret. This secret is used to retrieve workspace information during the migration.
-        - The migration should complete quickly automatically after deployment with no required manual intervention.
+        - The migration completes automatically after deployment with no required manual intervention.
         - After upgrading, downgrading to prior versions is not supported.
 
 ## Upgrade Considerations
