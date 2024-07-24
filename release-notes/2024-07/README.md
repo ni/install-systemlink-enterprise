@@ -12,7 +12,7 @@ The 2024-07 release bundle for SystemLink Enterprise has been published to <http
 
 | | |
 |--|--|
-| The product has test results. | SystemLink Enterprise assigns the workspace associated with the first test results listed for the product. |
+| The product has test results. | SystemLink Enterprise assigns the workspace associated with the most recent test result listed for the product. |
 | The product does not have test results. | SystemLink Enterprise assigns the default workspace.|
 
 ## Helm Chart Breaking Changes
