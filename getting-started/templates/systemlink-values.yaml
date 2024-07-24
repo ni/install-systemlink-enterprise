@@ -822,6 +822,21 @@ feedservice:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
+  ## Proxy configuration to be used when the service needs to go through a proxy to have access to external services like ni.com.
+  httpProxy:
+    ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
+    ##
+    address: ""
+    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3 host in the noProxy list. Use this if the S3 host is internal to the cluster so we don't need to go through the proxy to access it.
+    ##
+    includeS3HostInNoProxy: false
+    ## @param httpProxy.includeAPIHostsInNoProxy Set to true to include the API hosts in the noProxy list. Use this if the API host is internal to the cluster so we don't need to go through the proxy to access it.
+    ## This is needed for the service to communicate with itself when replicating a feed hosted in the service. The url of the feed will have the ApiHost as the host.
+    ##
+    includeApiHostsInNoProxy: false
+    ## @param httpProxy.additionalNoProxy List of hosts that should not be proxied. Example: ["localserver1","localserver2"]
+    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com" 
+    additionalNoProxy: []
 
 ## File upload configuration.
 ##
@@ -989,6 +1004,21 @@ nbexecservice:
         # trustedCertificateSecret:
         #   secretName: S3Certificate
         #   key: cert
+
+## Configuration for Repository Service
+repository:
+  ## Proxy configuration to be used when the service needs to go through a proxy to have access to external services like ni.com.
+  httpProxy:
+    ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
+    ##
+    address: ""
+    ## @param httpProxy.includeAPIHostsInNoProxy Set to true to include the API hosts in the noProxy list. Use this if the API host is internal to the cluster so we don't need to go through the proxy to access it.
+    ## This is needed for the service to communicate with SLE Feed Service for determining the available packages from feeds hosted in SLE.
+    ##
+    includeAPIHostsInNoProxy: false
+    ## @param httpProxy.additionalNoProxy List of hosts that should not be proxied. Example: ["localserver1","localserver2"]
+    ## If we plan to use external feed servers (example: a SL Server instance hosting packages) that should not be proxied, add them to the list.
+    additionalNoProxy: []
 
 ## Configuration for event-based routine triggering.
 ##
