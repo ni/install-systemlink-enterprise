@@ -25,10 +25,6 @@ global:
   # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
   ##
   imageRegistry: &imageRegistryRef "niedge01.jfrog.io/ni-docker"
-  ##
-  ## Defines a secret containing the credentials for a repo hosting miscellaneous artifacts
-  ##
-  genericArtifactPullSecret: "niartifacts-generic"
   ## Ingress settings that apply globally.
   # <ATTENTION> - Use the following section to apply annotation-based configuration to all Systemlink ingresses.
   #    Configuration is specific to the ingress controller, and the defaults will be sufficient for many deployments.
@@ -94,6 +90,13 @@ global:
     #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
     ##
     install: false
+  ##
+  ## Specify secrets containing trusted certificates that should be installed in all the necessary applications.
+  ## The secrets must be deployed manually prior to installing this chart.
+  ## Example:
+  ##  - secretName: "S3Certificate"
+  ##    key: cert
+  trustedCertificatesSecrets: []
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -266,7 +269,7 @@ minio:
     hostname: "systemlink-minio-api.example.com"
   ## Comma, semi-colon or space separated list of buckets to create at initialization (only in standalone mode).
   ##
-  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe;systemlink-notebook-execution"
+  defaultBuckets: "systemlink-file-ingestion;systemlink-dataframe;systemlink-notebook-execution;systemlink-feeds"
 
 ## Configuration for test result storage.
 ##
@@ -339,6 +342,97 @@ testmonitorservice:
       ## The Certificate key to be retrieved from existing ConfigMap
       ##
       certificateSubPath: *postgresCertificateFileName
+
+## Configuration for the Alarm Service
+##
+alarmservice:
+  ## Per-replica rate limiting configuration
+  ##
+  rateLimits:
+    ## Configuration for the global rate limiter that applies to all requests
+    ##
+    global:
+      ## Enable the rate limiter
+      ##
+      enabled: true
+      ## Number of token to replenish per second
+      ##
+      tokensPerSecond: 750
+      ## Maximum number of tokens that can accumulate
+      ##
+      tokenLimit: 200
+      ## Number of requests that may queue when no tokens are available
+      ##
+      queueLimit: 0
+
+    ## Configuration for the per-user rate limiter for acknowledging alarms
+    ##
+    acknowledge:
+      ## Enable the rate limiter
+      ##
+      enabled: true
+      ## Number of token to replenish per second
+      ##
+      tokensPerSecond: 5
+      ## Maximum number of tokens that can accumulate
+      ##
+      tokenLimit: 5
+      ## Number of requests that may queue when no tokens are available
+      ##
+      queueLimit: 1
+
+    ## Configuration for the per-API key rate limiter for creating or updating alarms
+    ##
+    createOrUpdate:
+      ## Enable the rate limiter
+      ##
+      enabled: true
+      ## Number of token to replenish per second
+      ##
+      tokensPerSecond: 700
+      ## Maximum number of tokens that can accumulate
+      ##
+      tokenLimit: 200
+      ## Number of requests that may queue when no tokens are available
+      ##
+      queueLimit: 0
+
+    ## Configuration for the per-user rate limiter for deleting alarms
+    ##
+    delete:
+      ## Enable the rate limiter
+      ##
+      enabled: true
+      ## Number of token to replenish per second
+      ##
+      tokensPerSecond: 10
+      ## Maximum number of tokens that can accumulate
+      ##
+      tokenLimit: 10
+      ## Number of requests that may queue when no tokens are available
+      ##
+      queueLimit: 2
+
+    ## Configuration for the per-user rate limiter for querying alarms
+    ##
+    getAndQuery:
+      ## Enable the rate limiter
+      ##
+      enabled: true
+      ## Number of token to replenish per second
+      ##
+      tokensPerSecond: 10
+      ## Maximum number of tokens that can accumulate
+      ##
+      tokenLimit: 10
+      ## Number of requests that may queue when no tokens are available
+      ##
+      queueLimit: 2
+
+  database:
+    ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
+    ##
+    inactiveAlarmCleanupInterval: 30.00:00
 
 ## Configuration for the Grafana dashboard provider.
 ##
@@ -615,6 +709,16 @@ dataframeservice:
   ## Configure Dremio access
   ##
   sldremio:
+    ## Uncomment this section to adjust the default tolerations configured for the Dremio pods.
+    # tolerations:
+    #   - key: "dremio"
+    #     operator: "Equal"
+    #     value: "true"
+    #     effect: "NoSchedule"
+    #   - key: "dremio"
+    #     operator: "Equal"
+    #     value: "true"
+    #     effect: "NoExecute"
     ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
     ## Refer to Dremio documentation at https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
     ## for a description of the recommended minimum values.
@@ -638,8 +742,10 @@ dataframeservice:
     #   memory: 1024
     #   count: 3
     ## Nodes to select for Dremio pods.
+    ## Note: No node selector is configured by default, but it's recommended to
+    ## configure one to ensure the Dremio pods are scheduled to its tainted nodes.
     # nodeSelector:
-    #   high.mem: "true"
+    #   dremio: "true"
     auth:
       ## Name of the secret containing the Dremio login credentials
       ##
@@ -693,6 +799,33 @@ saltmaster:
     annotations:
       # <ATTENTION> - Set to the name of a MetalLB address group configured to allow TCP access to the Salt API.
       metallb.universe.tf/address-pool: "systemlink"
+
+## Feed configuration.
+##
+feedservice:
+  ## Configure S3/MinIO access.
+  ##
+  s3:
+    ## Secret name for S3 credentials.
+    ##
+    secretName: "feeds-s3-credentials"
+    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ##
+    bucket: "systemlink-feeds"
+    ## S3 connection scheme.
+    ##
+    scheme: "http://"
+    ## Set this value to connect to an external S3 instance.
+    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    ##
+    host: ""
+    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ##
+    service: *minioServiceName
+    ## S3 Port
+    # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
+    ##
+    port: *minioPort
 
 ## File upload configuration.
 ##
@@ -818,16 +951,7 @@ argoworkflows:
         registry: *imageRegistryRef
       ## Maximum number of workflows that can run in parallel.
       ##
-      parallelism: 300
-      workflowDefaults:
-        spec:
-          ttlStrategy:
-            ## How long should the workflow live in case of a failure.
-            ##
-            secondsAfterFailure: 600
-            ## How long should the workflow live in case of a success.
-            ##
-            secondsAfterSuccess: 0
+      parallelism: &workflowParallelism 300
     executor:
       image:
         registry: *imageRegistryRef
@@ -838,6 +962,7 @@ argoworkflows:
 ## Configuration for Notebook Execution service.
 ##
 nbexecservice:
+  maxNumberOfWorkflowsToSchedule: *workflowParallelism
   argo:
     ## Configure S3/MinIO access.
     ##
@@ -867,6 +992,11 @@ nbexecservice:
         secretKeySecret:
           name: "notebookexecution-s3-credentials"
           key: "password"
+        ## Secret PATH containing trusted certificate that should be used for s3 communication.
+        ## The secret must be deployed manually prior to installing this chart.
+        # trustedCertificateSecret:
+        #   secretName: S3Certificate
+        #   key: cert
 
 ## Configuration for event-based routine triggering.
 ##
@@ -945,11 +1075,10 @@ comments:
 ## Configuration for work order service.
 ##
 workorder:
-  ## Set to true to enable the deployment of the work order and lab management UI service. By default,
-  ## this is disabled and the work order and lab management UI service are not deployed.
-  ## <ATTENTION> - Set to true to use the work order APIs and lab management UI.
+  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services.
+  ## By default, this is enabled and the work order and lab management UI services are deployed.
   ##
-  enabled: false
+  enabled: true
 
 ## Configuration for specification management service.
 ##
