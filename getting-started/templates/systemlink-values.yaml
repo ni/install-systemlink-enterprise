@@ -826,6 +826,10 @@ feedservice:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
 
 ## File upload configuration.
 ##
