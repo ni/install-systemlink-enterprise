@@ -607,6 +607,10 @@ dataframeservice:
     ## Maximum number of concurrent connections to S3 per replica.
     ##
     maximumConnections: 32
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
 
   ## Configure Dremio access
   ##
@@ -729,6 +733,10 @@ fileingestion:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
    ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
    ## individual rates configured here.
