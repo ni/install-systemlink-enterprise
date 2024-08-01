@@ -356,7 +356,7 @@ alarmservice:
       ##
       enabled: true
       ## Number of token to replenish per second
-      ## 
+      ##
       tokensPerSecond: 750
       ## Maximum number of tokens that can accumulate
       ##
@@ -372,7 +372,7 @@ alarmservice:
       ##
       enabled: true
       ## Number of token to replenish per second
-      ## 
+      ##
       tokensPerSecond: 5
       ## Maximum number of tokens that can accumulate
       ##
@@ -388,7 +388,7 @@ alarmservice:
       ##
       enabled: true
       ## Number of token to replenish per second
-      ## 
+      ##
       tokensPerSecond: 700
       ## Maximum number of tokens that can accumulate
       ##
@@ -404,7 +404,7 @@ alarmservice:
       ##
       enabled: true
       ## Number of token to replenish per second
-      ## 
+      ##
       tokensPerSecond: 10
       ## Maximum number of tokens that can accumulate
       ##
@@ -420,7 +420,7 @@ alarmservice:
       ##
       enabled: true
       ## Number of token to replenish per second
-      ## 
+      ##
       tokensPerSecond: 10
       ## Maximum number of tokens that can accumulate
       ##
@@ -701,6 +701,10 @@ dataframeservice:
     ## Maximum number of concurrent connections to S3 per replica.
     ##
     maximumConnections: 32
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
 
   ## Configure Dremio access
   ##
@@ -822,6 +826,10 @@ feedservice:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
   ## Proxy configuration to be used when the service needs to go through a proxy to have access to external services like ni.com.
   httpProxy:
     ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
@@ -877,6 +885,10 @@ fileingestion:
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
    ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
    ## individual rates configured here.
@@ -1097,7 +1109,7 @@ comments:
 ## Configuration for work order service.
 ##
 workorder:
-  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services. 
+  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services.
   ## By default, this is enabled and the work order and lab management UI services are deployed.
   ##
   enabled: true
