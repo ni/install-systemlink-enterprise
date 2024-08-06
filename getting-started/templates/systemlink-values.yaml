@@ -1120,5 +1120,30 @@ specificationmanagement:
   ## <ATTENTION> - Set true to enable the deployment of the Specification Management service and to use its UI.
   ## By default, this is disabled and the Specification Management service is not deployed.
   ##
-  enabled: false
+  enabled: &specificationManagementEnabled false
 
+## Configuration for the Service Registry
+##
+serviceregistry:
+  ## Internal Routing configuration
+  ## Configures access to other services in the cluster.
+  ##
+  internalRouting:
+    ## List of routing rules for services.
+    ## Most deployments should use the default rules except where called out explicitly here.
+    ##
+    ## Example:
+    ##  exampleService:
+    ##    name: "Example" <Required>
+    ##    service: "exampleservice" <Required if urlOverride is not set>
+    ##    probeRoute: "/niexample/v1" <Required if urlOverride is not set>
+    ##    namespace: "systemlink-dev" <Optional, defaults to the release namespace>
+    ##    version: "1.0.0" <Required>
+    ##    enabled: true <Optional, defaults to true>
+    ##    port: 80 <Optional, defaults to default port>
+    ##    urlOverride: "http://ni.example.com" <Required if service and probeRoute are not set>
+    ##
+    routingTable:
+      specification:
+        ## Add the "Specification" service to the service registry if enabled
+        enabled: *specificationManagementEnabled
