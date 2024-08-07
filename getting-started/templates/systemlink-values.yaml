@@ -433,6 +433,29 @@ alarmservice:
     ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
     ##
     inactiveAlarmCleanupInterval: 30.00:00
+    
+    activeAlarmCleanup:
+      ## The amount of time active alarms will be retained in the database since they were
+      ## last updated ([d.]hh:mm[:ss] format).
+      ##
+      interval: 90.00:00
+      ## Whether to limit active alarm cleanup to only affect active alarms whose most recent
+      ## transition has a CLEAR transition type.
+      ##
+      onlyCleanUpClearAlarms: false
+  
+  ## The total number of alarms the service supports creating, including
+  ## both active and inactive alarms. Must be greater than activeAlarmLimit.
+  ## The service will return an error if this limit is exceeded. Increasing
+  ## this limit requires tuning of database resources.
+  ##
+  alarmLimit: 100000
+
+  ## The total number of active alarms the service supports creating. Must be less
+  ## than alarmLimit. The service will return an error if this limit is exceeded.
+  ## Increasing this limit requires tuning of database resources.
+  ##
+  activeAlarmLimit: 10000
 
 ## Configuration for the Grafana dashboard provider.
 ##
