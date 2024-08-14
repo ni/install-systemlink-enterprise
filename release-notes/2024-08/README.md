@@ -59,7 +59,7 @@ comments:0.12.4
 
 dashboardsui:0.16.16
 
-dataframeservice:1.8.55
+dataframeservice:1.8.61_10113643
 
 dremio-ee:24.1.2
 
@@ -93,7 +93,7 @@ helium-taghistorianmongomigration:0.11.1
 
 helium-taghistorianservices:0.11.1
 
-helium-userservices:0.18.1
+helium-userservices:0.18.3
 
 helium-webappservices:0.16.1
 
@@ -113,7 +113,7 @@ nbexec-notebook-runner:0.16.3
 
 nbexecservice:0.17.31
 
-nbparsingservice:0.16.14
+nbparsingservice:0.16.16
 
 ni-grafana:v10.2.3-19a2369fad-ni
 
@@ -145,19 +145,19 @@ specificationmanagement:0.7.4
 
 sysmgmtevent:0.17.9
 
-systemsmanagementservice:0.16.17
+systemsmanagementservice:0.16.19
 
 systemsstateservice:0.6.14
 
-systemsstatesui:0.5.57
+systemsstatesui:0.5.64
 
-systemsui:0.17.87
+systemsui:0.17.95
 
 tagsui:0.12.17
 
-testinsightsui:0.16.94
+testinsightsui:0.16.106
 
-testmonitorservice:0.25.15
+testmonitorservice:0.25.16
 
 userdata:0.16.14
 
