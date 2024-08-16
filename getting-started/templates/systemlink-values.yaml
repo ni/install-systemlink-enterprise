@@ -105,7 +105,7 @@ global:
   #                a copy of the certificate chain must be deployed as a secret to the cluster prior to deploying this application.
   #                For certificate authorities, only the public certificate needs to be deployed to the cluster.
   #
-  #                EXAMPLE:  kubectl create secret generic my-ca-certificate --from-file=cert=path/to/my-ca.crt
+  #                EXAMPLE:  kubectl -n systemlink-namespace create secret generic my-ca-certificate --from-file=cert=path/to/my-ca.crt
   #
   #                Use the 'trustedCertificatesSecrets', 'apiHostCertificateSecret' and 'deployApiHostCertificateToSystems'
   #                values below to configure the application and registered client systems with the required trust chain.
