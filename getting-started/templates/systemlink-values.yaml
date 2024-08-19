@@ -113,8 +113,8 @@ global:
   trustedCertificatesSecrets: []
   ##
   ## Secret containing the TLS certificate for the API host. This configuration is only necessary when the API
-  ## host is using a custom root CA certificate. This certificate will be deployed and installed on all managed clients
-  ## to enable the communication with the API host. Only valid if deployApiHostCertificateToSystems is true.
+  ## host is using a custom root CA certificate. When deployApiHostCertificateToSystems is true, this certificate
+  ## will be deployed and installed on all managed clients to enable communication with the API host.
   ##
   apiHostCertificateSecret:
   #  secretName: "ca-secret"
