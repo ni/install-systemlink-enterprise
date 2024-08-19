@@ -8,6 +8,11 @@ The 2024-08 release bundle for SystemLink Enterprise has been published to <http
 - View and manage [data tables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) across all test results. Navigate to Product Insights » Data Tables and select the data tables you want to interact with.
 - Learn about [data limits for proxy servers and for ingress controllers](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-limits-for-proxy-servers-ingress-controllers.html).
 - Learn about the [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
+- Privileges "Create/Update/Delete Product and Test results" were split to "Create/Update/Delete Product" and "Create/Update/Delete Test Results". 
+Existing Built-In Roles have been updated so that the roles with "Create/Update/Delete Product and Test results" get automatically the split privileges.
+Privileges for Steps are implicit set to the Test Result privileges.
+- Privilege "Access web application" was added under Data Tables category to show/hide the Data tables app in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
+- Privileges "Manage feeds" and "Apply states" were added under Systems Management category. They are enabled by default in Systems Maintainer built-in role.
 
 ## Helm Chart Breaking Changes
 
