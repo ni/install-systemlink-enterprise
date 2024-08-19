@@ -120,9 +120,7 @@ global:
   #  secretName: "ca-secret"
   #  key: "certificate"
   ##
-  ## Deploy the API host CA root certificate to all managed systems. This configuration is necessary when the API host
-  ## is using a private CA certificate. This certificate will be deployed and installed on all managed clients to enable
-  ## the communication with the API host. The apiHostCertificateSecret needs to be configured as well.
+  ## Deploy the API host CA root certificate to all managed systems.
   ##
   deployApiHostCertificateToSystems: false
 
