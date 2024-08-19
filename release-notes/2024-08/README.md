@@ -21,7 +21,7 @@ Privileges for Steps are implicit set to the Test Result privileges.
 - `feedservice:0.5.31`
     - Default value for `feedsLimitPerOrg` have been changed from 10000 to 1000 - no action needed.
 - `feedservice:0.5.31`
-    - S3 region moved from `feedservice.secrets.s3.region` to `feedservice.s3.region` and is no longer stored as a secret
+    - S3 region moved from `feedservice.secrets.s3.region` to `feedservice.s3.region` and is no longer stored as a secret.
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L829)
 - `helium-fileingestionservices:1.6.10`
     - S3 region moved from `fileingestion.secrets.s3.region` to `fileingestion.s3.region` and it is no longer stored as a secret.
