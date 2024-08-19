@@ -155,7 +155,7 @@ systemsui:0.17.95
 
 tagsui:0.12.17
 
-testinsightsui:0.16.106
+testinsightsui:0.16.107
 
 testmonitorservice:0.25.16
 
