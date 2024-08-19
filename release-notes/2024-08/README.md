@@ -4,9 +4,10 @@ The 2024-08 release bundle for SystemLink Enterprise has been published to <http
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Approve, delete, or disable multiple routines at once. Navigate to Analysis » Routines and select the routines you want to modify.
+- View and manage [data tables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) across all test results. Navigate to Product Insights » Data Tables and select the data tables you want to interact with.
+- Learn about [data limits for proxy servers and for ingress controllers](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-limits-for-proxy-servers-ingress-controllers.html).
+- Learn about the [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
 
 ## Helm Chart Breaking Changes
 
