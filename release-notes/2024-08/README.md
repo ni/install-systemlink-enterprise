@@ -8,7 +8,7 @@ The 2024-08 release bundle for SystemLink Enterprise has been published to <http
 - View and manage [data tables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) across all test results. Navigate to Product Insights » Data Tables and select the data tables you want to interact with.
 - Learn about [data limits for proxy servers and for ingress controllers](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-limits-for-proxy-servers-ingress-controllers.html).
 - Learn about the [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
-- Privileges "Create/Update/Delete Product and Test results" were split to "Create/Update/Delete Product" and "Create/Update/Delete Test Results". 
+- Privileges "Create/Update/Delete Product and Test results" were split to "Create/Update/Delete Product" and "Create/Update/Delete Test Results".
 Existing Built-In Roles have been updated so that the roles with "Create/Update/Delete Product and Test results" get automatically the split privileges.
 Privileges for Steps are implicit set to the Test Result privileges.
 - Privilege "Access web application" was added under Data Tables category to show/hide the Data tables app in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
@@ -16,8 +16,16 @@ Privileges for Steps are implicit set to the Test Result privileges.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `helium-serviceregistry:0.18.8`
+    - The underlying HTTP client used to monitor service liveness in the service registry was changed from HTTPoison to Req. This should be unnoticeable, but if issues are encountered it is possible to revert back to the old client by setting `serviceRegsitry.featureFlags.reqClientEnabled` to false in your Helm configuration. Issues with liveness monitoring will manifest in the SystemLink UI as missing applications in the navigation tree.
+- `feedservice:0.5.31`
+    - Default value for `feedsLimitPerOrg` have been changed from 10000 to 1000 - no action needed.
+- `feedservice:0.5.31`
+    - S3 region moved from `feedservice.secrets.s3.region` to `feedservice.s3.region` and is no longer stored as a secret
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L829)
+- `helium-fileingestionservices:1.6.10`
+    - S3 region moved from `fileingestion.secrets.s3.region` to `fileingestion.s3.region` and it is no longer stored as a secret.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L888)
 
 ## Upgrade Considerations
 
@@ -91,7 +99,7 @@ helium-fileingestionservices:1.6.10
 
 helium-salt-master:1.11.7
 
-helium-serviceregistry:0.18.8
+helium-:0.18.8
 
 helium-taghistoriandataretention:0.11.1
 
