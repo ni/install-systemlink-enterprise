@@ -120,7 +120,7 @@ global:
   #  secretName: "ca-secret"
   #  key: "certificate"
   ##
-  ## Deploy the API host CA root certificate to all managed systems.
+  ## Deploy the certificate stored in apiHostCertificateSecret to all managed systems.
   ##
   deployApiHostCertificateToSystems: false
 
