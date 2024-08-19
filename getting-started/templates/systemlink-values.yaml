@@ -100,7 +100,7 @@ global:
   ##    key: "my-cert"
   ##    isConfigMap: true
   ##
-  #  <ATTENTION> - If one or more custom Certificate Authorities are required for HTTPS access to this application
+  #  <ATTENTION> - If one or more private Certificate Authorities are required for HTTPS access to this application
   #                or for TLS access to any external resources referenced by this application (databases, file storage, etc.),
   #                a copy of the certificate chain must be deployed as a secret to the cluster prior to deploying this application.
   #                For certificate authorities, only the public certificate needs to be deployed to the cluster.
