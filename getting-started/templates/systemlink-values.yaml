@@ -141,6 +141,7 @@ rabbitmq:
     #               true temporarily may resolve the issue. The RabbitMQ maintainers recommend only
     #               setting this flag to recover from extraordinary circumstances. It should not be used
     #               for regular application maintenance.
+    #               https://www.rabbitmq.com/docs/clustering#restarting
     ##
     forceBoot: false
 
