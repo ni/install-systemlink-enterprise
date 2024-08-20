@@ -99,7 +99,7 @@ helium-fileingestionservices:1.6.10
 
 helium-salt-master:1.11.7
 
-helium-:0.18.8
+helium-serviceregistry:0.18.8
 
 helium-taghistoriandataretention:0.11.1
 
