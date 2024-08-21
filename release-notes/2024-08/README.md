@@ -12,7 +12,7 @@ The 2024-08 release bundle for SystemLink Enterprise has been published to <http
 Existing Built-In Roles have been updated so that the roles with "Create/Update/Delete Product and Test results" get automatically the split privileges.
 Privileges for Steps are implicit set to the Test Result privileges.
 - Privilege "Access web application" was added under Data Tables category to show/hide the Data tables app in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
-- Privileges "Manage feeds" and "Apply states" were added under Systems Management category. They are enabled by default in Systems Maintainer built-in role.
+- Privileges "Manage feeds" and "Apply states" were added under Systems Management. They are enabled by default in the Systems Maintainer built-in role.
 
 ## Helm Chart Breaking Changes
 
