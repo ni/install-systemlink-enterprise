@@ -10,7 +10,7 @@ The 2024-08 release bundle for SystemLink Enterprise has been published to <http
 - Learn about the [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
 - Privileges "Create/Update/Delete Product and Test results" were split to "Create/Update/Delete Product" and "Create/Update/Delete Test Results".
 Existing Built-In Roles have been updated so that the roles with "Create/Update/Delete Product and Test results" get automatically the split privileges.
-Privileges for Steps are implicit set to the Test Result privileges.
+Privileges for Steps are implicitly set to the Test Result privileges.
 - Privilege "Access web application" was added under Data Tables to show or hide the Data Tables application in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
 - Privileges "Manage feeds" and "Apply states" were added under Systems Management. They are enabled by default in the Systems Maintainer built-in role.
 
