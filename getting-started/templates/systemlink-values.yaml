@@ -1008,6 +1008,32 @@ argoworkflows:
 ##
 nbexecservice:
   maxNumberOfWorkflowsToSchedule: *workflowParallelism
+  ## Configure S3/MinIO access.
+  ##
+  s3:
+    ## Secret name for S3 credentials.
+    ##
+    secretName: "nbexecservice-s3-credentials"
+    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ##
+    bucket: "systemlink-executions"
+    ## S3 connection scheme.
+    ##
+    scheme: "http://"
+    ## Set this value to connect to an external S3 instance.
+    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    ##
+    host: ""
+    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ##
+    service: *minioServiceName
+    ## S3 Port
+    # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
+    port: *minioPort
+    ## S3 Region
+    # <ATTENTION> This must be set to the region of the S3 instance.
+    ##
+    region: "us-east-1"
   argo:
     ## Configure S3/MinIO access.
     ##
