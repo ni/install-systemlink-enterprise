@@ -8,16 +8,16 @@ The 2024-08 release bundle for SystemLink Enterprise has been published to <http
 - View and manage [data tables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) across all test results. Navigate to Product Insights » Data Tables and select the data tables you want to interact with.
 - Learn about [data limits for proxy servers and for ingress controllers](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-limits-for-proxy-servers-ingress-controllers.html).
 - Learn about the [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
-- Privileges "Create/Update/Delete Product and Test results" were split to "Create/Update/Delete Product" and "Create/Update/Delete Test Results".
-Existing Built-In Roles have been updated so that the roles with "Create/Update/Delete Product and Test results" get automatically the split privileges.
-Privileges for Steps are implicitly set to the Test Result privileges.
-- Privilege "Access web application" was added under Data Tables to show or hide the Data Tables application in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
-- Privileges "Manage feeds" and "Apply states" were added under Systems Management. They are enabled by default in the Systems Maintainer built-in role.
+- Privileges **Create/Update/Delete Product** and Test results" are split to **Create/Update/Delete Product** and **Create/Update/Delete Test Results**.
+    - Built-In roles will be updated automatically upon upgrade and their collective level of access remains unchanged.
+    - Custom roles should be reevaluated by SystemLink administrators as their privileges will _not_ automatically update upon upgrade.
+- The privilege **Access web application** have been added under **Data Tables** to show or hide the Data Tables application in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
+- The privileges **Manage feeds** and **Apply states** have been added under **Systems Management**. They are enabled by default in the Systems Maintainer built-in role.
 
 ## Helm Chart Breaking Changes
 
 - `helium-serviceregistry:0.18.8`
-    - The underlying HTTP client used to monitor service liveness in the service registry was changed from HTTPoison to Req. This should be unnoticeable, but if issues are encountered it is possible to revert back to the old client by setting `serviceRegsitry.featureFlags.reqClientEnabled` to false in your Helm configuration. Issues with liveness monitoring will manifest in the SystemLink UI as missing applications in the navigation tree.
+    - The underlying HTTP client used to monitor service liveness in the Service Registry service is changed from `HTTPoison` to `Req`. This should be unnoticeable, but if issues are encountered it is possible to revert back to the old client by setting `serviceRegsitry.featureFlags.reqClientEnabled` to `false` in your Helm configuration. Issues with liveness monitoring will manifest in the SystemLink UI as missing applications in the navigation tree.
 - `feedservice:0.5.31`
     - Default value for `feedsLimitPerOrg` have been changed from 10000 to 1000 - no action needed.
 - `feedservice:0.5.31`
