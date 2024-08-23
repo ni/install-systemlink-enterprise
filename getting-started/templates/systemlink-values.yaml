@@ -131,7 +131,8 @@ rabbitmq:
   # <ATTENTION> - The "OrderedReady" podManagementPolicy must be used for the first deployment
   #               of the application. Once the application has been deployed, change the
   #               podManagementPolicy to "Parallel" to avoid synchronization issues when upgrading
-  #               RabbitMQ instances.
+  #               RabbitMQ instances. It will be necessary to manually delete the rabbitmq stateful
+  #               set from the deployment prior to redeploying with the new setting.
   ##
   podManagementPolicy: "OrderedReady"
   # podManagementPolicy: "Parallel"
