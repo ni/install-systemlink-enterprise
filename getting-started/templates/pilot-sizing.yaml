@@ -9,10 +9,6 @@
 # with the following node topology:
 # 4 nodes - 8 CPU, 32 GB memory - General node pool
 # 2 nodes - 8 CPU, 32 GB memory - Dedicated for Dremio
-
-# Two replicas are used for most services for increased performance.
-# The Mongo databases are reduced to a single replica and as a result,
-# does not provide any high availability.
 #
 # This is a YAML-formatted file.
 
@@ -51,18 +47,6 @@ assetservice:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 assetui:
   resources:
     requests:
@@ -72,8 +56,8 @@ assetui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -91,18 +75,6 @@ comments:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
 
 dashboardhost:
   autoscaling:
@@ -134,8 +106,8 @@ dashboardsui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -154,16 +126,6 @@ dataframeservice:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: "150m"
-        memory: "256Mi"
-      limits:
-        memory: "256Mi"
-
 executionsui:
   resources:
     requests:
@@ -173,8 +135,8 @@ executionsui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -193,18 +155,6 @@ feedservice:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 fileingestion:
   resources:
     requests:
@@ -219,18 +169,6 @@ fileingestion:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 filesui:
   resources:
     requests:
@@ -240,8 +178,8 @@ filesui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -254,8 +192,8 @@ landingpageui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -294,18 +232,6 @@ nbexecservice:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 nbparsingservice:
   resources:
     requests:
@@ -335,18 +261,6 @@ notification:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 rabbitmq:
   resources:
     requests:
@@ -370,18 +284,6 @@ repository:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 routineeventtrigger:
   resources:
     requests:
@@ -389,7 +291,6 @@ routineeventtrigger:
       cpu: 100m
     limits:
       memory: "512Mi"
-
   replicaCount: 1
 
 routineexecutor:
@@ -414,20 +315,7 @@ routinescheduletrigger:
       cpu: 100m
     limits:
       memory: "512Mi"
-
   replicaCount: 1
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
 
 routineservice:
   resources:
@@ -442,18 +330,6 @@ routineservice:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
 
   engine:
     replicaCount: 1
@@ -473,8 +349,8 @@ routinesui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -493,18 +369,6 @@ saltmaster:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 securityui:
   resources:
     requests:
@@ -514,8 +378,8 @@ securityui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -582,8 +446,8 @@ swaggerapi:
 
   autoscaling:
     enabled: true
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
@@ -602,18 +466,6 @@ sysmgmtevent:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 systems:
   resources:
     requests:
@@ -626,18 +478,6 @@ systems:
     enabled: true
     minReplicas: 2
     maxReplicas: 2
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
 
 systemsstate:
   resources:
@@ -663,8 +503,8 @@ systemsui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -683,18 +523,6 @@ tags:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 taghistorian:
   resources:
     requests:
@@ -709,18 +537,6 @@ taghistorian:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
 
   dataRetention:
     resources:
@@ -746,8 +562,8 @@ testinsightsui:
       memory: "20Mi"
 
   autoscaling:
-    minReplicas: 2
-    maxReplicas: 2
+    minReplicas: 1
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
@@ -779,18 +595,6 @@ userdata:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 userservices:
   resources:
     requests:
@@ -805,18 +609,6 @@ userservices:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
-
 webappservices:
   resources:
     requests:
@@ -830,18 +622,6 @@ webappservices:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 256Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
 
 webserver:
   resources:
@@ -881,15 +661,3 @@ workorder:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
-
-  mongodb:
-    architecture: replicaset
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 150m
-        memory: 512Mi
-      limits:
-        memory: 1024Mi
-    persistence:
-      size: 1Gi
