@@ -10,6 +10,10 @@
 # 4 nodes - 8 CPU, 32 GB memory - General node pool
 # 2 nodes - 8 CPU, 32 GB memory - Dedicated for Dremio
 #
+# Pilot deployments use managed MongoDB Atlas or MongoDB Enterprise.
+# As such, the MongoDB resources are not specified in this file.
+# Use the MongoDB tools to size or autoscale the database.
+#
 # For production deployments, the defaults in the SystemLink helm
 # charts should be used, or similar overrides in this file could be
 # specified to further increase the availablility and performance
