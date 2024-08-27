@@ -1,0 +1,67 @@
+global:
+  ingress:
+    ## Ingress settings that apply to the apiHosts endpoints.
+    ##
+    api:
+      ## Annotations for the ingress.
+      ##
+      annotations: {
+        kubernetes.io/ingress.class: azure/application-gateway,
+        appgw.ingress.kubernetes.io/health-probe-path: "/up",
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "stratus-dev",
+        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "stratus-dev-cert"
+      }
+    ## Ingress settings that apply to the hosts endpoints.
+    ##
+    ui:
+      ## @param global.ingress.ui.annotations Annotations for the ingress.
+      ##
+      annotations: {
+        kubernetes.io/ingress.class: azure/application-gateway,
+        appgw.ingress.kubernetes.io/health-probe-path: "/up",
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "stratus-dev",
+        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "stratus-dev-cert"
+      }
+
+assetservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/niapm/up"
+
+dashboardhost:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/api/health"
+  apiIngress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/api/health"
+
+testmonitorservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/nitestmonitor/up"
+
+dataframeservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/nidataframe/health"
+
+feedservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/nifeed/up"
+
+nbexecservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/ninbexecution/up"
+
+notification:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/ninotification/up"
+
+swaggerapi:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/niapis"
