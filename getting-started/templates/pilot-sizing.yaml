@@ -1,6 +1,20 @@
-# Default values for SystemLink pilot resources and replicas.
+# Value overrides for SystemLink pilot resources and replicas.
+#
+# Use this file in addition to the `systemlink-values.yaml` to
+# customize the SystemLink deployment for small pilot clusters.
+#
+# This file reduces the number of service replicas and pod CPU and
+# memory requests such that the application can deploy with fewer
+# kubernetes cluster nodes. The cluster is intended to be deployed
+# with the following node topology:
+# 4 nodes - 8 CPU, 32 GB memory - General node pool
+# 2 nodes - 8 CPU, 32 GB memory - Dedicated for Dremio
+
+# Two replicas are used for most services for increased performance.
+# The Mongo databases are reduced to a single replica and as a result,
+# does not provide any high availability.
+#
 # This is a YAML-formatted file.
-# Declare override values for variables.
 
 alarmservice:
   resources:
