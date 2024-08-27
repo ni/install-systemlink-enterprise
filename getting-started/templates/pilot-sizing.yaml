@@ -10,6 +10,11 @@
 # 4 nodes - 8 CPU, 32 GB memory - General node pool
 # 2 nodes - 8 CPU, 32 GB memory - Dedicated for Dremio
 #
+# For production deployments, the defaults in the SystemLink helm
+# charts should be used, or similar overrides in this file could be
+# specified to further increase the availablility and performance
+# of specific workloads.
+#
 # This is a YAML-formatted file.
 
 alarmservice:
