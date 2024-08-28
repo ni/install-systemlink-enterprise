@@ -1,3 +1,15 @@
+# This supplemental values file provides annotations for the azure application gateway and System Link Enterprise service health checks paths. 
+#
+# This file should be passed in as a values file with systemlink-secrets and systemlink-values during SLE install.
+#
+# Modify "systemlink-ssl-cert" to match the name of your certificate used for the application gateway.
+#
+# The default health check path /up addresses the health probe for most services. 
+# Those that diverge from this path are declared below by service. 
+# Health check paths should not be modified unless called out in monthly release notes.
+#
+# This is a YAML-formatted file.
+
 global:
   ingress:
     ## Ingress settings that apply to the apiHosts endpoints.
@@ -8,8 +20,8 @@ global:
       annotations: {
         kubernetes.io/ingress.class: azure/application-gateway,
         appgw.ingress.kubernetes.io/health-probe-path: "/up",
-        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "stratus-dev",
-        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "stratus-dev-cert"
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile",
+        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "systemlink-ssl-cert"
       }
     ## Ingress settings that apply to the hosts endpoints.
     ##
@@ -19,8 +31,8 @@ global:
       annotations: {
         kubernetes.io/ingress.class: azure/application-gateway,
         appgw.ingress.kubernetes.io/health-probe-path: "/up",
-        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "stratus-dev",
-        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "stratus-dev-cert"
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile",
+        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "systemlink-ssl-cert"
       }
 
 assetservice:
