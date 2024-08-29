@@ -1,0 +1,672 @@
+# Value overrides for SystemLink pilot resources and replicas.
+#
+# Use this file in addition to the `systemlink-values.yaml` to
+# customize the SystemLink deployment for small pilot clusters.
+#
+# This file reduces the number of service replicas and pod CPU and
+# memory requests such that the application can deploy with fewer
+# kubernetes cluster nodes. The cluster is intended to be deployed
+# with the following node topology:
+# 4 nodes - 8 CPU, 32 GB memory - General node pool
+# 2 nodes - 8 CPU, 32 GB memory - Dedicated for Dremio
+#
+# Pilot deployments use managed MongoDB Atlas or MongoDB Enterprise.
+# As such, the MongoDB resources are not specified in this file.
+# Use the MongoDB tools to size or autoscale the database.
+#
+# For production deployments, the defaults in the SystemLink helm
+# charts should be used, or similar overrides in this file could be
+# specified to further increase the availablility and performance
+# of specific workloads.
+#
+# This is a YAML-formatted file.
+
+alarmservice:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+argoworkflows:
+  argo-workflows:
+    server:
+      replicas: 1
+
+assetservice:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      memory: 512Mi
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+assetui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+comments:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+dashboardhost:
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+  grafana:
+    autoscaling:
+      minReplicas: 2
+      maxReplicas: 2
+      metrics:
+      - type: Resource
+        resource:
+          name: cpu
+          targetAverageUtilization: 80
+      - type: Resource
+        resource:
+          name: memory
+          targetAverageUtilization: 90
+
+dashboardsui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+dataframeservice:
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 100m
+    limits:
+      memory: 512Mi
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+executionsui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+feedservice:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+fileingestion:
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "50m"
+    limits:
+      memory: "256Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+filesui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+landingpageui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+minio:
+  persistence:
+    size: 1Gi
+  provisioning:
+    enabled: true
+    buckets:
+      - name: "systemlink-file-ingestion"
+        region: "us-east-1"
+        versioning: false
+        withLock: false
+      - name: "systemlink-dataframe"
+        region: "us-east-1"
+        versioning: false
+        withLock: false
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "50m"
+    limits:
+      memory: "512Mi"
+
+nbexecservice:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "100m"
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+nbparsingservice:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "100m"
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+notification:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+rabbitmq:
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "256Mi"
+    limits:
+      memory: "512Mi"
+
+repository:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+routineeventtrigger:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+  replicaCount: 1
+
+routineexecutor:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+routinescheduletrigger:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+  replicaCount: 1
+
+routineservice:
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "50m"
+    limits:
+      memory: "256Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+  engine:
+    replicaCount: 1
+    resources:
+      requests:
+        memory: "25Mi"
+        cpu: "4m"
+      limits:
+        memory: "50Mi"
+
+routinesui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+saltmaster:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+securityui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+serviceregistry:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "50m"
+    limits:
+      memory: "256Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+sessionmanager:
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "50m"
+    limits:
+      memory: "128Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+sl-jupyterhub:
+  jupyterhub:
+    hub:
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "100m"
+        limits:
+          memory: "256Mi"
+
+smtp:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+swaggerapi:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+sysmgmtevent:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+systems:
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "50m"
+    limits:
+      memory: "256Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+
+systemsstate:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+systemsui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+tags:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+taghistorian:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+  dataRetention:
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: 100m
+      limits:
+        memory: "512Mi"
+
+    autoscaling:
+      enabled: true
+      minReplicas: 2
+      maxReplicas: 2
+      targetCPUUtilizationPercentage: 60
+      targetMemoryUtilizationPercentage: 70
+
+testinsightsui:
+  resources:
+    requests:
+      memory: "10Mi"
+      cpu: "4m"
+    limits:
+      memory: "20Mi"
+
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+testmonitorservice:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "100m"
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+userdata:
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "25m"
+    limits:
+      memory: "128Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+userservices:
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "50m"
+    limits:
+      memory: "128Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+webappservices:
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "50m"
+    limits:
+      memory: "128Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+webserver:
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "50m"
+    limits:
+      memory: "256Mi"
+
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+
+  redis-cluster:
+    cluster:
+      nodes: 3
+      replicas: 0
+    redis:
+      resources:
+        requests:
+          cpu: 50m
+        limits:
+
+workorder:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
