@@ -1,0 +1,79 @@
+# This supplemental values file provides annotations for the azure application gateway and System Link Enterprise service health checks paths. 
+#
+# This file should be passed in as a values file with systemlink-secrets and systemlink-values during SLE install.
+#
+# Modify "systemlink-ssl-cert" to match the name of your certificate used for the application gateway.
+#
+# The default health check path /up addresses the health probe for most services. 
+# Those that diverge from this path are declared below by service. 
+# Health check paths should not be modified unless called out in monthly release notes.
+#
+# This is a YAML-formatted file.
+
+global:
+  ingress:
+    ## Ingress settings that apply to the apiHosts endpoints.
+    ##
+    api:
+      ## Annotations for the ingress.
+      ##
+      annotations: {
+        kubernetes.io/ingress.class: azure/application-gateway,
+        appgw.ingress.kubernetes.io/health-probe-path: "/up",
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile",
+        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "systemlink-ssl-cert"
+      }
+    ## Ingress settings that apply to the hosts endpoints.
+    ##
+    ui:
+      ## @param global.ingress.ui.annotations Annotations for the ingress.
+      ##
+      annotations: {
+        kubernetes.io/ingress.class: azure/application-gateway,
+        appgw.ingress.kubernetes.io/health-probe-path: "/up",
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile",
+        appgw.ingress.kubernetes.io/appgw-ssl-certificate: "systemlink-ssl-cert"
+      }
+
+assetservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/niapm/up"
+
+dashboardhost:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/api/health"
+  apiIngress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/api/health"
+
+testmonitorservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/nitestmonitor/up"
+
+dataframeservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/nidataframe/health"
+
+feedservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/nifeed/up"
+
+nbexecservice:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/ninbexecution/up"
+
+notification:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/ninotification/up"
+
+swaggerapi:
+  ingress:
+    annotations:
+      appgw.ingress.kubernetes.io/health-probe-path: "/niapis"
