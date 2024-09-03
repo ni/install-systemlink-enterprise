@@ -15,7 +15,7 @@ The release_year-release_month release for SystemLink Enterprise has been publis
 ## Helm Chart Breaking Changes
 
 - Chart Name and version
-  - Description of breaking change.
+    - Description of breaking change.
 
 ## Upgrade Considerations
 
