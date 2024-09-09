@@ -57,6 +57,36 @@ assetui:0.14.65
 
 comments:0.13.3
 
+dashboardsui:0.17.44
+
+dataframeservice:1.9.38
+
+dremio-ee:24.1.2
+
+executionsui:0.17.48
+
+feedservice:0.6.15
+
+feedsui:0.5.54
+
+filesui:0.18.53
+
+grafana-auth-proxy:0.17.6
+
+grafana-plugins:3.12.0
+
+grafana-rbac-integrator:0.17.12
+
+helium-dataservices-mongomigration:0.16.3
+
+helium-dataservices:0.16.3
+
+helium-fileingestionservices:1.7.4
+
+helium-salt-master:1.14.0
+
+helium-serviceregistry:0.19.24
+
 helium-taghistoriandataretention:0.12.5
 
 helium-taghistorianmongomigration:0.12.5
