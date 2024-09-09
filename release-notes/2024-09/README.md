@@ -5,31 +5,31 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 ## New Features and Behavior changes
 
 - The Alarm Service automatically deletes active alarms that haven't been updated in a configurable number of days.
-  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L469)
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L469)
 - The Alarm Service enforces configurable limits on the number of active alarms that can be created, as well as the total number of alarms that can be created.
-  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
 - The Schedule page has been added under Operations in the Navigation Pane. The users can now view all the scheduled Test Plans, across all Systems in the Lab, in a timeline view.
 - Privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** to list the published notebooks, and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** to list and download notebooks for notebook development.
-  - This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
-  - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.
+    - This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
+    - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.
 - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on Jupyter user servers to be used when calling SystemLink or other external APIs from notebooks.
 - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on execution pods, to be used when calling SystemLink or other external APIs from notebooks.
 - Added abilities to configure the rate-limit values for notebook APIs inside the Helm chart.
 - Notebook Execution Service
-  - Created a dedicated swagger page for Artifact APIs.
-  - Implemented Rate limiting for the Artifact APIs.
-  - Created S3 buckets for Artifact APIs.
+    - Created a dedicated swagger page for Artifact APIs.
+    - Implemented Rate limiting for the Artifact APIs.
+    - Created S3 buckets for Artifact APIs.
 - Notebook Execution Service, Systems Management Service
-  - Added support for deploying a custom CA root to all managed clients.
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
+    - Added support for deploying a custom CA root to all managed clients.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice:1.9.38`, `dremio-ee:24.1.2`
-  - Support was added for configuring custom CA certificates to connect to S3 and MongoDB through the `global.trustedCertificatesSecrets` YAML value.
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L113)
-  - This may conflict with the use of `extraInitContainers`, `extraVolumes`, and `extraVolumeMounts` to manually add certificates to containers.
-  - When setting `global.trustedCertificatesSecrets`, you must also remove `dataframeservice.extraInitContainers`, `dataframeservice.extraVolumes`, `dataframeservice.extraVolumeMounts`, `dataframeservice.sldremio.extraInitContainers`, `dataframeservice.sldremio.extraVolumes`, and `dataframeservice.sldremio.extraVolumeMounts` that are related to configuring certificates.
+    - Support was added for configuring custom CA certificates to connect to S3 and MongoDB through the `global.trustedCertificatesSecrets` YAML value.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L113)
+    - This may conflict with the use of `extraInitContainers`, `extraVolumes`, and `extraVolumeMounts` to manually add certificates to containers.
+    - When setting `global.trustedCertificatesSecrets`, you must also remove `dataframeservice.extraInitContainers`, `dataframeservice.extraVolumes`, `dataframeservice.extraVolumeMounts`, `dataframeservice.sldremio.extraInitContainers`, `dataframeservice.sldremio.extraVolumes`, and `dataframeservice.sldremio.extraVolumeMounts` that are related to configuring certificates.
 
 ## Upgrade Considerations
 
