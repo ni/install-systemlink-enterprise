@@ -14,8 +14,11 @@ The release_year-release_month release for SystemLink Enterprise has been publis
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `dataframeservice:1.9.38`, `dremio-ee:24.1.2`
+  - Support was added for configuring custom CA certificates to connect to S3 and MongoDB through the `global.trustedCertificatesSecrets` YAML value.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L113)
+  - This may conflict with the use of `extraInitContainers`, `extraVolumes`, and `extraVolumeMounts` to manually add certificates to containers.
+  -  When setting `global.trustedCertificatesSecrets`, you must also remove `dataframeservice.extraInitContainers`, `dataframeservice.extraVolumes`, `dataframeservice.extraVolumeMounts`, `dataframeservice.sldremio.extraInitContainers`, `dataframeservice.sldremio.extraVolumes`, and `dataframeservice.sldremio.extraVolumeMounts` that are related to configuring certificates.
 
 ## Upgrade Considerations
 
