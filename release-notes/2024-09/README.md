@@ -4,7 +4,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- The Alarm Service automatically deletes active alarms that haven't been updated in a configurable number of days.
+- The Alarm Service automatically deletes active alarms that you have not updated in a configurable number of days.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L469)
 - The Alarm Service enforces configurable limits on the number of active alarms that can be created, as well as the total number of alarms that can be created.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
