@@ -12,7 +12,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 - Privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** to list the published notebooks, and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** to list and download notebooks for notebook development.
     - This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
     - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.
-- Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on Jupyter user servers to be used when calling SystemLink or other external APIs from notebooks.
+- Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on servers that use Jupyter. These certificates are used when calling SystemLink or other external APIs from notebooks.
 - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on execution pods, to be used when calling SystemLink or other external APIs from notebooks.
 - Added abilities to configure the rate-limit values for notebook APIs inside the Helm chart.
 - Notebook Execution Service
