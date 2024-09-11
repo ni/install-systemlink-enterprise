@@ -6,7 +6,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 
 - The Alarm Service automatically deletes active alarms that you have not updated in a configurable number of days.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L469)
-- The Alarm Service enforces configurable limits on the number of active alarms that can be created, as well as the total number of alarms that can be created.
+- The Alarm Service enforces configurable limits on the number of active alarms and the number of total alarms that you can create.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
 - The Schedule page has been added under Operations in the Navigation Pane. The users can now view all the scheduled Test Plans, across all Systems in the Lab, in a timeline view.
 - Privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** to list the published notebooks, and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** to list and download notebooks for notebook development.
