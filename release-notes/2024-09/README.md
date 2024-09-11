@@ -8,7 +8,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L469)
 - The Alarm Service enforces configurable limits on the number of active alarms and the number of total alarms that you can create.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
-- The Schedule page has been added under Operations in the Navigation Pane. The users can now view all the scheduled Test Plans, across all Systems in the Lab, in a timeline view.
+- The Schedule page was added under Operations in the Navigation Pane. You can now view all the scheduled test plans, across all systems, in a timeline view.
 - Privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** to list the published notebooks, and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** to list and download notebooks for notebook development.
     - This privilege is enabled by default for Collaborator, Data Maintainer and Systems Maintainer built-in roles.
     - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.
