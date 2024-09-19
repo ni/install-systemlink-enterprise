@@ -19,7 +19,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 - Support for [Private Certificate Authorities](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/private-certificate-authorities.html).
     - Connect to MongoDB and S3 compatible interfaces that use certificates signed by a private authority.
     - Call SystemLink APIs from Jupyter Notebook when the SystemLink API endpoint is configured to use a certificate signed by a private authority.
-    - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on servers that use Jupyter. These certificates are used when calling SystemLink or other external APIs from notebooks.
+    - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on containers that run Jupyter notebooks. These certificates are used when calling SystemLink or other external APIs from notebooks.
     - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on execution pods. These certificates are used when calling SystemLink or other external APIs from the pods.
 - Added abilities to configure the rate-limit values for notebook APIs inside the Helm chart.
 - Notebook Execution Service
