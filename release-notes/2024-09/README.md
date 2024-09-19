@@ -69,7 +69,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
-alarmservice:0.4.36
+alarmservice:0.4.37
 
 assetservice:0.15.65
 
@@ -93,9 +93,9 @@ filesui:0.18.53
 
 grafana-auth-proxy:0.17.6
 
-grafana-plugins:3.12.0
+grafana-plugins:3.12.1
 
-grafana-rbac-integrator:0.17.12
+grafana-rbac-integrator:0.17.16
 
 helium-dataservices-mongomigration:0.16.3
 
@@ -105,7 +105,7 @@ helium-fileingestionservices:1.7.4
 
 helium-salt-master:1.14.0
 
-helium-serviceregistry:0.19.24
+helium-serviceregistry:0.19.25
 
 helium-taghistoriandataretention:0.12.5
 
@@ -131,7 +131,7 @@ nbexec-execution-helpers:0.18.12
 
 nbexec-notebook-runner:0.18.5
 
-nbexecservice:0.18.31
+nbexecservice:0.18.32
 
 nbparsingservice:0.17.19
 
@@ -175,7 +175,7 @@ systemsui:0.18.85
 
 tagsui:0.13.48
 
-testinsightsui:0.17.113
+testinsightsui:0.17.115
 
 testmonitorservice:0.26.18
 
