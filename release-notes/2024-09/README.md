@@ -26,7 +26,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
     - Created a dedicated swagger page for Artifact APIs.
     - Implemented Rate limiting for the Artifact APIs.
     - Created S3 buckets for Artifact APIs.
-- Notebook Execution Service, Systems Management Service
+- Systems Management Service
     - Added support for deploying a custom CA root to all managed clients.
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
 
