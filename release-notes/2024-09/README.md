@@ -63,7 +63,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.29.49`
+**Top Level Helm Chart:** `systemlink 0.29.56`
 
 **Admin Helm Chart:** `systemlink-admin 0.29.3`
 
@@ -71,7 +71,7 @@ Only customer facing bugs have been included in this list.
 
 alarmservice:0.4.36
 
-assetservice:0.15.63
+assetservice:0.15.65
 
 assetui:0.14.65
 
@@ -123,7 +123,7 @@ jupyter-notebook-userpod:2.8.3
 
 jupyterui:0.17.40
 
-labmanagementui:0.8.84
+labmanagementui:0.8.85
 
 landingpageui:0.17.38
 
