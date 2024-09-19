@@ -14,7 +14,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
 - Learn about the [performance metrics for the Dashboard Host Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-dashboard-host-service.html).
 - The privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment**.
-    - This privilege is enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
+    - These privileges are enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
     - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.
 - Support for [Private Certificate Authorities](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/private-certificate-authorities.html).
     - Connect to MongoDB and S3 compatible interfaces that use certificates signed by a private authority.
