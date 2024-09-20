@@ -25,9 +25,9 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
     - Created a dedicated swagger page for Artifact APIs.
     - Implemented Rate limiting for the Artifact APIs.
     - Created S3 buckets for Artifact APIs.
-- Systems Management Service
-    - Added support for deploying a custom CA root to all managed clients.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
+- Systems Management Service support for deploying a custom CA root to all managed clients.
+    - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on containers that run Jupyter notebooks. These certificates are used when calling SystemLink or other external APIs from notebooks.
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
 
 ## Helm Chart Breaking Changes
 
