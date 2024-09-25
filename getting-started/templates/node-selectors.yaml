@@ -225,15 +225,6 @@ sessionmanager:
 
 sl-jupyterhub:
   jupyterhub:
-    #hub:
-    #  nodeSelector: *jupyterNodeSelector
-    #  tolerations: *jupyterTolerations
-    #  affinity: *jupyterAffinity
-    #proxy:
-    #  chp:
-    #    nodeSelector: *jupyterNodeSelector
-    #    tolerations: *jupyterTolerations
-    #    affinity: *jupyterAffinity
     singleuser:
       nodeSelector: *jupyterNodeSelector
     prePuller:
