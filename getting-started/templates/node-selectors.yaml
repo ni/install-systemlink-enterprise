@@ -1,0 +1,324 @@
+# This YAML file defines node selectors, tolerations, and affinities for deploying SystemLink Enterprise.
+# The global section specifies selectors for different types of services (e.g., systemlink services, Jupyter, Dremio)
+# and includes tolerations for handling tainted nodes. Each service-specific configuration section utilizes
+# these global values through anchors (*), ensuring consistency and reducing duplication.
+#
+# When deploying the application, this file should be combined with other values.yaml files that may define
+# additional configurations specific to each service, such as resource requests, limits, or environment variables.
+# The node selectors ensure that pods are scheduled on the appropriate nodes, while tolerations allow for
+# flexibility with node taints, and affinities enforce specific node requirements.
+#
+# Default values are provided here for node selectors and tolerations.  Change them if needed to match the
+# node labels and taints for your kubernetes cluster.
+
+global:
+  # The selector which determines which nodes the pod will be scheduled on.
+  servicesNodeSelector: &servicesNodeSelector
+    systemlink.services: "true"
+  notebookExecutionNodeSelector: &notebookExecutionNodeSelector
+    notebook.executor: "true"
+  jupyterNodeSelector: &jupyterNodeSelector
+    hub.jupyter.org/node-purpose: "user"
+  dremioNodeSelector: &dremioNodeSelector
+    dremio: "true"
+
+  # Tolerations for node taints to allow the pod to be scheduled on tainted nodes.
+  servicesTolerations: &servicesTolerations []
+  notebookExecutionTolerations: &notebookExecutionTolerations []
+  jupyterTolerations: &jupyterTolerations
+    - key: hub.jupyter.org/dedicated
+      operator: "Equal"
+      value: "user"
+      effect: "NoSchedule"
+  dremioTolerations: &dremioTolerations
+    # The "dremio" taint is preferred. For backwards-compatibility, we continue to tolerate a "high_mem" taint.
+    - key: "dremio"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    - key: "dremio"
+      operator: "Equal"
+      value: "true"
+      effect: "NoExecute"
+    - key: "high_mem"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    - key: "high_mem"
+      operator: "Equal"
+      value: "true"
+      effect: "NoExecute"
+
+  # Affinity to require the pod to be scheduled on labeled nodes.
+  servicesAffinity: &servicesAffinity {}
+  notebookExecutionAffinity: &notebookExecutionAffinity {}
+  jupyterAffinity: &jupyterAffinity {}
+  dremioAffinity: &dremioAffinity
+    dremio: "true"
+
+
+#
+# Service-specific configurations
+#
+
+alarmservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+argoworkflows:
+  argo-workflows:
+    nodeSelector: *servicesNodeSelector
+    tolerations: *servicesTolerations
+    affinity: *servicesAffinity
+
+assetservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+assetui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+comments:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+dashboardhost:
+  grafana:
+    nodeSelector: *servicesNodeSelector
+    tolerations: *servicesTolerations
+    affinity: *servicesAffinity
+
+dashboardsui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+dataframeservice:
+  sldremio:
+    nodeSelector: *dremioNodeSelector
+    tolerations: *dremioTolerations
+    affinity: *dremioAffinity
+
+executionsui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+feedservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+feedsui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+fileingestion:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+filesui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+jupyterui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+labmanagementui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+landingpageui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+minio:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+  provisioning:
+    nodeSelector: *servicesNodeSelector
+    tolerations: *servicesTolerations
+    affinity: *servicesAffinity
+
+nbexecservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+nbparsingservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+notification:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+rabbitmq:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+repository:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+routineeventtrigger:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+routineexecutor:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+routinescheduletrigger:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+routineservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+routinesui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+saltmaster:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+securityui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+serviceregistry:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+sessionmanager:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+sl-jupyterhub:
+  jupyterhub:
+    singleuser:
+      nodeSelector: *jupyterNodeSelector
+    prePuller:
+      hook:
+        nodeSelector: *jupyterNodeSelector
+        tolerations: *jupyterTolerations
+        affinity: *jupyterAffinity
+
+smtp:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+specificationmanagement:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+swaggerapi:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+sysmgmtevent:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+systems:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+systemsstate:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+systemsstatesui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+systemsui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+taghistorian:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+tags:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+tagsui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+testinsightsui:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+testmonitorservice:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+userdata:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+userservices:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+webappservices:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+webserver:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity
+
+workorder:
+  nodeSelector: *servicesNodeSelector
+  tolerations: *servicesTolerations
+  affinity: *servicesAffinity

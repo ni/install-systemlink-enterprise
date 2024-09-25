@@ -764,16 +764,6 @@ dataframeservice:
   ## Configure Dremio access
   ##
   sldremio:
-    ## Uncomment this section to adjust the default tolerations configured for the Dremio pods.
-    # tolerations:
-    #   - key: "dremio"
-    #     operator: "Equal"
-    #     value: "true"
-    #     effect: "NoSchedule"
-    #   - key: "dremio"
-    #     operator: "Equal"
-    #     value: "true"
-    #     effect: "NoExecute"
     ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
     ## Refer to Dremio documentation at https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
     ## for a description of the recommended minimum values.
@@ -796,11 +786,6 @@ dataframeservice:
     #   cpu: 0.5
     #   memory: 1024
     #   count: 3
-    ## Nodes to select for Dremio pods.
-    ## Note: No node selector is configured by default, but it's recommended to
-    ## configure one to ensure the Dremio pods are scheduled to its tainted nodes.
-    # nodeSelector:
-    #   dremio: "true"
     auth:
       ## Name of the secret containing the Dremio login credentials
       ##
