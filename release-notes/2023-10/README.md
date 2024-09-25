@@ -93,6 +93,7 @@ Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/s
 Only customer facing bugs have been included in this list.
 
 - [closed-bugs-sle-2023-10](https://github.com/ni/install-systemlink-enterprise/tree/2023-10/release-notes/2023-10/closed-bugs-sle-2023-10.xlsx)
+- [closed-bugs-sle-2023-10-patch-1](https://github.com/ni/install-systemlink-enterprise/tree/main/release-notes/2023-10/closed-bugs-sle-2023-10-patch-1.xlsx)
 
 ## Software Bill of Materials and Notices
 
@@ -101,9 +102,17 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.18.76`
+### 2023-10
 
-**Admin Helm Chart:** `systemlink-admin 0.18.9`
+- **Top Level Helm Chart:** `systemlink 0.18.76`
+
+- **Admin Helm Chart:** `systemlink-admin 0.18.9`
+
+### 2023-10 Patch 1
+
+- **Top Level Helm Chart:** `systemlink 0.18.77`
+
+- **Admin Helm Chart:** `systemlink-admin 0.18.9`
 
 ### NI Containers
 
