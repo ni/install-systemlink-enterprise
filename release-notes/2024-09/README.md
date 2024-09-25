@@ -31,6 +31,9 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 
 - Learn about the [performance metrics for the Dashboard Host Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-dashboard-host-service.html).
 
+- YAML template provided to support node selectors, tolerations, affinities for all SystemLink Enterprise pods.
+    [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/node-selectors.yaml)
+
 - The privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment**.
     - These privileges are enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
     - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.

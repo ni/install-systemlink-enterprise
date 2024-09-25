@@ -78,6 +78,7 @@
         "testmonitor",
         "testmonitorservice",
         "testmonitorservicedb",
+        "tolerations",
         "undecimated",
         "userdata",
         "userpod",
