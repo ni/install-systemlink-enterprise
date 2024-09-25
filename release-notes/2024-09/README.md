@@ -4,30 +4,38 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- Navigate to Operations » Schedule to view the test plans scheduled across all systems in timeline view - [Viewing Scheduled Test Plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-scheduled-test-plans.html).
+- Navigate to **Operations** » **Schedule** to view the test plans scheduled across all systems in timeline view
+    - [Viewing Scheduled Test Plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-scheduled-test-plans.html).
+
 - Use the following new features when [visualizing data tables in data spaces](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html).
     - Search for columns to plot from the axis selection grid.
     - Color traces by data table and by column metadata.
+
+- Support for [Private Certificate Authorities](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/private-certificate-authorities.html).
+    - Connect to MongoDB and S3 compatible interfaces that use certificates signed by a private authority.
+        - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on containers that connect to MongoDB and S3 compatible interfaces. These certificates are used when connecting to these external dependencies.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L113)
+    - Call SystemLink APIs from Jupyter Notebook when the SystemLink API endpoint is configured to use a certificate signed by a private authority.
+        - Trusted certificates specified at `global.apiHostCertificateSecret` are now installed on containers that run Jupyter notebooks. These certificates are used when calling SystemLink or other external APIs from notebooks.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
+    - Systems Management Service support for deploying a privately signed root certificate authority to all managed systems.
+        - Trusted certificates specified at `global.apiHostCertificateSecret` can be automatically deployed to managed systems.
+        - Set `global.deployApiHostCertificateToSystems` to `true` to enable automatic deployment.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L125)
+
 - Adjust how long the SystemLink Enterprise Alarm Service keeps your alarms - [Configuring Alarm Retention](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-alarm-retention.html).
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L469)
+
 - Adjust how many alarms you can create in the SystemLink Enterprise Alarm Service - [Configuring Alarm Limits](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-alarm-limits.html).
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L484)
+
 - Learn about the [performance metrics for the Dashboard Host Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-dashboard-host-service.html).
+
 - The privilege **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** was split to **List available notebooks** and **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment**.
     - These privileges are enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
     - For the Automated Agent, the **List published notebooks in SystemLink and download published notebooks into the Jupyter development environment** privilege will be removed, as the Automated Agent should not need to download the notebooks content.
-- Support for [Private Certificate Authorities](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/private-certificate-authorities.html).
-    - Connect to MongoDB and S3 compatible interfaces that use certificates signed by a private authority.
-    - Call SystemLink APIs from Jupyter Notebook when the SystemLink API endpoint is configured to use a certificate signed by a private authority.
-    - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on containers that run Jupyter notebooks. These certificates are used when calling SystemLink or other external APIs from notebooks.
-- Implemented Rate limiting for the Notebook APIs, in the WebApp Service.
-- Notebook Execution Service
-    - Created a dedicated swagger page for Artifact APIs.
-    - Implemented Rate limiting for the Artifact APIs.
-    - Created S3 buckets for Artifact APIs.
-- Systems Management Service support for deploying a custom CA root to all managed clients.
-    - Trusted certificates specified at `global.trustedCertificatesSecrets` are now installed on containers that run Jupyter notebooks. These certificates are used when calling SystemLink or other external APIs from notebooks.
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
+
+- API calls to create, list, download, query and delete notebooks from the WebApp service are rate limited.
 
 ## Helm Chart Breaking Changes
 
