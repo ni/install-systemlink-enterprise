@@ -17,7 +17,7 @@ The 2024-09 release for SystemLink Enterprise has been published to <https://dow
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L113)
     - Call SystemLink APIs from Jupyter Notebook when the SystemLink API endpoint is configured to use a certificate signed by a private authority.
         - Trusted certificates specified at `global.trustedHostCertificateSecret` are now installed on containers that run Jupyter notebooks. These certificates are used when calling SystemLink or other external APIs from notebooks.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L119)
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-09/getting-started/templates/systemlink-values.yaml#L113)
     - Systems Management Service support for deploying a privately signed root certificate authority to all managed systems.
         - Trusted certificates specified at `global.apiHostCertificateSecret` can be automatically deployed to managed systems.
         - Set `global.deployApiHostCertificateToSystems` to `true` to enable automatic deployment.
