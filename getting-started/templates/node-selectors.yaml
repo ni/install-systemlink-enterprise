@@ -157,6 +157,10 @@ nbexecservice:
   nodeSelector: *servicesNodeSelector
   tolerations: *servicesTolerations
   affinity: *servicesAffinity
+  argo:
+    workflow:
+      nodeSelector: *notebookExecutionNodeSelector
+      tolerations: *notebookExecutionTolerations
 
 nbparsingservice:
   nodeSelector: *servicesNodeSelector
