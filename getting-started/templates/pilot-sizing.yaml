@@ -137,14 +137,14 @@ dataframeservice:
   
   sldremio:
     coordinator:
-      cpu: 2
-      memory: 16384
-      volumeSize: "50Gi"
+      cpu: 4
+      memory: 32768
+      volumeSize: "100Gi"
     executor:
       count: 1
-      cpu: 1
-      memory: 16384
-      volumeSize: "10Gi"
+      cpu: 4
+      memory: 32768
+      volumeSize: "50Gi"
     zookeeper:
       count: 1
 
