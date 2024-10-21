@@ -134,6 +134,19 @@ dataframeservice:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
+  
+  sldremio:
+    coordinator:
+      cpu: 2
+      memory: 16384
+      volumeSize: "50Gi"
+    executor:
+      count: 1
+      cpu: 1
+      memory: 16384
+      volumeSize: "10Gi"
+    zookeeper:
+      count: 1
 
 executionsui:
   resources:
