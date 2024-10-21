@@ -24,7 +24,11 @@ global:
 
   # Tolerations for node taints to allow the pod to be scheduled on tainted nodes.
   servicesTolerations: &servicesTolerations []
-  notebookExecutionTolerations: &notebookExecutionTolerations []
+  notebookExecutionTolerations: &notebookExecutionTolerations
+    - key: "notebook_execution" 
+      operator: "Equal" 
+      value: "true" 
+      effect: "NoSchedule"
   jupyterTolerations: &jupyterTolerations
     - key: hub.jupyter.org/dedicated
       operator: "Equal"
