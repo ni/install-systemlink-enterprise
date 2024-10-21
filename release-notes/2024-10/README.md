@@ -10,9 +10,28 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Privileges and roles changes
+    - "Routines" service role was added
+    - "Routine Maintainer" role was added
+    - Routines "Enable" and "Disable" privileges were added
+    - "Cancel notebook execution" privilege was added. This isn't currently being enforced.
+    - Routine "Modify metadata" privilege was renamed to "Modify routines"
+    - "Notebook Execution" privilege category was renamed to "Scripts" to match the application rename
+- As a result of the privilege changes above, non-admin users that could previously perform operations on Routines may not be able to any longer. These users should either be applied the "Routine Maintainer" role or have a new role created that grants Routine privileges.
+- Routines must now be disabled in order to be updated unless the user has all of enable, disable, and modify privileges.
+- testmonitorservice
+    - Ugpraded EF Core from 6.0 to 8.0, because the support for EF 6.0 ends on Nov 12, 2024.
+- userservice
+    - Enabled CORS for DELETE `niauth/v1/session-keys/self` route.
+- Service Registry & user service
+    - Created new actions for Artifact upload, download & update routes. Used in execution & dataspace privilege definition
+        - Updated data maintainer to have all artifact privileges
+        - Updated system maintainer to have artifact query privilege
+        - Update collaborator to have artifact query privilege
+- Notebook service - artifacts
+    - Updated APIs(Create, Download & Update artifacts) to use new artifact actions
+- Notebook execution service
+    - Introduced new privilege for specifying resource profile: `notebookexecution:SpecifyResourceProfile`
 
 ## Helm Chart Breaking Changes
 
