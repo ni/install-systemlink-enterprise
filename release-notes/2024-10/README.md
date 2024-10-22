@@ -1,5 +1,3 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
-
 # SystemLink Enterprise release 2024-10 Release Notes
 
 The 2024-10 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
@@ -52,19 +50,15 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2024-10](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/release-notes/2024-10/closed-bugs-sle-2024-10.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/release-notes/2024-10/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/release-notes/2024-10/notices)
 
 ## Versions
 
