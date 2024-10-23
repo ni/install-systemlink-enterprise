@@ -24,7 +24,7 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 - Service Registry & user service
     - Created new actions for Artifact upload, download & update routes. Used in execution & dataspace privilege definition
         - Updated data maintainer to have all artifact privileges
-        - Updated system maintainer to have artifact query privilege
+        - Updated system maintainer to have artifact query privilege.
         - Update collaborator to have artifact query privilege
 - Notebook service - artifacts
     - Updated APIs (Create, Download & Update artifacts) to use new artifact actions.
