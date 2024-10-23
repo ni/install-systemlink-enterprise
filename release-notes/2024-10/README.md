@@ -29,7 +29,7 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 - Notebook service - artifacts
     - Updated APIs(Create, Download & Update artifacts) to use new artifact actions
 - Notebook execution service
-    - Introduced new privilege for specifying resource profile: `notebookexecution:SpecifyResourceProfile`
+    - Introduced new privilege for specifying a resource profile: `notebookexecution:SpecifyResourceProfile`
 
 ## Helm Chart Breaking Changes
 
