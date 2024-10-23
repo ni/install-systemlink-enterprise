@@ -13,7 +13,7 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
     - "Routine Maintainer" role was added
     - Routines "Enable" and "Disable" privileges were added
     - "Cancel notebook execution" privilege was added. This isn't currently being enforced.
-    - Routine "Modify metadata" privilege was renamed to "Modify routines"
+    - Renamed the "Modify metadata" routine privilege to "Modify routines."
     - "Notebook Execution" privilege category was renamed to "Scripts" to match the application rename
 - As a result of the privilege changes above, non-admin users that could previously perform operations on Routines may not be able to any longer. These users should either be applied the "Routine Maintainer" role or have a new role created that grants Routine privileges.
 - Routines must now be disabled in order to be updated unless the user has all of enable, disable, and modify privileges.
