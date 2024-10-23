@@ -10,7 +10,7 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 
 - Changes to privileges and roles
     - "Routines" service role was added
-    - "Routine Maintainer" role was added
+    - Added "Routine Maintainer" role.
     - Added "Enable" and "Disable" privileges to routines.
     - Added "Cancel notebook execution" privilege. This privilege is not currently enforced.
     - Renamed the "Modify metadata" routine privilege to "Modify routines."
