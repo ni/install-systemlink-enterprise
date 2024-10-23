@@ -8,7 +8,7 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- Privileges and roles changes
+- Changes to privileges and roles
     - "Routines" service role was added
     - "Routine Maintainer" role was added
     - Routines "Enable" and "Disable" privileges were added
