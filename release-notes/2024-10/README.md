@@ -49,7 +49,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.30.70`
+**Top Level Helm Chart:** `systemlink 0.30.74`
 
 **Admin Helm Chart:** `systemlink-admin 0.30.6`
 
@@ -79,9 +79,9 @@ filesui:0.19.75
 
 grafana-auth-proxy:0.17.6
 
-grafana-plugins:3.18.0
+grafana-plugins:3.34.1
 
-grafana-rbac-integrator:0.18.38
+grafana-rbac-integrator:0.18.40
 
 helium-dataservices-mongomigration:0.17.7
 
@@ -109,7 +109,7 @@ jupyter-notebook-userpod:2.9.10
 
 jupyterui:0.18.61
 
-labmanagementui:0.9.114
+labmanagementui:0.9.115
 
 landingpageui:0.18.63
 
@@ -168,6 +168,8 @@ testmonitorservice:0.27.22
 userdata:0.18.17
 
 userservice-setup:0.21.0
+
+workorder:0.9.20
 
 ### 3rd Party Containers
 
