@@ -1082,6 +1082,39 @@ nbexecservice:
         # trustedCertificateSecret:
         #   secretName: S3Certificate
         #   key: cert
+    workflow:
+      run:
+        # Default resource allocation for execution pods
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: 2Gi
+          limits:
+            memory: 2Gi
+        # Resource profiles enable different resource allocations for each execution. Profile names are fixed and cannot be modified.
+        # Use dedicated nodes to ensure that the scheduling of non-execution pods is not impacted.
+        # In cloud environments, limit the maximum number of nodes to avoid unexpected costs.
+        # To reserve capacity for resource profiles with high resource demands, set a lower maximum number of workflows to schedule.
+        resourceProfiles:
+          low:
+            requests:
+              cpu: "0.1"
+              memory: 4Gi
+            limits:
+              memory: 4Gi
+          medium:
+            requests:
+              cpu: "0.1"
+              memory: 8Gi
+            limits:
+              memory: 8Gi
+          high:
+            requests:
+              cpu: "0.1"
+              memory: 16Gi
+            limits:
+              memory: 16Gi
+
 
 ## Configuration for Repository Service
 repository:
