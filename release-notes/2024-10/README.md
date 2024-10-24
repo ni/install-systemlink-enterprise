@@ -2,39 +2,30 @@
 
 The 2024-10 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the release 2024-09 to the release 2024-10
+## New Features and Behavior Changes
 
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
+- As a result of privilege changes for Routines, non-Server Administrator users who could previously perform operations on Routines may not be able to any longer. These users can be given the **Routine Maintainer** role or have a new role created that grants Routine privileges.
+    - Added the **Routines** service role.
+    - Added the **Routine Maintainer** role.
+    - Added the **Enable** and **Disable** privileges to Routines.
+    - The **Modify metadata** Routine privilege has been renamed to **Modify routines**.
 
-## New Features and Behavior changes
+- Routines must now be disabled prior to modification unless the user has _all_ of the following privileges.
+    - **Enable routines**
+    - **Disable routines**
+    - **Modify routines**
 
-- Changes to privileges and roles
-    - Added "Routines" service role.
-    - Added "Routine Maintainer" role.
-    - Added "Enable" and "Disable" privileges to routines.
-    - Added "Cancel notebook execution" privilege. This privilege is not currently enforced.
-    - Renamed the "Modify metadata" routine privilege to "Modify routines."
-    - "Notebook Execution" privilege category was renamed to "Scripts" to match the application rename
-- As a result of the privilege changes above, non-admin users that could previously perform operations on Routines may not be able to any longer. These users should either be applied the "Routine Maintainer" role or have a new role created that grants Routine privileges.
-- Routines must now be disabled in order to be updated unless the user has all of enable, disable, and modify privileges.
-- testmonitorservice
-    - Ugpraded EF Core from 6.0 to 8.0, because the support for EF 6.0 ends on Nov 12, 2024.
-- userservice
-    - Enabled CORS for DELETE `niauth/v1/session-keys/self` route.
-- Service Registry & user service
-    - Created new actions for Artifact upload, download & update routes. Used in execution & dataspace privilege definition
-        - Updated data maintainer to have all artifact privileges
-        - Updated system maintainer to have artifact query privilege.
-        - Update collaborator to have artifact query privilege
-- Notebook service - artifacts
-    - Updated APIs (Create, Download & Update artifacts) to use new artifact actions.
-- Notebook execution service
-    - Introduced new privilege for specifying a resource profile: `notebookexecution:SpecifyResourceProfile`
+- The **Notebook Execution** privilege category was renamed to **Scripts** to match the application name.
+    - Added the **Cancel notebook execution** privilege. This privilege is not yet enforced. Enforcement will included in a future release.
+    - Resource profiles can now be specified in the `/ninbexecution/v1/executions` route. Resource profiles allows for a notebook to be executed with different pre-defined memory and CPU allocations for its container. The resources available to each profile are defined in Helm values.
+        - [View this configuration](TODO Link)
+        - Added the **Specify resource profile** privilege to the **Scripts** privilege category
+
+- Enabled CORS for the **DELETE** `niauth/v1/session-keys/self` route.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+This release contains no Helm chart breaking changes.
 
 ## Upgrade Considerations
 
