@@ -1,5 +1,3 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
-
 # SystemLink Enterprise release 2024-10 Release Notes
 
 The 2024-10 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
@@ -10,9 +8,28 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Changes to privileges and roles
+    - Added "Routines" service role.
+    - Added "Routine Maintainer" role.
+    - Added "Enable" and "Disable" privileges to routines.
+    - Added "Cancel notebook execution" privilege. This privilege is not currently enforced.
+    - Renamed the "Modify metadata" routine privilege to "Modify routines."
+    - "Notebook Execution" privilege category was renamed to "Scripts" to match the application rename
+- As a result of the privilege changes above, non-admin users that could previously perform operations on Routines may not be able to any longer. These users should either be applied the "Routine Maintainer" role or have a new role created that grants Routine privileges.
+- Routines must now be disabled in order to be updated unless the user has all of enable, disable, and modify privileges.
+- testmonitorservice
+    - Ugpraded EF Core from 6.0 to 8.0, because the support for EF 6.0 ends on Nov 12, 2024.
+- userservice
+    - Enabled CORS for DELETE `niauth/v1/session-keys/self` route.
+- Service Registry & user service
+    - Created new actions for Artifact upload, download & update routes. Used in execution & dataspace privilege definition
+        - Updated data maintainer to have all artifact privileges
+        - Updated system maintainer to have artifact query privilege.
+        - Update collaborator to have artifact query privilege
+- Notebook service - artifacts
+    - Updated APIs (Create, Download & Update artifacts) to use new artifact actions.
+- Notebook execution service
+    - Introduced new privilege for specifying a resource profile: `notebookexecution:SpecifyResourceProfile`
 
 ## Helm Chart Breaking Changes
 
@@ -33,19 +50,15 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
 Only customer facing bugs have been included in this list.
 
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2024-10](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/release-notes/2024-10/closed-bugs-sle-2024-10.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/release-notes/2024-10/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/release-notes/2024-10/notices)
 
 ## Versions
 
