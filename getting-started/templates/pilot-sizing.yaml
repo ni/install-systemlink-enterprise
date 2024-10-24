@@ -134,6 +134,35 @@ dataframeservice:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
+  
+  sldremio:
+    coordinator:
+      cpu: 4
+      memory: 31000
+      volumeSize: "100Gi"
+    executor:
+      count: 1
+      cpu: 4
+      memory: 31000
+      volumeSize: "50Gi"
+    zookeeper:
+      count: 1
+  # The above is the recommended configuration for pilot deployments.
+  # For deployments where the DataFrame Service will not be used, the following
+  # configuration is the bare minimum for the Dremio pods to start up:
+  # sldremio:
+  #   coordinator:
+  #     cpu: 1
+  #     memory: 4096
+  #     volumeSize: "10Gi"
+  #   executor:
+  #     count: 1
+  #     cpu: 1
+  #     memory: 4096
+  #     volumeSize: "10Gi"
+  #   zookeeper:
+  #     count: 1
+
 
 executionsui:
   resources:
