@@ -16,3 +16,9 @@ global:
   # <ATTENTION> - Set to false if you do not want to manage secrets as part of the Helm installation.
   ##
   deploySecrets: true
+
+## Uncomment and adjust installation of Argo Workflows CRDs. Disable the installation of Argo Workflows CRDs
+## when you already have them installed in your cluster as part of other Argo Workflows deployment.
+# argoworkflowscrds:
+#   crds:
+#     install: true

@@ -1011,6 +1011,11 @@ argoworkflows:
       ## Maximum number of workflows that can run in parallel.
       ##
       parallelism: &workflowParallelism 300
+      ## Uncomment to specify instanceID for Argo Workflows. This is needed to avoid conlicts with already existing
+      ## Argo Workflows deployments in the cluster.
+      # instanceID:
+      #   enabled: true
+      #   explicitID: sl-notebook-execution-0
     executor:
       image:
         registry: *imageRegistryRef
