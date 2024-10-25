@@ -4,6 +4,11 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior Changes
 
+- Use the scheduling assistant to see what systems and DUTs are available and schedule test plans without conflicts.
+- Add comments with @ mention and rich text on work orders and test plans.
+- Configure resource profiles to maximize resource utilization. In systemlink-values.yaml, you can modify the low, medium, or high resource profiles.
+- When viewing your data tables in a data space, you can now view your data in a table as well as a chart.
+
 - As a result of privilege changes for Routines, non-Server Administrator users who could previously perform operations on Routines may not be able to any longer. These users can be given the **Routine Maintainer** role or have a new role created that grants Routine privileges.
     - Added the **Routines** service role.
     - Added the **Routine Maintainer** role.
