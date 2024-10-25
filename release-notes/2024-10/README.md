@@ -8,25 +8,21 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 - Add comments with @ mention and rich text on work orders and test plans.
 - When viewing your data tables in a data space, you can now view your data in a table as well as a chart.
 - Configure resource profiles to maximize resource utilization for the Notebook Execution Service. In systemlink-values.yaml, you can modify the low, medium, or high resource profiles.
-    - Resource profiles can now be specified in the `/ninbexecution/v1/executions` route.
-    - Resource profiles allows for a notebook to be executed with different pre-defined memory and CPU allocations for its container. The resources available to each profile are defined in Helm values.
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/getting-started/templates/systemlink-values.yaml#L1085)
-
-- As a result of privilege changes for routines, non-Server Administrator users who could previously perform operations on routines may not be able to any longer. Apply the **Routine Maintainer** role to these users or create a new role created that grants routine privileges.
-    - Added the **Routines** service role.
-    - Added the **Routine Maintainer** role.
-    - Added the **Enable** and **Disable** privileges to routines.
-    - The **Modify metadata** routine privilege has been renamed to **Modify routines**.
-
+    - Resource profiles allows for a notebook to be executed with different pre-defined memory and CPU allocations for its container. The resources configured for each profile are defined in Helm values.
+        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/getting-started/templates/systemlink-values.yaml#L1085)
+    - The resource profile used when executing a notebook is specified in the POST body of the `/ninbexecution/v1/executions` route.
+- As a result of privilege changes for routines, non-Server Administrator users who could previously perform operations on routines may not be able to any longer. Apply the **Routine Maintainer** role to these users or create a new role that grants routine privileges.
+- Added the **Routines** service role.
+- Added the **Routine Maintainer** role.
+- Added the **Enable** and **Disable** privileges to the **Routines** privilege category.
+- The **Modify metadata** routine privilege has been renamed to **Modify routines**.
 - Users must disable Routines to update them unless they have _all_ of the following privileges.
     - **Enable routines**
     - **Disable routines**
     - **Modify routines**
-
 - Renamed the **Notebook Execution** privilege category to **Scripts** to match the application rename.
-    - Added the **Cancel notebook execution** privilege. This privilege is not yet enforced. Enforcement will included in a future release.
-    - Added the **Specify resource profile** privilege to the **Scripts** privilege category
-
+- Added the **Cancel notebook execution** privilege to the **Scripts** privilege category. This privilege is not yet enforced. Enforcement will included in a future release.
+- Added the **Specify resource profile** privilege to the **Scripts** privilege category.
 - Enabled CORS for the **DELETE** `niauth/v1/session-keys/self` route.
 
 ## Helm Chart Breaking Changes
