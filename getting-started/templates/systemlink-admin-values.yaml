@@ -17,8 +17,9 @@ global:
   ##
   deploySecrets: true
 
-## Uncomment and adjust installation of Argo Workflows CRDs. Disable the installation of Argo Workflows CRDs
-## when you already have them installed in your cluster as part of other Argo Workflows deployment.
+## Uncomment to disable the installation of Argo Workflows CRDs. Use this option if Argo Workflows
+## CRDs are already installed in your cluster as part of another Argo Workflows deployment
 # argoworkflowscrds:
 #   crds:
-#     install: true
+#     install: false
+
