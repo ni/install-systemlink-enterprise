@@ -9,18 +9,18 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
 - Configure resource profiles to maximize resource utilization. In systemlink-values.yaml, you can modify the low, medium, or high resource profiles.
 - When viewing your data tables in a data space, you can now view your data in a table as well as a chart.
 
-- As a result of privilege changes for Routines, non-Server Administrator users who could previously perform operations on Routines may not be able to any longer. These users can be given the **Routine Maintainer** role or have a new role created that grants Routine privileges.
+- As a result of privilege changes for routines, non-Server Administrator users who could previously perform operations on routines may not be able to any longer. Apply the **Routine Maintainer** role to these users or create a new role created that grants routine privileges.
     - Added the **Routines** service role.
     - Added the **Routine Maintainer** role.
-    - Added the **Enable** and **Disable** privileges to Routines.
-    - The **Modify metadata** Routine privilege has been renamed to **Modify routines**.
+    - Added the **Enable** and **Disable** privileges to routines.
+    - The **Modify metadata** routine privilege has been renamed to **Modify routines**.
 
-- Routines must now be disabled prior to modification unless the user has _all_ of the following privileges.
+- Users must disable Routines to update them unless they have _all_ of the following privileges.
     - **Enable routines**
     - **Disable routines**
     - **Modify routines**
 
-- The **Notebook Execution** privilege category was renamed to **Scripts** to match the application name.
+- Renamed the **Notebook Execution** privilege category to **Scripts** to match the application rename.
     - Added the **Cancel notebook execution** privilege. This privilege is not yet enforced. Enforcement will included in a future release.
     - Resource profiles can now be specified in the `/ninbexecution/v1/executions` route. Resource profiles allows for a notebook to be executed with different pre-defined memory and CPU allocations for its container. The resources available to each profile are defined in Helm values.
         - [View this configuration](TODO Link)
