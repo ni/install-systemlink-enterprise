@@ -12,7 +12,6 @@ The 2024-10 release for SystemLink Enterprise has been published to <https://dow
         - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/getting-started/templates/systemlink-values.yaml#L1085)
     - The resource profile used when executing a notebook is specified in the POST body of the `/ninbexecution/v1/executions` route.
 - As a result of privilege changes for routines, non-Server Administrator users who could previously perform operations on routines may not be able to any longer. Apply the **Routine Maintainer** role to these users or create a new role that grants routine privileges.
-- Added the **Routines** service role.
 - Added the **Routine Maintainer** role.
 - Added the **Enable** and **Disable** privileges to the **Routines** privilege category.
 - The **Modify metadata** routine privilege has been renamed to **Modify routines**.
