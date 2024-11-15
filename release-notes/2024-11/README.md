@@ -2,20 +2,15 @@
 
 The 2024-11 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the 2024-10 to the 2024-11
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
+- Added the privilege category for managing custom Web Applications: "Access web application", "List and view web applications", and "Create, modify, and delete web applications".
 
-- Behavior change or new feature description
+- Updated the "Collaborator", "Data Maintainer", and "Systems Maintainer" built in roles to have privileges to "Access web application" and "List and view web applications"
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+This release contains no Helm chart breaking changes.
 
 ## Upgrade Considerations
 
