@@ -808,13 +808,13 @@ feedservice:
   ## Configure S3 access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "feeds-s3-credentials"
     ## The name of the S3 bucket that the service should connect to.
     ##
     bucket: "systemlink-feeds"
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: *s3Scheme
     ## Set this value to connect to an external S3 instance.
@@ -834,7 +834,7 @@ feedservice:
     ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
     ##
     address: ""
-    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3 host in the noProxy list. Use this if the S3 host is internal to the cluster so we don't need to go through the proxy to access it.
+    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3/GCS host in the noProxy list. Use this if the S3/GCS host is internal to the cluster so we don't need to go through the proxy to access it.
     ##
     includeS3HostInNoProxy: false
     ## @param httpProxy.includeAPIHostsInNoProxy Set to true to include the API hosts in the noProxy list. Use this if the API host is internal to the cluster so we don't need to go through the proxy to access it.
@@ -861,7 +861,7 @@ fileingestion:
   ## Configure S3 access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "fileingestion-s3-credentials"
     ## The name of the S3 bucket that the service should connect to.
@@ -870,7 +870,7 @@ fileingestion:
     ## Set this to true to limit each user to a maximum of 1Gb of file storage.
     ##
     storageLimitsEnabled: false
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: *s3Scheme
     ## Set this value to connect to an external S3 instance.
@@ -986,13 +986,13 @@ nbexecservice:
   ## Configure S3 access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/MinIO/GCS credentials.
     ##
     secretName: "nbexecservice-s3-credentials"
     ## The name of the S3 bucket that the service should connect to.
     ##
     bucket: "systemlink-executions"
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: *s3Scheme
     ## Set this value to connect to an external S3 instance.
