@@ -1045,8 +1045,8 @@ nbexecservice:
     scheme: "http://"
     ## Set this value to connect to an external S3/GCS instance.
     # <ATTENTION> To connect to an external S3/GCS bucket, set the host here as well as the scheme and port.
-    # <ATTENTION> To connect to external S3 bucket, set the host as "s3.amazonaws.com"
-    # <ATTENTION> To connect to external GCS bucket, set the host as "storage.googleapis.com"
+    # <ATTENTION> To connect to an external S3 bucket, set the host as "s3.amazonaws.com"
+    # <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com"
     ##
     host: ""
     ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
@@ -1069,8 +1069,8 @@ nbexecservice:
         bucket: "systemlink-notebook-execution"
         ## Set this value to connect to an external S3 instance.
         # <ATTENTION> To connect to an external S3/GCS bucket, set the host here as well as the insecure and port.
-        # <ATTENTION> To connect to external S3 bucket, set the host as "s3.amazonaws.com"
-        # <ATTENTION> To connect to external GCS bucket, set the host as "storage.googleapis.com"
+        # <ATTENTION> To connect to an external S3 bucket, set the host as "s3.amazonaws.com"
+        # <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com"
         ##
         host: ""
         ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
