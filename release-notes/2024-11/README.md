@@ -6,7 +6,7 @@ The 2024-11 release for SystemLink Enterprise has been published to <https://dow
 
 - Added a privilege category for managing custom web applications. The privileges include "Access web application", "List and view web applications", and "Create, modify, and delete web applications."
 
-- Updated the "Collaborator", "Data Maintainer", and "Systems Maintainer" built in roles to have privileges to "Access web application" and "List and view web applications"
+- Updated the "Collaborator", "Data Maintainer", and "Systems Maintainer" built-in roles to have privileges to "Access web application" and "List and view web applications."
 
 ## Helm Chart Breaking Changes
 
