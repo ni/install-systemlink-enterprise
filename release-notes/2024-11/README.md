@@ -38,7 +38,7 @@ Only customer facing bugs have been included in this list.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.31.57`
+**Top Level Helm Chart:** `systemlink 0.31.59`
 
 **Admin Helm Chart:** `systemlink-admin 0.31.6`
 
@@ -68,9 +68,9 @@ filesui:0.20.60
 
 grafana-auth-proxy:0.17.6
 
-grafana-plugins:3.43.4
+grafana-plugins:3.43.5
 
-grafana-rbac-integrator:0.19.31
+grafana-rbac-integrator:0.19.32
 
 helium-dataservices-mongomigration:0.18.9
 
