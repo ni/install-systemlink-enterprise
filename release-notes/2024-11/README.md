@@ -4,7 +4,15 @@ The 2024-11 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- Updated the "Collaborator", "Data Maintainer", and "Systems Maintainer" built-in roles to have privileges to "Access web application" and "List and view web applications."
+- Search, filter, and save custom views on the Data Spaces table.
+- View, add, and manage asset calibration data.
+- Download asset CSV reports.
+- Forecast upcoming asset calibrations using the built-in calibration forecast dashboard.
+- Improved query performance for Data Tables.
+- Added support for Kubernetes 1.29.
+- Added support for PostgreSQL 15.
+- Added a new privilege category for **Web applications**. The applications that make use of this category are not yet shipping.
+    - The **Collaborator**, **Data Maintainer**, and **Systems Maintainer** built-in roles to have privileges to "Access web application" and "List and view web applications" in the **Web applications** privilege category.
 
 ## Helm Chart Breaking Changes
 
