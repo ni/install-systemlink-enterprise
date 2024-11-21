@@ -35,8 +35,6 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 <!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
 
-Only customer facing bugs have been included in this list.
-
 [link to closed bugs](link to closed bugs)
 
 ## Software Bill of Materials and Notices
