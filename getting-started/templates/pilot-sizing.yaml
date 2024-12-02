@@ -174,7 +174,7 @@ dynamicformfields:
   autoscaling:
     enabled: true
     minReplicas: 1
-    maxReplicas: 3
+    maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
     
