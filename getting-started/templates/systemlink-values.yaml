@@ -1256,3 +1256,75 @@ serviceregistry:
       specification:
         ## Add the "Specification" service to the service registry if enabled
         enabled: *specificationManagementEnabled
+
+## Configuration for dynamic form fields.
+##
+dynamicformfields:
+  ## Database configuration
+  ##
+  database:
+    ## The PostgreSQL database connection string
+    ## NOTE: If specified, the `database.connectionInfo` parameters are ignored. If
+    ## `database.tls.enabled` is set to `true`, the connection string must include the
+    ## appropriate SSL Mode (Prefer, Require, VerifyCA, or VerifyFull).
+    # <ATTENTION> - If connecting to an external PostgresSQL database, you must configure one of
+    #    the connectionString and connectionInfo sections with the details of your database.
+    ##
+    connectionString:
+      secretName: "dynamicformfields-db-connection"
+      ## Key from the secret to retrieve the connection string the service will use to connect to PostgreSQL.
+      ## NOTE: Ignored unless `database.connectionstring.secretName` parameter is set.
+      connectionStringKey: "connection-string"
+      ## Key from the secret to retrieve the connection string that will be used to perform migrations managed by this chart.
+      ## If unset database.connectionString.connectionStringKey is used instead.
+      ## NOTE: Ignored unless `database.connectionstring.secretName` parameter is set.
+      migrationConnectionStringKey: null
+    ## The PostgreSQL database connection info.
+    ## NOTE: If the `database.connectionString` parameters are specified, the `database.connectionInfo`
+    ## parameters are ignored.
+    ##
+    # connectionInfo:
+    #     ## PostgreSQL host name.
+    #     ##
+    #     host: ""
+    #     ## PostgreSQL port.
+    #     ##
+    #     port: ""
+    #     ## PostgreSQL database name.
+    #     ##
+    #     dbName: "nisystemlink"
+    #     ## PostgreSQL user name.
+    #     ##
+    #     user: "nisystemlink"
+    #     ## PostgreSQL username used to perform migration managed by this chart.
+    #     ## If unset database.connectionInfo.user is used instead.
+    #     migrationUser: ""
+    #     ## The name of an existing secret with PostgreSQL connection credentials.
+    #     ##
+    #     secretName: "dynamicformfields-db-connection"
+    #     ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
+    #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    #     ##
+    #     passwordKey: "password"
+    #     ## @param database.connectionInfo.migrationPasswordKey Password key for database.connectionInfo.migrationUser to be retrieved from existing secret
+    #     ## If unset database.connectionInfo.passwordKey is used instead.
+    #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    #     ##
+    #     migrationPasswordKey: null
+    ## The PostgreSQL database TLS configuration
+    ##
+    tls:
+      ## Enable TLS communication with the PostgreSQL database.
+      ## NOTE: If true, the public TLS certificate from the server (.pem or .crt)
+      ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
+      ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
+      ## parameters respectively.
+      ## Use the database.postgresCertificate value to automatically upload this certificate.
+      ##
+      enabled: true
+      ## The name of an existing ConfigMap with a TLS certificate for the database.
+      ##
+      existingConfigMap: *postgresCertificateConfigMap
+      ## The Certificate key to be retrieved from existing ConfigMap
+      ##
+      certificateSubPath: *postgresCertificateFileName
