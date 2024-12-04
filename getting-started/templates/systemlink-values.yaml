@@ -843,31 +843,33 @@ saltmaster:
 ## Feed configuration.
 ##
 feedservice:
-  ## Configure S3/MinIO access.
+  ## Configure S3/MinIO/GCS access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "feeds-s3-credentials"
-    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ## The name of the S3/MinIO/GCS bucket that the service should connect to.
     ##
     bucket: "systemlink-feeds"
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: "http://"
     ## Set this value to connect to an external S3 instance.
-    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    # <ATTENTION> To connect to an external S3/GCS bucket, set the host here as well as the scheme and port.
+    # <ATTENTION> To connect to an external S3 bucket, set the host as "s3.amazonaws.com"
+    # <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com".
     ##
     host: ""
     ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *minioServiceName
-    ## S3 Port
+    ## S3/GCS Port
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
-    ## S3 Region
-    # <ATTENTION> This must be set to the region of the S3 instance.
+    ## S3/GCS Region
+    # <ATTENTION> This must be set to the region of the S3/GCS instance.
     ##
     region: "us-east-1"
   ## Proxy configuration to be used when the service needs to go through a proxy to have access to external services like ni.com.
@@ -875,7 +877,7 @@ feedservice:
     ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
     ##
     address: ""
-    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3 host in the noProxy list. Use this if the S3 host is internal to the cluster so we don't need to go through the proxy to access it.
+    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3/GCS host in the noProxy list. Use this if the S3/GCS host is internal to the cluster so we don't need to go through the proxy to access it.
     ##
     includeS3HostInNoProxy: false
     ## @param httpProxy.includeAPIHostsInNoProxy Set to true to include the API hosts in the noProxy list. Use this if the API host is internal to the cluster so we don't need to go through the proxy to access it.
@@ -899,34 +901,36 @@ fileingestion:
       nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
-  ## Configure S3/MinIO access.
+  ## Configure S3/MinIO/GCS access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "fileingestion-s3-credentials"
-    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ## The name of the S3/MinIO/GCS bucket that the service should connect to.
     ##
     bucket: "systemlink-file-ingestion"
     ## Set this to true to limit each user to a maximum of 1Gb of file storage.
     ##
     storageLimitsEnabled: false
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: "http://"
-    ## Set this value to connect to an external S3 instance.
-    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    ## Set this value to connect to an external S3/GCS instance.
+    # <ATTENTION> To connect to an external S3/GCS bucket, set the host here as well as the scheme and port.
+    # <ATTENTION> To connect to an external S3 bucket, set the host as "s3.amazonaws.com".
+    # <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com"
     ##
     host: ""
     ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *minioServiceName
-    ## S3 Port
+    ## S3/GCS Port
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     ##
     port: *minioPort
-    ## S3 Region
-    # <ATTENTION> This must be set to the region of the S3 instance.
+    ## S3/GCS Region
+    # <ATTENTION> This must be set to the region of the S3/GCS instance.
     ##
     region: "us-east-1"
    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
@@ -1027,48 +1031,52 @@ argoworkflows:
 ##
 nbexecservice:
   maxNumberOfWorkflowsToSchedule: *workflowParallelism
-  ## Configure S3/MinIO access.
+  ## Configure S3/MinIO/GCS access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/MinIO/GCS credentials.
     ##
     secretName: "nbexecservice-s3-credentials"
-    ## The name of the S3 or MinIO bucket that the service should connect to.
+    ## The name of the S3/MinIO/GCS bucket that the service should connect to.
     ##
     bucket: "systemlink-executions"
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: "http://"
-    ## Set this value to connect to an external S3 instance.
-    # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the scheme and port.
+    ## Set this value to connect to an external S3/GCS instance.
+    # <ATTENTION> To connect to an external S3/GCS bucket, set the host here as well as the scheme and port.
+    # <ATTENTION> To connect to an external S3 bucket, set the host as "s3.amazonaws.com"
+    # <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com"
     ##
     host: ""
     ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *minioServiceName
-    ## S3 Port
+    ## S3/GCS Port
     # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
     port: *minioPort
-    ## S3 Region
+    ## S3/GCS Region
     # <ATTENTION> This must be set to the region of the S3 instance.
     ##
     region: "us-east-1"
   argo:
-    ## Configure S3/MinIO access.
+    ## Configure S3/MinIO/GCS access.
     ##
     artifactRepository:
       s3:
-        ## The name of the S3 or MinIO bucket that the service should connect to.
+        ## The name of the S3/MinIO/GCS bucket that the service should connect to.
         ##
         bucket: "systemlink-notebook-execution"
         ## Set this value to connect to an external S3 instance.
-        # <ATTENTION> To connect to an external S3 bucket, set the host here as well as the insecure and port.
+        # <ATTENTION> To connect to an external S3/GCS bucket, set the host here as well as the insecure and port.
+        # <ATTENTION> To connect to an external S3 bucket, set the host as "s3.amazonaws.com"
+        # <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com"
         ##
         host: ""
         ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
         ##
         service: *minioServiceName
-        ## S3 Port
+        ## S3/GCS Port
         # <ATTENTION> This must be overridden if not using the SLE MinIO instance.
         ##
         port: *minioPort
