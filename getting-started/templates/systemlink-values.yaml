@@ -306,6 +306,60 @@ minio:
 ## Configuration for test result storage.
 ##
 testmonitorservice:
+  ## Configuring additional sidecars for the Test Monitor Service.
+  ##
+  ## @param sidecars Additional containers to run in the same pod as the Test Monitor Service.
+  ## It is used for authentication proxy containers, such as the Cloud SQL Auth Proxy. Example of a Cloud SQL Auth Proxy sidecar has been provided below.
+  ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
+  # sidecars:
+  #   - name: cloud-sql-proxy
+  #     # It is recommended to use the latest version of the Cloud SQL Auth Proxy
+  #     image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.14.1
+  #     env:
+  #       - name: "GOOGLE_APPLICATION_CREDENTIALS"
+  #         value: "/secrets/service_account.json"
+  #     volumeMounts:
+  #       - name: <YOUR-SA-SECRET-VOLUME>
+  #         mountPath: /secrets/
+  #         readOnly: true
+  #     args:
+  #       # If connecting from a VPC-native GKE cluster, you can use the
+  #       # following flag to have the proxy connect over private IP
+  #       # - "--private-ip"
+
+  #       # If you are not connecting with Automatic IAM, you can delete
+  #       # the following flag.
+  #       - "--auto-iam-authn"
+
+  #       # Enable structured logging with LogEntry format:
+  #       - "--structured-logs"
+
+  #       # Replace DB_PORT with the port the proxy should listen on
+  #       - "--port=<DB_PORT>"
+  #       - "<INSTANCE_CONNECTION_NAME>"
+  #     securityContext:
+  #       # The default Cloud SQL Auth Proxy image runs as the
+  #       # "nonroot" user and group (uid: 65532) by default.
+  #       runAsNonRoot: true
+
+  #     # You should use resource requests/limits as a best practice to prevent
+  #     # pods from consuming too many resources and affecting the execution of
+  #     # other pods. You should adjust the following values based on what your
+  #     # application needs. For details, see
+  #     # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+  #     resources:
+  #       requests:
+  #         # The proxy's memory use scales linearly with the number of active
+  #         # connections. Fewer open connections will use less memory. Adjust
+  #         # this value based on your application's requirements.
+  #         memory: "1Gi"
+  #         # The proxy's CPU use scales linearly with the amount of IO between
+  #         # the database and the application. Adjust this value based on your
+  #         # application's requirements.
+  #         cpu: "1"
+  ## @param extraVolumes Volumes that can be used in sidecar containers
+  # extraVolumes: []
+  ##
   ## Database configuration
   ##
   database:
@@ -357,6 +411,23 @@ testmonitorservice:
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     migrationPasswordKey: null
+
+    ## Service account for Test Monitor.
+    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+    ##
+    serviceAccount:
+      ## @param serviceAccount.create Specifies whether a service account should be created
+      ##
+      create: false
+      ## @param serviceAccount.annotations Annotations to add to the service account
+      ##
+      annotations: {}
+      ## Example - iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com
+      ## @param serviceAccount.name The name of the service account to use.
+      ## If not set and create is true, a name is generated using the fullname template
+      ##
+      name: ""
+
     ## The PostgreSQL database TLS configuration
     ##
     tls:
@@ -465,7 +536,7 @@ alarmservice:
     ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
     ##
     inactiveAlarmCleanupInterval: 30.00:00
-    
+
     activeAlarmCleanup:
       ## The amount of time active alarms will be retained in the database since they were
       ## last updated ([d.]hh:mm[:ss] format).
@@ -475,7 +546,7 @@ alarmservice:
       ## transition has a CLEAR transition type.
       ##
       onlyCleanUpClearAlarms: false
-  
+
   ## The total number of alarms the service supports creating, including
   ## both active and inactive alarms. Must be greater than activeAlarmLimit.
   ## The service will return an error if this limit is exceeded. Increasing
@@ -517,6 +588,75 @@ dashboardhost:
   ## for more documentation and examples for these values.
   ##
   grafana:
+    ## Configuring additional sidecars for the Dahboardhost Service.
+    ##
+    ## @param extraContainers Additional containers to run in the same pod as the Dahboardhost Service.
+    ## It is used for authentication proxy containers, such as the Cloud SQL Auth Proxy. Example of a Cloud SQL Auth Proxy sidecar has been provided below.
+    ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
+    # extraContainers: |
+    #   - name: cloud-sql-proxy
+    #     # It is recommended to use the latest version of the Cloud SQL Auth Proxy
+    #     image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.14.1
+    #     env:
+    #       - name: "GOOGLE_APPLICATION_CREDENTIALS"
+    #         value: "/secrets/service_account.json"
+    #     volumeMounts:
+    #       - name: <YOUR-SA-SECRET-VOLUME>
+    #         mountPath: /secrets/
+    #         readOnly: true
+    #     args:
+    #       # If connecting from a VPC-native GKE cluster, you can use the
+    #       # following flag to have the proxy connect over private IP
+    #       # - "--private-ip"
+
+    #       # If you are not connecting with Automatic IAM, you can delete
+    #       # the following flag.
+    #       - "--auto-iam-authn"
+
+    #       # Enable structured logging with LogEntry format:
+    #       - "--structured-logs"
+
+    #       # Replace DB_PORT with the port the proxy should listen on
+    #       - "--port=<DB_PORT>"
+    #       - "<INSTANCE_CONNECTION_NAME>"
+    #     securityContext:
+    #       # The default Cloud SQL Auth Proxy image runs as the
+    #       # "nonroot" user and group (uid: 65532) by default.
+    #       runAsNonRoot: true
+
+    #     # You should use resource requests/limits as a best practice to prevent
+    #     # pods from consuming too many resources and affecting the execution of
+    #     # other pods. You should adjust the following values based on what your
+    #     # application needs. For details, see
+    #     # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+    #     resources:
+    #       requests:
+    #         # The proxy's memory use scales linearly with the number of active
+    #         # connections. Fewer open connections will use less memory. Adjust
+    #         # this value based on your application's requirements.
+    #         memory: "1Gi"
+    #         # The proxy's CPU use scales linearly with the amount of IO between
+    #         # the database and the application. Adjust this value based on your
+    #         # application's requirements.
+    #         cpu: "1"
+    ## @param extraContainerVolumes Volumes that can be used in the extraContainers
+    # extraContainerVolumes: []
+
+    ## Service account for dashboardhost service.
+    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+    ##
+    serviceAccount:
+      ## @param serviceAccount.create Specifies whether a service account should be created
+      ##
+      create: false
+      ## @param serviceAccount.annotations Annotations to add to the service account
+      ##
+      annotations: {}
+      ## Example - iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com
+      ## @param serviceAccount.name The name of the service account to use.
+      ## If not set and create is true, a name is generated using the fullname template
+      ##
+      name: ""
 
     ## Configure access to the Grafana container.
     ##
@@ -637,11 +777,11 @@ dashboardhost:
       ## Uncomment to set Grafana plugin configuration.
       ##
       # plugins:
-        ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
-        ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
-        ## the list of plugins listed in the default values file.
-        ##
-        # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
+      ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
+      ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
+      ## the list of plugins listed in the default values file.
+      ##
+      # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
 
 ## Grafana provisioning
 ##
@@ -883,7 +1023,7 @@ feedservice:
     ##
     includeApiHostsInNoProxy: false
     ## @param httpProxy.additionalNoProxy List of hosts that should not be proxied. Example: ["localserver1","localserver2"]
-    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com" 
+    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com"
     additionalNoProxy: []
 
 ## File upload configuration.
@@ -929,9 +1069,9 @@ fileingestion:
     # <ATTENTION> This must be set to the region of the S3 instance.
     ##
     region: "us-east-1"
-   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
-   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
-   ## individual rates configured here.
+    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
+    ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
+    ## individual rates configured here.
   ## Configure rate limits.
   ##
   rateLimits:
@@ -1260,6 +1400,59 @@ serviceregistry:
 ## Configuration for dynamic form fields.
 ##
 dynamicformfields:
+  ## Configuring additional sidecars for the Dynamic Form Fields Service.
+  ##
+  ## @param sidecars Additional containers to run in the same pod as the DFF Service.
+  ## It is used for authentication proxy containers, such as the Cloud SQL Auth Proxy. Example of a Cloud SQL Auth Proxy sidecar has been provided below.
+  ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
+  # sidecars:
+  #   - name: cloud-sql-proxy
+  #     # It is recommended to use the latest version of the Cloud SQL Auth Proxy
+  #     image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.14.1
+  #     env:
+  #       - name: "GOOGLE_APPLICATION_CREDENTIALS"
+  #         value: "/secrets/service_account.json"
+  #     volumeMounts:
+  #       - name: <YOUR-SA-SECRET-VOLUME>
+  #         mountPath: /secrets/
+  #         readOnly: true
+  #     args:
+  #       # If connecting from a VPC-native GKE cluster, you can use the
+  #       # following flag to have the proxy connect over private IP
+  #       # - "--private-ip"
+
+  #       # If you are not connecting with Automatic IAM, you can delete
+  #       # the following flag.
+  #       - "--auto-iam-authn"
+
+  #       # Enable structured logging with LogEntry format:
+  #       - "--structured-logs"
+
+  #       # Replace DB_PORT with the port the proxy should listen on
+  #       - "--port=<DB_PORT>"
+  #       - "<INSTANCE_CONNECTION_NAME>"
+  #     securityContext:
+  #       # The default Cloud SQL Auth Proxy image runs as the
+  #       # "nonroot" user and group (uid: 65532) by default.
+  #       runAsNonRoot: true
+
+  #     # You should use resource requests/limits as a best practice to prevent
+  #     # pods from consuming too many resources and affecting the execution of
+  #     # other pods. You should adjust the following values based on what your
+  #     # application needs. For details, see
+  #     # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+  #     resources:
+  #       requests:
+  #         # The proxy's memory use scales linearly with the number of active
+  #         # connections. Fewer open connections will use less memory. Adjust
+  #         # this value based on your application's requirements.
+  #         memory: "1Gi"
+  #         # The proxy's CPU use scales linearly with the amount of IO between
+  #         # the database and the application. Adjust this value based on your
+  #         # application's requirements.
+  #         cpu: "1"
+  ## @param extraVolumes Volumes that can be used in sidecar containers
+  # extraVolumes: []
   ## Database configuration
   ##
   database:
@@ -1311,6 +1504,23 @@ dynamicformfields:
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     migrationPasswordKey: null
+
+    ## Service account for Dynamic Form Fields.
+    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+    ##
+    serviceAccount:
+      ## @param serviceAccount.create Specifies whether a service account should be created
+      ##
+      create: false
+      ## @param serviceAccount.annotations Annotations to add to the service account
+      ##
+      annotations: {}
+      ## Example - iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com
+      ## @param serviceAccount.name The name of the service account to use.
+      ## If not set and create is true, a name is generated using the fullname template
+      ##
+      name: ""
+
     ## The PostgreSQL database TLS configuration
     ##
     tls:
