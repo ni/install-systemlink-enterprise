@@ -1,0 +1,286 @@
+global:
+  ingress:
+    api:
+      annotations:
+        kubernetes.io/ingress.class: <user-defined-ingress-class> #<ATTENTION> Enter the volume name where the token is mounted
+    ui:
+      annotations:
+        kubernetes.io/ingress.class: <user-defined-ingress-class> #<ATTENTION> Enter the volume name where the token is mounted
+
+rabbitmq:
+  global:
+    compatibility:
+      openshift:
+        adaptSecurityContext: disabled
+
+webserver:
+  redis-cluster:
+    global:
+      compatibility:
+        openshift:
+          adaptSecurityContext: disabled
+
+testmonitorservice:
+  ## Configuring sidecars for the Test Monitor Service
+  sidecars:
+    - name: cloud-sql-auth-proxy
+      image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
+      volumeMounts:
+        - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is mounted
+          readOnly: true
+          mountPath: /var/run/secrets/openshift/serviceaccount/
+        - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is mounted
+          mountPath: /secrets/
+          readOnly: true
+      env:
+        - name: "GOOGLE_APPLICATION_CREDENTIALS"
+          value: /secrets/service_account.json
+      args:
+        # If connecting from a VPC-native GKE cluster, you can use the
+        # following flag to have the proxy connect over private IP
+        - "--private-ip"
+        # - "--auto-iam-authn"
+
+        # Enable structured logging with LogEntry format:
+        - "--structured-logs"
+        - "--exit-zero-on-sigterm"
+
+        # Replace DB_PORT with the port the proxy should listen on
+        - "--port=5432"
+        - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
+      # - "--credentials-file=/var/run/secrets/openshift/serviceaccount/token"
+      securityContext:
+        # The default Cloud SQL Auth Proxy image runs as the
+        # "nonroot" user and group (uid: 65532) by default.
+        runAsNonRoot: true
+      # restartPolicy: Always
+      # You should use resource requests/limits as a best practice to prevent
+      # pods from consuming too many resources and affecting the execution of
+      # other pods. You should adjust the following values based on what your
+      # application needs. For details, see
+      # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+      resources:
+        requests:
+          # The proxy's memory use scales linearly with the number of active
+          # connections. Fewer open connections will use less memory. Adjust
+          # this value based on your application's requirements.
+          memory: "1Gi"
+          # The proxy's CPU use scales linearly with the amount of IO between
+          # the database and the application. Adjust this value based on your
+          # application's requirements.
+          cpu: "1"
+
+  ## Volumes that can be used in extra containers
+  extraVolumes:
+    - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
+      projected:
+        sources:
+          - serviceAccountToken:
+              audience: openshift
+              expirationSeconds: 3600
+              path: token
+    - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
+      secret:
+        secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
+
+  serviceAccount:
+    ## @param serviceAccount.annotations Annotations to add to the service account
+    ##
+    annotations:
+      {
+        iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com,
+      }
+    ## @param serviceAccount.name The name of the service account to use.
+    ## If not set and create is true, a name is generated using the fullname template
+    ##
+    name: ""
+
+dashboardhost:
+  grafana:
+    ## Configuring extraContainers for the Dashboardhost service
+    extraContainers: |
+      - name: cloud-sql-auth-proxy
+        image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
+        volumeMounts:
+        - name: <token-volume-name> #ATTENTION Enter the volume name where the token is mounted
+          mountPath: /var/run/secrets/openshift/serviceaccount/
+          readOnly: true
+        - name: <config-volume-name> #ATTENTION Enter the volume name where config.json is mounted
+          mountPath: /secrets/
+          readOnly: true
+        env:
+          - name: "GOOGLE_APPLICATION_CREDENTIALS"
+            value: /secrets/service_account.json
+        #   - name: DB_HOST
+        #     valueFrom:
+        #       secretKeyRef:
+        #         name: "cloud-sql-ip"
+        #         key: db_host
+        args:
+        # Add the below two args if using kubernetes version lesser than 1.29
+        # Enable the admin api server on port 9091
+        - "--admin-port=9091"
+        # Enable the /quitquitquit admin api endpoint
+        - "--quitquitquit"
+        # If connecting from a VPC-native GKE cluster, you can use the
+        # following flag to have the proxy connect over private IP
+        - "--private-ip"
+
+        # Enable structured logging with LogEntry format:
+        - "--structured-logs"
+        - "--exit-zero-on-sigterm"
+
+        # Replace DB_PORT with the port the proxy should listen on
+        - "--port=5432"
+        - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
+        securityContext:
+          # The default Cloud SQL Auth Proxy image runs as the
+          # "nonroot" user and group (uid: 65532) by default.
+          runAsNonRoot: true
+        # You should use resource requests/limits as a best practice to prevent
+        # pods from consuming too many resources and affecting the execution of
+        # other pods. You should adjust the following values based on what your
+        # application needs. For details, see
+        # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+        # restartPolicy: Always
+        resources:
+          requests:
+            # The proxy's memory use scales linearly with the number of active
+            # connections. Fewer open connections will use less memory. Adjust
+            # this value based on your application's requirements.
+            memory: "1Gi"
+            # The proxy's CPU use scales linearly with the amount of IO between
+            # the database and the application. Adjust this value based on your
+            # application's requirements.
+            cpu: "0.5"
+
+    ## Volumes that can be used in extra containers
+    extraContainerVolumes:
+      - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
+        projected:
+          sources:
+            - serviceAccountToken:
+                audience: openshift
+                expirationSeconds: 3600
+                path: token
+      - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
+        secret:
+          secretName: <config-secret> #<ATTENTION> Enter the secret name where config.json going to be added.
+
+    serviceAccount:
+      ## @param serviceAccount.annotations Annotations to add to the service account
+      ##
+      annotations:
+        {
+          iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com,
+        }
+      ## @param serviceAccount.name The name of the service account to use.
+      ## If not set and create is true, a name is generated using the fullname template
+      ##
+      name: ""
+
+dynamicformfields:
+  ## Configuring sidecars for the Dynamic Form Fields Service
+  sidecars:
+    - name: cloud-sql-auth-proxy
+      image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
+      volumeMounts:
+        - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is mounted
+          readOnly: true
+          mountPath: /var/run/secrets/openshift/serviceaccount/
+        - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is mounted
+          mountPath: /secrets/
+          readOnly: true
+      env:
+        - name: "GOOGLE_APPLICATION_CREDENTIALS"
+          value: /secrets/service_account.json
+      args:
+        # If connecting from a VPC-native GKE cluster, you can use the
+        # following flag to have the proxy connect over private IP
+        - "--private-ip"
+        # - "--auto-iam-authn"
+
+        # Enable structured logging with LogEntry format:
+        - "--structured-logs"
+        - "--exit-zero-on-sigterm"
+
+        # Replace DB_PORT with the port the proxy should listen on
+        - "--port=5432"
+        - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
+      # - "--credentials-file=/var/run/secrets/openshift/serviceaccount/token"
+      securityContext:
+        # The default Cloud SQL Auth Proxy image runs as the
+        # "nonroot" user and group (uid: 65532) by default.
+        runAsNonRoot: true
+      # restartPolicy: Always
+      # You should use resource requests/limits as a best practice to prevent
+      # pods from consuming too many resources and affecting the execution of
+      # other pods. You should adjust the following values based on what your
+      # application needs. For details, see
+      # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+      resources:
+        requests:
+          # The proxy's memory use scales linearly with the number of active
+          # connections. Fewer open connections will use less memory. Adjust
+          # this value based on your application's requirements.
+          memory: "1Gi"
+          # The proxy's CPU use scales linearly with the amount of IO between
+          # the database and the application. Adjust this value based on your
+          # application's requirements.
+          cpu: "1"
+
+  ## Volumes that can be used in extra containers
+  extraVolumes:
+    - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
+      projected:
+        sources:
+          - serviceAccountToken:
+              audience: openshift
+              expirationSeconds: 3600
+              path: token
+    - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
+      secret:
+        secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
+
+  serviceAccount:
+    ## @param serviceAccount.annotations Annotations to add to the service account
+    ##
+    annotations:
+      {
+        iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com,
+      }
+    ## @param serviceAccount.name The name of the service account to use.
+    ## If not set and create is true, a name is generated using the fullname template
+    ##
+    name: ""
+
+fileingestion:
+  s3:
+    port: 443
+    bucket: <name-of-gcs-bucket> #<ATTENTION> Enter the name of the GCS bucket for fileingestion service
+    scheme: "https://"
+    host: "storage.googleapis.com"
+
+feedservice:
+  s3:
+    port: 443
+    bucket: <name-of-gcs-bucket> #<ATTENTION> Enter the name of the GCS bucket for feedservice service
+    scheme: "https://"
+    host: "storage.googleapis.com"
+
+saltmaster:
+  serviceTCP:
+    type: LoadBalancer
+
+nbexecservice:
+  argo:
+    ## Configure S3/MinIO access.
+    ##
+    artifactRepository:
+      s3:
+        bucket: <name-of-gcs-bucket> #<ATTENTION> Enter the name of the GCS bucket for nbexecservice service
+        port: 443
+        region: "us-east1"
+        insecure: false
+        scheme: "https://"
+        host: "storage.googleapis.com"
