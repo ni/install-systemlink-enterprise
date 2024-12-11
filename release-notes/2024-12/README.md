@@ -15,7 +15,7 @@ The 2024-12 release for SystemLink Enterprise has been published to <https://dow
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
     - You must configure the secrets for the PostgreSQL credentials of the DFF service in systemlink-secrets.yaml.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-secrets.yaml#L691)
-    - DFF feature flags still defaults to false
+    - DFF feature flags still defaults to false.
 
 ## Upgrade Considerations
 
