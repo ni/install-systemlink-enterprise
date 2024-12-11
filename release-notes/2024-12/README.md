@@ -13,7 +13,7 @@ The 2024-12 release for SystemLink Enterprise has been published to <https://dow
 - `dynamicformfields:0.1.310`
     - The DynamicFormFields (DFF) Service was added to the top-level chart.
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
-    - Secrets for the service's Postgres credentials need to be configured in systemlink-secrets.yaml.
+    - You must configure the secrets for the PostgreSQL credentials of the DFF service in systemlink-secrets.yaml.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-secrets.yaml#L691)
     - DFF feature flags still defaults to false
 
