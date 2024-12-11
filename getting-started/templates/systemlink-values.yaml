@@ -321,7 +321,6 @@ testmonitorservice:
   ##
   serviceAccount:
     ## @param serviceAccount.annotations Annotations to add to the service account
-    ## Example - iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com
     ##
     annotations: {}
     ## @param serviceAccount.name The name of the service account to use.
@@ -554,7 +553,6 @@ dashboardhost:
     ##
     serviceAccount:
       ## @param serviceAccount.annotations Annotations to add to the service account
-      ## Example - iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com
       ##
       annotations: {}
       ## @param serviceAccount.name The name of the service account to use.
@@ -1318,7 +1316,6 @@ dynamicformfields:
   ##
   serviceAccount:
     ## @param serviceAccount.annotations Annotations to add to the service account
-    ## Example - iam.gke.io/gcp-service-account=YOUR-GSA-NAME@YOUR-GOOGLE-CLOUD-PROJECT.iam.gserviceaccount.com
     ##
     annotations: {}
     ## @param serviceAccount.name The name of the service account to use.
