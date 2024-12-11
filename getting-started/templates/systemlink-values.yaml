@@ -308,7 +308,7 @@ minio:
 testmonitorservice:
   ## Configuring sidecars for the Test Monitor Service.
   ## @param sidecars Additional containers to run in the same pod as the Test Monitor Service.
-  ## It can be used for authentication proxy containers, such as the Cloud SQL Auth Proxy.
+  ## These should be used for authentication proxy containers, such as the Cloud SQL Auth Proxy.
   ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
   sidecars: []
   ## @param extraVolumes Volumes that can be used in sidecar containers
@@ -539,7 +539,7 @@ dashboardhost:
   grafana:
     ## Configuring extra containers for the Dashboardhost Service.
     ## @param extraContainers Additional containers to run in the same pod as the Dashboardhost Service.
-    ## It can be used for authentication proxy containers, such as the Cloud SQL Auth Proxy.
+    ## These should be used for authentication proxy containers, such as the Cloud SQL Auth Proxy.
     ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
     extraContainers: ""
     ## @param extraContainerVolumes Volumes that can be used in the extraContainers
@@ -1301,7 +1301,7 @@ serviceregistry:
 dynamicformfields:
   ## Configuring sidecars for the Dynamic Form Fields Service.
   ## @param sidecars Additional containers to run in the same pod as the DFF Service.
-  ## It can be used for authentication proxy containers, such as the Cloud SQL Auth Proxy.
+  ## These should be used for authentication proxy containers, such as the Cloud SQL Auth Proxy.
   ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
   sidecars: []
   ## @param extraVolumes Volumes that can be used in sidecar containers
