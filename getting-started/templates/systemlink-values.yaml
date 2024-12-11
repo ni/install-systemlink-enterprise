@@ -380,7 +380,6 @@ testmonitorservice:
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     migrationPasswordKey: null
-
     ## The PostgreSQL database TLS configuration
     ##
     tls:
@@ -489,7 +488,7 @@ alarmservice:
     ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
     ##
     inactiveAlarmCleanupInterval: 30.00:00
-
+    
     activeAlarmCleanup:
       ## The amount of time active alarms will be retained in the database since they were
       ## last updated ([d.]hh:mm[:ss] format).
@@ -499,7 +498,7 @@ alarmservice:
       ## transition has a CLEAR transition type.
       ##
       onlyCleanUpClearAlarms: false
-
+  
   ## The total number of alarms the service supports creating, including
   ## both active and inactive alarms. Must be greater than activeAlarmLimit.
   ## The service will return an error if this limit is exceeded. Increasing
@@ -682,11 +681,11 @@ dashboardhost:
       ## Uncomment to set Grafana plugin configuration.
       ##
       # plugins:
-      ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
-      ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
-      ## the list of plugins listed in the default values file.
-      ##
-      # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
+        ## Enter a comma-separated list of plugin identifiers to identify plugins that are allowed to be loaded even if they lack a valid signature.
+        ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
+        ## the list of plugins listed in the default values file.
+        ##
+        # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
 
 ## Grafana provisioning
 ##
@@ -928,7 +927,7 @@ feedservice:
     ##
     includeApiHostsInNoProxy: false
     ## @param httpProxy.additionalNoProxy List of hosts that should not be proxied. Example: ["localserver1","localserver2"]
-    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com"
+    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com" 
     additionalNoProxy: []
 
 ## File upload configuration.
@@ -974,9 +973,9 @@ fileingestion:
     # <ATTENTION> This must be set to the region of the S3 instance.
     ##
     region: "us-east-1"
-    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
-    ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
-    ## individual rates configured here.
+   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
+   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
+   ## individual rates configured here.
   ## Configure rate limits.
   ##
   rateLimits:
@@ -1378,7 +1377,6 @@ dynamicformfields:
     #     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     #     ##
     #     migrationPasswordKey: null
-
     ## The PostgreSQL database TLS configuration
     ##
     tls:
