@@ -313,6 +313,8 @@ testmonitorservice:
   sidecars: []
   ## @param extraVolumes Volumes that can be used in sidecar containers
   extraVolumes: []
+  ## @param extraVolumeMounts Defines additional volume mounts for the container.
+  extraVolumeMounts: []
 
   ## Service account for Test Monitor.
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
@@ -544,6 +546,8 @@ dashboardhost:
     extraContainers: ""
     ## @param extraContainerVolumes Volumes that can be used in the extraContainers
     extraContainerVolumes: []
+    ## @param extraVolumeMounts Defines additional volume mounts for the container.
+    extraVolumeMounts: []
 
     ## Service account for dashboardhost service.
     ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
@@ -1306,6 +1310,8 @@ dynamicformfields:
   sidecars: []
   ## @param extraVolumes Volumes that can be used in sidecar containers
   extraVolumes: []
+  ## @param extraVolumeMounts Defines additional volume mounts for the container.
+  extraVolumeMounts: []
 
   ## Service account for Dynamic Form Fields.
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
