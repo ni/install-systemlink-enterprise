@@ -1,0 +1,12 @@
+rabbitmq:
+  global:
+    compatibility:
+      openshift:
+        adaptSecurityContext: disabled
+
+webserver:
+  redis-cluster:
+    global:
+      compatibility:
+        openshift:
+          adaptSecurityContext: disabled

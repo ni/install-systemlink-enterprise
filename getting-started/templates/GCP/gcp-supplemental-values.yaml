@@ -1,5 +1,15 @@
+global:
+  ingress:
+    api:
+      annotations:
+        kubernetes.io/ingress.class: <user-defined-ingress-class> #<ATTENTION> Enter the ingress class used
+    ui:
+      annotations:
+        kubernetes.io/ingress.class: <user-defined-ingress-class> #<ATTENTION> Enter the ingress class used
+
 testmonitorservice:
   ## Configuring sidecars for the Test Monitor Service
+  ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
   sidecars:
     - name: cloud-sql-auth-proxy
       image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
@@ -17,7 +27,7 @@ testmonitorservice:
         # If connecting from a VPC-native GKE cluster, you can use the
         # following flag to have the proxy connect over private IP
         - "--private-ip"
-        # - "--auto-iam-authn"
+        - "--auto-iam-authn"
 
         # Enable structured logging with LogEntry format:
         - "--structured-logs"
@@ -26,7 +36,7 @@ testmonitorservice:
         # Replace DB_PORT with the port the proxy should listen on
         - "--port=5432"
         - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
-      # - "--credentials-file=<token-mount-path>/token"
+        # - "--credentials-file=<token-mount-path>/token"
       securityContext:
         # The default Cloud SQL Auth Proxy image runs as the
         # "nonroot" user and group (uid: 65532) by default.
@@ -48,7 +58,7 @@ testmonitorservice:
           # application's requirements.
           cpu: "1"
 
-  ## Volumes that can be used in extra containers
+  ## Volumes that can be used in sidecars
   extraVolumes:
     - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
       projected:
@@ -60,6 +70,33 @@ testmonitorservice:
     - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
       secret:
         secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
+
+  connectionInfo:
+    ## @param database.connectionInfo.host PostgreSQL hostname. Since the cloud-sql-auth-proxy is used, this value should be localhost.
+    ##
+    host: "localhost"
+    ## @param database.connectionInfo.port PostgreSQL port
+    ##
+    port: <port>
+    ## @param database.connectionInfo.dbName PostgreSQL database name
+    ##
+    dbName: <database-name>
+    ## @param database.connectionInfo.user PostgreSQL username used by the service
+    ##
+    user: <username>
+    ## @param database.connectionInfo.secretName The name of an existing secret with
+    ## PostgreSQL connection credentials
+    ##
+    secretName: <secret-name>
+    ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
+    ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    ##
+    # passwordKey: "passkey"
+    ## @param database.connectionInfo.migrationPasswordKey Password key for database.connectionInfo.migrationUser to be retrieved from existing secret
+    ## If unset database.connectionInfo.passwordKey is used instead.
+    ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    ##
+    migrationPasswordKey: null
 
   serviceAccount:
     ## @param serviceAccount.annotations Annotations to add to the service account
@@ -76,6 +113,7 @@ testmonitorservice:
 dashboardhost:
   grafana:
     ## Configuring extraContainers for the Dashboardhost service
+    ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
     extraContainers: |
       - name: cloud-sql-auth-proxy
         image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
@@ -95,22 +133,19 @@ dashboardhost:
         #         name: "cloud-sql-ip"
         #         key: db_host
         args:
-        # Add the below two args if using kubernetes version lesser than 1.29
-        # Enable the admin api server on port 9091
-        - "--admin-port=9091"
-        # Enable the /quitquitquit admin api endpoint
-        - "--quitquitquit"
-        # If connecting from a VPC-native GKE cluster, you can use the
-        # following flag to have the proxy connect over private IP
-        - "--private-ip"
+          # If connecting from a VPC-native GKE cluster, you can use the
+          # following flag to have the proxy connect over private IP
+          - "--private-ip"
+          - "--auto-iam-authn"
 
-        # Enable structured logging with LogEntry format:
-        - "--structured-logs"
-        - "--exit-zero-on-sigterm"
+          # Enable structured logging with LogEntry format:
+          - "--structured-logs"
+          - "--exit-zero-on-sigterm"
 
-        # Replace DB_PORT with the port the proxy should listen on
-        - "--port=5432"
-        - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
+          # Replace DB_PORT with the port the proxy should listen on
+          - "--port=5432"
+          - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
+          # - "--credentials-file=<token-mount-path>/token"
         securityContext:
           # The default Cloud SQL Auth Proxy image runs as the
           # "nonroot" user and group (uid: 65532) by default.
@@ -145,6 +180,33 @@ dashboardhost:
         secret:
           secretName: <config-secret> #<ATTENTION> Enter the secret name where config.json going to be added.
 
+    connectionInfo:
+      ## @param database.connectionInfo.host PostgreSQL hostname. Since the cloud-sql-auth-proxy is used, this value should be localhost.
+      ##
+      host: "localhost"
+      ## @param database.connectionInfo.port PostgreSQL port
+      ##
+      port: <port>
+      ## @param database.connectionInfo.dbName PostgreSQL database name
+      ##
+      dbName: <database-name>
+      ## @param database.connectionInfo.user PostgreSQL username used by the service
+      ##
+      user: <username>
+      ## @param database.connectionInfo.secretName The name of an existing secret with
+      ## PostgreSQL connection credentials
+      ##
+      secretName: <secret-name>
+      ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
+      ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+      ##
+      # passwordKey: "passkey"
+      ## @param database.connectionInfo.migrationPasswordKey Password key for database.connectionInfo.migrationUser to be retrieved from existing secret
+      ## If unset database.connectionInfo.passwordKey is used instead.
+      ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+      ##
+      migrationPasswordKey: null
+
     serviceAccount:
       ## @param serviceAccount.annotations Annotations to add to the service account
       ##
@@ -159,6 +221,7 @@ dashboardhost:
 
 dynamicformfields:
   ## Configuring sidecars for the Dynamic Form Fields Service
+  ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
   sidecars:
     - name: cloud-sql-auth-proxy
       image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
@@ -176,7 +239,7 @@ dynamicformfields:
         # If connecting from a VPC-native GKE cluster, you can use the
         # following flag to have the proxy connect over private IP
         - "--private-ip"
-        # - "--auto-iam-authn"
+        - "--auto-iam-authn"
 
         # Enable structured logging with LogEntry format:
         - "--structured-logs"
@@ -185,7 +248,7 @@ dynamicformfields:
         # Replace DB_PORT with the port the proxy should listen on
         - "--port=5432"
         - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
-      # - "--credentials-file=<token-mount-path>/token"
+        # - "--credentials-file=<token-mount-path>/token"
       securityContext:
         # The default Cloud SQL Auth Proxy image runs as the
         # "nonroot" user and group (uid: 65532) by default.
@@ -220,6 +283,33 @@ dynamicformfields:
       secret:
         secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
 
+  connectionInfo:
+    ## @param database.connectionInfo.host PostgreSQL hostname. Since the cloud-sql-auth-proxy is used, this value should be localhost
+    ##
+    host: "localhost"
+    ## @param database.connectionInfo.port PostgreSQL port
+    ##
+    port: <port>
+    ## @param database.connectionInfo.dbName PostgreSQL database name
+    ##
+    dbName: <database-name>
+    ## @param database.connectionInfo.user PostgreSQL username used by the service
+    ##
+    user: <username>
+    ## @param database.connectionInfo.secretName The name of an existing secret with
+    ## PostgreSQL connection credentials
+    ##
+    secretName: <secret-name>
+    ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
+    ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    ##
+    # passwordKey: "passkey"
+    ## @param database.connectionInfo.migrationPasswordKey Password key for database.connectionInfo.migrationUser to be retrieved from existing secret
+    ## If unset database.connectionInfo.passwordKey is used instead.
+    ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
+    ##
+    migrationPasswordKey: null
+
   serviceAccount:
     ## @param serviceAccount.annotations Annotations to add to the service account
     ##
@@ -231,3 +321,34 @@ dynamicformfields:
     ## If not set and create is true, a name is generated using the fullname template
     ##
     name: ""
+
+fileingestion:
+  s3:
+    port: 443
+    bucket: <name-of-gcs-bucket> #<ATTENTION> Enter the name of the GCS bucket for fileingestion service
+    scheme: "https://"
+    host: "storage.googleapis.com"
+
+feedservice:
+  s3:
+    port: 443
+    bucket: <name-of-gcs-bucket> #<ATTENTION> Enter the name of the GCS bucket for feedservice service
+    scheme: "https://"
+    host: "storage.googleapis.com"
+
+saltmaster:
+  serviceTCP:
+    type: LoadBalancer
+
+nbexecservice:
+  argo:
+    ## Configure S3/MinIO access.
+    ##
+    artifactRepository:
+      s3:
+        bucket: <name-of-gcs-bucket> #<ATTENTION> Enter the name of the GCS bucket for nbexecservice service
+        port: 443
+        region: "us-east1"
+        insecure: false
+        scheme: "https://"
+        host: "storage.googleapis.com"
