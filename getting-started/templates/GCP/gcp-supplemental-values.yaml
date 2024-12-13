@@ -14,29 +14,36 @@ testmonitorservice:
     - name: cloud-sql-auth-proxy
       image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
       volumeMounts:
+        # This volume mount is required for the proxy to authenticate with cloudSQL using a service account key file. 
         - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is mounted
-          readOnly: true
           mountPath: <token-mount-path> #<ATTENTION> Enter the path where the token is mounted
+          readOnly: true
+        # This volume mount is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
         - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is mounted
           mountPath: /secrets/
           readOnly: true
       env:
         - name: "GOOGLE_APPLICATION_CREDENTIALS"
-          value: /secrets/service_account.json
+          value: /secrets/<secret-key> #<ATTENTION> Enter the key which was used while creating the secret
       args:
         # If connecting from a VPC-native GKE cluster, you can use the
         # following flag to have the proxy connect over private IP
         - "--private-ip"
+
+        # If you are not connecting with Automatic IAM, you can delete the following flag.
         - "--auto-iam-authn"
 
         # Enable structured logging with LogEntry format:
         - "--structured-logs"
+
+        # Ensures the proxy exits gracefully with a 0 exit code when it receives a SIGTERM signal
         - "--exit-zero-on-sigterm"
 
-        # Replace DB_PORT with the port the proxy should listen on
         - "--port=5432"
         - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
-        # - "--credentials-file=<token-mount-path>/token"
+
+        # The credentials file is required for the proxy to authenticate using a service account key file.
+        - "--credentials-file=/secrets/<secret-key>" #<ATTENTION> Enter the key which was used while creating the secret
       securityContext:
         # The default Cloud SQL Auth Proxy image runs as the
         # "nonroot" user and group (uid: 65532) by default.
@@ -58,8 +65,9 @@ testmonitorservice:
           # application's requirements.
           cpu: "1"
 
-  ## Volumes that can be used in sidecars
+  ## Extra volumes that can be used in sidecars
   extraVolumes:
+    # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
     - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
       projected:
         sources:
@@ -67,6 +75,7 @@ testmonitorservice:
               audience: <audience-name> #<ATTENTION> Enter the audience name for the projected service account token
               expirationSeconds: 3600
               path: token
+    # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
     - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
       secret:
         secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
@@ -77,7 +86,7 @@ testmonitorservice:
     host: "localhost"
     ## @param database.connectionInfo.port PostgreSQL port
     ##
-    port: <port>
+    port: "5432"
     ## @param database.connectionInfo.dbName PostgreSQL database name
     ##
     dbName: <database-name>
@@ -118,44 +127,46 @@ dashboardhost:
       - name: cloud-sql-auth-proxy
         image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
         volumeMounts:
-        - name: <token-volume-name> #ATTENTION Enter the volume name where the token is mounted
-          mountPath: <token-mount-path> #<ATTENTION> Enter the path where the token is mounted
-          readOnly: true
-        - name: <config-volume-name> #ATTENTION Enter the volume name where config.json is mounted
-          mountPath: /secrets/
-          readOnly: true
+          # This volume mount is required for the proxy to authenticate with cloudSQL using a service account key file. 
+          - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is mounted
+            mountPath: <token-mount-path> #<ATTENTION> Enter the path where the token is mounted
+            readOnly: true
+          # This volume mount is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
+          - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is mounted
+            mountPath: /secrets/
+            readOnly: true
         env:
           - name: "GOOGLE_APPLICATION_CREDENTIALS"
-            value: /secrets/service_account.json
-        #   - name: DB_HOST
-        #     valueFrom:
-        #       secretKeyRef:
-        #         name: "cloud-sql-ip"
-        #         key: db_host
+            value: /secrets/<secret-key> #<ATTENTION> Enter the key which was used while creating the secret
         args:
           # If connecting from a VPC-native GKE cluster, you can use the
           # following flag to have the proxy connect over private IP
           - "--private-ip"
+
+          # If you are not connecting with Automatic IAM, you can delete the following flag.
           - "--auto-iam-authn"
 
           # Enable structured logging with LogEntry format:
           - "--structured-logs"
+
+          # Ensures the proxy exits gracefully with a 0 exit code when it receives a SIGTERM signal
           - "--exit-zero-on-sigterm"
 
-          # Replace DB_PORT with the port the proxy should listen on
           - "--port=5432"
           - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
-          # - "--credentials-file=<token-mount-path>/token"
+
+          # The credentials file is required for the proxy to authenticate using a service account key file.
+          - "--credentials-file=/secrets/<secret-key>" #<ATTENTION> Enter the key which was used while creating the secret
         securityContext:
           # The default Cloud SQL Auth Proxy image runs as the
           # "nonroot" user and group (uid: 65532) by default.
           runAsNonRoot: true
+        restartPolicy: Always
         # You should use resource requests/limits as a best practice to prevent
         # pods from consuming too many resources and affecting the execution of
         # other pods. You should adjust the following values based on what your
         # application needs. For details, see
         # https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
-        restartPolicy: Always
         resources:
           requests:
             # The proxy's memory use scales linearly with the number of active
@@ -165,20 +176,22 @@ dashboardhost:
             # The proxy's CPU use scales linearly with the amount of IO between
             # the database and the application. Adjust this value based on your
             # application's requirements.
-            cpu: "0.5"
+            cpu: "1"
 
-    ## Volumes that can be used in extra containers
+    ## Extra volumes that can be used in extrContainers
     extraContainerVolumes:
+      # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
       - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
         projected:
           sources:
             - serviceAccountToken:
-                audience: <audience-name> #<ATTENTION> Enter the audience for the projected service account token
+                audience: <audience-name> #<ATTENTION> Enter the audience name for the projected service account token
                 expirationSeconds: 3600
                 path: token
+      # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
       - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
         secret:
-          secretName: <config-secret> #<ATTENTION> Enter the secret name where config.json going to be added.
+          secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
 
     connectionInfo:
       ## @param database.connectionInfo.host PostgreSQL hostname. Since the cloud-sql-auth-proxy is used, this value should be localhost.
@@ -186,7 +199,7 @@ dashboardhost:
       host: "localhost"
       ## @param database.connectionInfo.port PostgreSQL port
       ##
-      port: <port>
+      port: "5432"
       ## @param database.connectionInfo.dbName PostgreSQL database name
       ##
       dbName: <database-name>
@@ -226,29 +239,36 @@ dynamicformfields:
     - name: cloud-sql-auth-proxy
       image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
       volumeMounts:
+        # This volume mount is required for the proxy to authenticate with cloudSQL using a service account key file. 
         - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is mounted
-          readOnly: true
           mountPath: <token-mount-path> #<ATTENTION> Enter the path where the token is mounted
+          readOnly: true
+        # This volume mount is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
         - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is mounted
           mountPath: /secrets/
           readOnly: true
       env:
         - name: "GOOGLE_APPLICATION_CREDENTIALS"
-          value: /secrets/service_account.json
+          value: /secrets/<secret-key> #<ATTENTION> Enter the key which was used while creating the secret
       args:
         # If connecting from a VPC-native GKE cluster, you can use the
         # following flag to have the proxy connect over private IP
         - "--private-ip"
+
+        # If you are not connecting with Automatic IAM, you can delete the following flag.
         - "--auto-iam-authn"
 
         # Enable structured logging with LogEntry format:
         - "--structured-logs"
+
+        # Ensures the proxy exits gracefully with a 0 exit code when it receives a SIGTERM signal
         - "--exit-zero-on-sigterm"
 
-        # Replace DB_PORT with the port the proxy should listen on
         - "--port=5432"
         - "<connection-name>" #<ATTENTION> Enter the connection name from the CloudSQL instance
-        # - "--credentials-file=<token-mount-path>/token"
+
+        # The credentials file is required for the proxy to authenticate using a service account key file.
+        - "--credentials-file=/secrets/<secret-key>" #<ATTENTION> Enter the key which was used while creating the secret
       securityContext:
         # The default Cloud SQL Auth Proxy image runs as the
         # "nonroot" user and group (uid: 65532) by default.
@@ -270,15 +290,17 @@ dynamicformfields:
           # application's requirements.
           cpu: "1"
 
-  ## Volumes that can be used in extra containers
+  ## Extra volumes that can be used in sidecars
   extraVolumes:
+    # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
     - name: <token-volume-name> #<ATTENTION> Enter the volume name where the token is to be mounted
       projected:
         sources:
           - serviceAccountToken:
-              audience: <audience-name> #<ATTENTION> Enter the audience for the projected service account token
+              audience: <audience-name> #<ATTENTION> Enter the audience name for the projected service account token
               expirationSeconds: 3600
               path: token
+    # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
     - name: <config-volume-name> #<ATTENTION> Enter the volume name where config.json is to be mounted
       secret:
         secretName: <secret-name> #<ATTENTION> Enter the secret name where config.json going to be added.
@@ -289,7 +311,7 @@ dynamicformfields:
     host: "localhost"
     ## @param database.connectionInfo.port PostgreSQL port
     ##
-    port: <port>
+    port: "5432"
     ## @param database.connectionInfo.dbName PostgreSQL database name
     ##
     dbName: <database-name>
