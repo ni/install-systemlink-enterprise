@@ -53,7 +53,7 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.32.18`
+**Top Level Helm Chart:** `systemlink 0.32.20`
 
 **Admin Helm Chart:** `systemlink-admin 0.32.4`
 
@@ -121,9 +121,9 @@ landingpageui:0.20.27
 
 nbexec-execution-helpers:0.21.18
 
-nbexec-notebook-runner:0.21.7
+nbexec-notebook-runner:0.21.8
 
-nbexecservice:0.21.35
+nbexecservice:0.21.36
 
 nbparsingservice:0.20.25
 
