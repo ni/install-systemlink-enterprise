@@ -4,16 +4,28 @@ The 2024-12 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Updated **Automated Agent** built-in role to include privileges to **Execute test actions**.
+- Analyze your parametric data in a Data Space to get statistical insights.
+- Create a custom script to analyze your parametric data in a Data Space.
+- Use dynamic form fields to add custom input fields to the user interface. You can add fields to the configuration slide-out of the following resources.
+    - Assets
+    - Products
+    - Systems
+    - Test Plans
+    - Work Orders
+- Use the keyboard to interact with grids. For example, you can use the arrow keys to navigate to different rows and different columns.
+- Add a hyperlink to an external URL as the value of a custom property. Use the following syntax similar to Markdown: `[link text](URL)`.
+- View additional details about a test plan from the **Schedule** page. To see more details, navigate to **Operations** » **Schedule** and click a test plan card.
+- Switch between day, week, month, and year views on the Schedule page.
+- Download multiple files at once.
+- Apply a state to multiple systems at once.
+- Updated the **Automated Agent** built-in role to include the privilege to **Execute test actions**.
 
 ## Helm Chart Breaking Changes
 
 - `dynamicformfields:0.1.310`
     - The Dynamic Form Fields (DFF) Service was added to the top-level chart.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
-    - You must configure the secrets for the PostgreSQL credentials of the DFF service in systemlink-secrets.yaml.
+        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
+    - You must configure the secrets for the PostgreSQL credentials of the dynamic form fields service in systemlink-secrets.yaml.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-secrets.yaml#L691)
     - DFF feature flags still defaults to false.
 
