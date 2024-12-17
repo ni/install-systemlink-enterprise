@@ -12,7 +12,7 @@ The 2024-12 release for SystemLink Enterprise has been published to <https://dow
 - Switch between day, week, month, and year views on the **Schedule** page.
 - Download multiple files at once.
 - Apply a state to multiple systems at once.
-- The **Automated Agent** built-in role is update4d to include the privilege to **Execute test actions**.
+- The **Automated Agent** built-in role is updated to include the privilege to **Execute test actions**.
 
 ## Helm Chart Breaking Changes
 
@@ -21,7 +21,7 @@ The 2024-12 release for SystemLink Enterprise has been published to <https://dow
         - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
     - You must configure the secrets for the PostgreSQL credentials of the dynamic form fields service in systemlink-secrets.yaml.
         - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-secrets.yaml#L691)
-    - DFF feature flags still defaults to false.
+    - DFF feature flag is enabled.
 
 ## Upgrade Considerations
 
