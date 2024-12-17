@@ -23,6 +23,7 @@ testmonitorservice:
           mountPath: /secrets/
           readOnly: true
       env:
+        # This env variable is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
         - name: "GOOGLE_APPLICATION_CREDENTIALS"
           value: /secrets/<secret-key> # <ATTENTION> - - Enter the key which was used while creating the secret
       args:
@@ -67,7 +68,7 @@ testmonitorservice:
 
   ## Extra volumes that can be used in sidecars
   extraVolumes:
-    # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
+    # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
     - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is to be mounted
       projected:
         sources:
@@ -75,7 +76,7 @@ testmonitorservice:
               audience: <audience-name> # <ATTENTION> - Enter the audience name for the projected service account token
               expirationSeconds: 3600
               path: token
-    # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
+    # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
     - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is to be mounted
       secret:
         secretName: <secret-name> # <ATTENTION> - Enter the secret name where config.json is added.
@@ -122,6 +123,7 @@ dashboardhost:
   grafana:
     ## Configuring Cloud SQL auth proxy extra container to authenticate to Cloud SQL Postgres database
     ## ref: https://cloud.google.com/sql/docs/postgres/connect-kubernetes-engine#run_the_in_a_sidecar_pattern
+    ## A reverse proxy server should be added to the extraContainers for grafana to authenticate users.
     extraContainers: |
       - name: cloud-sql-auth-proxy
         image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
@@ -135,6 +137,7 @@ dashboardhost:
             mountPath: /secrets/
             readOnly: true
         env:
+          # This env variable is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
           - name: "GOOGLE_APPLICATION_CREDENTIALS"
             value: /secrets/<secret-key> # <ATTENTION> - Enter the key which was used while creating the secret
         args:
@@ -179,7 +182,7 @@ dashboardhost:
 
     ## Extra volumes that can be used in extrContainers
     extraContainerVolumes:
-      # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
+      # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
       - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is to be mounted
         projected:
           sources:
@@ -187,7 +190,7 @@ dashboardhost:
                 audience: <audience-name> # <ATTENTION> - Enter the audience name for the projected service account token
                 expirationSeconds: 3600
                 path: token
-      # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
+      # This volume is required for the proxy to authenticate with cloudSQL using a service account key file.
       - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is to be mounted
         secret:
           secretName: <secret-name> # <ATTENTION> - Enter the secret name where config.json is added.
@@ -247,6 +250,7 @@ dynamicformfields:
           mountPath: /secrets/
           readOnly: true
       env:
+        # This env variable is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
         - name: "GOOGLE_APPLICATION_CREDENTIALS"
           value: /secrets/<secret-key> # <ATTENTION> - Enter the key which was used while creating the secret
       args:
@@ -291,7 +295,7 @@ dynamicformfields:
 
   ## Extra volumes that can be used in sidecars
   extraVolumes:
-    # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
+    # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
     - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is to be mounted
       projected:
         sources:
@@ -299,7 +303,7 @@ dynamicformfields:
               audience: <audience-name> # <ATTENTION> - Enter the audience name for the projected service account token
               expirationSeconds: 3600
               path: token
-    # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
+    # This volume is required for the proxy to authenticate with cloudSQL using a service account key file. 
     - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is to be mounted
       secret:
         secretName: <secret-name> # <ATTENTION> - Enter the secret name where config.json is added.
