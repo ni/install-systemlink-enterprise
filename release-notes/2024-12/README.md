@@ -12,7 +12,7 @@ The 2024-12 release for SystemLink Enterprise has been published to <https://dow
 - Switch between day, week, month, and year views on the **Schedule** page.
 - Download multiple files at once.
 - Apply a state to multiple systems at once.
-- The **Automated Agent** built-in role is update4d to include the privilege to **Execute test actions**.
+- The **Automated Agent** built-in role is updated to include the privilege to **Execute test actions**.
 
 ## Helm Chart Breaking Changes
 
