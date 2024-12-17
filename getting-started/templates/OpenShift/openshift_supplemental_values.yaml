@@ -1,6 +1,6 @@
 ## Openshift prohibits running the pods as a root user. The redis and rabbitmq pods should be run as non-root users.
 ## Disabling 'adaptSecurityContext' will restrict openshift from adapting security context values for the mentioned pods. 
-## Github issue - https://github.com/bitnami/charts/issues/24251
+## ref: https://github.com/bitnami/charts/issues/24251#:~:text=Perform%20automatic%20adaptation%20of%20securityContext%20sections%20in%20Openshift
 
 rabbitmq:
   global:

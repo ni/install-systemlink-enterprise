@@ -96,7 +96,7 @@ testmonitorservice:
     user: <username> # <ATTENTION> - Enter the PostgreSQL username for the testmonitor service
     ## @param database.connectionInfo.secretName The name of an existing secret with PostgreSQL connection credentials
     ##
-    secretName: <secret-name> # <ATTENTION> - Enter the secret name for the testmonitor service with PostgreSQL connection credentials
+    secretName: <secret-name> # <ATTENTION> - Enter the secret name that contains the testmonitor service's Postgres SQL database connection credentials
     ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     ##
@@ -112,7 +112,7 @@ testmonitorservice:
     ##
     annotations:
       {
-        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the CloudSQL service account name and the Google Cloud Project name
+        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project name
       }
     ## @param serviceAccount.name The name of the service account to use.
     ## If not set and create is true, a name is generated using the fullname template
@@ -211,7 +211,7 @@ dashboardhost:
       ## @param database.connectionInfo.secretName The name of an existing secret with
       ## PostgreSQL connection credentials
       ##
-      secretName: <secret-name> # <ATTENTION> - Enter the secret name for the testmonitor service with PostgreSQL connection credentials
+      secretName: <secret-name> # <ATTENTION> - Enter the secret name that contains the testmonitor service's Postgres SQL database connection credentials
       ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
       ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
       ##
@@ -227,7 +227,7 @@ dashboardhost:
       ##
       annotations:
         {
-          iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the CloudSQL service account name and the Google Cloud Project name
+          iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project name
         }
       ## @param serviceAccount.name The name of the service account to use.
       ## If not set and create is true, a name is generated using the fullname template
@@ -324,7 +324,7 @@ dynamicformfields:
     ## @param database.connectionInfo.secretName The name of an existing secret with
     ## PostgreSQL connection credentials
     ##
-    secretName: <secret-name> # <ATTENTION> - Enter the secret name for the testmonitor service with PostgreSQL connection credentials
+    secretName: <secret-name> # <ATTENTION> - Enter the secret name that contains the testmonitor service's Postgres SQL database connection credentials
     ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     ##
@@ -340,20 +340,12 @@ dynamicformfields:
     ##
     annotations:
       {
-        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the CloudSQL service account name and the Google Cloud Project name
+        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project name
       }
     ## @param serviceAccount.name The name of the service account to use.
     ## If not set and create is true, a name is generated using the fullname template
     ##
     name: ""
-
-dataframeservice:
-  s3:
-    port: 443
-    bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for dataframe service
-    scheme: "https://"
-    host: "storage.googleapis.com"
-    region: "us-east1"
 
 fileingestion:
   s3:
