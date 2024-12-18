@@ -14,18 +14,18 @@ testmonitorservice:
     - name: cloud-sql-auth-proxy
       image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
       volumeMounts:
-        # This volume mount is required for the proxy to authenticate with cloudSQL using a service account key file. 
-        - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is mounted
-          mountPath: <token-mount-path> # <ATTENTION> - Enter the path where the token is mounted
+        # This volume mount is required for the proxy to authenticate with cloudSQL using Workload Identity Federation config file. 
+        - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is available
+          mountPath: <token-mount-path> # <ATTENTION> - Enter the path where the token should be mounted
           readOnly: true
-        # This volume mount is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
-        - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is mounted
+        # This volume mount is required for the proxy to authenticate with cloudSQL using service account key file or Workload Identity Federation.
+        - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is available
           mountPath: /secrets/
           readOnly: true
       env:
         # This env variable is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
         - name: "GOOGLE_APPLICATION_CREDENTIALS"
-          value: /secrets/<secret-key> # <ATTENTION> - - Enter the key which was used while creating the secret
+          value: /secrets/<secret-key> # <ATTENTION> - Enter the file name which was used as the key while creating the secret
       args:
         # If connecting from a VPC-native GKE cluster, you can use the
         # following flag to have the proxy connect over private IP
@@ -44,7 +44,8 @@ testmonitorservice:
         - "<connection-name>" # <ATTENTION> - Enter the connection name from the CloudSQL instance
 
         # The credentials file is required for the proxy to authenticate using a service account key file.
-        - "--credentials-file=/secrets/<secret-key>" # <ATTENTION> - Enter the key which was used while creating the secret
+        # Not required if Workload Identity federation is used for authentication. 
+        - "--credentials-file=/secrets/<secret-key>" # <ATTENTION> - Enter the file name which was used as the key while creating the secret
       securityContext:
         # The default Cloud SQL Auth Proxy image runs as the
         # "nonroot" user and group (uid: 65532) by default.
@@ -69,7 +70,7 @@ testmonitorservice:
   ## Extra volumes that can be used in sidecars
   extraVolumes:
     # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
-    - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is to be mounted
+    - name: <token-volume-name> # <ATTENTION> - Enter the volume name
       projected:
         sources:
           - serviceAccountToken:
@@ -112,10 +113,10 @@ testmonitorservice:
     ##
     annotations:
       {
-        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project name
+        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project Id
       }
     ## @param serviceAccount.name The name of the service account to use.
-    ## If not set and create is true, a name is generated using the fullname template
+    ## If not set, a name is generated based on the service name
     ##
     name: ""
 
@@ -128,18 +129,18 @@ dashboardhost:
       - name: cloud-sql-auth-proxy
         image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
         volumeMounts:
-          # This volume mount is required for the proxy to authenticate with cloudSQL using a service account key file. 
-          - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is mounted
-            mountPath: <token-mount-path> # <ATTENTION> - Enter the path where the token is mounted
+          # This volume mount is required for the proxy to authenticate with cloudSQL using Workload Identity Federation config file. 
+          - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is available
+            mountPath: <token-mount-path> # <ATTENTION> - Enter the path where the token should be mounted
             readOnly: true
-          # This volume mount is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
-          - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is mounted
+          # This volume mount is required for the proxy to authenticate with cloudSQL using service account key file or Workload Identity Federation.
+          - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is available
             mountPath: /secrets/
             readOnly: true
         env:
           # This env variable is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
           - name: "GOOGLE_APPLICATION_CREDENTIALS"
-            value: /secrets/<secret-key> # <ATTENTION> - Enter the key which was used while creating the secret
+            value: /secrets/<secret-key> # <ATTENTION> - Enter the file name which was used as the key while creating the secret
         args:
           # If connecting from a VPC-native GKE cluster, you can use the
           # following flag to have the proxy connect over private IP
@@ -158,7 +159,8 @@ dashboardhost:
           - "<connection-name>" # <ATTENTION> - Enter the connection name from the CloudSQL instance
 
           # The credentials file is required for the proxy to authenticate using a service account key file.
-          - "--credentials-file=/secrets/<secret-key>" # <ATTENTION> - Enter the key which was used while creating the secret
+          # Not required if Workload Identity federation is used for authentication. 
+          - "--credentials-file=/secrets/<secret-key>" # <ATTENTION> -  Enter the file name which was used as the key while creating the secret
         securityContext:
           # The default Cloud SQL Auth Proxy image runs as the
           # "nonroot" user and group (uid: 65532) by default.
@@ -183,7 +185,7 @@ dashboardhost:
     ## Extra volumes that can be used in extrContainers
     extraContainerVolumes:
       # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
-      - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is to be mounted
+      - name: <token-volume-name> # <ATTENTION> - Enter the volume name
         projected:
           sources:
             - serviceAccountToken:
@@ -227,10 +229,10 @@ dashboardhost:
       ##
       annotations:
         {
-          iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project name
+          iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project Id
         }
       ## @param serviceAccount.name The name of the service account to use.
-      ## If not set and create is true, a name is generated using the fullname template
+      ## If not set, a name is generated based on the service name
       ##
       name: ""
 
@@ -241,18 +243,18 @@ dynamicformfields:
     - name: cloud-sql-auth-proxy
       image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
       volumeMounts:
-        # This volume mount is required for the proxy to authenticate with cloudSQL using a service account key file. 
-        - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is mounted
-          mountPath: <token-mount-path> # <ATTENTION> - Enter the path where the token is mounted
+        # This volume mount is required for the proxy to authenticate with cloudSQL using Workload Identity Federation config file. 
+        - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is available
+          mountPath: <token-mount-path> # <ATTENTION> - Enter the path where the token should be mounted
           readOnly: true
-        # This volume mount is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
-        - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is mounted
+        # This volume mount is required for the proxy to authenticate with cloudSQL using service account key file or Workload Identity Federation.
+        - name: <config-volume-name> # <ATTENTION> - Enter the volume name where config.json is available
           mountPath: /secrets/
           readOnly: true
       env:
         # This env variable is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
         - name: "GOOGLE_APPLICATION_CREDENTIALS"
-          value: /secrets/<secret-key> # <ATTENTION> - Enter the key which was used while creating the secret
+          value: /secrets/<secret-key> # <ATTENTION> - Enter the file name which was used as the key while creating the secret
       args:
         # If connecting from a VPC-native GKE cluster, you can use the
         # following flag to have the proxy connect over private IP
@@ -271,7 +273,8 @@ dynamicformfields:
         - "<connection-name>" # <ATTENTION> - Enter the connection name from the CloudSQL instance
 
         # The credentials file is required for the proxy to authenticate using a service account key file.
-        - "--credentials-file=/secrets/<secret-key>" # <ATTENTION> - Enter the key which was used while creating the secret
+        # Not required if Workload Identity federation is used for authentication. 
+        - "--credentials-file=/secrets/<secret-key>" # <ATTENTION> -  Enter the file name which was used as the key while creating the secret
       securityContext:
         # The default Cloud SQL Auth Proxy image runs as the
         # "nonroot" user and group (uid: 65532) by default.
@@ -296,7 +299,7 @@ dynamicformfields:
   ## Extra volumes that can be used in sidecars
   extraVolumes:
     # This volume is required for the proxy to authenticate with cloudSQL when using Workload Identity Federation.
-    - name: <token-volume-name> # <ATTENTION> - Enter the volume name where the token is to be mounted
+    - name: <token-volume-name> # <ATTENTION> - Enter the volume name
       projected:
         sources:
           - serviceAccountToken:
@@ -340,10 +343,10 @@ dynamicformfields:
     ##
     annotations:
       {
-        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project name
+        iam.gke.io/gcp-service-account=<YOUR-GSA-NAME>@<YOUR-GOOGLE-CLOUD-PROJECT>.iam.gserviceaccount.com, # <ATTENTION> - Enter the Google Service Account name created for Cloud SQL access and the Google Cloud Project Id
       }
     ## @param serviceAccount.name The name of the service account to use.
-    ## If not set and create is true, a name is generated using the fullname template
+    ## If not set, a name is generated based on the service name
     ##
     name: ""
 
@@ -353,7 +356,7 @@ fileingestion:
     bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for fileingestion service
     scheme: "https://"
     host: "storage.googleapis.com"
-    region: "us-east1"
+    region: <region> # <ATTENTION> - Enter the region where the GCS bucket is located
 
 feedservice:
   s3:
@@ -361,21 +364,25 @@ feedservice:
     bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for feedservice service
     scheme: "https://"
     host: "storage.googleapis.com"
-    region: "us-east1"
+    region: <region> # <ATTENTION> - Enter the region where the GCS bucket is located
 
 saltmaster:
   serviceTCP:
     type: LoadBalancer
 
 nbexecservice:
+  s3:
+    port: 443
+    bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for nbexecservice service
+    scheme: "https://"
+    host: "storage.googleapis.com"
+    region: <region> # <ATTENTION> - Enter the region where the GCS bucket is located
   argo:
-    ## Configure GCS access.
-    ##
     artifactRepository:
       s3:
         port: 443
-        bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for nbexecservice service
+        bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for artifact repository
         scheme: "https://"
         host: "storage.googleapis.com"
-        region: "us-east1"
+        region: <region> # <ATTENTION> - Enter the region where the GCS bucket is located
         insecure: false
