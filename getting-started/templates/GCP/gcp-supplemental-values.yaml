@@ -197,33 +197,35 @@ dashboardhost:
         secret:
           secretName: <secret-name> # <ATTENTION> - Enter the secret name where config.json is added.
 
-    connectionInfo:
-      ## @param database.connectionInfo.host PostgreSQL hostname. Since the cloud-sql-auth-proxy is used, this value should be localhost.
+    ## Database configuration. See here for more documentation: https://grafana.com/docs/grafana/latest/administration/configuration/#database
+    # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
+    ##
+    database:
+      ## Either mysql, postgres or sqlite3.
       ##
-      host: "localhost"
-      ## @param database.connectionInfo.port PostgreSQL port
+      type: "postgres"
+      ## The database user (not applicable for sqlite3).
       ##
-      port: "5432"
-      ## @param database.connectionInfo.dbName PostgreSQL database name
+      user: <username> # <ATTENTION> - Enter the PostgreSQL username for the dashboardhost database
+      ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;""".
       ##
-      dbName: <database-name> # <ATTENTION> - Enter the PostgreSQL database name for testmonitor service
-      ## @param database.connectionInfo.user PostgreSQL username used by the service
+      password: <password> # <ATTENTION> - Enter the PostgreSQL password for the dashboardhost database
+      ## Only applicable to MySQL or Postgres. Includes IP or host name and port or in case of Unix sockets the path to it.
+      ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock.
       ##
-      user: <username> # <ATTENTION> - Enter the PostgreSQL username for the testmonitor service
-      ## @param database.connectionInfo.secretName The name of an existing secret with
-      ## PostgreSQL connection credentials
+      host: "localhost:5432"
+      ## The name of the Grafana database. Leave it set to grafana (default) or some other name.
+      ## <ATTENTION> - You must create the database manually before deploying. If you are using the default database
+      ## name, you must create a database named "grafana". The database user, if not a superuser, will require USAGE
+      ## and CREATE privileges on the "public" schema and SELECT, INSERT, UPDATE, and DELETE privileges on all tables
+      ## in the "public" schema.
+      # name: "database-name"
+      ## Use either URL or the other fields above to configure the database.
+      ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
+      ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
       ##
-      secretName: <secret-name> # <ATTENTION> - Enter the secret name that contains the testmonitor service's Postgres SQL database connection credentials
-      ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
-      ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
-      ##
-      # passwordKey: "passkey"
-      ## @param database.connectionInfo.migrationPasswordKey Password key for database.connectionInfo.migrationUser to be retrieved from existing secret
-      ## If unset database.connectionInfo.passwordKey is used instead.
-      ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
-      ##
-      # migrationPasswordKey: null
-
+      ssl_mode: "disable"
+    
     serviceAccount:
       ## @param serviceAccount.annotations Annotations to add to the service account
       ##
@@ -377,12 +379,3 @@ nbexecservice:
     scheme: "https://"
     host: "storage.googleapis.com"
     region: <region> # <ATTENTION> - Enter the region where the GCS bucket is located
-  argo:
-    artifactRepository:
-      s3:
-        port: 443
-        bucket: <name-of-gcs-bucket> # <ATTENTION> - Enter the name of the GCS bucket for artifact repository
-        scheme: "https://"
-        host: "storage.googleapis.com"
-        region: <region> # <ATTENTION> - Enter the region where the GCS bucket is located
-        insecure: false
