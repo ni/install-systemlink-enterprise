@@ -1,0 +1,52 @@
+# The following file is compatible with version 14.10.3 of the Bitnami MinIO Helm chart.
+# Later versions of the chart may introduce compatibility changes which will require
+# changes to this template.
+
+auth:
+  # <ATTENTION> Configure default credentials for the MinIO instance
+  rootUser: "admin"
+  rootPassword: ""
+
+containerPorts:
+  api: 9000
+
+persistence:
+  # <ATTENTION> Adjust storage size based on expected utilization.
+  size: 20Gi
+
+networkPolicy:
+  enabled: false
+
+ingress:
+  enabled: false
+
+## Ingress used to expose the MinIO web application outside of the cluster. For debugging use only.
+ingress:
+  enabled: false
+  hostname: example.com
+  path: "/"
+  annotations:
+    ## Set the maximum http request body size for file uploads
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  tls: true
+  ## If enabled, Helm will generate a self-signed certificate for this ingress during deployment
+  selfSigned: true
+
+## Ingress used for MinIO API access. Only required if MinIO will be accessed from outside the cluster.
+apiIngress:
+  enabled: false
+  hostname: "example.com"
+  path: "/"
+  annotations:
+    ## Set the maximum http request body size for file uploads if using an nginx ingress controller.
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  tls: true
+  ## If enabled, Helm will generate a self-signed certificate for this ingress during deployment
+  selfSigned: true
+
+## Enables TLS for intra-cluster communication with the MinIO instance. The server certificate
+## must be deployed as a secret to the cluster prior to deploying MinIO and the corresponding
+## certificate authority must be configured for SystemLink Enterprise to enable access.
+tls:
+  enabled: false
+  existingSecret: "minio-certificate"
