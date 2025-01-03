@@ -48,7 +48,7 @@ In systemlink-secrets.yaml:
 1. Set `s3User` to the configured root user name.
 2. Set `s3Password` to the configured root password.
 
-## Migrating an existing MinIO deployment.
+## Migrating an existing MinIO deployment
 
 If a version of SystemLink Enterprise prior to January 2025 has been deployed using the included MinIO instance for object storage, it is possible to upgrade to a release that does not include MinIO without loss of data. This will cause an application downtime. If preservation of data is not required, you can simply install a fresh copy of MinIO to the cluster and update the SystemLink Enterprise configuration to use it, as described above.
 
