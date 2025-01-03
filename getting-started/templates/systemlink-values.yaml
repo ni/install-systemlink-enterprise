@@ -130,7 +130,7 @@ global:
 ## be overridden with custom values if required.
 ##
 ## Hostname of an external S3 provider.
-# <ATTENTION> To connect to an external S3 provider, set s3Host s3Scheme, s3Port and s3Region.
+# <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
 ##
 s3Host: &s3Host "s3.amazonaws.com"
 ## Service name of an on-cluster S3 provider.
