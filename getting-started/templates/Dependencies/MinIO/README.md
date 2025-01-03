@@ -15,7 +15,7 @@ using the included MinIO and need to be upgraded to a more recent version of the
 
 1. Review the [`README.md`](https://github.com/bitnami/charts/blob/main/bitnami/minio/README.md) from the Bitnami Github repo.
 2. Copy and modify the `minio-values.yaml` file from this directory and configure MinIO for your environment.
-   - A default username and password for the root user must be provider. Further configuration is optional.
+   - A default username and password for the root user must be provided. Further configuration is optional.
 3. Select the namespace where MinIO will be deployed, subsequently referred to as `<namespace>` in this document. This will often be
    the same namespace used to deploy SystemLink Enterprise.
 4. Select the release name that will identify your Helm deployment, subsequently referred to as `<release>` in this document.
