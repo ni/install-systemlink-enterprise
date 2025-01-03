@@ -17,9 +17,6 @@ persistence:
 networkPolicy:
   enabled: false
 
-ingress:
-  enabled: false
-
 ## Ingress used to expose the MinIO web application outside of the cluster. For debugging use only.
 ingress:
   enabled: false
