@@ -207,10 +207,10 @@ dashboardhost:
         type: "postgres"
         ## The database user (not applicable for sqlite3).
         ##
-        user: <username> # <ATTENTION> - Enter the PostgreSQL username for the dashboardhost database
+        user: $__file{/etc/secrets/dashboardhost/user}
         ## The database user’s password (not applicable for sqlite3). If the password contains # or ; you have to wrap it with triple quotes. For example """#password;""".
         ##
-        password: <password> # <ATTENTION> - Enter the PostgreSQL password for the dashboardhost database
+        password: $__file{/etc/secrets/dashboardhost/password}
         ## Only applicable to MySQL or Postgres. Includes IP or host name and port or in case of Unix sockets the path to it.
         ## For example, for MySQL running on the same host as Grafana: host = 127.0.0.1:3306 or with Unix sockets: host = /var/run/mysqld/mysqld.sock.
         ##
@@ -225,7 +225,7 @@ dashboardhost:
         ## url: postgres://dashboardhost:abc123@dashboardhostpostgrescluster-primary.systemlink-nic2.svc:5432/grafana
         ## For PostgresSQL, use either disable, require or verify-full. For MySQL, use either true, false, or skip-verify.
         ##
-        ssl_mode: "disable"
+        ssl_mode: "require"
     
     serviceAccount:
       ## @param serviceAccount.annotations Annotations to add to the service account
