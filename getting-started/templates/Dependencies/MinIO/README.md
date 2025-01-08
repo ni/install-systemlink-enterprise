@@ -59,7 +59,7 @@ To migrate data from the included MinIO:
    the application in an error state. However, data previously stored in MinIO will not be deleted by this step.
 3. Follow the instructions for [Installing Minio](#installing-minio) to install a new MinIO instance. Chose the same `<namespace>` as
    the SystemLink Enterprise deployment. Choose a `<release>` name matching `<systemlink release>-minio`.
-   - For example, if you used `systemlink` for the release name for the SystemLink Entrprise deployment, use `systemlink-minio` for the
+   - For example, if you used `systemlink` for the release name for the SystemLink Enterprise deployment, use `systemlink-minio` for the
      MinIO deployment.
 4. Verify that the MinIO deployment succeeds and that the MinIO instance is using the same persistent volume claims as the
    previous deployment.
