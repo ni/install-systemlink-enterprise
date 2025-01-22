@@ -4,33 +4,37 @@ The 2025-01 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- You can no longer install MinIO as part of the top-level SLE Helm chart. MinIO should be used only during product evaluations where no other block storage solution are available. You can still install MinIO on your own but not as part of the SLE application.
-    - [Refer to the installation and upgrade guide on github](https://github.com/ni/install-systemlink-enterprise/tree/main/getting-started/templates/Dependencies/MinIO)
-- Renamed the **Download files** privileges to **Preview and download files**.
-- Cross origin requests are enabled by default in the Data Frame service. You can control the list of origins in the top-level Helm chart.
-- Exposed an API to Cancel Executions. Removed **Cancel notebook executions** privileges from the Data Maintainer role.
-- Install software and configure feeds on multiple systems.
-- Dynamic form fields (DFF)
-    - Made DFF privileges visible in rules management. The rights to manage DFF configuration are assigned to the Data maintainer and Systems maintainer roles.
-    - Feature flags (ff-workorders-dff, ff-assets-dff, ff-testplans-dff, ff-systems-dff, ff-products-dff) for DFF usage are set to true.
-- Use dynamic form fields to add custom input fields to the user interface. You can add fields to the configuration slide-out of the following resources.
+- Use [dynamic form fields](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/adding-custom-fields-to-the-ui.html) to add custom input fields to the user interface. You can add fields to the configuration slide-out of the following resources.
     - Assets
     - Products
     - Systems
     - Test Plans
     - Work Orders
-- Host web applications.
+- Dynamic form field privileges are available in the **Roles** application.
+    - The _Data maintainer_ and _Systems maintainer_ roles now include privileges to manage dynamic form fields
+- [Host web applications](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/hosting-a-web-application.html).
 - Preview your text, image, audio, and video files.
 - Filter the list of test plans you see based on their status or their metadata. Navigate to Operations » Test Plans and click the summary tiles at the top of the page.
-- Adjust the default rate limits for Jupyter Notebook operations.
+- [Adjust the default rate limits](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-jupyter-notebook-limits.html) for Jupyter Notebook operations.
+- MinIO is no longer installed with the top-level SLE Helm chart.
+    - MinIO should be used only during product evaluations when no other block storage solution are available.
+    - You can install MinIO independently of the SLE application.
+    - Refer to the [installation and upgrade guide](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/getting-started/templates/Dependencies/MinIO).
+- Renamed the **Download files** privileges to **Preview and download files**.
+- Enabled Cross origin requests by default in the DataFrame service. You can control the list of origins in the top-level Helm chart.
+- Exposed an API to cancel notebook executions.
+    - Removed **Cancel notebook executions** privileges from the _Data Maintainer_ role.
+- Install software and configure feeds on multiple systems.
 
 ## Helm Chart Breaking Changes
 
-- `workorder 0.12.23`
-    - User-facing IDs have been introduced for test plan templates, resulting in a breaking change from the previous versions.
-    - Migration job will run during the Helm upgrade, with brief downtime depending on the number of existing templates and plans.
+- None
 
 ## Upgrade Considerations
+
+- `workorder 0.12.23`
+    - User-friendly IDs have been introduced for test plan templates, resulting in a breaking change from the previous versions.
+    - Migration job will run during the Helm upgrade, with brief downtime depending on the number of existing templates and plans.
 
 ### RabbitMQ Version
 
@@ -40,7 +44,8 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 |------------------|-------------------------------------|------------------------------------|
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
-| 3.13.x           | 0.25.x                              | current                            |
+| 3.13.x           | 0.25.x                              | 0.29.56                            |
+| 4.0.x            | 0.30.74                             | current                            |
 
 ## Bugs Fixed
 
