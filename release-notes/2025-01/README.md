@@ -13,6 +13,16 @@ The 2025-01 release for SystemLink Enterprise has been published to <https://dow
 - Dynamic form fields (DFF)
     - Made DFF privileges visible in rules management. The rights to manage DFF configuration are assigned to the Data maintainer and Systems maintainer roles.
     - Feature flags (ff-workorders-dff, ff-assets-dff, ff-testplans-dff, ff-systems-dff, ff-products-dff) for DFF usage are set to true.
+- Use dynamic form fields to add custom input fields to the user interface. You can add fields to the configuration slide-out of the following resources.
+    - Assets
+    - Products
+    - Systems
+    - Test Plans
+    - Work Orders
+- Host web applications.
+- Preview your text, image, audio, and video files.
+- Filter the list of test plans you see based on their status or their metadata. Navigate to Operations » Test Plans and click the summary tiles at the top of the page.
+- Adjust the default rate limits for Jupyter Notebook operations.
 
 ## Helm Chart Breaking Changes
 
