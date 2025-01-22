@@ -2,20 +2,23 @@
 
 The 2025-01 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- The option to install MinIO as part of the top-level SLE Helm chart has been removed. MinIO was always intended to be used only during product evaluations where no other block storage solution was available. That option still exists, but the customer will need to install MinIO themselves rather than as part of the SLE application.
+    - [Refer to the installation and upgrade guide on github](https://github.com/ni/install-systemlink-enterprise/tree/main/getting-started/templates/Dependencies/MinIO)
+- Renamed the **Download files** privileges to **Preview and download files**.
+- Cross origin requests are enabled by default in the Dataframe service and the list of origins can be controlled in the top level helm chart.
+- Exposed an API to Cancel Executions. Removed **Cancel notebook executions** privileges to Data Maintainer role.
+- Software installation and feed configuration on multiple systems is now available.
+- Dynamic form fields (DFF)
+    - Made DFF privileges visible in rules management. The rights to manage DFF configuration are assigned to Data maintainer, Systems maintainer.
+    - Feature flags (ff-workorders-dff, ff-assets-dff, ff-testplans-dff, ff-systems-dff, ff-products-dff) for DFF usage are set to true.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-    - Description of breaking change.
+- `workorder 0.12.23`
+    - User-facing IDs have been introduced for test plan templates, resulting in a breaking change from the previous versions.
+    - Migration job will run during the Helm upgrade, with brief downtime depending on the number of existing templates and plans.
 
 ## Upgrade Considerations
 
@@ -31,17 +34,13 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2025-01](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/release-notes/2025-01/closed-bugs-sle-2025-01.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/release-notes/2025-01/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/release-notes/2025-01/notices)
 
 ## Versions
 
