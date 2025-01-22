@@ -8,7 +8,7 @@ The 2025-01 release for SystemLink Enterprise has been published to <https://dow
     - [Refer to the installation and upgrade guide on github](https://github.com/ni/install-systemlink-enterprise/tree/main/getting-started/templates/Dependencies/MinIO)
 - Renamed the **Download files** privileges to **Preview and download files**.
 - Cross origin requests are enabled by default in the Data Frame service. You can control the list of origins in the top-level Helm chart.
-- Exposed an API to Cancel Executions. Removed **Cancel notebook executions** privileges to Data Maintainer role.
+- Exposed an API to Cancel Executions. Removed **Cancel notebook executions** privileges from the Data Maintainer role.
 - Software installation and feed configuration on multiple systems is now available.
 - Dynamic form fields (DFF)
     - Made DFF privileges visible in rules management. The rights to manage DFF configuration are assigned to Data maintainer, Systems maintainer.
