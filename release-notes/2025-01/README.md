@@ -4,7 +4,7 @@ The 2025-01 release for SystemLink Enterprise has been published to <https://dow
 
 ## New Features and Behavior changes
 
-- The option to install MinIO as part of the top-level SLE Helm chart has been removed. MinIO was always intended to be used only during product evaluations where no other block storage solution was available. That option still exists, but the customer will need to install MinIO themselves rather than as part of the SLE application.
+-You can no longer install MinIO as part of the top-level SLE Helm chart. MinIO should be used only during product evaluations where no other block storage solution are available. You can still install MinIO on your own but not as part of the SLE application.
     - [Refer to the installation and upgrade guide on github](https://github.com/ni/install-systemlink-enterprise/tree/main/getting-started/templates/Dependencies/MinIO)
 - Renamed the **Download files** privileges to **Preview and download files**.
 - Cross origin requests are enabled by default in the Dataframe service and the list of origins can be controlled in the top level helm chart.
