@@ -1,14 +1,22 @@
 # SystemLink Enterprise 2023-01 Release Notes
 
-The 2023-01 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-01 release bundle for SystemLink Enterprise has been published to
+<https://niedge01.jfrog.io>. This update includes new features, bug fixes, and
+security updates. Work with your account representative to obtain credentials to
+access these artifacts. If you are not upgrading from the previous release,
+refer to past release notes to ensure you have addressed all required
+configuration changes.
 
 ## New Features and Behavior changes
 
 - Schedule a Jupyter notebook to run at a specific time or periodically.
 
-- View detailed information about individual test steps within a test result. Refer to [Viewing Test Steps by Result](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-test-steps-by-result.html).
+- View detailed information about individual test steps within a test result.
+  Refer to
+  [Viewing Test Steps by Result](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-test-steps-by-result.html).
 
-- Access SystemLink navigation and user account settings when using the Jupyter environment.
+- Access SystemLink navigation and user account settings when using the Jupyter
+  environment.
 
 ## Helm Chart Breaking Changes
 
@@ -34,6 +42,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 dashboardsui/20230110.4
 
 dataframeservice-kafka-connect/20221205.2
@@ -115,17 +124,21 @@ testmonitorservice/20230111.3
 userdata/20230111.2
 
 userservice-setup/20230106.13
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 systemlink-notebook-datasource/1.1.0.zip
 
 systemlink-dataframe-datasource/1.6.0.zip
 
 plotly-panel/1.1.2.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.4.4-linux-amd64
 
 argoproj/argoexec/v3.4.4-linux-amd64
@@ -157,3 +170,4 @@ kube-scheduler/v1.23.10
 pause/3.8
 
 zookeeper/3.8.0-temurin
+```

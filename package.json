@@ -2,7 +2,7 @@
   "scripts": {
     "lint-folder": "run-script-os",
     "lint-folder:windows": "prettier --check %folderPath% && cspell lint %folderPath% --no-progress --no-summary --show-suggestions && python broken-link-checker.py %folderPath%",
-    "lint-folder:darwin:linux": "prettier --check \"$folderPath\" && cspell lint \"$folderPath\" --no-progress --no-summary --show-suggestions && python3 broken-link-checker.py \"$folderPath\"",
+    "lint-folder:darwin:linux": "prettier --check \"$folderPath\" && cspell lint \"$folderPath\" --no-progress --no-summary --show-suggestions",
     "lint-folder:fix": "run-script-os",
     "lint-folder:fix:windows": "prettier --check --write %folderPath%",
     "lint-folder:fix:darwin:linux": "prettier --check --write \"$folderPath\"",
@@ -14,7 +14,7 @@
     "cross-env": "7.0.3",
     "cspell": "8.0.0",
     "markdown-link-check": "3.11.2",
-    "prettier": "3.1.0",
+    "prettier": "3.4.2",
     "pretty-quick": "4.0.0",
     "run-script-os": "1.1.6"
   }

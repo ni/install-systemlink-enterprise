@@ -1,0 +1,5 @@
+[*.md]
+trim_trailing_whitespace = true
+indent_style = space
+# An indent size of four spaces helps ensure that code blocks are properly indented in lists
+indent_size = 4

@@ -1,28 +1,49 @@
 # SystemLink Enterprise release 2024-03 Release Notes
 
-The 2024-03 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-03 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Use the Specification Management UI to maintain a central repository of specifications that you can use to analyze your test results and measurements. For more information, refer to [Managing Specifications](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-specifications.html).
-- Extract Standard Test Data Format (STDF) files into SystemLink results, steps, and measurements.
-- Duplicate existing routines so you can create similar routines faster. In the SystemLink web application, navigate to Analysis and Reporting » Routines. Select a routine and click Duplicate.
-- Dashboards upgraded to Grafana [version 10.0](https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v10-0/). Explore mode now available in the navigation menu.
+- Use the Specification Management UI to maintain a central repository of
+  specifications that you can use to analyze your test results and measurements.
+  For more information, refer to
+  [Managing Specifications](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-specifications.html).
+- Extract Standard Test Data Format (STDF) files into SystemLink results, steps,
+  and measurements.
+- Duplicate existing routines so you can create similar routines faster. In the
+  SystemLink web application, navigate to Analysis and Reporting » Routines.
+  Select a routine and click Duplicate.
+- Dashboards upgraded to Grafana
+  [version 10.0](https://grafana.com/docs/grafana/latest/whatsnew/whats-new-in-v10-0/).
+  Explore mode now available in the navigation menu.
 
 ## Helm Chart Breaking Changes
 
 - `systemsstateservice 0.1.56`
-    - A new chart for Systems State Service has been added. This requires MongoDB credentials.
-    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-03/getting-started/templates/systemlink-secrets.yaml#L629)
+  - A new chart for Systems State Service has been added. This requires MongoDB
+    credentials.
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-03/getting-started/templates/systemlink-secrets.yaml#L629)
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
@@ -46,6 +67,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice:0.9.21
 
 assetui:0.8.41
@@ -149,9 +171,11 @@ userdata:0.11.12
 userservice-setup:0.13.3
 
 workorder:0.2.38
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.19.0
 
 argoproj/argocli:v3.4.11-linux-amd64
@@ -181,3 +205,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.11.8
 
 zookeeper:3.8.2-temurin
+```

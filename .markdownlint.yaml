@@ -14,7 +14,7 @@ MD033:
 
 # Indentation level for unordered lists.
 MD007:
-  indent: 4
+  indent: 2
 
 # Disable enforcement of "no space in code snippet" rule.
 MD038: false

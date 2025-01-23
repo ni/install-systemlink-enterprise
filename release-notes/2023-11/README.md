@@ -1,47 +1,85 @@
 # SystemLink Enterprise release 2023-11 Release Notes
 
-The 2023-11 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-11 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
 - Work Orders
-    - The Work Order's expose a new privilege for scheduling test plans.
-    - The Work Order service and UI is not included in the SystemLink Helm chart and associated privileges can be ignored.
+  - The Work Order's expose a new privilege for scheduling test plans.
+  - The Work Order service and UI is not included in the SystemLink Helm chart
+    and associated privileges can be ignored.
 
 ## Helm Chart Breaking Changes
 
 - `sl-jupyterhub`
-    - Notebooks now support Python 3.11 in the JupyterHub development environment.
+
+  - Notebooks now support Python 3.11 in the JupyterHub development environment.
 
 - `nbexecservice`
-    - Notebooks now support Python 3.11 in notebooks executed by Routines.
+
+  - Notebooks now support Python 3.11 in notebooks executed by Routines.
 
 - `testmonitorservice 0.16.37`
-    - The update includes a new database schema migration to support future features. The migration is expected to complete without downtime. Downgrading to prior versions of the TestMonitor service after updating to this version is not supported.
-    - The migration requires permission to alter tables in the Test Monitor schema, which are elevated privileges beyond the minimal set required by the service's normal operation. To alter tables the PostgreSQL user must be the owner of the schema or be a member of the role that owns the schema. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. See below for new options to facilitate this requirement.
-    - If your current PostgreSQL user does not or cannot use these elevated privileges refer to **Setting up an Elevated PostgreSQL User for Migration** for steps to utilize a higher privileged user in this migration.
+  - The update includes a new database schema migration to support future
+    features. The migration is expected to complete without downtime.
+    Downgrading to prior versions of the TestMonitor service after updating to
+    this version is not supported.
+  - The migration requires permission to alter tables in the Test Monitor
+    schema, which are elevated privileges beyond the minimal set required by the
+    service's normal operation. To alter tables the PostgreSQL user must be the
+    owner of the schema or be a member of the role that owns the schema. If your
+    PostgreSQL user does not have the required permissions the updated pods job
+    will fail to start. See below for new options to facilitate this
+    requirement.
+  - If your current PostgreSQL user does not or cannot use these elevated
+    privileges refer to **Setting up an Elevated PostgreSQL User for Migration**
+    for steps to utilize a higher privileged user in this migration.
 
 ### Setting up an Elevated PostgreSQL User for Migration
 
-- The database migrations is performed by a Kubernetes job that runs prior to TestMonitor pod deployment.
-- The `testmonitorservice` Helm chart includes a new option to specify the PostgreSQL user for migration separately from the user for the service's normal operation. This allows the higher privileged user to be used during application updates exclusively.
+- The database migrations is performed by a Kubernetes job that runs prior to
+  TestMonitor pod deployment.
+- The `testmonitorservice` Helm chart includes a new option to specify the
+  PostgreSQL user for migration separately from the user for the service's
+  normal operation. This allows the higher privileged user to be used during
+  application updates exclusively.
 - New secrets must be defined in Helm for this PostgreSQL user
-    - `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword`.
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-secrets.yaml#L434)
-- These secrets and a new connection string must be referenced in your values file.
-    - `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-values.yaml#L287).
+  - `testmonitorservice.secrets.database.migrationConnectionString` and
+    `testmonitorservice.secrets.database.migrationConnectionPassword`.
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-secrets.yaml#L434)
+- These secrets and a new connection string must be referenced in your values
+  file.
+  - `testmonitorservice.database.connectionString.migrationConnectionStringKey`,
+    `testmonitorservice.database.connectionInfo.migrationUser`, and
+    `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the
+    values file
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-11/getting-started/templates/systemlink-values.yaml#L287).
 
 ## RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
 | ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed instructions on how to safely upgrade the version of the RabbitMQ
+dependency.
 
 ## Bugs Fixed
 
@@ -62,6 +100,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice:0.5.53
 
 assetui:0.4.79
@@ -161,9 +200,11 @@ testmonitorservice:0.16.37
 userdata:0.7.16
 
 userservice-setup:0.8.4
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.18.4
 
 argoproj/argocli:v3.4.11-linux-amd64
@@ -197,3 +238,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.9.1
 
 zookeeper:3.8.1-temurin
+```

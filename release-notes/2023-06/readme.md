@@ -1,29 +1,42 @@
 # SystemLink Enterprise release 2023-06 Release Notes
 
-The 2023-06 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-06 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
 - Track the location and status of assets on the Assets tab for your system.
-- Manually add assets to your system to track third-party devices and devices without drivers.
+- Manually add assets to your system to track third-party devices and devices
+  without drivers.
 - New privileges for assets available.
-    - Create assets
-    - View asset details and history
-    - Modify assets
-    - Delete assets
-- Edit and delete data spaces from the data spaces table and from an individual data space.
+  - Create assets
+  - View asset details and history
+  - Modify assets
+  - Delete assets
+- Edit and delete data spaces from the data spaces table and from an individual
+  data space.
 - The PostgreSQL backend for the Test Insights Service is more resilient.
-- Grafana folders now append "Workspace" to clarify their workspace association and prevent name colisions with workspaces named "General".
+- Grafana folders now append "Workspace" to clarify their workspace association
+  and prevent name collisions with workspaces named "General".
 
 ## Helm Chart Breaking Changes
 
 - `assetservice 0.0.283`
-    - New in 2023-06 release
-    - Before you upgrade, remove any PersistentVolumeClaims (PVCs) with `assetservice` in its name
+
+  - New in 2023-06 release
+  - Before you upgrade, remove any PersistentVolumeClaims (PVCs) with
+    `assetservice` in its name
 
 - `dashboardhost 0.1.207`
-    - Added `apiIngress` section to expose the Grafana API on the API ingress. A Grafana API route is needed for Service Registry to determine Grafana's status, which then controls whether to show Dashboards in the navigation tree.
-    - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
+  - Added `apiIngress` section to expose the Grafana API on the API ingress. A
+    Grafana API route is needed for Service Registry to determine Grafana's
+    status, which then controls whether to show Dashboards in the navigation
+    tree.
+  - [https://github.com/ni/install-systemlink-enterprise/pull/140](https://github.com/ni/install-systemlink-enterprise/pull/140)
 
 ## Bugs Fixed
 
@@ -43,6 +56,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice/v0.0.293
 
 dashboardsui/v0.2.10
@@ -130,17 +144,21 @@ testmonitorservice/v0.11.12
 userdata/v0.2.11
 
 userservice-setup/v0.3.1
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 systemlink-notebook-datasource/1.1.1.zip
 
 systemlink-dataframe-datasource/1.6.2.zip
 
 plotly-panel/1.1.2.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.3.8-linux-amd64
 
 argoproj/argoexec/v3.3.8-linux-amd64
@@ -174,3 +192,4 @@ zookeeper/3.8.1-temurin
 strimzi/kafka/0.34.0-kafka-3.4.0
 
 strimzi/operator/0.34.0
+```

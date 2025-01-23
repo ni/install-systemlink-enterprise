@@ -1,39 +1,62 @@
 # SystemLink Enterprise release 2024-04 Release Notes
 
-The 2024-04 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-04 release bundle for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- [Create test plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) faster by using a test plan template.
-- [Edit result keywords from a data space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/editing-test-result-keywords-from-a-data-space.html). You can also exclude results from a data space using a keyword that the results have in common.
-- Learn about the [performance metrics for the SystemLink DataFrame service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/dataframe-service-performance-metrics.html).
+- [Create test plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html)
+  faster by using a test plan template.
+- [Edit result keywords from a data space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/editing-test-result-keywords-from-a-data-space.html).
+  You can also exclude results from a data space using a keyword that the
+  results have in common.
+- Learn about the
+  [performance metrics for the SystemLink DataFrame service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/dataframe-service-performance-metrics.html).
 - Create feeds and upload custom packages.
 - Replicate feeds from a remote URL.
 - Upload, download, and configure metadata for system state files.
 - Easily move third-party assets between test systems or un-managed locations.
-- Work Orders has a new privilege for executing test plans. The Work Order service is not installed by default. This route is marked "[Beta]" and is still in development.
+- Work Orders has a new privilege for executing test plans. The Work Order
+  service is not installed by default. This route is marked "[Beta]" and is
+  still in development.
 
 ## Helm Chart Breaking Changes
 
 - `workorder 0.3.79`
-    - The `workorder` MongoDB database needs to be dropped on upgrade. Refer to [Drop workorder database](./Drop-workorder-database.md) for instructions.
-    - The `status` property has been renamed to `state` in `workorder` and `testplan` APIs.
+  - The `workorder` MongoDB database needs to be dropped on upgrade. Refer to
+    [Drop workorder database](./Drop-workorder-database.md) for instructions.
+  - The `status` property has been renamed to `state` in `workorder` and
+    `testplan` APIs.
 - `systemsstateservice 0.2.15`
-    - Added encryptionKey value for encrypting state content.
-    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-04/getting-started/templates/systemlink-secrets.yaml#L622)
+  - Added encryptionKey value for encrypting state content.
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-04/getting-started/templates/systemlink-secrets.yaml#L622)
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed instructions on how to safely upgrade the version of the RabbitMQ
+dependency.
 
 ## Bugs Fixed
 
@@ -55,6 +78,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice:0.10.4
 
 assetui:0.9.77
@@ -164,9 +188,11 @@ userdata:0.12.5
 userservice-setup:0.14.1
 
 workorder:0.3.79
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.19.1
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -198,3 +224,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.13.0
 
 zookeeper:3.9.1
+```

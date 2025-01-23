@@ -1,6 +1,11 @@
 # SystemLink Enterprise 2023-03 Release Notes
 
-The 2023-03 bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-03 bundle for SystemLink Enterprise has been published to
+<https://niedge01.jfrog.io>. This update includes new features, bug fixes, and
+security updates. Work with your account representative to obtain credentials to
+access these artifacts. If you are not upgrading from the previous release,
+refer to past release notes to ensure you have addressed all required
+configuration changes.
 
 ## New Features and Behavior changes
 
@@ -13,48 +18,66 @@ The 2023-03 bundle for SystemLink Enterprise has been published to <https://nied
 - You can query product, results, and steps tables with the table query builder
 
 - Telemetry metrics are available for the following services
-    - testmonitor
-    - dataframeservice
-    - Kafka
 
-- `oidc/user-info` replaced `/oidc/userinfo` as the endpoint to view claims for the current logged in user
+  - testmonitor
+  - dataframeservice
+  - Kafka
+
+- `oidc/user-info` replaced `/oidc/userinfo` as the endpoint to view claims for
+  the current logged in user
 
 - Kafka UI is available for debugging and monitoring
 
-- Kafka S3 sink connectors are automatically deleted if a data table is marked `endOfData`
+- Kafka S3 sink connectors are automatically deleted if a data table is marked
+  `endOfData`
 
-- Deleted Kafka S3 sink connectors are automatically reestablished if connectors are manually deleted
+- Deleted Kafka S3 sink connectors are automatically reestablished if connectors
+  are manually deleted
 
-- The default memory provided to Kafka topic operator has increased from 256MB to 512MB to increase the total number of tables the Data Frame Service can write to
+- The default memory provided to Kafka topic operator has increased from 256MB
+  to 512MB to increase the total number of tables the Data Frame Service can
+  write to
 
 ## Helm Chart Breaking Changes
 
 - `systemlink 0.11.85`
-    - Setting image pull secrets
-        - Image pull secret specification has been split into two separate global values.
-        - You must specify the single required image pull secret in a new value `global.niImagePullSecret` and reference this value in `global.imagePullSecrets`.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L18)
 
-    - Enabling Kafka metrics
-        - Set `global.telemetry.enabled` flag to `true`.
-        - You are no longer required to also set options in `kafka.metricsConfigs`, `kafka.jmxOptions`, and `kafka.kafkaExporter` configurations.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L56)
+  - Setting image pull secrets
 
-    - Enabling user claims to be returned in a web browser.
-        - Set `webserver.oidc.enableUserInfo` to `true`.
-        - You should remove `offline_access` from `webserver.oidc.scope`.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110).
+    - Image pull secret specification has been split into two separate global
+      values.
+    - You must specify the single required image pull secret in a new value
+      `global.niImagePullSecret` and reference this value in
+      `global.imagePullSecrets`.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L18)
 
-    - Enabling Kafka UI for the Data Frame Service
-        - Set `dataframeservice.kafka-ui.imagePullSecrets`.
-        - You are encouraged to used the YAML alias for your global image pull secret to specify this value.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L611).
+  - Enabling Kafka metrics
 
-    - Encryption key secret for webappservices
-        - The `webappservices.secrets.continuationTokenEncryptionKey` secret must be set to a 256-bit random value which is base64 encoded.
-        - Failure to base64 encode the value stored in the Helm chart will result in errors from the service.
-        - An invalid key will causes issues in future releases.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-secrets.yaml#L409)
+    - Set `global.telemetry.enabled` flag to `true`.
+    - You are no longer required to also set options in `kafka.metricsConfigs`,
+      `kafka.jmxOptions`, and `kafka.kafkaExporter` configurations.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L56)
+
+  - Enabling user claims to be returned in a web browser.
+
+    - Set `webserver.oidc.enableUserInfo` to `true`.
+    - You should remove `offline_access` from `webserver.oidc.scope`.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L110).
+
+  - Enabling Kafka UI for the Data Frame Service
+
+    - Set `dataframeservice.kafka-ui.imagePullSecrets`.
+    - You are encouraged to used the YAML alias for your global image pull
+      secret to specify this value.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-values.yaml#L611).
+
+  - Encryption key secret for webappservices
+    - The `webappservices.secrets.continuationTokenEncryptionKey` secret must be
+      set to a 256-bit random value which is base64 encoded.
+    - Failure to base64 encode the value stored in the Helm chart will result in
+      errors from the service.
+    - An invalid key will causes issues in future releases.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-03/getting-started/templates/systemlink-secrets.yaml#L409)
 
 ## Bugs Fixed
 
@@ -76,6 +99,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 dashboardsui/20230303.2
 
 dataframeservice-kafka-connect/20230303.2
@@ -157,17 +181,21 @@ testmonitorservice/20230302.2
 userdata/20230228.4
 
 userservice-setup/20230228.4
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 plotly-panel/1.1.2.zip
 
 systemlink-dataframe-datasource/1.6.2.zip
 
 systemlink-notebook-datasource/1.1.0.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.3.8-linux-amd64
 
 argoproj/argoexec/v3.3.8-linux-amd64
@@ -186,23 +214,23 @@ bitnami/redis-cluster/7.0.8-debian-11-r14
 
 bitnami/schema-registry/7.3.2-debian-11-r1
 
-bitnami/schema-registry/sha256__c8dbc7cafaf53600d93a84c7af826cb9f9d4e9c4f659a07a09a9f6b2ffe76041
+bitnami/schema-registry/sha256\_\_c8dbc7cafaf53600d93a84c7af826cb9f9d4e9c4f659a07a09a9f6b2ffe76041
 
-bitnami/schema-registry/sha256__ef8bca485d80728a4313b7bb0e6d167e04e66302fb13d231c9962a8f87537c0b
+bitnami/schema-registry/sha256\_\_ef8bca485d80728a4313b7bb0e6d167e04e66302fb13d231c9962a8f87537c0b
 
-busybox/sha256__51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
+busybox/sha256\_\_51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
 
 jupyterhub/configurable-http-proxy/4.5.3
 
-jupyterhub/configurable-http-proxy/sha256__7cc28f92e5a81882911a37ddd0d32975bc5fb73012ba928d0b2e4b363d096ce1
+jupyterhub/configurable-http-proxy/sha256\_\_7cc28f92e5a81882911a37ddd0d32975bc5fb73012ba928d0b2e4b363d096ce1
 
-jupyterhub/configurable-http-proxy/sha256__cf8a88a21815e8e1f114f640ae43c77d734f8af7f3ec8b1ced68ee755b3af661
+jupyterhub/configurable-http-proxy/sha256\_\_cf8a88a21815e8e1f114f640ae43c77d734f8af7f3ec8b1ced68ee755b3af661
 
 jupyterhub/k8s-image-awaiter/2.0.0
 
-jupyterhub/k8s-image-awaiter/sha256__5cbbf70f0cfdb438a69c56536a94a159f6681cbd4966258ac371fbeb7e6e1c32
+jupyterhub/k8s-image-awaiter/sha256\_\_5cbbf70f0cfdb438a69c56536a94a159f6681cbd4966258ac371fbeb7e6e1c32
 
-jupyterhub/k8s-image-awaiter/sha256__f7bfa6bce3337c487527d1a91fa29e0d34ff2607f576ffc769a2608e691c1335
+jupyterhub/k8s-image-awaiter/sha256\_\_f7bfa6bce3337c487527d1a91fa29e0d34ff2607f576ffc769a2608e691c1335
 
 kiwigrid/k8s-sidecar/1.22.4
 
@@ -237,3 +265,4 @@ strimzi/kaniko-executor-0.33.2
 strimzi/maven-builder-0.33.2
 
 strimzi/operator-0.33.2
+```
