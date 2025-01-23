@@ -34,46 +34,46 @@ system approval. This notebook will add systems to the workspace they were
 previously a member of. The user who runs the notebook must have the **Add
 systems** privilege in all the necessary workspaces.
 
-1.  Ensure all systems are disconnected and appear in the pending systems list.
-1.  Upload `NewSaltMaster-SystemsMigration.ipynb` to JupyterHub.
-1.  Identify a single system to validate the notebook operation.
-1.  Override `managed_systems_to_approve` with its id and workspace. The
-    notebook already contains this line, we only need to uncomment it and add
-    the id and workspace:
+1. Ensure all systems are disconnected and appear in the pending systems list.
+1. Upload `NewSaltMaster-SystemsMigration.ipynb` to JupyterHub.
+1. Identify a single system to validate the notebook operation.
+1. Override `managed_systems_to_approve` with its id and workspace. The notebook
+   already contains this line, we only need to uncomment it and add the id and
+   workspace:
 
-        ```python
-        managed_systems_to_approve = [{"id":"Precision_5570--SN-GPP8WT3--MAC-15-75-5B-DC-5F-BB","workspace":"846e294a-a007-47ac-9fc2-fac07eab240a"}]
-        ```
+   ```python
+   managed_systems_to_approve = [{"id":"Precision_5570--SN-GPP8WT3--MAC-15-75-5B-DC-5F-BB","workspace":"846e294a-a007-47ac-9fc2-fac07eab240a"}]
+   ```
 
-1.  Run the notebook and check the output. It should say that one system was
-    approved.
+1. Run the notebook and check the output. It should say that one system was
+   approved.
 
-    ```python
-    Approving 1 batches of 50 systems
-    Approving 1 minions, batch: 1
-    [{'action': 'ACCEPT',
-    'id': 'Precision_5570--SN-GPP8WT3--MAC-15-75-5B-DC-5F-BB',
-    'key': None,
-    'workspace': '846e294a-a007-47ac-9fc2-fac07eab240a'}]
-    Manage Systems Keys Result: {} {'error': None}
-    ```
+   ```python
+   Approving 1 batches of 50 systems
+   Approving 1 minions, batch: 1
+   [{'action': 'ACCEPT',
+   'id': 'Precision_5570--SN-GPP8WT3--MAC-15-75-5B-DC-5F-BB',
+   'key': None,
+   'workspace': '846e294a-a007-47ac-9fc2-fac07eab240a'}]
+   Manage Systems Keys Result: {} {'error': None}
+   ```
 
-1.  Validate that the selected system is now connected (green).
+1. Validate that the selected system is now connected (green).
 
-    **Note** Misconfiguration of the RSA keys for the salt master may cause this
-    operation to fail. Review the new secrets and
-    [logs on the client system](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000kGcSSAU&l=en-US)
+   **Note** Misconfiguration of the RSA keys for the salt master may cause this
+   operation to fail. Review the new secrets and
+   [logs on the client system](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000kGcSSAU&l=en-US)
 
-1.  After connecting this single system, you can now uncomment the override of
-    `managed_systems_to_approve` and run the notebook again.
+1. After connecting this single system, you can now uncomment the override of
+   `managed_systems_to_approve` and run the notebook again.
 
-    ```python
-    # managed_systems_to_approve = [{"id":"Precision_5570--SN-GPP8WT3--MAC-15-75-5B-DC-5F-BB","workspace":"846e294a-a007-47ac-9fc2-fac07eab240a"}]
-    ```
+   ```python
+   # managed_systems_to_approve = [{"id":"Precision_5570--SN-GPP8WT3--MAC-15-75-5B-DC-5F-BB","workspace":"846e294a-a007-47ac-9fc2-fac07eab240a"}]
+   ```
 
-    **Note** The new run will re-approve all the systems in batches of 50 (this
-    can also be modified in the notebook)
+   **Note** The new run will re-approve all the systems in batches of 50 (this
+   can also be modified in the notebook)
 
-1.  Ensure all the previously connected clients are connected (green).
-1.  [Optional] Delete the PVCs and volumes used by the old implementation. PVC
-    names: `saltmaster-pillar-saltmaster-0` and `saltmaster-pki-saltmaster-0`.
+1. Ensure all the previously connected clients are connected (green).
+1. [Optional] Delete the PVCs and volumes used by the old implementation. PVC
+   names: `saltmaster-pillar-saltmaster-0` and `saltmaster-pki-saltmaster-0`.
