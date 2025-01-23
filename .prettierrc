@@ -1,0 +1,5 @@
+proseWrap: always
+endOfLine: auto
+# Set tabWidth to 2 so that Prettier doesn't key off of the indent_size in .editorconfig.
+# This avoids https://github.com/prettier/prettier/issues/5019, where Prettier improperly adjusts unordered list spacing
+tabWidth: 2
