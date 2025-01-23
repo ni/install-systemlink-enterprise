@@ -1,36 +1,53 @@
 # SystemLink Enterprise 2024-12 Release Notes
 
-The 2024-12 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-12 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
 - Analyze your parametric data in a Data Space to get statistical insights.
 - Create a custom script to analyze your parametric data in a Data Space.
-- Use the keyboard to interact with grids. For example, you can use the arrow keys to navigate to different rows and different columns.
-- Add a hyperlink to an external URL as the value of a custom property. Use the following syntax similar to Markdown: `[link text](URL)`.
-- View additional details about a test plan from the **Schedule** page. To see more details, navigate to **Operations** » **Schedule** and click a test plan card.
+- Use the keyboard to interact with grids. For example, you can use the arrow
+  keys to navigate to different rows and different columns.
+- Add a hyperlink to an external URL as the value of a custom property. Use the
+  following syntax similar to Markdown: `[link text](URL)`.
+- View additional details about a test plan from the **Schedule** page. To see
+  more details, navigate to **Operations** » **Schedule** and click a test plan
+  card.
 - Switch between day, week, month, and year views on the **Schedule** page.
 - Download multiple files at once.
 - Apply a state to multiple systems at once.
-- The **Automated Agent** built-in role is updated to include the privilege to **Execute test actions**.
+- The **Automated Agent** built-in role is updated to include the privilege to
+  **Execute test actions**.
 
 ## Helm Chart Breaking Changes
 
 - `dynamicformfields:0.1.310`
-    - The Dynamic Form Fields (DFF) Service was added to the top-level chart.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
-    - You must configure the secrets for the PostgreSQL credentials of the dynamic form fields service in systemlink-secrets.yaml.
-        - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-secrets.yaml#L691)
-    - DFF feature flag is enabled.
+  - The Dynamic Form Fields (DFF) Service was added to the top-level chart.
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-values.yaml#L1260)
+  - You must configure the secrets for the PostgreSQL credentials of the dynamic
+    form fields service in `systemlink-secrets.yaml`.
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-12/getting-started/templates/systemlink-secrets.yaml#L691)
+  - DFF feature flag is enabled.
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of SystemLink Enterprise. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of SystemLink Enterprise. The table below shows the version of the
+RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | current                            |
@@ -53,6 +70,7 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ### NI Containers
 
+```text
 alarmservice:0.7.33
 
 assetservice:0.18.30
@@ -170,9 +188,11 @@ userdata:0.20.11
 userservice-setup:0.24.1
 
 workorder:0.11.29
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.20.3
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -202,3 +222,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.17.14
 
 zookeeper:3.9.1
+```

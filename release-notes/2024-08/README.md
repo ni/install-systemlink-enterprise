@@ -1,40 +1,75 @@
 # SystemLink Enterprise release 2024-08 Release Notes
 
-The 2024-08 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-08 release bundle for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Approve, delete, or disable multiple routines at once. Navigate to Analysis » Routines and select the routines you want to modify.
-- View and manage [data tables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) across all test results. Navigate to Product Insights » Data Tables and select the data tables you want to interact with.
-- Learn about [data limits for proxy servers and for ingress controllers](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-limits-for-proxy-servers-ingress-controllers.html).
-- Learn about the [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
-- Privileges **Create/Update/Delete Product** and Test results" are split to **Create/Update/Delete Product** and **Create/Update/Delete Test Results**.
-    - Built-In roles will be updated automatically upon upgrade and their collective level of access remains unchanged.
-    - Custom roles should be reevaluated by SystemLink administrators as their privileges will _not_ automatically update upon upgrade.
-- The privilege **Access web application** have been added under **Data Tables** to show or hide the Data Tables application in left navigation pane. This privilege is enabled by default for Collaborator, Data Maintainer, and Systems Maintainer built-in roles.
-- The privileges **Manage feeds** and **Apply states** have been added under **Systems Management**. They are enabled by default in the Systems Maintainer built-in role.
+- Approve, delete, or disable multiple routines at once. Navigate to Analysis »
+  Routines and select the routines you want to modify.
+- View and manage
+  [data tables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html)
+  across all test results. Navigate to Product Insights » Data Tables and select
+  the data tables you want to interact with.
+- Learn about
+  [data limits for proxy servers and for ingress controllers](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-limits-for-proxy-servers-ingress-controllers.html).
+- Learn about the
+  [performance metrics for the SystemLink Alarm Service](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-for-alarm-service.html).
+- Privileges **Create/Update/Delete Product** and Test results" are split to
+  **Create/Update/Delete Product** and **Create/Update/Delete Test Results**.
+  - Built-In roles will be updated automatically upon upgrade and their
+    collective level of access remains unchanged.
+  - Custom roles should be reevaluated by SystemLink administrators as their
+    privileges will _not_ automatically update upon upgrade.
+- The privilege **Access web application** have been added under **Data Tables**
+  to show or hide the Data Tables application in left navigation pane. This
+  privilege is enabled by default for Collaborator, Data Maintainer, and Systems
+  Maintainer built-in roles.
+- The privileges **Manage feeds** and **Apply states** have been added under
+  **Systems Management**. They are enabled by default in the Systems Maintainer
+  built-in role.
 
 ## Helm Chart Breaking Changes
 
 - `helium-serviceregistry:0.18.8`
-    - The underlying HTTP client used to monitor service liveness in the Service Registry service is changed from `HTTPoison` to `Req`. This should be unnoticeable, but if issues are encountered it is possible to revert back to the old client by setting `serviceRegsitry.featureFlags.reqClientEnabled` to `false` in your Helm configuration. Issues with liveness monitoring will manifest in the SystemLink UI as missing applications in the navigation tree.
+  - The underlying HTTP client used to monitor service liveness in the Service
+    Registry service is changed from `HTTPoison` to `Req`. This should be
+    unnoticeable, but if issues are encountered it is possible to revert back to
+    the old client by setting `serviceRegsitry.featureFlags.reqClientEnabled` to
+    `false` in your Helm configuration. Issues with liveness monitoring will
+    manifest in the SystemLink UI as missing applications in the navigation
+    tree.
 - `feedservice:0.5.31`
-    - Default value for `feedsLimitPerOrg` have been changed from 10000 to 1000 - no action needed.
+  - Default value for `feedsLimitPerOrg` have been changed from 10000 to 1000 -
+    no action needed.
 - `feedservice:0.5.31`
-    - S3 region moved from `feedservice.secrets.s3.region` to `feedservice.s3.region` and is no longer stored as a secret.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L829)
+  - S3 region moved from `feedservice.secrets.s3.region` to
+    `feedservice.s3.region` and is no longer stored as a secret.
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L829)
 - `helium-fileingestionservices:1.6.10`
-    - S3 region moved from `fileingestion.secrets.s3.region` to `fileingestion.s3.region` and it is no longer stored as a secret.
-        - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L888)
+  - S3 region moved from `fileingestion.secrets.s3.region` to
+    `fileingestion.s3.region` and it is no longer stored as a secret.
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-08/getting-started/templates/systemlink-values.yaml#L888)
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | current                            |
@@ -59,6 +94,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 alarmservice:0.3.33
 
 assetservice:0.14.33
@@ -174,9 +210,11 @@ userdata:0.16.14
 userservice-setup:0.19.0
 
 workorder:0.7.43
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.20.1
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -208,3 +246,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.17.14
 
 zookeeper:3.9.1
+```

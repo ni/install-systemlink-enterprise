@@ -254,6 +254,7 @@ Maman
 Manshreck
 Mayne
 mebi
+Mebibytes
 Mediatek
 metastore
 microservices
@@ -368,8 +369,8 @@ Pora
 Postel
 postgres-operator
 postgrescluster
-postgresql
 PostgresConfig
+postgresql
 Powerhall
 Prabhakaran
 Prasad
@@ -453,6 +454,7 @@ Sievert
 Sivakumar
 sl-jupyterhub
 SLCP
+sle
 slideout
 slowapi
 SLSC
@@ -524,6 +526,7 @@ timebox
 timeboxed
 timeseries
 Tlog
+tolerations
 Traefik
 triaging
 Trino
