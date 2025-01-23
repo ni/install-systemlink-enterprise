@@ -2,3 +2,5 @@
 site/
 .DS_Store
 *.code-workspace
+node_modules/
+!.*/
