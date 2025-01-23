@@ -75,5 +75,5 @@
     }
   ],
   "ignoreRegExpList": ["code", "links", "three-letter acronyms", "mailto"],
-  "ignorePaths": ["design-documents/.legacy/**"]
+  "ignorePaths": []
 }
