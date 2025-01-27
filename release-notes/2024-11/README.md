@@ -1,18 +1,27 @@
 # SystemLink Enterprise release 2024-11 Release Notes
 
-The 2024-11 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-11 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
 - Search, filter, and save custom views on the Data Spaces table.
 - View, add, and manage asset calibration data.
 - Download asset CSV reports.
-- Forecast upcoming asset calibrations using the built-in calibration forecast dashboard.
+- Forecast upcoming asset calibrations using the built-in calibration forecast
+  dashboard.
 - Improved query performance for Data Tables.
 - Added support for Kubernetes 1.29.
 - Added support for PostgreSQL 15.
-- Added a new privilege category for **Web applications**. The applications that make use of this category are not yet shipping.
-    - The **Collaborator**, **Data Maintainer**, and **Systems Maintainer** built-in roles to have privileges to **Access web application** and **List and view web applications** in the **Web applications** privilege category.
+- Added a new privilege category for **Web applications**. The applications that
+  make use of this category are not yet shipping.
+  - The **Collaborator**, **Data Maintainer**, and **Systems Maintainer**
+    built-in roles to have privileges to **Access web application** and **List
+    and view web applications** in the **Web applications** privilege category.
 
 ## Helm Chart Breaking Changes
 
@@ -22,10 +31,17 @@ This release contains no Helm chart breaking changes.
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | current                            |
@@ -48,6 +64,7 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ### NI Containers
 
+```text
 alarmservice:0.6.44
 
 assetservice:0.17.43
@@ -163,9 +180,11 @@ userdata:0.19.16
 userservice-setup:0.22.4
 
 workorder:0.10.35
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.20.3
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -195,3 +214,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.17.14
 
 zookeeper:3.9.1
+```

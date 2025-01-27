@@ -1,34 +1,53 @@
-
 # SystemLink Enterprise release 2023-09 Release Notes
 
-The 2023-09 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-09 release bundle for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
 - Systems Management
-    - You can install and uninstall software on a managed system from the Systems Management web application.
+  - You can install and uninstall software on a managed system from the Systems
+    Management web application.
 - Dataframe Service
-    - You can use `dataframeservice.s3.maximumConnections` to configure the maximum number of simultaneous connections from a DataFrame service pod to S3 storage. The default service limited connections has increased from 6 to 32.
+  - You can use `dataframeservice.s3.maximumConnections` to configure the
+    maximum number of simultaneous connections from a DataFrame service pod to
+    S3 storage. The default service limited connections has increased from 6
+    to 32.
 
 ## Helm Chart Breaking Changes
 
 - Comments service
-    - The Comments service Helm chart is now included in the the SystemLink top level chart. This chart requires a new MongoDB secret.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-09/getting-started/templates/systemlink-secrets.yaml#L545)
-    - The UIs that leverage this service are not yet included in the product.
+  - The Comments service Helm chart is now included in the the SystemLink top
+    level chart. This chart requires a new MongoDB secret.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-09/getting-started/templates/systemlink-secrets.yaml#L545)
+  - The UIs that leverage this service are not yet included in the product.
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed instructions on how to safely upgrade the version of the RabbitMQ
+dependency.
 
 ## Bugs Fixed
 
@@ -49,6 +68,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice:0.3.44
 
 assetui:0.2.303
@@ -146,9 +166,11 @@ testmonitorservice:0.14.17
 userdata:0.5.15
 
 userservice-setup:0.6.2
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli:v3.3.8-linux-amd64
 
 argoproj/argoexec:v3.3.8-linux-amd64
@@ -188,3 +210,4 @@ zookeeper:3.8.1-temurin
 strimzi/kafka:0.34.0-kafka-3.4.0
 
 strimzi/operator:0.34.0
+```

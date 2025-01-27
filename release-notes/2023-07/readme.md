@@ -1,49 +1,73 @@
-
 # SystemLink Enterprise 2023-07 Release Notes
 
-The 2023-07 release of SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-07 release of SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## Upgrading from the 2023-06 or previous release to 2023-07
 
-This release includes an updated saltmaster service that will cause previously connected systems to become disconnected upon upgrade. Refer to the [systems connection migration instructions](./SystemsConnectionMigration.md) to minimize the required effort to reconnect these systems.
+This release includes an updated saltmaster service that will cause previously
+connected systems to become disconnected upon upgrade. Refer to the
+[systems connection migration instructions](./SystemsConnectionMigration.md) to
+minimize the required effort to reconnect these systems.
 
-This release includes Dremio Enterprise. This upgrade requires the removal of previous Dremio volumes.
+This release includes Dremio Enterprise. This upgrade requires the removal of
+previous Dremio volumes.
 
-1. Prior to upgrade, mark for deletion all persistent volume claims with `dremio` in their name.
+1. Prior to upgrade, mark for deletion all persistent volume claims with
+   `dremio` in their name.
 2. Upgrade using the`systemlink 0.15.52` chart.
 3. Kubernetes will automatically create new Dremio persistent volume claims.
 
-**Note:** If this procedure was not completed prior to upgrade you must delete all `dremio` persistent volume claims, delete all `dremio` pods, and delete all `dataframeservice` pods. Kubernetes will automatically schedule new pods to replaced the deleted pods and new PVCs will be automatically created.
+**Note:** If this procedure was not completed prior to upgrade you must delete
+all `dremio` persistent volume claims, delete all `dremio` pods, and delete all
+`dataframeservice` pods. Kubernetes will automatically schedule new pods to
+replaced the deleted pods and new PVCs will be automatically created.
 
 ## New Features and Behavior changes
 
 - Test Results
-    - View detailed test step data under a test result.
-    - The Results and Products grids display the number of items matching a query.
+  - View detailed test step data under a test result.
+  - The Results and Products grids display the number of items matching a query.
 - Data Spaces
-    - Visualize parametric data with a single click from a test result or from the test results grid.
-    - View box, violin, and histogram charts in the margins of a scatter chart in a data space.
-    - Color traces in scatter charts by product, result, step, condition, and measurement data.
+  - Visualize parametric data with a single click from a test result or from the
+    test results grid.
+  - View box, violin, and histogram charts in the margins of a scatter chart in
+    a data space.
+  - Color traces in scatter charts by product, result, step, condition, and
+    measurement data.
 - Systems
-    - The systems grid tag column supports type ahead autocomplete for tag paths.
-    - The tag historian service is available.
-    - Copy a tag's path using the context menu in the tags grid in a system's details page.
-    - Delete tags in the tags grid in a system's details page.
+  - The systems grid tag column supports type ahead autocomplete for tag paths.
+  - The tag historian service is available.
+  - Copy a tag's path using the context menu in the tags grid in a system's
+    details page.
+  - Delete tags in the tags grid in a system's details page.
 - Notebook dropdowns group notebooks by workspace.
 - Work Orders
-    - The Work Order collection of privileges now also reference test plans
-    - The Work Order service and UI is not included in the SystemLink helm chart and associated privileges can be ignored.
+  - The Work Order collection of privileges now also reference test plans
+  - The Work Order service and UI is not included in the SystemLink helm chart
+    and associated privileges can be ignored.
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice 0.11.21`
-    - Dremio community edition has been replaced with Dremio Enterprise. Refer to [Upgrading from the 2023-06 or previous release to 2023-07](#upgrading-from-the-2023-06-or-previous-release-to-2023-07) for details steps required to accommodate this upgrade.
+
+  - Dremio community edition has been replaced with Dremio Enterprise. Refer to
+    [Upgrading from the 2023-06 or previous release to 2023-07](#upgrading-from-the-2023-06-or-previous-release-to-2023-07)
+    for details steps required to accommodate this upgrade.
 
 - `saltmaster 1.0.0`
-    - A secret for MongoDB credentials (`saltmaster.secrets.mongodb`) must be provided.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2023-07/getting-started/templates/systemlink-secrets.yaml#L356)
-    - A secret for a public/private RSA key pair (``saltmaster.secrets.saltmaster`) is required. Refer to the [systems connection migration instructions](./SystemsConnectionMigration.md) for steps to obtain these keys.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2023-07/getting-started/templates/systemlink-secrets.yaml#L368)
+  - A secret for MongoDB credentials (`saltmaster.secrets.mongodb`) must be
+    provided.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2023-07/getting-started/templates/systemlink-secrets.yaml#L356)
+  - A secret for a public/private RSA key pair
+    (``saltmaster.secrets.saltmaster`) is required. Refer to the
+    [systems connection migration instructions](./SystemsConnectionMigration.md)
+    for steps to obtain these keys.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2023-07/getting-started/templates/systemlink-secrets.yaml#L368)
 
 ## Bugs Fixed
 
@@ -64,6 +88,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice/0.1.20
 
 dashboardsui/0.3.23
@@ -149,17 +174,21 @@ testmonitorservice/0.12.1
 userdata/0.3.14
 
 userservice-setup/0.4.5
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 systemlink-notebook-datasource/1.1.1.zip
 
 systemlink-dataframe-datasource/1.6.2.zip
 
 plotly-panel/1.1.2.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.3.8-linux-amd64
 
 argoproj/argoexec/v3.3.8-linux-amd64
@@ -193,3 +222,4 @@ zookeeper/3.8.1-temurin
 strimzi/kafka/0.34.0-kafka-3.4.0
 
 strimzi/operator/0.34.0
+```
