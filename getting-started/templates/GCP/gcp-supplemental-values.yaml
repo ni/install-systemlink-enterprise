@@ -60,11 +60,11 @@ testmonitorservice:
           ## The proxy's memory use scales linearly with the number of active
           ## connections. Fewer open connections will use less memory. Adjust
           ## this value based on your application's requirements.
-          memory: "1Gi"
+          memory: "100Mi"
           ## The proxy's CPU use scales linearly with the amount of IO between
           ## the database and the application. Adjust this value based on your
           ## application's requirements.
-          cpu: "1"
+          cpu: "0.1"
 
   ## Extra volumes that can be used in sidecars
   extraVolumes:
@@ -173,11 +173,11 @@ dashboardhost:
             ## The proxy's memory use scales linearly with the number of active
             ## connections. Fewer open connections will use less memory. Adjust
             ## this value based on your application's requirements.
-            memory: "1Gi"
+            memory: "100Mi"
             ## The proxy's CPU use scales linearly with the amount of IO between
             ## the database and the application. Adjust this value based on your
             ## application's requirements.
-            cpu: "1"
+            cpu: "0.1"
 
     ## Extra volumes that can be used in extrContainers
     extraContainerVolumes:
@@ -289,11 +289,11 @@ dynamicformfields:
           ## The proxy's memory use scales linearly with the number of active
           ## connections. Fewer open connections will use less memory. Adjust
           ## this value based on your application's requirements.
-          memory: "1Gi"
+          memory: "100Mi"
           ## The proxy's CPU use scales linearly with the amount of IO between
           ## the database and the application. Adjust this value based on your
           ## application's requirements.
-          cpu: "1"
+          cpu: "0.1"
 
   ## Extra volumes that can be used in sidecars
   extraVolumes:
