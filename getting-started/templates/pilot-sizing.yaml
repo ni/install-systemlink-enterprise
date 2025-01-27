@@ -163,7 +163,21 @@ dataframeservice:
   #   zookeeper:
   #     count: 1
 
+dynamicformfields:
+  resources:
+    requests:
+      cpu: "125m"
 
+      memory: "160Mi"
+    limits:
+      memory: "160Mi"
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 1
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 90
+    
 executionsui:
   resources:
     requests:

@@ -1,22 +1,37 @@
 # SystemLink Enterprise 2022-11 Release Notes
 
-The 2022-11 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2022-11 release bundle for SystemLink Enterprise has been published to
+<https://niedge01.jfrog.io>. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## Upgrading from the 2022-09 Release to the 2022-11 Release
 
-When you upgrade, you must complete the following steps to avoid breaking changes in the top-level SystemLink and SystemLink-Admin Helm chart. Note, this upgrade will cause any currently executing notebooks to fail.
+When you upgrade, you must complete the following steps to avoid breaking
+changes in the top-level SystemLink and SystemLink-Admin Helm chart. Note, this
+upgrade will cause any currently executing notebooks to fail.
 
-1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm charts to the 2022-11 release.
+1. Stage your workspace to upgrade the `systemlink-admin` and `systemlink` helm
+   charts to the 2022-11 release.
 
-1. Before you upgrade the `systemlink-admin` chart, run the Helm upgrade command on the `systemlink` chart to remove existing Argo CRDs. This command must include all flags and value file references you would use for a typical application upgrade.
+1. Before you upgrade the `systemlink-admin` chart, run the Helm upgrade command
+   on the `systemlink` chart to remove existing Argo CRDs. This command must
+   include all flags and value file references you would use for a typical
+   application upgrade.
 
-    **Note:** This will result in an expected failure: `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`. Ignore this error.
+   **Note:** This will result in an expected failure:
+   `UPGRADE FAILED: unable to recognize "": no matches for kind "WorkflowTemplate" in version "argoproj.io/v1alpha1"`.
+   Ignore this error.
 
-1. Run the command `kubectl get crds | grep argo` to verify the argo CRDs have been deleted. You may need to manually delete remaining CRDs if the Helm upgrade command does not remove all of these objects.
+1. Run the command `kubectl get crds | grep argo` to verify the Argo CRDs have
+   been deleted. You may need to manually delete remaining CRDs if the Helm
+   upgrade command does not remove all of these objects.
 
 1. Run the Helm upgrade command for the `systemlink-admin` helm chart.
 
-1. Run the command `kubectl get crds | grep argo` to verify the new argo CRDs have been installed.
+1. Run the command `kubectl get crds | grep argo` to verify the new Argo CRDs
+   have been installed.
 
 1. Run the Helm upgrade command for the `systemlink` Helm chart.
 
@@ -31,10 +46,13 @@ There are no new features in this release.
 ## Helm Chart Breaking Changes
 
 - SystemLink Helm Chart 0.8.113
-    - Argo custom resource definitions (CRD) are removed from the `argoworkflows 0.1.53` chart
-    - You no longer need to specify SystemLink Grafana plugin configuration unless you also intend to install additional plugins.
+  - Argo custom resource definitions (CRD) are removed from the
+    `argoworkflows 0.1.53` chart
+  - You no longer need to specify SystemLink Grafana plugin configuration unless
+    you also intend to install additional plugins.
 - SystemLink-Admin Helm Chart 0.8.6
-    - `argoworkflowscrd` chart added as a dependency. This chart installs SystemLink required CRDs
+  - `argoworkflowscrd` chart added as a dependency. This chart installs
+    SystemLink required CRDs
 
 ## Bugs Fixed
 
@@ -48,11 +66,13 @@ See bugs with **XRay** in the title in the above list of closed bugs.
 
 ## Known Vulnerabilities
 
-This information is available upon request. Work with your account representative to request this report.
+This information is available upon request. Work with your account
+representative to request this report.
 
 ## Software Bill of Materials
 
-This information is available upon request. Work with your account representative to request this data.
+This information is available upon request. Work with your account
+representative to request this data.
 
 ## Versions
 
@@ -62,6 +82,7 @@ This information is available upon request. Work with your account representativ
 
 ### NI Containers
 
+```text
 assetservice/20221031.16
 
 dashboardsui/20221027.2
@@ -133,17 +154,21 @@ testmonitorservice/20221031.3
 userdata/20221031.3
 
 userservice-setup/20221011.2
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 plotly-panel/1.1.2.zip
 
 systemlink-dataframe-datasource/1.4.0.zip
 
 systemlink-notebook-datasource/1.1.0.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.3.8-linux-amd64
 
 argoproj/argoexec/v3.3.8-linux-amd64
@@ -179,3 +204,4 @@ strimzi/kafka/0.31.1-kafka-3.2.3
 zookeeper/3.8.0-temurin
 
 strimzi/operator/0.31.1
+```

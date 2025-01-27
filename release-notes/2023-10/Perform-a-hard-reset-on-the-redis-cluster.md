@@ -1,7 +1,8 @@
 # Perform a hard reset of a Redis cluster without deleting the Helm deployment
 
-The following procedure can be used when Redis is in a failure mode cannot
-be recovered using the Redis CLI. This will cause downtime of the SystemLink application.
+The following procedure can be used when Redis is in a failure mode cannot be
+recovered using the Redis CLI. This will cause downtime of the SystemLink
+application.
 
 To perform a hard reset of Redis:
 

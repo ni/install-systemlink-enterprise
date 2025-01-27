@@ -1,39 +1,65 @@
 # SystemLink Enterprise release 2024-07 Release Notes
 
-The 2024-07 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-07 release bundle for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Align the x-axis of your [data table](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) plots to zero.
-- Decimate the data in your [Data Spaces](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html) plots using Lossy, Max/Min, or Entry/Exit modes.
-- Filter and save a custom view of a [test plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html) grid.
-- The Alarm Service privileges are exposed under the `Alarms` category in the security UI.
-- SystemLink Enterprise adds the [workspace](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-workspace.html) property to products. For new products, assign a workspace so you can control access. For products already in your system, SystemLink Enterprise assigns a workspace using the following logic.
+- Align the x-axis of your
+  [data table](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html)
+  plots to zero.
+- Decimate the data in your
+  [Data Spaces](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-data-tables-in-a-data-space.html)
+  plots using Lossy, Max/Min, or Entry/Exit modes.
+- Filter and save a custom view of a
+  [test plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-test-plan.html)
+  grid.
+- The Alarm Service privileges are exposed under the `Alarms` category in the
+  security UI.
+- SystemLink Enterprise adds the
+  [workspace](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-a-workspace.html)
+  property to products. For new products, assign a workspace so you can control
+  access. For products already in your system, SystemLink Enterprise assigns a
+  workspace using the following logic.
 
-| | |
-|--|--|
-| The product has test results. | SystemLink Enterprise assigns the workspace associated with the most recent test result listed for the product. |
-| The product does not have test results. | SystemLink Enterprise assigns the default workspace.|
+|                                         |                                                                                                                 |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| The product has test results.           | SystemLink Enterprise assigns the workspace associated with the most recent test result listed for the product. |
+| The product does not have test results. | SystemLink Enterprise assigns the default workspace.                                                            |
 
 ## Helm Chart Breaking Changes
 
 - `testmonitorservice 0.24.22`
-    - Products have workspaces.
-    - This update includes a PostgreSQL migration to add workspaces to each product.
-        - The migration completes automatically after deployment with no required manual intervention.
-        - After upgrading, downgrading to prior versions is not supported.
-    - Added new Helm chart values to facilitate the PostgreSQL migration.
-        - This update includes a new required whitelisted API key secret. This secret is used to retrieve workspace information during the migration.
-        - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-07/getting-started/templates/systemlink-secrets.yaml#L161)
+  - Products have workspaces.
+  - This update includes a PostgreSQL migration to add workspaces to each
+    product.
+    - The migration completes automatically after deployment with no required
+      manual intervention.
+    - After upgrading, downgrading to prior versions is not supported.
+  - Added new Helm chart values to facilitate the PostgreSQL migration.
+    - This update includes a new required whitelisted API key secret. This
+      secret is used to retrieve workspace information during the migration.
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-07/getting-started/templates/systemlink-secrets.yaml#L161)
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | current                            |
@@ -58,6 +84,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 alarmservice:0.2.34
 
 assetservice:0.13.12
@@ -173,9 +200,11 @@ userdata:0.15.11
 userservice-setup:0.17.1
 
 workorder:0.6.28
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.20.1
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -207,3 +236,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.17.14
 
 zookeeper:3.9.1
+```

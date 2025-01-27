@@ -1,27 +1,49 @@
 # SystemLink Enterprise release 2024-10 Release Notes
 
-The 2024-10 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-10 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior Changes
 
-- Use the scheduling assistant to see what systems and DUTs are available and schedule test plans without conflicts.
+- Use the scheduling assistant to see what systems and DUTs are available and
+  schedule test plans without conflicts.
 - Add comments with @ mention and rich text on work orders and test plans.
-- When viewing your data tables in a data space, you can now view your data in a table as well as a chart.
-- Configure resource profiles to maximize resource utilization for the Notebook Execution Service. In systemlink-values.yaml, you can modify the low, medium, or high resource profiles.
-    - Resource profiles allows for a notebook to be executed with different pre-defined memory and CPU allocations for its container. The resources configured for each profile are defined in Helm values.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/getting-started/templates/systemlink-values.yaml#L1085)
-    - The resource profile used when executing a notebook is specified in the POST body of the `/ninbexecution/v1/executions` route.
-- As a result of privilege changes for routines, non-Server Administrator users who could previously perform operations on routines may not be able to any longer. Apply the **Routine Maintainer** role to these users or create a new role that grants routine privileges.
+- When viewing your data tables in a data space, you can now view your data in a
+  table as well as a chart.
+- Configure resource profiles to maximize resource utilization for the Notebook
+  Execution Service. In `systemlink-values.yaml`, you can modify the low,
+  medium, or high resource profiles.
+  - Resource profiles allows for a notebook to be executed with different
+    pre-defined memory and CPU allocations for its container. The resources
+    configured for each profile are defined in Helm values.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/tree/2024-10/getting-started/templates/systemlink-values.yaml#L1085)
+  - The resource profile used when executing a notebook is specified in the POST
+    body of the `/ninbexecution/v1/executions` route.
+- As a result of privilege changes for routines, non-Server Administrator users
+  who could previously perform operations on routines may not be able to any
+  longer. Apply the **Routine Maintainer** role to these users or create a new
+  role that grants routine privileges.
 - Added the **Routine Maintainer** role.
-- Added the **Enable** and **Disable** privileges to the **Routines** privilege category.
-- The **Modify metadata** routine privilege has been renamed to **Modify routines**.
-- Users must disable Routines to update them unless they have _all_ of the following privileges.
-    - **Enable routines**
-    - **Disable routines**
-    - **Modify routines**
-- Renamed the **Notebook Execution** privilege category to **Scripts** to match the application rename.
-- Added the **Cancel notebook execution** privilege to the **Scripts** privilege category. This privilege is not yet enforced. Enforcement will included in a future release.
-- Added the **Specify resource profile** privilege to the **Scripts** privilege category.
+- Added the **Enable** and **Disable** privileges to the **Routines** privilege
+  category.
+- The **Modify metadata** routine privilege has been renamed to **Modify
+  routines**.
+- Users must disable Routines to update them unless they have _all_ of the
+  following privileges.
+  - **Enable routines**
+  - **Disable routines**
+  - **Modify routines**
+- Renamed the **Notebook Execution** privilege category to **Scripts** to match
+  the application rename.
+- Added the **Cancel notebook execution** privilege to the **Scripts** privilege
+  category. This privilege is not yet enforced. Enforcement will included in a
+  future release.
+- Added the **Specify resource profile** privilege to the **Scripts** privilege
+  category.
 - Enabled CORS for the **DELETE** `niauth/v1/session-keys/self` route.
 
 ## Helm Chart Breaking Changes
@@ -32,10 +54,17 @@ This release contains no Helm chart breaking changes.
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | current                            |
@@ -60,6 +89,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 alarmservice:0.5.54
 
 assetservice:0.16.70
@@ -175,9 +205,11 @@ userdata:0.18.17
 userservice-setup:0.21.0
 
 workorder:0.9.20
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.20.3
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -207,3 +239,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.17.14
 
 zookeeper:3.9.1
+```
