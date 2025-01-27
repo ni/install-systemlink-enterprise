@@ -96,7 +96,7 @@ testmonitorservice:
     user: <username> # <ATTENTION> - Enter the PostgreSQL username for the testmonitor service
     ## @param database.connectionInfo.secretName The name of an existing secret with PostgreSQL connection credentials
     ##
-    secretName: <secret-name> # <ATTENTION> - Enter the secret name that contains the testmonitor service's Postgres SQL database connection credentials
+    secretName: "testmonitorservicedb-connection"
     ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     ##
@@ -323,10 +323,9 @@ dynamicformfields:
     ## @param database.connectionInfo.user PostgreSQL username used by the service
     ##
     user: <username> # <ATTENTION> - Enter the PostgreSQL username for the testmonitor service
-    ## @param database.connectionInfo.secretName The name of an existing secret with
-    ## PostgreSQL connection credentials
+    ## @param database.connectionInfo.secretName The name of an existing secret with PostgreSQL connection credentials
     ##
-    secretName: <secret-name> # <ATTENTION> - Enter the secret name that contains the testmonitor service's Postgres SQL database connection credentials
+    secretName: "dynamicformfields-db-connection"
     ## @param database.connectionInfo.passwordKey Password key for database.connectionInfo.user to be retrieved from existing secret
     ## NOTE: Ignored unless `database.connectionInfo.secretName` parameter is set.
     ##
