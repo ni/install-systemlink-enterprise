@@ -1,0 +1,79 @@
+{
+  "version": "0.2",
+  "dictionaries": ["ni-dictionary"],
+  "dictionaryDefinitions": [
+    {
+      "name": "ni-dictionary",
+      "path": "ni-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "flagWords": [
+    "AzDo->AzDO",
+    "Azdo->AzDO",
+    "AZDO->AzDO",
+    "azdo->AzDO",
+    "back-end->backend",
+    "back-ends->backends",
+    "front-end->frontend",
+    "front-ends->frontends",
+    "github->GitHub",
+    "Github->GitHub",
+    "micro-frontend->micro frontend",
+    "micro-front-end->micro frontend",
+    "microfrontend->micro frontend",
+    "micro-frontends->micro frontends",
+    "micro-front-ends->micro frontends",
+    "microfrontends->micro frontends",
+    "micro-service->microservice",
+    "micro-services->microservices",
+    "misspelt->misspelled",
+    "pre-configured->preconfigured",
+    "pre-existing->preexisting",
+    "pre-made->premade",
+    "re-deploy->redeploy",
+    "re-deployed->redeployed",
+    "re-deploying->redeploying",
+    "re-deploys->redeploys",
+    "summery->summary",
+    "systemlink->SystemLink",
+    "Systemlink->SystemLink"
+  ],
+  "minWordLength": 3,
+  "language": "en-us",
+  "languageSettings": [
+    {
+      "languageId": "markdown",
+      "caseSensitive": true
+    }
+  ],
+  "patterns": [
+    {
+      "name": "code-single-line",
+      "pattern": "`.+`"
+    },
+    {
+      "name": "code-multi-line",
+      "pattern": "/^\\s*```[\\s\\S]*?^\\s*```/gm",
+      "comment": "From https://github.com/streetsidesoftware/vscode-spell-checker/issues/202#issuecomment-377477473"
+    },
+    {
+      "name": "code",
+      "pattern": ["code-single-line", "code-multi-line"]
+    },
+    {
+      "name": "links",
+      "pattern": "]\\(.*\\)"
+    },
+    {
+      "name": "three-letter acronyms",
+      "pattern": "/\\b_?[A-Z]{3}([0-9_]+)?\\b/"
+    },
+    {
+      "name": "mailto",
+      "pattern": "\\[[^\\]]+]\\(mailto"
+    }
+  ],
+  "ignoreRegExpList": ["code", "links", "three-letter acronyms", "mailto"],
+  "ignorePaths": []
+}

@@ -1,50 +1,94 @@
 # SystemLink Enterprise release 2024-01 Release Notes
 
-The 2024-01 release bundle for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2024-01 release bundle for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
 - Added support for SystemLink Client 2024 Q1.
 - You can @ mention other users in comments on test results and data spaces.
 - You can trigger test data extraction routines from the Product details page.
-- You can trend step data from the Results details page directly into a data space.
-- You can monitor disk utilization for your JupyterHub user data in the main status bar at the bottom of the window.
+- You can trend step data from the Results details page directly into a data
+  space.
+- You can monitor disk utilization for your JupyterHub user data in the main
+  status bar at the bottom of the window.
 - You can add keywords and properties in test result steps.
 - You can enable dark mode which tracks your device's settings.
 
 ## Helm Chart Breaking Changes
 
 - `systemlink 0.21.4`
-    - The license service and the license UI have been removed from the product.
-    - Settings related to `license:` in Helm values files are no longer required and can be removed from existing configurations.
-    - Administrators should delete persistent volume claims `datadir-{release}-license-mongodb-0`,  `datadir-{release}-license-mongodb-1`, and `datadir-{release}-license-mongodb-2` if they exist.
+
+  - The license service and the license UI have been removed from the product.
+  - Settings related to `license:` in Helm values files are no longer required
+    and can be removed from existing configurations.
+  - Administrators should delete persistent volume claims
+    `datadir-{release}-license-mongodb-0`,
+    `datadir-{release}-license-mongodb-1`, and
+    `datadir-{release}-license-mongodb-2` if they exist.
 
 - `TestMonitorService 0.18.0`
-    - The update includes a new database schema migration to support future features. This migration adds a new column for keywords and properties to the `steps` table. This migration is expected to complete without downtime. Downgrades to prior versions after updating to this version is not supported.
-    - The migration requires permission to alter tables in the Test Monitor schema, which are elevated privileges beyond the minimal set required by the service's normal operation. To alter tables the PostgreSQL user must be the owner of the schema or be a member of the role that owns the schema. If your PostgreSQL user does not have the required permissions the updated pods job will fail to start. Refer to [**Setting up an Elevated PostgreSQL User for Migration**](#setting-up-an-elevated-postgresql-user-for-migration) to facilitate this requirement.
-    - Refer to the [SystemLink manual on ni.com](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-22D7F822-FF82-436A-9458-DA1D33334886__GUID-A2CA66A5-7E59-419B-8638-48E7E7A3963A) for details on configuring PostgreSQL.
+  - The update includes a new database schema migration to support future
+    features. This migration adds a new column for keywords and properties to
+    the `steps` table. This migration is expected to complete without downtime.
+    Downgrades to prior versions after updating to this version is not
+    supported.
+  - The migration requires permission to alter tables in the Test Monitor
+    schema, which are elevated privileges beyond the minimal set required by the
+    service's normal operation. To alter tables the PostgreSQL user must be the
+    owner of the schema or be a member of the role that owns the schema. If your
+    PostgreSQL user does not have the required permissions the updated pods job
+    will fail to start. Refer to
+    [**Setting up an Elevated PostgreSQL User for Migration**](#setting-up-an-elevated-postgresql-user-for-migration)
+    to facilitate this requirement.
+  - Refer to the
+    [SystemLink manual on ni.com](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-22D7F822-FF82-436A-9458-DA1D33334886__GUID-A2CA66A5-7E59-419B-8638-48E7E7A3963A)
+    for details on configuring PostgreSQL.
 
 ### Setting up an Elevated PostgreSQL User for Migration
 
-- The database migrations is performed by a Kubernetes job that runs prior to TestMonitor pod deployment.
-- The `testmonitorservice` Helm chart includes a new option to specify the PostgreSQL user for migration separately from the user for the service's normal operation. This allows the higher privileged user to be used during application updates exclusively.
+- The database migrations is performed by a Kubernetes job that runs prior to
+  TestMonitor pod deployment.
+- The `testmonitorservice` Helm chart includes a new option to specify the
+  PostgreSQL user for migration separately from the user for the service's
+  normal operation. This allows the higher privileged user to be used during
+  application updates exclusively.
 - New secrets must be defined in Helm for this PostgreSQL user
-    - `testmonitorservice.secrets.database.migrationConnectionString` and `testmonitorservice.secrets.database.migrationConnectionPassword`.
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-01/getting-started/templates/systemlink-secrets.yaml#L434)
-- These secrets and a new connection string must be referenced in your values file.
-    - `testmonitorservice.database.connectionString.migrationConnectionStringKey`, `testmonitorservice.database.connectionInfo.migrationUser`, and `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the values file
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-01/getting-started/templates/systemlink-values.yaml#L287).
+  - `testmonitorservice.secrets.database.migrationConnectionString` and
+    `testmonitorservice.secrets.database.migrationConnectionPassword`.
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-01/getting-started/templates/systemlink-secrets.yaml#L434)
+- These secrets and a new connection string must be referenced in your values
+  file.
+  - `testmonitorservice.database.connectionString.migrationConnectionStringKey`,
+    `testmonitorservice.database.connectionInfo.migrationUser`, and
+    `testmonitorservice.database.connectionInfo.migrationPasswordKey` in the
+    values file
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2024-01/getting-started/templates/systemlink-values.yaml#L287).
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed instructions on how to safely upgrade the version of the RabbitMQ
+dependency.
 
 ## Bugs Fixed
 
@@ -65,6 +109,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice:0.7.54
 
 assetui:0.6.47
@@ -160,9 +205,11 @@ testmonitorservice:0.18.16
 userdata:0.9.13
 
 userservice-setup:0.10.2
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.19.0
 
 argoproj/argocli:v3.4.11-linux-amd64
@@ -196,3 +243,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.11.0
 
 zookeeper:3.8.2-temurin
+```
