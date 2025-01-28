@@ -1,29 +1,45 @@
 # SystemLink Enterprise release 2025-01 Release Notes
 
-The 2025-01 release for SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2025-01 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Use [dynamic form fields](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/adding-custom-fields-to-the-ui.html) to add custom input fields to the user interface. You can add fields to the configuration slide-out of the following resources.
-    - Assets
-    - Products
-    - Systems
-    - Test Plans
-    - Work Orders
+- Use
+  [dynamic form fields](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/adding-custom-fields-to-the-ui.html)
+  to add custom input fields to the user interface. You can add fields to the
+  configuration slide-out of the following resources.
+  - Assets
+  - Products
+  - Systems
+  - Test Plans
+  - Work Orders
 - Dynamic form field privileges are available in the **Roles** application.
-    - The _Data maintainer_ and _Systems maintainer_ roles now include privileges to manage dynamic form fields
+  - The _Data maintainer_ and _Systems maintainer_ roles now include privileges
+    to manage dynamic form fields
 - [Host web applications](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/hosting-a-web-application.html).
 - Preview your text, image, audio, and video files.
-- Filter the list of test plans you see based on their status or their metadata. Navigate to Operations » Test Plans and click the summary tiles at the top of the page.
-- [Adjust the default rate limits](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-jupyter-notebook-limits.html) for Jupyter Notebook operations.
+- Filter the list of test plans you see based on their status or their metadata.
+  Navigate to Operations » Test Plans and click the summary tiles at the top of
+  the page.
+- [Adjust the default rate limits](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-jupyter-notebook-limits.html)
+  for Jupyter Notebook operations.
 - MinIO is no longer installed with the top-level SLE Helm chart.
-    - MinIO should be used only during product evaluations when no other block storage solution are available.
-    - You can install MinIO independently of the SLE application.
-    - Refer to the [installation and upgrade guide](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/getting-started/templates/Dependencies/MinIO).
+  - MinIO should be used only during product evaluations when no other block
+    storage solution are available.
+  - You can install MinIO independently of the SLE application.
+  - Refer to the
+    [installation and upgrade guide](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/getting-started/templates/Dependencies/MinIO).
 - Renamed the **Download files** privileges to **Preview and download files**.
-- Enabled Cross origin requests by default in the DataFrame service. You can control the list of origins in the top-level Helm chart.
+- Enabled Cross origin requests by default in the DataFrame service. You can
+  control the list of origins in the top-level Helm chart.
 - Exposed an API to cancel notebook executions.
-    - Removed **Cancel notebook executions** privileges from the _Data Maintainer_ role.
+  - Removed **Cancel notebook executions** privileges from the _Data Maintainer_
+    role.
 - Install software and configure feeds on multiple systems.
 
 ## Helm Chart Breaking Changes
@@ -33,15 +49,23 @@ The 2025-01 release for SystemLink Enterprise has been published to <https://dow
 ## Upgrade Considerations
 
 - `workorder 0.12.23`
-    - User-friendly IDs have been introduced for test plan templates, resulting in a breaking change from the previous versions.
-    - Migration job will run during the Helm upgrade, with brief downtime depending on the number of existing templates and plans.
+  - User-friendly IDs have been introduced for test plan templates, resulting in
+    a breaking change from the previous versions.
+  - Migration job will run during the Helm upgrade, with brief downtime
+    depending on the number of existing templates and plans.
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of SystemLink Enterprise. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of SystemLink Enterprise. The table below shows the version of the
+RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | 0.29.56                            |
@@ -65,6 +89,7 @@ SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbit
 
 ### NI Containers
 
+```text
 alarmservice:0.8.59
 
 assetservice:0.19.18
@@ -184,9 +209,11 @@ userservice-setup:0.25.6
 webapphostui:0.20.118
 
 workorder:0.12.23
+```
 
 ### 3rd Party Containers
 
+```text
 alpine:3.20.3
 
 argoproj/argocli:v3.5.5-linux-amd64
@@ -214,3 +241,4 @@ pause:3.9
 swaggerapi/swagger-ui:v5.17.14
 
 zookeeper:3.9.3
+```
