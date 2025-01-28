@@ -83,7 +83,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.33.46`
+**Top Level Helm Chart:** `systemlink 0.33.53`
 
 **Admin Helm Chart:** `systemlink-admin 0.33.4`
 
@@ -94,7 +94,7 @@ alarmservice:0.8.59
 
 assetservice:0.19.18
 
-assetui:0.18.81
+assetui:0.18.82
 
 comments:0.17.11
 
@@ -118,7 +118,7 @@ grafana-auth-proxy:0.21.7
 
 grafana-plugins:3.43.6
 
-grafana-rbac-integrator:0.21.14
+grafana-rbac-integrator:0.21.16
 
 helium-dataservices-mongomigration:0.20.32
 
@@ -158,7 +158,7 @@ nbexecservice:0.22.46
 
 nbparsingservice:0.21.8
 
-ni-grafana:v10.2.3-c2d2d1c81f-ni
+ni-grafana:v10.2.3-779719c237-ni
 
 notification:0.21.12
 
@@ -194,11 +194,11 @@ systemsstateservice:0.11.11
 
 systemsstatesui:0.10.57
 
-systemsui:0.22.103
+systemsui:0.22.104
 
 tagsui:0.17.35
 
-testinsightsui:0.21.100
+testinsightsui:0.21.101
 
 testmonitorservice:0.30.10
 
@@ -238,7 +238,7 @@ kiwigrid/k8s-sidecar:1.29.0
 
 pause:3.9
 
-swaggerapi/swagger-ui:v5.17.14
+swaggerapi/swagger-ui:v5.18.2
 
 zookeeper:3.9.3
 ```
