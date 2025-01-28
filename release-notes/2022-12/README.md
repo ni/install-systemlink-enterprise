@@ -1,10 +1,15 @@
 # SystemLink Enterprise 2022-12 Release Notes
 
-The 2022-12 release bundle for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2022-12 release bundle for SystemLink Enterprise has been published to
+<https://niedge01.jfrog.io>. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- The top level helm chart includes the License service. Refer to **Helm Chart Breaking Changes** for details on the required configuration for this service.
+- The top level helm chart includes the License service. Refer to **Helm Chart
+  Breaking Changes** for details on the required configuration for this service.
 - Users can specify data table IDs as variables in dashboards.
 - Users can customize, filter, save, and load views in the Products grid.
 - Users can upload and view files associated with a product.
@@ -13,42 +18,59 @@ The 2022-12 release bundle for SystemLink Enterprise has been published to <http
 ## Helm Chart Breaking Changes
 
 - `systemlink 0.9.91`, `systemlink-admin 0.9.4`
-    - Containers inside a Pod now use a more strict `securityContext` configuration by default.
-    - The new default `securityContext` configuration for containers is as follows:
-        - `allowPrivilegeEscalation` defaults to `false`
-        - `readOnlyRootFilesystem` defaults to `true`
-        - `privileged` defaults to `false`
-        - `capabilities.drop` defaults to `[all]`.
-    - This change only affects the default values of _Containers_. The default values for _Pod_ `securityContext` remains the same.
+  - Containers inside a Pod now use a more strict `securityContext`
+    configuration by default.
+  - The new default `securityContext` configuration for containers is as
+    follows:
+    - `allowPrivilegeEscalation` defaults to `false`
+    - `readOnlyRootFilesystem` defaults to `true`
+    - `privileged` defaults to `false`
+    - `capabilities.drop` defaults to `[all]`.
+  - This change only affects the default values of _Containers_. The default
+    values for _Pod_ `securityContext` remains the same.
 - `license 0.1.0`
-    - This service requires the persistent storage class `ReadWriteMany`.
-    - Configure secrets for the service
-        - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-secrets.yaml)
-        - Refer to [Required Secrets](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/required-secrets.html)
-    - Configure values for the service
-        - Refer to [systemlink-values.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-values.yaml)
-        - Refer to [What Do You Need to Use SystemLink Enterprise?](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-requirements.html)
+  - This service requires the persistent storage class `ReadWriteMany`.
+  - Configure secrets for the service
+    - Refer to
+      [`systemlink-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-secrets.yaml)
+    - Refer to
+      [Required Secrets](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/required-secrets.html)
+  - Configure values for the service
+    - Refer to
+      [`systemlink-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-values.yaml)
+    - Refer to
+      [What Do You Need to Use SystemLink Enterprise?](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/systemlink-enterprise-requirements.html)
 - `nbexecservice 0.1.312`
-    - Config map renamed from `nbexec-service-argo-configmap` to `<helm_release_name>-nbexecservice-argo-configmap`.
-    - Service names have been moved from config map to workflow-template.
-    - During helm upgrade in progress executions may fail.
+  - Config map renamed from `nbexec-service-argo-configmap` to
+    `<helm_release_name>-nbexecservice-argo-configmap`.
+  - Service names have been moved from config map to workflow-template.
+  - During helm upgrade in progress executions may fail.
 - `routines`
-    - Remove the whitelisted API key
+  - Remove the whitelisted API key
 - `routineeventtrigger 0.2.0`
-    - Values have moved from the `routineservice.engine` into the `routineeventtrigger` chart.
-    - Refer to [systemlink-secrets.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-secrets.yaml) for required changes
+  - Values have moved from the `routineservice.engine` into the
+    `routineeventtrigger` chart.
+  - Refer to
+    [`systemlink-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2022-12/getting-started/templates/systemlink-secrets.yaml)
+    for required changes
 - `routinescheduletrigger 0.2.0`
-    - Newly included chart
-    - You must configure the `userservices.secrets.whitelistedApiKeys` value with an entry for `routinescheduletrigger` `serviceName`.
-    - You must configure MongoDB credentials in `routinescheduletrigger.secrets.mongodb`.
+  - Newly included chart
+  - You must configure the `userservices.secrets.whitelistedApiKeys` value with
+    an entry for `routinescheduletrigger` `serviceName`.
+  - You must configure MongoDB credentials in
+    `routinescheduletrigger.secrets.mongodb`.
 - `routineexecutor 0.2.0`
-    - Newly included chart
-    - You must configure the `userservices.secrets.whitelistedApiKeys` value with an entry for `routineexecutor` `serviceName`.
+  - Newly included chart
+  - You must configure the `userservices.secrets.whitelistedApiKeys` value with
+    an entry for `routineexecutor` `serviceName`.
 - `notification 0.1.0`
-    - Newly included chart
-    - You must configure a secret for MongoDB credentials in `notification.secrets.mongodb`
+  - Newly included chart
+  - You must configure a secret for MongoDB credentials in
+    `notification.secrets.mongodb`
 - `sl-jupyterhub 0.2.0`
-    - To enable JupyterHub user pods to establish outbound connections to private IP addresses by default, set `jupyterhub.singleuser.networkPolicy.egressAllowRules.privateIPs=true`.
+  - To enable JupyterHub user pods to establish outbound connections to private
+    IP addresses by default, set
+    `jupyterhub.singleuser.networkPolicy.egressAllowRules.privateIPs=true`.
 
 ## Bugs Fixed
 
@@ -62,11 +84,13 @@ See bugs with **XRay** in the title in the above list of closed bugs.
 
 ## Known Vulnerabilities
 
-This information is available upon request. Work with your account representative to request this report.
+This information is available upon request. Work with your account
+representative to request this report.
 
 ## Software Bill of Materials
 
-This information is available upon request. Work with your account representative to request this data.
+This information is available upon request. Work with your account
+representative to request this data.
 
 ## Versions
 
@@ -76,6 +100,7 @@ This information is available upon request. Work with your account representativ
 
 ### NI Containers
 
+```text
 assetservice/20221118.6
 
 dashboardsui/20221111.2
@@ -157,17 +182,21 @@ testmonitorservice/20221122.10
 userdata/20221121.2
 
 userservice-setup/20221118.2
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 plotly-panel/1.1.2.zip
 
 systemlink-dataframe-datasource/1.6.0.zip
 
 systemlink-notebook-datasource/1.1.0.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.4.3-linux-amd64
 
 argoproj/argoexec/v3.4.3-linux-amd64
@@ -205,3 +234,4 @@ strimzi/kafka/0.32.0-kafka-3.3.1
 zookeeper/3.8.0-temurin
 
 strimzi/operator/0.32.0
+```

@@ -1,71 +1,126 @@
-
 # SystemLink Enterprise 2023-08 release notes
 
-The 2023-08 release of SystemLink Enterprise has been published to <https://downloads.artifacts.ni.com>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-08 release of SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## Upgrading from the 2023-07 or previous release to 2023-08
 
 ### Upgrading the RabbitMQ dependency
 
-SystemLink Enterprise includes a deployment of the [RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor versions when updating RabbitMQ, you may not be able to upgrade directly between versions of the SystemLink Enterprise product. The table below shows the version of the RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed update instructions.
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of the SystemLink Enterprise product. The table below shows the version
+of the RabbitMQ dependency for each released version of SystemLink Enterprise.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
-|------------------|-------------------------------------|------------------------------------|
+| ---------------- | ----------------------------------- | ---------------------------------- |
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | current                            |
 
-Refer to [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html) for detailed instructions on how to safely upgrade the version of the RabbitMQ dependency.
+Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed instructions on how to safely upgrade the version of the RabbitMQ
+dependency.
 
 ### Minimum supported Kubernetes version
 
-This release of SystemLink Enterprise changes the minimum supported version of Kubernetes to 1.23. Refer to [Helm chart breaking changes](#helm-chart-breaking-changes) for required changes to your systemlink-values.yaml file.
+This release of SystemLink Enterprise changes the minimum supported version of
+Kubernetes to 1.23. Refer to
+[Helm chart breaking changes](#helm-chart-breaking-changes) for required changes
+to your `systemlink-values.yaml` file.
 
 ## New features and behavior changes
 
 - Systems Management
-    - This release includes a new Helm chart for the Repository service
-    - This service requires access to NIPKG feeds hosted at <https://download.ni.com/support/nipkg/products/ni-package-manager/released> for its normal operation.
-    - You must specify new MongoDB credentials in `repository.secrets.mongodb`.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-secrets.yaml#L529C12-L529C12)
+
+  - This release includes a new Helm chart for the Repository service
+  - This service requires access to NIPKG feeds hosted at
+    <https://download.ni.com/support/nipkg/products/ni-package-manager/released>
+    for its normal operation.
+  - You must specify new MongoDB credentials in `repository.secrets.mongodb`.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-secrets.yaml#L529C12-L529C12)
 
 - TestMonitor service
-    - The TestMonitor service requires a new EF Core PostgreSQL migration to support an upcoming feature. The migration will occur automatically after upgrade upon the first launch of the service. This migration does not change any tables or modify any data.
-    - The PostgreSQL [user privileges](https://www.ni.com/docs/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-22D7F822-FF82-436A-9458-DA1D33334886__GUID-A2CA66A5-7E59-419B-8638-48E7E7A3963A) required for SystemLink are sufficient to perform this migration.
-    - If the version of the TestMonitor service is rolled back to a prior version after this migration has been performed the service will fail to start with an "Invalid database configuration" error presented in the service logs.
+
+  - The TestMonitor service requires a new EF Core PostgreSQL migration to
+    support an upcoming feature. The migration will occur automatically after
+    upgrade upon the first launch of the service. This migration does not change
+    any tables or modify any data.
+  - The PostgreSQL
+    [user privileges](https://www.ni.com/docs/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-22D7F822-FF82-436A-9458-DA1D33334886__GUID-A2CA66A5-7E59-419B-8638-48E7E7A3963A)
+    required for SystemLink are sufficient to perform this migration.
+  - If the version of the TestMonitor service is rolled back to a prior version
+    after this migration has been performed the service will fail to start with
+    an "Invalid database configuration" error presented in the service logs.
 
 - Asset Management
-    - This release include a new Helm chart for Assets web application.
-    - This application is not feature complete and there is not present in the navigation tree.
-    - Users may preview this application by directly navigating to `/assets`.
+
+  - This release include a new Helm chart for Assets web application.
+  - This application is not feature complete and there is not present in the
+    navigation tree.
+  - Users may preview this application by directly navigating to `/assets`.
 
 - Data Tables
-    - The DataFrame service will now restart pods on every Helm upgrade to detect changes to the S3 credentials and update the connection to its dependencies: Dremio and Kafka Connect. This is to streamline the process of rotating S3 credentials.
+
+  - The DataFrame service will now restart pods on every Helm upgrade to detect
+    changes to the S3 credentials and update the connection to its dependencies:
+    Dremio and Kafka Connect. This is to streamline the process of rotating S3
+    credentials.
 
 - Dashboards
-    - Panel and data source plugins are now bundled within the `dashboardsui` container. NI no longer distributes these plugins as individual artifacts.
+
+  - Panel and data source plugins are now bundled within the `dashboardsui`
+    container. NI no longer distributes these plugins as individual artifacts.
 
 - Licensing
-    - This release include a new Helm chart for license summary web application.
-    - This application is only accessible to users with the _Server Administrator_ role.
-    - Refer to [Activating SystemLink Enterprise Licenses](https://www.ni.com/docs/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-73EF9C6B-0F91-454B-AD5D-B46D601AFB54__GUID-38402CBA-F206-4D53-88C9-4C275937152E).
+
+  - This release include a new Helm chart for license summary web application.
+  - This application is only accessible to users with the _Server Administrator_
+    role.
+  - Refer to
+    [Activating SystemLink Enterprise Licenses](https://www.ni.com/docs/bundle/systemlink-enterprise/page/config-systemlink-enterprise.html#GUID-73EF9C6B-0F91-454B-AD5D-B46D601AFB54__GUID-38402CBA-F206-4D53-88C9-4C275937152E).
 
 - User Telemetry
-    - SystemLink now supports user telemetry tracking. Telemetry is enabled by default and can be disabled using the `userTelemetry.enableFrontEndTelemetry` flag in your Helm values configuration.
-    - Enabling user telemetry will cause usage data for the SystemLink web applications to be uploaded to <https://esp.ni.com> and content to be injected into the web application from <https://web-sdk.ni.com>.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-values.yaml#L74)
+  - SystemLink now supports user telemetry tracking. Telemetry is enabled by
+    default and can be disabled using the
+    `userTelemetry.enableFrontEndTelemetry` flag in your Helm values
+    configuration.
+  - Enabling user telemetry will cause usage data for the SystemLink web
+    applications to be uploaded to <https://esp.ni.com> and content to be
+    injected into the web application from <https://web-sdk.ni.com>.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-values.yaml#L74)
 
 ## Helm chart breaking changes
 
 - Kubernetes 1.23
-    - Services now used the HorizontalPodAutoscaler (HPA) v2 Kubernetes API. If you have overridden the default HPA configuration for SystemLink Enterprise services you must change to the autoscaling configurations to use the [HPA v2 syntax](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/horizontal-pod-autoscaler-v2/).
-    - The example configuration for HPA for Grafana has changed. You may remove several values if you are using the defaults. Otherwise change these values to match the v2 HPA syntax.
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-values.yaml#L354)
+
+  - Services now used the HorizontalPodAutoscaler (HPA) v2 Kubernetes API. If
+    you have overridden the default HPA configuration for SystemLink Enterprise
+    services you must change to the autoscaling configurations to use the
+    [HPA v2 syntax](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/horizontal-pod-autoscaler-v2/).
+  - The example configuration for HPA for Grafana has changed. You may remove
+    several values if you are using the defaults. Otherwise change these values
+    to match the v2 HPA syntax.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-values.yaml#L354)
 
 - `dataframeservice 0.12.67`
-    - To reduce the likelihood of Dremio volume exhaustion after too many undecimated queries within a 24-hour period the the default size of Dremio's volumes has been increased to 256GB from 128GM.
-    - Before upgrading, delete all stateful sets with "dremio" in their name. After upgrading, delete the DataFrame service pods to reinitialize Dremio.
-    - To opt-out of this change override `dataframeservice.sldremio.coordinator.volumeSize` and `dataframeservice.sldremio.executor.volumeSize` to "128Gi".
-        - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-values.yaml#L573)
+  - To reduce the likelihood of Dremio volume exhaustion after too many
+    undecimated queries within a 24-hour period the the default size of Dremio's
+    volumes has been increased to 256GB from 128GM.
+  - Before upgrading, delete all stateful sets with `dremio` in their name.
+    After upgrading, delete the DataFrame service pods to reinitialize Dremio.
+  - To opt-out of this change override
+    `dataframeservice.sldremio.coordinator.volumeSize` and
+    `dataframeservice.sldremio.executor.volumeSize` to "128Gi".
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-08/getting-started/templates/systemlink-values.yaml#L573)
 
 ## Bugs Fixed
 
@@ -86,6 +141,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 assetservice/0.2.68
 
 assetui/0.2.235
@@ -179,9 +235,11 @@ testmonitorservice/0.13.26
 userdata/0.4.23
 
 userservice-setup/0.5.7
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.3.8-linux-amd64
 
 argoproj/argoexec/v3.3.8-linux-amd64
@@ -215,3 +273,4 @@ zookeeper/3.8.1-temurin
 strimzi/kafka/0.34.0-kafka-3.4.0
 
 strimzi/operator/0.34.0
+```

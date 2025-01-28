@@ -1,70 +1,107 @@
 # SystemLink Enterprise 2023-04 Release Notes
 
-The 2023-04 release for SystemLink Enterprise has been published to <https://niedge01.jfrog.io>. This update includes new features, bug fixes, and security updates. Work with your account representative to obtain credentials to access these artifacts. If you are not upgrading from the previous release, refer to past release notes to ensure you have addressed all required configuration changes.
+The 2023-04 release for SystemLink Enterprise has been published to
+<https://niedge01.jfrog.io>. This update includes new features, bug fixes, and
+security updates. Work with your account representative to obtain credentials to
+access these artifacts. If you are not upgrading from the previous release,
+refer to past release notes to ensure you have addressed all required
+configuration changes.
 
 ## Upgrading from the 2023-03 to the 2023-04 release
 
-JupyterHub user pod PVCs incorporate a user's email address in the PVC name. This aids in the association of users to JupyterHub PVCs so unused PVCs can be safely removed. Users will lose access to their personal Jupyter notebooks and other settings in their JupyterHub instance due to this change. Users are encouraged to backup their personal Jupyter notebooks locally prior to upgrading. Old PVCs are not automatically deleted and can be recovered. You can opt-out of this new behavior. This change does not affect notebooks [published](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/sharing-a-jupyter-notebook.html) to SystemLink Refer to **`sl-jupyterhub 1.0.0` PVC name change** in **Helm Chart Breaking Changes** for details.
+JupyterHub user pod PVCs incorporate a user's email address in the PVC name.
+This aids in the association of users to JupyterHub PVCs so unused PVCs can be
+safely removed. Users will lose access to their personal Jupyter notebooks and
+other settings in their JupyterHub instance due to this change. Users are
+encouraged to backup their personal Jupyter notebooks locally prior to
+upgrading. Old PVCs are not automatically deleted and can be recovered. You can
+opt-out of this new behavior. This change does not affect notebooks
+[published](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/sharing-a-jupyter-notebook.html)
+to SystemLink Refer to **`sl-jupyterhub 1.0.0` PVC name change** in **Helm Chart
+Breaking Changes** for details.
 
 ## New Features and Behavior changes
 
-- You can use data spaces to find and visualize a subset of your Test Insights result data. This allows you to interactively slice data to diagnose issues or discover trends that may not obvious without visual inspection.
+- You can use data spaces to find and visualize a subset of your Test Insights
+  result data. This allows you to interactively slice data to diagnose issues or
+  discover trends that may not obvious without visual inspection.
 
-- The DataFrame Service uses streaming data deserialization, which allows you to use larger batch sizes (more rows per write).
+- The DataFrame Service uses streaming data deserialization, which allows you to
+  use larger batch sizes (more rows per write).
 
-- The Dremio S3 automatically promotes missing data sets on query, which improves reliability in scenarios where a dataset is deleted at the same time it is queried. To uptake this change, delete all Dremio PVCs and restart all Dremio and DataFrame Service pods.
+- The Dremio S3 automatically promotes missing data sets on query, which
+  improves reliability in scenarios where a dataset is deleted at the same time
+  it is queried. To uptake this change, delete all Dremio PVCs and restart all
+  Dremio and DataFrame Service pods.
 
-- The DataFrame Service has new limits intended to ensure availability of the service
+- The DataFrame Service has new limits intended to ensure availability of the
+  service
 
-    | Category               | Default Limit                                             | Error returned at limit                          |  Details                                          | Prevention                                                                               |
-    |------------------------|-----------------------------------------------------------|--------------------------------------------------|---------------------------------------------------|------------------------------------------------------------------------------------------|
-    | Ingestion Request Size | `dataframeservice.requestBodySizeLimitMegabytes: 256`     | Ingestion requests fail with HTTP 413            | The client sent too much data in a single request. | Ingest data in smaller batch sizes.                                                       |
-    | Ingestion Rate         | `dataframeservice.rateLimits.ingestion.requestsLimit: 20` | Ingestion requests fail with HTTP 429            | There are too many concurrent requests for a single pod. If this limit's value is increased the CPU requests for the DataFrame Service must also be increased.     | Clients should implement retry logic with exponential back off.                           |
-    | Append-able Tables      | `dataframeservice.ingestion.appendableTableLimit: 250`   | Table creation or ingestion fail with HTTP 409   | There are too many open data tables. This value should not be adjusted without the direction of NI. Increasing this limit may cause Kafka Connect to enter a bad state. Refer to [support documentation](ni.com/r/setendofdata) for additional information. [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-values.yaml#L512).               | Mark `endOfData` on data tables that are complete. |
+  | Category               | Default Limit                                             | Error returned at limit                        | Details                                                                                                                                                                                                                                                                                                                                                                                                        | Prevention                                                      |
+  | ---------------------- | --------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+  | Ingestion Request Size | `dataframeservice.requestBodySizeLimitMegabytes: 256`     | Ingestion requests fail with HTTP 413          | The client sent too much data in a single request.                                                                                                                                                                                                                                                                                                                                                             | Ingest data in smaller batch sizes.                             |
+  | Ingestion Rate         | `dataframeservice.rateLimits.ingestion.requestsLimit: 20` | Ingestion requests fail with HTTP 429          | There are too many concurrent requests for a single pod. If this limit's value is increased the CPU requests for the DataFrame Service must also be increased.                                                                                                                                                                                                                                                 | Clients should implement retry logic with exponential back off. |
+  | Append-able Tables     | `dataframeservice.ingestion.appendableTableLimit: 250`    | Table creation or ingestion fail with HTTP 409 | There are too many open data tables. This value should not be adjusted without the direction of NI. Increasing this limit may cause Kafka Connect to enter a bad state. Refer to [support documentation](ni.com/r/setendofdata) for additional information. [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-values.yaml#L512). | Mark `endOfData` on data tables that are complete.              |
 
 - You can now show custom properties in the Files grid and create saved views.
 
 - You can filter the steps grid by step and measurement name.
 
-- The default image pull policy for `argo-workflows` has changed from `always` to `IfNotPresent`.
+- The default image pull policy for `argo-workflows` has changed from `always`
+  to `IfNotPresent`.
 
 - The executions grid groups by status by default.
 
 - Schedule routines are enabled by default.
-    - The feature flag `routineservice.featureToggle.publishScheduleEvent` has been removed from the SystemLink Helm chart.
+  - The feature flag `routineservice.featureToggle.publishScheduleEvent` has
+    been removed from the SystemLink Helm chart.
 
 ## Helm Chart Breaking Changes
 
 - `sl-jupyterhub 1.0.0` PVC name change
-    - You can opt-out of this behavior by setting `sl-jupyterhub.jupyterhub.hub.extraEnv.JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "true"`.
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-values.yaml#L713)
+
+  - You can opt-out of this behavior by setting
+    `sl-jupyterhub.jupyterhub.hub.extraEnv.JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "true"`.
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-values.yaml#L713)
 
 - `sl-jupyterhub 1.0.0` resource allocation
-    - The default resource allocation for JupyterHub user pods has changed.
-    - The default CPU request is now `0.5`.
-        - Set `sl-jupyterhub.jupyterhub.singleuser.cpu.guarantee` to override this request as needed.
-    - The default memory request and limit it now `2G`.
-        - Note the `G` notation used rather than `Gi` used by other resources.
-        - Set `sl-jupyterhub.jupyterhub.singleuser.memory.limit` and `sl-jupyterhub.jupyterhub.singleuser.memory.guarantee` to override this limit as needed.
-            - Ensure these two configurations are set to the same value.
+
+  - The default resource allocation for JupyterHub user pods has changed.
+  - The default CPU request is now `0.5`.
+    - Set `sl-jupyterhub.jupyterhub.singleuser.cpu.guarantee` to override this
+      request as needed.
+  - The default memory request and limit it now `2G`.
+    - Note the `G` notation used rather than `Gi` used by other resources.
+    - Set `sl-jupyterhub.jupyterhub.singleuser.memory.limit` and
+      `sl-jupyterhub.jupyterhub.singleuser.memory.guarantee` to override this
+      limit as needed.
+      - Ensure these two configurations are set to the same value.
 
 - `userservices 0.2.0`
-    - New `userservices-continuation-token` secret.
-    - This secret is required and must either be defined in the Helm chart or manually configured prior to upgrade.
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L111)
+
+  - New `userservices-continuation-token` secret.
+  - This secret is required and must either be defined in the Helm chart or
+    manually configured prior to upgrade.
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L111)
 
 - `webserver 0.7.0`
-    - The `rateLimit.apiRequestsPerSecond` Helm value is renamed to `rateLimit.byUser.apiRequestsPerSecond`.
-    - Deployments that set the old value must be be updated to use the new value.
+
+  - The `rateLimit.apiRequestsPerSecond` Helm value is renamed to
+    `rateLimit.byUser.apiRequestsPerSecond`.
+  - Deployments that set the old value must be be updated to use the new value.
 
 - `nbexecservice 0.2.0`
-    - S3 secrets used by this service are deployed by Helm.
-    - You will need to update your secret value files and remove s3 secret name overrides.
-    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L287)
 
-- `dataframeservice 0.8.195` Kakfa configuration
-    - `kafkaCleanupService` configuration has been moved into `ingestion.cleanupService`.
-    - This is not a breaking change unless this value was previously used to override defaults..
+  - S3 secrets used by this service are deployed by Helm.
+  - You will need to update your secret value files and remove s3 secret name
+    overrides.
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2023-04/getting-started/templates/systemlink-secrets.yaml#L287)
+
+- `dataframeservice 0.8.195` Kafka configuration
+  - `kafkaCleanupService` configuration has been moved into
+    `ingestion.cleanupService`.
+  - This is not a breaking change unless this value was previously used to
+    override defaults..
 
 ## Bugs Fixed
 
@@ -86,6 +123,7 @@ Only customer facing bugs have been included in this list.
 
 ### NI Containers
 
+```text
 dashboardsui/20230403.2
 
 dataframeservice-kafka-connect/20230323.3
@@ -169,17 +207,21 @@ testmonitorservice/20230403.13
 userdata/20230407.1
 
 userservice-setup/20230403.2
+```
 
 ### Non Container/Chart Artifacts
 
+```text
 systemlink-notebook-datasource/1.1.1.zip
 
 systemlink-dataframe-datasource/1.6.2.zip
 
 plotly-panel/1.1.2.zip
+```
 
 ### 3rd Party Containers
 
+```text
 argoproj/argocli/v3.3.8-linux-amd64
 
 argoproj/argoexec/v3.3.8-linux-amd64
@@ -198,7 +240,7 @@ bitnami/redis-cluster/7.0.10-debian-11-r2
 
 bitnami/schema-registry/7.3.2-debian-11-r6
 
-busybox/sha256__51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
+busybox/sha256\_\_51de9138b0cc394c813df84f334d638499333cac22edd05d0300b2c9a2dc80dd
 
 jupyterhub/k8s-image-awaiter/2.0.0
 
@@ -227,3 +269,4 @@ strimzi/kaniko-executor/0.34.0
 strimzi/maven-builder/0.34.0
 
 strimzi/operator/0.34.0
+```
