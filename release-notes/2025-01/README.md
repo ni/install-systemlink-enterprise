@@ -20,12 +20,13 @@ required configuration changes.
   - Work Orders
 - Dynamic form field privileges are available in the **Roles** application.
   - The _Data maintainer_ and _Systems maintainer_ roles now include privileges
-    to manage dynamic form fields
+    to manage dynamic form fields.
 - [Host web applications](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/hosting-a-web-application.html).
 - Preview your text, image, audio, and video files.
+- Install software and configure feeds on multiple systems.
 - Filter the list of test plans you see based on their status or their metadata.
-  Navigate to Operations » Test Plans and click the summary tiles at the top of
-  the page.
+  Navigate to **Operations** » **Test Plans** and click the summary tiles at the
+  top of the page.
 - [Adjust the default rate limits](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-jupyter-notebook-limits.html)
   for Jupyter Notebook operations.
 - MinIO is no longer installed with the top-level SLE Helm chart.
@@ -34,13 +35,12 @@ required configuration changes.
   - You can install MinIO independently of the SLE application.
   - Refer to the
     [installation and upgrade guide](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/getting-started/templates/Dependencies/MinIO).
-- Renamed the **Download files** privileges to **Preview and download files**.
+- Renamed the **Download files** privilege to **Preview and download files**.
 - Enabled Cross origin requests by default in the DataFrame service. You can
   control the list of origins in the top-level Helm chart.
 - Exposed an API to cancel notebook executions.
   - Removed **Cancel notebook executions** privileges from the _Data Maintainer_
     role.
-- Install software and configure feeds on multiple systems.
 
 ## Helm Chart Breaking Changes
 
