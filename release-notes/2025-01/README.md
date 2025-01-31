@@ -31,12 +31,12 @@ required configuration changes.
   for Jupyter Notebook operations.
 - MinIO is no longer installed with the top-level SLE Helm chart.
   - MinIO should be used only during product evaluations when no other block
-    storage solution are available.
+    storage solutions are available.
   - You can install MinIO independently of the SLE application.
   - Refer to the
     [installation and upgrade guide](https://github.com/ni/install-systemlink-enterprise/tree/2025-01/getting-started/templates/Dependencies/MinIO).
 - Renamed the **Download files** privilege to **Preview and download files**.
-- Enabled Cross origin requests by default in the DataFrame service. You can
+- Enabled cross origin requests by default in the DataFrame service. You can
   control the list of origins in the top-level Helm chart.
 - Exposed an API to cancel notebook executions.
   - Removed **Cancel notebook executions** privileges from the _Data Maintainer_
@@ -51,7 +51,7 @@ required configuration changes.
 - `workorder 0.12.23`
   - User-friendly IDs have been introduced for test plan templates, resulting in
     a breaking change from the previous versions.
-  - Migration job will run during the Helm upgrade, with brief downtime
+  - A migration job will run during the Helm upgrade, with brief downtime
     depending on the number of existing templates and plans.
 
 ### RabbitMQ Version
