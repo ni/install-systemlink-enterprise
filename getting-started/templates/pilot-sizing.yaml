@@ -152,9 +152,6 @@ dataframeservice:
       cpu: 4
       memory: 31000
       volumeSize: "50Gi"
-      engines:
-        - default
-        - iceberg
       engineOverride:
         iceberg:
           count: 2
