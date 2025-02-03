@@ -723,6 +723,16 @@ dataframeservice:
     # <ATTENTION> This must be set to the region of the S3 instance.
     ##
     region: *s3Region
+  ## Configure nessie.
+  ##
+  nessie:
+    auth:
+      ## Name of the secret containing the nessie credentials
+      ##
+      secretName: nidataframe-nessie-credentials
+      ## The name of the key in the above secret whose value contains the bearer token.
+      ##
+      bearerTokenKey: bearerToken
 
   ## Configure the Dremio query engine
   ##
