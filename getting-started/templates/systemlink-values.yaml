@@ -129,22 +129,23 @@ global:
 ## common configuration throughout this file. Individual references to these values can
 ## be overridden with custom values if required.
 ##
-## Hostname of an external S3 provider.
+## Hostname of an external S3/GCS provider.
 # <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
+# <ATTENTION> To connect to an external GCS bucket, set the host as "storage.googleapis.com"
 ##
 s3Host: &s3Host "s3.amazonaws.com"
-## Service name of an on-cluster S3 provider.
+## Service name of an on-cluster S3/GCS provider.
 # <ATTENTION> To connect to an S3 provider within the same cluster, set s3ServiceName, s3Scheme, s3Port and s3Region,
 #             and set s3Host to an empty string.
 ##
 s3ServiceName: &s3ServiceName ""
-## Schema used to access the configured S3 provider ("http" or "https")
+## Schema used to access the configured S3/GCS provider ("http" or "https")
 ##
 s3Scheme: &s3Scheme "https"
-## Port number of the S3 provider
+## Port number of the S3/GCS provider
 ##
 s3Port: &s3Port 443
-## Region where S3 storage is located
+## Region where S3/GCS storage is located
 ##
 s3Region: &s3Region "us-east-1"
 
@@ -698,29 +699,29 @@ dataframeservice:
   ##
   s3:
     auth:
-      ## Name of the secret containing the S3 login credentials
+      ## Name of the secret containing the S3/GCS login credentials
       ##
       secretName: "nidataframe-s3-credentials"
-    ## The name of the S3 bucket that the service should connect to.
+    ## The name of the S3/GCS bucket that the service should connect to.
     ##
     bucket: &dataframeBucket "systemlink-dataframe"
     ## This should just be the name of the scheme, without the trailing ://.
     ##
     schemeName: *s3Scheme
-    ## Set this value to connect to an external S3 instance.
+    ## Set this value to connect to an external S3/GCS instance.
     ##
     host: *s3Host
-    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ## Set this value to connect to an S3/GCS instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *s3ServiceName
-    ## S3 port number.
+    ## S3/GCS port number.
     ##
     port: *s3Port
-    ## Maximum number of concurrent connections to S3 per replica.
+    ## Maximum number of concurrent connections to S3/GCS per replica.
     ##
     maximumConnections: 32
-    ## S3 Region
-    # <ATTENTION> This must be set to the region of the S3 instance.
+    ## S3/GCS Region
+    # <ATTENTION> This must be set to the region of the S3/GCS instance.
     ##
     region: *s3Region
   ## Configure nessie.
@@ -845,28 +846,28 @@ saltmaster:
 ## Feed configuration.
 ##
 feedservice:
-  ## Configure S3 access.
+  ## Configure S3/GCS access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "feeds-s3-credentials"
-    ## The name of the S3 bucket that the service should connect to.
+    ## The name of the S3/GCS bucket that the service should connect to.
     ##
     bucket: "systemlink-feeds"
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: *s3Scheme
-    ## Set this value to connect to an external S3 instance.
+    ## Set this value to connect to an external S3/GCS instance.
     ##
     host: *s3Host
-    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ## Set this value to connect to an S3/GCS instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *s3ServiceName
-    ## S3 Port
+    ## S3/GCS Port
     ##
     port: *s3Port
-    ## S3 Region
+    ## S3/GCS Region
     ##
     region: *s3Region
   ## Proxy configuration to be used when the service needs to go through a proxy to have access to external services like ni.com.
@@ -874,7 +875,7 @@ feedservice:
     ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
     ##
     address: ""
-    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3 host in the noProxy list. Use this if the S3 host is internal to the cluster so we don't need to go through the proxy to access it.
+    ## @param httpProxy.includeS3HostInNoProxy Set to true to include the S3/GCS host in the noProxy list. Use this if the S3/GCS host is internal to the cluster so we don't need to go through the proxy to access it.
     ##
     includeS3HostInNoProxy: false
     ## @param httpProxy.includeAPIHostsInNoProxy Set to true to include the API hosts in the noProxy list. Use this if the API host is internal to the cluster so we don't need to go through the proxy to access it.
@@ -898,31 +899,31 @@ fileingestion:
       nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
-  ## Configure S3 access.
+  ## Configure S3/GCS access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "fileingestion-s3-credentials"
-    ## The name of the S3 bucket that the service should connect to.
+    ## The name of the S3/GCS bucket that the service should connect to.
     ##
     bucket: "systemlink-file-ingestion"
     ## Set this to true to limit each user to a maximum of 1Gb of file storage.
     ##
     storageLimitsEnabled: false
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: *s3Scheme
-    ## Set this value to connect to an external S3 instance.
+    ## Set this value to connect to an external S3/GCS instance.
     ##
     host: *s3Host
-    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ## Set this value to connect to an S3/GCS instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *s3ServiceName
-    ## S3 Port
+    ## S3/GCS Port
     ##
     port: *s3Port
-    ## S3 Region
+    ## S3/GCS Region
     ##
     region: *s3Region
    ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
@@ -1023,27 +1024,27 @@ argoworkflows:
 ##
 nbexecservice:
   maxNumberOfWorkflowsToSchedule: *workflowParallelism
-  ## Configure S3 access.
+  ## Configure S3/GCS access.
   ##
   s3:
-    ## Secret name for S3 credentials.
+    ## Secret name for S3/GCS credentials.
     ##
     secretName: "nbexecservice-s3-credentials"
-    ## The name of the S3 bucket that the service should connect to.
+    ## The name of the S3/GCS bucket that the service should connect to.
     ##
     bucket: "systemlink-executions"
-    ## S3 connection scheme.
+    ## S3/GCS connection scheme.
     ##
     scheme: *s3Scheme
-    ## Set this value to connect to an external S3 instance.
+    ## Set this value to connect to an external S3/GCS instance.
     ##
     host: *s3Host
-    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+    ## Set this value to connect to an S3/GCS instance which is internal to the cluster. Ignored if host is set.
     ##
     service: *s3ServiceName
-    ## S3 Port
+    ## S3/GCS Port
     port: *s3Port
-    ## S3 Region
+    ## S3/GCS Region
     ##
     region: *s3Region
   ## Uncomment this section to adjust the resource allocation for the notebook execution pods.
