@@ -56,9 +56,9 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink <chart version>`
+**Top Level Helm Chart:** `systemlink 0.34.45`
 
-**Admin Helm Chart:** `systemlink-admin <chart version>`
+**Admin Helm Chart:** `systemlink-admin 0.34.5`
 
 ### NI Containers
 
