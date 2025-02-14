@@ -20,10 +20,10 @@ required configuration changes.
 ## Helm Chart Breaking Changes
 
 - New required secret `dataframeservice.secrets.nessie.bearerToken`
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-values.yaml#L735)
-	- [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-secrets.yaml#L252)
+  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-values.yaml#L735)
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-secrets.yaml#L252)
 - Dremio was upgraded and it will be necessary to be reset after the upgrade.
-    - Follow the instructions in [Resetting Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
+  - Follow the instructions in [Resetting Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
 
 ## Upgrade Considerations
 
