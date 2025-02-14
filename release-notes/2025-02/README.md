@@ -13,17 +13,20 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `dataframeservice:1.14.61`
+  - The service now limits the length of strings that appear in table and column "properties" dictionaries. Property keys can be up to 256 characters, and values can be up to 1000 characters.
+  - Versions of the dataframeservice prior to 0.8 created an index in MongoDB that is no longer being used. Starting in 0.8, the DataFrame Service automatically dropped the unused index. However, starting with 1.14.52, we no longer drop the index. When upgrading directly from 0.8 or earlier to 1.14.52 or later, it is recommended (but not required) to manually drop the index named "SupportsAppend_1" from the "tables" collection of the "nidataframe" database.
+  - Dremio was upgraded to 25.2.2 to pull in fixes for critical vulnerabilities and functionality necessary for data table compaction. Upgrading will require the customer to reset Dremio: [https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/83721/How-to-reset-Dremio](https://dev.azure.com/ni/DevCentral/_wiki/wikis/Stratus/83721/How-to-reset-Dremio). Customer success should be familiar with procedure so should be capable of guiding customers through the upgrade. The Dremio reset procedure does not result in any loss of data.
+  - Data Table compaction (utilizing Iceberg) is now turned on by default. This introduces a new replica set of pods associated with the DFS "dataframeservice-nessie-*". This affects the resource footprint of Dremio, with the default total executor sizing going from ~60 CPU/~500GB memory to ~80 CPU/~350GB memory. The following PR can be referenced for exact numbers: [https://ni.visualstudio.com/DevCentral/_git/Skyline/commit/c1055fea5d38c33c7c4c513e0295e7f5e6a1bc95?refName=refs%2Fheads%2Fmaster](https://ni.visualstudio.com/DevCentral/_git/Skyline/commit/c1055fea5d38c33c7c4c513e0295e7f5e6a1bc95?refName=refs%2Fheads%2Fmaster)
 
 ## Helm Chart Breaking Changes
 
-- New required secret `dataframeservice.secrets.nessie.bearerToken`
-  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-values.yaml#L735)
-  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-secrets.yaml#L252)
-- Dremio was upgraded and it will be necessary to be reset after the upgrade.
-  - Follow the instructions in [Resetting Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
+- `dataframeservice:1.14.61`
+  - New required secret `dataframeservice.secrets.nessie.bearerToken`
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-values.yaml#L735)
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-secrets.yaml#L252)
+  - Dremio was upgraded and it will be necessary to be reset after the upgrade.
+    - Follow the instructions in [Resetting Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
 
 ## Upgrade Considerations
 
