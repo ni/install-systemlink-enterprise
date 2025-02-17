@@ -1,4 +1,4 @@
-# SystemLink Enterprise release year-release-month Release Notes
+# SystemLink Enterprise 2025-02 Release Notes
 
 The 2025-02 release for SystemLink Enterprise has been published to
 <https://downloads.artifacts.ni.com>. This update includes new features, bug
@@ -7,7 +7,7 @@ credentials to access these artifacts. If you are not upgrading from the
 previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
+## Upgrading from the 2025-01 to the 2025-02
 
 <!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
@@ -49,17 +49,13 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+- [closed-bugs-sle-2025-02](https://github.com/ni/install-systemlink-enterprise/tree/2025-02/release-notes/2025-02/closed-bugs-sle-2025-02.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-02/release-notes/2025-02/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-02/release-notes/2025-02/notices)
 
 ## Versions
 
