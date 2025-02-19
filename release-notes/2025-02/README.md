@@ -23,7 +23,7 @@ required configuration changes.
   - The limit for property keys is 256 characters.
   - The limit for values is 1000 characters.
 
-## Upgrading from the release year-release-month to the release year-release-month
+## Upgrading from the 2025-01 to the 2025-02
 
 - Dremio upgraded to 25.2.2. The update includes bug fixes, security updates,
   and added functionality for data table compaction.
