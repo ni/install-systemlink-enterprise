@@ -13,6 +13,11 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
+- Preview your .pdf files.
+- Filter the list of work orders you see based on their status or their metadata and save custom views. Navigate to Operations » Work Orders and click the summary tiles at the top of the page.
+- Learn about the performance metrics for the Web Application Service.
+- Enhanced the performance of queries against continuously written data tables.
+- Use Google Cloud Storage (GCS) to store your files.
 - `dataframeservice:1.14.61`
   - The service now limits the length of strings that appear in table and column "properties" dictionaries. The limit for property keys is 256 characters. The limit for values is 1000 characters.
   - DataFrame Service creates an index called "SupportsAppend_1" in MongoDB. Starting with version 0.8, the DataFrame Service automatically dropped the "SupportsAppend_1" index. Starting with version 1.14.52, the DataFrame Service no longer drop the"SupportsAppend_1" index. When upgrading directly from version 0.8 or earlier to version 1.14.52 or later, we recommend that you drop the "SupportsAppend_1" index from the "tables" collection of the "nidataframe" database manually.
