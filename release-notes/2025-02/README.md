@@ -9,28 +9,52 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- Preview your .pdf files.
-- Filter the list of work orders you see based on their status or their metadata and save custom views. Navigate to Operations » Work Orders and click the summary tiles at the top of the page.
-- Learn about the performance metrics for the Web Application Service.
 - Enhanced the performance of queries against continuously written data tables.
+- Preview your .pdf files.
+- Filter the list of work orders you see based on their status or their metadata
+  and save custom views. Navigate to **Operations** » **Work Orders** and click
+  the summary tiles at the top of the page.
+- Learn about the
+  [performance metrics](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/performance-metrics-web-app-service.html)
+  for the Web Application Service.
 - Use Google Cloud Storage (GCS) to store your files.
-- `dataframeservice:1.14.61`
-  - The service now limits the length of strings that appear in table and column "properties" dictionaries. The limit for property keys is 256 characters. The limit for values is 1000 characters.
-  - DataFrame Service creates an index called "SupportsAppend_1" in MongoDB. Starting with version 0.8, the DataFrame Service automatically dropped the "SupportsAppend_1" index. Starting with version 1.14.52, the DataFrame Service no longer drop the"SupportsAppend_1" index. When upgrading directly from version 0.8 or earlier to version 1.14.52 or later, we recommend that you drop the "SupportsAppend_1" index from the "tables" collection of the "nidataframe" database manually.
-  - Dremio was upgraded to 25.2.2. The update includes fixes for critical vulnerabilities and added functionality for data table compaction. You must reset Dremio for this upgrade. Refer to Resetting Dremio, [https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html) in the SystemLink Enterprise User Manual. Resetting Dremio does not result in loss of data.
-  - Data table compaction is enabled by default. Data table compaction uses Iceberg and introduces a new replica set of pods associated with the DataFrame Service "dataframeservice-nessie-*". The replica set of pods affects the resource footprint of Dremio, The default total executor sizing increases from ~60 CPU/~500GB memory to ~80 CPU/~350GB memory. Refer to the following PRfor exact numbers: [https://ni.visualstudio.com/DevCentral/_git/Skyline/commit/c1055fea5d38c33c7c4c513e0295e7f5e6a1bc95?refName=refs%2Fheads%2Fmaster](https://ni.visualstudio.com/DevCentral/_git/Skyline/commit/c1055fea5d38c33c7c4c513e0295e7f5e6a1bc95?refName=refs%2Fheads%2Fmaster)
-    - [DataFrame Service: Update pilot config for the compaction feature #232](https://github.com/ni/install-systemlink-enterprise/pull/232/files)
+- The Data Frame Service now limits the length of strings for table and column
+  properties.
+  - The limit for property keys is 256 characters.
+  - The limit for values is 1000 characters.
+
+## Upgrading from the release year-release-month to the release year-release-month
+
+- Dremio upgraded to 25.2.2. The update includes bug fixes, security updates,
+  and added functionality for data table compaction.
+  - You must reset Dremio for this upgrade. Refer to Resetting Dremio,
+    [https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
+    in the SystemLink Enterprise User Manual. Resetting Dremio does not result
+    in loss of data.
+- Manual removal of the Data Frame Service `SupportsAppend_1` index may be
+  required.
+  - From `dataframeservice:0.8.x` (SLE 2023-05) through
+    `dataframeservice:1.14.x` (SLE 2025-02) the `SupportsAppend_1` index in
+    MongoDB was automatically dropped.
+  - If upgrading directly from `dataframeservice:0.8.x` or earlier to
+    `dataframeservice:1.14.x` or later you should manually drop the
+    `SupportsAppend_1` index.
+- Data table compaction uses Iceberg and introduces new
+  `dataframeservice-nessie-\*` pods.
+  - 81 total CPU cores allocated for executors and Iceberg by default. This is
+    ~20 core _increase_ from previous defaults.
+  - 352GB total memory allocated for executors and Iceberg by default. This a
+    ~150GB _decrease_ from previous defaults.
+- The resource configuration for Data Frame Service for pilots has been modified
+  to support compaction.
+  - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/pilot-sizing.yaml#L123)
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice:1.14.61`
-  - New required secret `dataframeservice.secrets.nessie.bearerToken`
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-values.yaml#L735)
-    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-secrets.yaml#L252)
-  - Dremio was upgraded and it will be necessary to be reset after the upgrade.
-    - Follow the instructions in [Resetting Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
-
-## Upgrade Considerations
+  - A new required secret `dataframeservice.secrets.nessie.bearerToken` must be
+    provided.
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-02/getting-started/templates/systemlink-secrets.yaml#L248).
 
 ### RabbitMQ Version
 
