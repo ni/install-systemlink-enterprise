@@ -85,7 +85,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.34.45`
+**Top Level Helm Chart:** `systemlink 0.34.50`
 
 **Admin Helm Chart:** `systemlink-admin 0.34.5`
 
@@ -96,15 +96,15 @@ alarmservice:0.9.53
 
 assetservice:0.20.23
 
-assetui:0.19.70
+assetui:0.19.71
 
 comments:0.18.13
 
 dashboardsui:0.22.47
 
-dataframeservice-nessie:1.14.61
-
 dataframeservice:1.14.61
+
+dataframeservice-nessie:1.14.61
 
 dremio-ee:25.2.2
 
@@ -112,7 +112,7 @@ dynamicformfields:0.3.18
 
 executionsui:0.22.54
 
-feedservice:0.11.30
+feedservice:0.11.31
 
 feedsui:0.10.51
 
@@ -124,9 +124,9 @@ grafana-plugins:3.46.2
 
 grafana-rbac-integrator:0.22.24
 
-helium-dataservices-mongomigration:0.21.17
-
 helium-dataservices:0.21.17
+
+helium-dataservices-mongomigration:0.21.17
 
 helium-fileingestionservices:1.12.7
 
@@ -158,7 +158,7 @@ nbexec-execution-helpers:0.23.4
 
 nbexec-notebook-runner:0.23.7
 
-nbexecservice:0.23.42
+nbexecservice:0.23.43
 
 nbparsingservice:0.22.6
 
