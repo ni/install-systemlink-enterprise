@@ -27,9 +27,9 @@ required configuration changes.
 
 - Dremio upgraded to 25.2.2. The update includes bug fixes, security updates,
   and added functionality for data table compaction.
-  - You must reset Dremio for this upgrade. Refer to Resetting Dremio,
-    [https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
-    in the SystemLink Enterprise User Manual. Resetting Dremio does not result
+  - You must reset Dremio for this upgrade. Refer to
+    [Resetting Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/resetting-dremio.html)
+    in the SystemLink Enterprise user manual. Resetting Dremio does not result
     in loss of data.
 - Manual removal of the Data Frame Service `SupportsAppend_1` index may be
   required.
