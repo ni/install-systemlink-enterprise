@@ -19,8 +19,11 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `feedservice:0.12.56`
+  - The S3 settings are now under 'storage'. The previously used S3 settings under 'feedservice' will continue to work, but are now deprecated.
+    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
+- `workorder:0.14.34`
+  - The first class property 'slotIds' in the schedule test plans API is renamed to 'fixtureIds' to avoid the confusion on the terminology used across industries/domain areas.
 
 ## Upgrade Considerations
 
