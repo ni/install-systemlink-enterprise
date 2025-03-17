@@ -703,7 +703,7 @@ webserver:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
-  # Increase default rate limit to adjust for reduced node count.
+  # Increases the default rate limit to adjust for the reduction in node count.
   rateLimit:
     byUser:
       apiRequestsPerSecond: "30"
