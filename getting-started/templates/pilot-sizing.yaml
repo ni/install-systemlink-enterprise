@@ -703,6 +703,11 @@ webserver:
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
 
+  # Increases the default rate limit to adjust for the reduction in node count.
+  rateLimit:
+    byUser:
+      apiRequestsPerSecond: "30"
+
   redis-cluster:
     cluster:
       nodes: 3
