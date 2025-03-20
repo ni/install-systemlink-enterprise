@@ -19,7 +19,7 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- `feedservice:0.12.56`
+- `feedservice:0.12.57`
   - The S3 settings are now under 'storage'. The previously used S3 settings under 'feedservice' will continue to work, but are now deprecated.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
 - `workorder:0.14.34`
