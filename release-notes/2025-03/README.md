@@ -65,24 +65,24 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.35.33`
+**Top Level Helm Chart:** `systemlink 0.35.44`
 
-**Admin Helm Chart:** `systemlink-admin 0.35.4`
+**Admin Helm Chart:** `systemlink-admin 0.35.5`
 
 ### NI Containers
 
 ```text
-alarmservice:0.10.61
+alarmservice:0.10.62
 
-alarmsui:0.20.281
+alarmsui:0.20.282
 
-assetservice:0.21.53
+assetservice:0.21.55
 
-assetui:0.20.82
+assetui:0.20.85
 
 comments:0.19.24
 
-dashboardsui:0.23.36
+dashboardsui:0.23.37
 
 dataframeservice-nessie:1.15.39
 
@@ -92,13 +92,13 @@ dremio-ee:25.2.2
 
 dynamicformfields:0.3.18
 
-executionsui:0.23.66
+executionsui:0.23.70
 
-feedservice:0.12.56
+feedservice:0.12.57
 
-feedsui:0.11.62
+feedsui:0.11.64
 
-filesui:0.24.82
+filesui:0.24.85
 
 grafana-auth-proxy:0.21.7
 
@@ -114,7 +114,7 @@ helium-fileingestionservices:1.13.15
 
 helium-salt-master:1.20.13
 
-helium-serviceregistry:0.27.5
+helium-serviceregistry:0.27.6
 
 helium-taghistoriandataretention:0.18.13
 
@@ -124,31 +124,31 @@ helium-taghistorianservices:0.18.13
 
 helium-userservices:0.27.7
 
-helium-webappservices:0.25.21
+helium-webappservices:0.25.22
 
-helium-webserver:0.34.5
+helium-webserver:0.34.8
 
-jupyter-notebook-userpod:2.14.5
+jupyter-notebook-userpod:2.14.6
 
-jupyterui:0.23.44
+jupyterui:0.23.46
 
-labmanagementui:0.14.103
+labmanagementui:0.14.105
 
-landingpageui:0.23.41_13158771
+landingpageui:0.23.43
 
-nbexec-execution-helpers:0.24.19
+nbexec-execution-helpers:0.24.20
 
-nbexec-notebook-runner:0.24.11
+nbexec-notebook-runner:0.24.12
 
-nbexecservice:0.24.72
+nbexecservice:0.24.74
 
-nbparsingservice:0.23.17
+nbparsingservice:0.23.18
 
 ni-grafana:v10.2.3-ca8100c6aa-ni
 
 notification:0.23.27
 
-repository:0.19.31
+repository:0.19.32
 
 routineeventtrigger:0.24.14
 
@@ -158,39 +158,39 @@ routinescheduletrigger:0.24.18
 
 routineservice:0.25.64
 
-routinesui:0.24.58
+routinesui:0.24.60
 
-securityui:0.23.41
+securityui:0.23.43
 
-session-manager-service:0.28.15
+session-manager-service:0.28.16
 
-sl-configurable-http-proxy:2.14.5
+sl-configurable-http-proxy:2.14.6
 
-sl-k8s-hub:2.14.6
+sl-k8s-hub:2.14.7
 
 smtp:0.23.25
 
-sysmgmtevent:0.24.18
+sysmgmtevent:0.24.19
 
-systemsmanagementservice:0.23.25
+systemsmanagementservice:0.23.26
 
 systemsstateservice:0.13.28
 
-systemsstatesui:0.12.76
+systemsstatesui:0.12.77
 
-systemsui:0.24.99
+systemsui:0.24.102
 
-tagsui:0.19.47
+tagsui:0.19.48
 
-testinsightsui:0.23.94
+testinsightsui:0.23.100
 
 testmonitorservice:0.32.34
 
-userdata:0.23.26
+userdata:0.23.27
 
 userservice-setup:0.28.1
 
-webapphostui:0.22.56
+webapphostui:0.22.58
 
 workorder:0.14.34
 ```
