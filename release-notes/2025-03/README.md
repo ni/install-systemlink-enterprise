@@ -24,6 +24,15 @@ all required configuration changes.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
 - `workorder:0.14.34`
   - The first class property 'slotIds' in the schedule test plans API is renamed to 'fixtureIds' to avoid the confusion on the terminology used across industries/domain areas.
+- `sl-jupyterhub 2.16.16`
+  - The chart now require Kubernetes 1.28+
+  - Notebooks are now running on Python 3.12
+    - [View "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
+    - [View "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
+- `nbexecservice 0.24.74`
+  - Notebooks are now running on Python 3.12
+    - [View "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
+    - [View "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
 
 ## Upgrade Considerations
 
