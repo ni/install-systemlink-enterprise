@@ -694,7 +694,7 @@ dataframeservice:
   ## Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 256MiB
 
-  ## Configuration for data table row storage.
+  ## The configuration for storing data table rows.
   ##
   storage:
     ## The storage backend to use: currently only "s3". Defaults to s3.
@@ -703,23 +703,25 @@ dataframeservice:
     ##
     type: s3
 
-    ## Configuration for the S3 backend. Only applicable when storage.type is "s3".
+    ## The configuration for the S3 backend. This configuration is only applicable when the
+    ## storage.type value is set to "s3".
     ##
     s3:
       auth:
-        ## Name of the secret containing the S3 login credentials
+        ## The name of the secret containing the S3 login credentials.
         ##
         secretName: "nidataframe-s3-credentials"
       ## The name of the S3 bucket that the service should connect to.
       ##
       bucket: &dataframeBucket "systemlink-dataframe"
-      ## This should just be the name of the scheme, without the trailing ://.
+      ## The scheme name. The name should not contain the following special characters: '://.'
       ##
       schemeName: *s3Scheme
       ## Set this value to connect to an external S3 instance.
       ##
       host: *s3Host
-      ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+      ## Set this value to connect to an S3 instance that is internal to the cluster. The system
+      ## ignores this value if there is a host value.
       ##
       service: *s3ServiceName
       ## S3 port number.
@@ -729,7 +731,8 @@ dataframeservice:
       ##
       maximumConnections: 32
       ## S3 Region
-      # <ATTENTION> This must be set to the region of the S3 instance.
+      ## <ATTENTION> You must set this value to the same region as the S3 instance to successfully
+      ## establish a connection.
       ##
       region: *s3Region
 
