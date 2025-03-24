@@ -1032,7 +1032,7 @@ nbexecservice:
   ## Configures file storage settings.
   ##
   storage: 
-    ## Specifies which storage to use. Supports "S3".
+    ## Set this value to specify the storage type. The NbExecService supports "S3".
     ##
     type: "s3"
     ## Configures S3 access.
@@ -1050,7 +1050,7 @@ nbexecservice:
       ## Set this value to connect to an external S3 instance.
       ##
       host: *s3Host
-      ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+      ## Set this value to connect to an S3 instance that is internal to the cluster. The NbExecService ignores the value if the host is set.
       ##
       service: *s3ServiceName
       ## S3 Port
