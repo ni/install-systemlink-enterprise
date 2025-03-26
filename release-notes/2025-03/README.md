@@ -1,11 +1,9 @@
 # SystemLink Enterprise 2025-03 Release Notes
 
-The 2025-03 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-03 release for [SystemLink Enterprise](https://downloads.artifacts.ni.com/) has been
+published. This update includes new features, bug fixes, and security updates. 
+Contact your account representative to obtain access credentials. If you are not upgrading from
+the previous SystemLink Enterprise release, refer to past release notes to address all previous configuration changes.
 
 ## Upgrading from the 2025-02 to the 2025-03
 
@@ -25,26 +23,26 @@ all required configuration changes.
 - `workorder:0.14.34`
   - The first class property 'slotIds' in the schedule test plans API is renamed to 'fixtureIds' to avoid the confusion on the terminology used across industries/domain areas.
 - `sl-jupyterhub:2.16.16`
-  - The chart now require Kubernetes 1.28+
-  - Notebooks are now running on Python 3.12
-    - [View "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
-    - [View "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
+  - Charts now require Kubernetes 1.28+
+  - Notebooks now run on Python 3.12
+    - [View the "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
+    - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
 - `nbexecservice:0.24.74`
-  - Notebooks are now running on Python 3.12
-    - [View "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
-    - [View "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
+  - Notebooks now run on Python 3.12
+    - [View the "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
+    - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
 
 ## Upgrade Considerations
 
 ### RabbitMQ Version
 
-SystemLink Enterprise includes a deployment of the
-[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+SystemLink Enterprise includes a deployment of the 
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Because you cannot skip minor
 versions when updating RabbitMQ, you may not be able to upgrade directly between
-versions of SystemLink Enterprise. The table below shows the version of the
-RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to
-[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
-for detailed update instructions.
+versions of SystemLink Enterprise. For more detailed update instructions, refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html).
+
+The following table displays the version of the RabbitMQ dependency for each released version of SystemLink Enterprise.
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
 | ---------------- | ----------------------------------- | ---------------------------------- |
@@ -55,7 +53,7 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-- [SLE Closed Bugs March 2025](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/closed-bugs-sle-2025-03.xlsx)
+- [SystemLink Enterprise 2025-03 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/closed-bugs-sle-2025-03.xlsx)
 
 ## Software Bill of Materials and Notices
 
