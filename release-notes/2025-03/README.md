@@ -24,12 +24,12 @@ all required configuration changes.
     - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
 - `workorder:0.14.34`
   - The first class property 'slotIds' in the schedule test plans API is renamed to 'fixtureIds' to avoid the confusion on the terminology used across industries/domain areas.
-- `sl-jupyterhub 2.16.16`
+- `sl-jupyterhub:2.16.16`
   - The chart now require Kubernetes 1.28+
   - Notebooks are now running on Python 3.12
     - [View "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
     - [View "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
-- `nbexecservice 0.24.74`
+- `nbexecservice:0.24.74`
   - Notebooks are now running on Python 3.12
     - [View "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
     - [View "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
@@ -65,7 +65,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.35.44`
+**Top Level Helm Chart:** `systemlink 0.35.52`
 
 **Admin Helm Chart:** `systemlink-admin 0.35.5`
 
@@ -76,9 +76,9 @@ alarmservice:0.10.62
 
 alarmsui:0.20.282
 
-assetservice:0.21.55
+assetservice:0.21.56
 
-assetui:0.20.85
+assetui:0.20.86
 
 comments:0.19.24
 
@@ -114,7 +114,7 @@ helium-fileingestionservices:1.13.15
 
 helium-salt-master:1.20.13
 
-helium-serviceregistry:0.27.6
+helium-serviceregistry:0.27.7
 
 helium-taghistoriandataretention:0.18.13
 
@@ -122,7 +122,7 @@ helium-taghistorianmongomigration:0.18.13
 
 helium-taghistorianservices:0.18.13
 
-helium-userservices:0.27.7
+helium-userservices:0.27.8
 
 helium-webappservices:0.25.22
 
@@ -132,7 +132,7 @@ jupyter-notebook-userpod:2.14.6
 
 jupyterui:0.23.46
 
-labmanagementui:0.14.105
+labmanagementui:0.14.106
 
 landingpageui:0.23.43
 
@@ -178,7 +178,7 @@ systemsstateservice:0.13.28
 
 systemsstatesui:0.12.77
 
-systemsui:0.24.102
+systemsui:0.24.103
 
 tagsui:0.19.48
 
