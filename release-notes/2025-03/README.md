@@ -13,9 +13,9 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Display product data and properties in dashboards.
+- Preview your .csv files.
+- Preview your .html files.
 
 ## Helm Chart Breaking Changes
 
@@ -55,13 +55,12 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-- [closed-bugs-sle-2025-03](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/closed-bugs-sle-2025-03.xlsx)
+- [SLE Closed Bugs March 2025](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/closed-bugs-sle-2025-03.xlsx)
 
 ## Software Bill of Materials and Notices
 
-[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/sbom)
-
-[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/notices)
+- [SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/sbom)
+- [Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-03/release-notes/2025-03/notices)
 
 ## Versions
 
