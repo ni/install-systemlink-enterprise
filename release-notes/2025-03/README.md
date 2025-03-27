@@ -7,35 +7,26 @@ account representative to obtain access credentials. If you are not upgrading
 from the previous SystemLink Enterprise release, refer to past release notes to
 address all previous configuration changes.
 
-## Upgrading from the 2025-02 to the 2025-03
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Display product data and properties in dashboards.
+- Kubernetes 1.28 is the minimum supported version for SystemLink Enterprise.
+  Refer to
+  [SystemLink Enterprise and External Dependencies Compatibility](https://www.ni.com/en/support/documentation/compatibility/25/systemlink-enterprise-and-external-dependencies-compatibility-.html)
+  for additional details.
 - Preview your .csv files.
 - Preview your .html files.
+- Notebooks now run on Python 3.12
+  - [View the "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
+  - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
+- The Work Order first class property `slotIds` in the schedule test plans API
+  is renamed to `fixtureIds`.
 
 ## Helm Chart Breaking Changes
 
 - `feedservice:0.12.57`
-  - The S3 settings are now under 'storage'. The previously used S3 settings
-    under `feedservice` will continue to work, but are now deprecated.
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
-- `workorder:0.14.34`
-  - The first class property 'slotIds' in the schedule test plans API is renamed
-    to 'fixtureIds' to avoid the confusion on the terminology used across
-    industries/domain areas.
-- `sl-jupyterhub:2.16.16`
-  - Charts now require Kubernetes 1.28+
-  - Notebooks now run on Python 3.12
-    - [View the "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
-    - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
-- `nbexecservice:0.24.74`
-  - Notebooks now run on Python 3.12
-    - [View the "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
-    - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
+  - The S3 settings are now under `feedservice.storage`. The previously used S3
+    settings under `feedservice` will continue to work, but are now deprecated.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
 
 ## Upgrade Considerations
 
