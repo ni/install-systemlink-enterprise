@@ -20,6 +20,10 @@ address all previous configuration changes.
   - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
 - The Work Order first class property `slotIds` in the schedule test plans API
   is renamed to `fixtureIds`.
+- TODO Include update on Python clients in release notes
+- v2.x SLE Python Client APIs are available. Refer to
+  [SystemLink Client Python releases](https://github.com/ni/nisystemlink-clients-python/releases)
+  for additional details.
 
 ## Helm Chart Breaking Changes
 
