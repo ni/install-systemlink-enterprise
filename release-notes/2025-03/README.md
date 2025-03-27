@@ -60,9 +60,9 @@ released version of SystemLink Enterprise.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.35.52`
+**Top Level Helm Chart:** `systemlink 0.35.54`
 
-**Admin Helm Chart:** `systemlink-admin 0.35.5`
+**Admin Helm Chart:** `systemlink-admin 0.35.8`
 
 ### NI Containers
 
@@ -164,6 +164,8 @@ sl-configurable-http-proxy:2.14.6
 sl-k8s-hub:2.14.7
 
 smtp:0.23.25
+
+specificationmanagement:0.14.22
 
 sysmgmtevent:0.24.19
 
