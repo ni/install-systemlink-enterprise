@@ -16,12 +16,11 @@ address all previous configuration changes.
 - Preview your .csv files.
 - Preview your .html files.
 - Notebooks now run on Python 3.12
-  - [View the "Deprecated" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
-  - [View the "Removed" section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
+  - [View the _Deprecated_ section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#deprecated)
+  - [View the _Removed_ section in the release notes for Python 3.12](https://docs.python.org/3.12/whatsnew/3.12.html#removed)
 - The Work Order first class property `slotIds` in the schedule test plans API
   is renamed to `fixtureIds`.
-- TODO Include update on Python clients in release notes
-- v2.x SLE Python Client APIs are available. Refer to
+- v2.x SystemLink Python Client APIs are available. Refer to
   [SystemLink Client Python releases](https://github.com/ni/nisystemlink-clients-python/releases)
   for additional details.
 
@@ -29,7 +28,7 @@ address all previous configuration changes.
 
 - `feedservice:0.12.57`
   - The S3 settings are now under `feedservice.storage`. The previously used S3
-    settings under `feedservice` will continue to work, but are now deprecated.
+    settings under `feedservice` will continue to work but are deprecated.
     - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-03/getting-started/templates/systemlink-values.yaml#L850)
 
 ## Upgrade Considerations
