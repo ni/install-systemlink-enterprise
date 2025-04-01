@@ -1,0 +1,413 @@
+## Example configuration for tuning sizing parameters for services related to systems management.
+## Other services are addressed in other examples.
+
+## The alarm service manages alarm states and triggers alarm notifications.
+alarmservice:
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 100m
+    limits:
+      memory: 512Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 15
+    targetCPUUtilizationPercentage: 50
+    targetMemoryUtilizationPercentage: 70
+
+  ## Routine Executor pods update alarm states in response to triggers configured in the Routine service.
+  routineExecutor:
+    resources:
+      requests:
+        memory: 180Mi
+        cpu: 100m
+      limits:
+        memory: 180Mi
+    autoscaling:
+      minReplicas: 2
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 60
+      targetMemoryUtilizationPercentage: 80
+
+  ## @param alarmservice.alarmLimit The total number of alarms the service supports creating, including
+  ## both active and inactive alarms. Must be greater than @param activeAlarmLimit.
+  ## The service will return an error if this limit is exceeded.
+  ## Increasing this limit requires tuning of database resources.
+  ##
+  alarmLimit: 100000
+
+  ## @param alarmservice.activeAlarmLimit The total number of active alarms the service supports creating.
+  ## Must be less than @param alarmLimit. The service will return an error if this limit is
+  ## exceeded. Increasing this limit requires tuning of database resources.
+  ##
+  activeAlarmLimit: 10000
+
+  database:
+    ## @param alarmservice.database.countOfTransitionsToPersist The number of transitions to store per alarm when new
+    ## transitions are added, including the first transition that is always stored. Must be in the range 1-150.
+    ##
+    countOfTransitionsToPersist: 100
+
+## The asset service tracks asset locations and status.
+assetservice:
+  resources:
+    limits:
+      memory: 1024Mi
+    requests:
+      cpu: 250m
+      memory: 1024Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+    ## @param assetservice.maxRequestSizeKB The maximum request size in kilobytes. This is the maximum size of a request body that the server will accept.
+    maxRequestSizeKB: 200
+
+    ## @param assetservice.maxNumberOfSelfCalibrationsPerAsset The maximum number of self calibrations that can be associated with an asset.
+    maxNumberOfSelfCalibrationsPerAsset: 500
+
+    ## @param assetservice.daysToPersistConnectionHistory The days asset connection history should be persisted in the db
+    daysToPersistConnectionHistory: 730
+
+    # @param assetservice.daysToPersistUtilizationHistory The days asset utilization history should be persisted in the db
+    daysToPersistUtilizationHistory: 365
+
+    # @param assetservice.daysToPersistUtilizationHistory The days asset location move should be persisted in the db
+    daysToPersistAssetLocationMove: 7
+
+## The feed service hosts nipkg feeds to support installing software on connected systems.
+feedservice:
+  requests:
+    cpu: 512m
+    memory: 750Mi
+  limits:
+    memory: 750Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+    ## @param feedservice.feedsLimitPerOrg The number of feeds hosted by this service.
+    feedsLimitPerOrg: 1000
+
+    ## @param maximumJobsPerUserPerHour The maximum amount of jobs a user can enqueue per hour
+    ## if exceeded status code 429 "TooManyRequests" is returned.
+    maximumJobsPerUserPerHour: 10000
+
+## The notification service is used to configure notifications that will be triggered by other services.
+notification:
+  resources:
+    limits:
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 256Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+## A RabbitMQ message bus is deployed to allow efficient intra-cluster communication between services.
+rabbitmq:
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      memory: 1536Mi
+
+  ## @param rabbitmq.replicaCount. The number of RabbitMQ pods to deploy. A minimum of 4 pods is recommended
+  ## for production deployments. If this value is changed after deployment, the RabbitMQ server must be manually
+  ## reconfigured.
+  replicaCount: 4
+
+## The repository service allows access to feeds hosted on ni.com.
+repository:
+  resources:
+    limits:
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 1Gi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  ## Limits on cached feeds
+  ## @param repository.feedsCache.requestsFeedCountLimit Maximum number of feeds allowed to be configured per request
+  ## @param repository.feedsCache.feedIndexFileLength Maximum file length allowed per feed (MB)
+  ## @param repository.feedsCache.feedHeadResponseTimeout Timeout for the HEAD requests performed when configuring feeds (seconds)
+  ## @param repository.feedsCache.feedDownloadTimeout Timeout for the requests which downloads the content of configured feeds (seconds)
+  feedsCache:
+    requestsFeedCountLimit: 500
+    feedIndexFileLength: 10
+    feedHeadResponseTimeout: 5
+    feedDownloadTimeout: 30
+
+  ## Limits on cached store items
+  ## @param repository.storeCache.refreshRate Rate at which the store cache is refreshed (hours)
+  ## @param repository.storeCache.requestsTimeout Timeout for responses when attempting to retrieve store items (seconds)
+  storeCache:
+    refreshRate: 3
+    requestsTimeout: 10
+
+## The routine service configures actions to occur on some triggering event. Common examples are alarms and notebook executions.
+routineservice:
+  ## Resources for the V1 routine API. This API is used to configure notebook executions.
+  resources:
+    requests:
+      cpu: 250m
+      memory: 1024Mi
+    limits:
+      memory: 1024Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  ## The V2 routines API is used to configure alarms.
+  v2:
+    resources:
+      requests:
+        cpu: 250m
+        memory: 200Mi
+      limits:
+        memory: 200Mi
+    autoscaling:
+      minReplicas: 2
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 60
+      targetMemoryUtilizationPercentage: 80
+
+      ## @param routineservice.v2.routineLimit The total number of v2 routines the service supports creating per
+      ## organization. The service will return an error if this limit is exceeded.
+      ## Increasing this limit requires tuning of resources.
+      ##
+      routineLimit: 1000
+
+## The Salt master manages connected systems.
+saltmaster:
+  resources:
+    requests:
+      memory: 3000Mi
+      cpu: 1000m
+    limits:
+      memory: 3000Mi
+
+  ## @param saltmaster.replicaCount The Salt Master does not support autoscaling. Use this value to configure the number
+  ## of replicas running in the deployment.
+  replicaCount: 2
+
+  ## Request server configuration
+  requestServer:
+    ## @param saltmaster.requestServer.connectionLimit Specifies how many connections can be active on the Request Server at any given time
+    ## If the Request Server is at its limit, it will stop accepting TCP connections until the connections count drop under the limit
+    connectionLimit: 10000
+    ## Configuration for timeouts, expressed in seconds
+    timeoutSeconds:
+      ## @param saltmaster.requestServer.timeoutSeconds.initial Specifies how much should the server wait after a handshake is complete for data to arrive
+      ## If the client does not send data in due-time, the server will close the connection
+      initial: 60
+      ## @param saltmaster.requestServer.timeoutSeconds.waiting Specifies how much should the server wait after parts of a message (which can't be parsed yet) have been received
+      ## If the client does not send data in due-time, the server will close the connection
+      waiting: 120
+      ## @param saltmaster.requestServer.timeoutSeconds.additional Specifies how much should the server wait after a message is received and executed for data to arrive
+      ## If the client does not send data in due-time, the server will close the connection
+      additional: 10800 # 3 Hours
+    ## Configuration for states feature
+    states:
+      ## Configuration for states caching
+      caching:
+        ## @param saltmaster.requestServer.states.caching.enabled Specifies whether the states caching should be enabled
+        enabled: true
+        ## @param saltmaster.requestServer.states.caching.maxCacheSizeMb Specifies how many megabytes should be maximum allocated for states caching
+        ## This value depends on how intensively the states are used, but this should be higher than the average usage to avoid frequent evictions
+        maxCacheSizeMb: 150
+        ## @param saltmaster.requestServer.states.caching.ttlMilliseconds Specifies how many milliseconds should the states be cached
+        ## These values are the tradeoff between performance and consistency.
+        ## Higher values mean better performance, but minions might read stale data
+        ## Lower values mean that the minions don't read as much stale data, but the performance is affected
+        ttlMilliseconds:
+          ## @param saltmaster.requestServer.states.caching.ttlMilliseconds.getStates Specifies how many milliseconds should the states be cached for getStates requests
+          ## These are used for the _file_list jobs
+          getStates: 5000
+          ## @param saltmaster.requestServer.states.caching.ttlMilliseconds.exportState Specifies how many milliseconds should the states be cached for exportState requests
+          ## These are used for the _file_serve and _file_hash jobs
+          exportState: 5000
+        ## Configuration for the cache evictions mechanisms
+        ## These don't affect the staleness of the data, but they affect the memory usage and the performance
+        garbageCollector:
+          ## @param saltmaster.requestServer.states.caching.intervalSeconds Specifies how often should the garbage collector run
+          intervalSeconds: 5
+          ## @param saltmaster.requestServer.states.caching.minTimeoutSeconds Specifies how often should the garbage collector run when the cache is almost full
+          minTimeoutSeconds: 5
+          ## @param saltmaster.requestServer.states.caching.maxTimeoutSeconds Specifies how often should the garbage collector run when the cache is almost empty
+          maxTimeoutSeconds: 15
+
+  ## Publish server configuration
+  publishServer:
+    ## @param saltmaster.publishServer.connectionLimit Specifies how many connections can be active on the Publish Server at any given time
+    ## If the Publish Server is at its limit, it will stop accepting TCP connections until the connections count drop under the limit
+    connectionLimit: 2500
+    ## Configuration for timeouts, expressed in seconds
+    timeoutSeconds:
+      ## @param saltmaster.publishServer.timeoutSeconds.initial Specifies how much should the server wait after a handshake is complete for data to arrive
+      ## If the client does not send data in due-time, the server will close the connection
+      initial: 60
+      ## @param saltmaster.publishServer.timeoutSeconds.waiting Specifies how much should the server wait after parts of a message (which can't be parsed yet) have been received
+      ## If the client does not send data in due-time, the server will close the connection
+      waiting: 120
+
+  ## Events configuration
+  events:
+    ## @param saltmaster.events.minionsPresenceMaxChunkSize Specifies the maximum number of minions that can be present in a single event
+    minionsPresenceMaxChunkSize: 250
+    ## @param saltmaster.events.minionsPresenceTaskIntervalMs Specifies at what interval should the SaltMaster check and emit events for connected minions
+    ## This is used to make sure that we are not in an inconsistent state
+    minionsPresenceTaskIntervalMs: 60000
+    ## @param saltmaster.events.minionsPresenceTaskStartDelayMs Specifies how many milliseconds should the SaltMaster wait before checking and emiting events for connected minions
+    ## This is used to make sure that we are not in an inconsistent state
+    minionsPresenceTaskStartDelayMs: 30000
+    ## @param saltmaster.events.presenceChangedIntervalMs Specifies at what interval should the SaltMaster publish collected connection events
+    ## This is used in conjunction with presenceChangedCountLimit to signal connection events (whichever happens first)
+    presenceChangedIntervalMs: 3000
+    ## @param saltmaster.events.presenceChangedCountLimit Specifies at what count should the SaltMaster publish the collected connection events
+    ## This is used in conjunction with presenceChangedIntervalMs to signal connection events (whichever happens first)
+    presenceChangedCountLimit: 25
+
+## The systems management service registers remote systems and applies configuration via jobs.
+systems:
+  resources:
+    requests:
+      memory: 1024Mi
+      cpu: 500m
+    limits:
+      memory: 1024Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+  ## Configure job scheduling
+  jobs:
+    ##  @param systems.jobs.maxInProgressQueuedJobs The maximum number of queued jobs that can be dispatched to managed clients at any given time.
+    maxInProgressQueuedJobs: 250
+
+  ## Configure the system feeds requests
+  systemFeeds:
+    intersection:
+      ## @param systems.systemFeeds.intersection.limit Configure the systems feeds intersection request
+      limit: 1000
+    ## Configure the systems feeds conflicts request
+    conflicts:
+      systems:
+        ## @param systems.systemFeeds.conflicts.systems.limit Upper limit of the number of system Ids for which to determine feed conflicts
+        limit: 1000
+      feeds:
+        ## @param systems.systemFeeds.conflicts.feeds.limit Upper limit of the number of feeds to be used when determining feed conflicts against system feeds
+        limit: 1000
+
+## The system state service applies pre-configured states to client systems.
+systemsstate:
+  resources:
+    requests:
+      memory: 1024Mi
+      cpu: 250m
+    limits:
+      memory: 1024Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  ## @param systemsstate.stateLimitPerOrg Maximum number of states
+  stateLimitPerOrg: 1000
+
+  ## @param systemsstate.stateContentLimitMb Limit in megabytes of the maximum size of a state's content
+  stateContentLimitMb: 1
+
+## The SMTP service is used by the notification service to send emails.
+smtp:
+  resources:
+    limits:
+      memory: 150Mi
+    requests:
+      cpu: 100m
+      memory: 150Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+## The tag service publishes tags
+tags:
+  resources:
+    requests:
+      cpu: 4000m
+      memory: 8Gi
+    limits:
+      memory: 8Gi
+
+  ## @param tags.replicaCount Number of pod replicas to deploy.
+  ## This service does not have auto-scaling. Set this value according to the needs of your environment.
+  replicaCount: 1
+
+  ## Tag event processor containers monitor trigger conditions for tag alarms
+  tagEventProcessor:
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 1Gi
+      limits:
+        memory: 1Gi
+
+    ## @param tags.tagEventProcessor.replicaCount Number of pod replicas to deploy.
+    ## This service does not have auto-scaling. Set this value according to the needs of your environment.
+    ## This should typically have the same value as mirror tags.replicaCount.
+    replicaCount: 1
+
+    ## Cache configuration for tag trigger states, which are used to determine which tag updates are transitions.
+    triggerStateCache:
+      ## @param tags.tagEventProcessor.triggerStateCache.memoryLimitGb The maximum cache size.
+      memoryLimitGb: 0.5
+      ## @param tags.tagEventProcessor.triggerStateCache.ttlHours The time-to-live for cache entries.
+      ttlHours: 24
+
+## The tag historian stores a history of tag values over time.
+taghistorian:
+  resources:
+    limits:
+      memory: 2Gi
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 16
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  ## @param taghistorian.storageLimit The limit on the size of stored tag values specified in bytes, 10GB.
+  storageLimit: "10737418240"
+
+  ## The data retention worker cleans up old data based on policies configured for each tag.
+  dataretention:
+    resources:
+      limits:
+        memory: 512Mi
+      requests:
+        cpu: 250m
+        memory: 512Mi
+
+    # @param taghistorian.dataretention.replicas Only a single instance of the data retention worker is required.
+    replicas: 1
