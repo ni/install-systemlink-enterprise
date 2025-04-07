@@ -1,0 +1,234 @@
+# Example configuration for tuning sizing configuration for services related to data management.
+
+## The data frame service stores and indexes tabular data.
+dataframeservice:
+  # Data frame core service resources
+  resources:
+    requests:
+      memory: 4096Mi
+      cpu: 250m
+    limits:
+      memory: 4096Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+  ## Data frame nessie container resources
+  nessie:
+    resources:
+      requests:
+        memory: 180Mi
+        cpu: 100m
+      limits:
+        memory: 180Mi
+    autoscaling:
+      minReplicas: 2
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 60
+      targetMemoryUtilizationPercentage: 80
+
+  ## Configuration for DataFrame writes
+  ingestion:
+    ## @param dataframeservice.ingestion.maxColumnCount The maximum number of columns that a data table may be created with.
+    ## Attempting to create a table with more columns than the specified limit will result in a 400 Bad Request response.
+    maxColumnCount: 2500
+
+    ## @param dataframeservice.ingestion.maxRowCount The maximum number of rows that can be written to a single table across
+    ## all requests. Once a table's row count reaches this limit, the table is effectively read-only.
+    ## Query performance for tables with a large number of rows is highly dependent upon the
+    ## number of columns, the resources available to Dremio, and the number of executors.
+    ## The default is 1 billion rows. This value must be greater than zero and less than 2147483648.
+    maxRowCount: "1000000000"
+
+
+  ## Dremio configuration
+  sldremio:
+    ## Resource requests for the coordinator.
+    ## Refer to Dremio documentation here: https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
+    coordinator:
+      ## @param dataframeservice.sldremio.coordinator.cpu CPU allocated to each coordinator, expressed in CPU cores.
+      cpu: 15
+      ## @param dataframeservice.sldremio.coordinator.memory Memory allocated to each coordinator, expressed in MB.
+      memory: 73728
+      ## @param dataframeservice.sldremio.coordinator.volumeSize Coordinator data volume size (applies to the master coordinator only).
+      volumeSize: 256Gi
+    ## Resource requests for the executor.
+    ## Refer to Dremio documentation here: https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
+    executor:
+      ## @param dataframeservice.sldremio.executor.count Number of executors.
+      count: 3
+      ## @param dataframeservice.sldremio.executor.cpu CPU allocated to each executor, expressed in CPU cores.
+      cpu: 15
+      ## @param dataframeservice.sldremio.executor.memory Memory allocated to each executor, expressed in MB.
+      memory: 73728
+      ## @param dataframeservice.sldremio.executor.volumeSize Executor volume size.
+      volumeSize: 256Gi
+      ## Override configuration for the Iceberg executors. This will create a separate group of Iceberg executors
+      ## in parallel with the standard executors. Standard executors process queries, while iceberg executors process writes.
+      engineOverride:
+        iceberg:
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.count Number of executors.
+          count: 4
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.cpu CPU allocated to each executor, expressed in CPU cores.
+          cpu: 9
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.memory Memory allocated to each executor, expressed in MB.
+          memory: 32768
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.heapMemoryOverride Configures the heap memory pool for the executor.
+          heapMemoryOverride: 20000
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.directMemoryOverride Configures the direct memory pool for the executor.
+          directMemoryOverride: 10000
+
+  ## Workload configuration
+  workloadManagement:
+    # COPY INTO jobs are targeted to this queue. Increase the concurrency limit
+    # to make newly ingested data available for query faster. This may require
+    # adding more resources to the engine the query is targeting.
+    writeQueue:
+      ## @param dataframeservice.workloadManagement.writeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
+      concurrencyLimit: 20
+    # Compaction jobs are targeted to this queue. Increase the concurrency limit
+    # to make newly ingested data available for query faster. This may require
+    # adding more resources to the engine the query is targeting.
+    optimizeQueue:
+      ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
+      concurrencyLimit: 15
+
+  ## Configuration for the S3 ingestion backend.
+  s3Backend:
+    ## @param dataframeservice.s3Backend.appendableTableLimit The number of distinct tables using the S3 ingestion
+    ## backend that can be appended to before table creation will be blocked. To stay under this limit, set
+    ## 'endOfData: true' on tables that don't need to be appended to anymore. For more information, visit ni.com/r/setendofdata.
+    appendableTableLimit: "100000"
+
+  ## @param dataframeservice.requestBodySizeLimit Limits the body size for requests. The ingress may also impose a request body
+  ## size limit, which should be set to the same value.
+  ## Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
+  requestBodySizeLimit: 256MiB
+
+  ## This shows an example of configuring an nginx ingress to support large uploads.
+  ingress:
+    annotations:
+      # Increase request size limit to allow large uploads.
+      nginx.ingress.kubernetes.io/proxy-body-size: 256m
+      # Increase HTTP timeouts to allow for long-running synchronous read requests.
+      nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+      nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+
+## The file ingestion service stores files.
+fileingestion:
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 500m
+    limits:
+      memory: 1Gi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+  ## @param fileingestion.uploadLimitGB Limit of the maximum accepted size of uploaded files, expressed in GB.
+  uploadLimitGB: 10
+
+  ## This shows an example of configuring an nginx ingress to support large uploads.
+  ingress:
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: 2000m
+      nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
+      nginx.ingress.kubernetes.io/proxy-buffering: "off"
+
+## The specification management service stores specification documents.
+specificationmanagement:
+  ## @param specificationmanagement.enabled Removes this service from the deployment if false. Disable this
+  ## service if it is not required.
+  enabled: true
+
+  resources:
+    limits:
+      memory: "512Mi"
+    requests:
+      cpu: "250m"
+      memory: "512Mi"
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+    ## @param specificationmanagement.maxSpecificationCreationCountPerRequest Maximum number of specifications that can be created per request
+    maxSpecificationCreationCountPerRequest: 1000
+    ## @param specificationmanagement.maxSpecificationDeletionCountPerRequest Maximum number of specifications that can be deleted per request
+    maxSpecificationDeletionCountPerRequest: 10000
+    ## @param specificationmanagement.maxSpecificationQueryCountPerRequest Maximum number of specifications that can be queried per request
+    maxSpecificationQueryCountPerRequest: 10000
+    ## @param specificationmanagement.maxSpecificationUpdateCountPerRequest Maximum number of specifications that can be updated per request
+    maxSpecificationUpdateCountPerRequest: 100
+
+## The test monitor service stores test results and products.
+testmonitorservice:
+  resources:
+    requests:
+      memory: "2Gi"
+      cpu: "250m"
+    limits:
+      memory: "2Gi"
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+    ## @param testmonitorservice.requestMaximumBatchLimit The maximum number of steps that may be written in a single request.
+    requestMaximumBatchLimit: 10000
+    ## @param testmonitorservice.requestTakeLimit Set to configure the maximum take value for paginated API requests.
+    ## This is used to avoid OutOfMemoryExceptions on large requests and to avoid potential DoS attacks.
+    ## Set to -1 to disable the limit.
+    requestTakeLimit: 100000
+
+## The work order service stores work orders and is used to schedule and execute test plans.
+workorder:
+  resources:
+    limits:
+      memory: "512Mi"
+    requests:
+      cpu: "250m"
+      memory: "512Mi"
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  ## @param workorder.maximumWorkOrdersPerCreateRequest Maximum number of work orders per create work orders request.
+  maximumWorkOrdersPerCreateRequest: 1000
+  ## @param workorder.maximumTakePerQueryWorkOrdersRequest Maximum query take per query work orders request.
+  maximumTakePerQueryWorkOrdersRequest: 1000
+  ## @param workorder.maximumWorkOrdersPerUpdateRequest Maximum number of work orders per update work orders request.
+  maximumWorkOrdersPerUpdateRequest: 1000
+  ## @param workorder.maximumWorkOrdersPerDeleteRequest Maximum number of work orders per delete work orders request.
+  maximumWorkOrdersPerDeleteRequest: 1000
+  ## @param workorder.maximumTestPlansPerCreateRequest Maximum number of test plans per create test plans request.
+  maximumTestPlansPerCreateRequest: 1000
+  ## @param workorder.maximumTakePerQueryTestPlansRequest Maximum query take per query test plans request.
+  maximumTakePerQueryTestPlansRequest: 1000
+  ## @param workorder.maximumTestPlansPerUpdateRequest Maximum number of test plans per update test plans request.
+  maximumTestPlansPerUpdateRequest: 1000
+  ## @param workorder.maximumTestPlansPerDeleteRequest Maximum number of test plans per delete test plans request.
+  maximumTestPlansPerDeleteRequest: 1000
+  ## @param workorder.maximumTestPlansPerScheduleRequest Maximum number of test plans per schedule test plans request.
+  maximumTestPlansPerScheduleRequest: 1000
+  ## @param workorder.maximumTestPlanTemplatesPerCreateRequest Maximum number of test plan templates per create test
+  ## plan templates request.
+  maximumTestPlanTemplatesPerCreateRequest: 1000
+  ## @param workorder.maximumTakePerQueryTestPlanTemplatesRequest Maximum query take per query test plan templates request.
+  maximumTakePerQueryTestPlanTemplatesRequest: 1000
+  ## @param workorder.maximumTestPlanTemplatesPerDeleteRequest Maximum number of test plan templates per delete test plan
+  ## templates request.
+  maximumTestPlanTemplatesPerDeleteRequest: 1000
+  ## @param workorder.maximumTestPlanTemplatesPerUpdateRequest Maximum number of test plan templates per update test plan
+  ## templates request.
+  maximumTestPlanTemplatesPerUpdateRequest: 1000
