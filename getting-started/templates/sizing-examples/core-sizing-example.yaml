@@ -169,7 +169,7 @@ userservices:
       ## Increasing this value will allow the refresh to run more quickly, at the cost of increased resource usage.
       maxConcurrency: 5
 
-## The Web Application Service hosts user-defined web applications and stores published notebooks and data space configurations.
+## The Web Application Service hosts user-defined web applications,  stores published notebooks, and data space configurations.
 webappservices:
   resources:
     requests:
