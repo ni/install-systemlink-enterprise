@@ -917,36 +917,37 @@ fileingestion:
       nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
-  ## Configure S3 access.
-  ##
-  s3:
-    ## Secret name for S3 credentials.
-    ##
-    secretName: "fileingestion-s3-credentials"
-    ## The name of the S3 bucket that the service should connect to.
-    ##
-    bucket: "systemlink-file-ingestion"
-    ## Set this to true to limit each user to a maximum of 1Gb of file storage.
-    ##
-    storageLimitsEnabled: false
-    ## S3 connection scheme.
-    ##
-    scheme: *s3Scheme
-    ## Set this value to connect to an external S3 instance.
-    ##
-    host: *s3Host
-    ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
-    ##
-    service: *s3ServiceName
-    ## S3 Port
-    ##
-    port: *s3Port
-    ## S3 Region
-    ##
-    region: *s3Region
-   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
-   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
-   ## individual rates configured here.
+  storage:
+    type: "s3"
+    ## Configures S3 access.
+    s3:
+      ## Secret name for S3 credentials.
+      ##
+      secretName: "fileingestion-s3-credentials"
+      ## The name of the S3 bucket that the service should connect to.
+      ##
+      bucket: "systemlink-file-ingestion"
+      ## Set this to true to limit each user to a maximum of 1Gb of file storage.
+      ##
+      storageLimitsEnabled: false
+      ## S3 connection scheme.
+      ##
+      scheme: *s3Scheme
+      ## Set this value to connect to an external S3 instance.
+      ##
+      host: *s3Host
+      ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+      ##
+      service: *s3ServiceName
+      ## S3 Port
+      ##
+      port: *s3Port
+      ## S3 Region
+      ##
+      region: *s3Region
+  ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
+  ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
+  ## individual rates configured here.
   ## Configure rate limits.
   ##
   rateLimits:
