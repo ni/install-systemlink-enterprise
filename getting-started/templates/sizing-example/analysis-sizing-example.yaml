@@ -83,6 +83,7 @@ argoworkflows:
           memory: 1024Mi
 
       ## @param argoworkflows.argo-workflows.server.replicas The number of server replicas to run.
+      ## This service does not have auto-scaling. Set this value according to the needs of your environment.
       replicas: 3
 
     ## Resources for the Wait container sidecar which is included with every execution worker.
