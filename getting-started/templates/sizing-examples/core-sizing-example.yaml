@@ -195,7 +195,7 @@ webappservices:
 
   ## @param webappservices.notebookMaximumUploadSizeInMegabytes The time between cleanups of web apps in seconds.
   webAppsCleanUpServiceDelaySeconds: "900"
-  ## @param webappservices.notebookMaximumUploadSizeInMegabytes The time in seconds before a webapp marked for deletion
+  ## @param webappservices.removeWebAppsCutoffSeconds The time in seconds before a webapp marked for deletion
   ## is permanently deleted.
   removeWebAppsCutoffSeconds: "86400"
 
