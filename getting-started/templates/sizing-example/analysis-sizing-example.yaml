@@ -1,0 +1,218 @@
+## Example configuration for tuning sizing parameters for services related to analysis and automation.
+
+## The JupyterHub IDE
+sl-jupyterhub:
+  jupyterhub:
+    ## Configuration for the JupyterHub coordinator pod.
+    hub:
+      resources:
+        requests:
+          memory: "6Gi"
+          cpu: "1000m"
+        limits:
+          memory: "6Gi"
+
+      ## Database configuration
+      db:
+        pvc:
+          ## @param sl_jupyterhub.jupyterhub.hub.db.pvc.storage Size of the volume where the JupyterHub database is stored.
+          storage: 1Gi
+
+      config:
+        ## jupyter_hub config reference: https://jupyterhub.readthedocs.io/en/stable/api/app.html
+        JupyterHub:
+          ## @param sl_jupyterhub.jupyterhub.hub.config.concurrent_spawn_limit The maximum number of concurrent users that
+          ## can be spawning at a time.
+          concurrent_spawn_limit: 5 # default: 100
+          ## @param sl_jupyterhub.jupyterhub.hub.config.active_server_limit the maximum number of concurrent servers that
+          ## can be active at a time.
+          active_server_limit: 30 # default: 0 - means that no limit is enforced
+
+    ## Configuration for the JupyterHub proxy pod.
+    proxy:
+      resources:
+        requests:
+          memory: "100Mi"
+          cpu: "100m"
+        limits:
+          memory: "100Mi"
+
+    ## Configuration for JupyterHub image puller pods.
+    prePuller:
+      resources:
+        requests:
+          memory: "100Mi"
+          cpu: "100m"
+        limits:
+          memory: "100Mi"
+
+    ## Configuration for individual user pods.
+    singleuser:
+      storage:
+        capacity: 1Gi
+      cpu:
+        limit:
+        guarantee: .5
+      memory:
+        ## NOTE: Size here is in "G" and not "Gi".
+        limit: 2G
+        guarantee: 2G
+
+## Argo workflows is used to schedule notebook executons.
+argoworkflows:
+  argo-workflows:
+    ## Argo workflows controller configuration
+    controller:
+      resources:
+        requests:
+          cpu: 1
+          memory: 4096Mi
+        limits:
+          memory: 4096Mi
+
+      ## @param argoworkflows.argo-workflows.controller.parallelism The maximum number of workflows that can run in parallel.
+      parallelism: &workflowParallelism 300
+
+    ## Argo Workflows Server configuration
+    server:
+      resources:
+        requests:
+          cpu: 250m
+          memory: 1024Mi
+        limits:
+          memory: 1024Mi
+
+      ## @param argoworkflows.argo-workflows.server.replicas The number of server replicas to run.
+      ## This service does not have auto-scaling. Set this value according to the needs of your environment.
+      replicas: 3
+
+    ## Resources for the Wait container sidecar which is included with every execution worker.
+    executor:
+      resources:
+        requests:
+          cpu: 100m
+          memory: 192Mi
+        limits:
+          memory: 192Mi
+
+## The notebook execution service runs Jupyter notebooks and stores artifacts created by notebook execution runs.
+nbexecservice:
+  resources:
+    requests:
+      memory: "1024Mi"
+      cpu: "250m"
+    limits:
+      memory: "1024Mi"
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+  ## @param nbexecservice.maxNumberOfWorkflowsToSchedule The number of workflows that can be scheduled in parallel.
+  maxNumberOfWorkflowsToSchedule: *workflowParallelism
+
+  ## @param nbexecservice.maxRequestSizeKB The maximum request size in kilobytes. This is the maximum size of a request
+  ## body that the server will accept. Does not apply for artifact uploads.
+  maxRequestSizeKB: "16384"
+
+  ## @param nbexecservice.daysToPersistExecutions The days an executions should be persisted in the db. It is computed from the
+  ## execution's started_at time, so for safety it should be a minimum of 2. If the execution takes a day to complete, it shouldn't
+  ## be deleted from the DB before it actually completed.
+  daysToPersistExecutions: 8
+
+  ## Artifact storage configuration
+  artifacts:
+    ## @param nbexecservice.artifacts.maxTTLDaysForArtifacts The maximum TTL that can be specified for an artifact uploaded to
+    ## the artifacts API.
+    maxTTLDaysForArtifacts: 365
+
+  ## Argo task configuration
+  argo:
+    workflow:
+      run:
+        ## Default resource allocation for execution pods.
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: 2Gi
+          limits:
+            memory: 2Gi
+        ## Resource profiles enable different resource allocations for each execution. They can be specified in the API call creating an execution.
+        ## Profile names are fixed and cannot be modified.
+        ## To ensure that the scheduling of non-execution pods is not impacted, refer to node-selectors.yaml to configure dedicated nodes for execution pods.
+        ## In cloud environments, limit the maximum number of nodes to avoid unexpected costs.
+        ## To reserve capacity for resource profiles with high resource demands, set a lower maximum number of workflows to schedule.
+        resourceProfiles:
+          low:
+            requests:
+              cpu: "0.1"
+              memory: 4Gi
+            limits:
+              memory: 4Gi
+          medium:
+            requests:
+              cpu: "0.1"
+              memory: 8Gi
+            limits:
+              memory: 8Gi
+          high:
+            requests:
+              cpu: "0.1"
+              memory: 16Gi
+            limits:
+              memory: 16Gi
+
+## The notebook parsing service can parse a Jupyter notebook and extract metadata for use by other services.
+nbparsingservice:
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 4
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+## The Routine Event Trigger service triggers notebook execution based on preconfigured events.
+routineeventtrigger:
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      memory: 512Mi
+
+  ## @param routineeventtrigger.replicaCount This service does not support auto-scaling. This value configures the
+  ## number of replicas to run.
+  replicaCount: 2
+
+## The Routine Executor Service runs notebooks that were automatically started by way of a a trigger or schedule.
+routineexecutor:
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      memory: 512Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+## The Routine Schedule Trigger Service triggers the execution of notebooks on a pre-defined schedule
+routinescheduletrigger:
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      memory: 512Mi
+
+  ## @param routinescheduletrigger.replicaCount This service does not support auto-scaling. This value configures the
+  ## number of replicas to run.
+  replicaCount: 2
