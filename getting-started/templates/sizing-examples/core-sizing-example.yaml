@@ -1,0 +1,259 @@
+# Example configuration for tuning sizing configuration for the Core SystemLink Enterprise services.
+
+## The Comments Service allows comments to be recorded on resources in the SystemLink UI.
+comments:
+  limits:
+    memory: 320Mi
+  requests:
+    cpu: 250m
+    memory: 320Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  ## @param comments.commentMessageSizeLimitCharacters Maximum number of characters supported by a comment message.
+  commentMessageSizeLimitCharacters: 10000
+
+  ## @param comments.maximumCommentsPerCreateRequest Maximum number of comments supported per create comments request.
+  maximumCommentsPerCreateRequest: 1000
+
+  ## @param comments.maximumCommentsPerDeleteRequest Maximum number of comments supported per delete comments request.
+  maximumCommentsPerDeleteRequest: 1000
+
+  ## @param comments.maximumCommentsPerResource Maximum number of comments supported per resource.
+  maximumCommentsPerResource: 1000
+
+  ## @param comments.maximumNumberOfCommentsToQuery Maximum number of comments to query.
+  maximumNumberOfCommentsToQuery: 1000
+
+  ## @param comments.maximumMentionedUsersPerComment Maximum number of mentioned users supported per comment.
+  maximumMentionedUsersPerComment: 25
+
+## The Dashboard Host allows Grafana dashboards to be created and viewed in the SystemLink UI
+dashboardhost:
+  ## Grafana container resources and autoscaling configuration
+  grafana:
+    resources:
+      requests:
+        cpu: 1
+        memory: 512Mi
+      limits:
+        memory: 512Mi
+    autoscaling:
+      minReplicas: 2
+      maxReplicas: 10
+      metrics:
+      - type: Resource
+        resource:
+          name: cpu
+          target:
+            type: Utilization
+            averageUtilization: 60
+      - type: Resource
+        resource:
+          name: memory
+          target:
+            type: Utilization
+            averageUtilization: 70
+    ## Sidecar container resources
+    sidecar:
+      resources:
+        requests:
+          cpu: 50m
+          memory: 100Mi
+        limits:
+          memory: 100Mi
+  ## Access control synchronization job resources
+  accessControlMirroring:
+    resources:
+      requests:
+        cpu: 60m
+        memory: 256Mi
+      limits:
+        memory: 256Mi
+
+## The Dynamic Form Fields service allows dynamic controls to be configured in the SystemLink UI.
+dynamicformfields:
+  resources:
+    limits:
+      memory: 320Mi
+    requests:
+      cpu: 250m
+      memory: 320Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+## The Service Registry hosts static configuration for the SystemLink UI and publishes
+## information about the health of other services.
+serviceregistry:
+  resources:
+    requests:
+      memory: 300Mi
+      cpu: 64m
+    limits:
+      memory: 300Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+## The session manager service translates workspace configuration into the permissions available to logged in users.
+sessionmanager:
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 50m
+    limits:
+      memory: 256Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 80
+
+## The user data services stores per-user configuration settings for the SystemLink UI.
+userdata:
+  resources:
+    limits:
+      ## Memory limit should be increased to 250Mi for more than 100 users.
+      memory: 150Mi
+    requests:
+      cpu: 50m
+      ## Memory request should be increased to 250Mi for more than 100 users.
+      memory: 150Mi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+## User Services stores account information and configured permissions for SystemLink users.
+userservices:
+  resources:
+    requests:
+      memory: 350Mi
+      cpu: 250m
+    limits:
+      memory: 350Mi
+  autoscaling:
+    minReplicas: 4
+    ## Increase the replica count to support a larger client load.
+    maxReplicas: 15
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+
+  ## To improve performance, the user service maintains a cache of API key authorizations. This configuration
+  ## controls the behavior of that cache.
+  authorizationCache:
+    ## @param userservices.authorizationCache.expirationTimeSeconds The number of seconds after the last key access
+    ## when the authorization result will remain in the cache.
+    ## DEFAULT: 5 minutes
+    expirationTimeSeconds: 300
+    ## A subset of the cache will be refreshed in the background at this frequency, prioritizing recently accessed keys.
+    refresh:
+      ## @param userservices.authorizationCache.refresh.frequencySeconds The frequency at which the cache refresh runs.
+      ## Should be smaller than `expirationTimeSeconds`.
+      ## DEFAULT: 1 minute
+      frequencySeconds: 60
+      ## @param userservices.authorizationCache.refresh.batchSize The number of keys updated in each refresh period.
+      ## Increasing this value will increase accuracy of the cache, at
+      ## the cost of increased resource usage.
+      batchSize: 250
+      ## @param userservices.authorizationCache.refresh.maxConcurrency The number of current tasks used to implement the refresh.
+      ## Increasing this value will allow the refresh to run more quickly, at the cost of increased resource usage.
+      maxConcurrency: 5
+
+## The Web Application Service hosts user-defined web applications,  stores published notebooks, and data space configurations.
+webappservices:
+  resources:
+    requests:
+      cpu: 500m
+      memory: 2Gi
+    limits:
+      memory: 2Gi
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+  ## This shows an example of configuring an nginx ingress to support large uploads.
+  ingress:
+    annotations:
+      ## Increase the limit on the size of requests sent through the ingress.
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+
+  ## @param webappservices.notebookMaximumUploadSizeInMegabytes Maximum size of a notebook that can be uploaded
+  ## using notebook APIs in MB.
+  notebookMaximumUploadSizeInMegabytes: "10"
+
+  ## @param webappservices.notebookMaximumUploadSizeInMegabytes The time between cleanups of web apps in seconds.
+  webAppsCleanUpServiceDelaySeconds: "900"
+
+  ## @param webappservices.removeWebAppsCutoffSeconds The time in seconds before a webapp marked for deletion
+  ## is permanently deleted.
+  removeWebAppsCutoffSeconds: "86400"
+
+## The Web Server acts as an authentication proxy for the SystemLink UI.
+webserver:
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 150m
+    limits:
+      memory: 256Mi
+  autoscaling:
+    minReplicas: 4
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  ## Redis container resources
+  redis:
+    resources:
+      requests:
+        cpu: 128m
+        memory: 100Mi
+      limits:
+        ## The following will support >4000 active and buffered sessions.
+        memory: 100Mi
+    persistence:
+      ## If increasing memory, volume size should also be increased.
+      size: 150Mi
+
+  ## This shows an example of configuring an nginx ingress to support heavy UI usage with
+  ## long-running queries and large uploads.
+  ## Different annotations will be required if a different ingress is in use.
+  ingress:
+    annotations:
+      ## Increase the read timeout from the nginx default to give proxied services more time to respond to requests.
+      ## This should be configured to allow for the longest expected query time.
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "90"
+      ## Increase the limit on the size of requests sent through the ingress.
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+
+  ## Configure rate limiting for requests that pass through an instance of this web server. Each replica of this server
+  ## applies its own per-user limit. So, with load balancing, the effective rate as seen by the user will be much higher
+  ## than the individual limits configured here. It is recommended to only modify these limits if issues are observed.
+  rateLimit:
+    ## The following limits are applied per unique user.
+    byUser:
+      ## @param webserver.rateLimit.byUser.apiRequestsPerSecond Maximum rate for requests to a SystemLink API. This limit
+      ## only applies to requests made through the global.hosts address. This generally applies only to requests made by
+      ## a web browser interacting with the SystemLink API. Direct access via the global.apiHosts address are not affected
+      ## by this setting.
+      apiRequestsPerSecond: "10"
+
+  ## Configure additional limits for requests that pass through an instance of this web server.
+  requestLimits:
+    ## The following limits on the body size of a request are applied per media type.
+    ## Declare a media type compliant with RFC6838. Types without a forward slash "/" are considered file extensions
+    ## and normalized to a registered media type.
+    bodySize:
+      ## @param webserver.requestLimits.bodySize.json Limit for JSON requests.
+      json: "500KB"
