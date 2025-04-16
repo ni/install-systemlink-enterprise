@@ -1,11 +1,11 @@
 # SystemLink Enterprise 2025-04 Release Notes
 
-The 2025-04 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-04 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## Upgrading from the 2025-03 to the 2025-04
 
@@ -13,29 +13,66 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- dataframeservice:1.16.43
-  - Attempting to create a data table with more than 2500 columns will return a 400 Bad Request error. Existing data tables are unaffected. This limit can be configured by setting the Helm value "dataframeservice.ingestion.maxColumnCount".
+- Schedule a test plan to a fixture under a system. A lab might refer to a
+  fixture as a slot, a socket, or a channel. For more information, refer to
+  Using a Fixture in a Test Plan.
+- Preview common plain text file formats. For more information, refer to File
+  Formats Supported in File Preview.
+- Save statistical insights from the analysis of parametric data in a data
+  space.
+- Manage alarm instances in the new Alarms application.
+- Added support for Results and Steps in Test Monitor Python library.
+- Filter files by ID in the File Details page.
+- Configure file properties to display in the File Details page.
+
+- DataFrame Service
+  - Attempting to create a data table with more than 2500 columns will return a
+    400 Bad Request error. Existing data tables are unaffected. This limit can
+    be configured by setting the Helm value
+    `dataframeservice.ingestion.maxColumnCount`.
+- Dynamic form fields support tables.
 
 ## Helm Chart Breaking Changes
 
-- Reduced the default value for autoscaling.maxReplicas from 10 to 4 across all UI containers. This better reflects the scaling requirements of these containers and prevents a badly configured container from consuming too many resources. Affected containers are alarmsui, assetui, dashboardui, executionsui, feedsui, filesui, jupyterui, labmanagementui, landingpageui, routinesui, systemstatesui, systemsui, tagsui, testinsightsui, webapphostui.
+- Reduced the default value for `autoscaling.maxReplicas` from 10 to 4 across
+  all UI containers. This better reflects the scaling requirements of these
+  containers and prevents a badly configured container from consuming too many
+  resources. Affected containers are `alarmsui`, `assetui`, `dashboardui`,
+  executionsui, feedsui, filesui, jupyterui, labmanagementui, landingpageui,
+  routinesui, `systemstatesui`, `systemsui`, `tagsui`, `testinsightsui`,
+  `webapphostui`.
 - `dataframeservice:1.16.43`
-  - S3 settings are now under 'storage'. The previously used s3 settings under 'dataframeservice' will continue to work, but are now deprecated. It is recommended to edit the configurations files:
-    - [PR#251](https://github.com/ni/install-systemlink-enterprise/pull/251)
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L699)
-  - Added a limit for the number of columns a data table may have, which defaults to 2500. The limit can be changed by setting the dataframeservice.ingestion.maxColumnCount Helm value. As part of this change, the default value of dataframeservice.sldremio.extraStartParams has changed to set dremio.debug.sysopt.store.plugin.max_metadata_leaf_columns and dremio.debug.sysopt.store.plugin.max_leaf_columns_scanned to 6400. There is no bad effect to leaving the values in extraStartParams at the old 2600 as long as the default maxColumnCount of 2500 is used. Increasing the max column count beyond 2595 will require using the new extraStartParams value.
+  - S3 settings are now under `storage`. The previously used S3 settings under
+    `dataframeservice` will continue to work, but are now deprecated. It is
+    recommended to edit the configurations files:
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L699)
+  - Added a limit for the number of columns a data table may have, which
+    defaults to 2500. The limit can be changed by setting the
+    `dataframeservice.ingestion.maxColumnCount` Helm value. As part of this
+    change, the default value of `dataframeservice.sldremio.extraStartParams`
+    has changed to set
+    `dremio.debug.sysopt.store.plugin.max_metadata_leaf_columns` and
+    `dremio.debug.sysopt.store.plugin.max_leaf_columns_scanned` to 6400. There
+    is no adverse effect to leaving the values in `extraStartParams` at the
+    previous value of 2600 if the default `maxColumnCount` of 2500 is used.
+    Increasing the max column count beyond 2595 will require increasing the
+    `extraStartParam` value.
 - `nbexecservice:0.25.43`
-  - S3 settings are now under 'storage'. The previously used s3 settings under 'nbexecservice' will continue to work, but are now deprecated. It is recommended to edit the configurations files:
-    - [PR252](https://github.com/ni/install-systemlink-enterprise/pull/252)
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L1048)
+  - S3 settings are now under `storage`. The previously used S3 settings under
+    `nbexecservice` will continue to work, but are now deprecated. It is
+    recommended to edit the configurations files.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L1048)
 - `helium-fileingestionservices:1.14.25`
-  - S3 settings are now under 'storage'. The previously used s3 settings under 'fileingestion' will continue to work, but are now deprecated. It is recommended to edit the configurations files:
-    - [PR#253](https://github.com/ni/install-systemlink-enterprise/pull/253)
-    - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L920)
+  - S3 settings are now under `storage`. The previously used S3 settings under
+    `fileingestion` will continue to work, but are now deprecated. It is
+    recommended to edit the configurations files.
+    - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L920)
 - `tagsui:0.20.38`
-  - Tag paths and string values now have a limit of 1024 characters each. Existing tags won't be affected, but creating or updating new tags after this with paths or string values greater than 1024 characters will result in validation errors. The limits are Helm configurable: `tags.tagLimits.pathLength: 1024` and `tags.tagLimits.stringValueLength: 1024`.
-- `dynamicformfields:0.5.45`
-  - Added new field type table. Table values can be stored through the new /nidynamicformfields/v1/tables API.
+  - Tag paths and string values now have a limit of 1024 characters. Existing
+    tags are not affected, but creating or updating new tags paths or string
+    values greater than 1024 characters will result in validation errors. This
+    limit can be configured by setting the Helm values
+    `tags.tagLimits.pathLength` and `tags.tagLimits.stringValueLength`.
 
 ## Upgrade Considerations
 
