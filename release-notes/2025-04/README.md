@@ -7,10 +7,6 @@ credentials to access these artifacts. If you are not upgrading from the
 previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
-## Upgrading from the 2025-03 to the 2025-04
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
 - Schedule a test plan to a fixture under a system. A lab might refer to a fixture as a slot, a socket, or a channel.
