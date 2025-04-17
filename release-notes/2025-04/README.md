@@ -13,16 +13,14 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- Schedule a test plan to a fixture under a system. A lab might refer to a
-  fixture as a slot, a socket, or a channel. For more information, refer to
-  Using a Fixture in a Test Plan.
-- Preview common plain text file formats. For more information, refer to File
-  Formats Supported in File Preview.
-- Save statistical insights from the analysis of parametric data in a data
-  space.
+- Schedule a test plan to a fixture under a system. A lab might refer to a fixture as a slot, a socket, or a channel.
+- Preview common plain text file formats.
+- Save statistical insights from the analysis of parametric data in a data space.
 - Manage alarm instances in the new Alarms application.
 - Added support for Results and Steps in Test Monitor Python library.
-- Filter files by ID in the File Details page.
+- Add virtual systems. You can then manually or programmatically manage any data and assets associated with the virtual system.
+- Retry and run new notebook executions from the Executions page.
+- Filter files by file ID.
 - Configure file properties to display in the File Details page.
 
 - DataFrame Service
