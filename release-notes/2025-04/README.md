@@ -9,7 +9,7 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- Schedule a test plan to a fixture under a system. A lab might refer to a fixture as a slot, a socket, or a channel. 
+- Schedule a test plan to a fixture under a system. A lab might refer to a fixture as a slot, a socket, or a channel.
 - Preview common plain text file formats.
 - Save statistical insights from the analysis of parametric data in a data space.
 - Manage alarm instances by navigating to **Overview** » **Alarms**.
