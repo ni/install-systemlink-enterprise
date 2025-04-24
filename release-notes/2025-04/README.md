@@ -97,7 +97,7 @@ RabbitMQ dependency for each released version of SystemLink Enterprise. For deta
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.36.61`
+**Top Level Helm Chart:** `systemlink 0.36.63`
 
 **Admin Helm Chart:** `systemlink-admin 0.36.8`
 
@@ -168,11 +168,11 @@ labmanagementui:0.15.97
 
 landingpageui:0.24.35
 
-nbexec-execution-helpers:0.25.17
+nbexec-execution-helpers:0.25.21
 
-nbexec-notebook-runner:0.25.12
+nbexec-notebook-runner:0.25.15
 
-nbexecservice:0.25.43
+nbexecservice:0.25.45
 
 nbparsingservice:0.24.17
 
@@ -213,6 +213,7 @@ systemsstateservice:0.14.11
 systemsstatesui:0.13.44
 
 systemsui:0.25.80
+
 
 tageventprocessor:0.23.25
 
