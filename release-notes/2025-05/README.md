@@ -59,18 +59,18 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `0.37.71`
+**Top Level Helm Chart:** `0.37.74`
 
 **Admin Helm Chart:** `0.37.2`
 
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.12.62
-alarmservice:0.12.62
+alarmservice-routine-executor:0.12.64
+alarmservice:0.12.64
 alarmsui:0.22.32
 assetservice:0.23.56
-assetui:0.22.64
+assetui:0.22.65
 comments:0.21.22
 dashboardsui:0.25.39
 dataframeservice-nessie:1.17.62
@@ -80,7 +80,7 @@ dynamicformfields:0.6.34
 executionsui:0.25.40
 feedservice:0.14.39
 feedsui:0.13.43
-filesui:0.26.17
+filesui:0.26.18
 grafana-auth-proxy:0.21.7
 grafana-plugins:3.56.1
 grafana-rbac-integrator:0.25.22
