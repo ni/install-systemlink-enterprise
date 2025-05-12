@@ -24,9 +24,9 @@ required configuration changes.
 - Added support for results and steps in the Test Monitor Python library.
 - Dynamic form fields support tables.
 - DataFrame Service
-  - Attempting to create a data table with more than 2500 columns returns a `400
-    Bad Request` error. This update does not affect existing data tables. This
-    limit can be configured by setting the Helm value
+  - Attempting to create a data table with more than 2500 columns returns a
+    `400 Bad Request` error. This update does not affect existing data tables.
+    This limit can be configured by setting the Helm value
     `dataframeservice.ingestion.maxColumnCount`.
 
 ## Helm Chart Breaking Changes
@@ -71,17 +71,20 @@ required configuration changes.
     `nbexecservice` will continue to work, but are now deprecated. It is
     recommended to edit the configurations files.
     - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L1048)
-- `helium-fileingestionservices:1.14.25`
+- `fileingestion:1.14.25`
   - S3 settings are now under `storage`. The previous S3 settings under
     `fileingestion` will continue to work, but are now deprecated. It is
     recommended to edit the configurations files.
     - [View this configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-values.yaml#L920)
-- `tagsui:0.20.38`
+- `tags:0.23.25`
   - Tag paths and string values now have a limit of 1024 characters. This new
     limit does not affect existing tags. However, creating or updating tags
     paths or string values greater than 1024 characters will result in
     validation errors. You can configure this limit by setting the Helm values
     `tags.tagLimits.pathLength` and `tags.tagLimits.stringValueLength.`
+  - This update includes a new required whitelisted API key secret. This secret
+    is used to retrieve routine information for executing Tag Alarm routines.
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-04/getting-started/templates/systemlink-secrets.yaml#L170)
 
 ## Upgrade Considerations
 
