@@ -16,9 +16,9 @@ all required configuration changes.
 - `dataframeservice:1.17.62`
   - The filter given to the query-tables API is now limited to 20,000 characters. Filters that contain a large number of chained operators such as `or` may receive a 400 Bad Request response with an error message indicating the filter is too complex.
 - `alarmservice:0.12.64`
-  -  New secret required for alarmservic-apikey. Refer to Required Secrets in help.
-  -  New secret required for alarmserviceroutineexecutor-apikey. Refer to Required Secrets in help.
-  -  Alarms service now uses RabbitMQ credentials secret, typically shared by multiple charts. Refer to Required Secrets in help.
+  - New secret required for alarmservic-apikey. Refer to Required Secrets in help.
+  - New secret required for alarmserviceroutineexecutor-apikey. Refer to Required Secrets in help.
+  - Alarms service now uses RabbitMQ credentials secret, typically shared by multiple charts. Refer to Required Secrets in help.
 
 ## Helm Chart Breaking Changes
 
