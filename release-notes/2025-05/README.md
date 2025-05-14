@@ -1,8 +1,6 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
-
 # SystemLink Enterprise 2025-05 Release Notes
 
-The release_year-release_month release for SystemLink Enterprise has been
+The 2025-05 release for SystemLink Enterprise has been
 published to <https://downloads.artifacts.ni.com>. This update includes new
 features, bug fixes, and security updates. Work with your account representative
 to obtain credentials to access these artifacts. If you are not upgrading from
@@ -15,14 +13,18 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `dataframeservice:1.17.62`
+  - The filter given to the query-tables API is now limited to 20,000 characters. Filters that contain a large number of chained operators such as `or` may receive a 400 Bad Request response with an error message indicating the filter is too complex.
+- `alarmservice:0.12.64`
+  -  New secret required for alarmservic-apikey. Refer to Required Secrets in help.
+  -  New secret required for alarmserviceroutineexecutor-apikey. Refer to Required Secrets in help.
+  -  Alarms service now uses RabbitMQ credentials secret, typically shared by multiple charts. Refer to Required Secrets in help.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `dataframeservice:1.17.62`
+  - The dataframeservice Helm values under `ingestion.s3StreamPool` have been replaced with the values under `ingestion.streamPool`. Setting the old values will result in an error from Helm.
+  - To migrate to the new values, set 1ingestion.streamPool.maximumPooledStreams1 to the old `ingestion.s3StreamPool.maximumPooledStreams` value, then set `ingestion.streamPool.bufferSize` to the product of the old `ingestion.s3StreamPool.blocksPerBuffer` and `ingestion.s3StreamPool.blockSize` values. For example, the old default values were blocksPerBuffer=3 and blockSize=5MiB, so the new default value is bufferSize=15MiB.
 
 ## Upgrade Considerations
 
