@@ -47,23 +47,19 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-05 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-05/release-notes/2025-05/closed-bugs-sle-2025-05.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-05/release-notes/2025-05/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-05/release-notes/2025-05/notices)
 
 ## Versions
 
-**Top Level Helm Chart:** `0.37.74`
+**Top Level Helm Chart:** `0.37.80`
 
-**Admin Helm Chart:** `0.37.2`
+**Admin Helm Chart:** `0.37.3`
 
 ### NI Containers
 
@@ -72,7 +68,7 @@ alarmservice-routine-executor:0.12.64
 alarmservice:0.12.64
 alarmsui:0.22.32
 assetservice:0.23.56
-assetui:0.22.65
+assetui:0.22.66
 comments:0.21.22
 dashboardsui:0.25.39
 dataframeservice-nessie:1.17.62
@@ -86,8 +82,8 @@ filesui:0.26.18
 grafana-auth-proxy:0.21.7
 grafana-plugins:3.56.1
 grafana-rbac-integrator:0.25.22
-helium-dataservices-mongomigration:0.24.21
-helium-dataservices:0.24.21
+helium-dataservices-mongomigration:0.24.22
+helium-dataservices:0.24.22
 helium-fileingestionservices:1.15.12
 helium-salt-master:1.22.17
 helium-serviceregistry:0.29.15
@@ -99,7 +95,7 @@ helium-webappservices:0.27.27
 helium-webserver:0.36.22
 jupyter-notebook-userpod:2.16.7
 jupyterui:0.25.32
-labmanagementui:0.16.82
+labmanagementui:0.16.83
 landingpageui:0.25.37
 nbexec-execution-helpers:0.26.33
 nbexec-notebook-runner:0.26.30
@@ -124,10 +120,10 @@ sysmgmtevent:0.26.15
 systemsmanagementservice:0.25.20
 systemsstateservice:0.15.12
 systemsstatesui:0.14.52
-systemsui:0.26.76
-tageventprocessor:0.24.21
+systemsui:0.26.78
+tageventprocessor:0.24.22
 tagsui:0.21.32
-testinsightsui:0.25.41
+testinsightsui:0.25.42
 testmonitorservice:0.34.26
 userdata:0.25.18
 userservice-setup:0.30.11
