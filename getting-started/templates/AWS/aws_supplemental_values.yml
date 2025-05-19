@@ -44,6 +44,11 @@ dashboardhost:
     annotations:
       alb.ingress.kubernetes.io/healthcheck-path: "/api/health"
 
+dynamicformfields:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/nidynamicformfields/up"
+
 testmonitorservice:
   ingress:
     annotations:
