@@ -57,7 +57,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `0.37.80`
+**Top Level Helm Chart:** `0.37.84`
 
 **Admin Helm Chart:** `0.37.3`
 
@@ -82,10 +82,10 @@ filesui:0.26.18
 grafana-auth-proxy:0.21.7
 grafana-plugins:3.56.1
 grafana-rbac-integrator:0.25.22
-helium-dataservices-mongomigration:0.24.22
-helium-dataservices:0.24.22
+helium-dataservices-mongomigration:0.24.23
+helium-dataservices:0.24.23
 helium-fileingestionservices:1.15.12
-helium-salt-master:1.22.17
+helium-salt-master:1.22.18
 helium-serviceregistry:0.29.15
 helium-taghistoriandataretention:0.20.20
 helium-taghistorianmongomigration:0.20.20
@@ -121,7 +121,7 @@ systemsmanagementservice:0.25.20
 systemsstateservice:0.15.12
 systemsstatesui:0.14.52
 systemsui:0.26.78
-tageventprocessor:0.24.22
+tageventprocessor:0.24.23
 tagsui:0.21.32
 testinsightsui:0.25.42
 testmonitorservice:0.34.26
