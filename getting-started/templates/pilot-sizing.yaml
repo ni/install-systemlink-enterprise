@@ -168,6 +168,7 @@ dataframeservice:
   rateLimits:
     ingestion:
       # Number of concurrent requests that a single pod can serve for ingesting data.
+      # Subsequent requests will be put in a queue.
       requestsLimit: 2
       # Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       # the pod will return a 429 Error code.
