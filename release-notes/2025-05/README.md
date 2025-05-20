@@ -1,11 +1,11 @@
 # SystemLink Enterprise 2025-05 Release Notes
 
-The 2025-05 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-05 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## Upgrading from the 2025-04 to the 2025-05
 
@@ -13,18 +13,37 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
+- Use routines to create tag threshold alarms and to send email notifications.
+  For more information, refer to Monitoring System Health with Alarms.
+- View the details of a test plan fixture while scheduling a test plan. For more
+  information, refer to Viewing Scheduled Test Plans.
 - `dataframeservice:1.17.62`
-  - The filter given to the query-tables API is now limited to 20,000 characters. Filters that contain a large number of chained operators such as `or` may receive a 400 Bad Request response with an error message indicating the filter is too complex.
+  - The filter given to the query-tables API is now limited to 20,000
+    characters. Filters that contain a large number of chained operators such as
+    `or` may receive a 400 Bad Request response with an error message indicating
+    the filter is too complex.
 - `alarmservice:0.12.64`
-  - New secret required for alarmservic-apikey. Refer to Required Secrets in help.
-  - New secret required for alarmserviceroutineexecutor-apikey. Refer to Required Secrets in help.
-  - Alarms service now uses RabbitMQ credentials secret, typically shared by multiple charts. Refer to Required Secrets in help.
+  - New secret required for alarmservic-apikey. Refer to Required Secrets in
+    help.
+  - New secret required for alarmserviceroutineexecutor-apikey. Refer to
+    Required Secrets in help.
+  - Alarms service now uses RabbitMQ credentials secret, typically shared by
+    multiple charts. Refer to Required Secrets in help.
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice:1.17.62`
-  - The dataframeservice Helm values under `ingestion.s3StreamPool` have been replaced with the values under `ingestion.streamPool`. Setting the old values will result in an error from Helm.
-  - To migrate to the new values, set `ingestion.streamPool.maximumPooledStreams` to the old `ingestion.s3StreamPool.maximumPooledStreams` value, then set `ingestion.streamPool.bufferSize` to the product of the old `ingestion.s3StreamPool.blocksPerBuffer` and `ingestion.s3StreamPool.blockSize` values. For example, the old default values were blocksPerBuffer=3 and blockSize=5MiB, so the new default value is bufferSize=15MiB.
+  - The dataframeservice Helm values under `ingestion.s3StreamPool` have been
+    replaced with the values under `ingestion.streamPool`. Setting the old
+    values will result in an error from Helm.
+  - To migrate to the new values, set
+    `ingestion.streamPool.maximumPooledStreams` to the old
+    `ingestion.s3StreamPool.maximumPooledStreams` value, then set
+    `ingestion.streamPool.bufferSize` to the product of the old
+    `ingestion.s3StreamPool.blocksPerBuffer` and
+    `ingestion.s3StreamPool.blockSize` values. For example, the old default
+    values were blocksPerBuffer=3 and blockSize=5MiB, so the new default value
+    is bufferSize=15MiB.
 
 ## Upgrade Considerations
 
