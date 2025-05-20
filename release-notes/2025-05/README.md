@@ -24,7 +24,7 @@ all required configuration changes.
 
 - `dataframeservice:1.17.62`
   - The dataframeservice Helm values under `ingestion.s3StreamPool` have been replaced with the values under `ingestion.streamPool`. Setting the old values will result in an error from Helm.
-  - To migrate to the new values, set 1ingestion.streamPool.maximumPooledStreams1 to the old `ingestion.s3StreamPool.maximumPooledStreams` value, then set `ingestion.streamPool.bufferSize` to the product of the old `ingestion.s3StreamPool.blocksPerBuffer` and `ingestion.s3StreamPool.blockSize` values. For example, the old default values were blocksPerBuffer=3 and blockSize=5MiB, so the new default value is bufferSize=15MiB.
+  - To migrate to the new values, set `ingestion.streamPool.maximumPooledStreams` to the old `ingestion.s3StreamPool.maximumPooledStreams` value, then set `ingestion.streamPool.bufferSize` to the product of the old `ingestion.s3StreamPool.blocksPerBuffer` and `ingestion.s3StreamPool.blockSize` values. For example, the old default values were blocksPerBuffer=3 and blockSize=5MiB, so the new default value is bufferSize=15MiB.
 
 ## Upgrade Considerations
 
