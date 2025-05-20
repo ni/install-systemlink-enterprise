@@ -157,11 +157,20 @@ dataframeservice:
       # Values that are too small may produce parquet files that can't be queried. Larger
       # values require additional memory.
       rowGroupSize: "125000"
+  
+  # Limits the body size for requests. The ingress may also impose a request body size
+  # limit, which should be set to the same value. When modifying ingestion.s3Backend.rowGroupSize,
+  # make a proportional change to this value.
+  # Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
+  requestBodySizeLimit: 32MiB
 
   rateLimits:
     ingestion:
       # Number of concurrent requests that a single pod can serve for ingesting data.
       requestsLimit: 2
+      # Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
+      # the pod will return a 429 Error code.
+      queueSize: 2
 
   queryEngine:
     workloadManagement:
