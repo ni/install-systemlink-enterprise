@@ -156,11 +156,12 @@ dataframeservice:
       # Approximate number of values to buffer into memory for writing to a parquet row group.
       # Values that are too small may produce parquet files that can't be queried. Larger
       # values require additional memory.
+      # When adjusting this value, adjust requestBodySizeLimit proportionally.
       rowGroupSize: "125000"
   
   # Limits the body size for requests. The ingress may also impose a request body size
-  # limit, which should be set to the same value. When modifying ingestion.s3Backend.rowGroupSize,
-  # make a proportional change to this value.
+  # limit, which should be set to the same value. 
+  # When modifying ingestion.s3Backend.rowGroupSize, make a proportional change to this value.
   # Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 32MiB
 
