@@ -29,8 +29,37 @@ dataframeservice:
       targetCPUUtilizationPercentage: 60
       targetMemoryUtilizationPercentage: 80
 
+  # Limits the body size for requests. The ingress may also impose a request body size
+  # limit, which should be set to the same value. 
+  # When modifying ingestion.s3Backend.rowGroupSize, make a proportional change to this value.
+  # Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
+  requestBodySizeLimit: 256MiB
+
   ## Configuration for DataFrame writes
   ingestion:
+    # Configuration for the pool of streams used to upload table data to storage such as S3 or
+    # Azure Blob Storage.
+    streamPool:
+      # Size of each buffer in the stream pool. This value must be greater than zero.
+      # When "storage.type" is "s3", this value must be greater or equal to "storage.s3.minimumPartSize".
+      # The product of this value and "maximumPooledStreams", must be less than the memory requested for
+      # the service in "resources.requests.memory".
+      bufferSize: 15MiB
+      # Maximum number of streams that will be pooled.
+      # The recommendation is to provide the same number of pool streams as the limit of requests that can be processed
+      # in "rateLimits.ingestion.requestsLimit".
+      # The product of this value and "bufferSize", must be less than the memory requested for
+      # the service in "resources.requests.memory".
+      # WARNING: Setting this value 0 would leave the pool unbounded, which could cause high memory usage.
+      maximumPooledStreams: 20
+    # Configuration for the S3 ingestion backend.
+    s3Backend:
+      # Approximate number of values to buffer into memory for writing to a parquet row group.
+      # Values that are too small may produce parquet files that can't be queried. Larger
+      # values require additional memory.
+      # When adjusting this value, adjust requestBodySizeLimit proportionally.
+      rowGroupSize: "1000000"
+
     ## @param dataframeservice.ingestion.maxColumnCount The maximum number of columns that a data table may be created with.
     ## Attempting to create a table with more columns than the specified limit will result in a 400 Bad Request response.
     maxColumnCount: 2500
@@ -41,7 +70,6 @@ dataframeservice:
     ## number of columns, the resources available to Dremio, and the number of executors.
     ## The default is 1 billion rows. This value must be greater than zero and less than 2147483648.
     maxRowCount: "1000000000"
-
 
   ## Dremio configuration
   sldremio:
