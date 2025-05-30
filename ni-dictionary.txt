@@ -492,7 +492,6 @@ Suriya
 Suseendran
 Swashbuckle
 SWIF
-sysmgmtevent
 SystemLink
 SYSTEMLINK
 systemsstate
