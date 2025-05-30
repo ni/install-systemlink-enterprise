@@ -1,0 +1,150 @@
+# SystemLink Enterprise release 2025-06 Release Notes
+
+The 2025-06 release for SystemLink Enterprise has been
+published to <https://downloads.artifacts.ni.com>. This update includes new
+features, bug fixes, and security updates. Work with your account representative
+to obtain credentials to access these artifacts. If you are not upgrading from
+the previous release, refer to past release notes to ensure you have addressed
+all required configuration changes.
+
+## Upgrading from the release 2025-05 to the release 2025-06
+
+<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
+
+## New Features and Behavior changes
+
+- Behavior change or new feature description
+
+- Behavior change or new feature description
+
+## Helm Chart Breaking Changes
+
+- Chart Name and version
+  - Description of breaking change.
+
+## Upgrade Considerations
+
+### RabbitMQ Version
+
+SystemLink Enterprise includes a deployment of the
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+versions when updating RabbitMQ, you may not be able to upgrade directly between
+versions of SystemLink Enterprise. The table below shows the version of the
+RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
+for detailed update instructions.
+
+| RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
+| ---------------- | ----------------------------------- | ---------------------------------- |
+| 3.11.x           | 0.12.x                              | 0.15.x                             |
+| 3.12.x           | 0.16.x                              | 0.24.x                             |
+| 3.13.x           | 0.25.x                              | 0.29.56                            |
+| 4.0.x            | 0.30.74                             | current                            |
+
+## Bugs Fixed
+
+<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
+
+[link to closed bugs](link to closed bugs)
+
+## Software Bill of Materials and Notices
+
+<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+
+[SBOM](link to SBOM)
+
+[Notices](link to SBOM)
+
+## Versions
+
+**Top Level Helm Chart:** `0.38.42`
+
+**Admin Helm Chart:** `0.38.3`
+
+### NI Containers
+
+```text
+alarmservice-routine-executor:0.13.54
+alarmservice:0.13.54
+alarmsui:0.23.37
+assetservice:0.24.47
+assetui:0.23.58
+comments:0.22.31
+dashboardsui:0.26.34
+dataframeservice-nessie:1.18.56
+dataframeservice:1.18.56
+dremio-ee:25.2.12
+dynamicformfields:0.7.36
+executionsui:0.26.30
+feedservice:0.15.31
+feedsui:0.14.36
+filesui:0.27.54
+grafana-auth-proxy:0.21.7
+grafana-plugins:3.93.1
+grafana-rbac-integrator:0.26.39
+helium-dataservices-mongomigration:0.25.17
+helium-dataservices:0.25.17
+helium-fileingestionservices:1.16.16
+helium-salt-master:1.23.21_14191912
+helium-serviceregistry:0.30.10
+helium-taghistoriandataretention:0.21.12
+helium-taghistorianmongomigration:0.21.12
+helium-taghistorianservices:0.21.12
+helium-userservices:0.30.9_14182770
+helium-webappservices:0.28.19
+helium-webserver:0.37.15
+jupyter-notebook-userpod:2.17.6
+jupyterui:0.26.32
+labmanagementui:0.17.97
+landingpageui:0.26.30
+nbexec-execution-helpers:0.27.9
+nbexec-notebook-runner:0.27.11
+nbexecservice:0.27.46
+nbparsingservice:0.26.13
+ni-grafana:v10.2.3-ca8100c6aa-ni
+notification:0.26.31
+repository:0.22.25
+routineeventtrigger:0.27.27
+routineexecutor:0.27.20
+routinescheduletrigger:0.27.25
+routineservice-v2:0.28.27
+routineservice:0.28.27
+routinesui:0.27.37
+securityui:0.26.24
+session-manager-service:0.31.23
+sl-configurable-http-proxy:2.17.9
+sl-k8s-hub:2.17.9
+smtp:0.26.28
+specificationmanagement:0.17.27
+systemsmanagementservice:0.26.28
+systemsstateservice:0.16.22
+systemsstatesui:0.15.43
+systemsui:0.27.68
+tageventprocessor:0.25.17
+tagsui:0.22.33
+testinsightsui:0.26.55
+testmonitorservice:0.35.31
+userdata:0.26.26
+userservice-setup:0.31.9
+webapphostui:0.25.28
+workorder:0.17.52
+```
+
+### 3rd Party Containers
+
+```text
+alpine:3.21.3
+argoproj/argocli:v3.6.7-linux-amd64
+argoproj/argoexec:v3.6.7-linux-amd64
+argoproj/workflow-controller:v3.6.7-linux-amd64
+bitnami/kubectl:1.33.1
+bitnami/mongodb:5.0.24@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f
+bitnami/rabbitmq:4.1.0-debian-12-r1
+bitnami/redis-cluster:8.0.2-debian-12-r1
+busybox:stable@sha256:05a79c7279f71f86a2a0d05eb72fcb56ea36139150f0a75cd87e80a4272e4e39
+jupyterhub/k8s-image-awaiter:4.2.0
+kiwigrid/k8s-sidecar:1.30.3
+pause:3.10
+swaggerapi/swagger-ui:v5.22.0
+zookeeper:3.9.3
+```
