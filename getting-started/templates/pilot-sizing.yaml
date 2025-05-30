@@ -556,14 +556,6 @@ swaggerapi:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-sysmgmtevent:
-  resources:
-    requests:
-      memory: "256Mi"
-      cpu: 100m
-    limits:
-      memory: "512Mi"
-
   autoscaling:
     enabled: true
     minReplicas: 2
