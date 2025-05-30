@@ -13,14 +13,15 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `helium-userservices:0.30.9_14182770`
+  - Rate limiting is now implemented for whitelisted operations in the User Service and Auth Service. Configuration for the rate limiting does not exist, but as a workaround, more User Service replicas may be added if excessive rate limiting is occurring.
+- `sysmgmtevent`
+  - This chart has been removed from SLE because the functionality has been replaced by RabbitMQ. The nisysmgmtevent MongoDB collection can be manually deleted since it is no longer being used.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `dataframeservice:1.18.56`
+  - Default value of `storage.s3.bucket` changed from `nidataframe` to `systemlink-dataframe`. Customers that do not set the value will need to set it. The template values file from github.com/ni/install-systemlink-enterprise sets it, so customers that use the template are not impacted unless they removed the value.
 
 ## Upgrade Considerations
 
