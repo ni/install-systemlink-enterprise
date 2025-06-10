@@ -1,27 +1,34 @@
-# SystemLink Enterprise release 2025-06 Release Notes
+# SystemLink Enterprise 2025-06 Release Notes
 
-The 2025-06 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-06 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
-## Upgrading from the release 2025-05 to the release 2025-06
+## New Features and Behavior Changes
 
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
-## New Features and Behavior changes
-
+- Use Jupyter Notebook to automate test plan scheduling.
+- View fixture details from the Scheduling Assistant page.
 - `helium-userservices:0.30.9_14182770`
-  - Rate limiting is now implemented for whitelisted operations in the User Service and Auth Service. Configuration for the rate limiting does not exist, but as a workaround, more User Service replicas may be added if excessive rate limiting is occurring.
+  - Rate limiting is now implemented for whitelisted operations in the User
+    Service and Auth Service. This rate limit is not directly user configurable.
+    Increase the number of replicas for `userservices` to accept additional
+    traffic and reduce the likelihood of throttling.
 - `sysmgmtevent`
-  - This chart has been removed from SLE because the functionality has been replaced by RabbitMQ. The nisysmgmtevent MongoDB collection can be manually deleted since it is no longer being used.
+  - This chart has been removed from SLE because the functionality has been
+    replaced by RabbitMQ. You can manually delete the `nisysmgmtevent` MongoDB
+    collection, as it is no longer used."
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice:1.18.56`
-  - Default value of `storage.s3.bucket` changed from `nidataframe` to `systemlink-dataframe`. Customers that do not set the value will need to set it. The template values file from github.com/ni/install-systemlink-enterprise sets it, so customers that use the template are not impacted unless they removed the value.
+  - Default value of `storage.s3.bucket` has changed from `nidataframe` to
+    `systemlink-dataframe`.
+  - Refer to
+    [systemlink-values.yaml](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml#L716)
+    for an example of this configuration.
 
 ## Upgrade Considerations
 
@@ -44,17 +51,13 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-06 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-06/release-notes/2025-06/closed-bugs-sle-2025-06.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-06/release-notes/2025-06/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-06/release-notes/2025-06/notices)
 
 ## Versions
 
