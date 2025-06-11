@@ -131,6 +131,7 @@ global:
 ##
 ## Hostname of an external S3 provider.
 # <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
+#             To use Azure Storage, ignore these values and reference Azure/azure_supplemental_values.yml.
 ##
 s3Host: &s3Host "s3.amazonaws.com"
 ## Service name of an on-cluster S3 provider.
@@ -697,7 +698,9 @@ dataframeservice:
   ## The configuration for storing data table rows.
   ##
   storage:
-    ## The storage backend to use: currently only "s3". Defaults to s3.
+    ## The storage backend to use: "azure" or "s3". Defaults to s3.
+    ## azure: Azure Blob Storage. Additional configuration is required.
+    ##        Reference Azure/azure_supplemental_values.yml.
     ## s3: AWS S3 (or compatible backend such as MinIO). Additional configuration is required.
     ##     See the "s3" section.
     ##
@@ -816,8 +819,8 @@ dataframeservice:
       # Dremio distributed storage configuration. This must be configured for the service to perform acceptably.
       # See https://github.com/dremio/dremio-cloud-tools/blob/master/charts/dremio_v2/docs/Values-Reference.md#distributed-storage-values
       # <ATTENTION>: This only partially configures distributed storage. Credentials must be configured in systemlink-secrets.yaml under
-      # sldremio.distStorage.aws.credentials.
-      type: "aws" # <ATTENTION> - change this if not using Amazon S3 or an equivalent, like MinIO
+      # sldremio.distStorage.aws.credentials or Azure/azure-secrets.yaml under sldremio.distStorage.azureStorage.credentials.
+      type: "aws"
       aws:
         bucketName: *dataframeBucket
         path: "/dremio/distStorage"
