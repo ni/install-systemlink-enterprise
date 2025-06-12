@@ -61,17 +61,17 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `0.38.42`
+**Top Level Helm Chart:** `0.38.52`
 
-**Admin Helm Chart:** `0.38.3`
+**Admin Helm Chart:** `0.38.4`
 
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.13.54
-alarmservice:0.13.54
+alarmservice-routine-executor:0.13.55
+alarmservice:0.13.55
 alarmsui:0.23.37
-assetservice:0.24.47
+assetservice:0.24.48
 assetui:0.23.58
 comments:0.22.31
 dashboardsui:0.26.34
@@ -103,7 +103,7 @@ labmanagementui:0.17.97
 landingpageui:0.26.30
 nbexec-execution-helpers:0.27.9
 nbexec-notebook-runner:0.27.11
-nbexecservice:0.27.46
+nbexecservice:0.27.47
 nbparsingservice:0.26.13
 ni-grafana:v10.2.3-ca8100c6aa-ni
 notification:0.26.31
@@ -121,7 +121,7 @@ sl-k8s-hub:2.17.9
 smtp:0.26.28
 specificationmanagement:0.17.27
 systemsmanagementservice:0.26.28
-systemsstateservice:0.16.22
+systemsstateservice:0.16.23
 systemsstatesui:0.15.43
 systemsui:0.27.68
 tageventprocessor:0.25.17
@@ -131,7 +131,7 @@ testmonitorservice:0.35.31
 userdata:0.26.26
 userservice-setup:0.31.9
 webapphostui:0.25.28
-workorder:0.17.52
+workorder:0.17.53
 ```
 
 ### 3rd Party Containers
