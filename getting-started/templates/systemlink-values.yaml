@@ -678,9 +678,9 @@ dataframeservice:
       queueSize: 0
 
   ingestion:
-    ## Configuration for the pool of streams used to upload the data to S3.
-    ##
-    s3StreamPool:
+    ## Configuration for the pool of streams used to upload table data to a storage service such
+    ## as S3 or Azure Blob Storage.
+    streamPool:
       ## Maximum number of streams that will be pooled.
       ## The recommendation is to provide the same number of pool streams as the limit of requests that
       ## can be processed in "rateLimits.ingestion.requestsLimit".
