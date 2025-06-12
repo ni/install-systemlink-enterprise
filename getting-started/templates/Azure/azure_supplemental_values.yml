@@ -1,11 +1,12 @@
-# This supplemental values file provides annotations for the azure application gateway and System Link Enterprise service health checks paths. 
+# Values overrides for Azure deployments to configure services to use Azure Blob Storage.
+# It also provides annotations for the Azure application gateway and SystemLink Enterprise service health checks paths.
 #
 # This file should be passed in as a values file with systemlink-secrets and systemlink-values during SLE install.
 #
 # Modify "systemlink-ssl-cert" to match the name of your certificate used for the application gateway.
 #
-# The default health check path /up addresses the health probe for most services. 
-# Those that diverge from this path are declared below by service. 
+# The default health check path /up addresses the health probe for most services.
+# Those that diverge from this path are declared below by service.
 # Health check paths should not be modified unless called out in monthly release notes.
 #
 # This is a YAML-formatted file.
@@ -17,23 +18,43 @@ global:
     api:
       ## Annotations for the ingress.
       ##
-      annotations: {
-        kubernetes.io/ingress.class: azure/application-gateway,
-        appgw.ingress.kubernetes.io/health-probe-path: "/up",
-        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile",
+      annotations:
+        kubernetes.io/ingress.class: azure/application-gateway
+        appgw.ingress.kubernetes.io/health-probe-path: "/up"
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile"
         appgw.ingress.kubernetes.io/appgw-ssl-certificate: "systemlink-ssl-cert"
-      }
+
     ## Ingress settings that apply to the hosts endpoints.
     ##
     ui:
       ## @param global.ingress.ui.annotations Annotations for the ingress.
       ##
-      annotations: {
-        kubernetes.io/ingress.class: azure/application-gateway,
-        appgw.ingress.kubernetes.io/health-probe-path: "/up",
-        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile",
+      annotations:
+        kubernetes.io/ingress.class: azure/application-gateway
+        appgw.ingress.kubernetes.io/health-probe-path: "/up"
+        #appgw.ingress.kubernetes.io/appgw-ssl-profile: "systemlink-ssl-profile"
         appgw.ingress.kubernetes.io/appgw-ssl-certificate: "systemlink-ssl-cert"
-      }
+
+## The following values are shared across multiple configurations. The values here are
+## not used directly as configuration but provide a convenient way to share common
+## configuration throughout this file. Individual references to these values can be
+## overridden with custom values if required.
+
+## The storage backend to use.
+## Set this to "s3" to use the S3 configuration from systemlink-values.yaml instead of
+## using Azure Storage.
+##
+storageType: &storageType "azure"
+## The Azure Blob Storage host and port to connect to, without the account name.
+# <ATTENTION> To connect to an alternative Azure Storage host such as usgovcloudapi.net,
+#             set both azureBlobApiHost and azureDataLakeApiHost.
+##
+azureBlobApiHost: &azureBlobApiHost "blob.core.windows.net"
+## The Azure Data Lake Storage host and port to connect to, without the account name.
+# <ATTENTION> To connect to an alternative Azure Storage host such as usgovcloudapi.net,
+#             set both azureBlobApiHost and azureDataLakeApiHost.
+##
+azureDataLakeApiHost: &azureDataLakeApiHost "dfs.core.windows.net"
 
 assetservice:
   ingress:
@@ -63,15 +84,67 @@ dataframeservice:
     annotations:
       appgw.ingress.kubernetes.io/health-probe-path: "/nidataframe/health"
 
+  storage:
+    type: *storageType
+    azure:
+      ## Name of the Azure Storage account. The account must not have hierarchical namespace
+      ## or blob soft delete enabled.
+      # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+      #             DataFrame Service. The account must meet the stated requirements.
+      ##
+      accountName: &dataFrameServiceAccountName ""
+      blobApiHost: *azureBlobApiHost
+      dataLakeApiHost: *azureDataLakeApiHost
+
+  # <ATTENTION> When not using Azure Storage, remove this sldremio section.
+  sldremio:
+    distStorage:
+      type: "azureStorage"
+      azureStorage:
+        accountName: *dataFrameServiceAccountName
+        # <ATTENTION> When modifying the value of azureDataLakeApiHost to be anything except
+        #             dfs.core.windows.net, uncomment the below extraProperties and update
+        #             the value of fs.azure.endpoint.
+        # extraProperties: |
+        #   <property>
+        #     <name>fs.azure.endpoint</name>
+        #     <value><ATTENTION> - set to the value of azureDataLakeApiHost</value>
+        #   </property>
+
 feedservice:
   ingress:
     annotations:
       appgw.ingress.kubernetes.io/health-probe-path: "/nifeed/up"
 
+  storage:
+    type: *storageType
+    azure:
+      # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+      #             Feed Service.
+      accountName: ""
+      blobApiHost: *azureBlobApiHost
+
+fileingestion:
+  storage:
+    type: *storageType
+    azure:
+      # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+      #             File Ingestion Service.
+      accountName: ""
+      blobApiHost: *azureBlobApiHost
+
 nbexecservice:
   ingress:
     annotations:
       appgw.ingress.kubernetes.io/health-probe-path: "/ninbexecution/up"
+
+  storage:
+    type: *storageType
+    azure:
+      # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+      #             Notebook Execution Service.
+      accountName: ""
+      blobApiHost: *azureBlobApiHost
 
 notification:
   ingress:
