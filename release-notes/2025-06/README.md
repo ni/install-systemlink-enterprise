@@ -9,20 +9,21 @@ required configuration changes.
 
 ## New Features and Behavior Changes
 
-- Use Jupyter Notebook to automatically schedule test plans.
+- Use Jupyter Notebook to schedule automatically test plans.
 - Use Jupyter Notebook to automate operations on test plans.
 - View fixture details from the Scheduling Assistant page.
-- When either installing software or applying a system state, you can enable the Automatically Restart option. 
-  SystemLink now remembers this selection when the action is next taken again.
+- When either installing software or applying a system state, you can enable the
+  Automatically Restart option. SystemLink now remembers this selection when the
+  action is next taken again.
 - `helium-userservices:0.30.9_14182770`
-  - Whitelisted operations now implement rate limiting in the User
-    Service and Auth Service. This rate limit is not directly user configurable.
-    to accept additional traffic and reduce the likelihood of throttling, 
-    Increase the number of replicas for `userservices.`
+  - Whitelisted operations now implement rate limiting in the User Service and
+    Auth Service. This rate limit is not directly user configurable. to accept
+    additional traffic and reduce the likelihood of throttling, Increase the
+    number of replicas for `userservices.`
 - `sysmgmtevent`
-  - This chart has been removed from SystemLink Enterprise because the functionality was
-    replaced by RabbitMQ. You can manually delete the `nisysmgmtevent` MongoDB
-    collection.
+  - This chart has been removed from SystemLink Enterprise because the
+    functionality was replaced by RabbitMQ. You can manually delete the
+    `nisysmgmtevent` MongoDB collection.
 
 ## Helm Chart Breaking Changes
 
@@ -30,7 +31,7 @@ required configuration changes.
   - Default value of `storage.s3.bucket` was changed from `nidataframe` to
     `systemlink-dataframe`.
   - For an example of this configuration, refer to
-    [systemlink-values.yaml](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml#L716).
+    [`systemlink-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml#L716).
 
 ## Upgrade Considerations
 
@@ -39,8 +40,9 @@ required configuration changes.
 SystemLink Enterprise includes a deployment of the
 [RabbitMQ](https://www.rabbitmq.com/) message bus. Because you cannot skip minor
 versions when updating RabbitMQ, you may not be able to upgrade directly between
-versions of SystemLink Enterprise. The following table displays the version of the
-RabbitMQ dependency for each released version of SystemLink Enterprise. For detailed update instructions, refer to
+versions of SystemLink Enterprise. The following table displays the version of
+the RabbitMQ dependency for each released version of SystemLink Enterprise. For
+detailed update instructions, refer to
 [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html).
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
