@@ -904,7 +904,7 @@ feedservice:
     ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com" 
     additionalNoProxy: []
 
-## File upload configuration.
+## FileIngestion configuration.
 ##
 fileingestion:
   ## Ingress configuration
@@ -945,6 +945,33 @@ fileingestion:
       ## S3 Region
       ##
       region: *s3Region
+
+  ## Feature toggles.
+  ## 
+  featureToggle:
+    ## <ATTENTION> - Verify that you have all the prerequisites before enabling this toggle.
+    ## More information can be found in the SystemLink User Manual.
+    searchFiles: false
+
+  ## Elasticsearch configuration.
+  ## <ATTENTION> - Only needed if you plan to use the `searchFiles` feature toggle.
+  elasticsearch:
+    ## The name of the secret containing the Elasticsearch password.
+    ## This secret is created automatically by the SystemLink Elasticsearch deployment,
+    ## if autoprovisioning is enabled.
+    ## If Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment,
+    ## this secret name needs to match the one created by the fileingestioncdc deployment.
+    existingSecretName: "sl-elasticsearch-filescdc-secret"
+    ## The Elasticsearch user used by the FileIngestion application.
+    username: "filescdc"
+    ## The Elasticsearch scheme
+    scheme: "http"
+    ## The Elasticsearch port
+    port: "9200"
+    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
+    ## provide the FQDN of the headless service
+    host: "elasticsearch-release-master-hl.default.svc.cluster.local"
+
   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
   ## individual rates configured here.
@@ -986,6 +1013,133 @@ fileingestion:
     ## The secret used to create the encrypted token used for downloading files from UI
     ##
     encryptionKeySecret: "fileingestionservices-download-encryption-key"
+
+## Configuration for FileIngestionCDC.
+## <ATTENTION> - Needed if FileIngestion search capabilities are enabled.
+##
+fileingestioncdc:
+  ## Set to true to enable the deployment of the FileIngestionCDC
+  ##
+  enabled: false
+
+  ## Elasticsearch configuration
+  ##
+  elasticsearch:
+    ## Name of the existing secret containing the Elasticsearch password.
+    ## This secret is created automatically by the SystemLink Elasticsearch deployment if autoprovisioning is enabled.
+    existingSecretName: "sl-elasticsearch-filescdc-secret"
+    ## The name of the secret to be created containing the Elasticsearch password.
+    ## This secret will be created by the deployment in case Elasticsearch is not provisioned via the SysteLink Elasticsearch
+    ## deployment. Password needs to be provided in the secrets section.
+    secretName: "fileingestioncdc-elastic-credentials"
+    ## The Elasticsearch user used by the FileIngestionCDC application
+    username: "filescdc"
+    ## The Elasticsearch scheme
+    scheme: "http"
+    ## The Elasticsearch port
+    port: "9200"
+    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
+    ## provide the FQDN of the headless service
+    host: "elasticsearch-release-master-hl.default.svc.cluster.local"
+
+  ## MongoDB configuration
+  ##
+  mongodb:
+    ## The name of the secret to be created containing the MongoDB password.
+    ## This secret will be created by the deployment. Password needs to be provided in the secrets section.
+    secretName: "fileingestioncdc-mongodb-credentials"
+    ## The MongoDB connection string override, use this to explicitly configure or override the global configuration for MongoDB
+    connection_string: ""
+    ## The MongoDB database
+    database: "files"
+    ## The MongoDB user
+    username: "filescdc"
+
+  ## High Availability configuration
+  ##
+  highAvailability:
+    ## Whether to enable high availability. This is required for production environments.
+    ## Needs an object storage medium, like S3, Azure Storage or a ReadWriteMany volume.
+    enabled: true
+    ## Storage configuration
+    ##
+    storage:
+      ## The type of the object storage medium. Supported values are "s3", "azure" and "readWriteManyVolume"
+      type: "s3"
+      ## Configure S3/MinIO access.
+      s3:
+        ## Secret name for S3 credentials
+        secretName: "flink-aws-keys"
+        ## S3 access type. Supported values are "ACCESS_KEY" and "AWS_WEB_IDENTITY_TOKEN".
+        authType: "ACCESS_KEY"
+        ## The name of the S3 bucket that the service should connect to.
+        bucket: "systemlink-flink"
+        ## Set this value to connect to an external S3 instance.
+        host: "s3.amazonaws.com"
+        ## Set this value to connect to an S3 instance which is internal to the cluster.
+        service: ""
+        ## S3 Region.
+        region: "us-east-1"
+        ## The name of the key in the above secret whose value contains the S3 AccessKeyId.
+        accessKeyIdKey: "aws-access-key-id"
+        ## The name of the key in the above secret whose value contains the S3 SecretAccessKey.
+        secretAccessKeyKey: "aws-secret-access-key"
+      ## Configure Azure Storage access.
+      azure:
+        ## The name of the Azure Storage account. Required if Azure Storage is enabled.
+        accountName: ""
+        ## The name of the secret containing the Azure Storage credentials.
+        secretName: "flink-azure-credentials"
+        ## The name of the Azure Storage container that the service should connect to.
+        containerName: "systemlink-flink"
+        ## The name of the key in the above secret whose value contains the shared access key.
+        accessKeyName: "azure-secret-access-key"
+        ## Whether to use TLS for connections to Azure Storage.
+        isSecure: true
+        ## The Azure Blob Storage host and port to connect to, not including the account name.
+        blobApiHost: "blob.core.windows.net"
+      ## Configure ReadWriteManyVolume access.
+      readWriteManyVolume:
+        persistentVolume:
+          ## The name of the kubernetes storage class that supports ReadWriteMany volumes.
+          storageClassName: "efs-sc"
+
+  ## Job configuration.
+  ##
+  job:
+    ## Connectors configuration.
+    ##
+    connectors:
+      ## Sink configuration.
+      sink:
+        ## Elasticsearch sink configuration.
+        elasticsearch:
+          ## Index creation configuration.
+          index:
+            ## The number of primary shards that will be allocated for the files elastic index.
+            ## This can be configured only on the first deployment, subsequent deployments will ignore this value.
+            primaryShardsCount: 2
+
+  ## Job Manager configuration.
+  ##
+  jobManager:
+    ## Resources configuration.
+    resource:
+      ## Memory requests and limit.
+      memory: "2Gi"
+      ## CPU limit.
+      cpu: 1
+
+  ## Task Manager configuration.
+  ##
+  taskManager:
+    ## Resources configuration.
+    resource:
+      ## Memory requests and limit.
+      memory: "2Gi"
+      ## CPU limit.
+      cpu: 1
+
 
 ## Configuration for JupyterHub.
 ##

@@ -23,3 +23,9 @@ global:
 #   crds:
 #     install: false
 
+## Flink k8s operator configuration.
+flinkoperator:
+  ## Set to true to enable the deployment of the Flink Operator.
+  ## This component is needed if FileIngestion search capabilities are enabled
+  ##
+  enabled: false
