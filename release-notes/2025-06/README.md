@@ -64,9 +64,9 @@ detailed update instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `0.38.52`
+**Top Level Helm Chart:** `0.38.59`
 
-**Admin Helm Chart:** `0.38.4`
+**Admin Helm Chart:** `0.38.6`
 
 ### NI Containers
 
@@ -74,7 +74,7 @@ detailed update instructions, refer to
 alarmservice-routine-executor:0.13.55
 alarmservice:0.13.55
 alarmsui:0.23.37
-assetservice:0.24.48
+assetservice:0.24.49
 assetui:0.23.58
 comments:0.22.31
 dashboardsui:0.26.34
@@ -91,7 +91,7 @@ grafana-plugins:3.93.1
 grafana-rbac-integrator:0.26.39
 helium-dataservices-mongomigration:0.25.17
 helium-dataservices:0.25.17
-helium-fileingestionservices:1.16.16
+helium-fileingestionservices:1.16.17
 helium-salt-master:1.23.21_14191912
 helium-serviceregistry:0.30.10
 helium-taghistoriandataretention:0.21.12
@@ -106,7 +106,7 @@ labmanagementui:0.17.97
 landingpageui:0.26.30
 nbexec-execution-helpers:0.27.9
 nbexec-notebook-runner:0.27.11
-nbexecservice:0.27.47
+nbexecservice:0.27.48
 nbparsingservice:0.26.13
 ni-grafana:v10.2.3-ca8100c6aa-ni
 notification:0.26.31
