@@ -1042,19 +1042,6 @@ fileingestioncdc:
     ## provide the FQDN of the headless service
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
-  ## MongoDB configuration
-  ##
-  mongodb:
-    ## The name of the secret to be created containing the MongoDB password.
-    ## This secret will be created by the deployment. Password needs to be provided in the secrets section.
-    secretName: "fileingestioncdc-mongodb-credentials"
-    ## The MongoDB connection string override, use this to explicitly configure or override the global configuration for MongoDB
-    connection_string: ""
-    ## The MongoDB database
-    database: "files"
-    ## The MongoDB user
-    username: "filescdc"
-
   ## High Availability configuration
   ##
   highAvailability:
@@ -1119,27 +1106,6 @@ fileingestioncdc:
             ## The number of primary shards that will be allocated for the files elastic index.
             ## This can be configured only on the first deployment, subsequent deployments will ignore this value.
             primaryShardsCount: 2
-
-  ## Job Manager configuration.
-  ##
-  jobManager:
-    ## Resources configuration.
-    resource:
-      ## Memory requests and limit.
-      memory: "2Gi"
-      ## CPU limit.
-      cpu: 1
-
-  ## Task Manager configuration.
-  ##
-  taskManager:
-    ## Resources configuration.
-    resource:
-      ## Memory requests and limit.
-      memory: "2Gi"
-      ## CPU limit.
-      cpu: 1
-
 
 ## Configuration for JupyterHub.
 ##
