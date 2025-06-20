@@ -1054,6 +1054,8 @@ fileingestioncdc:
       ## The type of the object storage medium. Supported values are "s3", "azure" and "readWriteManyVolume"
       type: "s3"
       ## Configure S3/MinIO access.
+      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `s3`
+      ##
       s3:
         ## Secret name for S3 credentials
         secretName: "flink-aws-keys"
@@ -1072,6 +1074,8 @@ fileingestioncdc:
         ## The name of the key in the above secret whose value contains the S3 SecretAccessKey.
         secretAccessKeyKey: "aws-secret-access-key"
       ## Configure Azure Storage access.
+      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `azure`
+      ##
       azure:
         ## The name of the Azure Storage account. Required if Azure Storage is enabled.
         accountName: ""
@@ -1086,6 +1090,8 @@ fileingestioncdc:
         ## The Azure Blob Storage host and port to connect to, not including the account name.
         blobApiHost: "blob.core.windows.net"
       ## Configure ReadWriteManyVolume access.
+      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `readWriteManyVolume`
+      ##
       readWriteManyVolume:
         persistentVolume:
           ## The name of the kubernetes storage class that supports ReadWriteMany volumes.
