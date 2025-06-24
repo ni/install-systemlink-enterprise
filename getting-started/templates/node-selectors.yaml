@@ -256,11 +256,6 @@ swaggerapi:
   tolerations: *servicesTolerations
   affinity: *servicesAffinity
 
-sysmgmtevent:
-  nodeSelector: *servicesNodeSelector
-  tolerations: *servicesTolerations
-  affinity: *servicesAffinity
-
 systems:
   nodeSelector: *servicesNodeSelector
   tolerations: *servicesTolerations
