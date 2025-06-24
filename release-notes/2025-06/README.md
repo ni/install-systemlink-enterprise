@@ -9,26 +9,25 @@ required configuration changes.
 
 ## New Features and Behavior Changes
 
-- Use Jupyter Notebook to schedule automatically test plans.
+- Use Jupyter Notebook to automatically schedule test plans.
 - Use Jupyter Notebook to automate operations on test plans.
 - View fixture details from the Scheduling Assistant page.
-- When either installing software or applying a system state, you can enable the
-  Automatically Restart option. SystemLink now remembers this selection when the
-  action is next taken again.
+- When installing software or applying a system state, you can enable the
+  Automatically Restart option. SystemLink now remembers this selection the next time the action is taken.
 - `helium-userservices:0.30.9_14182770`
   - Whitelisted operations now implement rate limiting in the User Service and
-    Auth Service. This rate limit is not directly user configurable. to accept
-    additional traffic and reduce the likelihood of throttling, Increase the
-    number of replicas for `userservices.`
+    Auth Service. This rate limit is not directly user configurable. To accept
+    additional traffic and reduce the likelihood of throttling, increase the
+    number of replicas for `userservices`.
 - `sysmgmtevent`
-  - This chart has been removed from SystemLink Enterprise because the
+  - This chart has been removed from SystemLink Enterprise because its
     functionality was replaced by RabbitMQ. You can manually delete the
     `nisysmgmtevent` MongoDB collection.
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice:1.18.56`
-  - Default value of `storage.s3.bucket` was changed from `nidataframe` to
+  - The default value of `storage.s3.bucket` was changed from `nidataframe` to
     `systemlink-dataframe`.
   - For an example of this configuration, refer to
     [`systemlink-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/systemlink-values.yaml#L716).
