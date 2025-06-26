@@ -131,7 +131,7 @@ global:
 ##
 ## Hostname of an external S3 provider.
 # <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
-#             To use Azure Storage, ignore these values and reference Azure/azure_supplemental_values.yml.
+#             To use Azure Storage, ignore these values and reference Azure/azure-supplemental-values.yml.
 ##
 s3Host: &s3Host "s3.amazonaws.com"
 ## Service name of an on-cluster S3 provider.
@@ -700,7 +700,7 @@ dataframeservice:
   storage:
     ## The storage backend to use: "azure" or "s3". Defaults to s3.
     ## azure: Azure Blob Storage. Additional configuration is required.
-    ##        Reference Azure/azure_supplemental_values.yml.
+    ##        Reference Azure/azure-supplemental-values.yml.
     ## s3: AWS S3 (or compatible backend such as MinIO). Additional configuration is required.
     ##     See the "s3" section.
     ##
