@@ -57,7 +57,7 @@ testmonitorservice:
 dataframeservice:
   ingress:
     annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/nidataframe/health"
+      alb.ingress.kubernetes.io/healthcheck-path: "/up"
 
 saltmaster:
   serviceTCP:
