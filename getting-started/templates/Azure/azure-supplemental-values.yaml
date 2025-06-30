@@ -1,7 +1,9 @@
 # Values overrides for Azure deployments to configure services to use Azure Blob Storage.
 # It also provides annotations for the Azure application gateway and SystemLink Enterprise service health checks paths.
 #
-# This file should be passed in as a values file with systemlink-secrets and systemlink-values during SLE install.
+# This file should be passed in as a values file with systemlink-values.yaml, systemlink-secrets.yaml,
+# and azure-secrets.yaml during SLE install. To use an alternative storage service such as MinIO
+# instead of Azure Blob Storage, reference OnPrem/storage-values.yaml.
 #
 # Modify "systemlink-ssl-cert" to match the name of your certificate used for the application gateway.
 #
@@ -40,11 +42,6 @@ global:
 ## configuration throughout this file. Individual references to these values can be
 ## overridden with custom values if required.
 
-## The storage backend to use.
-## Set this to "s3" to use the S3 configuration from systemlink-values.yaml instead of
-## using Azure Storage.
-##
-storageType: &storageType "azure"
 ## The Azure Blob Storage host and port to connect to, without the account name.
 # <ATTENTION> To connect to an alternative Azure Storage host such as usgovcloudapi.net,
 #             set both azureBlobApiHost and azureDataLakeApiHost.
@@ -85,7 +82,7 @@ dataframeservice:
       appgw.ingress.kubernetes.io/health-probe-path: "/nidataframe/health"
 
   storage:
-    type: *storageType
+    type: "azure"
     azure:
       ## Name of the Azure Storage account. The account must not have hierarchical namespace
       ## or blob soft delete enabled.
@@ -96,7 +93,6 @@ dataframeservice:
       blobApiHost: *azureBlobApiHost
       dataLakeApiHost: *azureDataLakeApiHost
 
-  # <ATTENTION> When not using Azure Storage, remove this sldremio section.
   sldremio:
     distStorage:
       type: "azureStorage"
@@ -117,7 +113,7 @@ feedservice:
       appgw.ingress.kubernetes.io/health-probe-path: "/nifeed/up"
 
   storage:
-    type: *storageType
+    type: "azure"
     azure:
       # <ATTENTION> Set to the name of an existing Azure storage account to use for the
       #             Feed Service.
@@ -126,7 +122,7 @@ feedservice:
 
 fileingestion:
   storage:
-    type: *storageType
+    type: "azure"
     azure:
       # <ATTENTION> Set to the name of an existing Azure storage account to use for the
       #             File Ingestion Service.
@@ -139,7 +135,7 @@ nbexecservice:
       appgw.ingress.kubernetes.io/health-probe-path: "/ninbexecution/up"
 
   storage:
-    type: *storageType
+    type: "azure"
     azure:
       # <ATTENTION> Set to the name of an existing Azure storage account to use for the
       #             Notebook Execution Service.

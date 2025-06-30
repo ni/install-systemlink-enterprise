@@ -1,0 +1,124 @@
+# Values overrides for non-AWS deployments that configure services to use S3-compatible storage.
+#
+# This file should be passed in as a values file with systemlink-values.yaml, systemlink-secrets.yaml,
+# and storage-secrets.yaml during SLE install.
+#
+# This is a YAML-formatted file.
+
+## The following values are typically shared across multiple configurations. The values
+## here are not used directly as configuration but provide a convenient way to share
+## common configuration throughout this file. Individual references to these values can
+## be overridden with custom values if required.
+
+## Hostname of an external S3 provider.
+# <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
+##
+s3Host: &s3Host ""
+## Service name of an in-cluster S3 provider.
+# <ATTENTION> To connect to an S3 provider within the same cluster, set s3ServiceName, s3Scheme,
+#             s3Port and s3Region, and set s3Host to an empty string.
+##
+s3ServiceName: &s3ServiceName ""
+## Scheme used to access the configured S3 provider ("http" or "https")
+##
+s3Scheme: &s3Scheme "https"
+## Port number of the S3 provider
+##
+s3Port: &s3Port 443
+## Region where S3 storage is located
+##
+s3Region: &s3Region "us-east-1"
+
+dataframeservice:
+  storage:
+    type: s3
+    s3:
+      ## The name of an existing S3 bucket for the DataFrame Service to connect to.
+      ##
+      bucket: "systemlink-dataframe"
+      ## Maximum number of concurrent connections to S3 per replica.
+      ##
+      maximumConnections: 32
+      schemeName: *s3Scheme
+      host: *s3Host
+      service: *s3ServiceName
+      port: *s3Port
+      region: *s3Region
+  sldremio:
+    distStorage:
+      type: "aws"
+      aws:
+        ## The name of the S3 bucket that Dremio should use for the distributed storage cache.
+        ## The recommendation is to use a dedicated bucket, but this may be the same as the same
+        ## value as "dataframeservice.storage.s3.bucket", in which case "path" should be uncommented.
+        ##
+        bucketName: "systemlink-dataframe-dremio"
+        ## The path in the bucket that Dremio will store data. Uncomment when not using a dedicated
+        ## bucket. Adjust the value as desired.
+        ##
+        # path: "/dremio"
+        authentication: "accessKeySecret"
+        extraProperties: |
+          <property>
+            <name>fs.s3a.endpoint</name>
+            <description>Set to the hostname and port of the S3 service to connect to (see s3Host and s3Port).</description>
+            <value><ATTENTION>set to the FQDN of the S3 endpoint, including the port, but without an HTTP or HTTPS prefix. Example: {svc-name}.{namespace}.svc.cluster.local:9000.</value>
+          </property>
+          <property>
+            <name>fs.s3a.path.style.access</name>
+            <description>Value has to be set to true.</description>
+            <value>true</value>
+          </property>
+          <property>
+            <name>dremio.s3.compat</name>
+            <description>Value has to be set to true.</description>
+            <value>true</value>
+          </property>
+          <property>
+            <name>fs.s3a.connection.ssl.enabled</name>
+            <description>True to use HTTPS or false to use HTTP (see s3Scheme).</description>
+            <!--<ATTENTION> When modifying s3Scheme to be http, change this value to false.-->
+            <value>true</value>
+          </property>
+
+feedservice:
+  storage:
+    type: "s3"
+    s3:
+      ## The name of the S3 bucket for the Feed Service to connect to.
+      ##
+      bucket: "systemlink-feeds"
+      scheme: *s3Scheme
+      host: *s3Host
+      service: *s3ServiceName
+      port: *s3Port
+      region: *s3Region
+
+fileingestion:
+  storage:
+    type: "s3"
+    s3:
+      ## The name of the S3 bucket for the File Ingestion Service to connect to.
+      ##
+      bucket: "systemlink-file-ingestion"
+      ## Set this to true to limit each user to a maximum of 1Gb of file storage.
+      ##
+      storageLimitsEnabled: false
+      scheme: *s3Scheme
+      host: *s3Host
+      service: *s3ServiceName
+      port: *s3Port
+      region: *s3Region
+
+nbexecservice:
+  storage:
+    type: "s3"
+    s3:
+      ## The name of the S3 bucket for the Notebook Execution Service to connect to.
+      ##
+      bucket: "systemlink-executions"
+      scheme: *s3Scheme
+      host: *s3Host
+      service: *s3ServiceName
+      port: *s3Port
+      region: *s3Region
