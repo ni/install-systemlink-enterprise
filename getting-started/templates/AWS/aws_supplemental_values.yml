@@ -54,11 +54,6 @@ testmonitorservice:
     annotations:
       alb.ingress.kubernetes.io/healthcheck-path: "/nitestmonitor/up"
 
-dataframeservice:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/up"
-
 saltmaster:
   serviceTCP:
     type: NodePort
