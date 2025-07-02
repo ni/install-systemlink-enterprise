@@ -45,22 +45,21 @@ The same command can be used to apply configuration changes to your release.
 Configuring object storage is part of the standard process of deploying
 SystemLink Enterprise. The following configuration is required to use MinIO.
 
-In `systemlink-values.yaml`:
+In `OnPrem/storage-values.yaml`:
 
-1. Set `s3Host` to an empty string.
-2. Set `s3ServiceName` to `<release>-minio.<namespace>.svc.cluster.local`.
-3. Set `s3Scheme` to `http`.
+1. Set `s3Host` to `<release>-minio.<namespace>.svc.cluster.local`.
+2. Set `s3Scheme` to `http`.
    - Unless you enabled TLS in your MinIO configuration, in which case use
      `https`.
-4. Set `s3Port` to `9000`.
-5. Leave `s3Region` with its default value.
-6. Uncomment the commented-out text for
-   `dataframeservice.sldremio.distStorage.aws.extraProperties` and configure the
-   `fs.s3a.endpoint` and `fs.s3a.connection.ssl.enabled` properties in that
-   section using the value set for s3ServiceName and the TLS configuration for
-   your MinIO instance.
+3. Set `s3Port` to `9000`.
+4. Leave `s3Region` with its default value.
+5. Edit the value for
+   `dataframeservice.sldremio.distStorage.aws.extraProperties`:
+   - Set the `fs.s3a.endpoint` property to `<release>-minio.<namespace>.svc.cluster.local:9000`
+   - Set the `fs.s3a.connection.ssl.enabled` property to `false`, unless you
+     enabled TLS in your MinIO configuration, in which case use `true`.
 
-In `systemlink-secrets.yaml`:
+In `OnPrem/storage-secrets.yaml`:
 
 1. Set `s3User` to the configured root user name.
 2. Set `s3Password` to the configured root password.

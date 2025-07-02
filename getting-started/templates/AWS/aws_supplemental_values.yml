@@ -1,3 +1,16 @@
+# Values overrides for AWS deployments that configure services to use S3 for storage.
+# It also provides annotations for the Application Load Balancer and SystemLink Enterprise service health checks paths.
+#
+# This file should be passed in as a values file with systemlink-values.yaml, systemlink-secrets.yaml,
+# and aws-secrets.yaml during SLE install. To use an alternative storage service such as MinIO
+# instead of S3, reference OnPrem/storage-values.yaml.
+#
+# The default health check path /up addresses the health probe for most services.
+# Those that diverge from this path are declared below by service.
+# Health check paths should not be modified unless called out in monthly release notes.
+#
+# This is a YAML-formatted file.
+
 global:
   ingress:
     api:
@@ -31,6 +44,25 @@ global:
         # <ATTENTION> - Optional - Uncomment and enter the ARN for the WAFv2 ACL if you are using AWS' Web Application Firewall
         # alb.ingress.kubernetes.io/wafv2-acl-arn:
 
+## The following values are typically shared across multiple configurations. The values
+## here are not used directly as configuration but provide a convenient way to share
+## common configuration throughout this file. Individual references to these values can
+## be overridden with custom values if required.
+
+## Hostname of the S3 service to connect to.
+##
+s3Host: &s3Host "s3.amazonaws.com"
+## Scheme used to access the configured S3 provider ("http" or "https")
+##
+s3Scheme: &s3Scheme "https"
+## Port number of the S3 provider
+##
+s3Port: &s3Port 443
+## Region where S3 storage is located
+# <ATTENTION> To connect to a region other than us-east-1, change this value.
+##
+s3Region: &s3Region "us-east-1"
+
 assetservice:
   ingress:
     annotations:
@@ -54,6 +86,81 @@ testmonitorservice:
     annotations:
       alb.ingress.kubernetes.io/healthcheck-path: "/nitestmonitor/up"
 
+dataframeservice:
+  storage:
+    type: s3
+    s3:
+      ## The name of an existing S3 bucket for the DataFrame Service to connect to.
+      ##
+      bucket: "systemlink-dataframe"
+      ## Maximum number of concurrent connections to S3 per replica.
+      ##
+      maximumConnections: 32
+      schemeName: *s3Scheme
+      host: *s3Host
+      port: *s3Port
+      region: *s3Region
+  sldremio:
+    distStorage:
+      type: "aws"
+      aws:
+        ## The name of the S3 bucket that Dremio should use for the distributed storage cache.
+        ## The recommendation is to use a dedicated bucket, but this may be the same as the same
+        ## value as "dataframeservice.storage.s3.bucket", in which case "path" should be uncommented.
+        ##
+        bucketName: "systemlink-dataframe-cache"
+        ## The path in the bucket that Dremio will store data. Uncomment when not using a dedicated
+        ## bucket. Adjust the value as desired.
+        ##
+        # path: "/dremio"
+        authentication: "accessKeySecret"
+        # <ATTENTION> When modifying any of the s3Host, s3Scheme, s3Port, or s3Region values to be
+        #             anything except the defaults of s3.amazonaws.com, https, 443, and us-east-1,
+        #             respectively, uncomment the below extraProperties and update each value accordingly.
+        # extraProperties: |
+        #   <property>
+        #     <name>fs.s3a.endpoint</name>
+        #     <description>Set to the hostname and port of the S3 service to connect to (see s3Host and s3Port).</description>
+        #     <value>s3.amazonaws.com:443</value>
+        #   </property>
+        #   <property>
+        #     <name>fs.s3a.connection.ssl.enabled</name>
+        #     <description>True to use HTTPS or false to use HTTP (see s3Scheme).</description>
+        #     <value>true</value>
+        #   </property>
+        #   <property>
+        #     <name>dremio.s3.region</name>
+        #     <description>The region where S3 storage is located (see s3Region).</description>
+        #     <value>us-east-1</value>
+        #   </property>
+
+feedservice:
+  storage:
+    type: "s3"
+    s3:
+      ## The name of the S3 bucket for the Feed Service to connect to.
+      ##
+      bucket: "systemlink-feeds"
+      scheme: *s3Scheme
+      host: *s3Host
+      port: *s3Port
+      region: *s3Region
+
+fileingestion:
+  storage:
+    type: "s3"
+    s3:
+      ## The name of the S3 bucket for the File Ingestion Service to connect to.
+      ##
+      bucket: "systemlink-file-ingestion"
+      ## Set this to true to limit each user to a maximum of 1Gb of file storage.
+      ##
+      storageLimitsEnabled: false
+      scheme: *s3Scheme
+      host: *s3Host
+      port: *s3Port
+      region: *s3Region
+
 saltmaster:
   serviceTCP:
     type: NodePort
@@ -68,6 +175,17 @@ nbexecservice:
   ingress:
     annotations:
       alb.ingress.kubernetes.io/healthcheck-path: "/ninbexecution/up"
+
+  storage:
+    type: "s3"
+    s3:
+      ## The name of the S3 bucket for the Notebook Execution Service to connect to.
+      ##
+      bucket: "systemlink-executions"
+      scheme: *s3Scheme
+      host: *s3Host
+      port: *s3Port
+      region: *s3Region
 
 notification:
   ingress:
