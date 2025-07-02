@@ -77,10 +77,6 @@ testmonitorservice:
       appgw.ingress.kubernetes.io/health-probe-path: "/nitestmonitor/up"
 
 dataframeservice:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/nidataframe/health"
-
   storage:
     type: "azure"
     azure:
