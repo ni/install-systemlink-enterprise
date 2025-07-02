@@ -1,6 +1,6 @@
 ## Default values for systemlink. Object storage must be configured separately:
 ##
-## - When hosted on Amazon Web Services, reference AWS/aws_supplemental_values.yml.
+## - When hosted on Amazon Web Services, reference AWS/aws-supplemental-values.yaml.
 ## - When hosted on Azure, reference Azure/azure-supplemental-values.yaml.
 ## - When self-hosted, reference OnPrem/storage-values.yaml.
 ##
