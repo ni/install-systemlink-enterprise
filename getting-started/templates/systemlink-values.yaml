@@ -1,4 +1,9 @@
-## Default values for systemlink.
+## Default values for systemlink. Object storage must be configured separately:
+##
+## - When hosted on Amazon Web Services, reference AWS/aws-supplemental-values.yaml.
+## - When hosted on Azure, reference Azure/azure-supplemental-values.yaml.
+## - When self-hosted, reference OnPrem/storage-values.yaml.
+##
 ## This is a YAML-formatted file.
 ## Declare override values for variables.
 
@@ -123,30 +128,6 @@ global:
   ## Deploy the certificate stored in apiHostCertificateSecret to all managed systems.
   ##
   deployApiHostCertificateToSystems: false
-
-## The following values are typically shared across multiple configurations. The values
-## here are not used directly as configuration but provide a convenient way to share
-## common configuration throughout this file. Individual references to these values can
-## be overridden with custom values if required.
-##
-## Hostname of an external S3 provider.
-# <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
-##
-s3Host: &s3Host "s3.amazonaws.com"
-## Service name of an on-cluster S3 provider.
-# <ATTENTION> To connect to an S3 provider within the same cluster, set s3ServiceName, s3Scheme, s3Port and s3Region,
-#             and set s3Host to an empty string.
-##
-s3ServiceName: &s3ServiceName ""
-## Schema used to access the configured S3 provider ("http" or "https")
-##
-s3Scheme: &s3Scheme "https"
-## Port number of the S3 provider
-##
-s3Port: &s3Port 443
-## Region where S3 storage is located
-##
-s3Region: &s3Region "us-east-1"
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -670,7 +651,7 @@ dataframeservice:
       ## Number of concurrent requests that a single replica can serve for ingesting data.
       ## Subsequent requests will be put in a queue.
       ## If you increase the request limit, you may need to increase "resources.requests.memory" proportionally.
-      ## Should be configured to the same value as "ingestion.s3StreamPool.maximumPooledStreams".
+      ## Should be configured to the same value as "ingestion.streamPool.maximumPooledStreams".
       ##
       requestsLimit: &dataFrameIngestionRateLimit 20
       ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
@@ -693,48 +674,6 @@ dataframeservice:
   ## limit, which should be set to the same value.
   ## Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 256MiB
-
-  ## The configuration for storing data table rows.
-  ##
-  storage:
-    ## The storage backend to use: currently only "s3". Defaults to s3.
-    ## s3: AWS S3 (or compatible backend such as MinIO). Additional configuration is required.
-    ##     See the "s3" section.
-    ##
-    type: s3
-
-    ## The configuration for the S3 backend. This configuration is only applicable when the
-    ## storage.type value is set to "s3".
-    ##
-    s3:
-      auth:
-        ## The name of the secret containing the S3 login credentials.
-        ##
-        secretName: "nidataframe-s3-credentials"
-      ## The name of the S3 bucket that the service should connect to.
-      ##
-      bucket: &dataframeBucket "systemlink-dataframe"
-      ## The scheme name. The name should not contain the following special characters: '://.'
-      ##
-      schemeName: *s3Scheme
-      ## Set this value to connect to an external S3 instance.
-      ##
-      host: *s3Host
-      ## Set this value to connect to an S3 instance that is internal to the cluster. The system
-      ## ignores this value if there is a host value.
-      ##
-      service: *s3ServiceName
-      ## S3 port number.
-      ##
-      port: *s3Port
-      ## Maximum number of concurrent connections to S3 per replica.
-      ##
-      maximumConnections: 32
-      ## S3 Region
-      ## <ATTENTION> You must set this value to the same region as the S3 instance to successfully
-      ## establish a connection.
-      ##
-      region: *s3Region
 
   ## Configure nessie.
   ##
@@ -812,38 +751,7 @@ dataframeservice:
       ## The name of the key in the above secret whose value contains the Dremio password
       ##
       passwordKey: "password"
-    distStorage:
-      # Dremio distributed storage configuration. This must be configured for the service to perform acceptably.
-      # See https://github.com/dremio/dremio-cloud-tools/blob/master/charts/dremio_v2/docs/Values-Reference.md#distributed-storage-values
-      # <ATTENTION>: This only partially configures distributed storage. Credentials must be configured in systemlink-secrets.yaml under
-      # sldremio.distStorage.aws.credentials.
-      type: "aws" # <ATTENTION> - change this if not using Amazon S3 or an equivalent, like MinIO
-      aws:
-        bucketName: *dataframeBucket
-        path: "/dremio/distStorage"
-        authentication: "accessKeySecret"
-        # extraProperties are only necessary if not using Amazon S3
-        # <ATTENTION>: If using MinIO or an equivalent, set fs.s3a.endpoint to the FQDN of MinIO or the equivalent service.
-        # extraProperties: |
-        #   <property>
-        #     <name>fs.s3a.endpoint</name>
-        #     <value><ATTENTION> - set to the FQDN of the S3 endpoint, including the port, but without an HTTP or HTTPS prefix. Example: {svc-name}.{namespace}.svc.cluster.local:9000</value>
-        #   </property>
-        #   <property>
-        #     <name>fs.s3a.path.style.access</name>
-        #     <description>Value has to be set to true.</description>
-        #     <value>true</value>
-        #   </property>
-        #   <property>
-        #     <name>dremio.s3.compat</name>
-        #     <description>Value has to be set to true.</description>
-        #     <value>true</value>
-        #   </property>
-        #   <property>
-        #     <name>fs.s3a.connection.ssl.enabled</name>
-        #     <description>Value can either be true or false, set to true to use SSL with a secure Minio server.</description>
-        #     <value>false</value>
-        #   </property>
+
 
 ## Salt configuration.
 ##
@@ -858,36 +766,6 @@ saltmaster:
 ## Feed configuration.
 ##
 feedservice:
-  ## Configures file storage settings.
-  ##
-  storage:
-    ## Specifies which storage to use. Supports "S3".
-    ##
-    type: "s3"
-    ## Configures S3 access.
-    ##
-    s3:
-      ## Secret name for S3 credentials.
-      ##
-      secretName: "feeds-s3-credentials"
-      ## The name of an S3 bucket. The service will connect to this bucket.
-      ##
-      bucket: "systemlink-feeds"
-      ## S3 connection scheme.
-      ##
-      scheme: *s3Scheme
-      ## Set this value to connect to an external S3 instance.
-      ##
-      host: *s3Host
-      ## Set this value to connect to an internal S3 instance from the cluster. The feedservice ignores the value if the host is set.
-      ##
-      service: *s3ServiceName
-      ## S3 Port
-      ##
-      port: *s3Port
-      ## S3 Region
-      ##
-      region: *s3Region
   ## Proxy configuration to be used when the service needs to go through a proxy to have access to external services like ni.com.
   httpProxy:
     ## @param httpProxy.address Address of the HTTP proxy in the $host:$port format. Example: "1.1.1.1:2222"
@@ -1169,36 +1047,7 @@ argoworkflows:
 ##
 nbexecservice:
   maxNumberOfWorkflowsToSchedule: *workflowParallelism
-  ## Configures file storage settings.
-  ##
-  storage: 
-    ## Set this value to specify the storage type. The NbExecService supports "S3".
-    ##
-    type: "s3"
-    ## Configures S3 access.
-    ##
-    s3:
-      ## Secret name for S3 credentials.
-      ##
-      secretName: "nbexecservice-s3-credentials"
-      ## The name of the S3 bucket that the service should connect to.
-      ##
-      bucket: "systemlink-executions"
-      ## S3 connection scheme.
-      ##
-      scheme: *s3Scheme
-      ## Set this value to connect to an external S3 instance.
-      ##
-      host: *s3Host
-      ## Set this value to connect to an S3 instance that is internal to the cluster. The NbExecService ignores the value if the host is set.
-      ##
-      service: *s3ServiceName
-      ## S3 Port
-      ##
-      port: *s3Port
-      ## S3 Region
-      ##
-      region: *s3Region
+
   ## Uncomment this section to adjust the resource allocation for the notebook execution pods.
   ##
   # argo:
