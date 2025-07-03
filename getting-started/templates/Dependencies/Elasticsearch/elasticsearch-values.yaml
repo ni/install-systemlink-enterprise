@@ -37,7 +37,7 @@ sl-elasticsearch:
       ##
       replicaCount: 2
       ## Persistence storage configuration.
-      ## For sizing recommendation, refer to the [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-a-mongodb-instance.html)
+      ## For sizing recommendation, refer to the [Configuring an Elasticsearch instance](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-an-elasticsearch-instance.html)
       ##
       persistence:
         ## PVC Storage Request for every Elasticsearch node.
