@@ -26,6 +26,6 @@ global:
 ## Flink k8s operator configuration.
 flinkoperator:
   ## Set to true to enable the deployment of the Flink Operator.
-  ## This component is needed if FileIngestion search capabilities are enabled
+  ## This component is needed if FileIngestion search capabilities are enabled and the Flink operator is not already deployed to the Kubernetes cluster.
   ##
   enabled: false

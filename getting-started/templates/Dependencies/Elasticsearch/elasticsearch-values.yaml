@@ -22,7 +22,7 @@ global:
   ## WARNING: Changing this value from true to false during an upgrade will delete existing secrets.
   # <ATTENTION> - Set to false if you do not want to manage secrets as part of the Helm installation.
   ##
-  deploySecrets: false
+  deploySecrets: true
 
 ## SystemLink Elasticsearch chart configuration.
 ##
@@ -60,7 +60,7 @@ sl-elasticsearch:
     ## The password is provided in the secrets file.
     ##
     security:
-      ## Whether to enable security
+      ## Enables Elasticsearch X-Pack Security settings, such as authentificating requests against the passwords defined in the secrets file.
       ##
       enabled: true
 

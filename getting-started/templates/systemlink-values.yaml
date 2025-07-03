@@ -829,6 +829,7 @@ fileingestion:
   featureToggle:
     ## <ATTENTION> - Verify that you have all the prerequisites before enabling this toggle.
     ## More information can be found in the SystemLink User Manual.
+    ## <ATTENTION> - This is an early access feature and is not yet available for general use.
     searchFiles: false
 
   ## Elasticsearch configuration.
@@ -848,6 +849,7 @@ fileingestion:
     port: "9200"
     ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
     ## provide the FQDN of the headless service
+    ## <ATTENTION> - This depends on the release name and will likely be different than this.
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
@@ -918,6 +920,7 @@ fileingestioncdc:
     port: "9200"
     ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
     ## provide the FQDN of the headless service
+    ## <ATTENTION> - This depends on the release name and will likely be different than this.
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
   ## High Availability configuration
@@ -931,7 +934,7 @@ fileingestioncdc:
     storage:
       ## The type of the object storage medium. Supported values are "s3", "azure" and "readWriteManyVolume"
       type: "s3"
-      ## Configure S3/MinIO access.
+      ## Configure S3 access.
       # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `s3`
       ##
       s3:
@@ -951,29 +954,6 @@ fileingestioncdc:
         accessKeyIdKey: "aws-access-key-id"
         ## The name of the key in the above secret whose value contains the S3 SecretAccessKey.
         secretAccessKeyKey: "aws-secret-access-key"
-      ## Configure Azure Storage access.
-      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `azure`
-      ##
-      azure:
-        ## The name of the Azure Storage account. Required if Azure Storage is enabled.
-        accountName: ""
-        ## The name of the secret containing the Azure Storage credentials.
-        secretName: "flink-azure-credentials"
-        ## The name of the Azure Storage container that the service should connect to.
-        containerName: "systemlink-flink"
-        ## The name of the key in the above secret whose value contains the shared access key.
-        accessKeyName: "azure-secret-access-key"
-        ## Whether to use TLS for connections to Azure Storage.
-        isSecure: true
-        ## The Azure Blob Storage host and port to connect to, not including the account name.
-        blobApiHost: "blob.core.windows.net"
-      ## Configure ReadWriteManyVolume access.
-      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `readWriteManyVolume`
-      ##
-      readWriteManyVolume:
-        persistentVolume:
-          ## The name of the kubernetes storage class that supports ReadWriteMany volumes.
-          storageClassName: "efs-sc"
 
   ## Job configuration.
   ##
