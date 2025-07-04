@@ -360,7 +360,7 @@ tags:
 
   ## @param replicaCount Number of pod replicas to deploy.
   ## This service does not have auto-scaling. Workload and tag data will be distributed across the replicas based on the number of workspaces. 
-  ## Note: Environments with high workspace cardinality and more than 160k Tags may require more replicas to balance the load. 
+  ## <ATTENTION> - Environments with high workspace cardinality and more than 160k Tags may require more replicas to balance the load. 
   ## Set this value according to the needs of your environment.
   ##
   replicaCount: 2
