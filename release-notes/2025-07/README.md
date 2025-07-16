@@ -15,9 +15,6 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
-
 ## Upgrade Considerations
 
 ### RabbitMQ Version
