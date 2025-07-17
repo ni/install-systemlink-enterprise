@@ -606,19 +606,13 @@ systemsui:
     targetMemoryUtilizationPercentage: 90
 
 tags:
+  replicaCount: 1
   resources:
     requests:
-      memory: "256Mi"
-      cpu: 100m
-    limits:
       memory: "512Mi"
-
-  autoscaling:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 2
-    targetCPUUtilizationPercentage: 60
-    targetMemoryUtilizationPercentage: 70
+      cpu: 500m
+    limits:
+      memory: "1Gi"
 
 taghistorian:
   resources:

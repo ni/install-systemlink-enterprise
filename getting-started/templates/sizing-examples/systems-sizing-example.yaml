@@ -358,12 +358,12 @@ tags:
     limits:
       memory: 8Gi
 
-  ## @param replicaCount Number of pod replicas to deploy.
+  ## @param replicaCount Number of pod replicas to deploy. It is recommended to use an odd number.
   ## This service does not have auto-scaling. Workload and tag data will be distributed across the replicas based on the number of workspaces. 
   ## <ATTENTION> - Environments with high workspace cardinality and more than 160k Tags may require more replicas to balance the load. 
   ## Set this value according to the needs of your environment.
   ##
-  replicaCount: 2
+  replicaCount: 3
 
   ## Tag event processor containers monitor trigger conditions for tag alarms
   tagEventProcessor:
