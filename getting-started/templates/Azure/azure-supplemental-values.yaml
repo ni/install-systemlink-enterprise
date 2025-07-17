@@ -125,6 +125,16 @@ fileingestion:
       accountName: ""
       blobApiHost: *azureBlobApiHost
 
+fileingestioncdc:
+  highAvailability:
+    storage:
+      type: "azure"
+      azure:
+        # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+        #             File Ingestion CDC Service.
+        accountName: ""
+        blobApiHost: *azureBlobApiHost
+
 nbexecservice:
   ingress:
     annotations:

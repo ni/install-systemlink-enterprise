@@ -1,0 +1,85 @@
+## Default values for systemlinkelasticsearch
+## This is a YAML-formatted file.
+## Declare override values for variables.
+
+## Global variables.
+##
+global:
+  ## Whether to enable the deployment of Kibana alongside with Elasticsearch
+  ##
+  kibanaEnabled: true
+  ## Defines the secret required to pull containers hosted on a private image repository.
+  ##
+  niImagePullSecret: &niPullSecret "niartifacts-secret"
+  ## Defines secrets required if containers are hosted on a private image repository.
+  ##
+  imagePullSecrets: &pullSecrets [*niPullSecret]
+  ## Overrides the default image registry.
+  # <ATTENTION> - Use this override if mirroring the SystemLink container registry.
+  ##
+  imageRegistry: ""
+  ## Disable secret deployment if you want to manually manage secrets on the cluster.
+  ## WARNING: Changing this value from true to false during an upgrade will delete existing secrets.
+  # <ATTENTION> - Set to false if you do not want to manage secrets as part of the Helm installation.
+  ##
+  deploySecrets: true
+
+## SystemLink Elasticsearch chart configuration.
+##
+sl-elasticsearch:
+  ## Bitnami's helm chart configuration
+  ##
+  elasticsearch:
+    ## Configuration for the master node of Elasticsearch
+    ##
+    master:
+      ## Node count. A minimum of 2 is recommended for HA.
+      ##
+      replicaCount: 2
+      ## Persistence storage configuration.
+      ## For sizing recommendation, refer to the [Configuring an Elasticsearch instance](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-an-elasticsearch-instance.html)
+      ##
+      persistence:
+        ## PVC Storage Request for every Elasticsearch node.
+        # <ATTENTION> - Adjust this size to match the needs of your application.
+        size: 50Gi
+      ## Resources configuration.
+      ##
+      resources:
+        ## Requests.
+        ##
+        requests:
+          cpu: 1
+          memory: 4Gi
+        ## Limits.
+        ##
+        limits:
+          memory: 4Gi
+
+    ## Security configuration.
+    ## The password is provided in the secrets file.
+    ##
+    security:
+      ## Enables Elasticsearch X-Pack Security settings, such as authentificating requests against the passwords defined in the secrets file.
+      ##
+      enabled: true
+
+  ## Values that are specifically for users creation job.
+  userProvisioning:
+    ## Enable of disable the job that creates users in Elasticsearch.
+    ##
+    enabled: true
+    ## Users definition
+    ##
+    users:
+      ## FilesCDC user definition.
+      ##
+      filescdc:
+        ## The name of the user to be created in Elasticsearch for Files CDC.
+        ##
+        user: "filescdc"
+        ## The name of the secret that contains the password for the Files CDC user.
+        ## The password is provided in the secrets file.
+        ##
+        secretName: "sl-elasticsearch-filescdc-secret"
+
