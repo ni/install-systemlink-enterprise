@@ -13,7 +13,33 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
+- Added "testplan:OverrideExecutionAction" privilege to Data Maintainer built-in role.
+  - This allows test plan and test plan template creators to specify executionActions that override the actions in the test plan's workflow.
+  - This matches the previous behavior available before test plan workflows were introduced (available behind a feature toggle in this release) for this role only.
+  - Other roles will no longer be able to specify executionActions when creating test plans or test plan templates unless update to include this privilege.
+- Added "testplanworkflow:Query" privilege to Data Maintainer, Collaborator, and Automated Agent built-in roles.
+- Added "testplanworkflow:*" to Systems Maintainer built-in role.
+- `dataframeservice:1.19.83`
+  - The route used by service health probes in the DataFrame service was changed to /up from /nidataframe/health/ready and /nidataframe/health/live.
+  - Users will not normally interact with these routes directly, but some deployments  (e.g. AWS and Azure) require the health check route to be specified as an annotation in the ingress configuration.
+  - If this was done previously, the configuration will need to be modified to use the /up route when upgrading to the latest version.
+  - If using the aws-supplemental-values.yaml or azure-supplemental-values.yaml files from our Github repo, deleting the ingress section under the "dataframeservice" section in that file will get you the expected behavior.
+- Improved FileIngestion search performance by leveraging Elasticsearch and Apache Flink. The new components are disabled by default in SLE.
+
 ## Helm Chart Breaking Changes
+
+- `dataframeservice:1.19.83`
+  - /nidataframe/health* routes removed. Change DFS Ingress/Load Balancer annotations to /up.
+- Getting started template: S3 configuration has been removed from the template systemlink-values.yaml and systemlink-secrets.yaml files.
+  - When using Amazon S3, reference the aws-supplemental-values.yaml and aws-secrets.yaml files in the AWS directory.
+  - When using an Amazon S3 compatible storage provider, reference the storage-values.yaml and storage-secrets.yaml files in the OnPrem directory.
+  - When using Azure Storage, reference the azure-supplemental-values.yaml and azure-secrets.yaml files in the Azure directory.
+  - The aws_supplemental_values.yml file in the AWS directory was renamed to aws-supplemental-values.yaml.
+  - The azure_supplemental_values.yml file in the Azure directory was renamed to azure-supplemental-values.yaml.
+- `specificationmanagement:0.18.43`
+  - Migration of existing specs to use public ID instead of GUID. Downtime will be expected propotional to the existing specs in database.
+- Specification UI
+  - Spec details URL has been changed to use public ID instead of SpecId and workspace ID.
 
 ## Upgrade Considerations
 
@@ -36,17 +62,13 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-07 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-07/release-notes/2025-07/closed-bugs-sle-2025-07.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-07/release-notes/2025-07/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-07/release-notes/2025-07/notices)
 
 ## Versions
 
