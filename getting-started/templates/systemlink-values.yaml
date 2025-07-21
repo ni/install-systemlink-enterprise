@@ -782,7 +782,7 @@ feedservice:
     ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com" 
     additionalNoProxy: []
 
-## File upload configuration.
+## FileIngestion configuration.
 ##
 fileingestion:
   ## Ingress configuration
@@ -794,6 +794,63 @@ fileingestion:
       nginx.ingress.kubernetes.io/proxy-body-size: 2000m
       nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
+
+  storage:
+    type: "s3"
+    ## Configures S3 access.
+    s3:
+      ## Secret name for S3 credentials.
+      ##
+      secretName: "fileingestion-s3-credentials"
+      ## The name of the S3 bucket that the service should connect to.
+      ##
+      bucket: "systemlink-file-ingestion"
+      ## Set this to true to limit each user to a maximum of 1Gb of file storage.
+      ##
+      storageLimitsEnabled: false
+      ## S3 connection scheme.
+      ##
+      scheme: *s3Scheme
+      ## Set this value to connect to an external S3 instance.
+      ##
+      host: *s3Host
+      ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
+      ##
+      service: *s3ServiceName
+      ## S3 Port
+      ##
+      port: *s3Port
+      ## S3 Region
+      ##
+      region: *s3Region
+
+  ## Feature toggles.
+  ## 
+  featureToggle:
+    ## <ATTENTION> - Verify that you have all the prerequisites before enabling this toggle.
+    ## More information can be found in the SystemLink User Manual.
+    ## <ATTENTION> - This is an early access feature and is not yet available for general use.
+    searchFiles: false
+
+  ## Elasticsearch configuration.
+  ## <ATTENTION> - Only needed if you plan to use the `searchFiles` feature toggle.
+  elasticsearch:
+    ## The name of the secret containing the Elasticsearch password.
+    ## This secret is created automatically by the SystemLink Elasticsearch deployment,
+    ## if autoprovisioning is enabled.
+    ## If Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment,
+    ## this secret name needs to match the one created by the fileingestioncdc deployment.
+    existingSecretName: "sl-elasticsearch-filescdc-secret"
+    ## The Elasticsearch user used by the FileIngestion application.
+    username: "filescdc"
+    ## The Elasticsearch scheme
+    scheme: "http"
+    ## The Elasticsearch port
+    port: "9200"
+    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
+    ## provide the FQDN of the headless service
+    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
   ## applies its own per-user limit. With load-balancing, the effective rate will be higher than the
@@ -836,6 +893,83 @@ fileingestion:
     ## The secret used to create the encrypted token used for downloading files from UI
     ##
     encryptionKeySecret: "fileingestionservices-download-encryption-key"
+
+## Configuration for FileIngestionCDC.
+## <ATTENTION> - Needed if FileIngestion search capabilities are enabled.
+##
+fileingestioncdc:
+  ## Set to true to enable the deployment of the FileIngestionCDC
+  ##
+  enabled: false
+
+  ## Elasticsearch configuration
+  ##
+  elasticsearch:
+    ## Name of the existing secret containing the Elasticsearch password.
+    ## This secret is created automatically by the SystemLink Elasticsearch deployment if autoprovisioning is enabled.
+    existingSecretName: "sl-elasticsearch-filescdc-secret"
+    ## The name of the secret to be created containing the Elasticsearch password.
+    ## This secret will be created by the deployment in case Elasticsearch is not provisioned via the SysteLink Elasticsearch
+    ## deployment. Password needs to be provided in the secrets section.
+    secretName: "fileingestioncdc-elastic-credentials"
+    ## The Elasticsearch user used by the FileIngestionCDC application
+    username: "filescdc"
+    ## The Elasticsearch scheme
+    scheme: "http"
+    ## The Elasticsearch port
+    port: "9200"
+    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
+    ## provide the FQDN of the headless service
+    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    host: "elasticsearch-release-master-hl.default.svc.cluster.local"
+
+  ## High Availability configuration
+  ##
+  highAvailability:
+    ## Whether to enable high availability. This is required for production environments.
+    ## Needs an object storage medium, like S3, Azure Storage or a ReadWriteMany volume.
+    enabled: true
+    ## Storage configuration
+    ##
+    storage:
+      ## The type of the object storage medium. Supported values are "s3", "azure" and "readWriteManyVolume"
+      type: "s3"
+      ## Configure S3 access.
+      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `s3`
+      ##
+      s3:
+        ## Secret name for S3 credentials
+        secretName: "flink-aws-keys"
+        ## S3 access type. Supported values are "ACCESS_KEY" and "AWS_WEB_IDENTITY_TOKEN".
+        authType: "ACCESS_KEY"
+        ## The name of the S3 bucket that the service should connect to.
+        bucket: "systemlink-flink"
+        ## Set this value to connect to an external S3 instance.
+        host: "s3.amazonaws.com"
+        ## Set this value to connect to an S3 instance which is internal to the cluster.
+        service: ""
+        ## S3 Region.
+        region: "us-east-1"
+        ## The name of the key in the above secret whose value contains the S3 AccessKeyId.
+        accessKeyIdKey: "aws-access-key-id"
+        ## The name of the key in the above secret whose value contains the S3 SecretAccessKey.
+        secretAccessKeyKey: "aws-secret-access-key"
+
+  ## Job configuration.
+  ##
+  job:
+    ## Connectors configuration.
+    ##
+    connectors:
+      ## Sink configuration.
+      sink:
+        ## Elasticsearch sink configuration.
+        elasticsearch:
+          ## Index creation configuration.
+          index:
+            ## The number of primary shards that will be allocated for the files elastic index.
+            ## This can be configured only on the first deployment, subsequent deployments will ignore this value.
+            primaryShardsCount: 2
 
 ## Configuration for JupyterHub.
 ##
