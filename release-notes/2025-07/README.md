@@ -1,4 +1,4 @@
-# SystemLink Enterprise release year-release-month Release Notes
+# SystemLink Enterprise 2025-07 Release Notes
 
 The 2025-07 release for SystemLink Enterprise has been published to
 <https://downloads.artifacts.ni.com>. This update includes new features, bug
@@ -7,39 +7,63 @@ credentials to access these artifacts. If you are not upgrading from the
 previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
+## New Features and Behavior Changes
 
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
-## New Features and Behavior changes
-
-- Added "testplan:OverrideExecutionAction" privilege to Data Maintainer built-in role.
-  - This allows test plan and test plan template creators to specify executionActions that override the actions in the test plan's workflow.
-  - This matches the previous behavior available before test plan workflows were introduced (available behind a feature toggle in this release) for this role only.
-  - Other roles will no longer be able to specify executionActions when creating test plans or test plan templates unless update to include this privilege.
-- Added "testplanworkflow:Query" privilege to Data Maintainer, Collaborator, and Automated Agent built-in roles.
-- Added "testplanworkflow:*" to Systems Maintainer built-in role.
-- `dataframeservice:1.19.83`
-  - The route used by service health probes in the DataFrame service was changed to /up from /nidataframe/health/ready and /nidataframe/health/live.
-  - Users will not normally interact with these routes directly, but some deployments  (e.g. AWS and Azure) require the health check route to be specified as an annotation in the ingress configuration.
-  - If this was done previously, the configuration will need to be modified to use the /up route when upgrading to the latest version.
-  - If using the aws-supplemental-values.yaml or azure-supplemental-values.yaml files from our Github repo, deleting the ingress section under the "dataframeservice" section in that file will get you the expected behavior.
-- Improved FileIngestion search performance by leveraging Elasticsearch and Apache Flink. The new components are disabled by default in SLE.
+- Support for hosting SystemLink Enterprise on Microsoft Azure. For more
+  information, refer to the
+  [Azure templates](https://github.com/ni/install-systemlink-enterprise/tree/2025-07/getting-started/templates/Azure).
+- Support for full text search on all file types. For more information, refer to
+  [Configuring an Elasticsearch Instance](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-an-elasticsearch-instance.html).
+  - This capability is disabled by default. Refer to the
+    [Elasticsearch readme](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/Dependencies/Elasticsearch/README.md)
+    to enable and configure this capability.
+- Use out-of-the-box dashboards to access information such as asset calibration,
+  lab overview, and product test summary. For more information, refer to
+  [Viewing Out of the Box (OOTB) Dashboards in SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-out-of-the-box-dashboards.html).
+- Support for the following data sources in Grafana dashboards:
+  - Test Plans
+  - Work Orders
+  - Test Results
+- Filter systems and test plans in schedule view. You can then save these
+  filters and schedule view configurations as named views. For more information,
+  refer to
+  [Viewing Scheduled Test Plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-scheduled-test-plans.html).
+- Added **List and view test plans** privilege to Work Orders.
+  - This privilege has been enabled by default for the _Data Maintainer_,
+    _Collaborator_, and _Automated Agent_ built-in roles.
+- Added the **Override workflow actions on a test plan** privilege to Work
+  Orders.
+  - This allows test plan and test plan template creators to specify
+    `executionActions` that override the actions in the test plan's workflow.
+- Updated the _Systems Maintainer_ built-in role to enable by default all _test
+  plan_ and _test actions_ privileges.
+- Spec Management now uses user-friendly IDs for specs.
+  - The service will migrate existing specs during upgrade to use these new IDs
+    instead of GUIDs. During migration, this service will be unavailable.
+  - Spec URLs will use the new IDs.
 
 ## Helm Chart Breaking Changes
 
 - `dataframeservice:1.19.83`
-  - /nidataframe/health* routes removed. Change DFS Ingress/Load Balancer annotations to /up.
-- Getting started template: S3 configuration has been removed from the template systemlink-values.yaml and systemlink-secrets.yaml files.
-  - When using Amazon S3, reference the aws-supplemental-values.yaml and aws-secrets.yaml files in the AWS directory.
-  - When using an Amazon S3 compatible storage provider, reference the storage-values.yaml and storage-secrets.yaml files in the OnPrem directory.
-  - When using Azure Storage, reference the azure-supplemental-values.yaml and azure-secrets.yaml files in the Azure directory.
-  - The aws_supplemental_values.yml file in the AWS directory was renamed to aws-supplemental-values.yaml.
-  - The azure_supplemental_values.yml file in the Azure directory was renamed to azure-supplemental-values.yaml.
-- `specificationmanagement:0.18.43`
-  - Migration of existing specs to use public ID instead of GUID. Downtime will be expected propotional to the existing specs in database.
-- Specification UI
-  - Spec details URL has been changed to use public ID instead of SpecId and workspace ID.
+  - The route used by DataFrame Service health probes is changed to `/up` from
+    `/nidataframe/health/ready` and `/nidataframe/health/live`.
+  - Deployments may require the health check route to be specified as an
+    annotation in the ingress configuration.
+  - AWS and Azure deployments use the new service health probe route by default.
+    Previously specified DataFrame Service health probe routes can be removed.
+- The reference S3 configuration has been moved from `systemlink-values.yaml`
+  and `systemlink-secrets.yaml` to
+  [`aws-supplemental-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/AWS/aws-supplemental-values.yaml)
+  and
+  [`aws-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/AWS/aws-secrets.yaml).
+  - When using an Amazon S3 compatible storage provider, refer to
+    [`storage-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/OnPrem/storage-values.yaml)
+    and
+    [`storage-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/OnPrem/storage-secrets.yaml).
+  - When using Azure Storage, refer to
+    [`azure-supplemental-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/Azure/azure-supplemental-values.yaml)
+    and
+    [`azure-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/2025-07/getting-started/templates/Azure/azure-secrets.yaml).
 
 ## Upgrade Considerations
 
