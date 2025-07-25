@@ -63,6 +63,8 @@ for detailed update instructions.
 
 **Admin Helm Chart:** `systemlink-admin <chart version>`
 
+**Elasticsearch Helm Chart:** `systemlinkelasticsearch <chart version`
+
 ### NI Containers
 
 ```text
