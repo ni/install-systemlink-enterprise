@@ -20,7 +20,7 @@ required configuration changes.
 - Use out-of-the-box dashboards to access information such as asset calibration,
   lab overview, and product test summary. For more information, refer to
   [Viewing Out of the Box (OOTB) Dashboards in SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-out-of-the-box-dashboards.html).
-- Support for the following data sources in Grafana dashboards:
+- Support for the following data sources in dashboards:
   - Test Plans
   - Work Orders
   - Test Results
