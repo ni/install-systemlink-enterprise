@@ -11,7 +11,7 @@
 ## be overridden with custom values if required.
 
 ## Hostname of an external S3 provider.
-# <ATTENTION> To connect to an S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
+# <ATTENTION> To connect to an S3 provider, set the values of the following variables: s3Host, s3Scheme, s3Port and s3Region.
 ##
 s3Host: &s3Host ""
 ## Scheme used to access the configured S3 provider ("http" or "https")
