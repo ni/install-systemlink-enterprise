@@ -161,6 +161,16 @@ fileingestion:
       port: *s3Port
       region: *s3Region
 
+fileingestioncdc:
+  highAvailability:
+    storage:
+      type: "s3"
+      s3:
+        ## The name of the S3 bucket that the service should connect to.
+        bucket: "systemlink-flink"
+        host: *s3Host
+        region: *s3Region
+
 saltmaster:
   serviceTCP:
     type: NodePort
