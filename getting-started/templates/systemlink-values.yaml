@@ -591,22 +591,22 @@ dashboardhost:
 
 ## Grafana provisioning
 ##
-grafanaprovisioning:
-  grafanaDashboardsProvisioning:
+# grafanaprovisioning:
+  # grafanaDashboardsProvisioning:
     ## Dashboards listed are enumerated over the dashboard-configmap-template.yaml
     ## Each key under the "dashboards" item will be the name of a ConfigMap.
     ## It is recommended to add the "-dashboard" suffix to each key to avoid collision with other ConfigMaps
     ## Dashboard json files can be placed under "dashboards/[project-name]/[dashboard-file].json"
     ## By default, all "enabled" parameters are considered as true even if they are not mentioned. You can disable this by assigning "whitelistMode: true"
     ##
-    whitelistMode: true
-  grafanaDatasourcesProvisioning:
+    # whitelistMode: true
+  # grafanaDatasourcesProvisioning:
     ## Datasources listed are enumerated over the datasource-configmap-template.yaml
     ## Each key under the "datasources" item will be the name of a datasource in the ConfigMap.
     ## By default, all "enabled" parameters are considered as true even if they are not mentioned. You can disable this by assigning "whitelistMode: true"
     ##
-    whitelistMode: true
-    projects:
+    # whitelistMode: true
+    # projects:
       ## Datasources must be grouped under projects
       ## There is an optional "enabled" parameter that defaults to true which can be used to toggle the project/dashboard on or off.
       # some-project:
