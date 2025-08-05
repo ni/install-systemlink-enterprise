@@ -795,35 +795,6 @@ fileingestion:
       nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
-  storage:
-    type: "s3"
-    ## Configures S3 access.
-    s3:
-      ## Secret name for S3 credentials.
-      ##
-      secretName: "fileingestion-s3-credentials"
-      ## The name of the S3 bucket that the service should connect to.
-      ##
-      bucket: "systemlink-file-ingestion"
-      ## Set this to true to limit each user to a maximum of 1Gb of file storage.
-      ##
-      storageLimitsEnabled: false
-      ## S3 connection scheme.
-      ##
-      scheme: *s3Scheme
-      ## Set this value to connect to an external S3 instance.
-      ##
-      host: *s3Host
-      ## Set this value to connect to an S3 instance which is internal to the cluster. Ignored if host is set.
-      ##
-      service: *s3ServiceName
-      ## S3 Port
-      ##
-      port: *s3Port
-      ## S3 Region
-      ##
-      region: *s3Region
-
   ## Feature toggles.
   ## 
   featureToggle:
@@ -929,31 +900,6 @@ fileingestioncdc:
     ## Whether to enable high availability. This is required for production environments.
     ## Needs an object storage medium, like S3, Azure Storage or a ReadWriteMany volume.
     enabled: true
-    ## Storage configuration
-    ##
-    storage:
-      ## The type of the object storage medium. Supported values are "s3", "azure" and "readWriteManyVolume"
-      type: "s3"
-      ## Configure S3 access.
-      # <ATTENTION> - This needs to be configured only if `highAvailability.storage.type` is `s3`
-      ##
-      s3:
-        ## Secret name for S3 credentials
-        secretName: "flink-aws-keys"
-        ## S3 access type. Supported values are "ACCESS_KEY" and "AWS_WEB_IDENTITY_TOKEN".
-        authType: "ACCESS_KEY"
-        ## The name of the S3 bucket that the service should connect to.
-        bucket: "systemlink-flink"
-        ## Set this value to connect to an external S3 instance.
-        host: "s3.amazonaws.com"
-        ## Set this value to connect to an S3 instance which is internal to the cluster.
-        service: ""
-        ## S3 Region.
-        region: "us-east-1"
-        ## The name of the key in the above secret whose value contains the S3 AccessKeyId.
-        accessKeyIdKey: "aws-access-key-id"
-        ## The name of the key in the above secret whose value contains the S3 SecretAccessKey.
-        secretAccessKeyKey: "aws-secret-access-key"
 
   ## Job configuration.
   ##

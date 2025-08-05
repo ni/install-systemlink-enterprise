@@ -11,14 +11,9 @@
 ## be overridden with custom values if required.
 
 ## Hostname of an external S3 provider.
-# <ATTENTION> To connect to an external S3 provider, set s3Host, s3Scheme, s3Port and s3Region.
+# <ATTENTION> To connect to an S3 provider, set the values of the following variables: s3Host, s3Scheme, s3Port and s3Region.
 ##
 s3Host: &s3Host ""
-## Service name of an in-cluster S3 provider.
-# <ATTENTION> To connect to an S3 provider within the same cluster, set s3ServiceName, s3Scheme,
-#             s3Port and s3Region, and set s3Host to an empty string.
-##
-s3ServiceName: &s3ServiceName ""
 ## Scheme used to access the configured S3 provider ("http" or "https")
 ##
 s3Scheme: &s3Scheme "https"
@@ -41,7 +36,6 @@ dataframeservice:
       maximumConnections: 32
       schemeName: *s3Scheme
       host: *s3Host
-      service: *s3ServiceName
       port: *s3Port
       region: *s3Region
   sldremio:
@@ -90,7 +84,6 @@ feedservice:
       bucket: "systemlink-feeds"
       scheme: *s3Scheme
       host: *s3Host
-      service: *s3ServiceName
       port: *s3Port
       region: *s3Region
 
@@ -106,9 +99,18 @@ fileingestion:
       storageLimitsEnabled: false
       scheme: *s3Scheme
       host: *s3Host
-      service: *s3ServiceName
       port: *s3Port
       region: *s3Region
+
+fileingestioncdc:
+  highAvailability:
+    storage:
+      type: "s3"
+      s3:
+        ## The name of the S3 bucket that the service should connect to.
+        bucket: "systemlink-flink"
+        host: *s3Host
+        region: *s3Region
 
 nbexecservice:
   storage:
@@ -119,6 +121,5 @@ nbexecservice:
       bucket: "systemlink-executions"
       scheme: *s3Scheme
       host: *s3Host
-      service: *s3ServiceName
       port: *s3Port
       region: *s3Region
