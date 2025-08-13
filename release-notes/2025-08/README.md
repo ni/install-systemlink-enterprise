@@ -1,4 +1,4 @@
-# SystemLink Enterprise release year-release-month Release Notes
+# SystemLink Enterprise 2025-08 Release Notes
 
 The 2025-08 release for SystemLink Enterprise has been
 published to <https://downloads.artifacts.ni.com>. This update includes new
@@ -7,15 +7,26 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `dataframeservice:1.20.72`
+  - The DataFrame Service now enforces a limit on the amount of property metadata that a table and its columns can have. This limit is configurable from the Helm values via ingestion.maxPropertyMetadataLength.
+  - This limit defines the maximum length of the sum of the keys and values of a table's property metadata in its "properties" dictionary, as well as the "properties" dictionaries of its columns.
+  - The default limit is 500000 characters. An error is thrown if the length of the table's summed property metadata exceeds this value.
+  - This change was added because database and query performance degrades if table documents are too large. This also helps ensure we avoid hitting Mongo's 16 MB document size limit.
+- `testmonitorservice:0.37.42`
+  - Introduced new helm value named `queryRequestTimeoutInSeconds`, to set timeout for query requests.
+  - Introduced new helm value named `statementTimeoutInSeconds`,  to defer retrying queries when the request timed out.
+- `dataframeservice:1.20.72`, `helium-fileingestionservices:1.18.19`, `feedservice:0.17.41`, `nbexecservice:0.29.62`
+  - The storage.s3.service value has been removed from the Helm configuration. The storage.s3.host value should be used in all cases to configure the S3 connection for the service.
+  - The "service" value was only really useful when configuring the service to use the Minio instance deployed by the SystemLink top-level Helm chart.
+  - The "host" value was used for all other cases. As this is no longer a valid configuration, the "service" value is no longer needed.
+  - Deployment will fail if the chart detects that the old value is set and direct the user to set the "host" value instead.
+- `fileingestioncdc:0.1.3`
+  - The highAvailability.storage.s3.service value has been removed from the Helm configuration. The highAvailability.storage.s3.host value should be used in all cases to configure the S3 connection for the service.
+  - The "service" value was only really useful when configuring the service to use the Minio instance deployed by the SystemLink top-level Helm chart.
+  - The "host" value was used for all other cases. As this is no longer a valid configuration, the "service" value is no longer needed.
+  - Deployment will fail if the chart detects that the old value is set and direct the user to set the "host" value instead.
 
 ## Helm Chart Breaking Changes
 
@@ -43,23 +54,19 @@ for detailed update instructions.
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-08 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-08/release-notes/2025-08/closed-bugs-sle-2025-08.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-08/release-notes/2025-08/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-08/release-notes/2025-08/notices)
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.40.61`
+**Top Level Helm Chart:** `systemlink 0.40.65`
 
-**Admin Helm Chart:** `systemlink-admin 0.40.10`
+**Admin Helm Chart:** `systemlink-admin 0.40.11`
 
 **Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.2.13`
 
@@ -83,8 +90,8 @@ feedsui:0.16.45
 fileingestioncdc:0.1.3
 filesui:0.29.52
 grafana-auth-proxy:0.21.7
-grafana-plugins:4.2.0
-grafana-rbac-integrator:0.28.37
+grafana-plugins:4.2.1
+grafana-rbac-integrator:0.28.38-15169355
 helium-dataservices-mongomigration:0.27.40
 helium-dataservices:0.27.40
 helium-fileingestionservices:1.18.19
@@ -127,7 +134,7 @@ systemsstatesui:0.17.64
 systemsui:0.29.92
 tageventprocessor:0.27.40
 tagsui:0.24.46
-testinsightsui:0.28.84
+testinsightsui:0.28.85
 testmonitorservice:0.37.42
 userdata:0.28.23
 userservice-setup:0.34.8
