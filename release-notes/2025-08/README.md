@@ -1,40 +1,53 @@
 # SystemLink Enterprise 2025-08 Release Notes
 
-The 2025-08 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-08 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Support for Server-Side Encryption through the Key Management Service (AWS SSE-KMS). For more information, refer to [Configuring File Storage](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-file-storage.html).
+- Support for Server-Side Encryption through the Key Management Service (AWS
+  SSE-KMS). For more information, refer to
+  [Configuring File Storage](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-file-storage.html).
 - `dataframeservice:1.20.72`
-  - The DataFrame Service now enforces a limit on the amount of property metadata that a table and its columns can have. This limit is configurable from the Helm values via ingestion.maxPropertyMetadataLength.
-  - This limit defines the maximum length of the sum of the keys and values of a table's property metadata in its "properties" dictionary, as well as the "properties" dictionaries of its columns.
-  - The default limit is 500000 characters. An error is thrown if the length of the table's summed property metadata exceeds this value.
-  - This change was added because database and query performance degrades if table documents are too large. This also helps ensure we avoid hitting Mongo's 16 MB document size limit.
+  - The DataFrame Service now limits the amount of property metadata that tables
+    and columns can contain. This limit is configurable from the Helm values via
+    `dataframeservice.ingestion.maxPropertyMetadataLength`.
+  - This limit sets the maximum total character count for all property metadata
+    keys and values across the table and its columns.
+  - The default limit is 500000 characters. An
+    `HTTP 400 error: PropertyMetadataTooLarge` is thrown if the length of the
+    table's summed property metadata exceeds this value.
+  - This change mitigates database and query performance degradation.
+  - This change mitigates the likelihood of hitting the service database's 16 MB
+    document size limit.
+  - This limit is in addition to limits to the number of properties an
+    individual table or column may have.
 - `testmonitorservice:0.37.42`
-  - Introduced new helm value named `queryRequestTimeoutInSeconds`, to set timeout for query requests.
-  - Introduced new helm value named `statementTimeoutInSeconds`,  to defer retrying queries when the request timed out.
-- `dataframeservice:1.20.72`, `helium-fileingestionservices:1.18.19`, `feedservice:0.17.41`, `nbexecservice:0.29.62`
-  - The storage.s3.service value has been removed from the Helm configuration. The storage.s3.host value should be used in all cases to configure the S3 connection for the service.
-  - The "service" value was only really useful when configuring the service to use the Minio instance deployed by the SystemLink top-level Helm chart.
-  - The "host" value was used for all other cases. As this is no longer a valid configuration, the "service" value is no longer needed.
-  - Deployment will fail if the chart detects that the old value is set and direct the user to set the "host" value instead.
-- `fileingestioncdc:0.1.3`
-  - The highAvailability.storage.s3.service value has been removed from the Helm configuration. The highAvailability.storage.s3.host value should be used in all cases to configure the S3 connection for the service.
-  - The "service" value was only really useful when configuring the service to use the Minio instance deployed by the SystemLink top-level Helm chart.
-  - The "host" value was used for all other cases. As this is no longer a valid configuration, the "service" value is no longer needed.
-  - Deployment will fail if the chart detects that the old value is set and direct the user to set the "host" value instead.
+  - Introduced new Helm value named `testmonitor.queryRequestTimeoutInSeconds`,
+    to set timeout for query requests.
+  - Introduced new Helm value named `testmonitor.statementTimeoutInSeconds`, to
+    defer query retries when requests time out.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
-
-## Upgrade Considerations
+- `dataframeservice:1.20.72`, `helium-fileingestionservices:1.18.19`,
+  `feedservice:0.17.41`, `nbexecservice:0.29.62`
+  - The `storage.s3.service` value has been removed from the Helm configuration.
+    The `storage.s3.host` value should be used in all cases to configure the S3
+    connection for the service.
+  - Deployment will fail if the chart detects the old value and will direct the
+    user to set the `host` value instead.
+- `fileingestioncdc:0.1.3`
+  - The `fileingestioncdc.highAvailability.storage.s3.service` value has been
+    removed from the Helm configuration. The
+    `fileingestioncdc.highAvailability.storage.s3.host` value should be used in
+    all cases to configure the S3 connection for the service.
+  - Deployment will fail if the chart detects the old value and will direct the
+    user to set the `host` value instead.
 
 ### RabbitMQ Version
 
