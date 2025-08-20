@@ -9,6 +9,7 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
+- Support for Server-Side Encryption through the Key Management Service (AWS SSE-KMS). For more information, refer to [Configuring File Storage](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-file-storage.html).
 - `dataframeservice:1.20.72`
   - The DataFrame Service now enforces a limit on the amount of property metadata that a table and its columns can have. This limit is configurable from the Helm values via ingestion.maxPropertyMetadataLength.
   - This limit defines the maximum length of the sum of the keys and values of a table's property metadata in its "properties" dictionary, as well as the "properties" dictionaries of its columns.
@@ -50,7 +51,8 @@ for detailed update instructions.
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | 0.29.56                            |
-| 4.0.x            | 0.30.74                             | current                            |
+| 4.0.x            | 0.30.74                             | 0.36.63                            |
+| 4.1.x            | 0.37.84                             | current                            |
 
 ## Bugs Fixed
 
@@ -64,7 +66,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.40.65`
+**Top Level Helm Chart:** `systemlink 0.40.67`
 
 **Admin Helm Chart:** `systemlink-admin 0.40.11`
 
@@ -128,7 +130,7 @@ sl-k8s-hub:2.19.4
 sl-k8s-kibana:1.0.5
 smtp:0.28.32
 specificationmanagement:0.19.31
-systemsmanagementservice:0.28.28
+systemsmanagementservice:0.28.29
 systemsstateservice:0.18.33
 systemsstatesui:0.17.64
 systemsui:0.29.92
