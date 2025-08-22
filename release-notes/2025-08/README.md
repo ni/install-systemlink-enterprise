@@ -36,9 +36,9 @@ required configuration changes.
 
 - `dataframeservice:1.20.72`, `helium-fileingestionservices:1.18.19`,
   `feedservice:0.17.41`, `nbexecservice:0.29.62`
-  - The `storage.s3.service` value has been removed from the Helm configuration.
-    The `storage.s3.host` value should be used in all cases to configure the S3
-    connection for the service.
+  - This update removes the `storage.s3.service` value from the Helm
+    configuration. Use the `storage.s3.host` value to configure the S3
+    connection for these services.
   - Deployments fail if the Helm chart detects the old value and will direct the
     user to set the `host` value instead.
 - `fileingestioncdc:0.1.3`
