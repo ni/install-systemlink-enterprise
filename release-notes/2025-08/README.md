@@ -14,23 +14,23 @@ required configuration changes.
   [Configuring File Storage](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-file-storage.html).
 - `dataframeservice:1.20.72`
   - The DataFrame Service now limits the amount of property metadata that tables
-    and columns can contain. This limit is configurable from the Helm values via
-    `dataframeservice.ingestion.maxPropertyMetadataLength`.
+    and columns can contain. You can configure this limit through the
+    `dataframeservice.ingestion.maxPropertyMetadataLength` Helm values.
   - This limit sets the maximum total character count for all property metadata
-    keys and values across the table and its columns.
-  - The default limit is 500000 characters. An
-    `HTTP 400 error: PropertyMetadataTooLarge` is thrown if the length of the
-    table's summed property metadata exceeds this value.
+    keys and values across a table and its columns.
+  - The default limit is 500000 characters. If the summed property metadata
+    length of a table and its columns exceeds this value, the service returns a
+    `HTTP 400 PropertyMetadataTooLarge` error.
   - This change mitigates database and query performance degradation.
-  - This change mitigates the likelihood of hitting the service database's 16 MB
-    document size limit.
+  - This change mitigates the likelihood of exceeding the 16 MB document size
+    limit of the service database.
   - This limit is in addition to limits to the number of properties an
     individual table or column may have.
 - `testmonitorservice:0.37.42`
-  - Introduced new Helm value named `testmonitor.queryRequestTimeoutInSeconds`,
-    to set timeout for query requests.
-  - Introduced new Helm value named `testmonitor.statementTimeoutInSeconds`, to
-    defer query retries when requests time out.
+  - Introduced new `testmonitor.queryRequestTimeoutInSeconds` Helm value. Use
+    this value to set the timeout limit for query requests.
+  - Introduced new `testmonitor.statementTimeoutInSeconds` Helm value. Use this
+    value to defer a query retry when a request exceeds the timeout limit.
 
 ## Helm Chart Breaking Changes
 
@@ -39,14 +39,15 @@ required configuration changes.
   - The `storage.s3.service` value has been removed from the Helm configuration.
     The `storage.s3.host` value should be used in all cases to configure the S3
     connection for the service.
-  - Deployment will fail if the chart detects the old value and will direct the
+  - Deployments fail if the Helm chart detects the old value and will direct the
     user to set the `host` value instead.
 - `fileingestioncdc:0.1.3`
-  - The `fileingestioncdc.highAvailability.storage.s3.service` value has been
-    removed from the Helm configuration. The
-    `fileingestioncdc.highAvailability.storage.s3.host` value should be used in
-    all cases to configure the S3 connection for the service.
-  - Deployment will fail if the chart detects the old value and will direct the
+  - This update removes the
+    `fileingestioncdc.highAvailability.storage.s3.service` value from the Helm
+    configuration.
+  - Use the `fileingestioncdc.highAvailability.storage.s3.host` value to
+    configure the S3 connection for the service.
+  - Deployments fail if the Helm chart detects the old value and will direct the
     user to set the `host` value instead.
 
 ### RabbitMQ Version
