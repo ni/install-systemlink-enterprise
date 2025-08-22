@@ -24,8 +24,8 @@ required configuration changes.
   - This change mitigates database and query performance degradation.
   - This change mitigates the likelihood of exceeding the 16 MB document size
     limit of the service database.
-  - This limit is in addition to limits to the number of properties an
-    individual table or column may have.
+  - This is an additional limit to the number of properties an individual table
+    or column may have.
 - `testmonitorservice:0.37.42`
   - Introduced new `testmonitor.queryRequestTimeoutInSeconds` Helm value. Use
     this value to set the timeout limit for query requests.
