@@ -1,5 +1,3 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
-
 # SystemLink Enterprise 2025-09 Release Notes
 
 The 2025-09 release for SystemLink Enterprise has been
@@ -15,9 +13,15 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `helium-fileingestionservices:1.19.*`
+  - Introduced new chunked file upload api via upload-sessions.
+  - This can be used to bypass any ingress-controller or IT restrictions that would prevent uploading large files ( > 1GB).
+  - This is available only on the back-end side, the Files Web Application is not leveraging this new API yet.
+- `workorder:0.20.*`
+  - Introduced new custom workflows. This includes the `workflowId` on test plans and test plan templates and the `wokflowSnapshot` field on test plans.
+  - The `workflow` field on test plans was previously included as a beta feature and is now deprecated.
+  - Test plans that used the `workflow` field, along with custom `executionActions` are no longer supported. Instead, you need to create a workflow using the workflows API in the Work Order service and assign the `id` of the created workflow to the `workflowId` field of new test plans or test plan templates to achieve the same behavior.
+  - The `executionActions` of test plans and test plan templates are compatible with the new workflows.
 
 ## Helm Chart Breaking Changes
 
@@ -41,21 +45,18 @@ for detailed update instructions.
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | 0.29.56                            |
-| 4.0.x            | 0.30.74                             | current                            |
+| 4.0.x            | 0.30.74                             | 0.36.63                            |
+| 4.1.x            | 0.37.84                             | current                            |
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-09 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-09/release-notes/2025-09/closed-bugs-sle-2025-09.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-09/release-notes/2025-09/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-09/release-notes/2025-09/notices)
 
 ## Versions
 
