@@ -41,7 +41,8 @@ for detailed update instructions.
 | 3.11.x           | 0.12.x                              | 0.15.x                             |
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | 0.29.56                            |
-| 4.0.x            | 0.30.74                             | current                            |
+| 4.0.x            | 0.30.74                             | 0.36.63                            |
+| 4.1.x            | 0.37.84                             | current                            |
 
 ## Bugs Fixed
 
