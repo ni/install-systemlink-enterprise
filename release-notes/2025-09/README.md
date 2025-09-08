@@ -60,7 +60,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.41.50`
+**Top Level Helm Chart:** `systemlink 0.41.63`
 
 **Admin Helm Chart:** `systemlink-admin 0.41.11`
 
@@ -69,11 +69,11 @@ for detailed update instructions.
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.16.57
-alarmservice:0.16.57
+alarmservice-routine-executor:0.16.59
+alarmservice:0.16.59
 alarmsui:0.26.43
 assetservice:0.27.52
-assetui:0.26.57
+assetui:0.26.58
 comments:0.25.9
 dashboardsui:0.29.48
 dataframeservice-nessie:1.21.39
@@ -83,14 +83,14 @@ dynamicformfields:0.10.32
 executionsui:0.29.44
 feedservice:0.18.23
 feedsui:0.17.54
-fileingestioncdc:0.2.46
-filesui:0.30.46
+fileingestioncdc:0.2.47
+filesui:0.30.47
 grafana-auth-proxy:0.21.7
-grafana-plugins:4.5.0
-grafana-rbac-integrator:0.29.37
+grafana-plugins:4.7.1
+grafana-rbac-integrator:0.29.39
 helium-dataservices-mongomigration:0.28.25
 helium-dataservices:0.28.25
-helium-fileingestionservices:1.19.46
+helium-fileingestionservices:1.19.47-15509965
 helium-salt-master:1.26.11
 helium-serviceregistry:0.34.7
 helium-taghistoriandataretention:0.24.11
@@ -101,7 +101,7 @@ helium-webappservices:0.32.18
 helium-webserver:0.41.22
 jupyter-notebook-userpod:2.20.12
 jupyterui:0.29.37
-labmanagementui:0.20.71
+labmanagementui:0.20.73
 landingpageui:0.29.35
 nbexec-execution-helpers:0.30.20
 nbexec-notebook-runner:0.30.14
@@ -125,11 +125,11 @@ specificationmanagement:0.20.22
 systemsmanagementservice:0.29.25
 systemsstateservice:0.19.20
 systemsstatesui:0.18.40
-systemsui:0.30.74
+systemsui:0.30.75
 tageventprocessor:0.28.25
 tagsui:0.25.36
-testinsightsui:0.29.67
-testmonitorservice:0.38.25
+testinsightsui:0.29.68
+testmonitorservice:0.38.26
 userdata:0.29.23
 userservice-setup:0.35.18
 webapphostui:0.28.39
@@ -152,5 +152,6 @@ jupyterhub/k8s-image-awaiter:4.2.0
 kiwigrid/k8s-sidecar:1.30.10
 pause:3.10
 swaggerapi/swagger-ui:v5.28.0
+zookeeper:3.9.3
 zookeeper:3.9.3
 ```
