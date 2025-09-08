@@ -60,7 +60,7 @@ for detailed update instructions.
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.41.63`
+**Top Level Helm Chart:** `systemlink 0.41.65`
 
 **Admin Helm Chart:** `systemlink-admin 0.41.11`
 
@@ -73,7 +73,7 @@ alarmservice-routine-executor:0.16.59
 alarmservice:0.16.59
 alarmsui:0.26.43
 assetservice:0.27.52
-assetui:0.26.58
+assetui:0.26.59
 comments:0.25.9
 dashboardsui:0.29.48
 dataframeservice-nessie:1.21.39
@@ -125,10 +125,10 @@ specificationmanagement:0.20.22
 systemsmanagementservice:0.29.25
 systemsstateservice:0.19.20
 systemsstatesui:0.18.40
-systemsui:0.30.75
+systemsui:0.30.76
 tageventprocessor:0.28.25
 tagsui:0.25.36
-testinsightsui:0.29.68
+testinsightsui:0.29.69
 testmonitorservice:0.38.26
 userdata:0.29.23
 userservice-setup:0.35.18
