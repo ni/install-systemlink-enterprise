@@ -29,12 +29,13 @@ all required configuration changes.
 ### RabbitMQ Version
 
 SystemLink Enterprise includes a deployment of the
-[RabbitMQ](https://www.rabbitmq.com/) message bus. Since you cannot skip minor
+[RabbitMQ](https://www.rabbitmq.com/) message bus. Because you cannot skip minor
 versions when updating RabbitMQ, you may not be able to upgrade directly between
-versions of SystemLink Enterprise. The table below shows the version of the
-RabbitMQ dependency for each released version of SystemLink Enterprise. Refer to
-[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html)
-for detailed update instructions.
+versions of SystemLink Enterprise. 
+
+The following table displays the version of the
+RabbitMQ dependency for each released version of SystemLink Enterprise. For more detailed update instructions, refer to
+[Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html).
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
 | ---------------- | ----------------------------------- | ---------------------------------- |
