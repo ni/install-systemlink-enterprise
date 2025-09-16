@@ -31,7 +31,7 @@ all required configuration changes.
 SystemLink Enterprise includes a deployment of the
 [RabbitMQ](https://www.rabbitmq.com/) message bus. Because you cannot skip minor
 versions when updating RabbitMQ, you may not be able to upgrade directly between
-versions of SystemLink Enterprise. 
+versions of SystemLink Enterprise.
 
 The following table displays the version of the
 RabbitMQ dependency for each released version of SystemLink Enterprise. For more detailed update instructions, refer to
