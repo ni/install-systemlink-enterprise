@@ -62,7 +62,7 @@ RabbitMQ dependency for each released version of SystemLink Enterprise. For more
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.41.65`
+**Top Level Helm Chart:** `systemlink 0.41.75`
 
 **Admin Helm Chart:** `systemlink-admin 0.41.11`
 
@@ -71,15 +71,15 @@ RabbitMQ dependency for each released version of SystemLink Enterprise. For more
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.16.59
 alarmservice:0.16.59
+alarmservice-routine-executor:0.16.59
 alarmsui:0.26.43
 assetservice:0.27.52
 assetui:0.26.59
 comments:0.25.9
 dashboardsui:0.29.48
-dataframeservice-nessie:1.21.39
 dataframeservice:1.21.39
+dataframeservice-nessie:1.21.39
 dremio-ee:25.2.17
 dynamicformfields:0.10.32
 executionsui:0.29.44
@@ -89,9 +89,9 @@ fileingestioncdc:0.2.47
 filesui:0.30.47
 grafana-auth-proxy:0.21.7
 grafana-plugins:4.7.1
-grafana-rbac-integrator:0.29.39
-helium-dataservices-mongomigration:0.28.25
+grafana-rbac-integrator:0.29.40
 helium-dataservices:0.28.25
+helium-dataservices-mongomigration:0.28.25
 helium-fileingestionservices:1.19.47-15509965
 helium-salt-master:1.26.11
 helium-serviceregistry:0.34.7
@@ -115,19 +115,21 @@ repository:0.25.20
 routineeventtrigger:0.30.23
 routineexecutor:0.30.19
 routinescheduletrigger:0.30.23
-routineservice-v2:0.31.38
 routineservice:0.31.38
+routineservice-v2:0.31.38
 routinesui:0.30.40
 securityui:0.29.37
 session-manager-service:0.35.17
 sl-configurable-http-proxy:2.20.7
+sl-k8s-elasticsearch:1.0.5
 sl-k8s-hub:2.20.9
+sl-k8s-kibana:1.0.8
 smtp:0.29.27
 specificationmanagement:0.20.22
-systemsmanagementservice:0.29.25
+systemsmanagementservice:0.29.26
 systemsstateservice:0.19.20
 systemsstatesui:0.18.40
-systemsui:0.30.76
+systemsui:0.30.77
 tageventprocessor:0.28.25
 tagsui:0.25.36
 testinsightsui:0.29.69
@@ -141,7 +143,9 @@ workorder:0.20.41
 ### 3rd Party Containers
 
 ```text
+alpine/curl:8.14.1
 alpine:3.22.1
+apache/flink-kubernetes-operator:1.12.1
 argoproj/argocli:v3.6.10-linux-amd64
 argoproj/argoexec:v3.6.10-linux-amd64
 argoproj/workflow-controller:v3.6.10-linux-amd64
@@ -154,6 +158,5 @@ jupyterhub/k8s-image-awaiter:4.2.0
 kiwigrid/k8s-sidecar:1.30.10
 pause:3.10
 swaggerapi/swagger-ui:v5.28.0
-zookeeper:3.9.3
 zookeeper:3.9.3
 ```
