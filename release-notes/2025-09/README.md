@@ -21,7 +21,7 @@ all required configuration changes.
 - Compatibility with Grafana 11.
 - `helium-fileingestionservices:1.19.*`
   - Introduced the chunked file upload API for upload sessions.
-  - Bypass any ingress controller limitations or IT restrictions that prevent the uploading of files larger than 1 GB.
+  - Work-around ingress controller limitations or IT restrictions that prevent uploading large files.
   - Available only on the back-end side. As of this release, the Files Web Application does not leverage this API.
 - `workorder:0.20.*`
   - Introduced new custom workflows. This includes the `wokflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
