@@ -22,7 +22,7 @@ all required configuration changes.
 - `helium-fileingestionservices:1.19.*`
   - Introduced the chunked file upload API for upload sessions.
   - Work-around ingress controller limitations or IT restrictions that prevent uploading large files.
-  - Available only on the back-end side. As of this release, the Files Web Application does not leverage this API.
+  - Available via the API only. As of this release, the Files Web Application does not utilize the chunked file upload API.
 - `workorder:0.20.*`
   - Introduced new custom workflows. This includes the `wokflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
   - Discontinued beta feature of `workflow` field on test plans.
