@@ -10,6 +10,11 @@ all required configuration changes.
 ## New Features and Behavior changes
 
 - View all test plans scheduled for a specific system in the System Details page. For more information, refer to [Viewing Scheduled Test Plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-scheduled-test-plans.html).
+  - `workorder:0.20.*`
+    - Introduced new custom workflows. This includes the `workflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
+    - Discontinued beta feature of `workflow` field on test plans.
+    - Discontinued support of test plans that use the `workflow` field and custom `executionActions`. To achieve similar behavior, you can create a workflow using the workflows API in the Work Order service. You then need to assign the `id` of the workflow to the `workflowId` field of the new test plans or test plan templates.
+    - Compatibility between `executionActions` of test plans and test plan templates with the new workflows.
 - Use the Schedule page to search and filter for fixtures.
 - Customize test plan workflows to match the processes of your organization. For more information, refer to the [Test Plan Operations Example page in GitHub](https://github.com/ni/systemlink-enterprise-examples/tree/main/Test%20Plan%20Operations%20Examples).
 - Manage system keys to resolve connection and security issues.
@@ -19,11 +24,6 @@ all required configuration changes.
   - Introduced the chunked file upload API for upload sessions.
   - Work-around ingress controller limitations or IT restrictions that prevent uploading large files.
   - Available via the API only. As of this release, the Files Web Application does not utilize the chunked file upload API.
-- `workorder:0.20.*`
-  - Introduced new custom workflows. This includes the `workflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
-  - Discontinued beta feature of `workflow` field on test plans.
-  - Discontinued support of test plans that use the `workflow` field and custom `executionActions`. To achieve similar behavior, you can create a workflow using the workflows API in the Work Order service. You then need to assign the `id` of the workflow to the `workflowId` field of the new test plans or test plan templates.
-  - Compatibility between `executionActions` of test plans and test plan templates with the new workflows.
 
 ## Helm Chart Breaking Changes
 
