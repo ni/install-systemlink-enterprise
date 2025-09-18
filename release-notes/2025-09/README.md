@@ -24,7 +24,7 @@ all required configuration changes.
   - Work-around ingress controller limitations or IT restrictions that prevent uploading large files.
   - Available via the API only. As of this release, the Files Web Application does not utilize the chunked file upload API.
 - `workorder:0.20.*`
-  - Introduced new custom workflows. This includes the `wokflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
+  - Introduced new custom workflows. This includes the `workflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
   - Discontinued beta feature of `workflow` field on test plans.
   - Discontinued support of test plans that use the `workflow` field and custom `executionActions`. To achieve similar behavior, you can create a workflow using the workflows API in the Work Order service. You then need to assign the `id` of the workflow to the `workflowId` field of the new test plans or test plan templates.
   - Compatibility between `executionActions` of test plans and test plan templates with the new workflows.
