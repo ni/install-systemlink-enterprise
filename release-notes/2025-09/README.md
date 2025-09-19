@@ -1,29 +1,43 @@
 # SystemLink Enterprise 2025-09 Release Notes
 
-The 2025-09 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-09 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- View all test plans scheduled for a specific system in the System Details page. For more information, refer to [Viewing Scheduled Test Plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-scheduled-test-plans.html).
+- View all test plans scheduled for a specific system in the System Details
+  page. For more information, refer to
+  [Viewing Scheduled Test Plans](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/viewing-scheduled-test-plans.html).
   - `workorder:0.20.*`
-    - Introduced new custom workflows. This includes the `workflowSnapshot` field on test plans and the `workflowId` on test plans and test plan templates.
+    - Introduced new custom workflows. This includes the `workflowSnapshot`
+      field on test plans and the `workflowId` on test plans and test plan
+      templates.
     - Discontinued beta feature of `workflow` field on test plans.
-    - Discontinued support of test plans that use the `workflow` field and custom `executionActions`. To achieve similar behavior, you can create a workflow using the workflows API in the Work Order service. You then need to assign the `id` of the workflow to the `workflowId` field of the new test plans or test plan templates.
-    - Compatibility between `executionActions` of test plans and test plan templates with the new workflows.
+    - Discontinued support of test plans that use the `workflow` field and
+      custom `executionActions`. To achieve similar behavior, you can create a
+      workflow using the workflows API in the Work Order service. You then need
+      to assign the `id` of the workflow to the `workflowId` field of the new
+      test plans or test plan templates.
+    - Compatibility between `executionActions` of test plans and test plan
+      templates with the new workflows.
 - Use the Schedule page to search and filter for fixtures.
-- Customize test plan workflows to match the processes of your organization. For more information, refer to the [Test Plan Operations Example page in GitHub](https://github.com/ni/systemlink-enterprise-examples/tree/main/Test%20Plan%20Operations%20Examples).
+- Customize test plan workflows to match the processes of your organization. For
+  more information, refer to the
+  [Test Plan Operations Example page in GitHub](https://github.com/ni/systemlink-enterprise-examples/tree/main/Test%20Plan%20Operations%20Examples).
 - Manage system keys to resolve connection and security issues.
-- Use the Assets data source in dashboards to display the total count of returned assets in a query.
+- Use the Assets data source in dashboards to display the total count of
+  returned assets in a query.
 - Compatibility with Grafana 11.
 - `helium-fileingestionservices:1.19.*`
   - Introduced the chunked file upload API for upload sessions.
-  - Work-around ingress controller limitations or IT restrictions that prevent uploading large files.
-  - Available via the API only. As of this release, the Files Web Application does not utilize the chunked file upload API.
+  - Work-around ingress controller limitations or IT restrictions that prevent
+    uploading large files.
+  - Available via the API only. As of this release, the Files Web Application
+    does not utilize the chunked file upload API.
 
 ## Helm Chart Breaking Changes
 
@@ -38,8 +52,9 @@ SystemLink Enterprise includes a deployment of the
 versions when updating RabbitMQ, you may not be able to upgrade directly between
 versions of SystemLink Enterprise.
 
-The following table displays the version of the
-RabbitMQ dependency for each released version of SystemLink Enterprise. For more detailed update instructions, refer to
+The following table displays the version of the RabbitMQ dependency for each
+released version of SystemLink Enterprise. For more detailed update
+instructions, refer to
 [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html).
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
