@@ -33,8 +33,9 @@ SystemLink Enterprise includes a deployment of the
 versions when updating RabbitMQ, you may not be able to upgrade directly between
 versions of SystemLink Enterprise.
 
-The following table displays the version of the
-RabbitMQ dependency for each released version of SystemLink Enterprise. For more detailed update instructions, refer to
+The following table displays the version of the RabbitMQ dependency for each
+released version of SystemLink Enterprise. For more detailed update
+instructions, refer to
 [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html).
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
