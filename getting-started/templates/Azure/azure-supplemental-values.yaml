@@ -56,7 +56,7 @@ azureDataLakeApiHost: &azureDataLakeApiHost "dfs.core.windows.net"
 assetservice:
   ingress:
     annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/niapm/up"
+      appgw.ingress.kubernetes.io/health-probe-path: "/up"
 
 dashboardhost:
   ingress:
@@ -106,7 +106,7 @@ dataframeservice:
 feedservice:
   ingress:
     annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/nifeed/up"
+      appgw.ingress.kubernetes.io/health-probe-path: "/up"
 
   storage:
     type: "azure"
@@ -128,7 +128,7 @@ fileingestion:
 nbexecservice:
   ingress:
     annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/ninbexecution/up"
+      appgw.ingress.kubernetes.io/health-probe-path: "/up"
 
   storage:
     type: "azure"
