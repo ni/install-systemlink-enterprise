@@ -136,6 +136,16 @@ dataframeservice:
     targetMemoryUtilizationPercentage: 70
 
   ingestion:
+    # Configuration for ingestion requests in the Apache Arrow format.
+    arrow:
+      # The maximum number of bytes the server will allocate to hold each record batch during
+      # an ingestion request. This value must be greater than zero. Larger values require
+      # additional pod memory per request.
+      # For non-compressed requests, the service compares this value to the size of the record
+      # batch in memory. For compressed requests, the service compares this value to the total
+      # size of each compressed value buffer and the uncompressed record batch in memory.
+      maxRecordBatchSize: 16MiB
+    
     # Configuration for the pool of streams used to upload table data to storage such as S3 or
     # Azure Blob Storage.
     streamPool:
@@ -151,6 +161,7 @@ dataframeservice:
       # the service in "resources.requests.memory".
       # WARNING: Setting this value 0 would leave the pool unbounded, which could cause high memory usage.
       maximumPooledStreams: 2
+    
     # Configuration for the S3 ingestion backend.
     s3Backend:
       # Approximate number of values to buffer into memory for writing to a parquet row group.
