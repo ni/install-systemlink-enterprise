@@ -60,7 +60,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.42.83`
+**Top Level Helm Chart:** `systemlink 0.42.84`
 
 **Admin Helm Chart:** `systemlink-admin 0.42.12`
 
@@ -86,8 +86,8 @@ feedsui:0.18.79
 fileingestioncdc:0.3.45
 filesui:0.31.58
 grafana-auth-proxy:0.21.7
-grafana-plugins:4.14.0
-grafana-rbac-integrator:0.30.58
+grafana-plugins:4.16.0
+grafana-rbac-integrator:0.30.59
 helium-dataservices-mongomigration:0.29.35
 helium-dataservices:0.29.35
 helium-fileingestionservices:1.20.40
@@ -101,7 +101,7 @@ helium-webappservices:0.33.40
 helium-webserver:0.42.36
 jupyter-notebook-userpod:2.21.16
 jupyterui:0.30.46
-labmanagementui:0.21.87
+labmanagementui:0.21.88
 landingpageui:0.30.50
 locationmanagementui:0.0.306
 locationservice:0.1.104
@@ -132,8 +132,8 @@ systemsstatesui:0.19.77
 systemsui:0.31.123
 tageventprocessor:0.29.35
 tagsui:0.26.47
-testinsightsui:0.30.121
-testmonitorservice:0.39.54
+testinsightsui:0.30.122
+testmonitorservice:0.39.55
 userdata:0.30.44
 userservice-setup:0.36.21
 webapphostui:0.29.55
