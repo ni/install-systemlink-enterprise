@@ -82,15 +82,13 @@ dataframeservice:
     maxRowCount: "1000000000"
 
   rateLimits:
-    # Configuration for the global rate limiter that applies to all requests
+    # Configures the global rate limiter for all requests
     global: 
-      # Enable the rate limiter
-      enabled: false
-      # Number of token to replenish per second
+      # Sets the number of tokens to replenish per second
       tokensPerSecond: 750
-      # Maximum number of tokens that can accumulate
+      # Sets the maximum number of tokens that the system can accumulate
       tokenLimit: 200
-      # Number of requests that may queue when no tokens are available
+      # Sets the number of requests that may queue while tokens are unavailable
       queueLimit: 0
     ingestion:
       # Number of concurrent requests that a single pod can serve for ingesting data.
@@ -99,32 +97,28 @@ dataframeservice:
       # Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       # the pod will return a 429 Error code.
       queueSize: 0
-    # Configuration for the per-user rate limiter for metadata queries, including all of the following routes:
+    # Configures the per-user rate limit for metadata queries, including for the following routes:
     #   - GET /v1/tables
     #   - GET /v1/tables/{id}
     #   - POST /v1/query-tables
     queryMetadata:
-      # Enable the rate limiter
-      enabled: false
-      # Number of token to replenish per second
+      # Sets the number of tokens to replenish per second
       tokensPerSecond: 5
-      # Maximum number of tokens that can accumulate
+      # Sets the maximum number of tokens that the system can accumulate
       tokenLimit: 5
-      # Number of requests that may queue when no tokens are available
+      # Sets the number of requests that may queue while tokens are unavailable
       queueLimit: 1
-    # Configuration for the per-user rate limiter for row data queries, including all of the following routes:
+    # Configures the per-user rate limit for row data queries, including for the following routes:
     #   - GET /v1/table/{id}/data
     #   - POST /v1/tables/{id}/query-data
     #   - POST /v1/tables/{id}/query-decimated-data
     #   - POST /v1/tables/{id}/export-data
     queryRowData:
-      # Enable the rate limiter
-      enabled: false
-      # Number of token to replenish per second
+      # Sets the number of tokens to replenish per second
       tokensPerSecond: 5
-      # Maximum number of tokens that can accumulate
+      # Sets the maximum number of tokens that the system can accumulate
       tokenLimit: 5
-      # Number of requests that may queue when no tokens are available
+      # Sets the number of requests that may queue while tokens are unavailable
       queueLimit: 1
 
   ## Dremio configuration
