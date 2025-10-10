@@ -82,6 +82,14 @@ dataframeservice:
     maxRowCount: "1000000000"
 
   rateLimits:
+    # Configures the global rate limiter for all requests
+    global: 
+      # Sets the number of tokens to replenish per second
+      tokensPerSecond: 750
+      # Sets the maximum number of tokens that the system can accumulate
+      tokenLimit: 200
+      # Sets the number of requests that may queue while tokens are unavailable
+      queueLimit: 0
     ingestion:
       # Number of concurrent requests that a single pod can serve for ingesting data.
       # Subsequent requests will be put in a queue.
@@ -89,6 +97,29 @@ dataframeservice:
       # Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       # the pod will return a 429 Error code.
       queueSize: 0
+    # Configures the per-user rate limit for metadata queries, including for the following routes:
+    #   - GET /v1/tables
+    #   - GET /v1/tables/{id}
+    #   - POST /v1/query-tables
+    queryMetadata:
+      # Sets the number of tokens to replenish per second
+      tokensPerSecond: 5
+      # Sets the maximum number of tokens that the system can accumulate
+      tokenLimit: 5
+      # Sets the number of requests that may queue while tokens are unavailable
+      queueLimit: 1
+    # Configures the per-user rate limit for row data queries, including for the following routes:
+    #   - GET /v1/table/{id}/data
+    #   - POST /v1/tables/{id}/query-data
+    #   - POST /v1/tables/{id}/query-decimated-data
+    #   - POST /v1/tables/{id}/export-data
+    queryRowData:
+      # Sets the number of tokens to replenish per second
+      tokensPerSecond: 5
+      # Sets the maximum number of tokens that the system can accumulate
+      tokenLimit: 5
+      # Sets the number of requests that may queue while tokens are unavailable
+      queueLimit: 1
 
   ## Dremio configuration
   sldremio:
