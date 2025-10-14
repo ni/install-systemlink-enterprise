@@ -671,7 +671,7 @@ dataframeservice:
       ## WARNING: Setting this value to 0 would leave the pool unbounded, which could cause high memory usage.
       ##
       maximumPooledStreams: *dataFrameIngestionRateLimit
-    ## Configuration for the S3 ingestion backend.
+    ## Configuration for the S3 ingestion backend
     s3Backend:
       ## The number of distinct tables using the S3 ingestion backend that can be appended to before
       ## table creation will be blocked. To stay under this limit, set 'endOfData: true' on tables
