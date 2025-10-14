@@ -673,10 +673,9 @@ dataframeservice:
       maximumPooledStreams: *dataFrameIngestionRateLimit
     ## Configuration for the S3 ingestion backend
     s3Backend:
-      ## This configuration sets the number of distinct, appendable tables that can use the S3 ingestion backend before
-      ## the system blocks table creation. To stay under this limit for tables that no longer need appending, set
-      ## the 'endOfData' variable to a ‘true’ value. For more information, refer to the following
-      ## website: ni.com/r/setendofdata'
+      ## The number of distinct, appendable tables that can use the S3 ingestion backend
+      ## before the service blocks table creation. To stay under this limit, set 'endOfData: true' on tables
+      ## that no longer need appending. For more information, refer to the following website: ni.com/r/setendofdata.
       appendableTableLimit: "100000"
 
   ## Limits the body size for requests. The ingress may also impose a request body size
