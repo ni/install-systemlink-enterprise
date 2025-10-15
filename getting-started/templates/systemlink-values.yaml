@@ -658,6 +658,8 @@ dataframeservice:
       ## the replica will return a 429 Error code.
       queueSize: 0
 
+  ## Data ingestion limits
+  ##
   ingestion:
     ## Configuration for the pool of streams used to upload table data to a storage service such
     ## as S3 or Azure Blob Storage.
@@ -669,6 +671,12 @@ dataframeservice:
       ## WARNING: Setting this value to 0 would leave the pool unbounded, which could cause high memory usage.
       ##
       maximumPooledStreams: *dataFrameIngestionRateLimit
+    ## Configuration for the S3 ingestion backend
+    s3Backend:
+      ## The number of distinct, appendable tables that can use the S3 ingestion backend
+      ## before the service blocks table creation. To stay under this limit, set 'endOfData: true' on tables
+      ## that no longer need appending. For more information, refer to the following website: ni.com/r/setendofdata.
+      appendableTableLimit: "100000"
 
   ## Limits the body size for requests. The ingress may also impose a request body size
   ## limit, which should be set to the same value.

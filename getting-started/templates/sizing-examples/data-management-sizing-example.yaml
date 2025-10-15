@@ -69,6 +69,11 @@ dataframeservice:
       # values require additional memory.
       # When adjusting this value, adjust requestBodySizeLimit proportionally.
       rowGroupSize: "1000000"
+      ## @param dataframeservice.ingestion.s3Backend.appendableTableLimit The number of distinct, appendable tables
+      ## that can use the S3 ingestion backend before the service blocks table creation. To stay under this limit,
+      ## set 'endOfData: true' on tables that no longer need appending. For more information, refer to
+      ## the following website: ni.com/r/setendofdata.
+      appendableTableLimit: "100000"
 
     ## @param dataframeservice.ingestion.maxColumnCount The maximum number of columns that a data table may be created with.
     ## Attempting to create a table with more columns than the specified limit will result in a 400 Bad Request response.
@@ -172,13 +177,6 @@ dataframeservice:
     optimizeQueue:
       ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 15
-
-  ## Configuration for the S3 ingestion backend.
-  s3Backend:
-    ## @param dataframeservice.s3Backend.appendableTableLimit The number of distinct tables using the S3 ingestion
-    ## backend that can be appended to before table creation will be blocked. To stay under this limit, set
-    ## 'endOfData: true' on tables that don't need to be appended to anymore. For more information, visit ni.com/r/setendofdata.
-    appendableTableLimit: "100000"
 
   ## @param dataframeservice.requestBodySizeLimit Limits the body size for requests. The ingress may also impose a request body
   ## size limit, which should be set to the same value.
