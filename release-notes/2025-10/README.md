@@ -22,6 +22,7 @@ all required configuration changes.
     - Location service forbids the usage of the "/" (forward slash) character in location names, since it is used in the path property. If this character is found during the migration, it will be replaced by "\" (backward slash).
 - `locationservice:0.1.*`
   - Added new chart to SLE for Location Service. This requires mongodb credentials.
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/systemlink-secrets.yaml#L187)
   - New privileges: "location:AccessApplication", "location:Read", "location:Create", "location:Update", "location:Delete".
   - The "location:Read" privilege is now required in order to view the physical location name of each asset in the Assets UI.
 - `dataframeservice:1.22.*`
