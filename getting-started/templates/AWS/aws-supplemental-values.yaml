@@ -66,7 +66,7 @@ s3Region: &s3Region "us-east-1"
 assetservice:
   ingress:
     annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/niapm/up"
+      alb.ingress.kubernetes.io/healthcheck-path: "/up"
 
 dashboardhost:
   ingress:
@@ -135,6 +135,10 @@ dataframeservice:
         #   </property>
 
 feedservice:
+  ingress:
+    annotations:
+      alb.ingress.kubernetes.io/healthcheck-path: "/up"
+
   storage:
     type: "s3"
     s3:
@@ -184,7 +188,7 @@ saltmaster:
 nbexecservice:
   ingress:
     annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/ninbexecution/up"
+      alb.ingress.kubernetes.io/healthcheck-path: "/up"
 
   storage:
     type: "s3"

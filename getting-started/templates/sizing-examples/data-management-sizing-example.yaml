@@ -37,6 +37,16 @@ dataframeservice:
 
   ## Configuration for DataFrame writes
   ingestion:
+    # Configuration for ingestion requests in the Apache Arrow format.
+    arrow:
+      # The maximum number of bytes the server will allocate to hold each record batch during
+      # an ingestion request. This value must be greater than zero. Larger values require
+      # additional pod memory per request.
+      # For non-compressed requests, the service compares this value to the size of the record
+      # batch in memory. For compressed requests, the service compares this value to the total
+      # size of each compressed value buffer and the uncompressed record batch in memory.
+      maxRecordBatchSize: 32MiB
+
     # Configuration for the pool of streams used to upload table data to storage such as S3 or
     # Azure Blob Storage.
     streamPool:
@@ -59,6 +69,11 @@ dataframeservice:
       # values require additional memory.
       # When adjusting this value, adjust requestBodySizeLimit proportionally.
       rowGroupSize: "1000000"
+      ## @param dataframeservice.ingestion.s3Backend.appendableTableLimit The number of distinct, appendable tables
+      ## that can use the S3 ingestion backend before the service blocks table creation. To stay under this limit,
+      ## set 'endOfData: true' on tables that no longer need appending. For more information, refer to
+      ## the following website: ni.com/r/setendofdata.
+      appendableTableLimit: "100000"
 
     ## @param dataframeservice.ingestion.maxColumnCount The maximum number of columns that a data table may be created with.
     ## Attempting to create a table with more columns than the specified limit will result in a 400 Bad Request response.
@@ -72,6 +87,14 @@ dataframeservice:
     maxRowCount: "1000000000"
 
   rateLimits:
+    # Configures the global rate limiter for all requests
+    global: 
+      # Sets the number of tokens to replenish per second
+      tokensPerSecond: 750
+      # Sets the maximum number of tokens that the system can accumulate
+      tokenLimit: 200
+      # Sets the number of requests that may queue while tokens are unavailable
+      queueLimit: 0
     ingestion:
       # Number of concurrent requests that a single pod can serve for ingesting data.
       # Subsequent requests will be put in a queue.
@@ -79,6 +102,29 @@ dataframeservice:
       # Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       # the pod will return a 429 Error code.
       queueSize: 0
+    # Configures the per-user rate limit for metadata queries, including for the following routes:
+    #   - GET /v1/tables
+    #   - GET /v1/tables/{id}
+    #   - POST /v1/query-tables
+    queryMetadata:
+      # Sets the number of tokens to replenish per second
+      tokensPerSecond: 5
+      # Sets the maximum number of tokens that the system can accumulate
+      tokenLimit: 5
+      # Sets the number of requests that may queue while tokens are unavailable
+      queueLimit: 1
+    # Configures the per-user rate limit for row data queries, including for the following routes:
+    #   - GET /v1/table/{id}/data
+    #   - POST /v1/tables/{id}/query-data
+    #   - POST /v1/tables/{id}/query-decimated-data
+    #   - POST /v1/tables/{id}/export-data
+    queryRowData:
+      # Sets the number of tokens to replenish per second
+      tokensPerSecond: 5
+      # Sets the maximum number of tokens that the system can accumulate
+      tokenLimit: 5
+      # Sets the number of requests that may queue while tokens are unavailable
+      queueLimit: 1
 
   ## Dremio configuration
   sldremio:
@@ -131,13 +177,6 @@ dataframeservice:
     optimizeQueue:
       ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 15
-
-  ## Configuration for the S3 ingestion backend.
-  s3Backend:
-    ## @param dataframeservice.s3Backend.appendableTableLimit The number of distinct tables using the S3 ingestion
-    ## backend that can be appended to before table creation will be blocked. To stay under this limit, set
-    ## 'endOfData: true' on tables that don't need to be appended to anymore. For more information, visit ni.com/r/setendofdata.
-    appendableTableLimit: "100000"
 
   ## @param dataframeservice.requestBodySizeLimit Limits the body size for requests. The ingress may also impose a request body
   ## size limit, which should be set to the same value.
