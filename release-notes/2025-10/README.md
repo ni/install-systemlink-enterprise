@@ -22,7 +22,7 @@ all required configuration changes.
     - Location service forbids the usage of the "/" (forward slash) character in location names, since it is used in the path property. If this character is found during the migration, it will be replaced by "\" (backward slash).
 - `locationservice:0.1.*`
   - Added new chart to SLE for Location Service. This requires mongodb credentials.
-    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/systemlink-secrets.yaml#L187)
+    - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/systemlink-secrets.yaml#L190)
   - New privileges: "location:AccessApplication", "location:Read", "location:Create", "location:Update", "location:Delete".
   - The "location:Read" privilege is now required in order to view the physical location name of each asset in the Assets UI.
 - `dataframeservice:1.22.*`
@@ -73,17 +73,13 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-10 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-10/release-notes/2025-10/closed-bugs-sle-2025-10.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-10/release-notes/2025-10/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-10/release-notes/2025-10/notices)
 
 ## Versions
 
