@@ -12,44 +12,47 @@ required configuration changes.
 - Register assets and systems using QR codes with mobile devices.
 - Upload files through chunked transfer encoding using the SystemLink API.
 - `assetservice:0.28.*`
-  - Added the **Move assets between locations** privilege. The asset
-    location movement API uses this privilege instead of **Modify assets**.
-  - Migration of physical location data to the new Location service. For each physical location string
-    of an asset, the Asset service creates a location with the same
-    name in the workspace of that asset. Each asset references the
+  - Added the **Move assets between locations** privilege. The asset location
+    movement API uses this privilege instead of **Modify assets**.
+  - Migration of physical location data to the new Location service. For each
+    physical location string of an asset, the Asset service creates a location
+    with the same name in the workspace of that asset. Each asset references the
     corresponding location ID instead of the location string.
     - If multiple assets share the same workspace and have the same physical
       location name, the service creates a single corresponding location.
     - If multiple assets are in different workspaces and have the same physical
-      location name, the service creates different corresponding locations that match the
-      workspaces.
-    - This service enforces a 500 character limit for location names.
-      Location names longer than 500 characters are trimmed during migration.
-    - This service prohibits the `/` character in location names, since
-      it is used by the path property. If this character is found during
-      migration, it is replaced with the `\` character.
+      location name, the service creates different corresponding locations that
+      match the workspaces.
+    - This service enforces a 500 character limit for location names. Location
+      names longer than 500 characters are trimmed during migration.
+    - This service prohibits the `/` character in location names, since it is
+      used by the path property. If this character is found during migration, it
+      is replaced with the `\` character.
 - `locationservice:0.1.*`
-  - This service added a new Helm chart. The chart requires additional MongoDB credentials.
-    - For more information, refer to the [secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/systemlink-secrets.yaml#L190)
+  - This service added a new Helm chart. The chart requires additional MongoDB
+    credentials.
+    - For more information, refer to the
+      [secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/systemlink-secrets.yaml#L190)
   - Added new privileges:
     - **List and view locations**
     - **Create locations**
     - **Modify locations**
     - **Delete locations**
-  - This service now requires the **List and view locations** privilege to view the physical
-    location name of each asset in the Assets UI.
+  - This service now requires the **List and view locations** privilege to view
+    the physical location name of each asset in the Assets UI.
 - `dataframeservice:1.22.*`
   - Support for binary ingestion.
   - Enables cross origin requests for the query tables route
     `/nidataframe/v1/query-tables`.
   - Limits the footer size of a parquet data file to 16 MB.
-  - Previously, if a footer was too large, a data table append request
-    would succeed with an HTTP `204` response. However, this data would not become
+  - Previously, if a footer was too large, a data table append request would
+    succeed with an HTTP `204` response. However, this data would not become
     available for query. With this change, the append request returns an HTTP
-    `413` error and an error log. These logs describe the issue and information about the rejected
-    request.
+    `413` error and an error log. These logs describe the issue and information
+    about the rejected request.
 - `dynamicformfields:0.11.*`
-  - Define rules for _view_, _group_, or _field_ properties of a Dynamic Form Field object.
+  - Define rules for _view_, _group_, or _field_ properties of a Dynamic Form
+    Field object.
 - Dashboards
   - Allow CORS requests from dashboards.
 
@@ -59,24 +62,28 @@ required configuration changes.
   - This service no longer starts if the
     `userservices.secrets.continuationTokenEncryptionKey` has a Helm value with
     an incorrect format.
-  - Previously, if a key were invalid, User Services would start regardless. However, the service
-    would report errors when a `POST /niuser/v1/users/query` request required the
-    generation of a continuation token.
-  - If User Services refuses to start after upgrading, review the following pod log:
+  - Previously, if this key was invalid, User Services would start regardless.
+    However, the service would report errors when a
+    `POST /niuser/v1/users/query` request required the generation of a
+    continuation token.
+  - If User Services refuses to start after upgrading, review pod logs for
+    instances of the following:
     `Invalid continuation token encryption key. The key must be a 32-byte value which is base64 encoded`.
 - `dataframeservice:1.22.*`
-  - This service added a new Helm value: `dataframeservice.ingestion.arrow.maxRecordBatchSize`.
-  - This Helm value determines how much memory the service may use when handling an append data
-    request in the Apache Arrow format.
-  - Existing applications that append data in the JSON format are not affected by this new change.
+  - This service added a new Helm value:
+    `dataframeservice.ingestion.arrow.maxRecordBatchSize`.
+  - This Helm value determines how much memory the service may use when handling
+    an append data request in the Apache Arrow format.
+  - Existing applications that append data in the JSON format are not affected
+    by this new change.
   - When updating an application to use Arrow, ensure that the
     `maxRecordBatchSize` limit is set correctly. This limit is based on the
     `dataframeservice.resources.limits.memory` and
     `dataframeservice.rateLimits.ingestion.requestsLimit`.
-  - If the DataFrame Service is configured with default resources,
-    you do not need to update the application.
-    [pilot-sizing.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/pilot-sizing.yaml) has
-    been updated to accommodate this change.
+  - If the DataFrame Service is configured with default resources, you do not
+    need to update your Helm configuration.
+    [pilot-sizing.yaml](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/pilot-sizing.yaml)
+    has been updated to accommodate this change.
 - `workorder:0.21.125`
   - This update removes the unneeded `workorder-apikey` whitelisted API key.
 
@@ -90,8 +97,7 @@ versions when updating RabbitMQ, you may not be able to upgrade directly between
 versions of SystemLink Enterprise.
 
 The following table displays the version of the RabbitMQ dependency for each
-released version of SystemLink Enterprise. For more information,
-refer to
+released version of SystemLink Enterprise. For more information, refer to
 [Updating SystemLink Enterprise](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/updating-systemlink-enterprise.html).
 
 | RabbitMQ Version | First SystemLink Enterprise Version | Last SystemLink Enterprise Version |
