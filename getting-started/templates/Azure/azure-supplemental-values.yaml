@@ -69,7 +69,7 @@ dashboardhost:
 dynamicformfields:
   ingress:
     annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/nidynamicformfields/up"
+      appgw.ingress.kubernetes.io/health-probe-path: "/up"
 
 testmonitorservice:
   ingress:
