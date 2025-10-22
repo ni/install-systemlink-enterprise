@@ -1,11 +1,11 @@
 # SystemLink Enterprise release 2025-10 Release Notes
 
-The 2025-10 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2025-10 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## Upgrading from the release 2025-09 to the release 2025-10
 
@@ -14,40 +14,78 @@ all required configuration changes.
 ## New Features and Behavior changes
 
 - `assetservice:0.28.*`
-  - "asset:Move" privilege was introduced. Asset location movement API will use this privilege instead of "asset:Update".
-  - Physical locations are migrated to the new Location Service. For each physical location string of each asset, a location will be created with the same name in the respective Asset's workspace. Each asset will then reference the corresponding location ID instead of the previously location string. Considerations:
-    - If multiple assets share the same workspace and have the same physical location name, a single corresponding location is created.
-    - If multiple assets are in different workspaces and have the same physical location name, different corresponding locations are created, matching the workspaces.
-    - Location service enforces a limit of 500 characters for the name, so any longer physical locations names will be trimmed during the migration
-    - Location service forbids the usage of the "/" (forward slash) character in location names, since it is used in the path property. If this character is found during the migration, it will be replaced by "\" (backward slash).
+  - The **Move assets between locations** privilege was introduced. Asset
+    location movement API will use this privilege instead of **Modify assets**.
+  - Physical locations are migrated to the new Location Service. For each
+    physical location string of each asset, a location will be created with the
+    same name in the respective Asset's workspace. Each asset will then
+    reference the corresponding location ID instead of the previously location
+    string. Considerations:
+    - If multiple assets share the same workspace and have the same physical
+      location name, a single corresponding location is created.
+    - If multiple assets are in different workspaces and have the same physical
+      location name, different corresponding locations are created, matching the
+      workspaces.
+    - Location service enforces a limit of 500 characters for the name, so any
+      longer physical locations names will be trimmed during the migration
+    - Location service forbids the usage of the `/` (forward slash) character in
+      location names, since it is used in the path property. If this character
+      is found during the migration, it will be replaced by `\` (backward
+      slash).
 - `locationservice:0.1.*`
-  - Added new chart to SLE for Location Service. This requires mongodb credentials.
+  - Added new chart to SLE for Location Service. This requires additional
+    Mongodb credentials to be provided.
     - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2025-10/getting-started/templates/systemlink-secrets.yaml#L190)
-  - New privileges: "location:AccessApplication", "location:Read", "location:Create", "location:Update", "location:Delete".
-  - The "location:Read" privilege is now required in order to view the physical location name of each asset in the Assets UI.
+  - New privileges for the location service have been added: **List and view
+    locations**, **Create locations**, **Modify locations**, and **Delete
+    locations**.
+  - The **List and view locations** privilege is now required in order to view
+    the physical location name of each asset in the Assets UI.
 - `dataframeservice:1.22.*`
-  - Enabled Cross Origin Requests for Query tables route - /nidataframe/v1/query-tables.
-  - The DataFrame service now enforces that generated parquet data files don't have a footer that exceeds 16 MB. When the service is properly tuned, this error shouldn't happen. Previously, if the footer was too large, data table append requests would succeed with a 204, but the data would never become available for query. Logs and metrics would indicate the service was unable to process the ingested data in the background. With this change, the append request will now return a 413 error, and logs will describe the issue and information about the request that was rejected.
-- Systemlink.Lib.ServiceBase
-  - Added a new header named "X-Grafana-Device-Id" to allowed list of headers (To enable CORS from grafana).
+  - Enabled Cross Origin Requests for Query tables route
+    `/nidataframe/v1/query-tables`.
+  - The DataFrame service now enforces generated a 16 MB limit in parquet data
+    files footers. Previously, if the footer was too large, data table append
+    requests would succeed with a HTTP `204` response. With this change, the
+    append request will now return an HTTP `413` error, and logs will describe
+    the issue and information about the request that was rejected.
 - `DynamicFormFields:0.11.*`
-  - Added DFF rules to configuration. DFF rules provide the ability to define rules for a view, group and field which will control a property of this object (visibility, mandatory,
-editable).
-
-- Behavior change or new feature description
+  - Added DFF rules to configuration. DFF rules provide the ability to define
+    rules for a view, group and field which will control a property of this
+    object (visibility, mandatory, editable).
+- Dashboards
+  - CORS requests now allowed from dashboards.
 
 ## Helm Chart Breaking Changes
 
 - `userservices:0.35.*`
-  - User Services will no longer start if the userservices.secrets.continuationTokenEncryptionKey Helm value is incorrectly formatted.
-  - Previously, if the key was invalid the service would start and then report errors whenever a request to POST /niuser/v1/users/query required the service to generate a continuation token.
-  - Because the number of users in the system is typically small for an initial deployment, it would often take months for this error to be detected and usually required an escalation to fix.
-  - The service will now fail immediately with a descriptive error in the logs. This is not exactly a breaking change, but we likely have existing users with invalid keys in their deployments.
-  - If user services refuses to start after upgrading, check the logs for "Invalid continuation token encryption key. The key must be a 32-byte value which is base64 encoded." and fix the invalid configuration.
+  - User Services will no longer start if the
+    `userservices.secrets.continuationTokenEncryptionKey` Helm value is
+    incorrectly formatted.
+  - Previously, if the key was invalid the service would start and report errors
+    when a request to `POST /niuser/v1/users/query` required the service to
+    generate a continuation token.
+  - If user services refuses to start after upgrading, review pod logs for
+    `Invalid continuation token encryption key. The key must be a 32-byte value which is base64 encoded.`
 - `dataframeservice:1.22.*`
-  - A new Helm value, dataframeservice.ingestion.arrow.maxRecordBatchSize, determines how much memory the service may use when handling an append data request in the Apache Arrow format.
-  - Existing applications only append data using JSON, so aren't affected. However, as applications are updated to use Arrow, it's important to ensure the maxRecordBatchSize limit is set correctly based on the dataframeservice.resources.limits.memory and dataframeservice.rateLimits.ingestion.requestsLimit.
-  - When the DataFrame Service is configured with default resources, no change is required. Otherwise, maxRecordBatchSize may need to be adjusted. For example, the pilot configuration has been updated to set maxRecordBatchSize to 16MiB.
+  - A new Helm value, `dataframeservice.ingestion.arrow.maxRecordBatchSize`,
+    determines how much memory the service may use when handling an append data
+    request in the Apache Arrow format.
+  - Existing applications only append data using JSON and are not affected.
+    However, as applications are updated to use Arrow, you must ensure the
+    `maxRecordBatchSize` limit is set correctly based on the
+    `dataframeservice.resources.limits.memory` and
+    `dataframeservice.rateLimits.ingestion.requestsLimit`.
+  - When the DataFrame Service is configured with default resources, no change
+    is required. Otherwise, `maxRecordBatchSize` may need to be adjusted. For
+    example, the pilot configuration has been updated to set
+    `maxRecordBatchSize` to 16MiB.
+
+Remove unneeded initialization for workorder-apikey. This key was misnamed and
+used for internal performance test. The work order service does not require a
+whitelisted API key. Add initialization for workordereventprocessor-apikey. The
+work order event processor (currently in development) needs an API key to
+authorize background requests to the routine service.
 
 ## Upgrade Considerations
 
