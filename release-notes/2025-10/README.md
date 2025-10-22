@@ -120,11 +120,11 @@ released version of SystemLink Enterprise. For more information, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.42.91`
+**Top Level Helm Chart:** `systemlink 0.42.92`
 
-**Admin Helm Chart:** `systemlink-admin 0.42.12`
+**Admin Helm Chart:** `systemlink-admin 0.42.13`
 
-**Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.4.10`
+**Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.4.11`
 
 ### NI Containers
 
