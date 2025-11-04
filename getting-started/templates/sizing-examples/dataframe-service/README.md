@@ -8,10 +8,14 @@ Many factors may affect the resources required by the DataFrame Service, and
 it's expected that tuning will be necessary.
 
 The YAML resource templates in this directory are intended to be applied on top
-of the default configuration specified in
-[data-management-sizing-example.yaml](../data-management-sizing-example.yaml).
-They are not intended to be used directly for deployment to a SystemLink
-environment. These files are not a valid configuration by themselves.
+of the default configuration achieved when deploying with
+[`systemlink-values.yaml`](../../systemlink-values.yaml). Do not include
+[pilot sizing values](../../pilot-sizing.yaml) when deploying with these files.
+These files are not a valid configuration by themselves, they are not intended
+to be used directly for deployment to a SystemLink environment.
+
+For more information about the settings configured in these files, refer to the
+[data management sizing example](../data-management-sizing-example.yaml).
 
 ## Instructions
 
@@ -49,7 +53,9 @@ available:
 ## Sizing table
 
 The following table provides guidance on how to configure the DataFrame Service
-for a given level of scale:
+for a given level of scale. AWS node types are specified. If running on Azure or
+on-prem hardware, approximate the specs of the AWS nodes as closely as possible
+-- network and storage bandwidth are especially important.
 
 | Scale identifier | Number of nodes                             | Node type                                         | Storage per node (GB)                            | Dedicated MongoDB instance recommended? | Recommended database resources | Anticipated average data storage growth per hour | YAML resource template                 |
 | ---------------- | ------------------------------------------- | ------------------------------------------------- | ------------------------------------------------ | --------------------------------------- | ------------------------------ | ------------------------------------------------ | -------------------------------------- |
