@@ -1,61 +1,62 @@
-# DataFrame Service sizing examples
+# DataFrame Service Sizing Examples
 
-This folder contains guidance on how to size the DataFrame Service (DFS) for a
-given level of scale.
+Size the DataFrame Service (DFS) using the YAML resource templates contained in
+this folder.
 
-The templates and guidance provided here should be considered a starting point.
-Many factors may affect the resources required by the DataFrame Service, and
-it's expected that tuning will be necessary.
+Use the guidance provided by these templates as a starting point for your
+sizing. Many factors can affect the resources required by the DFS. You must tune
+the DFS to fit your system.
 
-The YAML resource templates in this directory are intended to be applied on top
-of the default configuration achieved when deploying with
-[`systemlink-values.yaml`](../../systemlink-values.yaml). Do not include
-[pilot sizing values](../../pilot-sizing.yaml) when deploying with these files.
-These files are not a valid configuration by themselves, they are not intended
-to be used directly for deployment to a SystemLink environment.
+Apply the templates in this directory on top of the default configuration
+present in the [`systemlink-values`](../../systemlink-values.yaml) YAML file. Do
+not include the values in the [`pilot-sizing`](../../pilot-sizing.yaml) YAML
+file when deploying the DFS.
 
-For more information about the settings configured in these files, refer to the
-[data management sizing example](../data-management-sizing-example.yaml).
+These files are not a valid stand-alone configuration. Do not directly deploy
+these files to a SystemLink environment. For more configuration information,
+refer to the
+[`data-management-sizing-example`](../data-management-sizing-example.yaml) YAML
+file.
 
 ## Instructions
 
-1. Use the [scale profile](#scale-profiles) table to determine which scale
-   identifier matches your intended usage. If intended usage doesn't cleanly map
-   to a single row, favor the largest row.
+1. Determine the scale identifier for your use case through the
+   [Scale Profile table](#scale-profiles). If your intended usage does not
+   cleanly map to a single row, use the largest row.
 2. Based on your scale identifier, use the guidance in the matching row of the
-   [sizing table](#sizing-table) to configure your deployment.
+   [Sizing table](#sizing-table) to configure your deployment.
 
-## Scale profiles
+## Scale Profiles
 
-The following table describes the levels of scale for which sizing guidance is
-available:
-
-| Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                                                        | Peak query concurrency | Total number of tables |
-| ---------------- | ----------------------- | ----------------------------- | ---------------------------------------------------------------------- | ---------------------- | ---------------------- |
-| DFS1             | 10                      | 10                            | 100,000 rows and 25 columns - 80%, 1,000,000 rows and 25 columns - 20% | 5                      | 10k                    |
+| Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                                                        | Peak query concurrency | Total tables ingested per year |
+| ---------------- | ----------------------- | ----------------------------- | ---------------------------------------------------------------------- | ---------------------- | ------------------------------ |
+| DFS1             | 10                      | 10                            | 100,000 rows and 25 columns - 80%, 1,000,000 rows and 25 columns - 20% | 5                      | 10k                            |
 
 ### Assumptions
 
-- Writers are writing data to data tables using the binary ingestion API with
-  batches that are as large as possible for the target table, with each request
-  containing up to 25 million points.
-- Peak tables ingested per hour matches the mix in _Table shape mix_. For
-  example, for DFS1, it's assumed that 8 tables with 100,000 rows are ingested
-  per hour, and 2 tables with 1,000,000 rows are ingested per hour.
-- Peak query concurrency corresponds to the peak number of decimated query
-  requests (`nidataframe/v1/tables/{id}/query-decimate-data`) that are running.
-  The tables targeted by the queries is assumed to match the mix in _Table shape
-  mix_. For example, 4 concurrent queries are targeting tables that are 100,000
-  rows wide.
-- Table metadata query concurrency (`/nidataframe/v1/query-tables`) matches
-  _Peak query concurrency_.
+The scale profiles and sizing guidance make the following assumptions about how
+the DFS is used. For best results, your usage should satisfy these assumptions:
 
-## Sizing table
+- The writers use the binary ingestion API to write to data tables. The writers
+  use batches that are as large as possible for the target table. Each request
+  contains up to 25,000,000 points.
+- _Peak tables ingested per hour_ matches the mix in _table shape mix_. For
+  example, the assumption is that DFS1 ingests 8 tables with 100,000 rows per
+  hour and ingests 2 tables with 1,000,000 rows per hour.
+- The peak query concurrency corresponds to the peak number of running,
+  decimated query requests (`nidataframe/v1/tables{id}/query-decimated-data`).
+  The assumption is that the tables targeted by the queries match the mix in
+  _Table shape mix_. For example, 4 concurrent queries target tables that are
+  100,000 rows wide.
+- The table metadata query concurrency (`nidataframe/v1/query-tables`) matches
+  the _peak query concurrency_.
 
-The following table provides guidance on how to configure the DataFrame Service
-for a given level of scale. AWS node types are specified. If running on Azure or
-on-prem hardware, approximate the specs of the AWS nodes as closely as possible
--- network and storage bandwidth are especially important.
+## Sizing Table
+
+The following table provides guidance on how to configure DFS to a given level
+of scale. This table also specifies the AWS node types. If your system runs
+Azure or on-prem hardware, approximate the specs of the AWS nodes as closely as
+possible. Network and storage bandwidth are very important for scaling.
 
 | Scale identifier | Number of nodes                             | Node type                                         | Storage per node (GB)                            | Dedicated MongoDB instance recommended? | Recommended database resources | Anticipated average data storage growth per hour | YAML resource template                 |
 | ---------------- | ------------------------------------------- | ------------------------------------------------- | ------------------------------------------------ | --------------------------------------- | ------------------------------ | ------------------------------------------------ | -------------------------------------- |
