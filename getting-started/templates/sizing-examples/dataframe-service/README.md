@@ -30,7 +30,7 @@ file.
 
 | Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                                                        | Peak query concurrency | Total tables ingested per year |
 | ---------------- | ----------------------- | ----------------------------- | ---------------------------------------------------------------------- | ---------------------- | ------------------------------ |
-| DFS1             | 10                      | 10                            | 100,000 rows and 25 columns - 80%, 1,000,000 rows and 25 columns - 20% | 5                      | 10k                            |
+| DFS1             | 10                      | 10                            | 100,000 rows and 25 columns - 80%, 1,000,000 rows and 25 columns - 20% | 5                      | 10,000                         |
 
 ### Assumptions
 
