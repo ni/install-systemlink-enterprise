@@ -8,7 +8,6 @@ dataframeservice:
       memory: 2048
   icebergOperations:
     tableWritesPerCompaction: 3
-    concurrentAppends: 10
 
   rateLimits:
     ingestion:
