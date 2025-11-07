@@ -34,8 +34,9 @@ file.
 
 ### Assumptions
 
-The scale profiles and sizing guidance make the following assumptions about how
-the DFS is used. For best results, your usage should satisfy these assumptions:
+When using the DFS, the scale profiles and sizing guidance make certain
+assumptions. For best results, your usage should satisfy the following
+expectations:
 
 - The writers use the binary ingestion API to write to data tables. The writers
   use batches that are as large as possible for the target table. Each request
