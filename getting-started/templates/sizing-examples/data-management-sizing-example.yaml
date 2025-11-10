@@ -30,7 +30,7 @@ dataframeservice:
       targetMemoryUtilizationPercentage: 80
 
   # Limits the body size for requests. The ingress may also impose a request body size
-  # limit, which should be set to the same value. 
+  # limit, which should be set to the same value.
   # When modifying ingestion.s3Backend.rowGroupSize, make a proportional change to this value.
   # Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 256MiB
@@ -88,7 +88,7 @@ dataframeservice:
 
   rateLimits:
     # Configures the global rate limiter for all requests
-    global: 
+    global:
       # Sets the number of tokens to replenish per second
       tokensPerSecond: 750
       # Sets the maximum number of tokens that the system can accumulate
@@ -165,18 +165,31 @@ dataframeservice:
 
   ## Workload configuration
   workloadManagement:
-    # COPY INTO jobs are targeted to this queue. Increase the concurrency limit
-    # to make newly ingested data available for query faster. This may require
-    # adding more resources to the engine the query is targeting.
+    ## COPY INTO jobs are targeted to this queue. Increase the concurrency limit
+    ## to make newly ingested data available for query faster. This may require
+    ## adding more resources to the engine the query is targeting.
     writeQueue:
       ## @param dataframeservice.workloadManagement.writeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 20
-    # Compaction jobs are targeted to this queue. Increase the concurrency limit
-    # to make newly ingested data available for query faster. This may require
-    # adding more resources to the engine the query is targeting.
+    ## Compaction jobs are targeted to this queue. Increase the concurrency limit
+    ## to make newly ingested data available for query faster. This may require
+    ## adding more resources to the engine the query is targeting.
     optimizeQueue:
       ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 15
+    ## Dremio targets high-cost queries to this queue, such as decimated queries
+    ## that scan a tables with more than 6 million rows.
+    highCostUserQueriesQueue:
+      ## @param dataframeservice.workloadManagement.highCostUserQueriesQueue.concurrencyLimit Increase the concurrency limit
+      ## to support more concurrent queries against large tables. Increase carefully and ensure
+      ## adequate executor resources are available to handle the higher concurrency.
+      concurrencyLimit: 10
+    ## Dremio targets high-cost queries to this queue.
+    lowCostUserQueriesQueue:
+      ## @param dataframeservice.workloadManagement.lowCostUserQueriesQueue.concurrencyLimit Increase the concurrency limit
+      ## to support more concurrent queries against small tables. Increase carefully and ensure
+      ## adequate executor resources are available to handle the higher concurrency.
+      concurrencyLimit: 100
 
   ## @param dataframeservice.requestBodySizeLimit Limits the body size for requests. The ingress may also impose a request body
   ## size limit, which should be set to the same value.
