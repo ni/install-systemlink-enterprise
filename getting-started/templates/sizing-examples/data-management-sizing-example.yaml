@@ -165,26 +165,26 @@ dataframeservice:
 
   ## Workload configuration
   workloadManagement:
-    ## COPY INTO jobs are targeted to this queue. Increase the concurrency limit
-    ## to make newly ingested data available for query faster. This may require
-    ## adding more resources to the engine the query is targeting.
+    # COPY INTO jobs are targeted to this queue. Increase the concurrency limit
+    # to make newly ingested data available for query faster. This may require
+    # adding more resources to the engine the query is targeting.
     writeQueue:
       ## @param dataframeservice.workloadManagement.writeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 20
-    ## Compaction jobs are targeted to this queue. Increase the concurrency limit
-    ## to make newly ingested data available for query faster. This may require
-    ## adding more resources to the engine the query is targeting.
+    # Compaction jobs are targeted to this queue. Increase the concurrency limit
+    # to make newly ingested data available for query faster. This may require
+    # adding more resources to the engine the query is targeting.
     optimizeQueue:
       ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 15
-    ## Dremio targets high-cost queries to this queue, such as decimated queries
-    ## that scan a tables with more than 6 million rows.
+    # Dremio targets high-cost queries to this queue, such as decimated queries
+    # that scan a tables with more than 6 million rows.
     highCostUserQueriesQueue:
       ## @param dataframeservice.workloadManagement.highCostUserQueriesQueue.concurrencyLimit Increase the concurrency limit
       ## to support more concurrent queries against large tables. Increase carefully and ensure
       ## adequate executor resources are available to handle the higher concurrency.
       concurrencyLimit: 10
-    ## Dremio targets high-cost queries to this queue.
+    # Dremio targets high-cost queries to this queue.
     lowCostUserQueriesQueue:
       ## @param dataframeservice.workloadManagement.lowCostUserQueriesQueue.concurrencyLimit Increase the concurrency limit
       ## to support more concurrent queries against small tables. Increase carefully and ensure
