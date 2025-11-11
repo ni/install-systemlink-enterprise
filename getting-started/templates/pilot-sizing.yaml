@@ -145,7 +145,7 @@ dataframeservice:
       # batch in memory. For compressed requests, the service compares this value to the total
       # size of each compressed value buffer and the uncompressed record batch in memory.
       maxRecordBatchSize: 16MiB
-    
+
     # Configuration for the pool of streams used to upload table data to storage such as S3 or
     # Azure Blob Storage.
     streamPool:
@@ -161,7 +161,7 @@ dataframeservice:
       # the service in "resources.requests.memory".
       # WARNING: Setting this value 0 would leave the pool unbounded, which could cause high memory usage.
       maximumPooledStreams: 2
-    
+
     # Configuration for the S3 ingestion backend.
     s3Backend:
       # Approximate number of values to buffer into memory for writing to a parquet row group.
@@ -169,9 +169,9 @@ dataframeservice:
       # values require additional memory.
       # When adjusting this value, adjust requestBodySizeLimit proportionally.
       rowGroupSize: "125000"
-  
+
   # Limits the body size for requests. The ingress may also impose a request body size
-  # limit, which should be set to the same value. 
+  # limit, which should be set to the same value.
   # When modifying ingestion.s3Backend.rowGroupSize, make a proportional change to this value.
   # Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 32MiB
@@ -191,7 +191,7 @@ dataframeservice:
         concurrencyLimit: 5
       optimizeQueue:
         concurrencyLimit: 4
-  
+
   sldremio:
     coordinator:
       cpu: 4
@@ -241,7 +241,7 @@ dynamicformfields:
     maxReplicas: 1
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
-    
+
 executionsui:
   resources:
     requests:
@@ -752,7 +752,9 @@ webserver:
       resources:
         requests:
           cpu: 50m
+          memory: 50Mi
         limits:
+          memory: 50Mi
 
 workorder:
   resources:
