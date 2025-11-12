@@ -1,0 +1,43 @@
+# Example configuration for the DataFrame Service at the "dfs1" scale level.
+
+dataframeservice:
+  resources:
+    requests:
+      memory: 2048
+    limits:
+      memory: 2048
+  icebergOperations:
+    tableWritesPerCompaction: 3
+
+  rateLimits:
+    ingestion:
+      requestsLimit: 10
+
+  queryEngine:
+    workloadManagement:
+      writeQueue:
+        concurrencyLimit: 10
+      optimizeQueue:
+        concurrencyLimit: 10
+
+  sldremio:
+    coordinator:
+      cpu: 2
+      memory: 16384
+      volumeSize: 100Gi
+    executor:
+      count: 3
+      cpu: 14
+      memory: 16384
+      volumeSize: 256Gi
+      engines:
+        - default
+        - iceberg
+      engineOverride:
+        iceberg:
+          count: 2
+          cpu: 4
+          memory: 16384
+          heapMemoryOverride: 10000
+          directMemoryOverride: 5000
+          volumeSize: 20Gi
