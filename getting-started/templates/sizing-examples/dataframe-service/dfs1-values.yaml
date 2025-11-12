@@ -26,7 +26,7 @@ dataframeservice:
       memory: 16384
       volumeSize: 100Gi
     executor:
-      count: 2
+      count: 3
       cpu: 14
       memory: 16384
       volumeSize: 256Gi
