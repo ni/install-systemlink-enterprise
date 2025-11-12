@@ -35,7 +35,7 @@ file.
 ### Assumptions
 
 When using the DFS, the scale profiles and sizing guidance make certain
-assumptions. For best results, your usage should satisfy the following
+assumptions. For best results, your system should satisfy the following
 expectations:
 
 - The writers use the binary ingestion API to write to data tables. The writers
@@ -55,9 +55,9 @@ expectations:
 ## Sizing Table
 
 The following table provides guidance on how to configure DFS to a given level
-of scale. This table also specifies the AWS node types. If your system runs
-Azure or on-prem hardware, approximate the specs of the AWS nodes as closely as
-possible. Network and storage bandwidth are very important for scaling.
+of scale. This table also specifies the AWS node types. If your system runs on
+Azure or on-premises hardware, approximate the specs of the AWS nodes as closely
+as possible. Network and storage bandwidth are very important for scaling.
 
 | Scale identifier | Number of nodes                             | Node type                                         | Storage per node (GB)                            | Dedicated MongoDB instance recommended? | Recommended database resources | Anticipated average data storage growth per hour | YAML resource template                   |
 | ---------------- | ------------------------------------------- | ------------------------------------------------- | ------------------------------------------------ | --------------------------------------- | ------------------------------ | ------------------------------------------------ | ---------------------------------------- |
