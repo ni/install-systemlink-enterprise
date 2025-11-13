@@ -172,7 +172,9 @@ fileingestioncdc:
       s3:
         ## The name of the S3 bucket that the service should connect to.
         bucket: "systemlink-flink"
+        scheme: *s3Scheme
         host: *s3Host
+        port: *s3Port
         region: *s3Region
 
 saltmaster:
