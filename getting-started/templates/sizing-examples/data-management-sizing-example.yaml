@@ -132,9 +132,9 @@ dataframeservice:
     ## Refer to Dremio documentation here: https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
     coordinator:
       ## @param dataframeservice.sldremio.coordinator.cpu CPU allocated to each coordinator, expressed in CPU cores.
-      cpu: 15
+      cpu: 3
       ## @param dataframeservice.sldremio.coordinator.memory Memory allocated to each coordinator, expressed in MB.
-      memory: 73728
+      memory: 16384
       ## @param dataframeservice.sldremio.coordinator.volumeSize Coordinator data volume size (applies to the master coordinator only).
       volumeSize: 256Gi
     ## Resource requests for the executor.

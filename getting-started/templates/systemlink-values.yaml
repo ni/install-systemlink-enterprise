@@ -718,15 +718,12 @@ dataframeservice:
   ##
   sldremio:
     ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
-    ## Refer to Dremio documentation at https://docs.dremio.com/software/deployment/system-requirements/#server-or-instance-hardware
-    ## for a description of the recommended minimum values.
-    # <ATTENTION> - These are the recommended values for the executor and the coordinator where the coordinator
-    ## can act as an executor. Although, 16 CPU cores and 128GB of RAM are recommended, 1 CPU core and 8GB of RAM
-    ## are left for the OS.
+    ## Refer to Dremio documentation at https://docs.dremio.com/current/deploy-dremio/other-options/standalone/system-requirements#server-or-instance-hardware
+    ## for a description of the recommended minimum values. Also see the data management sizing example at https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/sizing-examples/data-management-sizing-example.yaml
     ##
     # coordinator:
-    #   cpu: 15
-    #   memory: 122800
+    #   cpu: 3
+    #   memory: 16384
     #   volumeSize: 256Gi
     # executor:
     #   count: 3
