@@ -177,8 +177,8 @@ dataframeservice:
     optimizeQueue:
       ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 15
-    # Dremio targets high-cost queries to this queue, such as decimated queries
-    # that scan tables with more than 1 million rows.
+    # Dremio targets high-cost queries, such as decimation queries that scan tables with
+    # more than a million rows, to this queue.
     highCostUserQueriesQueue:
       ## @param dataframeservice.workloadManagement.highCostUserQueriesQueue.concurrencyLimit Increase the concurrency limit
       ## to support more concurrent queries against large tables. Increase carefully and ensure
