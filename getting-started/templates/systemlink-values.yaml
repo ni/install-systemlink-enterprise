@@ -492,21 +492,6 @@ dashboardhost:
     #   ## The key in the existing admin secret containing the password.
     #   passwordKey: "admin-password"
 
-    ## Uncomment this to provision additional datasources (the chart provisions ni-slnotebook-datasource by default)
-    ## When adding additional datasources, take care to leave the the ni-slnotebook-datasource entry in place, and add
-    ## new entries after it.
-    # <ATTENTION> - Uncomment this to provision additional data sources (the chart provisions systemlink-notebook-datasource by default)
-    ##
-    # datasources:
-    #   datasources.yaml:
-    #     apiVersion: 1
-    #     datasources:
-    #     - name: "SystemLink Notebooks"
-    #       type: "ni-slnotebook-datasource"
-    #       access: "direct"
-    #       url: /
-    #       version: 1
-
     ## Defines additional mounts from Secrets.
     # <ATTENTION> - This configures a connection to an external PostgresSQL. Remove this section if not using an external database.
     ##
@@ -529,13 +514,9 @@ dashboardhost:
 
     ## This sets the GF_INSTALL_PLUGINS env variable
     ## https://grafana.com/docs/grafana/latest/installation/docker/#install-plugins-from-other-sources
-    ## <ATTENTION> - To include additional Grafana plugins, uncomment this section, update the existing URLs where
-    ## X.X.X.zip is the latest version in the values.yaml file, and add the URLs for any additional plugins.
     ##
     # plugins:
-    #   - http://localhost:8080/ni/plugins/systemlink-notebook-datasource/X.X.X.zip;ni-slnotebook-datasource
-    #   - http://localhost:8080/ni/plugins/systemlink-dataframe-datasource/X.X.X.zip;ni-sldataframe-datasource
-    #   - http://localhost:8080/ni/plugins/plotly-panel/X.X.X.zip;ni-plotly-panel
+    #   - <plugin-download-url>;<plugin-id>
 
     ## Customize the grafana.ini file.
     ##
@@ -587,7 +568,7 @@ dashboardhost:
         ## <ATTENTION> - Uncomment to set the list of unsigned plugins to load. This will override the plugins included by default so ensure you maintain
         ## the list of plugins listed in the default values file.
         ##
-        # allow_loading_unsigned_plugins: ni-slnotebook-datasource,ni-sldataframe-datasource,ni-plotly-panel
+        # allow_loading_unsigned_plugins: ni-systemlink-app
 
 ## Grafana provisioning
 ##
@@ -595,17 +576,26 @@ dashboardhost:
   # grafanaDashboardsProvisioning:
     ## Dashboards listed are enumerated over the dashboard-configmap-template.yaml
     ## Each key under the "dashboards" item will be the name of a ConfigMap.
-    ## It is recommended to add the "-dashboard" suffix to each key to avoid collision with other ConfigMaps
-    ## Dashboard json files can be placed under "dashboards/[project-name]/[dashboard-file].json"
-    ## By default, all "enabled" parameters are considered as true even if they are not mentioned. You can disable this by assigning "whitelistMode: true"
+    ## NI recommends adding the "-dashboard" suffix to each key to avoid a name collision with other ConfigMaps.
+    ## You can place all Dashboard JSON files under the "dashboards/[project-name]/" file path.
+    ## By default, SystemLink considers all enabled parameters as 'true', even if a parameter is not in the JSON file. You can disable this setting by assigning the "whitelistMode" value to 'true'.
     ##
-    # whitelistMode: true
+    # whitelistMode: false
+    # projects:
+      ## You must group all dashboards under a project.
+      ## The "path" of a dashboard must point to a JSON file.
+      ## Use the "enabled" parameter to toggle a project or dashboard on or off. This optional parameter defaults to 'true'.
+      # some-project:
+      #   enabled: false | true
+      #   dashboards:
+      #     some-dashboard:
+      #      path: "dashboards/project/some-dashboard.json"
+      #      enabled: false | true
   # grafanaDatasourcesProvisioning:
-    ## Datasources listed are enumerated over the datasource-configmap-template.yaml
+    ## SystemLink enumerates all datasources in the datasource-configmap-template.yaml file.
     ## Each key under the "datasources" item will be the name of a datasource in the ConfigMap.
     ## By default, all "enabled" parameters are considered as true even if they are not mentioned. You can disable this by assigning "whitelistMode: true"
-    ##
-    # whitelistMode: true
+    # whitelistMode: false
     # projects:
       ## Datasources must be grouped under projects
       ## There is an optional "enabled" parameter that defaults to true which can be used to toggle the project/dashboard on or off.
@@ -616,16 +606,8 @@ dashboardhost:
       #       enabled: false | true
       #       name: Some Datasource
       #       type: some-datasource
-      #       ## Each datasource is then copied as written into the template. You can follow the format here to define an entry: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L462
-      #       ## The main difference is that instead of a list of datasources we use a key-value pair. The values for it can be defined the same way as in the grafana docs.
-      ## <ATTENTION> - Uncomment to override the enabled plugins. This will override the plugins enabled by default so ensure you enable the plugins listed in the default values file.
-      # systemlink:
-      #   enabled: true
-      #   datasources:
-      #     ni-slnotebook-datasource:
-      #       enabled: true
-      #     ni-sldataframe-datasource:
-      #       enabled: true
+      #       ## SystemLink copies each data source exactly as written into the template. To properly define an entry into the template, refer to the format as defined in the following link: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L458
+      #       ## Instead of a list of data sources, SystemLink uses key-pair values. You can define these values in the same way as Grafana.
 
 ## Configuration for the Data Frame service.
 ##
