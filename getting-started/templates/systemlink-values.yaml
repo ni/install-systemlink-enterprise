@@ -718,8 +718,8 @@ dataframeservice:
   ##
   sldremio:
     ## Uncomment this section to adjust the resource requests for the Dremio executor and coordinator.
-    ## Refer to Dremio documentation at https://docs.dremio.com/current/deploy-dremio/other-options/standalone/system-requirements#server-or-instance-hardware
-    ## for a description of the recommended minimum values. Also see the data management sizing example at https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/sizing-examples/data-management-sizing-example.yaml
+    ## For information on the recommended minimum values, refer to the Dremio documentation: https://docs.dremio.com/current/deploy-dremio/other-options/standalone/system-requirements#server-or-instance-hardware.
+    ## You may also refer to the the data management sizing example on GitHub: https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/sizing-examples/data-management-sizing-example.yaml.
     ##
     # coordinator:
     #   cpu: 3
