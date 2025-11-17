@@ -30,7 +30,7 @@ dataframeservice:
       targetMemoryUtilizationPercentage: 80
 
   # Limits the body size for requests. The ingress may also impose a request body size
-  # limit, which should be set to the same value. 
+  # limit, which should be set to the same value.
   # When modifying ingestion.s3Backend.rowGroupSize, make a proportional change to this value.
   # Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 256MiB
@@ -88,7 +88,7 @@ dataframeservice:
 
   rateLimits:
     # Configures the global rate limiter for all requests
-    global: 
+    global:
       # Sets the number of tokens to replenish per second
       tokensPerSecond: 750
       # Sets the maximum number of tokens that the system can accumulate
@@ -177,6 +177,21 @@ dataframeservice:
     optimizeQueue:
       ## @param dataframeservice.workloadManagement.optimizeQueue.concurrencyLimit Number of parallel jobs processed from the queue.
       concurrencyLimit: 15
+    # Dremio targets high-cost queries, such as decimation queries that scan tables with
+    # more than a million rows, to this queue.
+    highCostUserQueriesQueue:
+      ## @param dataframeservice.workloadManagement.highCostUserQueriesQueue.concurrencyLimit This parameter increases the
+      ## concurrency limit. This limit supports SystemLink by allowing the creation of more concurrent queries to handle
+      ## large tables. When increasing this limit, monitor executor resource usage and increase if necessary.
+      concurrencyLimit: 10
+    # Dremio targets low-cost queries to this queue.
+    lowCostUserQueriesQueue:
+      ## @param dataframeservice.workloadManagement.lowCostUserQueriesQueue.concurrencyLimit This parameter increases the
+      ## concurrency limit. This limit supports SystemLink by allowing the creation of more concurrent queries to handle
+      ## small tables. When increasing this limit, monitor executor resource usage and increase if necessary.
+      concurrencyLimit: 10
+    # Dremio targets low-cost queries to this queue.
+      concurrencyLimit: 100
 
   ## @param dataframeservice.requestBodySizeLimit Limits the body size for requests. The ingress may also impose a request body
   ## size limit, which should be set to the same value.
