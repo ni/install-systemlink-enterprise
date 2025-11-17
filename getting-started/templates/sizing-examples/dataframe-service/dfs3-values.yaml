@@ -1,0 +1,44 @@
+dataframeservice:
+  replicaCount: 12
+  autoscaling:
+    enabled: false
+  logLevel: "warning"
+  icebergOperations:
+    tableWritesPerCompaction: 25
+
+  queryEngine:
+    workloadManagement:
+      highCostUserQueriesQueue:
+        concurrencyLimit: 24
+      writeQueue:
+        concurrencyLimit: 20
+      optimizeQueue:
+        concurrencyLimit: 20
+
+  nessie:
+    replicaCount: 4
+    autoscaling:
+      enabled: false
+    logLevel: "warning"
+
+  sldremio:
+    coordinator:
+      cpu: 4
+      memory: 16384
+      volumeSize: 150Gi
+    executor:
+      count: 10
+      cpu: 22
+      memory: 122800
+      volumeSize: 400Gi
+      engines:
+        - default
+        - iceberg
+      engineOverride:
+        iceberg:
+          count: 5
+          cpu: 22
+          memory: 68719
+          heapMemoryOverride: 40000
+          directMemoryOverride: 20000
+          volumeSize: 20Gi
