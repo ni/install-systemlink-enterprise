@@ -13,9 +13,8 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Grafana Addons
+  - Failure Pareto Analysis dashboard provided out of the box.
 
 ## Helm Chart Breaking Changes
 
@@ -56,11 +55,11 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink <chart version>`
+**Top Level Helm Chart:** `systemlink 0.43.92`
 
-**Admin Helm Chart:** `systemlink-admin <chart version>`
+**Admin Helm Chart:** `systemlink-admin 0.43.7`
 
-**Elasticsearch Helm Chart:** `systemlinkelasticsearch <chart version`
+**Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.5.17`
 
 ### NI Containers
 
