@@ -9,8 +9,6 @@ all required configuration changes.
 
 ## Upgrading from the 2025-10 to the 2025-11
 
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
 - Grafana Addons
