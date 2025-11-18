@@ -143,7 +143,8 @@ argoproj/workflow-controller:v3.6.10-linux-amd64
 bitnami/mongodb:5.0.24@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f
 bitnami-secure/containers/debian-12/elasticsearch:9.2.0-debian-12-r0
 bitnami-secure/containers/debian-12/kibana:9.2.0-debian-12-r0
-bitnami-secure/containers/debian-12/kubectl:1.34.1bitnami-secure/containers/debian-12/mongodb:7.0.25-debian-12-r0@sha256:757bb5db4e687ff8561cc8e5db9468c9f2d12116c26df7eab2a56bb75cc9f89e
+bitnami-secure/containers/debian-12/kubectl:1.34.1
+bitnami-secure/containers/debian-12/mongodb:7.0.25-debian-12-r0@sha256:757bb5db4e687ff8561cc8e5db9468c9f2d12116c26df7eab2a56bb75cc9f89e
 bitnami-secure/containers/debian-12/rabbitmq:4.1.5-debian-12-r0
 bitnami-secure/containers/debian-12/redis-cluster:8.2.2-debian-12-r0
 busybox:stable@sha256:05a79c7279f71f86a2a0d05eb72fcb56ea36139150f0a75cd87e80a4272e4e39
