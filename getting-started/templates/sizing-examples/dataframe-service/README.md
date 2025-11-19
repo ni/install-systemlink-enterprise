@@ -28,10 +28,25 @@ file.
 
 ## Scale Profiles
 
-| Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                                                                                                  | Peak query concurrency | Total tables ingested per year |
-| ---------------- | ----------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------------------ |
-| DFS1             | 10                      | 10                            | 100,000 rows and 25 columns - 80%, 1,000,000 rows and 25 columns - 20%                                           | 5                      | 10,000                         |
-| DFS3             | 100                     | 800                           | 100,000 rows and 100 columns - 20%, 1,000,000 rows and 100 columns - 60%, 500,000,000 rows and 100 columns - 20% | 20                     | 1,000,000                      |
+| Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                             | Peak query concurrency | Total tables ingested per year |
+| ---------------- | ----------------------- | ----------------------------- | ------------------------------------------- | ---------------------- | ------------------------------ |
+| DFS1             | 10                      | 10                            | See [DFS1 Table Shapes](#dfs1-table-shapes) | 5                      | 10,000                         |
+| DFS3             | 100                     | 800                           | See [DFS3 Table Shapes](#dfs3-table-shapes) | 20                     | 1,000,000                      |
+
+### DFS1 Table Shapes
+
+| Rows      | Columns | Share |
+| --------- | ------- | ----- |
+| 100,000   | 25      | 80%   |
+| 1,000,000 | 25      | 20%   |
+
+### DFS3 Table Shapes
+
+| Rows        | Columns | Share |
+| ----------- | ------- | ----- |
+| 100,000     | 100     | 20%   |
+| 1,000,000   | 100     | 60%   |
+| 500,000,000 | 100     | 20%   |
 
 ### Assumptions
 
