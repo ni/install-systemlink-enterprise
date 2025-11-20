@@ -28,9 +28,25 @@ file.
 
 ## Scale Profiles
 
-| Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                                                        | Peak query concurrency | Total tables ingested per year |
-| ---------------- | ----------------------- | ----------------------------- | ---------------------------------------------------------------------- | ---------------------- | ------------------------------ |
-| DFS1             | 10                      | 10                            | 100,000 rows and 25 columns - 80%, 1,000,000 rows and 25 columns - 20% | 5                      | 10,000                         |
+| Scale identifier | Peak concurrent writers | Peak tables ingested per hour | Table shape mix                             | Peak query concurrency | Total tables ingested per year |
+| ---------------- | ----------------------- | ----------------------------- | ------------------------------------------- | ---------------------- | ------------------------------ |
+| DFS1             | 10                      | 10                            | See [DFS1 Table Shapes](#dfs1-table-shapes) | 5                      | 10,000                         |
+| DFS3             | 100                     | 800                           | See [DFS3 Table Shapes](#dfs3-table-shapes) | 20                     | 1,000,000                      |
+
+### DFS1 Table Shapes
+
+| Rows      | Columns | Share |
+| --------- | ------- | ----- |
+| 100,000   | 25      | 80%   |
+| 1,000,000 | 25      | 20%   |
+
+### DFS3 Table Shapes
+
+| Rows        | Columns | Share |
+| ----------- | ------- | ----- |
+| 100,000     | 100     | 20%   |
+| 1,000,000   | 100     | 60%   |
+| 500,000,000 | 100     | 20%   |
 
 ### Assumptions
 
@@ -59,6 +75,7 @@ of scale. This table also specifies the AWS node types. If your system runs on
 Azure or on-premises hardware, approximate the specs of the AWS nodes as closely
 as possible. Network and storage bandwidth are very important for scaling.
 
-| Scale identifier | Number of nodes                             | Node type                                         | Storage per node (GB)                            | Dedicated MongoDB instance recommended? | Recommended database resources | Anticipated average data storage growth per hour | YAML resource template                   |
-| ---------------- | ------------------------------------------- | ------------------------------------------------- | ------------------------------------------------ | --------------------------------------- | ------------------------------ | ------------------------------------------------ | ---------------------------------------- |
-| DFS1             | 1 (general node pool), 4 (Dremio node pool) | `m6a.2xlarge` (general), `m5ad.4xlarge` (Dremio)` | 0 (general node pool), 356 GB (Dremio node pool) | Yes                                     | Atlas M30 or equivalent        | 0.4 GiB (S3), 0.19 GiB (MongoDB)                 | [`dfs1-values.yaml`](./dfs1-values.yaml) |
+| Scale identifier | Number of nodes                              | Node type                                         | Storage per node (GiB)                            | Dedicated MongoDB instance recommended? | Recommended database resources | Anticipated average data storage growth per hour | YAML resource template                   |
+| ---------------- | -------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | --------------------------------------- | ------------------------------ | ------------------------------------------------ | ---------------------------------------- |
+| DFS1             | 1 (general node pool), 4 (Dremio node pool)  | `m6a.2xlarge` (general), `m5ad.4xlarge` (Dremio)` | 0 (general node pool), 356 GiB (Dremio node pool) | Yes                                     | Atlas M30 or equivalent        | 46.8 MiB (S3), 14.01 KiB (MongoDB)               | [`dfs1-values.yaml`](./dfs1-values.yaml) |
+| DFS3             | 5 (general node pool), 15 (Dremio node pool) | `m6a.2xlarge` (general), `m5ad.8xlarge` (Dremio)` | 0 (general node pool), 500 GiB (Dremio node pool) | Yes                                     | Atlas M80 or equivalent        | 315.6 GiB (S3), 5.47 MiB (MongoDB)               | [`dfs3-values.yaml`](./dfs3-values.yaml) |
