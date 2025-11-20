@@ -1,23 +1,20 @@
 # SystemLink Enterprise 2025-11 Release Notes
 
-The 2025-11 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
-
-## Upgrading from the 2025-10 to the 2025-11
+The 2025-11 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Grafana Addons
-  - Failure Pareto Analysis dashboard provided out of the box.
+- The SystemLink web application now refers to **Work Items** instead of **Test
+  Plans**.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+This release does not introduce any breaking changes.
 
 ## Upgrade Considerations
 
