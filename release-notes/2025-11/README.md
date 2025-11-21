@@ -9,8 +9,9 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- The SystemLink web application now refers to **Work Items** instead of **Test
-  Plans**.
+- Use **work items**, such as **test plans**, to track lab operations and
+  resources
+- Dashboards include the JSON datasource plugin by default.
 
 ## Helm Chart Breaking Changes
 
