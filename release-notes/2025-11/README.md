@@ -10,12 +10,12 @@ required configuration changes.
 ## New Features and Behavior changes
 
 - Use **work items**, such as **test plans**, to track lab operations and
-  resources
+  resources.
 - Dashboards include the JSON datasource plugin by default.
 
 ## Helm Chart Breaking Changes
 
-This release does not introduce any breaking changes.
+No breaking changes were introduced in this release.
 
 ## Upgrade Considerations
 
