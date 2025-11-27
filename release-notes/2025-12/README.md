@@ -1,8 +1,6 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
+# SystemLink Enterprise release 2025-12 Release Notes
 
-# SystemLink Enterprise release year-release-month Release Notes
-
-The release_year-release_month release for SystemLink Enterprise has been
+The 2025-12 release for SystemLink Enterprise has been
 published to <https://downloads.artifacts.ni.com>. This update includes new
 features, bug fixes, and security updates. Work with your account representative
 to obtain credentials to access these artifacts. If you are not upgrading from
