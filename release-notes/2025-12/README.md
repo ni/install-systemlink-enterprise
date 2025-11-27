@@ -19,8 +19,13 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- dataframeservice
+  - MongoDB.Driver has been upgraded from v2.30.0 to v3.5.0 and the MongoDB LINQ
+    provider was upgraded from V2 to V3. Accessing fields with numeric indices
+    is not supported in MongoDB Driver LINQ V3.X, so queries like "name[0] ==
+    @0" (checking if the first character of a table name is equal to some
+    constant) will no longer succeed. Queries can still use operators like
+    Contains and Any instead, i.e. "name.Contains(@0)).
 
 ## Upgrade Considerations
 
