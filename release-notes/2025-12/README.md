@@ -7,25 +7,18 @@ credentials to access these artifacts. If you are not upgrading from the
 previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `dataframeservice:1.24.*`
+  - MongoDB driver has been upgraded from v2.30.0 to v3.5.0 and the MongoDB LINQ provider was upgraded from V2 to V3. Accessing fields with numeric indices is not supported in MongoDB Driver LINQ V3.X, so queries like "name[0] == @0" (checking if the first character of a table name is equal to some constant) will no longer succeed. Queries can still use operators like Contains and Any instead, i.e. "name.Contains(@0)).
+- `notification:0.32.*`
+  - Default values for throttlingRateLimit and throttlingIntervalInSeconds are reduced to restrict sending large numbers of emails. If higher volumes are needed (i.e. for automation), consider increasing these values, increasing the number of notification service replicas, or use different API keys per-request.
+-  `helium-userservices:0.37.*`
+  -  `Systems Maintainer` and `Data Maintainer` roles are changed to remove notification:Create and notification:Apply. This restricts the number of users that can send arbitrary emails through the notification service. Create custom roles for notification privileges as needed. Consider assigning notification responsibilities to an automated process like a notebook or routine. Where possible, restrict clients to notification:Apply and use pre-created templates and address groups. Note that comment and alarm routine functionality are unchanged. These do not use the clients privileges directly when sending notifications. Built-in SystemLink client privileges use the "Automated agent" role which is also unchanged.
 
 ## Helm Chart Breaking Changes
 
-- dataframeservice
-  - MongoDB.Driver has been upgraded from v2.30.0 to v3.5.0 and the MongoDB LINQ
-    provider was upgraded from V2 to V3. Accessing fields with numeric indices
-    is not supported in MongoDB Driver LINQ V3.X, so queries like "name[0] ==
-    @0" (checking if the first character of a table name is equal to some
-    constant) will no longer succeed. Queries can still use operators like
-    Contains and Any instead, i.e. "name.Contains(@0)).
+No breaking changes were introduced in this release.
 
 ## Upgrade Considerations
 
@@ -47,25 +40,22 @@ instructions, refer to
 | 3.12.x           | 0.16.x                              | 0.24.x                             |
 | 3.13.x           | 0.25.x                              | 0.29.56                            |
 | 4.0.x            | 0.30.74                             | 0.36.63                            |
-| 4.1.x            | 0.37.84                             | current                            |
+| 4.1.x            | 0.37.84                             | 0.43.92                            |
+| 4.2.x            | 0.44.50                             | current                            |
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2025-12 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2025-12/release-notes/2025-12/closed-bugs-sle-2025-12.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2025-12/release-notes/2025-12/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2025-12/release-notes/2025-12/notices)
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.44.46`
+**Top Level Helm Chart:** `systemlink 0.44.50`
 
 **Admin Helm Chart:** `systemlink-admin 0.44.10`
 
@@ -74,29 +64,29 @@ instructions, refer to
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.19.66
 alarmservice:0.19.66
+alarmservice-routine-executor:0.19.66
 alarmsui:0.29.46
-assetservice:0.30.52
+assetservice:0.30.53
 assetui:0.29.85
 comments:0.28.33
 dashboardsui:0.32.49
-dataframeservice-nessie:1.24.43
-dataframeservice:1.24.43
+dataframeservice:1.24.44
+dataframeservice-nessie:1.24.44
 dremio-ee:25.2.19
 dynamicformfields:0.13.39
 executionsui:0.32.48
 feedservice:0.21.32
 feedsui:0.20.63
 fileingestioncdc:0.5.37
-filesui:0.33.60
+filesui:0.33.61
 grafana-auth-proxy:0.32.81
 grafana-plugins:4.82.1
 grafana-rbac-integrator:0.32.88
-helium-dataservices-mongomigration:0.31.14
 helium-dataservices:0.31.14
+helium-dataservices-mongomigration:0.31.14
 helium-fileingestionservices:1.22.36
-helium-salt-master:1.29.12
+helium-salt-master:1.29.13
 helium-serviceregistry:0.37.5
 helium-taghistoriandataretention:0.27.10
 helium-taghistorianmongomigration:0.27.10
@@ -106,7 +96,7 @@ helium-webappservices:0.35.27
 helium-webserver:0.44.27
 jupyter-notebook-userpod:2.23.12
 jupyterui:0.32.49
-labmanagementui:0.23.33
+labmanagementui:0.23.35
 landingpageui:0.32.55
 locationmanagementui:0.2.64
 locationservice:0.3.35
@@ -120,8 +110,8 @@ repository:0.28.26
 routineeventtrigger:0.33.27
 routineexecutor:0.33.50
 routinescheduletrigger:0.33.27
-routineservice-v2:0.34.35
 routineservice:0.34.35
+routineservice-v2:0.34.35
 routinesui:0.33.41
 securityui:0.32.55
 session-manager-service:0.38.32
@@ -135,7 +125,7 @@ systemsstatesui:0.21.67
 systemsui:0.33.109
 tageventprocessor:0.31.14
 tagsui:0.28.53
-testinsightsui:0.32.69
+testinsightsui:0.32.70
 testmonitorservice:0.41.39
 userdata:0.32.33
 userservice-setup:0.38.13
@@ -146,15 +136,19 @@ workorder:0.23.60
 ### 3rd Party Containers
 
 ```text
+alpine/curl:8.14.1
 alpine:3.22.2
+apache/flink-kubernetes-operator:1.13.0
 argoproj/argocli:v3.6.10-linux-amd64
 argoproj/argoexec:v3.6.10-linux-amd64
 argoproj/workflow-controller:v3.6.10-linux-amd64
+bitnami/mongodb:5.0.24@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f
+bitnami-secure/containers/debian-12/elasticsearch:9.2.0-debian-12-r0
+bitnami-secure/containers/debian-12/kibana:9.2.0-debian-12-r0
 bitnami-secure/containers/debian-12/kubectl:1.34.1
 bitnami-secure/containers/debian-12/mongodb:7.0.25-debian-12-r0@sha256:757bb5db4e687ff8561cc8e5db9468c9f2d12116c26df7eab2a56bb75cc9f89e
 bitnami-secure/containers/debian-12/rabbitmq:4.2.1-debian-12-r1
 bitnami-secure/containers/debian-12/redis-cluster:8.2.3-debian-12-r0
-bitnami/mongodb:5.0.24@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f
 busybox:stable@sha256:05a79c7279f71f86a2a0d05eb72fcb56ea36139150f0a75cd87e80a4272e4e39
 jupyterhub/k8s-image-awaiter:4.2.0
 kiwigrid/k8s-sidecar:2.1.2
