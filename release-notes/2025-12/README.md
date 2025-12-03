@@ -10,7 +10,7 @@ required configuration changes.
 ## New Features and Behavior changes
 
 - `dataframeservice:1.24.*`
-  - MongoDB driver has been upgraded from v2.30.0 to v3.5.0 and the MongoDB LINQ provider was upgraded from V2 to V3. Accessing fields with numeric indices is not supported in MongoDB Driver LINQ V3.X, so queries like "name[0] == @0" (checking if the first character of a table name is equal to some constant) will no longer succeed. Queries can still use operators like Contains and Any instead, i.e. "name.Contains(@0)).
+  - Upgraded the MongoDB driver from v2.30.0 to v3.5.0 and the MongoDB LINQ provider from V2 to V3. LINQ V3.X no longer supports accessing fields by numeric indices (e.g., name[0] == @0). Use operators such as Contains or Any instead (e.g., name.Contains(@0)).
 - `notification:0.32.*`
   - Default values for throttlingRateLimit and throttlingIntervalInSeconds are reduced to restrict sending large numbers of emails. If higher volumes are needed (i.e. for automation), consider increasing these values, increasing the number of notification service replicas, or use different API keys per-request.
 - `helium-userservices:0.37.*`
