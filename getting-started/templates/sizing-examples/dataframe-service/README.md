@@ -73,9 +73,13 @@ expectations:
 The following table provides guidance on how to configure DFS to a given level
 of scale. This table also specifies the AWS node types. If your system runs on
 Azure or on-premises hardware, approximate the specs of the AWS nodes as closely
-as possible. Network and storage bandwidth are very important for scaling.
+as possible. Network and storage bandwidth are very important for scaling. Data
+table metadata queries that cannot be satisfied by an index will require larger
+MongoDB instances. See
+[https://www.ni.com/r/dfs-db-query-performance](https://www.ni.com/r/dfs-db-query-performance)
+for information on improving metadata query performance.
 
-| Scale identifier | Number of nodes                              | Node type                                         | Storage per node (GiB)                            | Dedicated MongoDB instance recommended? | Recommended database resources | Anticipated average data storage growth per hour | YAML resource template                   |
-| ---------------- | -------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | --------------------------------------- | ------------------------------ | ------------------------------------------------ | ---------------------------------------- |
-| DFS1             | 1 (general node pool), 4 (Dremio node pool)  | `m6a.2xlarge` (general), `m5ad.4xlarge` (Dremio)` | 0 (general node pool), 356 GiB (Dremio node pool) | Yes                                     | Atlas M30 or equivalent        | 46.8 MiB (S3), 14.01 KiB (MongoDB)               | [`dfs1-values.yaml`](./dfs1-values.yaml) |
-| DFS3             | 5 (general node pool), 15 (Dremio node pool) | `m6a.2xlarge` (general), `m5ad.8xlarge` (Dremio)` | 0 (general node pool), 500 GiB (Dremio node pool) | Yes                                     | Atlas M80 or equivalent        | 315.6 GiB (S3), 5.47 MiB (MongoDB)               | [`dfs3-values.yaml`](./dfs3-values.yaml) |
+| Scale identifier | Number of nodes                              | Node type                                         | Storage per node (GiB)                            | Dedicated MongoDB instance recommended? | Recommended database resources                                            | Anticipated average data storage growth per hour | YAML resource template                   |
+| ---------------- | -------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------- |
+| DFS1             | 1 (general node pool), 4 (Dremio node pool)  | `m6a.2xlarge` (general), `m5ad.4xlarge` (Dremio)` | 0 (general node pool), 356 GiB (Dremio node pool) | Yes                                     | Atlas M30 or equivalent                                                   | 46.8 MiB (S3), 14.01 KiB (MongoDB)               | [`dfs1-values.yaml`](./dfs1-values.yaml) |
+| DFS3             | 5 (general node pool), 15 (Dremio node pool) | `m6a.2xlarge` (general), `m5ad.8xlarge` (Dremio)` | 0 (general node pool), 500 GiB (Dremio node pool) | Yes                                     | Atlas M40 primary/secondary replicas, 2 M50 analytics nodes or equivalent | 315.6 GiB (S3), 5.47 MiB (MongoDB)               | [`dfs3-values.yaml`](./dfs3-values.yaml) |
