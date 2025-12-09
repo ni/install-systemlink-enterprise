@@ -627,6 +627,17 @@ dataframeservice:
   ## individual rates configured here.
   ##
   rateLimits:
+    ## Configuration for the global rate limiter that applies to all requests
+    ##
+    global:
+      ## Enable the rate limiter
+      enabled: true
+      ## Number of token to replenish per second
+      tokensPerSecond: 750
+      ## Maximum number of tokens that can accumulate
+      tokenLimit: 200
+      ## Number of requests that may queue when no tokens are available
+      queueLimit: 0
     ## Configure rate limits for ingestion
     ##
     ingestion:
@@ -639,6 +650,31 @@ dataframeservice:
       ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       ## the replica will return a 429 Error code.
       queueSize: 0
+    ## Configuration for the per-user rate limiter for metadata queries, including all of the following routes:
+    ##   - GET /v1/tables
+    ##   - GET /v1/tables/{id}
+    ##   - POST /v1/query-tables
+    ##
+    queryMetadata:
+      # Number of token to replenish per second
+      tokensPerSecond: 5
+      # Maximum number of tokens that can accumulate
+      tokenLimit: 5
+      # Number of requests that may queue when no tokens are available
+      queueLimit: 1
+    ## Configuration for the per-user rate limiter for row data queries, including all of the following routes:
+    ##   - GET /v1/table/{id}/data
+    ##   - POST /v1/tables/{id}/query-data
+    ##   - POST /v1/tables/{id}/query-decimated-data
+    ##   - POST /v1/tables/{id}/export-data
+    ##
+    queryRowData:
+      ## Number of token to replenish per second
+      tokensPerSecond: 5
+      ## Maximum number of tokens that can accumulate
+      tokenLimit: 5
+      ## Number of requests that may queue when no tokens are available
+      queueLimit: 1
 
   ## Data ingestion limits
   ##
@@ -739,6 +775,34 @@ dataframeservice:
       ##
       passwordKey: "password"
 
+  ## The timeout for interactive metadata queries ([d.]hh:mm[:ss] format).
+  interactiveMetadataQueryTimeout: "00:00:10"
+
+  database:
+    ## An array of custom properties to index in Mongo for
+    ## efficient metadata filtering by the property and sorting by the last time the
+    ## row data was modified. For each of the properties, a compound index will be
+    ## created with workspace, the custom property, and rowsModifiedAt.
+    ## WARNING: Removing a property from the array will not cause it to be removed
+    ## from Mongo. Once the array has been updated and the helm chart re-deployed,
+    ## use Mongo tooling to remove unneeded indexes.
+    ##
+    propertyIndexes: []
+      # - TesterNumber
+      # - DataSourceType
+
+    ## An array of metadata fields to index in Mongo
+    ## for efficient metadata filtering by the field and sorting by the last time
+    ## the row data was modified. For each of the fields, a compound index will
+    ## be created with workspace, the field, and rowsModifiedAt.
+    ## WARNING: Removing a property from the array will not cause it to be removed
+    ## from Mongo. Once the array has been updated and the helm chart re-deployed,
+    ## use Mongo tooling to remove unneeded indexes.
+    ##
+    additionalFieldIndexes: []
+      # - SupportsAppend
+      # - MetadataModifiedAt
+      # - MetadataRevision
 
 ## Salt configuration.
 ##
