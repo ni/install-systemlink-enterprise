@@ -75,9 +75,8 @@ of scale. This table also specifies the AWS node types. If your system runs on
 Azure or on-premises hardware, approximate the specs of the AWS nodes as closely
 as possible. Network and storage bandwidth are very important for scaling. Data
 table metadata queries that cannot be satisfied by an index will require larger
-MongoDB instances. See
-[https://www.ni.com/r/dfs-db-query-performance](https://www.ni.com/r/dfs-db-query-performance)
-for information on improving metadata query performance.
+MongoDB instances. See <https://www.ni.com/r/dfs-db-query-performance> for
+information on improving metadata query performance.
 
 | Scale identifier | Number of nodes                              | Node type                                         | Storage per node (GiB)                            | Dedicated MongoDB instance recommended? | Recommended database resources                                                                                            | Anticipated average data storage growth per hour | YAML resource template                   |
 | ---------------- | -------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------- |
