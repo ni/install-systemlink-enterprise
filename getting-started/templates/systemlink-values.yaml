@@ -630,8 +630,6 @@ dataframeservice:
     ## Configuration for the global rate limiter that applies to all requests
     ##
     global:
-      ## Enable the rate limiter
-      enabled: true
       ## Number of token to replenish per second
       tokensPerSecond: 750
       ## Maximum number of tokens that can accumulate
