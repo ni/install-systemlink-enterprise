@@ -10,22 +10,31 @@ required configuration changes.
 ## New Features and Behavior changes
 
 - `dataframeservice:1.24.*`
-  - Upgraded the MongoDB driver from v2.30.0 to v3.5.0 and the MongoDB LINQ provider from V2 to V3.
-  - LINQ V3.X no longer supports accessing fields by numeric indices (e.g., name[0] == @0).
-  - Use operators such as Contains or Any instead (e.g., name.Contains(@0)).
+  - Upgraded the MongoDB driver from v2.30.0 to v3.5.0 and the MongoDB LINQ
+    provider from V2 to V3.
+  - LINQ V3.X no longer supports accessing fields by numeric indices (e.g.,
+    `name[0] == @0`).
+  - Use operators such as `Contains` or `Any` instead (e.g.,
+    `name.Contains(@0)`).
 - `notification:0.32.*`
-  - Default values for throttlingRateLimit and throttlingIntervalInSeconds have been reduced to prevent sending large volumes of emails.
+  - Default values for `throttlingRateLimit` and `throttlingIntervalInSeconds`
+    have been reduced to prevent sending large volumes of emails.
   - For higher throughput (e.g., automation scenarios), consider:
-    - Increasing these values
-    - Scaling the number of notification service replicas
-    - Using different API keys per request
+    - Increasing these values.
+    - Scaling the number of notification service replicas.
+    - Using different API keys per request.
 - `helium-userservices:0.37.*`
-  - The Systems Maintainer and Data Maintainer roles roles no longer include `notification:Create` and `notification:Apply`. This restricts the number of users that can send arbitrary emails through the notification service.
+  - The _Systems Maintainer_ and _Data Maintainer_ roles roles no longer include
+    `notification:Create` and `notification:Apply`. This restricts the number of
+    users that can send arbitrary emails through the notification service.
   - To grant notification privileges:
     - Create custom roles as needed
-    - Assign notification tasks to automated processes (e.g., notebooks or routines)
-    - Where possible, restrict clients to `notification:Apply` and use pre-created templates and address groups
-  - Note: Comment and alarm routine functionality remain unchanged (they do not use the clients privileges directly when sending notifications). Built-in SystemLink client privileges continue to use the “Automated agent” role, which is also unchanged.
+    - Assign notification tasks to automated processes (e.g., notebooks or
+      routines)
+    - Where possible, restrict clients to `notification:Apply` and use
+      pre-created templates and address groups
+- Comment and alarm routine notification functionality remains unchanged.
+  Managed Systems still use the _Automated agent_ role, which is also unchanged.
 
 ## Helm Chart Breaking Changes
 
