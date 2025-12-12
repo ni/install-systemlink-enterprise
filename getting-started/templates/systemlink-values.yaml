@@ -630,11 +630,11 @@ dataframeservice:
     ## Configuration for the global rate limiter that applies to all requests
     ##
     global:
-      ## Number of token to replenish per second
+      ## Maximum number of sustained requests per second.
       tokensPerSecond: 750
-      ## Maximum number of tokens that can accumulate
+      ## Number of additional requests per second allowed for bursts.
       tokenLimit: 200
-      ## Number of requests that may queue when no tokens are available
+      ## Number of requests over the limit to queue for later handling.
       queueLimit: 0
     ## Configure rate limits for ingestion
     ##
@@ -648,30 +648,30 @@ dataframeservice:
       ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       ## the replica will return a 429 Error code.
       queueSize: 0
-    ## Configuration for the per-user rate limiter for metadata queries, including all of the following routes:
+    ## Configuration for the per-user rate limiter for metadata queries. This configuration includes all of the following routes:
     ##   - GET /v1/tables
     ##   - GET /v1/tables/{id}
     ##   - POST /v1/query-tables
     ##
     queryMetadata:
-      # Number of token to replenish per second
+      ## Maximum number of sustained requests per second.
       tokensPerSecond: 5
-      # Maximum number of tokens that can accumulate
+      ## Number of additional requests per second allowed for bursts.
       tokenLimit: 5
-      # Number of requests that may queue when no tokens are available
+      ## Number of requests over the limit to queue for later handling.
       queueLimit: 1
-    ## Configuration for the per-user rate limiter for row data queries, including all of the following routes:
+    ## Configuration for the per-user rate limiter for row data queries. This configuration includes all of the following routes:
     ##   - GET /v1/table/{id}/data
     ##   - POST /v1/tables/{id}/query-data
     ##   - POST /v1/tables/{id}/query-decimated-data
     ##   - POST /v1/tables/{id}/export-data
     ##
     queryRowData:
-      ## Number of token to replenish per second
+      ## Maximum number of sustained requests per second.
       tokensPerSecond: 5
-      ## Maximum number of tokens that can accumulate
+      ## Number of additional requests per second allowed for bursts.
       tokenLimit: 5
-      ## Number of requests that may queue when no tokens are available
+      ## Number of requests over the limit to queue for later handling.
       queueLimit: 1
 
   ## Data ingestion limits
