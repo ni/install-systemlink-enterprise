@@ -776,26 +776,25 @@ dataframeservice:
   ## The timeout for interactive metadata queries ([d.]hh:mm[:ss] format).
   interactiveMetadataQueryTimeout: "00:00:10"
 
+  ## Configuration of the MongoDB database used for metadata storage.
   database:
-    ## An array of custom properties to index in Mongo for
-    ## efficient metadata filtering by the property and sorting by the last time the
-    ## row data was modified. For each of the properties, a compound index will be
-    ## created with workspace, the custom property, and rowsModifiedAt.
-    ## WARNING: Removing a property from the array will not cause it to be removed
-    ## from Mongo. Once the array has been updated and the helm chart re-deployed,
-    ## use Mongo tooling to remove unneeded indexes.
+    ## Custom properties to index. Each index will allow queries that filter on the custom property
+    ## and order by `ROWS_MODIFIED_AT` to be efficient.
+    ##
+    ## WARNING: Removing a property here does not remove the index from Mongo. Use Mongo tooling to
+    ## remove unneeded indexes after re-deploying the Helm chart.
+    ## the Helm chart.
     ##
     propertyIndexes: []
       # - TesterNumber
       # - DataSourceType
 
-    ## An array of metadata fields to index in Mongo
-    ## for efficient metadata filtering by the field and sorting by the last time
-    ## the row data was modified. For each of the fields, a compound index will
-    ## be created with workspace, the field, and rowsModifiedAt.
-    ## WARNING: Removing a property from the array will not cause it to be removed
-    ## from Mongo. Once the array has been updated and the helm chart re-deployed,
-    ## use Mongo tooling to remove unneeded indexes.
+    ## Additional built-in fields to index. Each index will allow queries that filter on the field
+    ## and order by `ROWS_MODIFIED_AT` to be efficient.
+    ##
+    ## WARNING: Removing a property here does not remove the index from Mongo. Use Mongo tooling to
+    ## remove unneeded indexes after re-deploying the Helm chart.
+    ## the Helm chart.
     ##
     additionalFieldIndexes: []
       # - SupportsAppend
