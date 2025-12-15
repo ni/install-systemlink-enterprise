@@ -9,6 +9,12 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
+- Register assets and systems using QR codes with mobile devices. For more
+  information, refer to
+  [Adding Dynamic QR Codes to a Dashboard](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/add-dynamic-qr.html).
+- Create and edit specifications from SystemLink. For more information, refer to
+  [Creating and Editing Product Specifications through SystemLink](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/create-and-edit-spec-for-product.html).
+- Specify a Location for your Systems.
 - `dataframeservice:1.24.*`
   - Upgraded the MongoDB driver from v2.30.0 to v3.5.0 and the MongoDB LINQ
     provider from V2 to V3.
