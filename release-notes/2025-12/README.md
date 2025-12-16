@@ -67,7 +67,7 @@ instructions, refer to
 | 3.13.x           | 0.25.x                              | 0.29.56                            |
 | 4.0.x            | 0.30.74                             | 0.36.63                            |
 | 4.1.x            | 0.37.84                             | 0.43.92                            |
-| 4.2.x            | 0.44.50                             | current                            |
+| 4.2.x            | 0.44.55                             | current                            |
 
 ## Bugs Fixed
 
@@ -81,7 +81,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.44.50`
+**Top Level Helm Chart:** `systemlink 0.44.55`
 
 **Admin Helm Chart:** `systemlink-admin 0.44.10`
 
