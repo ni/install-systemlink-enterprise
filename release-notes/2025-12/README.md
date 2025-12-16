@@ -93,7 +93,7 @@ instructions, refer to
 alarmservice:0.19.66
 alarmservice-routine-executor:0.19.66
 alarmsui:0.29.46
-assetservice:0.30.53
+assetservice:0.30.54
 assetui:0.29.85
 comments:0.28.33
 dashboardsui:0.32.49
@@ -134,7 +134,7 @@ ni-grafana:v11.6.4-f892567bfa-ni
 notification:0.32.33
 repository:0.28.26
 routineeventtrigger:0.33.27
-routineexecutor:0.33.50
+routineexecutor:0.33.51
 routinescheduletrigger:0.33.27
 routineservice:0.34.35
 routineservice-v2:0.34.35
