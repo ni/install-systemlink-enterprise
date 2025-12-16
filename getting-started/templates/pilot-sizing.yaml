@@ -756,7 +756,7 @@ webserver:
         limits:
           memory: 50Mi
 
-workorder:
+workitem:
   resources:
     requests:
       memory: "256Mi"

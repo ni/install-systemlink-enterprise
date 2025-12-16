@@ -280,8 +280,8 @@ testmonitorservice:
     ## Set to -1 to disable the limit.
     requestTakeLimit: 100000
 
-## The work order service stores work orders and is used to schedule and execute test plans.
-workorder:
+## The work item service stores work items and is used to schedule and execute work items.
+workitem:
   resources:
     limits:
       memory: "512Mi"
@@ -294,32 +294,32 @@ workorder:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 80
 
-  ## @param workorder.maximumWorkOrdersPerCreateRequest Maximum number of work orders per create work orders request.
+  ## @param workitem.maximumWorkOrdersPerCreateRequest Maximum number of work orders per create work orders request.
   maximumWorkOrdersPerCreateRequest: 1000
-  ## @param workorder.maximumTakePerQueryWorkOrdersRequest Maximum query take per query work orders request.
+  ## @param workitem.maximumTakePerQueryWorkOrdersRequest Maximum query take per query work orders request.
   maximumTakePerQueryWorkOrdersRequest: 1000
-  ## @param workorder.maximumWorkOrdersPerUpdateRequest Maximum number of work orders per update work orders request.
+  ## @param workitem.maximumWorkOrdersPerUpdateRequest Maximum number of work orders per update work orders request.
   maximumWorkOrdersPerUpdateRequest: 1000
-  ## @param workorder.maximumWorkOrdersPerDeleteRequest Maximum number of work orders per delete work orders request.
+  ## @param workitem.maximumWorkOrdersPerDeleteRequest Maximum number of work orders per delete work orders request.
   maximumWorkOrdersPerDeleteRequest: 1000
-  ## @param workorder.maximumTestPlansPerCreateRequest Maximum number of test plans per create test plans request.
-  maximumTestPlansPerCreateRequest: 1000
-  ## @param workorder.maximumTakePerQueryTestPlansRequest Maximum query take per query test plans request.
-  maximumTakePerQueryTestPlansRequest: 1000
-  ## @param workorder.maximumTestPlansPerUpdateRequest Maximum number of test plans per update test plans request.
-  maximumTestPlansPerUpdateRequest: 1000
-  ## @param workorder.maximumTestPlansPerDeleteRequest Maximum number of test plans per delete test plans request.
-  maximumTestPlansPerDeleteRequest: 1000
-  ## @param workorder.maximumTestPlansPerScheduleRequest Maximum number of test plans per schedule test plans request.
-  maximumTestPlansPerScheduleRequest: 1000
-  ## @param workorder.maximumTestPlanTemplatesPerCreateRequest Maximum number of test plan templates per create test
-  ## plan templates request.
-  maximumTestPlanTemplatesPerCreateRequest: 1000
-  ## @param workorder.maximumTakePerQueryTestPlanTemplatesRequest Maximum query take per query test plan templates request.
-  maximumTakePerQueryTestPlanTemplatesRequest: 1000
-  ## @param workorder.maximumTestPlanTemplatesPerDeleteRequest Maximum number of test plan templates per delete test plan
+  ## @param workitem.maximumWorkItemsPerCreateRequest Maximum number of work items per create work items request.
+  maximumWorkItemsPerCreateRequest: 1000
+  ## @param workitem.maximumTakePerQueryWorkItemsRequest Maximum query take per query work items request.
+  maximumTakePerQueryWorkItemsRequest: 1000
+  ## @param workitem.maximumWorkItemsPerUpdateRequest Maximum number of work items per update work items request.
+  maximumWorkItemsPerUpdateRequest: 1000
+  ## @param workitem.maximumWorkItemsPerDeleteRequest Maximum number of work items per delete work items request.
+  maximumWorkItemsPerDeleteRequest: 1000
+  ## @param workitem.maximumWorkItemsPerScheduleRequest Maximum number of work items per schedule work items request.
+  maximumWorkItemsPerScheduleRequest: 1000
+  ## @param workitem.maximumWorkItemTemplatesPerCreateRequest Maximum number of work item templates per create work
+  ## item templates request.
+  maximumWorkItemTemplatesPerCreateRequest: 1000
+  ## @param workitem.maximumTakePerQueryWorkItemTemplatesRequest Maximum query take per query work item templates request.
+  maximumTakePerQueryWorkItemTemplatesRequest: 1000
+  ## @param workitem.maximumWorkItemTemplatesPerDeleteRequest Maximum number of work item templates per delete work item
   ## templates request.
-  maximumTestPlanTemplatesPerDeleteRequest: 1000
-  ## @param workorder.maximumTestPlanTemplatesPerUpdateRequest Maximum number of test plan templates per update test plan
+  maximumWorkItemTemplatesPerDeleteRequest: 1000
+  ## @param workitem.maximumWorkItemTemplatesPerUpdateRequest Maximum number of work item templates per update work item
   ## templates request.
-  maximumTestPlanTemplatesPerUpdateRequest: 1000
+  maximumWorkItemTemplatesPerUpdateRequest: 1000

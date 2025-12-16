@@ -1090,11 +1090,11 @@ comments:
   ##
   maximumCommentsPerDeleteRequest: 1000
 
-## Configuration for work order service.
+## Configuration for work item service.
 ##
-workorder:
-  ## <ATTENTION> - Set false to disable the deployment of the work order and lab management UI services.
-  ## By default, this is enabled and the work order and lab management UI services are deployed.
+workitem:
+  ## <ATTENTION> - Set false to disable the deployment of the work item and lab management UI services.
+  ## By default, this is enabled and the work item and lab management UI services are deployed.
   ##
   enabled: true
 
