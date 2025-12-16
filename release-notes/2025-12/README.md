@@ -14,7 +14,7 @@ required configuration changes.
   [Adding Dynamic QR Codes to a Dashboard](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/add-dynamic-qr.html).
 - Create and edit specifications from SystemLink. For more information, refer to
   [Creating and Editing Product Specifications through SystemLink](https://ni.com/docs/en-US/bundle/systemlink-enterprise/page/create-and-edit-spec-for-product.html).
-- Specify a Location for your Systems.
+- Specify a location for your Systems.
 - `dataframeservice:1.24.*`
   - Upgraded the MongoDB driver from v2.30.0 to v3.5.0 and the MongoDB LINQ
     provider from V2 to V3.
@@ -30,17 +30,15 @@ required configuration changes.
     - Scaling the number of notification service replicas.
     - Using different API keys per request.
 - `helium-userservices:0.37.*`
-  - The _Systems Maintainer_ and _Data Maintainer_ roles roles no longer include
-    `notification:Create` and `notification:Apply`. This restricts the number of
-    users that can send arbitrary emails through the notification service.
+  - The _Systems Maintainer_ and _Data Maintainer_ roles no longer include
+    **Create a notification** and **Send a notification** privileges. This
+    restricts the number of users that can send arbitrary emails through the
+    notification service.
   - To grant notification privileges:
-    - Create custom roles as needed
+    - Create custom roles as needed.
     - Assign notification tasks to automated processes (e.g., notebooks or
-      routines)
-    - Where possible, restrict clients to `notification:Apply` and use
-      pre-created templates and address groups
-- Comment and alarm routine notification functionality remains unchanged.
-  Managed Systems still use the _Automated agent_ role, which is also unchanged.
+      routines).
+  - Comment and alarm routine notification functionality remains unchanged.
 
 ## Helm Chart Breaking Changes
 
