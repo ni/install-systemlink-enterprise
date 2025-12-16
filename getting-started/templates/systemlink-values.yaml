@@ -778,23 +778,23 @@ dataframeservice:
 
   ## Configuration of the MongoDB database used for metadata storage.
   database:
-    ## Custom properties to index. Each index will allow queries that filter on the custom property
-    ## and order by `ROWS_MODIFIED_AT` to be efficient.
+    ## Contains the custom properties to index. Each index makes certain queries more efficient.
+    ## These queries include those that filter on the custom property and queries that use the
+    ## ROWS_MODIFIED_AT property to order data.
     ##
-    ## WARNING: Removing a property here does not remove the index from Mongo. Use Mongo tooling to
-    ## remove unneeded indexes after re-deploying the Helm chart.
-    ## the Helm chart.
+    ## WARNING: Removing a property from this section does not remove the index from Mongo. Use
+    ## Mongo tools to remove an index after re-deploying the Helm chart.
     ##
     propertyIndexes: []
       # - TesterNumber
       # - DataSourceType
 
-    ## Additional built-in fields to index. Each index will allow queries that filter on the field
-    ## and order by `ROWS_MODIFIED_AT` to be efficient.
+    ## Contains additional built-in fields to index. Each index makes certain queries more
+    ## efficient. These queries include those that filter on the field and queries that use the
+    ## ROWS_MODIFIED_AT property to order data.'
     ##
-    ## WARNING: Removing a property here does not remove the index from Mongo. Use Mongo tooling to
-    ## remove unneeded indexes after re-deploying the Helm chart.
-    ## the Helm chart.
+    ## WARNING: Removing a field from this section does not remove the index from Mongo. Use Mongo
+    ## tools to remove an index after re-deploying the Helm chart.
     ##
     additionalFieldIndexes: []
       # - SupportsAppend
