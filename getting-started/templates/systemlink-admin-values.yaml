@@ -29,3 +29,7 @@ flinkoperator:
   ## This component is needed if FileIngestion search capabilities are enabled and the Flink operator is not already deployed to the Kubernetes cluster.
   ##
   enabled: false
+  flink-kubernetes-operator:
+    # List of kubernetes namespaces to watch for FlinkDeployment changes. When installing systemlink in a different 
+    # namespace than systemlinkadmin, we need to configure this to watch the systemlink namespace.
+    watchNamespaces: []
