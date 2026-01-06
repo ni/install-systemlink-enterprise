@@ -417,13 +417,14 @@ alarmservice:
       queueLimit: 2
 
   database:
-    ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
+    ## Sets the amount of time that a database retains an inactive alarm.
+    ## This value uses the following format: [d.]hh:mm[:ss]
     ##
     inactiveAlarmCleanupInterval: 30.00:00
 
     activeAlarmCleanup:
-      ## The amount of time active alarms will be retained in the database since they were
-      ## last updated ([d.]hh:mm[:ss] format).
+      ## Sets the amount of time that a database retains an active alarm after the latest update.
+      ## This value uses the following format: [d.]hh:mm[:ss]
       ##
       interval: 90.00:00
       ## Whether to limit active alarm cleanup to only affect active alarms whose most recent
@@ -795,7 +796,7 @@ fileingestion:
   ##
   featureToggle:
     ## <ATTENTION> - Verify that you have all the prerequisites before enabling this toggle.
-    ## More information can be found in the SystemLink User Manual.
+    ## For more information, refer to the SystemLink user manual.
     ## <ATTENTION> - This is an early access feature and is not yet available for general use.
     searchFiles: false
 
