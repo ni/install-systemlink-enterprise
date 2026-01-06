@@ -170,8 +170,17 @@ webserver:
     ## Required - Secret name that holds client ID, client secret, and JWKs.
     ##
     secretName: "oidc-secret"
-    ## Required - Include either issuer URL (for discovery) or the provider configuration as JSON wrapped in single quotes.
-    ##
+    ## Required - Specify the OIDC configuration using one of following approaches.
+    ##  1. Auto-discover: Set the issuer value as the provider URL. This value allows the service to
+    ##     download a configuration from issuer-url/.well-known/openid-configuration as defined by
+    ##     the OIDC specification.
+    ##  2. Manual: Set the issuer value to an empty string and remove the comment marks from the provider value.
+    ##     You must also set the provider value to a single-quoted string that contains a full OIDC configuration.
+    ##     This configuration must be in the JSON format as defined by the OIDC spec. For more information, refer to
+    ##     https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse.
+    ##  3. Auto-discover and manual override — Set the issuer value to the provider URL and remove the comment marks
+    ##     from the provider value. You must set the provider value to a sparse OIDC configuration. The service will then
+    ##     download the configuration from the provider and override with any settings from the provider configuration.
     issuer: "https://oidc.example.com/"
     # provider: '<provider-config-json>'
     ## Optional - Claim to use for user ID.
@@ -408,20 +417,21 @@ alarmservice:
       queueLimit: 2
 
   database:
-    ## The amount of time inactive alarms will be retained in the database ([d.]hh:mm[:ss] format).
+    ## Sets the amount of time that a database retains an inactive alarm.
+    ## This value uses the following format: [d.]hh:mm[:ss]
     ##
     inactiveAlarmCleanupInterval: 30.00:00
-    
+
     activeAlarmCleanup:
-      ## The amount of time active alarms will be retained in the database since they were
-      ## last updated ([d.]hh:mm[:ss] format).
+      ## Sets the amount of time that a database retains an active alarm after the latest update.
+      ## This value uses the following format: [d.]hh:mm[:ss]
       ##
       interval: 90.00:00
       ## Whether to limit active alarm cleanup to only affect active alarms whose most recent
       ## transition has a CLEAR transition type.
       ##
       onlyCleanUpClearAlarms: false
-  
+
   ## The total number of alarms the service supports creating, including
   ## both active and inactive alarms. Must be greater than activeAlarmLimit.
   ## The service will return an error if this limit is exceeded. Increasing
@@ -827,7 +837,7 @@ feedservice:
     ##
     includeApiHostsInNoProxy: false
     ## @param httpProxy.additionalNoProxy List of hosts that should not be proxied. Example: ["localserver1","localserver2"]
-    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com" 
+    ## For example, we would need to set the host of the AWS Security Token Service if we use AWS_WEB_IDENTITY_TOKEN for the S3 auth type -> "sts.us-east-1.amazonaws.com"
     additionalNoProxy: []
 
 ## FileIngestion configuration.
@@ -844,10 +854,10 @@ fileingestion:
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
   ## Feature toggles.
-  ## 
+  ##
   featureToggle:
     ## <ATTENTION> - Verify that you have all the prerequisites before enabling this toggle.
-    ## More information can be found in the SystemLink User Manual.
+    ## For more information, refer to the SystemLink user manual.
     ## <ATTENTION> - This is an early access feature and is not yet available for general use.
     searchFiles: false
 
