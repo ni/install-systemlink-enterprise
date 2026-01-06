@@ -627,6 +627,15 @@ dataframeservice:
   ## individual rates configured here.
   ##
   rateLimits:
+    ## Configuration for the global rate limiter that applies to all requests
+    ##
+    global:
+      ## Maximum number of sustained requests per second.
+      tokensPerSecond: 750
+      ## Number of additional requests per second allowed for bursts.
+      tokenLimit: 200
+      ## Number of requests over the limit to queue for later handling.
+      queueLimit: 0
     ## Configure rate limits for ingestion
     ##
     ingestion:
@@ -639,6 +648,31 @@ dataframeservice:
       ## Size of the queue for concurrent requests. If a request arrives to a pod with a full queue,
       ## the replica will return a 429 Error code.
       queueSize: 0
+    ## Configuration for the per-user rate limiter for metadata queries. This configuration includes all of the following routes:
+    ##   - GET /v1/tables
+    ##   - GET /v1/tables/{id}
+    ##   - POST /v1/query-tables
+    ##
+    queryMetadata:
+      ## Maximum number of sustained requests per second.
+      tokensPerSecond: 5
+      ## Number of additional requests per second allowed for bursts.
+      tokenLimit: 5
+      ## Number of requests over the limit to queue for later handling.
+      queueLimit: 1
+    ## Configuration for the per-user rate limiter for row data queries. This configuration includes all of the following routes:
+    ##   - GET /v1/table/{id}/data
+    ##   - POST /v1/tables/{id}/query-data
+    ##   - POST /v1/tables/{id}/query-decimated-data
+    ##   - POST /v1/tables/{id}/export-data
+    ##
+    queryRowData:
+      ## Maximum number of sustained requests per second.
+      tokensPerSecond: 5
+      ## Number of additional requests per second allowed for bursts.
+      tokenLimit: 5
+      ## Number of requests over the limit to queue for later handling.
+      queueLimit: 1
 
   ## Data ingestion limits
   ##
@@ -739,6 +773,33 @@ dataframeservice:
       ##
       passwordKey: "password"
 
+  ## The timeout for interactive metadata queries ([d.]hh:mm[:ss] format).
+  interactiveMetadataQueryTimeout: "00:00:10"
+
+  ## Configuration of the MongoDB database used for metadata storage.
+  database:
+    ## Contains the custom properties to index. Each index makes certain queries more efficient.
+    ## These queries include those that filter on the custom property and queries that use the
+    ## ROWS_MODIFIED_AT property to order data.
+    ##
+    ## WARNING: Removing a property from this section does not remove the index from Mongo. Use
+    ## Mongo tools to remove an index after re-deploying the Helm chart.
+    ##
+    propertyIndexes: []
+      # - TesterNumber
+      # - DataSourceType
+
+    ## Contains additional built-in fields to index. Each index makes certain queries more
+    ## efficient. These queries include those that filter on the field and queries that use the
+    ## ROWS_MODIFIED_AT property to order data.'
+    ##
+    ## WARNING: Removing a field from this section does not remove the index from Mongo. Use Mongo
+    ## tools to remove an index after re-deploying the Helm chart.
+    ##
+    additionalFieldIndexes: []
+      # - SupportsAppend
+      # - MetadataModifiedAt
+      # - MetadataRevision
 
 ## Salt configuration.
 ##
