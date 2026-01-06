@@ -170,19 +170,17 @@ webserver:
     ## Required - Secret name that holds client ID, client secret, and JWKs.
     ##
     secretName: "oidc-secret"
-    ## Required - Choose one of three approaches to specify the OIDC configuration.
-    ##  1. Auto-discover: Set the `issuer` value the URL of the provider to configure the service
-    ##     to download the configuration from from `issuer-url/.well-known/openid-configuration`
-    ##     as defined by the OIDC specification.
-    ##  2. Manual: Set the `issuer` value to an empty string and uncomment the `provider value.`
-    ##     Set `provider` to a single-quoted string containing a full OIDC configuration in JSON
-    ##     format as defined by the OIDC spec.
-    ##     https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse
-    ##  3. Auto-discover + manual overrides: Set the `issuer` value the URL of the provider, uncomment
-    ##     the `provider` value and set that to a sparse OIDC configuration. The service will
-    ##     download the configuration from the provider and then override any settings from the
-    ##     `provider` configuration.
-    ##
+    ## Required - Specify the OIDC configuration using one of following approaches.
+    ##  1. Auto-discover: Set the issuer value as the provider URL. This value allows the service to
+    ##     download a configuration from issuer-url/.well-known/openid-configuration as defined by
+    ##     the OIDC specification.
+    ##  2. Manual: Set the issuer value to an empty string and remove the comment marks from the provider value.
+    ##     You must also set the provider value to a single-quoted string that contains a full OIDC configuration.
+    ##     This configuration must be in the JSON format as defined by the OIDC spec. For more information, refer to
+    ##     https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse.
+    ##  3. Auto-discover and manual override — Set the issuer value to the provider URL and remove the comment marks
+    ##     from the provider value. You must set the provider value to a sparse OIDC configuration. The service will then
+    ##     download the configuration from the provider and override with any settings from the provider configuration.
     issuer: "https://oidc.example.com/"
     # provider: '<provider-config-json>'
     ## Optional - Claim to use for user ID.
