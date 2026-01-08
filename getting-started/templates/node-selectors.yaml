@@ -321,7 +321,7 @@ webserver:
   tolerations: *servicesTolerations
   affinity: *servicesAffinity
 
-workorder:
+workitem:
   nodeSelector: *servicesNodeSelector
   tolerations: *servicesTolerations
   affinity: *servicesAffinity
