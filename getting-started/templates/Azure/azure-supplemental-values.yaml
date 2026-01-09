@@ -53,29 +53,6 @@ azureBlobApiHost: &azureBlobApiHost "blob.core.windows.net"
 ##
 azureDataLakeApiHost: &azureDataLakeApiHost "dfs.core.windows.net"
 
-assetservice:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/up"
-
-dashboardhost:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/api/health"
-  apiIngress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/api/health"
-
-dynamicformfields:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/up"
-
-testmonitorservice:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/nitestmonitor/up"
-
 dataframeservice:
   storage:
     type: "azure"
@@ -102,11 +79,6 @@ dataframeservice:
         #     <name>fs.azure.endpoint</name>
         #     <value><ATTENTION> - set to the value of azureDataLakeApiHost</value>
         #   </property>
-
-feedservice:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/up"
 
   storage:
     type: "azure"
@@ -135,11 +107,6 @@ fileingestioncdc:
         accountName: ""
         blobApiHost: *azureBlobApiHost
 
-nbexecservice:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/up"
-
   storage:
     type: "azure"
     azure:
@@ -147,11 +114,6 @@ nbexecservice:
       #             Notebook Execution Service.
       accountName: ""
       blobApiHost: *azureBlobApiHost
-
-notification:
-  ingress:
-    annotations:
-      appgw.ingress.kubernetes.io/health-probe-path: "/ninotification/up"
 
 swaggerapi:
   ingress:

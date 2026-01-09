@@ -63,29 +63,6 @@ s3Port: &s3Port 443
 ##
 s3Region: &s3Region "us-east-1"
 
-assetservice:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/up"
-
-dashboardhost:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/api/health"
-  apiIngress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/api/health"
-
-dynamicformfields:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/up"
-
-testmonitorservice:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/nitestmonitor/up"
-
 dataframeservice:
   storage:
     type: s3
@@ -133,11 +110,6 @@ dataframeservice:
         #     <description>The region where S3 storage is located (see s3Region).</description>
         #     <value>us-east-1</value>
         #   </property>
-
-feedservice:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/up"
 
   storage:
     type: "s3"
@@ -188,10 +160,6 @@ saltmaster:
       service.beta.kubernetes.io/aws-load-balancer-type: "external"
 
 nbexecservice:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/up"
-
   storage:
     type: "s3"
     s3:
@@ -202,11 +170,6 @@ nbexecservice:
       host: *s3Host
       port: *s3Port
       region: *s3Region
-
-notification:
-  ingress:
-    annotations:
-      alb.ingress.kubernetes.io/healthcheck-path: "/ninotification/up"
 
 swaggerapi:
   ingress:
