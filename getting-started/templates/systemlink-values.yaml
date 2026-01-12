@@ -86,16 +86,6 @@ global:
     ##
     cdnEndpoint: "https://web-sdk.ni.com/"
   ##
-  ## MongoDB Database Configuration.
-  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance
-  ## or utilize a managed solution such as MongoDB Atlas. Once provisioned provide the connection details in global.secrets.mongodb.connection_string.
-  ##
-  mongodb:
-    ## Enable or disable installation of per-service MongoDB instances.
-    #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
-    ##
-    install: false
-  ##
   ## Specify secrets containing trusted certificates that should be installed in all the necessary applications.
   ## The secrets must be deployed manually prior to installing this chart. Config maps may be used when it is not possible to use a secret.
   ## Example:
