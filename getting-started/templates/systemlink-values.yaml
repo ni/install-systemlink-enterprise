@@ -154,7 +154,7 @@ rabbitmq:
 ## Core configuration for the SystemLink web application.
 ##
 webserver:
-  ## The log level of the service. Must be one of ['error', 'warn', 'info', 'debug'].
+  ## Represents the log level of the service. The log level must be one of the following values: ['error', 'warn', 'info', 'debug']
   ##
   logLevel: 'info'
   ## Ingress configuration
@@ -204,8 +204,10 @@ webserver:
     # Optional - Enable the user-info end-point to return the user's claims
     ##
     # enableUserInfo: "false"
-    ## Optional - Set to true to emit detailed diagnostic logs for OIDC operations. Requires the webserver.logLevel value to be "debug".
-    ## This option may output sensitive information to the logs and should only be used when debugging OIDC connectivity issues.
+    ## Optional - Set the value of this option to ‘true’ to emit detailed diagnostic logs for OIDC operations.
+    ## This option requires that you set the webserver.logLevel value to ‘debug’
+    ## The diagnostic logs may contain sensitive information. You should only use this option when debugging
+    ## OIDC connectivity issues.
     ##
     enableDiagnosticLogging: "false"
   ## If access to the OpenID Connect provider requires a proxy server, provide proxy service configuration here.
