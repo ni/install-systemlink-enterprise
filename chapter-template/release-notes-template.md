@@ -1,6 +1,6 @@
 <!-- This file should be renamed to README.md and placed in the directory for the release. -->
 
-# SystemLink Enterprise release year-release-month Release Notes
+# SystemLink Enterprise release_year-release_month Release Notes
 
 The release_year-release_month release for SystemLink Enterprise has been
 published to <https://downloads.artifacts.ni.com>. This update includes new
@@ -9,7 +9,7 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from the release year-release-month to the release year-release-month
+## Upgrading from SystemLink Enterprise release_older_year-release_older_month to release_year-release_month
 
 <!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
