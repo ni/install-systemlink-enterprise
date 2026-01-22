@@ -86,16 +86,6 @@ global:
     ##
     cdnEndpoint: "https://web-sdk.ni.com/"
   ##
-  ## MongoDB Database Configuration.
-  ## Many Systemlink Enterprise services utilize MongoDB databases for data storage. Customers can deploy their own MongoDB instance
-  ## or utilize a managed solution such as MongoDB Atlas. Once provisioned provide the connection details in global.secrets.mongodb.connection_string.
-  ##
-  mongodb:
-    ## Enable or disable installation of per-service MongoDB instances.
-    #  <ATTENTION> - If you do *not* have your own MongoDB instance set this (`global.mongodb.install`) to `true`.
-    ##
-    install: false
-  ##
   ## Specify secrets containing trusted certificates that should be installed in all the necessary applications.
   ## The secrets must be deployed manually prior to installing this chart. Config maps may be used when it is not possible to use a secret.
   ## Example:
@@ -154,6 +144,9 @@ rabbitmq:
 ## Core configuration for the SystemLink web application.
 ##
 webserver:
+  ## Represents the log level of the service. The log level must be one of the following values: ['error', 'warn', 'info', 'debug']
+  ##
+  logLevel: 'info'
   ## Ingress configuration
   ##
   ingress:
@@ -201,6 +194,12 @@ webserver:
     # Optional - Enable the user-info end-point to return the user's claims
     ##
     # enableUserInfo: "false"
+    ## Optional - Set the value of this option to ‘true’ to emit detailed diagnostic logs for OIDC operations.
+    ## This option requires that you set the webserver.logLevel value to ‘debug’
+    ## The diagnostic logs may contain sensitive information. You should only use this option when debugging
+    ## OIDC connectivity issues.
+    ##
+    enableDiagnosticLogging: "false"
   ## If access to the OpenID Connect provider requires a proxy server, provide proxy service configuration here.
   # <ATTENTION> - Configure the proxy server for OpenID connect access here.
   ##
