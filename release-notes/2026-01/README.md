@@ -83,8 +83,8 @@ filesui:0.34.72
 grafana-auth-proxy:0.33.78
 grafana-plugins:4.113.0
 grafana-rbac-integrator:0.33.106
-helium-dataservices-mongomigration:0.32.48
-helium-dataservices:0.32.48
+helium-dataservices-mongomigration:0.32.49
+helium-dataservices:0.32.49
 helium-fileingestionservices:1.23.64
 helium-salt-master:1.30.31
 helium-serviceregistry:0.38.40
@@ -118,12 +118,12 @@ session-manager-service:0.39.57
 sl-configurable-http-proxy:2.24.10
 sl-k8s-hub:2.24.23
 smtp:0.33.58
-specificationmanagement:0.24.56
+specificationmanagement:0.24.57
 systemsmanagementservice:0.33.43
 systemsstateservice:0.23.40-17345325
 systemsstatesui:0.22.69
 systemsui:0.34.129
-tageventprocessor:0.32.48
+tageventprocessor:0.32.49
 tagsui:0.29.63
 testinsightsui:0.33.114
 testmonitorservice:0.42.85
