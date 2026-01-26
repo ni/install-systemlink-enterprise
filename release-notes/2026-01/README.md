@@ -15,10 +15,10 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- `global.mongodb.install: true` no longer supported. Services must connect to a seperately deployed mongodb instance by configuring `global.secrets.mongodb.connection_string`.
-  - If your configuration is already set to the default value of `mongodb.install: false`, no further action is required.
-  - Any services using `mongodb.install: true` will need to connect to an external MongoDB by setting `global.secrets.mongodb.connection_string`.
-  - You may remove the `mongodb.*` configurations (do not remove `secrets.mongo.*`). 
+- The `global.mongodb.install: true` configuration option is no longer supported. SystemLink Enterprise now requires an external MongoDB instance configured via `global.secrets.mongodb.connection_string`.
+  - If you are already using the default `mongodb.install: false`, no action is required.
+  - If you are using `mongodb.install: true`, you must deploy an external MongoDB instance and set `global.secrets.mongodb.connection_string` to connect to it.
+  - After migrating to external MongoDB, you can remove all `mongodb.*` configuration values (keep `secrets.mongodb.*` configurations).
 
 ## Upgrade Considerations
 
