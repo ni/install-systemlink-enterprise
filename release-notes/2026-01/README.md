@@ -143,7 +143,6 @@ argoproj/workflow-controller:v3.6.10-linux-amd64
 bitnami-secure/containers/debian-12/kubectl:1.35.0
 bitnami-secure/containers/debian-12/rabbitmq:4.2.2-debian-12-r1
 bitnami-secure/containers/debian-12/redis-cluster:8.4.0-debian-12-r3
-bitnami/mongodb:5.0.10-debian-11-r3
 busybox:stable@sha256:05a79c7279f71f86a2a0d05eb72fcb56ea36139150f0a75cd87e80a4272e4e39
 jupyterhub/k8s-image-awaiter:4.2.0
 kiwigrid/k8s-sidecar:2.3.0
