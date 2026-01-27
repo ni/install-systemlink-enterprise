@@ -115,6 +115,14 @@ fileingestioncdc:
       accountName: ""
       blobApiHost: *azureBlobApiHost
 
+saltmaster:
+  serviceTCP:
+    annotations:
+      # <ATTENTION> Set to the resource group that contains the public IP address for the saltmaster service load balancer.
+      service.beta.kubernetes.io/azure-load-balancer-resource-group: 
+      # <ATTENTION> Set to the public IP address for the saltmaster service load.
+      service.beta.kubernetes.io/azure-pip-name: 
+
 swaggerapi:
   ingress:
     annotations:
