@@ -260,6 +260,27 @@ database:
 ## Configuration for test result storage.
 ##
 testmonitorservice:
+  ## Optional - Configuring sidecars for the Test Monitor Service (Additional containers to run in the same pod as the service).
+  ## These can be used to configure authentication proxy containers, such as the Cloud SQL Auth Proxy.
+  ## ref: https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/GCP/gcp-supplemental-values.yaml
+  sidecars: []
+  ## Optional - Volumes that can be used in sidecar containers
+  extraVolumes: []
+  ## Optional - Defines additional volume mounts for the container.
+  extraVolumeMounts: []
+
+  ## Optional - Service account for Test Monitor.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+  ##
+  serviceAccount:
+    ## @param serviceAccount.annotations Annotations to add to the service account
+    ##
+    annotations: {}
+    ## @param serviceAccount.name The name of the service account to use.
+    ## If not set, a name is generated using the fullname template
+    ##
+    name: ""
+
   ## Database configuration
   ##
   database:
@@ -472,6 +493,26 @@ dashboardhost:
   ## for more documentation and examples for these values.
   ##
   grafana:
+    ## Optional - Configuring extra containers for the Dashboardhost Service (Additional containers to run in the same pod as the service).
+    ## These can be used to configure authentication proxy containers, such as the Cloud SQL Auth Proxy.
+    ## ref: https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/GCP/gcp-supplemental-values.yaml
+    extraContainers: ""
+    ##  Optional - Volumes that can be used in the extraContainers
+    extraContainerVolumes: []
+    ##  Optional - Defines additional volume mounts for the container.
+    extraVolumeMounts: []
+
+    ## Optional - Service account for dashboardhost service.
+    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+    ##
+    serviceAccount:
+      ## @param serviceAccount.annotations Annotations to add to the service account
+      ##
+      annotations: {}
+      ## @param serviceAccount.name The name of the service account to use.
+      ## If not set, a name is generated using the fullname template
+      ##
+      name: ""
 
     ## Configure access to the Grafana container.
     ##
@@ -1205,6 +1246,27 @@ serviceregistry:
 ## Configuration for dynamic form fields.
 ##
 dynamicformfields:
+  ## Optional - Configuring sidecars for the Dynamic Form Fields Service (Additional containers to run in the same pod as the service).
+  ## These can be used to configure authentication proxy containers, such as the Cloud SQL Auth Proxy.
+  ## ref: https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/GCP/gcp-supplemental-values.yaml
+  sidecars: []
+  ## Optional - Volumes that can be used in sidecar containers
+  extraVolumes: []
+  ## Optional - Defines additional volume mounts for the container.
+  extraVolumeMounts: []
+
+  ## Optional - Service account for Dynamic Form Fields.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+  ##
+  serviceAccount:
+    ## @param serviceAccount.annotations Annotations to add to the service account
+    ##
+    annotations: {}
+    ## @param serviceAccount.name The name of the service account to use.
+    ## If not set, a name is generated using the fullname template
+    ##
+    name: ""
+
   ## Database configuration
   ##
   database:
