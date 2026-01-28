@@ -19,6 +19,13 @@ all required configuration changes.
   - If you are already using the default `mongodb.install: false`, no action is required.
   - If you are using `mongodb.install: true`, you must deploy an external MongoDB instance and set `global.secrets.mongodb.connection_string` to connect to it.
   - After migrating to external MongoDB, you can remove all `mongodb.*` configuration values (keep `secrets.mongodb.*` configurations).
+- `dataframeservice 1.25.x`
+  - SystemLink has enabled rate limiting for query, read, and export endpoints. Ensure that your clients can properly handle all 429 responses. Rate limits prevent services from overloading. If necessary, you can increase the limit for an endpoint in the Helm chart configuration file.
+  - Data table metadata queries from SystemLink user interfaces and from SystemLink dashboards are now subject to a Helm-configurable timeout. This timeout has a default duration of 10 seconds. You can configure the timeout value through the `dataframeservice.interactiveMetadataQueryTimeout` Helm value.
+- `workitem 0.1.x`
+  - The Work Order service is now a part of the Work Item service. This migrated service supports multiple work item types.
+  - In the configuration files, the `workorder` Helm chart has been renamed to `workitem`. All Helm values previously under the `workorder.*` file have been moved to the `workitem.*` file. Additionally, the `workordereventprocessor` API key has been replaced with the `workitemeventprocessor` API key.
+  - During the helm upgrade, your system will execute the migration. As a result, your system may experience a brief downtime period. The length of this period is dependent on the number of existing test plans and templates on your system.
 
 ## Upgrade Considerations
 
