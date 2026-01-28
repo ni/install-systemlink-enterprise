@@ -64,7 +64,7 @@ instructions, refer to
 
 ## Bugs Fixed
 
-[SystemLink Enterprise 2025-12 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-01/release-notes/2026-01/closed-bugs-sle-2026-01.xlsx)
+[SystemLink Enterprise 2026-01 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-01/release-notes/2026-01/closed-bugs-sle-2026-01.xlsx)
 
 ## Software Bill of Materials and Notices
 
@@ -74,7 +74,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.45.111`
+**Top Level Helm Chart:** `systemlink 0.45.114`
 
 **Admin Helm Chart:** `systemlink-admin 0.45.5`
 
@@ -127,7 +127,7 @@ ni-grafana:v11.6.4-f892567bfa-ni
 notification:0.33.60
 repository:0.29.55
 routineeventtrigger:0.34.52
-routineexecutor:0.34.115
+routineexecutor:0.34.116
 routinescheduletrigger:0.34.59
 routineservice-v2:0.35.74
 routineservice:0.35.74
@@ -155,10 +155,14 @@ workitem:0.1.119
 ### 3rd Party Containers
 
 ```text
+alpine/curl:8.17.0
 alpine:3.23.2
+apache/flink-kubernetes-operator:1.13.0
 argoproj/argocli:v3.6.10-linux-amd64
 argoproj/argoexec:v3.6.10-linux-amd64
 argoproj/workflow-controller:v3.6.10-linux-amd64
+bitnami-secure/containers/debian-12/elasticsearch:9.2.4-debian-12-r0
+bitnami-secure/containers/debian-12/kibana:9.2.4-debian-12-r0
 bitnami-secure/containers/debian-12/kubectl:1.35.0
 bitnami-secure/containers/debian-12/rabbitmq:4.2.2-debian-12-r1
 bitnami-secure/containers/debian-12/redis-cluster:8.4.0-debian-12-r3
