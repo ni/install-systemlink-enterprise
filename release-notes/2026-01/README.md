@@ -1,43 +1,99 @@
 # SystemLink Enterprise 2026-01 Release Notes
 
-The 2026-01 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-01 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
+- Use Dremio to store and index tabular data. For more information, refer to
+  [Configuring Dremio](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-dremio.html).
+- Use the Data Frames data source in dashboards to filter data tables using
+  result properties and data table properties. For more information, refer to
+  Using the
+  [Data Frames Data Source in a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-frames-data-source.html).
+- Create variables that use data table columns to dynamically view dashboard
+  data. For more information, refer to
+  [Using Data Tables as Dashboard Variables](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/using-data-tables-as-dashboard-variables.html).
+- Use the Resource Changed Routine interface with notebooks to create a routine
+  that executes on a SystemLink resource. For more information, refer to
+  [Publishing a Jupyter Notebook](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/publishing-a-jupyter-notebook.html).
 - `dataframeservice 1.25.x`
-  - On system start, the DataFrame service (DFS) creates a new index file. DFS is not healthy until the index is created. The amount of time that DFS takes to create the new index depends on the number of data tables in the system.
-  - If Kubernetes restarts the pods due to a lack of readiness, the MongoDB server continues creating the index. Restarted pods will wait for the index to be fully created. With 5 million tables and a dedicated M50 Atlas cluster for DFS, the pods may restart several times before index creation completes.
+  - On system start, the DataFrame service (DFS) creates a new index file. DFS
+    is not healthy until the index is created. The amount of time that DFS takes
+    to create the new index depends on the number of data tables in the system.
+  - If Kubernetes restarts the pods due to a lack of readiness, the MongoDB
+    server continues creating the index. Restarted pods will wait for the index
+    to be fully created. With 5 million tables and a dedicated M50 Atlas cluster
+    for DFS, the pods may restart several times before index creation completes.
 - `workitem 0.1.x`
-  - SystemLink has replaced the existing Test Plan and Test Plan Template privileges with new Work Item and Work Item Template privileges. The Work Item and Work Item Template APIs use these privileges to support multiple lab activities beyond test execution.
-  - The Test Plan and Test Plan Template APIs are now deprecated. These APIs will continue to function using the new privileges.
-  - All built-in roles use the new privileges. This includes the Data Maintainer, Systems Maintainer, Collaborator, and Automated Agent roles. You must manually update any custom roles created with Test Plan and Test Plan Template privileges to use the new Work Item and Work Item Template privileges.
+  - SystemLink has replaced the existing Test Plan and Test Plan Templates
+    privileges with new Work Item and Work Item Template privileges. The Work
+    Item and Work Item Template APIs use these privileges to support multiple
+    lab activities beyond test execution.
+  - The Test Plan and Test Plan Template APIs are now deprecated. These APIs
+    will continue to function using the new privileges.
+  - All built-in roles use the new privileges. This includes the Data
+    Maintainer, Systems Maintainer, Collaborator, and Automated Agent roles. You
+    must manually update any custom roles created with Test Plan and Test Plan
+    Template privileges to use the new Work Item and Work Item Template
+    privileges.
   - For more information, refer to Test-plan-to-work-item-migration-guidance.
 - `comments 0.29.x`
-  - During the Test Plan to Work Item migration, any existing comments with the `workorder:testplan` resource type are changed to the `workitem:workitem` resource type. All existing Test Plan comments are automatically migrated during the Helm upgrade.
-  - After a brief interval, the comments will be visible in the SystemLink user interface. All comments require this interval to allow the migration to the new resource type. Services will continue to operate without the downtime.
+  - During the Test Plan to Work Item migration, any existing comments with the
+    `workorder:testplan` resource type are changed to the `workitem:workitem`
+    resource type. All existing Test Plan comments are automatically migrated
+    during the Helm upgrade.
+  - After a brief interval, the comments will be visible in the SystemLink user
+    interface. All comments require this interval to allow the migration to the
+    new resource type. Services will continue to operate without the downtime.
 - `dynamicformfields 0.14.x`
-  - During the Test Plan to Work Item migration, any existing Dynamic Form Fields (DFFs) with the `workorder:testplan` resource type are changed to the `workitem:workitem` resource type.
-  - To create DFFs that apply only to a specific work item type, create a new DFF with the `workitem:workitem` resource type. You can also use display rules to filter by work item type. For example, type = `testplan`.
-  - **Note:** The DFF service is backward compatible with the `workorder:testplan` resource type.
+  - During the Test Plan to Work Item migration, any existing Dynamic Form
+    Fields (DFFs) with the `workorder:testplan` resource type are changed to the
+    `workitem:workitem` resource type.
+  - To create DFFs that apply only to a specific work item type, create a new
+    DFF with the `workitem:workitem` resource type. You can also use display
+    rules to filter by work item type. For example, type = `testplan`.
+  - **Note:** The DFF service is backward compatible with the
+    `workorder:testplan` resource type.
 
 ## Helm Chart Breaking Changes
 
-- The `global.mongodb.install: true` configuration option is no longer supported. SystemLink Enterprise now requires an external MongoDB instance configured via `global.secrets.mongodb.connection_string`.
-  - If you are already using the default `mongodb.install: false`, no action is required.
-  - If you are using `mongodb.install: true`, you must deploy an external MongoDB instance and set `global.secrets.mongodb.connection_string` to connect to it.
-  - After migrating to external MongoDB, you can remove all `mongodb.*` configuration values (keep `secrets.mongodb.*` configurations).
+- The `global.mongodb.install: true` configuration option is no longer
+  supported. SystemLink Enterprise now requires an external MongoDB instance
+  configured via `global.secrets.mongodb.connection_string`.
+  - If you are already using the default `mongodb.install: false`, no action is
+    required.
+  - If you are using `mongodb.install: true`, you must deploy an external
+    MongoDB instance and set `global.secrets.mongodb.connection_string` to
+    connect to it.
+  - After migrating to external MongoDB, you can remove all `mongodb.*`
+    configuration values (keep `secrets.mongodb.*` configurations).
 - `dataframeservice 1.25.x`
-  - SystemLink has enabled rate limiting for query, read, and export endpoints. Ensure that your clients can properly handle all 429 responses. Rate limits prevent services from overloading. If necessary, you can increase the limit for an endpoint in the Helm chart configuration file.
-  - Data table metadata queries from SystemLink user interfaces and from SystemLink dashboards are now subject to a Helm-configurable timeout. This timeout has a default duration of 10 seconds. You can configure the timeout value through the `dataframeservice.interactiveMetadataQueryTimeout` Helm value.
+  - SystemLink has enabled rate limiting for query, read, and export endpoints.
+    Ensure that your clients can properly handle all 429 responses. Rate limits
+    prevent services from overloading. If necessary, you can increase the limit
+    for an endpoint in the Helm chart configuration file.
+  - Data table metadata queries from SystemLink user interfaces and from
+    SystemLink dashboards are now subject to a Helm-configurable timeout. This
+    timeout has a default duration of 10 seconds. You can configure the timeout
+    value through the `dataframeservice.interactiveMetadataQueryTimeout` Helm
+    value.
 - `workitem 0.1.x`
-  - The Work Order service is now a part of the Work Item service. This migrated service supports multiple work item types.
-  - In the configuration files, the `workorder` Helm chart has been renamed to `workitem`. All Helm values previously under the `workorder.*` file have been moved to the `workitem.*` file. Additionally, the `workordereventprocessor` API key has been replaced with the `workitemeventprocessor` API key.
-  - During the helm upgrade, your system will execute the migration. As a result, your system may experience a brief downtime period. The length of this period is dependent on the number of existing test plans and templates on your system.
+  - The Work Order service is now a part of the Work Item service. This migrated
+    service supports multiple work item types.
+  - In the configuration files, the `workorder` Helm chart has been renamed to
+    `workitem`. All Helm values previously under the `workorder.*` file have
+    been moved to the `workitem.*` file. Additionally, the
+    `workordereventprocessor` API key has been replaced with the
+    `workitemeventprocessor` API key.
+  - During the helm upgrade, your system will execute the migration. As a
+    result, your system may experience a brief downtime period. The length of
+    this period is dependent on the number of existing test plans and templates
+    on your system.
 
 ## Upgrade Considerations
 
