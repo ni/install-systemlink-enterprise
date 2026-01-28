@@ -13,9 +13,9 @@ all required configuration changes.
   - On system start, the DataFrame service (DFS) creates a new index file. DFS is not healthy until the index is created. The amount of time that DFS takes to create the new index depends on the number of data tables in the system.
   - If Kubernetes restarts the pods due to a lack of readiness, the MongoDB server continues creating the index. Restarted pods will wait for the index to be fully created. With 5 million tables and a dedicated M50 Atlas cluster for DFS, the pods may restart several times before index creation completes.
 - `workitem 0.1.x`
-  - SystemLink has replaced the existing Test Plan and Test Plan Template privileges with new Work Item and Work Item Template privileges. The Work Item and Work Item Template APIs use these privileges to support multiple lab activities beyond test execution. 
+  - SystemLink has replaced the existing Test Plan and Test Plan Template privileges with new Work Item and Work Item Template privileges. The Work Item and Work Item Template APIs use these privileges to support multiple lab activities beyond test execution.
   - The Test Plan and Test Plan Template APIs are now deprecated. These APIs will continue to function using the new privileges.
-  - All built-in roles use the new privileges. This includes the Data Maintainer, Systems Maintainer, Collaborator, and Automated Agent roles. You must manually update any custom roles created with Test Plan and Test Plan Template privileges to use the new Work Item and Work Item Template privileges. 
+  - All built-in roles use the new privileges. This includes the Data Maintainer, Systems Maintainer, Collaborator, and Automated Agent roles. You must manually update any custom roles created with Test Plan and Test Plan Template privileges to use the new Work Item and Work Item Template privileges.
   - For more information, refer to Test-plan-to-work-item-migration-guidance.
 - `comments 0.29.x`
   - During the Test Plan to Work Item migration, any existing comments with the `workorder:testplan` resource type are changed to the `workitem:workitem` resource type. All existing Test Plan comments are automatically migrated during the Helm upgrade.
