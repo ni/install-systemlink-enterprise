@@ -30,25 +30,24 @@ required configuration changes.
     to be fully created. With 5 million tables and a dedicated M50 Atlas cluster
     for DFS, the pods may restart several times before index creation completes.
 - `workitem 0.1.x`
-  - SystemLink has replaced the existing Test Plan and Test Plan Templates
-    privileges with new Work Item and Work Item Template privileges. The Work
-    Item and Work Item Template APIs use these privileges to support multiple
+  - SystemLink has replaced the existing _Test Plan_ and _Test Plan Templates_
+    privileges with new _Work Item_ and _Work Item Template_ privileges. The _Work
+    Item_ and _Work Item Template_ APIs use these privileges to support multiple
     lab activities beyond test execution.
-  - The Test Plan and Test Plan Template APIs are now deprecated. These APIs
+  - The _Test Plan_ and _Test Plan Template_ APIs are deprecated. These APIs
     will continue to function using the new privileges.
-  - All built-in roles use the new privileges. This includes the Data
-    Maintainer, Systems Maintainer, Collaborator, and Automated Agent roles. You
-    must manually update any custom roles created with Test Plan and Test Plan
-    Template privileges to use the new Work Item and Work Item Template
+  - All built-in roles use the new privileges. This includes the **Data
+    Maintainer**, **Systems Maintainer**, **Collaborator**, and **Automated Agent** roles. You
+    must manually update any custom roles created with _Test Plan_ and _Test Plan
+    Template_ privileges to use the new _Work Item_ and _Work Item Template_
     privileges.
   - For more information, refer to Test-plan-to-work-item-migration-guidance.
 - `comments 0.29.x`
   - During the Test Plan to Work Item migration, any existing comments with the
     `workorder:testplan` resource type are changed to the `workitem:workitem`
     resource type. All existing Test Plan comments are automatically migrated
-    during the Helm upgrade.
-  - After a brief interval, the comments will be visible in the SystemLink user
-    interface. All comments require this interval to allow the migration to the
+    during the upgrade.
+  - After a brief interval, the comments will be visible in the SystemLink web application. All comments require this interval to allow the migration to the
     new resource type. Services will continue to operate without the downtime.
 - `dynamicformfields 0.14.x`
   - During the Test Plan to Work Item migration, any existing Dynamic Form
@@ -62,19 +61,19 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- The `global.mongodb.install: true` configuration option is no longer
+- The `global.mongodb.install: true` configuration is no longer
   supported. SystemLink Enterprise now requires an external MongoDB instance
   configured via `global.secrets.mongodb.connection_string`.
   - If you are already using the default `mongodb.install: false`, no action is
     required.
   - If you are using `mongodb.install: true`, you must deploy an external
-    MongoDB instance and set `global.secrets.mongodb.connection_string` to
+    MongoDB replicaset and set `global.secrets.mongodb.connection_string` to
     connect to it.
-  - After migrating to external MongoDB, you can remove all `mongodb.*`
+  - After migrating to an external MongoDB replicaset, you can remove all `mongodb.*`
     configuration values (keep `secrets.mongodb.*` configurations).
 - `dataframeservice 1.25.x`
   - SystemLink has enabled rate limiting for query, read, and export endpoints.
-    Ensure that your clients can properly handle all 429 responses. Rate limits
+    Ensure that your clients can properly handle all `429` responses. Rate limits
     prevent services from overloading. If necessary, you can increase the limit
     for an endpoint in the Helm chart configuration file.
   - Data table metadata queries from SystemLink user interfaces and from
@@ -90,7 +89,7 @@ required configuration changes.
     been moved to the `workitem.*` file. Additionally, the
     `workordereventprocessor` API key has been replaced with the
     `workitemeventprocessor` API key.
-  - During the helm upgrade, your system will execute the migration. As a
+  - During the upgrade, your system will execute the migration. As a
     result, your system may experience a brief downtime period. The length of
     this period is dependent on the number of existing test plans and templates
     on your system.
