@@ -31,24 +31,27 @@ required configuration changes.
     for DFS, the pods may restart several times before index creation completes.
 - `workitem 0.1.x`
   - SystemLink has replaced the existing _Test Plan_ and _Test Plan Templates_
-    privileges with new _Work Item_ and _Work Item Template_ privileges. The _Work
-    Item_ and _Work Item Template_ APIs use these privileges to support multiple
-    lab activities beyond test execution.
+    privileges with new _Work Item_ and _Work Item Template_ privileges. The
+    _Work Item_ and _Work Item Template_ APIs use these privileges to support
+    multiple lab activities beyond test execution.
   - The _Test Plan_ and _Test Plan Template_ APIs are deprecated. These APIs
     will continue to function using the new privileges.
   - All built-in roles use the new privileges. This includes the **Data
-    Maintainer**, **Systems Maintainer**, **Collaborator**, and **Automated Agent** roles. You
-    must manually update any custom roles created with _Test Plan_ and _Test Plan
-    Template_ privileges to use the new _Work Item_ and _Work Item Template_
-    privileges.
-  - For more information, refer to [Test-plan-to-work-item-migration-guidance](https://github.com/ni/install-systemlink-enterprise/tree/2026-01/release-notes/2026-01/Test-plan-to-work-item-migration-guidance.md).
+    Maintainer**, **Systems Maintainer**, **Collaborator**, and **Automated
+    Agent** roles. You must manually update any custom roles created with _Test
+    Plan_ and _Test Plan Template_ privileges to use the new _Work Item_ and
+    _Work Item Template_ privileges.
+  - For more information, refer to
+    [Test-plan-to-work-item-migration-guidance](https://github.com/ni/install-systemlink-enterprise/tree/2026-01/release-notes/2026-01/Test-plan-to-work-item-migration-guidance.md).
 - `comments 0.29.x`
   - During the Test Plan to Work Item migration, any existing comments with the
     `workorder:testplan` resource type are changed to the `workitem:workitem`
     resource type. All existing Test Plan comments are automatically migrated
     during the upgrade.
-  - After a brief interval, the comments will be visible in the SystemLink web application. All comments require this interval to allow the migration to the
-    new resource type. Services will continue to operate without the downtime.
+  - After a brief interval, the comments will be visible in the SystemLink web
+    application. All comments require this interval to allow the migration to
+    the new resource type. Services will continue to operate without the
+    downtime.
 - `dynamicformfields 0.14.x`
   - During the Test Plan to Work Item migration, any existing Dynamic Form
     Fields (DFFs) with the `workorder:testplan` resource type are changed to the
@@ -61,15 +64,24 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- SystemLink no longer supports the `global.mongodb.install: true` configuration option. You must configure all external MongoDB instances through the `global.secrets.mongodb.connection_string` configuration option.
-  - If your system uses the default `mongodb.install: false` configuration option, you do not need to take any further actions.
-  - If your system uses the `mongodb.install: true` configuration option, you must deploy an external MongoDB instance. You must then set the `global.secrets.mongodb.connection_string` configuration option to connect to the MongoDB instance.
-  - After migrating SystemLink to an external MongoDB instance, you can remove all `mongodb.*` configuration values. You must keep the `secrets.mongodb.*` configurations.
+- SystemLink no longer supports the `global.mongodb.install: true` configuration
+  option. You must configure all external MongoDB instances through the
+  `global.secrets.mongodb.connection_string` configuration option.
+  - If your system uses the default `mongodb.install: false` configuration
+    option, you do not need to take any further actions.
+  - If your system uses the `mongodb.install: true` configuration option, you
+    must deploy an external MongoDB instance. You must then set the
+    `global.secrets.mongodb.connection_string` configuration option to connect
+    to the MongoDB instance.
+  - After migrating SystemLink to an external MongoDB instance, you can remove
+    all `mongodb.*` configuration values. You must keep the `secrets.mongodb.*`
+    configurations.
 - `dataframeservice 1.25.x`
   - SystemLink has enabled rate limiting for query, read, and export endpoints.
-    Ensure that your clients can properly handle all `429` responses. Rate limits
-    prevent services from overloading. If necessary, you can increase the limit
-    for an endpoint in the Helm chart configuration file.
+    Ensure that your clients can properly handle all `429` responses. Rate
+    limits prevent services from overloading. If necessary, you can increase the
+    limit for an endpoint in the Helm chart configuration file.
+  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-01/getting-started/templates/systemlink-values.yaml#L630)
   - Data table metadata queries from SystemLink user interfaces and from
     SystemLink dashboards are now subject to a Helm-configurable timeout. This
     timeout has a default duration of 10 seconds. You can configure the timeout
@@ -83,10 +95,10 @@ required configuration changes.
     been moved to the `workitem.*` file. Additionally, the
     `workordereventprocessor` API key has been replaced with the
     `workitemeventprocessor` API key.
-  - During the upgrade, your system will execute the migration. As a
-    result, your system may experience a brief downtime period. The length of
-    this period is dependent on the number of existing test plans and templates
-    on your system.
+  - During the upgrade, your system will execute the migration. As a result,
+    your system may experience a brief downtime period. The length of this
+    period is dependent on the number of existing test plans and templates on
+    your system.
 
 ## Upgrade Considerations
 
