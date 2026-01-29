@@ -88,7 +88,7 @@ Example DFF linked resource URL update:
 
 **Before migration:**
 
-```
+```text
 {
   "configurations": [...],
   "groups": [...],
@@ -123,7 +123,7 @@ Example DFF linked resource URL update:
 
 **After migration:**
 
-```
+```text
 {
   "configurations": [...],
   "groups": [...],
@@ -170,7 +170,7 @@ views.
 1. For all new uploads, the test results client should use the `workItemId`
    property. For example:
 
-   ```
+   ```text
    testResult.properties['workItemId'] = '12345'
    ```
 
@@ -182,7 +182,7 @@ views.
 1. For all new uploads, the files client should use the `workItemId` property.
    For example:
 
-   ```
+   ```text
    file.properties['workItemId'] = '12345'
    ```
 
@@ -198,3 +198,4 @@ views.
    1. `Work Item Automations`
    1. `Work Item Operations`
    1. `Work Item Scheduler`
+
