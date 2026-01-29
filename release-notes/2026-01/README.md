@@ -61,16 +61,10 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- The `global.mongodb.install: true` configuration is no longer
-  supported. SystemLink Enterprise now requires an external MongoDB instance
-  configured via `global.secrets.mongodb.connection_string`.
-  - If you are already using the default `mongodb.install: false`, no action is
-    required.
-  - If you are using `mongodb.install: true`, you must deploy an external
-    MongoDB replicaset and set `global.secrets.mongodb.connection_string` to
-    connect to it.
-  - After migrating to an external MongoDB replicaset, you can remove all `mongodb.*`
-    configuration values (keep `secrets.mongodb.*` configurations).
+- SystemLink no longer supports the `global.mongodb.install: true` configuration option. You must configure all external MongoDB instances through the `global.secrets.mongodb.connection_string` configuration option.
+  - If your system uses the default `mongodb.install: false` configuration option, you do not need to take any further actions.
+  - If your system uses the `mongodb.install: true` configuration option, you must deploy an external MongoDB instance. You must then set the `global.secrets.mongodb.connection_string` configuration option to connect to the MongoDB instance.
+  - After migrating SystemLink to an external MongoDB instance, you can remove all `mongodb.*` configuration values. You must keep the `secrets.mongodb.*` configurations.
 - `dataframeservice 1.25.x`
   - SystemLink has enabled rate limiting for query, read, and export endpoints.
     Ensure that your clients can properly handle all `429` responses. Rate limits
