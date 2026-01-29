@@ -41,7 +41,7 @@ required configuration changes.
     must manually update any custom roles created with _Test Plan_ and _Test Plan
     Template_ privileges to use the new _Work Item_ and _Work Item Template_
     privileges.
-  - For more information, refer to Test-plan-to-work-item-migration-guidance.
+  - For more information, refer to [Test-plan-to-work-item-migration-guidance](https://github.com/ni/install-systemlink-enterprise/tree/2026-01/release-notes/2026-01/Test-plan-to-work-item-migration-guidance.md).
 - `comments 0.29.x`
   - During the Test Plan to Work Item migration, any existing comments with the
     `workorder:testplan` resource type are changed to the `workitem:workitem`
