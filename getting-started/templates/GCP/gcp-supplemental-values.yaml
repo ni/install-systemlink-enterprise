@@ -64,7 +64,7 @@ testmonitorservice:
           ## The proxy's CPU use scales linearly with the amount of IO between
           ## the database and the application. Adjust this value based on your
           ## application's requirements.
-          cpu: "0.1"
+          cpu: "75m"
         limits:
           memory: "100Mi"
 
@@ -179,7 +179,7 @@ dashboardhost:
             ## The proxy's CPU use scales linearly with the amount of IO between
             ## the database and the application. Adjust this value based on your
             ## application's requirements.
-            cpu: "0.1"
+            cpu: "100m"
           limits:
             memory: "100Mi"
 
@@ -297,7 +297,7 @@ dynamicformfields:
           ## The proxy's CPU use scales linearly with the amount of IO between
           ## the database and the application. Adjust this value based on your
           ## application's requirements.
-          cpu: "0.1"
+          cpu: "75m"
         limits:
           memory: "100Mi"
 
