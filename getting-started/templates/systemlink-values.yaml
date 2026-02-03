@@ -457,10 +457,14 @@ assetservice:
     ## The name of the secret containing the Elasticsearch password.
     ## This secret is created automatically by the SystemLink Elasticsearch deployment,
     ## if autoprovisioning is enabled.
-    ## If Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment,
-    ## this secret name needs to match the one created by the assetscdc deployment.
+    ## If a dedicated secret created by this deployment is desired, the secretName needs to be used instead.
     ##
     existingSecretName: "sl-elasticsearch-assetscdc-secret"
+    ## The name of the secret to be created containing the Elasticsearch password. This secret will
+    ## be created by this deployment in case Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment.
+    ## The password needs to be provided in the secrets section.
+    ##
+    secretName: "assetservice-elastic-credentials"
     ## The Elasticsearch user used by the AssetService application.
     ##
     user: "assetscdc"
@@ -953,9 +957,12 @@ fileingestion:
     ## The name of the secret containing the Elasticsearch password.
     ## This secret is created automatically by the SystemLink Elasticsearch deployment,
     ## if autoprovisioning is enabled.
-    ## If Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment,
-    ## this secret name needs to match the one created by the fileingestioncdc deployment.
+    ## If a dedicated secret created by this deployment is desired, the secretName needs to be used instead. 
     existingSecretName: "sl-elasticsearch-filescdc-secret"
+    ## The name of the secret to be created containing the Elasticsearch password. This secret will
+    ## be created by this deployment in case Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment.
+    ## The password needs to be provided in the secrets section.
+    secretName: "fileingestionservices-elastic-credentials"
     ## The Elasticsearch user used by the FileIngestion application.
     username: "filescdc"
     ## The Elasticsearch scheme

@@ -59,7 +59,7 @@ assetservicecdc:
       type: "azure"
       azure:
         # <ATTENTION> Set to the name of an existing Azure storage account to use for the
-        #             Asset Service CDC Service.
+        #             Asset Service CDC.
         accountName: ""
         blobApiHost: *azureBlobApiHost
 
