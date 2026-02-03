@@ -53,6 +53,16 @@ azureBlobApiHost: &azureBlobApiHost "blob.core.windows.net"
 ##
 azureDataLakeApiHost: &azureDataLakeApiHost "dfs.core.windows.net"
 
+assetservicecdc:
+  highAvailability:
+    storage:
+      type: "azure"
+      azure:
+        # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+        #             Asset Service CDC Service.
+        accountName: ""
+        blobApiHost: *azureBlobApiHost
+
 dataframeservice:
   storage:
     type: "azure"
@@ -80,6 +90,7 @@ dataframeservice:
         #     <value><ATTENTION> - set to the value of azureDataLakeApiHost</value>
         #   </property>
 
+feedservice:
   storage:
     type: "azure"
     azure:

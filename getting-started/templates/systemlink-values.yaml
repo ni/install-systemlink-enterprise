@@ -444,6 +444,96 @@ alarmservice:
   ##
   activeAlarmLimit: 10000
 
+## AssetService configuration.
+##
+assetservice:
+  featureToggle:
+    advancedSearch: true
+
+  ## Elasticsearch configuration.
+  ## <ATTENTION> - Only needed if you plan to use the `advancedSearch` feature toggle.
+  ##
+  elasticsearch:
+    ## The name of the secret containing the Elasticsearch password.
+    ## This secret is created automatically by the SystemLink Elasticsearch deployment,
+    ## if autoprovisioning is enabled.
+    ## If Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment,
+    ## this secret name needs to match the one created by the assetscdc deployment.
+    ##
+    existingSecretName: "sl-elasticsearch-assetscdc-secret"
+    ## The Elasticsearch user used by the AssetService application.
+    ##
+    user: "assetscdc"
+    ## The Elasticsearch scheme
+    ##
+    scheme: "http"
+    ## The Elasticsearch port
+    ##
+    port: "9200"
+    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
+    ## provide the FQDN of the headless service
+    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    ##
+    host: "elasticsearch-release-master-hl.default.svc.cluster.local"
+
+## Configuration for AssetServiceCDC.
+## <ATTENTION> - Needed if advanced asset search capabilities are enabled.
+##
+assetservicecdc:
+  ## Set to true to enable the deployment of the AssetServiceCDC
+  ##
+  enabled: true
+
+  ## Elasticsearch configuration
+  ##
+  elasticsearch:
+    ## Name of the existing secret containing the Elasticsearch password.
+    ## This secret is created automatically by the SystemLink Elasticsearch deployment if autoprovisioning is enabled.
+    ##
+    existingSecretName: "sl-elasticsearch-assetscdc-secret"
+    ## The name of the secret to be created containing the Elasticsearch password.
+    ## This secret will be created by the deployment in case Elasticsearch is not provisioned via the SystemLink Elasticsearch
+    ## deployment. Password needs to be provided in the secrets section.
+    ##
+    secretName: "assetscdc-elastic-credentials"
+    ## The Elasticsearch user used by the AssetServiceCDC application
+    ##
+    user: "assetscdc"
+    ## The Elasticsearch scheme
+    ##
+    scheme: "http"
+    ## The Elasticsearch port
+    ##
+    port: "9200"
+    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
+    ## provide the FQDN of the headless service
+    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    ##
+    host: "elasticsearch-release-master-hl.default.svc.cluster.local"
+
+  ## High Availability configuration
+  ##
+  highAvailability:
+    ## Whether to enable high availability. This is required for production environments.
+    ## Needs an object storage medium, like S3, Azure Storage or a ReadWriteMany volume.
+    enabled: true
+
+  ## Job configuration.
+  ##
+  job:
+    ## Connectors configuration.
+    ##
+    connectors:
+      ## Sink configuration.
+      sink:
+        ## Elasticsearch sink configuration.
+        elasticsearch:
+          ## Index creation configuration.
+          index:
+            ## The number of primary shards that will be allocated for the assets elastic index.
+            ## This can be configured only on the first deployment, subsequent deployments will ignore this value.
+            primaryShardsCount: 2
+
 ## Configuration for the Grafana dashboard provider.
 ##
 dashboardhost:
@@ -855,10 +945,7 @@ fileingestion:
   ## Feature toggles.
   ##
   featureToggle:
-    ## <ATTENTION> - Verify that you have all the prerequisites before enabling this toggle.
-    ## For more information, refer to the SystemLink user manual.
-    ## <ATTENTION> - This is an early access feature and is not yet available for general use.
-    searchFiles: false
+    searchFiles: true
 
   ## Elasticsearch configuration.
   ## <ATTENTION> - Only needed if you plan to use the `searchFiles` feature toggle.
@@ -928,7 +1015,7 @@ fileingestion:
 fileingestioncdc:
   ## Set to true to enable the deployment of the FileIngestionCDC
   ##
-  enabled: false
+  enabled: true
 
   ## Elasticsearch configuration
   ##
@@ -941,7 +1028,7 @@ fileingestioncdc:
     ## deployment. Password needs to be provided in the secrets section.
     secretName: "fileingestioncdc-elastic-credentials"
     ## The Elasticsearch user used by the FileIngestionCDC application
-    username: "filescdc"
+    user: "filescdc"
     ## The Elasticsearch scheme
     scheme: "http"
     ## The Elasticsearch port

@@ -72,6 +72,16 @@ sl-elasticsearch:
     ## Users definition
     ##
     users:
+      ## AssetsCDC user definition.
+      ##
+      assetscdc:
+        ## The name of the user to be created in Elasticsearch for AssetService CDC.
+        ##
+        user: "assetscdc"
+        ## The name of the secret that contains the password for the Assets CDC user.
+        ## The password is provided in the secrets file.
+        ##
+        secretName: "sl-elasticsearch-assetscdc-secret"
       ## FilesCDC user definition.
       ##
       filescdc:
