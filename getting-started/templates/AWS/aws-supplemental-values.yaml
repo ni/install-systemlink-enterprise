@@ -68,7 +68,7 @@ assetservicecdc:
     storage:
       type: "s3"
       s3:
-        ## The name of the S3 bucket that the service should connect to.
+        ## The name of the S3 bucket to which the service connects.
         bucket: "systemlink-flink"
         scheme: *s3Scheme
         host: *s3Host
@@ -154,7 +154,7 @@ fileingestioncdc:
     storage:
       type: "s3"
       s3:
-        ## The name of the S3 bucket that the service should connect to.
+        ## The name of the S3 bucket to which the service connects.
         bucket: "systemlink-flink"
         scheme: *s3Scheme
         host: *s3Host

@@ -75,21 +75,21 @@ sl-elasticsearch:
       ## AssetsCDC user definition.
       ##
       assetscdc:
-        ## The name of the user to be created in Elasticsearch for AssetService CDC.
+        ## The Elasticsearch username that the SystemLink Elasticsearch deployment creates for the AssetService CDC.
         ##
         user: "assetscdc"
         ## The name of the secret that contains the password for the Assets CDC user.
-        ## The password is provided in the secrets file.
+        ## You can provide the password in the elasticsearch-secrets.yaml file.
         ##
         secretName: "sl-elasticsearch-assetscdc-secret"
       ## FilesCDC user definition.
       ##
       filescdc:
-        ## The name of the user to be created in Elasticsearch for Files CDC.
+        ## The Elasticsearch username that the SystemLink Elasticsearch deployment creates for the Files CDC.
         ##
         user: "filescdc"
         ## The name of the secret that contains the password for the Files CDC user.
-        ## The password is provided in the secrets file.
+        ## You can provide the password in the elasticsearch-secrets.yaml file.
         ##
         secretName: "sl-elasticsearch-filescdc-secret"
 

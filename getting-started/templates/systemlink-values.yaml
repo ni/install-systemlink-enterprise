@@ -451,21 +451,21 @@ assetservice:
     advancedSearch: true
 
   ## Elasticsearch configuration.
-  ## <ATTENTION> - Only needed if you plan to use the `advancedSearch` feature toggle.
+  ## <ATTENTION> - SystemLink uses this configuration when you enable the 'advancedSearch' toggle.
+  ## Otherwise SystemLink does not use this configuration.
   ##
   elasticsearch:
-    ## The name of the secret containing the Elasticsearch password.
-    ## This secret is created automatically by the SystemLink Elasticsearch deployment,
-    ## if autoprovisioning is enabled.
-    ## If a dedicated secret created by this deployment is desired, the secretName needs to be used instead.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## If you enable autoprovisioning, the SystemLink Elasticsearch deployment automatically creates this secret.
+    ## When a dedicated secret is needed for this service, use the ‘secretName’ parameter to set the name of that secret.
     ##
     existingSecretName: "sl-elasticsearch-assetscdc-secret"
-    ## The name of the secret to be created containing the Elasticsearch password. This secret will
-    ## be created by this deployment in case Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment.
-    ## The password needs to be provided in the secrets section.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
+    ## You must provide the password in the systemlink-secrets.yaml file.
     ##
     secretName: "assetservice-elastic-credentials"
-    ## The Elasticsearch user used by the AssetService application.
+    ## The Elasticsearch user for the AssetService application.
     ##
     user: "assetscdc"
     ## The Elasticsearch scheme
@@ -474,33 +474,35 @@ assetservice:
     ## The Elasticsearch port
     ##
     port: "9200"
-    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
-    ## provide the FQDN of the headless service
-    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    ## The Elasticsearch host. When using a SystemLink Elasticsearch deployment,
+    ## you must provide the FQDN of the headless service.
+    ## <ATTENTION> The Elasticsearch host depends on the release name. Ensure that you are using the correct host.
     ##
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
 ## Configuration for AssetServiceCDC.
-## <ATTENTION> - Needed if advanced asset search capabilities are enabled.
+## <ATTENTION> - SystemLink uses this configuration when you enable the AssetServiceCDC deployment.
+## Otherwise SystemLink does not use this configuration.
 ##
 assetservicecdc:
-  ## Set to true to enable the deployment of the AssetServiceCDC
+  ## Set this parameter to ‘True’ to enable the AssetServiceCDC deployment.
   ##
   enabled: true
 
   ## Elasticsearch configuration
   ##
   elasticsearch:
-    ## Name of the existing secret containing the Elasticsearch password.
-    ## This secret is created automatically by the SystemLink Elasticsearch deployment if autoprovisioning is enabled.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## If you enable autoprovisioning, the SystemLink Elasticsearch deployment automatically creates this secret.
+    ## When a dedicated secret is needed for this service, use the ‘secretName’ parameter to set the name of that secret.
     ##
     existingSecretName: "sl-elasticsearch-assetscdc-secret"
-    ## The name of the secret to be created containing the Elasticsearch password.
-    ## This secret will be created by the deployment in case Elasticsearch is not provisioned via the SystemLink Elasticsearch
-    ## deployment. Password needs to be provided in the secrets section.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
+    ## You must provide the password in the systemlink-secrets.yaml file.
     ##
     secretName: "assetscdc-elastic-credentials"
-    ## The Elasticsearch user used by the AssetServiceCDC application
+    ## The Elasticsearch user for the AssetServiceCDC application.
     ##
     user: "assetscdc"
     ## The Elasticsearch scheme
@@ -509,17 +511,18 @@ assetservicecdc:
     ## The Elasticsearch port
     ##
     port: "9200"
-    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
-    ## provide the FQDN of the headless service
-    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    ## The Elasticsearch host. When using a SystemLink Elasticsearch deployment,
+    ## you must provide the FQDN of the headless service.
+    ## <ATTENTION> The Elasticsearch host depends on the release name. Ensure that you are using the correct host.
     ##
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
   ## High Availability configuration
   ##
   highAvailability:
-    ## Whether to enable high availability. This is required for production environments.
-    ## Needs an object storage medium, like S3, Azure Storage or a ReadWriteMany volume.
+    ## Enables high availability, which is recommended for production environments.
+    ## To use this feature, your system must be able to access a durable shared storage.
+    ## For example, the shared storage can be S3, Azure Storage, or a ReadWriteMany volume.
     enabled: true
 
   ## Job configuration.
@@ -534,8 +537,8 @@ assetservicecdc:
         elasticsearch:
           ## Index creation configuration.
           index:
-            ## The number of primary shards that will be allocated for the assets elastic index.
-            ## This can be configured only on the first deployment, subsequent deployments will ignore this value.
+            ## The number of primary shards that SystemLink allocates for the assets elastic index.
+            ## You can only configure this value for the first deployment. Subsequent deployments ignore this variable.
             primaryShardsCount: 2
 
 ## Configuration for the Grafana dashboard provider.
@@ -952,16 +955,17 @@ fileingestion:
     searchFiles: true
 
   ## Elasticsearch configuration.
-  ## <ATTENTION> - Only needed if you plan to use the `searchFiles` feature toggle.
+  ## <ATTENTION> - SystemLink uses this configuration when you enable the 'searchFiles' toggle.
+  ## Otherwise SystemLink does not use this configuration.
   elasticsearch:
-    ## The name of the secret containing the Elasticsearch password.
-    ## This secret is created automatically by the SystemLink Elasticsearch deployment,
-    ## if autoprovisioning is enabled.
-    ## If a dedicated secret created by this deployment is desired, the secretName needs to be used instead. 
+    ## The name of the secret that contains the Elasticsearch password.
+    ## If you enable autoprovisioning, the SystemLink Elasticsearch deployment automatically creates this secret.
+    ## When a dedicated secret is needed for this service, use the ‘secretName’ parameter to set the name of that secret.
     existingSecretName: "sl-elasticsearch-filescdc-secret"
-    ## The name of the secret to be created containing the Elasticsearch password. This secret will
-    ## be created by this deployment in case Elasticsearch is not provisioned via the SystemLink Elasticsearch deployment.
-    ## The password needs to be provided in the secrets section.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
+    ## You must provide the password in the systemlink-secrets.yaml file.
+    ##
     secretName: "fileingestionservices-elastic-credentials"
     ## The Elasticsearch user used by the FileIngestion application.
     username: "filescdc"
@@ -1017,7 +1021,8 @@ fileingestion:
     encryptionKeySecret: "fileingestionservices-download-encryption-key"
 
 ## Configuration for FileIngestionCDC.
-## <ATTENTION> - Needed if FileIngestion search capabilities are enabled.
+## <ATTENTION> - SystemLink uses this configuration when you enable the FileIngestionCDC deployment.
+## Otherwise SystemLink does not use this configuration.
 ##
 fileingestioncdc:
   ## Set to true to enable the deployment of the FileIngestionCDC
@@ -1027,12 +1032,13 @@ fileingestioncdc:
   ## Elasticsearch configuration
   ##
   elasticsearch:
-    ## Name of the existing secret containing the Elasticsearch password.
-    ## This secret is created automatically by the SystemLink Elasticsearch deployment if autoprovisioning is enabled.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## If you enable autoprovisioning, the SystemLink Elasticsearch deployment automatically creates this secret.
+    ## When a dedicated secret is needed for this service, use the ‘secretName’ parameter to set the name of that secret.
     existingSecretName: "sl-elasticsearch-filescdc-secret"
-    ## The name of the secret to be created containing the Elasticsearch password.
-    ## This secret will be created by the deployment in case Elasticsearch is not provisioned via the SysteLink Elasticsearch
-    ## deployment. Password needs to be provided in the secrets section.
+    ## The name of the secret that contains the Elasticsearch password.
+    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
+    ## You must provide the password in the systemlink-secrets.yaml file.
     secretName: "fileingestioncdc-elastic-credentials"
     ## The Elasticsearch user used by the FileIngestionCDC application
     user: "filescdc"
@@ -1048,8 +1054,9 @@ fileingestioncdc:
   ## High Availability configuration
   ##
   highAvailability:
-    ## Whether to enable high availability. This is required for production environments.
-    ## Needs an object storage medium, like S3, Azure Storage or a ReadWriteMany volume.
+    ## Enables high availability, which is recommended for production environments.
+    ## To use this feature, your system must be able to access a durable shared storage.
+    ## For example, the shared storage can be S3, Azure Storage, or a ReadWriteMany volume.
     enabled: true
 
   ## Job configuration.
@@ -1064,8 +1071,8 @@ fileingestioncdc:
         elasticsearch:
           ## Index creation configuration.
           index:
-            ## The number of primary shards that will be allocated for the files elastic index.
-            ## This can be configured only on the first deployment, subsequent deployments will ignore this value.
+            ## The number of primary shards that SystemLink allocates for the files elastic index.
+            ## You can only configure this value for the first deployment. Subsequent deployments ignore this variable.
             primaryShardsCount: 2
 
 ## Configuration for JupyterHub.
