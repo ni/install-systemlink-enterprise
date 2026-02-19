@@ -967,15 +967,15 @@ fileingestion:
     ## You must provide the password in the systemlink-secrets.yaml file.
     ##
     secretName: "fileingestionservices-elastic-credentials"
-    ## The Elasticsearch user used by the FileIngestion application.
+    ## The Elasticsearch user for the FileIngestion application.
     username: "filescdc"
     ## The Elasticsearch scheme
     scheme: "http"
     ## The Elasticsearch port
     port: "9200"
-    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
-    ## provide the FQDN of the headless service
-    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    ## The Elasticsearch host. When using a SystemLink Elasticsearch deployment,
+    ## you must provide the FQDN of the headless service.
+    ## <ATTENTION> The Elasticsearch host depends on the release name. Ensure that you are using the correct host.
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
   ## Configure rate limiting. Limits are enforced per-user.  Each replica of the file ingestion service
@@ -1025,7 +1025,7 @@ fileingestion:
 ## Otherwise SystemLink does not use this configuration.
 ##
 fileingestioncdc:
-  ## Set to true to enable the deployment of the FileIngestionCDC
+  ## Set this parameter to ‘True’ to enable the FileIngestionCDC deployment.
   ##
   enabled: true
 
@@ -1040,15 +1040,15 @@ fileingestioncdc:
     ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
     ## You must provide the password in the systemlink-secrets.yaml file.
     secretName: "fileingestioncdc-elastic-credentials"
-    ## The Elasticsearch user used by the FileIngestionCDC application
+    ## The Elasticsearch user for the FileIngestionCDC application.
     user: "filescdc"
     ## The Elasticsearch scheme
     scheme: "http"
     ## The Elasticsearch port
     port: "9200"
-    ## The Elasticsearch host. If using the SystemLink Elasticsearch deployment
-    ## provide the FQDN of the headless service
-    ## <ATTENTION> - This depends on the release name and will likely be different than this.
+    ## The Elasticsearch host. When using a SystemLink Elasticsearch deployment,
+    ## you must provide the FQDN of the headless service.
+    ## <ATTENTION> The Elasticsearch host depends on the release name. Ensure that you are using the correct host.
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
   ## High Availability configuration
