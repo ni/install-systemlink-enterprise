@@ -28,7 +28,7 @@ flinkoperator:
   ## Set to 'True' to enable the deployment of the Flink Operator to the Kubernetes cluster.
   ## Once deployed, the Flink operator manages the CDC jobs that enable advanced search.
   ##
-  enabled: false
+  enabled: true
   flink-kubernetes-operator:
     # List of kubernetes namespaces to watch for FlinkDeployment changes. When installing systemlink in a different 
     # namespace than systemlinkadmin, we need to configure this to watch the systemlink namespace.

@@ -461,8 +461,8 @@ assetservice:
     ##
     existingSecretName: "sl-elasticsearch-assetscdc-secret"
     ## The name of the secret that contains the Elasticsearch password.
-    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
-    ## You must provide the password in the systemlink-secrets.yaml file.
+    ## This deployment creates the secret if you provide a password by setting the
+    ## assetservice.secrets.elasticsearch.password in the systemlink-secrets.yaml file
     ##
     secretName: "assetservice-elastic-credentials"
     ## The Elasticsearch user for the AssetService application.
@@ -498,8 +498,8 @@ assetservicecdc:
     ##
     existingSecretName: "sl-elasticsearch-assetscdc-secret"
     ## The name of the secret that contains the Elasticsearch password.
-    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
-    ## You must provide the password in the systemlink-secrets.yaml file.
+    ## This deployment creates the secret if you provide a password by setting the
+    ## assetservicecdc.secrets.elasticsearch.password in the systemlink-secrets.yaml file.
     ##
     secretName: "assetscdc-elastic-credentials"
     ## The Elasticsearch user for the AssetServiceCDC application.
@@ -963,8 +963,8 @@ fileingestion:
     ## When a dedicated secret is needed for this service, use the ‘secretName’ parameter to set the name of that secret.
     existingSecretName: "sl-elasticsearch-filescdc-secret"
     ## The name of the secret that contains the Elasticsearch password.
-    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
-    ## You must provide the password in the systemlink-secrets.yaml file.
+    ## This deployment creates the secret if you provide a password by setting the
+    ## fileingestion.secrets.elasticsearch.password in the systemlink-secrets.yaml file
     ##
     secretName: "fileingestionservices-elastic-credentials"
     ## The Elasticsearch user for the FileIngestion application.
@@ -1037,8 +1037,8 @@ fileingestioncdc:
     ## When a dedicated secret is needed for this service, use the ‘secretName’ parameter to set the name of that secret.
     existingSecretName: "sl-elasticsearch-filescdc-secret"
     ## The name of the secret that contains the Elasticsearch password.
-    ## This deployment creates the secret if the SystemLink Elasticsearch deployment did not provision users for Elasticsearch.
-    ## You must provide the password in the systemlink-secrets.yaml file.
+    ## This deployment creates the secret if you provide a password by setting the
+    ## fileingestioncdc.secrets.elasticsearch.password in the systemlink-secrets.yaml file
     secretName: "fileingestioncdc-elastic-credentials"
     ## The Elasticsearch user for the FileIngestionCDC application.
     user: "filescdc"
