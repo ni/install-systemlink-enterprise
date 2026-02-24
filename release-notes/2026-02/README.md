@@ -1,5 +1,3 @@
-<!-- This file should be renamed to README.md and placed in the directory for the release. -->
-
 # SystemLink Enterprise 2026-02 Release Notes
 
 The 2026-02 release for SystemLink Enterprise has been
@@ -9,7 +7,7 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from SystemLink Enterprise release_older_year-release_older_month to 2026-02
+## Upgrading from SystemLink Enterprise 2026-01 to 2026-02
 
 <!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
 
@@ -21,8 +19,22 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `DataFrameService:1.26.x`, `FeedService:0.23.x`, `NbExecService:0.35.x`, potentially others that use S3
+  - When using S3-compatible object storage outside of the ‘us-east-1’ region, you must explicitly configure the region in the Helm values. Ensure that your S3-compatible object storage implementation supports request checksum validation. For MinIO, a system requires ‘RELEASE.2025-01-20T14-49-07Z’ or later.
+- SystemLink has updated several default Helm settings from ‘False’ to ‘True.’ To fully benefit from SystemLink features, enable the following flags in the appropriate YAML files.
+  - The ‘flinkoperator.enabled’ setting in the systemlink-admin-values.yaml file.
+  - The ‘fileingestioncdc.enabled’ setting in the systemlink-values.yaml file.
+  - The ‘fileingestion.featureToggle.searchFiles’ setting in the systemlink-values.yaml file.
+- `AssetService:0.32.x`
+  - The AssetService chart requires an Elasticsearch configuration. If the SystemLink Elasticsearch deployment does not provision Elasticsearch, set the Elasticsearch password using the ‘assetservice.secrets.elasticsearch.password’ setting. To stop using Elasticsearch, refer to Configuring Advanced Search for Files in the SystemLink user manual. (https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `AssetServiceCDC:0.0.x`
+  - SystemLink has added a new AssetServiceCDC chart. This chart requires Elasticsearch, MongoDB, and a file storage configuration. To remove Elasticsearch, refer to Configuring Advanced Search for Files in the SystemLink user manual. (https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `FileIngestion:1.24.x`
+  - The FileIngestion Service chart requires an Elasticsearch configuration. If the SystemLink Elasticsearch deployment does not provision Elasticsearch, set the Elasticsearch password using the fileingestion.secrets.elasticsearch.password variable. To stop using Elasticsearch, refer to Configuring Advanced Search for Files in the SystemLink user manual. (https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `FileIngestionCDC:0.7.x`
+  - SystemLink does not enable FileIngestionCDC by default. FileIngestionCDC requires Elasticsearch, MongoDB, and a file storage configuration. To stop using Elasticsearch, refer to Configuring Advanced Search for Files in the SystemLink user manual (https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `dataframeservice:1.26.x`
+  - SystemLink has changed the default Helm value for ‘dataframeservice.sldremio.distStorage.aws.authentication’ from ‘metadata’ to ‘accessKeySecret.’ To use EC2 instance metadata to authenticate your distributed storage, set the Helm value to ‘metadata.’
 
 ## Upgrade Considerations
 
