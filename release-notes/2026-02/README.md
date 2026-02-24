@@ -64,17 +64,13 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-02 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-02/release-notes/2026-02/closed-bugs-sle-2026-02.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-02/release-notes/2026-02/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-02/release-notes/2026-02/notices)
 
 ## Versions
 
