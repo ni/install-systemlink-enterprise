@@ -1,11 +1,11 @@
 # SystemLink Enterprise 2026-02 Release Notes
 
-The 2026-02 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-02 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
@@ -14,33 +14,75 @@ all required configuration changes.
 - Removed the `dashboard` suffix from all out-of-the-box dashboard titles.
 - Added the box chart type to the Plotly panel in dashboards.
 - Added the violin chart type to the Plotly panel in dashboards.
-- Removed support for deploying MongoDB with the SystemLink Helm chart. SystemLink still requires MongoDB, but now you can decide where to run and set up MongoDB. For more information, refer to [Configuring MongoDB Instances](https://www.ni.com/docs/en-US/search?bundle=systemlink-enterprise&q=Configuring%20MongoDB%20Instances).
+- Removed support for deploying MongoDB with the SystemLink Helm chart.
+  SystemLink still requires MongoDB, but now you can decide where to run and set
+  up MongoDB. For more information, refer to
+  [Configuring MongoDB Instances](https://www.ni.com/docs/en-US/search?bundle=systemlink-enterprise&q=Configuring%20MongoDB%20Instances).
 - `labmanagementui:0.25.x`
-  - Updated the Automate workflows and the Auto-Schedule workflows to use the `work_item_ids` parameter instead of `test_plan_ids` parameter as an input. This update is part of the migration from Test Plans to Work Items.
-  - Existing notebooks that use `test_plan_ids` as an input parameter will no longer pre-populate work item IDs. You will need to update those notebooks to use the `work_item_ids` parameter.
+  - Updated the Automate workflows and the Auto-Schedule workflows to use the
+    `work_item_ids` parameter instead of `test_plan_ids` parameter as an input.
+    This update is part of the migration from Test Plans to Work Items.
+  - Existing notebooks that use `test_plan_ids` as an input parameter will no
+    longer pre-populate work item IDs. You will need to update those notebooks
+    to use the `work_item_ids` parameter.
 - `smtp:0.34.x`
-  - Updated SystemLink to use the MailKit SMTP client. The change may alter validation behavior or modify email notification headers. This update is minor unless you rely on specific header values for your email infrastructure.
+  - Updated SystemLink to use the MailKit SMTP client. The change may alter
+    validation behavior or modify email notification headers. This update is
+    minor unless you rely on specific header values for your email
+    infrastructure.
 - `testmonitorservice:0.43.x`
-  - Added `testmonitorservice-eventprocessor` pods. You can configure these pods through `testmonitorservice.eventProcessor` Helm values.
+  - Added `testmonitorservice-eventprocessor` pods. You can configure these pods
+    through `testmonitorservice.eventProcessor` Helm values.
 
 ## Helm Chart Breaking Changes
 
 - `DataFrameService:1.26.x`, `FeedService:0.23.x`, `NbExecService:0.35.x`
-  - When using S3-compatible object storage outside of the `us-east-1` region, you must explicitly configure the region in the Helm values. Ensure that your S3-compatible object storage implementation supports request checksum validation. For MinIO, SystemLink requires `RELEASE.2025-01-20T14-49-07Z` or later.
-- SystemLink has updated several default Helm settings from ‘False’ to ‘True.’ To fully benefit from SystemLink features, enable the following flags in the appropriate YAML files.
-  - The `flinkoperator.enabled` setting in the `systemlink-admin-values.yaml` file.
+  - When using S3-compatible object storage outside of the `us-east-1` region,
+    you must explicitly configure the region in the Helm values. Ensure that
+    your S3-compatible object storage implementation supports request checksum
+    validation.
+  - For MinIO, SystemLink requires `RELEASE.2025-01-20T14-49-07Z` or later.
+- SystemLink has updated several default Helm settings from `False` to `True`.
+  To fully benefit from SystemLink features, enable the following flags in the
+  appropriate YAML files.
+  - The `flinkoperator.enabled` setting in the `systemlink-admin-values.yaml`
+    file.
   - The `fileingestioncdc.enabled` setting in the `systemlink-values.yaml` file.
-  - The `fileingestion.featureToggle.searchFiles` setting in the `systemlink-values.yaml` file.
+  - The `fileingestion.featureToggle.searchFiles` setting in the
+    `systemlink-values.yaml` file.
 - `AssetService:0.32.x`
-  - The AssetService chart requires an Elasticsearch configuration. If the SystemLink Elasticsearch deployment does not provision Elasticsearch, set the Elasticsearch password using the `assetservice.secrets.elasticsearch.password` setting. To stop using Elasticsearch, refer to [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html) in the SystemLink user manual.
+  - The AssetService chart requires an Elasticsearch configuration. If the
+    SystemLink Elasticsearch deployment does not provision Elasticsearch, set
+    the Elasticsearch password using the
+    `assetservice.secrets.elasticsearch.password` setting. To stop using
+    Elasticsearch, refer to
+    [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html)
+    in the SystemLink user manual.
 - `AssetServiceCDC:0.0.x`
-  - SystemLink has added a new AssetServiceCDC chart. This chart requires Elasticsearch, MongoDB, and a file storage configuration. To remove Elasticsearch, refer to [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html) in the SystemLink user manual.
+  - SystemLink has added a new AssetServiceCDC chart. This chart requires
+    Elasticsearch, MongoDB, and a file storage configuration. To remove
+    Elasticsearch, refer to
+    [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html)
+    in the SystemLink user manual.
 - `FileIngestion:1.24.x`
-  - The FileIngestion Service chart requires an Elasticsearch configuration. If the SystemLink Elasticsearch deployment does not provision Elasticsearch, set the Elasticsearch password using the fileingestion.secrets.elasticsearch.password variable. To stop using Elasticsearch, refer to [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html) in the SystemLink user manual.
+  - The FileIngestion Service chart requires an Elasticsearch configuration. If
+    the SystemLink Elasticsearch deployment does not provision Elasticsearch,
+    set the Elasticsearch password using the
+    `fileingestion.secrets.elasticsearch.password` setting. To stop using
+    Elasticsearch, refer to
+    [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html)
+    in the SystemLink user manual.
 - `FileIngestionCDC:0.7.x`
-  - SystemLink does not enable FileIngestionCDC by default. FileIngestionCDC requires Elasticsearch, MongoDB, and a file storage configuration. To stop using Elasticsearch, refer to [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html) in the SystemLink user manual.
+  - SystemLink does not enable FileIngestionCDC by default. FileIngestionCDC
+    requires Elasticsearch, MongoDB, and a file storage configuration. To stop
+    using Elasticsearch, refer to
+    [Configuring Advanced Search for Files](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html)
+    in the SystemLink user manual.
 - `dataframeservice:1.26.x`
-  - SystemLink has changed the default Helm value for `dataframeservice.sldremio.distStorage.aws.authentication` from `metadata` to `accessKeySecret`. To use EC2 instance metadata to authenticate your distributed storage, set the Helm value to `metadata`.
+  - SystemLink has changed the default Helm value for
+    `dataframeservice.sldremio.distStorage.aws.authentication` from `metadata`
+    to `accessKeySecret`. To use EC2 instance metadata to authenticate your
+    distributed storage, set the Helm value to `metadata`.
 
 ## Upgrade Considerations
 
