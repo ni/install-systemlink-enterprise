@@ -9,8 +9,12 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- Added new out-of-the-box dashboard for Alarms Overview. For more information, refer to [Using the Alarms Overview Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/alarms-overview-dashboard.html).
-- Added new out-of-the-box dashboard for System Health. For more information, refer to [Using the System Health Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/system-health-dashboard.html).
+- Added new out-of-the-box dashboard for Alarms Overview. For more information,
+  refer to
+  [Using the Alarms Overview Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/alarms-overview-dashboard.html).
+- Added new out-of-the-box dashboard for System Health. For more information,
+  refer to
+  [Using the System Health Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/system-health-dashboard.html).
 - Removed the `dashboard` suffix from all out-of-the-box dashboard titles.
 - Added the box chart type to the Plotly panel in dashboards.
 - Added the violin chart type to the Plotly panel in dashboards.
@@ -18,10 +22,13 @@ required configuration changes.
   SystemLink still requires MongoDB, but now you can decide where to run and set
   up MongoDB. For more information, refer to
   [Configuring MongoDB Instances](https://www.ni.com/docs/en-US/search?bundle=systemlink-enterprise&q=Configuring%20MongoDB%20Instances).
+- Added support for Test Result Changed events and Work Item Changed Routine
+  events. For more information, refer to
+  [Automating Actions with Routines](https://www.ni.com/docs/en-US/search?bundle=systemlink-enterprise&q=Automating%20Actions%20with%20Routines).
 - `labmanagementui:0.25.x`
   - Updated the Automate workflows and the Auto-Schedule workflows to use the
-    `work_item_ids` parameter instead of the `test_plan_ids` parameter as an input.
-    This update is part of the migration from Test Plans to Work Items.
+    `work_item_ids` parameter instead of the `test_plan_ids` parameter as an
+    input. This update is part of the migration from Test Plans to Work Items.
   - Existing notebooks that use `test_plan_ids` as an input parameter will no
     longer pre-populate work item IDs. You will need to update those notebooks
     to use the `work_item_ids` parameter.
