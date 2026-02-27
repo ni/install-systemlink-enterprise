@@ -126,7 +126,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.46.66`
+**Top Level Helm Chart:** `systemlink 0.46.69`
 
 **Admin Helm Chart:** `systemlink-admin 0.46.9`
 
