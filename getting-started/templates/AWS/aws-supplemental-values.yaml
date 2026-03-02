@@ -2,8 +2,8 @@
 # It also provides annotations for the Application Load Balancer and SystemLink Enterprise service health checks paths.
 #
 # This file should be passed in as a values file with systemlink-values.yaml, systemlink-secrets.yaml,
-# and aws-secrets.yaml during SLE install. To use an alternative storage service such as MinIO
-# instead of S3, reference OnPrem/storage-values.yaml.
+# aws-admin-supplemental-values.yaml, and aws-secrets.yaml during SLE install. To use an alternative
+# storage service such as MinIO instead of S3, reference OnPrem/storage-values.yaml.
 #
 # The default health check path /up addresses the health probe for most services.
 # Those that diverge from this path are declared below by service.
@@ -66,7 +66,8 @@ s3Region: &s3Region "us-east-1"
 ## Identity by default (see the "serviceAccount" section). The role may also be specified via
 ## IRSA (requires configuring "serviceAccount.annotations") or EC2 instance metadata (may require
 ## configuring "nodeSelector").
-## The Flink operator manages one shared service account for AssetServiceCDC and FileIngestionCDC.
+## Note that the Flink operator manages the service account shared by CDC services (see
+## aws-admin-supplemental-values.yaml).
 ## Configure IAM identity for that shared account rather than each CDC service.
 ## Refer to the product documentation for more details: https://www.ni.com/r/sl-configure-file-storage.
 ##
@@ -85,23 +86,6 @@ assetservicecdc:
         host: *s3Host
         port: *s3Port
         region: *s3Region
-
-  ## See top-level "authType" note for CDC shared identity guidance.
-  ##
-  serviceAccount:
-    ## Annotations to add to the service account
-    ##
-    annotations:
-      # <ATTENTION> - To use IRSA, uncomment and enter the ARN of the IAM role to associate with
-      # the shared Flink service account used by CDC workloads.
-      ##
-      # "eks.amazonaws.com/role-arn":
-    ## The name of the shared Flink service account defined in the pod spec when creating the IAM
-    ## identity association (IRSA or EKS Pod Identity).
-    # <ATTENTION> - Uncomment and set this value to the name of the Flink service account. If unset,
-    # a name is generated using the format below.
-    ##
-    # name: "<release-name>-flink"
 
 dataframeservice:
   storage:
@@ -256,23 +240,6 @@ fileingestioncdc:
         host: *s3Host
         port: *s3Port
         region: *s3Region
-
-  ## See top-level "authType" note for CDC shared identity guidance.
-  ##
-  serviceAccount:
-    ## Annotations to add to the service account
-    ##
-    annotations:
-      # <ATTENTION> - To use IRSA, uncomment and enter the ARN of the IAM role to associate with
-      # the shared Flink service account used by CDC workloads.
-      ##
-      # "eks.amazonaws.com/role-arn":
-    ## The name of the shared Flink service account defined in the pod spec when creating the IAM
-    ## identity association (IRSA or EKS Pod Identity).
-    # <ATTENTION> - Uncomment and set this value to the name of the Flink service account. If unset,
-    # a name is generated using the format below.
-    ##
-    # name: "<release-name>-flink"
 
 saltmaster:
   serviceTCP:
