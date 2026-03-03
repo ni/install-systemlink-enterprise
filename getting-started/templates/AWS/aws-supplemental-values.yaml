@@ -158,13 +158,14 @@ dataframeservice:
     ## Annotations to add to the service account
     ##
     annotations:
-      # <ATTENTION> - To use IRSA, uncomment and enter the ARN of the IAM role to associate with
-      # this service account.
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
       ##
-      # "eks.amazonaws.com/role-arn":
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-dataframeservice-role"
     ## The name of the service account defined in the pod spec when creating the IAM identity
     ## association (IRSA or EKS Pod Identity).
-    # <ATTENTION> - Uncomment and set this value. If unset, a name is generated using the format below.
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
     ##
     # name: "<release name>-dataframeservice"
 
@@ -185,13 +186,14 @@ feedservice:
     ## Annotations to add to the service account
     ##
     annotations:
-      # <ATTENTION> - To use IRSA, uncomment and enter the ARN of the IAM role to associate with
-      # this service account.
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
       ##
-      # "eks.amazonaws.com/role-arn":
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-feedservice-role"
     ## The name of the service account defined in the pod spec when creating the IAM identity
     ## association (IRSA or EKS Pod Identity).
-    # <ATTENTION> - Uncomment and set this value. If unset, a name is generated using the format below.
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
     ##
     # name: "<release name>-feedservice"
 
@@ -217,13 +219,14 @@ fileingestion:
     ## Annotations to add to the service account
     ##
     annotations:
-      # <ATTENTION> - To use IRSA, uncomment and enter the ARN of the IAM role to associate with
-      # this service account.
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
       ##
-      # "eks.amazonaws.com/role-arn":
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-fileingestion-role"
     ## The name of the service account defined in the pod spec when creating the IAM identity
     ## association (IRSA or EKS Pod Identity).
-    # <ATTENTION> - Uncomment and set this value. If unset, a name is generated using the format below.
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
     ##
     # name: "<release name>-fileingestion"
 
@@ -270,13 +273,14 @@ nbexecservice:
     ## Annotations to add to the service account
     ##
     annotations:
-      # <ATTENTION> - To use IRSA, uncomment and enter the ARN of the IAM role to associate with
-      # this service account.
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
       ##
-      # "eks.amazonaws.com/role-arn":
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-nbexecservice-role"
     ## The name of the service account defined in the pod spec when creating the IAM identity
     ## association (IRSA or EKS Pod Identity).
-    # <ATTENTION> - Uncomment and set this value. If unset, a name is generated using the format below.
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
     ##
     # name: "<release name>-nbexecservice"
 
