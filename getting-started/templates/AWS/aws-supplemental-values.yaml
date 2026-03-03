@@ -2,8 +2,8 @@
 # It also provides annotations for the Application Load Balancer and SystemLink Enterprise service health checks paths.
 #
 # This file should be passed in as a values file with systemlink-values.yaml, systemlink-secrets.yaml,
-# aws-admin-supplemental-values.yaml, and aws-secrets.yaml during SLE install. To use an alternative
-# storage service such as MinIO instead of S3, reference OnPrem/storage-values.yaml.
+# and aws-secrets.yaml during SLE install. To use an alternative storage service such as MinIO
+# instead of S3, reference OnPrem/storage-values.yaml.
 #
 # The default health check path /up addresses the health probe for most services.
 # Those that diverge from this path are declared below by service.
