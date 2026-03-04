@@ -194,8 +194,8 @@ dataframeservice:
 
   sldremio:
     coordinator:
-      cpu: 4
-      memory: 31000
+      cpu: 2
+      memory: 16384
       volumeSize: "100Gi"
     executor:
       count: 1
