@@ -123,6 +123,7 @@ dataframeservice:
         #     <value>us-east-1</value>
         #   </property>
 
+feedservice:
   storage:
     type: "s3"
     s3:

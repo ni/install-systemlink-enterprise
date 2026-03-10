@@ -118,6 +118,7 @@ fileingestioncdc:
         accountName: ""
         blobApiHost: *azureBlobApiHost
 
+nbexecservice:
   storage:
     type: "azure"
     azure:
