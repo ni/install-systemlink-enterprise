@@ -62,13 +62,25 @@ s3Port: &s3Port 443
 # <ATTENTION> To connect to a region other than us-east-1, change this value.
 ##
 s3Region: &s3Region "us-east-1"
+## S3 authentication method. When using AWS_IAM, the service assumes an IAM role via EKS Pod
+## Identity by default (see the "serviceAccount" section). The role may also be specified via
+## IRSA (requires configuring "serviceAccount.annotations") or EC2 instance metadata (may require
+## configuring "nodeSelector").
+## Note that the Flink operator manages the service account shared by CDC services (see
+## aws-admin-supplemental-values.yaml).
+## Configure IAM identity for that shared account rather than each CDC service.
+## Refer to the product documentation for more details: https://www.ni.com/r/sl-configure-file-storage.
+##
+authType: &authType "AWS_IAM"
 
 assetservicecdc:
   highAvailability:
     storage:
       type: "s3"
       s3:
+        authType: *authType
         ## The name of the S3 bucket to which the service connects.
+        ##
         bucket: "systemlink-flink"
         scheme: *s3Scheme
         host: *s3Host
@@ -79,6 +91,10 @@ dataframeservice:
   storage:
     type: s3
     s3:
+      ## When using AWS_IAM, you must also configure "sldremio.distStorage.aws.authentication"
+      ## and "sldremio.storage.s3.authType" (see the "sldremio" section).
+      ##
+      authType: *authType
       ## The name of an existing S3 bucket for the DataFrame Service to connect to.
       ##
       bucket: "systemlink-dataframe"
@@ -89,10 +105,15 @@ dataframeservice:
       host: *s3Host
       port: *s3Port
       region: *s3Region
+
   sldremio:
     distStorage:
       type: "aws"
       aws:
+        ## The service assumes an IAM role from the EC2 instance metadata as the authentication
+        ## method for distributed storage (may require configuring "sldremio.nodeSelector").
+        ##
+        authentication: "metadata"
         ## The name of the S3 bucket that Dremio should use for the distributed storage cache.
         ## The recommendation is to use a dedicated bucket, but this may be the same as the same
         ## value as "dataframeservice.storage.s3.bucket", in which case "path" should be uncommented.
@@ -102,7 +123,6 @@ dataframeservice:
         ## bucket. Adjust the value as desired.
         ##
         # path: "/dremio"
-        authentication: "accessKeySecret"
         # <ATTENTION> When modifying any of the s3Host, s3Scheme, s3Port, or s3Region values to be
         #             anything except the defaults of s3.amazonaws.com, https, 443, and us-east-1,
         #             respectively, uncomment the below extraProperties and update each value accordingly.
@@ -123,10 +143,37 @@ dataframeservice:
         #     <value>us-east-1</value>
         #   </property>
 
+    ## Configuration for overriding the top-level "storage" section.
+    ##
+    storage:
+      s3:
+        authType: "EC2_METADATA"
+        # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to assume once authenticated.
+        ##
+        # roleArn:
+
+  ## A Kubernetes service account is created for the DataFrame Service by default.
+  ##
+  serviceAccount:
+    ## Annotations to add to the service account
+    ##
+    annotations:
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
+      ##
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-dataframeservice-role"
+    ## The name of the service account defined in the pod spec when creating the IAM identity
+    ## association (IRSA or EKS Pod Identity).
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
+    ##
+    # name: "<release name>-dataframeservice"
+
 feedservice:
   storage:
     type: "s3"
     s3:
+      authType: *authType
       ## The name of the S3 bucket for the Feed Service to connect to.
       ##
       bucket: "systemlink-feeds"
@@ -135,10 +182,26 @@ feedservice:
       port: *s3Port
       region: *s3Region
 
+  serviceAccount:
+    ## Annotations to add to the service account
+    ##
+    annotations:
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
+      ##
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-feedservice-role"
+    ## The name of the service account defined in the pod spec when creating the IAM identity
+    ## association (IRSA or EKS Pod Identity).
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
+    ##
+    # name: "<release name>-feedservice"
+
 fileingestion:
   storage:
     type: "s3"
     s3:
+      authType: *authType
       ## The name of the S3 bucket for the File Ingestion Service to connect to.
       ##
       bucket: "systemlink-file-ingestion"
@@ -150,12 +213,31 @@ fileingestion:
       port: *s3Port
       region: *s3Region
 
+  ## A Kubernetes service account is created for the File Ingestion Service by default.
+  ##
+  serviceAccount:
+    ## Annotations to add to the service account
+    ##
+    annotations:
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
+      ##
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-fileingestion-role"
+    ## The name of the service account defined in the pod spec when creating the IAM identity
+    ## association (IRSA or EKS Pod Identity).
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
+    ##
+    # name: "<release name>-fileingestion"
+
 fileingestioncdc:
   highAvailability:
     storage:
       type: "s3"
       s3:
+        authType: *authType
         ## The name of the S3 bucket to which the service connects.
+        ##
         bucket: "systemlink-flink"
         scheme: *s3Scheme
         host: *s3Host
@@ -176,6 +258,7 @@ nbexecservice:
   storage:
     type: "s3"
     s3:
+      authType: *authType
       ## The name of the S3 bucket for the Notebook Execution Service to connect to.
       ##
       bucket: "systemlink-executions"
@@ -183,6 +266,23 @@ nbexecservice:
       host: *s3Host
       port: *s3Port
       region: *s3Region
+
+  ## A Kubernetes service account is created for the Notebook Execution Service by default.
+  ##
+  serviceAccount:
+    ## Annotations to add to the service account
+    ##
+    annotations:
+      # <ATTENTION> - Optional - Uncomment and enter the ARN of the IAM role to associate with this
+      # service account if you are using IRSA for authentication.
+      ##
+      # eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-nbexecservice-role"
+    ## The name of the service account defined in the pod spec when creating the IAM identity
+    ## association (IRSA or EKS Pod Identity).
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service account. If unset, a name
+    # is generated using the format below.
+    ##
+    # name: "<release name>-nbexecservice"
 
 swaggerapi:
   ingress:

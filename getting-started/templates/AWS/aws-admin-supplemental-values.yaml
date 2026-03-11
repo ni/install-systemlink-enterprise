@@ -1,0 +1,14 @@
+## Flink k8s operator value overrides for AWS deployments.
+## This is a YAML-formatted file.
+
+flinkoperator:
+  flink-kubernetes-operator:
+    ## The Flink service account shared across CDC services.
+    ##
+    jobServiceAccount:
+      ## Annotations to add to the service account.
+      ##
+      annotations:
+        # <ATTENTION> - Set the ARN of the IAM role to associate with the Flink service account.
+        ##
+        eks.amazonaws.com/role-arn: "arn:aws:iam::<account-id>:role/<release-name>-flink-role"
