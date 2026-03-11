@@ -517,14 +517,6 @@ assetservicecdc:
     ##
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
 
-  ## High Availability configuration
-  ##
-  highAvailability:
-    ## Enables high availability, which is recommended for production environments.
-    ## To use this feature, your system must be able to access a durable shared storage.
-    ## For example, the shared storage can be S3, Azure Storage, or a ReadWriteMany volume.
-    enabled: true
-
   ## Job configuration.
   ##
   job:
@@ -539,7 +531,7 @@ assetservicecdc:
           index:
             ## The number of primary shards that SystemLink allocates for the assets elastic index.
             ## You can only configure this value for the first deployment. Subsequent deployments ignore this variable.
-            primaryShardsCount: 2
+            primaryShardsCount: 1
 
 ## Configuration for the Grafana dashboard provider.
 ##
@@ -1050,14 +1042,6 @@ fileingestioncdc:
     ## you must provide the FQDN of the headless service.
     ## <ATTENTION> The Elasticsearch host depends on the release name. Ensure that you are using the correct host.
     host: "elasticsearch-release-master-hl.default.svc.cluster.local"
-
-  ## High Availability configuration
-  ##
-  highAvailability:
-    ## Enables high availability, which is recommended for production environments.
-    ## To use this feature, your system must be able to access a durable shared storage.
-    ## For example, the shared storage can be S3, Azure Storage, or a ReadWriteMany volume.
-    enabled: true
 
   ## Job configuration.
   ##
