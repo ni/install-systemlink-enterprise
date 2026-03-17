@@ -19,8 +19,9 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `DynamicFormFields:DynamicFormFields`
+  - DynamicFormFields as Custom Fields Tab in Detail page available for Products
+    and WorkItems; DynamicFormFields available for Test Results
 
 ## Upgrade Considerations
 
