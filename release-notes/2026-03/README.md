@@ -7,21 +7,18 @@ credentials to access these artifacts. If you are not upgrading from the
 previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
-## Upgrading from SystemLink Enterprise 2026-02 to 2026-03
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
 - Behavior change or new feature description
 
-- Behavior change or new feature description
+- `DynamicFormFields:0.16.x`
+  - In the Detail page, use the Custom Fields tab to access Dynamic Form Fields. This new tab is available for Products and Work Items.
+  - Dynamic Form Fields are now available for Test Results.
 
 ## Helm Chart Breaking Changes
 
-- `DynamicFormFields:DynamicFormFields`
-  - DynamicFormFields as Custom Fields Tab in Detail page available for Products
-    and WorkItems; DynamicFormFields available for Test Results
+- Chart Name and version
+  - Description of breaking change.
 
 ## Upgrade Considerations
 
@@ -48,21 +45,17 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-03 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-03/release-notes/2026-03/closed-bugs-sle-2026-03.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-03/release-notes/2026-03/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-03/release-notes/2026-03/notices)
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.47.49`
+**Top Level Helm Chart:** `systemlink 0.47.79`
 
 **Admin Helm Chart:** `systemlink-admin 0.47.19`
 
@@ -71,16 +64,16 @@ instructions, refer to
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.22.86
 alarmservice:0.22.86
+alarmservice-routine-executor:0.22.86
 alarmsui:0.32.63
 assetservice:0.33.74
 assetservicecdc:0.1.94
 assetui:0.32.109
 comments:0.31.55
 dashboardsui:0.35.69
-dataframeservice-nessie:1.27.58
 dataframeservice:1.27.58
+dataframeservice-nessie:1.27.58
 dremio-ee:25.2.23
 dynamicformfields:0.16.45
 executionsui:0.35.68
@@ -91,8 +84,8 @@ filesui:0.36.74
 grafana-auth-proxy:0.35.9
 grafana-plugins:4.137.0
 grafana-rbac-integrator:0.35.49
-helium-dataservices-mongomigration:0.34.32
 helium-dataservices:0.34.32
+helium-dataservices-mongomigration:0.34.32
 helium-fileingestionservices:1.25.58
 helium-salt-master:1.32.19
 helium-serviceregistry:0.40.13
@@ -118,8 +111,8 @@ repository:0.31.49
 routineeventtrigger:0.36.43
 routineexecutor:0.36.77
 routinescheduletrigger:0.36.41
-routineservice-v2:0.37.48
 routineservice:0.37.48
+routineservice-v2:0.37.48
 routinesui:0.36.104
 securityui:0.35.49
 session-manager-service:0.41.39
