@@ -55,7 +55,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.47.79`
+**Top Level Helm Chart:** `systemlink 0.47.86`
 
 **Admin Helm Chart:** `systemlink-admin 0.47.19`
 
@@ -64,28 +64,28 @@ instructions, refer to
 ### NI Containers
 
 ```text
-alarmservice:0.22.86
-alarmservice-routine-executor:0.22.86
-alarmsui:0.32.63
-assetservice:0.33.74
-assetservicecdc:0.1.94
-assetui:0.32.109
-comments:0.31.55
-dashboardsui:0.35.69
-dataframeservice:1.27.58
-dataframeservice-nessie:1.27.58
+alarmservice:0.22.87
+alarmservice-routine-executor:0.22.87
+alarmsui:0.32.66
+assetservice:0.33.75
+assetservicecdc:0.1.96
+assetui:0.32.112
+comments:0.31.57
+dashboardsui:0.35.72
+dataframeservice:1.27.59
+dataframeservice-nessie:1.27.59
 dremio-ee:25.2.23
-dynamicformfields:0.16.45
-executionsui:0.35.68
-feedservice:0.24.47
-feedsui:0.23.72
-fileingestioncdc:0.8.69
-filesui:0.36.74
+dynamicformfields:0.16.46
+executionsui:0.35.71
+feedservice:0.24.49
+feedsui:0.23.75
+fileingestioncdc:0.8.70
+filesui:0.36.77
 grafana-auth-proxy:0.35.9
-grafana-plugins:4.137.0
+grafana-plugins:4.142.3
 grafana-rbac-integrator:0.35.49
-helium-dataservices:0.34.32
-helium-dataservices-mongomigration:0.34.32
+helium-dataservices:0.34.33
+helium-dataservices-mongomigration:0.34.33
 helium-fileingestionservices:1.25.58
 helium-salt-master:1.32.19
 helium-serviceregistry:0.40.13
@@ -93,45 +93,45 @@ helium-taghistoriandataretention:0.30.25
 helium-taghistorianmongomigration:0.30.25
 helium-taghistorianservices:0.30.25
 helium-userservices:0.40.19
-helium-webappservices:0.38.39
-helium-webserver:0.47.30
+helium-webappservices:0.38.40
+helium-webserver:0.47.31
 jupyter-notebook-userpod:2.26.13
-jupyterui:0.35.58
-labmanagementui:0.26.95
-landingpageui:0.35.62
-locationmanagementui:0.5.66
-locationservice:0.6.47
+jupyterui:0.35.61
+labmanagementui:0.26.98
+landingpageui:0.35.65
+locationmanagementui:0.5.69
+locationservice:0.6.48
 nbexec-execution-helpers:0.36.28
 nbexec-notebook-runner:0.36.32
-nbexecservice:0.36.72
+nbexecservice:0.36.73
 nbparsingservice:0.35.23
 ni-grafana:v11.6.4-729684112f3-ni
 notification:0.35.45
-repository:0.31.49
-routineeventtrigger:0.36.43
-routineexecutor:0.36.77
-routinescheduletrigger:0.36.41
+repository:0.31.51
+routineeventtrigger:0.36.44
+routineexecutor:0.36.78
+routinescheduletrigger:0.36.43
 routineservice:0.37.48
 routineservice-v2:0.37.48
-routinesui:0.36.104
-securityui:0.35.49
-session-manager-service:0.41.39
+routinesui:0.36.107
+securityui:0.35.52
+session-manager-service:0.41.41
 sl-configurable-http-proxy:2.26.8
 sl-k8s-hub:2.26.18
-smtp:0.35.44
-specificationmanagement:0.26.42
-systemsmanagementservice:0.35.61
-systemsstateservice:0.25.35
-systemsstatesui:0.24.71
-systemsui:0.36.137
-tageventprocessor:0.34.32
-tagsui:0.31.66
-testinsightsui:0.35.90
+smtp:0.35.45
+specificationmanagement:0.26.44
+systemsmanagementservice:0.35.63
+systemsstateservice:0.25.36
+systemsstatesui:0.24.74
+systemsui:0.36.142
+tageventprocessor:0.34.33
+tagsui:0.31.69
+testinsightsui:0.35.93
 testmonitorservice:0.44.76
-userdata:0.35.38
+userdata:0.35.40
 userservice-setup:0.41.19
-webapphostui:0.34.65
-workitem:0.3.85
+webapphostui:0.34.68
+workitem:0.3.87
 ```
 
 ### 3rd Party Containers
