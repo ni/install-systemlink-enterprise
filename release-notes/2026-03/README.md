@@ -9,16 +9,13 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
 - `DynamicFormFields:0.16.x`
   - In the Detail page, use the Custom Fields tab to access Dynamic Form Fields. This new tab is available for Products and Work Items.
   - Dynamic Form Fields are now available for Test Results.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+No breaking changes were introduced in this release.
 
 ## Upgrade Considerations
 
