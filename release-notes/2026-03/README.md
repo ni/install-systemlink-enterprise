@@ -8,10 +8,14 @@ previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
 ## New Features and Behavior changes
-
+Explore the March 2026 SystemLink Enterprise updates, including the ability to query undecimated data and improvements to the Routines application.
 - `DynamicFormFields:0.16.x`
   - In the Detail page, use the Custom Fields tab to access Dynamic Form Fields. This new tab is available for Products and Work Items.
   - Dynamic Form Fields are now available for Test Results.
+- Added support for querying undecimated data to the Data Frames data source. For more information, refer to [Using the Data Frames Data Source in a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-frames-data-source.html).
+- Added support for filtering dashboards for systems.
+- Updates to the Routines application. The updates includes improvements to search, the summary pane, and the table view configuration.
+- Added a new Helm value: smtpServer.fromDomain. This value allows you to set the domain name for the Routines application during the SMTP HELO/EHLO handshake. Setting the domain name helps meet corporate SMTP server requirements such as allowing listed domains, subdomain validation, or DNS/rDNS consistency.
 
 ## Helm Chart Breaking Changes
 
