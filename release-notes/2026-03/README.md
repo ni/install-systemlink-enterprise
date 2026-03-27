@@ -8,7 +8,9 @@ previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
 ## New Features and Behavior changes
+
 Explore the March 2026 SystemLink Enterprise updates, including the ability to query undecimated data and improvements to the Routines application.
+
 - `DynamicFormFields:0.16.x`
   - In the Detail page, use the Custom Fields tab to access Dynamic Form Fields. This new tab is available for Products and Work Items.
   - Dynamic Form Fields are now available for Test Results.
