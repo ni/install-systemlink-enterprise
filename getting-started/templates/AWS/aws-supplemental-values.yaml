@@ -254,6 +254,20 @@ saltmaster:
     annotations:
       service.beta.kubernetes.io/aws-load-balancer-type: "external"
 
+systemscdc:
+  highAvailability:
+    storage:
+      type: "s3"
+      s3:
+        authType: *authType
+        ## The name of the S3 bucket to which the service connects.
+        ##
+        bucket: "systemlink-flink"
+        scheme: *s3Scheme
+        host: *s3Host
+        port: *s3Port
+        region: *s3Region
+
 nbexecservice:
   storage:
     type: "s3"
