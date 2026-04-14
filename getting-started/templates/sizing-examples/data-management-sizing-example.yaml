@@ -131,37 +131,44 @@ dataframeservice:
     ## Resource requests for the coordinator. For information on resource requirements,
     ## refer to the Dremio documentation: https://docs.dremio.com/current/deploy-dremio/other-options/standalone/system-requirements#server-or-instance-hardware
     coordinator:
-      ## @param dataframeservice.sldremio.coordinator.cpu CPU allocated to each coordinator, expressed in CPU cores.
-      cpu: 3
-      ## @param dataframeservice.sldremio.coordinator.memory Memory allocated to each coordinator, expressed in MB.
-      memory: 16384
+      ## @param dataframeservice.sldremio.coordinator.resources Requests and limits for the coordinator
+      resources:
+        requests:
+          cpu: "3"
+          memory: 16Gi
+        limits:
+          memory: 16Gi
       ## @param dataframeservice.sldremio.coordinator.volumeSize Coordinator data volume size (applies to the master coordinator only).
       volumeSize: 256Gi
     ## Resource requests for the executor. For information on resource requirements,
     ## refer to the Dremio documentation: https://docs.dremio.com/current/deploy-dremio/other-options/standalone/system-requirements#server-or-instance-hardware
     executor:
-      ## @param dataframeservice.sldremio.executor.count Number of executors.
+      ## @param dataframeservice.sldremio.executor.count Number of default engine executors.
       count: 3
-      ## @param dataframeservice.sldremio.executor.cpu CPU allocated to each executor, expressed in CPU cores.
-      cpu: 15
-      ## @param dataframeservice.sldremio.executor.memory Memory allocated to each executor, expressed in MB.
-      memory: 73728
-      ## @param dataframeservice.sldremio.executor.volumeSize Executor volume size.
+      ## @param dataframeservice.sldremio.executor.resources Requests and limits for the default engine executors
+      resources:
+        requests:
+          cpu: "15"
+          memory: 72Gi
+        limits:
+          memory: 72Gi
+      ## @param dataframeservice.sldremio.executor.volumeSize Default engine executor volume size.
       volumeSize: 256Gi
       ## Override configuration for the Iceberg executors. This will create a separate group of Iceberg executors
       ## in parallel with the standard executors. Standard executors process queries, while iceberg executors process writes.
       engineOverride:
         iceberg:
-          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.count Number of executors.
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.count Number of Iceberg engine executors.
           count: 4
-          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.cpu CPU allocated to each executor, expressed in CPU cores.
-          cpu: 9
-          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.memory Memory allocated to each executor, expressed in MB.
-          memory: 32768
-          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.heapMemoryOverride Configures the heap memory pool for the executor.
-          heapMemoryOverride: 20000
-          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.directMemoryOverride Configures the direct memory pool for the executor.
-          directMemoryOverride: 10000
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.resources Requests and limits for the Iceberg engine executors.
+          resources:
+            requests:
+              cpu: "9"
+              memory: 32Gi
+            limits:
+              memory: 32Gi
+          ## @param dataframeservice.sldremio.executor.engineOverride.iceberg.volumeSize Iceberg engine executor volume size.
+          volumeSize: 20Gi
 
   ## Workload configuration
   workloadManagement:

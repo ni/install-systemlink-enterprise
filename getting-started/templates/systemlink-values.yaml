@@ -836,30 +836,41 @@ dataframeservice:
     ## You may also refer to the the data management sizing example on GitHub: https://github.com/ni/install-systemlink-enterprise/blob/main/getting-started/templates/sizing-examples/data-management-sizing-example.yaml.
     ##
     # coordinator:
-    #   cpu: 3
-    #   memory: 16384
+    #   resources:
+    #     requests:
+    #       cpu: "3"
+    #       memory: 16Gi
+    #     limits:
+    #       memory: 16Gi
     #   volumeSize: 256Gi
     # executor:
     #   count: 3
-    #   cpu: 15
-    #   memory: 73728
+    #   resources:
+    #     requests:
+    #       cpu: "15"
+    #       memory: 72Gi
+    #     limits:
+    #       memory: 72Gi
     #   volumeSize: 256Gi
-    # engines:
-    #   - default
-    #   - iceberg
     # engineOverride:
     #   iceberg:
     #     count: 4
-    #     cpu: 9
-    #     memory: 32768
-    #     heapMemoryOverride: 20000
-    #     directMemoryOverride: 10000
-    ## CPU and memory allocated to each zookeeper pod, expressed in CPU cores and MB respectively.
-    ## Count should correspond with the number of nodes that received the "high.mem" label.
+    #     resources:
+    #       requests:
+    #         cpu: "9"
+    #         memory: 32Gi
+    #       limits:
+    #         memory: 32Gi
+    #     volumeSize: 20Gi
+    # # Count should correspond with the number of nodes that received the "dremio" label.
     # zookeeper:
-    #   cpu: 0.5
-    #   memory: 1024
     #   count: 3
+    #   resources:
+    #     requests:
+    #       cpu: "500m"
+    #       memory: 1Gi
+    #     limits:
+    #       memory: 1Gi
     auth:
       ## Name of the secret containing the Dremio login credentials
       ##

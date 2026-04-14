@@ -110,8 +110,14 @@ dataframeservice:
     distStorage:
       type: "aws"
       aws:
-        ## The service assumes an IAM role from the EC2 instance metadata as the authentication
-        ## method for distributed storage (may require configuring "sldremio.nodeSelector").
+        ## S3 authentication method for distributed storage.
+        ## metadata: The service assumes an IAM role from the EC2 instance metadata (may require
+        ##           configuring "sldremio.nodeSelector").
+        ## podIdentity: The service assumes an IAM role via EKS pod identity. Both coordinators
+        ##              and executors must have access (service account names are configured via
+        ##              "sldremio.coordinator.serviceAccount" and "sldremio.executor.serviceAccount").
+        ##              Note that this only applies to distributed storage. DFS S3 bucket access
+        ##              from Dremio does not support pod identity.
         ##
         authentication: "metadata"
         ## The name of the S3 bucket that Dremio should use for the distributed storage cache.
@@ -142,6 +148,16 @@ dataframeservice:
         #     <description>The region where S3 storage is located (see s3Region).</description>
         #     <value>us-east-1</value>
         #   </property>
+
+    ## The name of the Dremio service accounts defined in the pod spec when creating the EKS pod
+    ## identity association for distributed storage (see "sldremio.distStorage.aws.authentication").
+    # <ATTENTION> - Optional - Uncomment and enter a name for the service accounts. Default values
+    # are specified below.
+    ##
+    # coordinator:
+    #   serviceAccount: dremio-coordinator
+    # executor:
+    #   serviceAccount: dremio-executor
 
     ## Configuration for overriding the top-level "storage" section.
     ##

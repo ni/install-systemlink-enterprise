@@ -22,22 +22,29 @@ dataframeservice:
 
   sldremio:
     coordinator:
-      cpu: 2
-      memory: 16384
+      resources:
+        requests:
+          cpu: "2"
+          memory: 16Gi
+        limits:
+          memory: 16Gi
       volumeSize: 100Gi
     executor:
       count: 3
-      cpu: 14
-      memory: 16384
+      resources:
+        requests:
+          cpu: "14"
+          memory: 16Gi
+        limits:
+          memory: 16Gi
       volumeSize: 256Gi
-      engines:
-        - default
-        - iceberg
       engineOverride:
         iceberg:
           count: 2
-          cpu: 4
-          memory: 16384
-          heapMemoryOverride: 10000
-          directMemoryOverride: 5000
+          resources:
+            requests:
+              cpu: "4"
+              memory: 16Gi
+            limits:
+              memory: 16Gi
           volumeSize: 20Gi

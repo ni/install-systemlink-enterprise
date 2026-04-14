@@ -194,35 +194,58 @@ dataframeservice:
 
   sldremio:
     coordinator:
-      cpu: 2
-      memory: 16384
+      resources:
+        requests:
+          cpu: "2"
+          memory: 16Gi
+        limits:
+          memory: 16Gi
       volumeSize: "100Gi"
     executor:
       count: 1
-      cpu: 4
-      memory: 31000
+      resources:
+        requests:
+          cpu: "4"
+          memory: 29Gi
+        limits:
+          memory: 29Gi
       volumeSize: "50Gi"
       engineOverride:
         iceberg:
           count: 2
-          cpu: 4
-          memory: 16384
-          heapMemoryOverride: 10000
-          directMemoryOverride: 5000
+          resources:
+            requests:
+              cpu: "4"
+              memory: 16Gi
+            limits:
+              memory: 16Gi
+          volumeSize: "20Gi"
     zookeeper:
       count: 1
   # The above is the recommended configuration for pilot deployments.
   # For deployments where the DataFrame Service will not be used, the following
   # configuration is the bare minimum for the Dremio pods to start up:
+  # queryEngine:
+  #   workloadManagement:
+  #     enabled: false
   # sldremio:
   #   coordinator:
-  #     cpu: 1
-  #     memory: 4096
+  #     resources:
+  #       requests:
+  #         cpu: "1"
+  #         memory: 4Gi
+  #       limits:
+  #         memory: 4Gi
   #     volumeSize: "10Gi"
   #   executor:
   #     count: 1
-  #     cpu: 1
-  #     memory: 4096
+  #     engines: [default]
+  #     resources:
+  #       requests:
+  #         cpu: "1"
+  #         memory: 4Gi
+  #       limits:
+  #         memory: 4Gi
   #     volumeSize: "10Gi"
   #   zookeeper:
   #     count: 1
