@@ -275,6 +275,7 @@ systemscdc:
         host: *s3Host
         port: *s3Port
         region: *s3Region
+        usePathAccessStyle: *usePathAccessStyle
 
 nbexecservice:
   storage:
