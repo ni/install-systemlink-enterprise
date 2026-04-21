@@ -72,6 +72,12 @@ s3Region: &s3Region "us-east-1"
 ## Refer to the product documentation for more details: https://www.ni.com/r/sl-configure-file-storage.
 ##
 authType: &authType "AWS_IAM"
+## Controls whether the S3 client uses path-style access ("https://s3.amazonaws.com/<bucket>")
+## instead of the default virtual-hosted-style access ("https://<bucket>.s3.amazonaws.com").
+## Set to true when connecting to S3-compatible services (e.g., MinIO) that do not support
+## virtual-hosted-style URLs. For AWS S3, this should remain false.
+##
+usePathAccessStyle: &usePathAccessStyle false
 
 assetservicecdc:
   highAvailability:
@@ -86,6 +92,7 @@ assetservicecdc:
         host: *s3Host
         port: *s3Port
         region: *s3Region
+        usePathAccessStyle: *usePathAccessStyle
 
 dataframeservice:
   storage:
@@ -243,6 +250,7 @@ fileingestioncdc:
         host: *s3Host
         port: *s3Port
         region: *s3Region
+        usePathAccessStyle: *usePathAccessStyle
 
 saltmaster:
   serviceTCP:
