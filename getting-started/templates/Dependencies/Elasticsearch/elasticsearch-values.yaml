@@ -92,4 +92,14 @@ sl-elasticsearch:
         ## You can provide the password in the elasticsearch-secrets.yaml file.
         ##
         secretName: "sl-elasticsearch-filescdc-secret"
+      ## SystemsCDC user definition.
+      ##
+      systemscdc:
+        ## The Elasticsearch username that the SystemLink Elasticsearch deployment creates for the Systems CDC.
+        ##
+        user: "systemscdc"
+        ## The name of the secret that contains the password for the Systems CDC user.
+        ## You can provide the password in the elasticsearch-secrets.yaml file.
+        ##
+        secretName: "sl-elasticsearch-systemscdc-secret"
 

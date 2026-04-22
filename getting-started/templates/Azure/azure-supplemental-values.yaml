@@ -135,6 +135,16 @@ saltmaster:
       # <ATTENTION> Set to the public IP address for the saltmaster service load.
       service.beta.kubernetes.io/azure-pip-name: 
 
+systemscdc:
+  highAvailability:
+    storage:
+      type: "azure"
+      azure:
+        # <ATTENTION> Set to the name of an existing Azure storage account to use for the
+        #             Systems CDC Service.
+        accountName: ""
+        blobApiHost: *azureBlobApiHost
+
 swaggerapi:
   ingress:
     annotations:
