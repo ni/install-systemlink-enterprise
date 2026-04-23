@@ -94,11 +94,11 @@ helium-dataservices-mongomigration:0.35.37
 helium-dataservices:0.35.37
 helium-fileingestionservices:1.26.58
 helium-salt-master:1.33.27
-helium-serviceregistry:0.41.36
+helium-serviceregistry:0.41.37
 helium-taghistoriandataretention:0.31.24
 helium-taghistorianmongomigration:0.31.24
 helium-taghistorianservices:0.31.24
-helium-userservices:0.41.34
+helium-userservices:0.41.35
 helium-webappservices:0.39.44
 helium-webserver:0.48.47-18966136
 jupyter-notebook-userpod:2.27.11
