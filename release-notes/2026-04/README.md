@@ -61,11 +61,11 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.48.62`
+**Top Level Helm Chart:** `systemlink 0.48.69`
 
 **Admin Helm Chart:** `systemlink-admin 0.48.12`
 
-**Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.10.26`
+**Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.10.29`
 
 ### NI Containers
 
