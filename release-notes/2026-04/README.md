@@ -7,20 +7,26 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from SystemLink Enterprise 2026-03 to 2026-04
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `helium-serviceregistry:0.41.37`
+  - The /niserviceregistry/v1 API now requires that clients present a valid API key. The API does not enforce specific permissions. However, the client must have Stratus authorization to access the configuration and status information from the service registry API. Clients without authorization receive a 401-error response.
+  - The API expects all clients to use a Stratus user interface. Because Stratus already requires a login, this change should not affect most users. The service registry includes a dependency on user services. This API is not available if user services are not operative.
+  - This API also now enforces a per-user rate limit on all routes. These limits are generous and should not affect most users. If necessary, you can modify the default limits through the `serviceregistry.rateLimits` section of the Helm values file.
+- `systemsmanagementservice:0.36.x`
+  - The `alias` property now uses an API enforced 500-character limit. You can extend this limit by updating `systems.systemLimits.alias.maxStringLength` in the Helm values file.
+  - New limits include `keywords count: 500`, `keyword string length: 500`, `property count: 1000`, `property key string length: 500`, and `property value string length: 5000`. You cannot configure these limits through the Helm values file. These limits help ensure the security and performance of your system.
+- `assetservice:0.34.x`
+  - Updated API enforced limits for keywords, including `keywords count: 500` and `keyword string length: 500`. You cannot configure these limits through the Helm values file. These limits help ensure the security and performance of your system.
+- `helium-serviceregistry:0.41.x`
+  - Custom roles now support resource-level specificity for work item privileges. When configuring a role in the Security application, you can now privilege specific work item types (such as Test Plan and Job) for that role. Use the Apply on all resources option to grant broad access to a role.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `SystemsManagementService: 0.36.x`
+  - Added new chart for SystemsManagementService. This chart requires a configuration for Elasticsearch. If SystemLink did not provision Elasticsearch during deployment, you also need to set `systems.secrets.elasticsearch.password`. To opt-out of using Elasticsearch, refer to the [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `SystemsCDC:0.0.x`
+  - Added new chart for SystemsManagementServiceCDC. This chart requires configurations for Elasticsearch, MongoDB, and file storage. To opt-out of using Elasticsearch, refer to the [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
 
 ## Upgrade Considerations
 
@@ -47,17 +53,13 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-04 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-04/release-notes/2026-04/closed-bugs-sle-2026-04.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-04/release-notes/2026-04/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-04/release-notes/2026-04/notices)
 
 ## Versions
 
