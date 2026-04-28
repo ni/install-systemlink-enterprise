@@ -1,41 +1,83 @@
 # SystemLink Enterprise 2026-04 Release Notes
 
-The 2026-04 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-04 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-Explore the April 2026 SystemLink Enterprise release, including work item API support, test plan management, and high resolution zoom for data frames.
-
-- Added the [SystemLink Enterprise IT Administrators Manual](https://www.ni.com/docs/en-US/bundle/sle-it-admin/page/overview.html). Use this manual to deploy, configure, and troubleshoot SystemLink Enterprise.
-- Added support for Reservation, Maintenance, Job, and Calibration work items. From more information, refer to [Managing Work Orders and Work Items](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-work-orders-and-test-plans.html).
-- Added support for reserving multiple DUTs and other assets as part of test plans.
+- Added the
+  [SystemLink Enterprise IT Administrators Manual](https://www.ni.com/docs/en-US/bundle/sle-it-admin/page/overview.html).
+  Use this manual to deploy, configure, and troubleshoot SystemLink Enterprise.
+- Added support for Reservation, Maintenance, Job, and Calibration work items.
+  For more information, refer to
+  [Managing Work Orders and Work Items](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-work-orders-and-test-plans.html).
+- Added support for reserving multiple DUTs and other assets as part of test
+  plans.
 - Added support for providing granular privileges with each work item type.
-- Added support for high resolution zoom in the Data Frames Data Source. For more information, refer to [Using the Data Frames Data Source in a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-frames-data-source.html).
-- Added support for location search through the Systems application and the Assets application.
-- Updated client Python APIs for alarms, assets, and file ingestion. For more information, refer to the [nisystemlink.clients Python API Documentation](http://www.ni.com/r/systemlink-python-api) for nisystemlink 0.1.4.
+- Added support for high resolution zoom in the Data Frames Data Source. For
+  more information, refer to
+  [Using the Data Frames Data Source in a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-frames-data-source.html).
+- Added support for location search through the **Systems** application and the
+  **Assets** application.
+- Updated client Python APIs for alarms, assets, and file ingestion. For more
+  information, refer to the
+  [nisystemlink.clients Python API Documentation](http://www.ni.com/r/systemlink-python-api)
+  for nisystemlink 0.1.4.
 - `helium-serviceregistry:0.41.37`
-  - The /niserviceregistry/v1 API now requires that clients present a valid API key. The API does not enforce specific permissions. However, the client must have Stratus authorization to access the configuration and status information from the service registry API. Clients without authorization receive a 401-error response.
-  - The API expects all clients to use a Stratus user interface. Because Stratus already requires a login, this change should not affect most users. The service registry includes a dependency on user services. This API is not available if user services are not operative.
-  - This API also now enforces a per-user rate limit on all routes. These limits are generous and should not affect most users. If necessary, you can modify the default limits through the `serviceregistry.rateLimits` section of the Helm values file.
-- `systemsmanagementservice:0.36.x`
-  - The `alias` property now uses an API enforced 500-character limit. You can extend this limit by updating `systems.systemLimits.alias.maxStringLength` in the Helm values file.
-  - New limits include `keywords count: 500`, `keyword string length: 500`, `property count: 1000`, `property key string length: 500`, and `property value string length: 5000`. You cannot configure these limits through the Helm values file. These limits help ensure the security and performance of your system.
-- `assetservice:0.34.x`
-  - Updated API enforced limits for keywords, including `keywords count: 500` and `keyword string length: 500`. You cannot configure these limits through the Helm values file. These limits help ensure the security and performance of your system.
-- `helium-serviceregistry:0.41.x`
-  - Custom roles now support resource-level specificity for work item privileges. When configuring a role in the Security application, you can now privilege specific work item types (such as Test Plan and Job) for that role. Use the Apply on all resources option to grant broad access to a role.
+  - The `/niserviceregistry/v1` API now requires that clients present a valid
+    API key. The API does not enforce specific permissions. However, the client
+    must have Stratus authorization to access the configuration and status
+    information from the service registry API. Clients without authorization
+    receive a 401-error response.
+  - The API expects all clients to use a Stratus user interface. Because Stratus
+    already requires a login, this change should not affect most users. The
+    service registry includes a dependency on userservices. This API is not
+    available if userservices are not operative.
+  - Added per-user rate limiting on all routes to ensure consistent service
+    performance. These limits are generous and designed not to affect typical
+    usage. If you experience rate limiting issues, you can adjust the default
+    limits through the `serviceregistry.rateLimits` section of the Helm values
+    file.
+- `systemsmanagementservice:0.36.221`
+  - Added API-enforced 500-character limit for the `alias` property to improve
+    system performance. You can extend this limit by updating
+    `systems.systemLimits.alias.maxStringLength` in the Helm values file if
+    longer aliases are required.
+  - Added API-enforced limits to improve system security and performance:
+    `keywords count: 500`, `keyword string length: 500`, `property count: 1000`,
+    `property key string length: 500`, and `property value string length: 5000`.
+    These limits are not configurable through the Helm values file and should
+    accommodate typical usage patterns.
+- `assetservice:0.34.232`
+  - Added API-enforced keyword limits to improve system security and
+    performance: `keywords count: 500` and `keyword string length: 500`. These
+    limits are not configurable through the Helm values file and should
+    accommodate typical usage patterns.
+- `helium-serviceregistry:0.41.37`
+  - Custom roles now support resource-level specificity for work item
+    privileges. When configuring a role in the **Security** application, you can
+    now privilege specific work item types (such as Test Plan and Job) for that
+    role. Use the **Apply on all resources** option to grant broad access to a
+    role.
 
 ## Helm Chart Breaking Changes
 
-- `SystemsManagementService: 0.36.x`
-  - Added new chart for SystemsManagementService. This chart requires a configuration for Elasticsearch. If SystemLink did not provision Elasticsearch during deployment, you also need to set `systems.secrets.elasticsearch.password`. To opt-out of using Elasticsearch, refer to the [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
-- `SystemsCDC:0.0.x`
-  - Added new chart for SystemsManagementServiceCDC. This chart requires configurations for Elasticsearch, MongoDB, and file storage. To opt-out of using Elasticsearch, refer to the [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `SystemsManagementService:0.36.221`
+  - Added new chart for SystemsManagementService. This chart requires a
+    configuration for Elasticsearch. If SystemLink did not provision
+    Elasticsearch during deployment, you also need to set
+    `systems.secrets.elasticsearch.password`. To opt-out of using Elasticsearch,
+    refer to the
+    [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
+- `SystemsCDC:0.0.331`
+  - Added new chart for SystemsManagementServiceCDC. This chart requires
+    configurations for Elasticsearch, MongoDB, and file storage. To opt-out of
+    using Elasticsearch, refer to the
+    [SystemLink Enterprise User Manual](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/configuring-advanced-search.html).
 
 ## Upgrade Considerations
 
