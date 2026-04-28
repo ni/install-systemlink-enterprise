@@ -10,12 +10,14 @@ all required configuration changes.
 ## New Features and Behavior changes
 
 Explore the April 2026 SystemLink Enterprise release, including work item API support, test plan management, and high resolution zoom for data frames.
+
 - Added the [SystemLink Enterprise IT Administrators Manual](https://www.ni.com/docs/en-US/bundle/sle-it-admin/page/overview.html). Use this manual to deploy, configure, and troubleshoot SystemLink Enterprise.
 - Added support for Reservation, Maintenance, Job, and Calibration work items. From more information, refer to [Managing Work Orders and Work Items](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-work-orders-and-test-plans.html).
 - Added support for reserving multiple DUTs and other assets as part of test plans.
 - Added support for providing granular privileges with each work item type.
 - Added support for high resolution zoom in the Data Frames Data Source. For more information, refer to [Using the Data Frames Data Source in a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/data-frames-data-source.html).
 - Added support for location search through the Systems application and the Assets application.
+- Updated client Python APIs for alarms, assets, and file ingestion. For more information, refer to the [nisystemlink.clients Python API Documentation](http://www.ni.com/r/systemlink-python-api) for nisystemlink 0.1.4.
 - `helium-serviceregistry:0.41.37`
   - The /niserviceregistry/v1 API now requires that clients present a valid API key. The API does not enforce specific permissions. However, the client must have Stratus authorization to access the configuration and status information from the service registry API. Clients without authorization receive a 401-error response.
   - The API expects all clients to use a Stratus user interface. Because Stratus already requires a login, this change should not affect most users. The service registry includes a dependency on user services. This API is not available if user services are not operative.
