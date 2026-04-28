@@ -147,7 +147,6 @@ workitem:0.4.79-18963706
 
 ```text
 alpine/curl:8.17.0
-alpine:3.23.3
 alpine:3.23.4
 apache/flink-kubernetes-operator:1.14.0
 argoproj/argocli:v3.7.8-linux-amd64
