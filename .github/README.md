@@ -1,17 +1,23 @@
 # SystemLink Enterprise Release Notes AI Tools
 
-This directory contains AI-powered tools to help with SystemLink Enterprise release notes authoring and quality assurance.
+This directory contains AI-powered tools to help with SystemLink Enterprise
+release notes authoring and quality assurance.
 
 ## Available Tools
 
 ### 1. Release Notes Authoring Workflow (Skill)
+
 **Command**: `/release-notes-authoring`  
 **Use Case**: Complete monthly release notes creation from scratch  
 **Best For**: Monthly release authors who need step-by-step guidance
 
 **What it provides:**
+
 - Multi-step workflow from source gathering to publication
-- Interactive prompts for collecting information from SharePoint, AzDO, etc.
+- Interactive prompts for collecting information from specific sources:
+  - SharePoint: Breaking changes Excel file in SLE Development folder
+  - AzDO: Documentation Reviews repo PRs and DevCentral build pipelines
+  - Contacts: Bug lists and SBOM files from designated team members
 - Templates and examples for consistent structure
 - Quality standards and formatting guidance
 - Bundled resources (templates, examples, checklists)
@@ -19,11 +25,14 @@ This directory contains AI-powered tools to help with SystemLink Enterprise rele
 **When to use:** Starting a new monthly release notes document
 
 ### 2. Release Notes Quality Reviewer (Prompt)
+
 **Command**: `/SLE Release Notes Reviewer`  
 **Use Case**: Quality assurance and standardization of existing content  
-**Best For**: Reviewing contributed content to ensure it meets established standards
+**Best For**: Reviewing contributed content to ensure it meets established
+standards
 
 **What it provides:**
+
 - Systematic review against quality standards
 - Specific, actionable recommendations
 - Comparison with well-edited past releases
@@ -33,13 +42,15 @@ This directory contains AI-powered tools to help with SystemLink Enterprise rele
 **When to use:** Reviewing draft release notes before publication
 
 ### 3. Automatic Editing Assistant (Instructions)
+
 **Activation**: Automatic when editing `release-notes/**/README.md` files  
 **Use Case**: Real-time guidance during editing  
 **Best For**: Maintaining standards while actively writing/editing
 
 **What it provides:**
+
 - Automatic formatting suggestions
-- Style and consistency reminders  
+- Style and consistency reminders
 - Links to configuration templates when applicable
 - Quality checkpoint reminders
 
@@ -48,12 +59,18 @@ This directory contains AI-powered tools to help with SystemLink Enterprise rele
 ## Recommended Workflow
 
 ### For New Release Notes:
+
 1. **Start with the Authoring Skill**: `/release-notes-authoring`
    - Guides you through complete workflow
-   - Helps gather and organize source materials
+   - Provides specific URLs and contacts for source materials:
+     - SharePoint Excel file for breaking changes
+     - Documentation Reviews repo for new features
+     - DevCentral pipelines for container lists
+     - Team contacts for bugs and SBOM files
+   - Uses copy/paste approach to avoid credential sharing
    - Provides templates and structure
-   
 2. **Editing Support**: Instructions activate automatically
+
    - Real-time formatting assistance
    - Consistency reminders during editing
 
@@ -63,6 +80,7 @@ This directory contains AI-powered tools to help with SystemLink Enterprise rele
    - Final polish before publication
 
 ### For Reviewing Existing Content:
+
 1. **Use the Quality Reviewer**: `/SLE Release Notes Reviewer`
    - Direct quality assessment
    - Specific improvement recommendations
@@ -90,6 +108,7 @@ This directory contains AI-powered tools to help with SystemLink Enterprise rele
 ## Quality Standards
 
 All tools enforce consistent standards for:
+
 - Service name formatting (`servicename:version.number`)
 - API endpoint formatting (`` `/api/endpoint` ``)
 - UI element formatting (**Bold text**)
@@ -100,8 +119,12 @@ All tools enforce consistent standards for:
 
 ## Getting Started
 
-1. **New monthly release**: Type `/release-notes-authoring` and specify your version
-2. **Review existing content**: Type `/SLE Release Notes Reviewer` and reference the file
-3. **Editing help**: Open any release notes file - assistance activates automatically
+1. **New monthly release**: Type `/release-notes-authoring` and specify your
+   version
+2. **Review existing content**: Type `/SLE Release Notes Reviewer` and reference
+   the file
+3. **Editing help**: Open any release notes file - assistance activates
+   automatically
 
-These tools work together to ensure consistent, high-quality release notes that meet the established professional standards across all monthly releases.
+These tools work together to ensure consistent, high-quality release notes that
+meet the established professional standards across all monthly releases.

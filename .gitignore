@@ -4,3 +4,5 @@ site/
 *.code-workspace
 node_modules/
 !.*/
+
+release-notes/2026-05
