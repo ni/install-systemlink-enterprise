@@ -43,7 +43,8 @@ than sharing credentials or accessing systems directly.
 - **Location**: PR in the Documentation Reviews repository
 - **URL**: https://dev.azure.com/ni/Users/_git/Documentation%20Reviews
 - **What to look for**: New feature descriptions, user-facing changes
-- **Action needed**: Find the PR for this release and copy the feature content
+- **Action needed**: Find the PR for this release and copy the feature content.
+  Ensure links to documentation are included if available.
 
 **3. Container Version Lists and Helm Chart Versions**
 
@@ -69,7 +70,8 @@ than sharing credentials or accessing systems directly.
 **4. Customer-Facing Bugs**
 
 - **Contact**: Ciprian Iakab
-- **Action needed**: Request the bug list from Ciprian and copy it here
+- **Action needed**: Request the bug list excel document from Ciprian and
+  include it in your branch (links will be added to final document)
 
 **5. SBOMs and Notice Files**
 
