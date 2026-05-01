@@ -1,18 +1,22 @@
 # Example: Well-Edited Release Notes (2024-05)
 
-This file shows a complete example of well-edited release notes that follow all established standards.
+This file shows a complete example of well-edited release notes that follow the
+current structure, tone, and formatting standards.
 
 ## Key Patterns to Notice:
 
-1. **Title Format**: Uses "release" in title (note: this varies - check current standard)
+1. **Title Format**: Uses `# SystemLink Enterprise YYYY-MM Release Notes`
 2. **Opening Paragraph**: Standard language about publication and credentials
-3. **Feature Descriptions**: Clear, user-focused explanations with documentation links
-4. **Breaking Changes**: Include specific version numbers and configuration guidance
-5. **Template Links**: Links to specific lines in configuration files when available
+3. **Feature Descriptions**: Clear, user-focused explanations with documentation
+   links
+4. **Breaking Changes**: Include specific version numbers and configuration
+   guidance
+5. **Template Links**: Links to specific lines in configuration files when
+   available
 
 ---
 
-# SystemLink Enterprise release 2024-05 Release Notes
+# SystemLink Enterprise 2024-05 Release Notes
 
 The 2024-05 release bundle for SystemLink Enterprise has been published to
 <https://downloads.artifacts.ni.com>. This update includes new features, bug

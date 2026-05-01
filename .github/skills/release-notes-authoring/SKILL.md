@@ -1,8 +1,10 @@
 ---
 name: release-notes-authoring
 description:
-  "Multi-step workflow for authoring SystemLink Enterprise monthly release notes
-  with templates, examples, and quality standards"
+  "Author or finalize SystemLink Enterprise monthly release notes from source
+  materials through final review. Use when users ask to create, draft, write,
+  assemble, or polish monthly release notes, especially when the work involves
+  gathering source inputs, structuring sections, or enforcing repo style."
 ---
 
 # SystemLink Enterprise Release Notes Authoring Workflow
@@ -137,7 +139,7 @@ content into:
 
 ```markdown
 - `dataframeservice:1.9.38`, `dremio-ee:24.1.2`
-  - Support was added for configuring custom CA certificates.
+  - Added support for configuring custom CA certificates.
     - [View this service configuration](link-to-config)
   - This may conflict with existing configurations.
   - When setting new values, you must also remove deprecated configurations.

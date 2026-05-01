@@ -24,26 +24,10 @@ release notes authoring and quality assurance.
 
 **When to use:** Starting a new monthly release notes document
 
-### 2. Release Notes Quality Reviewer (Prompt)
+### 2. Automatic Editing Assistant (Instructions)
 
-**Command**: `/SLE Release Notes Reviewer`  
-**Use Case**: Quality assurance and standardization of existing content  
-**Best For**: Reviewing contributed content to ensure it meets established
-standards
-
-**What it provides:**
-
-- Systematic review against quality standards
-- Specific, actionable recommendations
-- Comparison with well-edited past releases
-- Formatting and style corrections
-- Technical accuracy verification
-
-**When to use:** Reviewing draft release notes before publication
-
-### 3. Automatic Editing Assistant (Instructions)
-
-**Activation**: Automatic when editing `release-notes/**/README.md` files  
+**Activation**: Automatic when editing monthly release notes in
+`release-notes/YYYY-MM/README.md`  
 **Use Case**: Real-time guidance during editing  
 **Best For**: Maintaining standards while actively writing/editing
 
@@ -70,21 +54,8 @@ standards
    - Uses copy/paste approach to avoid credential sharing
    - Provides templates and structure
 2. **Editing Support**: Instructions activate automatically
-
    - Real-time formatting assistance
    - Consistency reminders during editing
-
-3. **Final Review**: `/SLE Release Notes Reviewer`
-   - Comprehensive quality check
-   - Verification against standards
-   - Final polish before publication
-
-### For Reviewing Existing Content:
-
-1. **Use the Quality Reviewer**: `/SLE Release Notes Reviewer`
-   - Direct quality assessment
-   - Specific improvement recommendations
-   - Standards compliance verification
 
 ## File Structure
 
@@ -99,16 +70,15 @@ standards
 │       └── references/
 │           ├── 2024-05-example.md
 │           └── formatting-checklist.md
-├── instructions/
-│   └── release-notes.instructions.md   # Auto-editing assistance
-└── prompts/
-    └── sle-release-notes-reviewer.prompt.md  # Quality reviewer
+└── instructions/
+   └── release-notes.instructions.md   # Auto-editing assistance
 ```
 
 ## Quality Standards
 
 All tools enforce consistent standards for:
 
+- Release title formatting (`# SystemLink Enterprise YYYY-MM Release Notes`)
 - Service name formatting (`servicename:version.number`)
 - API endpoint formatting (`` `/api/endpoint` ``)
 - UI element formatting (**Bold text**)
@@ -121,10 +91,8 @@ All tools enforce consistent standards for:
 
 1. **New monthly release**: Type `/release-notes-authoring` and specify your
    version
-2. **Review existing content**: Type `/SLE Release Notes Reviewer` and reference
-   the file
-3. **Editing help**: Open any release notes file - assistance activates
-   automatically
+2. **Editing help**: Open a monthly release notes file under
+   `release-notes/YYYY-MM/` and assistance activates automatically
 
 These tools work together to ensure consistent, high-quality release notes that
 meet the established professional standards across all monthly releases.

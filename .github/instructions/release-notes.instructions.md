@@ -3,7 +3,7 @@ name: "Release Notes Editing Assistant"
 description:
   "Automatic formatting and style guidance when editing SystemLink Enterprise
   release notes"
-applyTo: "release-notes/**/README.md"
+applyTo: "release-notes/[0-9][0-9][0-9][0-9]-[0-9][0-9]/README.md"
 ---
 
 You are providing editing assistance for SystemLink Enterprise release notes.
@@ -21,6 +21,7 @@ Remind users that release notes should be compiled from these specific sources:
 
 ## Formatting Standards
 
+- **Release title**: Use `# SystemLink Enterprise YYYY-MM Release Notes`
 - **Service references**: Use `servicename:version.number` format with specific
   versions
 - **API endpoints**: Format as `/api/endpoint` in code blocks

@@ -11,7 +11,8 @@ required configuration changes.
 
 [MAIN CONTENT SECTION - Add bullet points for each new feature or change]
 
-- [Feature description]. [Optional: For more information, refer to [link text](documentation-url).]
+- [Feature description]. [Optional: For more information, refer to
+  [link text](documentation-url).]
 - [Another feature description with user impact explanation].
 - `servicename:version.number`
   - [Service-specific change with clear user impact]
@@ -21,13 +22,14 @@ required configuration changes.
 
 [INCLUDE ONLY IF APPLICABLE - Remove section if no breaking changes]
 
-- `ServiceName:version.number`
+- `servicename:version.number`
   - [Description of breaking change and required actions]
   - [Configuration guidance and links to templates when available]
 
 ## Upgrade Considerations
 
-[INCLUDE ONLY IF APPLICABLE - Common considerations like RabbitMQ version compatibility]
+[INCLUDE ONLY IF APPLICABLE - Common considerations like RabbitMQ version
+compatibility]
 
 ### RabbitMQ Version
 
