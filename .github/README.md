@@ -7,9 +7,9 @@ release notes authoring and quality assurance.
 
 ### 1. Release Notes Authoring Workflow (Skill)
 
-**Command**: `/release-notes-authoring`  
-**Use Case**: Complete monthly release notes creation from scratch  
-**Best For**: Monthly release authors who need step-by-step guidance
+**Command**: `/release-notes-authoring` **Use Case**: Complete monthly release
+notes creation from scratch **Best For**: Monthly release authors who need
+step-by-step guidance
 
 **What it provides:**
 
@@ -27,9 +27,8 @@ release notes authoring and quality assurance.
 ### 2. Automatic Editing Assistant (Instructions)
 
 **Activation**: Automatic when editing monthly release notes in
-`release-notes/YYYY-MM/README.md`  
-**Use Case**: Real-time guidance during editing  
-**Best For**: Maintaining standards while actively writing/editing
+`release-notes/YYYY-MM/README.md` **Use Case**: Real-time guidance during
+editing **Best For**: Maintaining standards while actively writing/editing
 
 **What it provides:**
 
