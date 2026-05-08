@@ -19,8 +19,37 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `dataframeservice:1.29.4`
+  - The sldremio Helm chart dependency has been replaced with dremio-helm.
+    Dremio pod resources are now configured via
+    `dataframeservice.sldremio.coordinator.resources`,
+    `dataframeservice.sldremio.executor.resources`,
+    `dataframeservice.sldremio.engineOverride.iceberg.resources`, and
+    `dataframeservice.sldremio.zookeeper.resources`. Memory values must be
+    specified in whole numbers with units of Mi, Gi, or Ti. These values replace
+    the old `dataframeservice.sldremio.coordinator.cpu`,
+    `dataframeservice.sldremio.coordinator.memory`, `executor.cpu`,
+    `executor.memory`, `executor.engineOverride.iceberg.cpu`,
+    `executor.engineOverride.iceberg.memory`, `zookeeper.cpu`, and
+    `zookeeper.memory` values. The
+    `dataframeservice.sldremio.executor.engineOverride.iceberg.heapMemoryOverride`
+    and `directMemoryOverride` values are no longer read.
+  - The default Iceberg executor volume size
+    (`dataframeservice.sldremio.executor.engineOverride.iceberg.volumeSize`) has
+    changed from 256Gi to 20Gi.
+  - Dremio Kubernetes resource names no longer include the release name or `dfs`
+    prefix. After upgrading, delete old PVCs and volumes containing `dfs-dremio`
+    in the name.
+  - The Dremio Docker image has changed from
+    `downloads.artifacts.ni.com/ni-docker/ni/systemlink-dremio-ee` to
+    `downloads.artifacts.ni.com/ni-docker/dremio/dremio-enterprise`. The
+    `dataframeservice.sldremio.image` Helm value has been renamed
+    `dataframeservice.sldremio.dremio.image`, and
+    `dataframeservice.sldremio.initImage` has been renamed
+    `dataframeservice.sldremio.busyBox.image`.
+  - The dremio-helm chart enforces schema validation for several Helm values
+    under `dataframeservice.sldremio`, such as ensuring distributed storage is
+    configured.
 
 ## Upgrade Considerations
 
