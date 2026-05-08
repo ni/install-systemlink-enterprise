@@ -4,6 +4,3 @@ site/
 *.code-workspace
 node_modules/
 !.*/
-
-# Temporary: exclude custom prompts until ready to share with team
-.github/prompts/
