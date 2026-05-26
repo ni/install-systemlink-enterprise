@@ -7,10 +7,6 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from SystemLink Enterprise 2026-04 to 2026-05
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
 - Behavior change or new feature description
@@ -19,37 +15,32 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- `dataframeservice:1.29.4`
-  - The sldremio Helm chart dependency has been replaced with dremio-helm.
-    Dremio pod resources are now configured via
-    `dataframeservice.sldremio.coordinator.resources`,
-    `dataframeservice.sldremio.executor.resources`,
-    `dataframeservice.sldremio.engineOverride.iceberg.resources`, and
-    `dataframeservice.sldremio.zookeeper.resources`. Memory values must be
-    specified in whole numbers with units of Mi, Gi, or Ti. These values replace
-    the old `dataframeservice.sldremio.coordinator.cpu`,
-    `dataframeservice.sldremio.coordinator.memory`, `executor.cpu`,
-    `executor.memory`, `executor.engineOverride.iceberg.cpu`,
-    `executor.engineOverride.iceberg.memory`, `zookeeper.cpu`, and
-    `zookeeper.memory` values. The
-    `dataframeservice.sldremio.executor.engineOverride.iceberg.heapMemoryOverride`
-    and `directMemoryOverride` values are no longer read.
-  - The default Iceberg executor volume size
-    (`dataframeservice.sldremio.executor.engineOverride.iceberg.volumeSize`) has
-    changed from 256Gi to 20Gi.
-  - Dremio Kubernetes resource names no longer include the release name or `dfs`
-    prefix. After upgrading, delete old PVCs and volumes containing `dfs-dremio`
-    in the name.
-  - The Dremio Docker image has changed from
-    `downloads.artifacts.ni.com/ni-docker/ni/systemlink-dremio-ee` to
-    `downloads.artifacts.ni.com/ni-docker/dremio/dremio-enterprise`. The
-    `dataframeservice.sldremio.image` Helm value has been renamed
-    `dataframeservice.sldremio.dremio.image`, and
-    `dataframeservice.sldremio.initImage` has been renamed
-    `dataframeservice.sldremio.busyBox.image`.
-  - The dremio-helm chart enforces schema validation for several Helm values
-    under `dataframeservice.sldremio`, such as ensuring distributed storage is
-    configured.
+- `dataframeservice:1.29.x`
+  - The dremio-helm Helm chart dependency replaces the sldremio dependency. This new dependency uses the alias of `sldremio`.
+  - You can configure the Dremio pod resources through the following values:
+    - `dataframeservice.sldremio.coordinator.resources` (with requests and limits)
+    - `dataframeservice.sldremio.executor.resources`
+    - `dataframeservice.sldremio.executor.engineOverride.iceberg.resources`
+    - `dataframeservice.sldremio.zookeeper.resources`
+  - You must specify memory values using whole numbers and the measurement units of Mi, Gi, or Ti. These new values must replace the following older values:
+    - `dataframeservice.sldremio.coordinator.cpu`
+    - `dataframeservice.sldremio.coordinator.memory`
+    - `executor.cpu`
+    - `executor.memory`
+    - `executor.engineOverride.iceberg.cpu`
+    - `executor.engineOverride.iceberg.memory`
+    - `zookeeper.cpu`
+    - `zookeeper.memory`
+  - Older memory values use units of M (1,000,000 bytes). As such, SystemLink Helm charts no longer read the following values:
+    - `dataframeservice.sldremio.executor.engineOverride.iceberg.heapMemoryOverride`
+    - `directMemoryOverride`
+  - The default volume size for an Iceberg executor is now 20 Gi instead of 256 Gi. NI recommends using this smaller value even for large deployments. You can locate the main Iceberg executor value at `dataframeservice.sldremio.executor.engineOverride.iceberg.volumeSize`.
+  - Dremio Kubernetes resource names no longer use a release name or `dfs` as a prefix. For example, instead of a pod using the name `systemlink-dfs-dremio-master-0`, that same pod now uses `dremio-master-0`. This change also applies to persistent volume claims. After upgrading SystemLink, NI recommends deleting any old Dremio persistent volume claims and volumes with `dfs-dremio` in the name.
+  - The Dremio Docker image is now in downloads.artifacts.ni.com/ni-docker/dremio/dremio-enterprise.
+  - The following Helm values have changed:
+    - The `dataframeservice.sldremio.dremio.image` value replaces the `dataframeservice.sldremio.image` value.
+    - The `dataframeservice.sldremio.busyBox.image` value replaces the `dataframeservice.sldremio.initImage` value.
+  - The dremio-helm chart enforces schema validation for several Helm values under `dataframeservice.sldremio`. This validation includes ensuring the configuration of the distributed storage.
 
 ## Upgrade Considerations
 
@@ -76,21 +67,17 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-05 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-05/release-notes/2026-05/closed-bugs-sle-2026-05.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-05/release-notes/2026-05/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-05/release-notes/2026-05/notices)
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.49.39`
+**Top Level Helm Chart:** `systemlink 0.49.51`
 
 **Admin Helm Chart:** `systemlink-admin 0.49.16`
 
@@ -99,39 +86,39 @@ instructions, refer to
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.24.52
 alarmservice:0.24.52
+alarmservice-routine-executor:0.24.52
 alarmsui:0.34.33
 assetservice:0.35.119
 assetservicecdc:0.3.97
-assetui:0.34.29
+assetui:0.34.30
 comments:0.33.47
 dashboardsui:0.37.30
-dataframeservice-nessie:1.29.50
 dataframeservice:1.29.50
+dataframeservice-nessie:1.29.50
 dynamicformfields:0.18.36
 executionsui:0.37.32
 feedservice:0.26.30
 feedsui:0.25.27
-fileingestioncdc:0.10.36
-filesui:0.38.40
-grafana-auth-proxy:0.36.3
+fileingestioncdc:0.10.37
+filesui:0.38.41
+grafana-auth-proxy:0.36.4
 grafana-plugins:4.149.1
 grafana-rbac-integrator:0.36.21
-helium-dataservices-mongomigration:0.36.14
 helium-dataservices:0.36.14
+helium-dataservices-mongomigration:0.36.14
 helium-fileingestionservices:1.27.39
 helium-salt-master:1.34.10
-helium-serviceregistry:0.43.7
+helium-serviceregistry:0.43.8
 helium-taghistoriandataretention:0.32.12
 helium-taghistorianmongomigration:0.32.12
 helium-taghistorianservices:0.32.12
-helium-userservices:0.43.10
+helium-userservices:0.43.11
 helium-webappservices:0.41.14
 helium-webserver:0.50.19
 jupyter-notebook-userpod:2.27.11
 jupyterui:0.37.30
-labmanagementui:0.28.77
+labmanagementui:0.28.78
 landingpageui:0.37.33
 locationmanagementui:0.7.33
 locationservice:0.8.33
@@ -145,8 +132,8 @@ repository:0.33.29
 routineeventtrigger:0.38.35
 routineexecutor:0.38.48
 routinescheduletrigger:0.38.23
-routineservice-v2:0.39.36
 routineservice:0.39.36
+routineservice-v2:0.39.36
 routinesui:0.38.48
 securityui:0.37.32
 session-manager-service:0.44.16
@@ -158,15 +145,15 @@ systemscdc:0.1.12
 systemsmanagementservice:0.37.62
 systemsstateservice:0.27.21
 systemsstatesui:0.26.29
-systemsui:0.38.72
+systemsui:0.38.73
 tageventprocessor:0.36.14
 tagsui:0.33.28
-testinsightsui:0.37.43
+testinsightsui:0.37.44
 testmonitorservice:0.46.47
 userdata:0.37.26
 userservice-setup:0.44.9
 webapphostui:0.36.34
-workitem:0.5.49
+workitem:0.5.50
 ```
 
 ### 3rd Party Containers
