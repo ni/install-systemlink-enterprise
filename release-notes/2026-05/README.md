@@ -12,6 +12,7 @@ all required configuration changes.
 Explore the May 2026 SystemLink Enterprise release, including a new work item type and an upgrade for Dremio 26.
 
 - Create a Transport Order to schedule and reserve assets and DUTs for movement between locations. For more information, refer to [Managing Work Orders and Work Items](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-work-orders-and-test-plans.html).
+- Open files in DIAdem from SystemLink. In the Files application, select a file and click Open in DIAdem. To use this feature, you must install both Diadem and [DIAdem SystemLink Toolkit](https://www.ni.com/en/support/downloads/software-products/download.diadem-systemlink-toolkit.html).
 - Upgraded SystemLink to Dremio 26. For more information, refer to the [Release Notes](https://www.ni.com/r/slegithubrn) and the [SystemLink Enterprise IT Administrators Manual](http://www.ni.com/r/sle-it-admin).
 
 ## Helm Chart Breaking Changes
