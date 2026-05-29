@@ -1,48 +1,76 @@
 # SystemLink Enterprise 2026-05 Release Notes
 
-The 2026-05 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-05 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-Explore the May 2026 SystemLink Enterprise release, including a new work item type and an upgrade for Dremio 26.
+Explore the May 2026 SystemLink Enterprise release, including a new work item
+type and an upgrade for Dremio 26.
 
-- Create a Transport Order to schedule and reserve assets and DUTs for movement between locations. For more information, refer to [Managing Work Orders and Work Items](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-work-orders-and-test-plans.html).
-- Open files in DIAdem from SystemLink. In the Files application, select a file and click Open in DIAdem. To use this feature, you must install both Diadem and [DIAdem SystemLink Toolkit](https://www.ni.com/en/support/downloads/software-products/download.diadem-systemlink-toolkit.html).
-- Upgraded SystemLink to Dremio 26. For more information, refer to the [Release Notes](https://www.ni.com/r/slegithubrn) and the [SystemLink Enterprise IT Administrators Manual](http://www.ni.com/r/sle-it-admin).
+- Resolved CVE-2026-9051. NI recommends upgrading all SystemLink Enterprise
+  installations to 2026-05 or later. For more information, refer to the
+  [security advisory for CVE-2026-9051 on ni.com](https://ni.com/r/CVE-2026-9051).
+- Create a Transport Order to schedule and reserve assets and DUTs for movement
+  between locations. For more information, refer to
+  [Managing Work Orders and Work Items](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/managing-work-orders-and-test-plans.html).
+- Open files in DIAdem from SystemLink. In the Files application, select a file
+  and click Open in DIAdem. To use this feature, you must install both DIAdem
+  and
+  [DIAdem SystemLink Toolkit](https://www.ni.com/en/support/downloads/software-products/download.diadem-systemlink-toolkit.html).
+- Upgraded SystemLink to Dremio 26. For more information, refer to the
+  [Release Notes](https://www.ni.com/r/slegithubrn) and the
+  [SystemLink Enterprise IT Administrators Manual](http://www.ni.com/r/sle-it-admin).
 
 ## Helm Chart Breaking Changes
 
-- `dataframeservice:1.29.x`
-  - The dremio-helm Helm chart dependency replaces the sldremio dependency. This new dependency uses the alias of `sldremio`.
+- `dataframeservice:1.29.50`
+  - The Dremio Helm chart dependency replaces the sldremio dependency. This new
+    dependency uses the alias of `sldremio`.
   - You can configure the Dremio pod resources through the following values:
-    - `dataframeservice.sldremio.coordinator.resources` (with requests and limits)
+    - `dataframeservice.sldremio.coordinator.resources` (with requests and
+      limits)
     - `dataframeservice.sldremio.executor.resources`
     - `dataframeservice.sldremio.executor.engineOverride.iceberg.resources`
     - `dataframeservice.sldremio.zookeeper.resources`
-  - You must specify memory values using whole numbers and the measurement units of Mi, Gi, or Ti. These new values must replace the following older values:
+  - You must specify memory values using whole numbers and the measurement units
+    of Mi, Gi, or Ti. These new values must replace the following older values:
     - `dataframeservice.sldremio.coordinator.cpu`
     - `dataframeservice.sldremio.coordinator.memory`
-    - `executor.cpu`
-    - `executor.memory`
-    - `executor.engineOverride.iceberg.cpu`
-    - `executor.engineOverride.iceberg.memory`
-    - `zookeeper.cpu`
-    - `zookeeper.memory`
-  - Older memory values use units of M (1,000,000 bytes). As such, SystemLink Helm charts no longer read the following values:
+    - `dataframeservice.sldremio.executor.cpu`
+    - `dataframeservice.sldremio.executor.memory`
+    - `dataframeservice.sldremio.executor.engineOverride.iceberg.cpu`
+    - `dataframeservice.sldremio.executor.engineOverride.iceberg.memory`
+    - `dataframeservice.sldremio.zookeeper.cpu`
+    - `dataframeservice.sldremio.zookeeper.memory`
+  - Older memory values use units of M (1,000,000 bytes). As such, SystemLink
+    Helm charts no longer read the following values:
     - `dataframeservice.sldremio.executor.engineOverride.iceberg.heapMemoryOverride`
-    - `directMemoryOverride`
-  - The default volume size for an Iceberg executor is now 20 Gi instead of 256 Gi. NI recommends using this smaller value even for large deployments. You can locate the main Iceberg executor value at `dataframeservice.sldremio.executor.engineOverride.iceberg.volumeSize`.
-  - Dremio Kubernetes resource names no longer use a release name or `dfs` as a prefix. For example, instead of a pod using the name `systemlink-dfs-dremio-master-0`, that same pod now uses `dremio-master-0`. This change also applies to persistent volume claims. After upgrading SystemLink, NI recommends deleting any old Dremio persistent volume claims and volumes with `dfs-dremio` in the name.
-  - The Dremio Docker image is now in downloads.artifacts.ni.com/ni-docker/dremio/dremio-enterprise.
+    - `dataframeservice.sldremio.executor.engineOverride.iceberg.directMemoryOverride`
+  - The default volume size for an Iceberg executor is now 20 Gi instead of 256
+    Gi. NI recommends using this smaller value even for large deployments. You
+    can locate the main Iceberg executor value at
+    `dataframeservice.sldremio.executor.engineOverride.iceberg.volumeSize`.
+  - Dremio Kubernetes resource names no longer use a release name or `dfs` as a
+    prefix. For example, instead of a pod using the name
+    `systemlink-dfs-dremio-master-0`, that same pod now uses `dremio-master-0`.
+    This change also applies to persistent volume claims. After upgrading
+    SystemLink, NI recommends deleting any old Dremio persistent volume claims
+    and volumes with `dfs-dremio` in the name.
+  - The Dremio Docker image is now in
+    `downloads.artifacts.ni.com/ni-docker/dremio/dremio-enterprise`.
   - The following Helm values have changed:
-    - The `dataframeservice.sldremio.dremio.image` value replaces the `dataframeservice.sldremio.image` value.
-    - The `dataframeservice.sldremio.busyBox.image` value replaces the `dataframeservice.sldremio.initImage` value.
-  - The dremio-helm chart enforces schema validation for several Helm values under `dataframeservice.sldremio`. This validation includes ensuring the configuration of the distributed storage.
+    - The `dataframeservice.sldremio.dremio.image` value replaces the
+      `dataframeservice.sldremio.image` value.
+    - The `dataframeservice.sldremio.busyBox.image` value replaces the
+      `dataframeservice.sldremio.initImage` value.
+  - The Dremio chart enforces schema validation for several Helm values under
+    `dataframeservice.sldremio`. This validation includes ensuring the
+    configuration of the distributed storage.
 
 ## Upgrade Considerations
 
