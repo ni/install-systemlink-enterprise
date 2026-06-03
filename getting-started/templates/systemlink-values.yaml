@@ -171,9 +171,10 @@ webserver:
     ##     You must also set the provider value to a single-quoted string that contains a full OIDC configuration.
     ##     This configuration must be in the JSON format as defined by the OIDC spec. For more information, refer to
     ##     https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse.
-    ##  3. Auto-discover and manual override — Set the issuer value to the provider URL and remove the comment marks
-    ##     from the provider value. You must set the provider value to a sparse OIDC configuration. The service will then
-    ##     download the configuration from the provider and override with any settings from the provider configuration.
+    ##  3. Auto-discover with manual extensions — Set the issuer value to the provider URL and remove the comment
+    ##     marks from the provider value. You must set the provider value to a sparse OIDC configuration. The
+    ##     service will add fields defined here to the downloaded configuration. If a field is defined in both
+    ##     places, the downloaded configuration will be used.
     issuer: "https://oidc.example.com/"
     # provider: '<provider-config-json>'
     ## Optional - Claim to use for user ID.
