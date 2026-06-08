@@ -1081,6 +1081,11 @@ sl-jupyterhub:
         ## Setting this to "true" will enable the legacy implementation of Jupyter usernames.
         JUPYTER_USERNAME_AS_SYSTEMLINK_USER_ID: "false"
     singleuser:
+      extraEnv:
+        ## Temporarily disable Python 3.13's VERIFY_X509_STRICT enforcement, which rejects root CAs
+        ## lacking a required keyUsage extension. Set to "false" after regenerating the CA to be compliant.
+        # <ATTENTION> - This toggle will be removed in a future release.
+        DISABLE_VERIFY_X509_STRICT: "true"
       networkPolicy:
         egressAllowRules:
           # <ATTENTION> - Set to true to enable JupyterHub user pods to establish outbound connections to private IP addresses.
@@ -1127,6 +1132,13 @@ argoworkflows:
 ##
 nbexecservice:
   maxNumberOfWorkflowsToSchedule: *workflowParallelism
+
+  ## Temporarily disable Python 3.13's VERIFY_X509_STRICT enforcement, which rejects root CAs
+  ## lacking a required keyUsage extension. Set to false after regenerating the CA to be compliant.
+  # <ATTENTION> - This toggle will be removed in a future release.
+  argo:
+    workflow:
+      disableVerifyX509Strict: true
 
   ## Uncomment this section to adjust the resource allocation for the notebook execution pods.
   ##
