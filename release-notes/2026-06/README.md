@@ -13,16 +13,12 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
-
-## Helm Chart Breaking Changes
-
 - systems
   - Breaking changes for the manage-systems-keys route:
     - Requests are now capped at 1,000 keys due to performance and security considerations.
     - Performing an action (accept/reject/delete) on an already-approved key from a different workspace now verifies delete privileges in the key's current workspace. The action is only allowed if the user has delete permission in that workspace.
+
+## Helm Chart Breaking Changes
 
 ## Upgrade Considerations
 
