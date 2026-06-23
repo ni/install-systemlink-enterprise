@@ -1,28 +1,45 @@
 # SystemLink Enterprise 2026-06 Release Notes
 
-The 2026-06 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-06 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Systems
-  - New breaking change for the manage-systems-keys route. Due to performance and security considerations, this route now caps requests at 1,000 keys.
-  - Performing an action, such as deleting a key, on an approved key from a different workspace now verifies the user privileges in the current workspace of the key. The action can only proceed if the user has ‘delete’ permissions in that workspace.
+- Added support for PostgreSQL 18.
+- Added support for Grafana 12.
+- Manage specification conditions from the SystemLink user interface. For more
+  information, refer to
+  [Creating, Viewing, and Managing Specification Conditions](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/create-view-manage-conditions.html).
+- The UI for viewing managed system keys returns a maximum of 1,000 keys.
 
 ## Helm Chart Breaking Changes
 
-- jupyterhub/k8s-image-awaiter:4.3.3
-  - The base image for running notebooks now uses Python 3.13. NI recommends reviewing your notebooks for compatibility with this new version of Python.
-  - The VERIFY_X509_STRICT change in Python 3.13 enforces stricter certificate validation. This change also rejects root CAs that lack a keyUsage extension. There is a toggle for enforcement of this requirement. The toggle is a temporary addition that NI plans to remove in a future release. NI recommends regenerating any non‑compliant root CAs as soon as possible.
-  - After regenerating a CA, validate that CA by switching the toggle off through the following Helm value: `sl-jupyterhub.jupyterhub.singleuser.extraEnv.DISABLE_VERIFY_X509_STRICT = false`.
-- nbexecservice:0.39.81
-  - The base image for running notebooks now uses Python 3.13. NI recommends reviewing your notebooks for compatibility with this new version of Python.
-  - The VERIFY_X509_STRICT change in Python 3.13 enforces stricter certificate validation. This change also rejects root CAs that lack a keyUsage extension. There is a toggle for enforcement of this requirement. The toggle is a temporary addition that NI plans to remove in a future release. NI recommends regenerating any non‑compliant root CAs as soon as possible.
-  - After regenerating a CA, validate that CA by switching the toggle off through the following Helm value: `nbexecservice.argo.workflow.disableVerifyX509Strict = false`.
+- `jupyterhub/k8s-image-awaiter:4.3.3`
+  - The base image for running notebooks now uses Python 3.13. NI recommends
+    reviewing your notebooks for compatibility with this new version of Python.
+  - The VERIFY_X509_STRICT change in Python 3.13 enforces stricter certificate
+    validation. This change also rejects root CAs that lack a keyUsage
+    extension. NI added a temporary toggle to control enforcement of this
+    requirement and plans to remove it in a future release. NI recommends
+    regenerating any non‑compliant root CAs as soon as possible.
+  - After regenerating a CA, validate that CA by switching the toggle off
+    through the following Helm value:
+    `sl-jupyterhub.jupyterhub.singleuser.extraEnv.DISABLE_VERIFY_X509_STRICT = false`.
+- `nbexecservice:0.39.81`
+  - The base image for running notebooks now uses Python 3.13. NI recommends
+    reviewing your notebooks for compatibility with this new version of Python.
+  - The VERIFY_X509_STRICT change in Python 3.13 enforces stricter certificate
+    validation. This change also rejects root CAs that lack a keyUsage
+    extension. NI added a temporary toggle to control enforcement of this
+    requirement and plans to remove it in a future release. NI recommends
+    regenerating any non‑compliant root CAs as soon as possible.
+  - After regenerating a CA, validate that CA by switching the toggle off
+    through the following Helm value:
+    `nbexecservice.argo.workflow.disableVerifyX509Strict = false`.
 
 ## Upgrade Considerations
 

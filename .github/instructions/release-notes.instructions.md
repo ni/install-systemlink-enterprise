@@ -34,12 +34,12 @@ Remind users that release notes should be compiled from these specific sources:
 
 ### Breaking Changes Format
 
-- Lead with service and version: `servicename:version.number`
+- Lead with service and version wrapped in backticks: `` `servicename:version.number` ``
 - Structure as bulleted list with nested sub-items
 - Include "View this service configuration" links where applicable
 - Specify required administrative actions clearly
-- Group multiple services on same line if related: `service1:version`,
-  `service2:version`
+- Group multiple services on same line if related: `` `service1:version` ``,
+  `` `service2:version` ``
 
 ## Content Guidelines
 
@@ -48,6 +48,12 @@ Remind users that release notes should be compiled from these specific sources:
 - Include documentation links for new features when available
 - For breaking changes, provide configuration guidance
 - Maintain professional, technical tone appropriate for IT administrators
+
+## Bugs Fixed Section
+
+- Do **not** include the sentence "Only customer facing bugs have been included
+  in this list." — this line was present in all 2024 releases but was dropped
+  starting with 2025 releases. Omit it for 2025 and later.
 
 ## Quality Reminders
 
