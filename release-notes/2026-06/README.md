@@ -45,21 +45,17 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-06 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-06/release-notes/2026-06/closed-bugs-sle-2026-06.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-06/release-notes/2026-06/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-06/release-notes/2026-06/notices)
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.50.75`
+**Top Level Helm Chart:** `systemlink 0.50.87`
 
 **Admin Helm Chart:** `systemlink-admin 0.50.16`
 
@@ -68,83 +64,87 @@ instructions, refer to
 ### NI Containers
 
 ```text
-alarmservice-routine-executor:0.25.68
-alarmservice:0.25.68
+alarmservice:0.25.69
+alarmservice-routine-executor:0.25.69
 alarmsui:0.35.54
-assetservice:0.36.114
-assetservicecdc:0.4.66
-assetui:0.35.70
+assetservice:0.36.115
+assetservicecdc:0.4.67
+assetui:0.35.73
 comments:0.34.65
-dashboardsui:0.38.57
-dataframeservice-nessie:1.30.53
+dashboardsui:0.38.58
 dataframeservice:1.30.53
+dataframeservice-nessie:1.30.53
 dynamicformfields:0.19.38
 executionsui:0.38.54
 feedservice:0.27.34
-feedsui:0.26.53
-fileingestioncdc:0.11.57
-filesui:0.39.68
+feedsui:0.26.54
+fileingestioncdc:0.11.60
+filesui:0.39.69
 grafana-auth-proxy:0.37.20
 grafana-plugins:5.0.1
 grafana-rbac-integrator:0.37.24
-helium-dataservices-mongomigration:0.37.31
 helium-dataservices:0.37.31
+helium-dataservices-mongomigration:0.37.31
 helium-fileingestionservices:1.28.44
 helium-salt-master:1.35.10
-helium-serviceregistry:0.44.25
+helium-serviceregistry:0.44.26
 helium-taghistoriandataretention:0.33.17
 helium-taghistorianmongomigration:0.33.17
 helium-taghistorianservices:0.33.17
-helium-userservices:0.44.33
+helium-userservices:0.44.34
 helium-webappservices:0.42.25
-helium-webserver:0.51.35
+helium-webserver:0.51.36
 jupyter-notebook-userpod:2.29.19
-jupyterui:0.38.53
-labmanagementui:0.29.95
-landingpageui:0.38.50
-locationmanagementui:0.8.64
+jupyterui:0.38.54
+labmanagementui:0.29.100
+landingpageui:0.38.51
+locationmanagementui:0.8.65-19819327
 locationservice:0.9.30
 nbexec-execution-helpers:0.39.46
 nbexec-notebook-runner:0.39.65
 nbexecservice:0.39.81
-nbparsingservice:0.38.9
+nbparsingservice:0.38.10
 ni-grafana:v12.3.1-ee02ef3d103-ni
 notification:0.38.31
 repository:0.34.29
 routineeventtrigger:0.39.40
 routineexecutor:0.39.66
 routinescheduletrigger:0.39.26
-routineservice-v2:0.40.40
 routineservice:0.40.40
-routinesui:0.39.77
-securityui:0.38.51
+routineservice-v2:0.40.40
+routinesui:0.39.80
+securityui:0.38.52
 session-manager-service:0.45.25
 sl-configurable-http-proxy:2.29.7
 sl-k8s-hub:2.29.12
 smtp:0.38.23
 specificationmanagement:0.29.23
-systemscdc:0.2.41
+systemscdc:0.2.42
 systemsmanagementservice:0.38.59
 systemsstateservice:0.28.29-19802755
-systemsstatesui:0.27.58
-systemsui:0.39.93
+systemsstatesui:0.27.59
+systemsui:0.39.95
 tageventprocessor:0.37.31
-tagsui:0.34.62
-testinsightsui:0.38.53
+tagsui:0.34.63
+testinsightsui:0.38.57
 testmonitorservice:0.47.55
 userdata:0.38.31
 userservice-setup:0.45.13
-webapphostui:0.37.52
+webapphostui:0.37.53
 workitem:0.6.72
 ```
 
 ### 3rd Party Containers
 
 ```text
+alpine/curl:8.19.0
 alpine:3.23.4
+apache/flink-kubernetes-operator:1.15.0
 bitnami-secure/containers/debian-12/argo-workflow-cli:4.0.5-debian-12-r2
 bitnami-secure/containers/debian-12/argo-workflow-controller:4.0.5-debian-12-r2
 bitnami-secure/containers/debian-12/argo-workflow-exec:4.0.5-debian-12-r5
+bitnami-secure/containers/debian-12/elasticsearch:9.4.1-debian-12-r6
+bitnami-secure/containers/debian-12/kibana:9.4.2-debian-12-r0
 bitnami-secure/containers/debian-12/kubectl:1.36.1
 bitnami-secure/containers/debian-12/rabbitmq:4.2.6-debian-12-r0
 bitnami-secure/containers/debian-12/redis-cluster:8.6.3-debian-12-r3
