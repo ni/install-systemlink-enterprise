@@ -18,7 +18,7 @@ required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- `jupyterhub/k8s-image-awaiter:4.3.3`
+- `jupyterhub/k8s-image-awaiter:4.3.3` and `nbexecservice:0.39.81`
   - The base image for running notebooks now uses Python 3.13. NI recommends
     reviewing your notebooks for compatibility with this new version of Python.
   - The VERIFY_X509_STRICT change in Python 3.13 enforces stricter certificate
@@ -27,19 +27,9 @@ required configuration changes.
     requirement and plans to remove it in a future release. NI recommends
     regenerating any non‑compliant root CAs as soon as possible.
   - After regenerating a CA, validate that CA by switching the toggle off
-    through the following Helm value:
-    `sl-jupyterhub.jupyterhub.singleuser.extraEnv.DISABLE_VERIFY_X509_STRICT = false`.
-- `nbexecservice:0.39.81`
-  - The base image for running notebooks now uses Python 3.13. NI recommends
-    reviewing your notebooks for compatibility with this new version of Python.
-  - The VERIFY_X509_STRICT change in Python 3.13 enforces stricter certificate
-    validation. This change also rejects root CAs that lack a keyUsage
-    extension. NI added a temporary toggle to control enforcement of this
-    requirement and plans to remove it in a future release. NI recommends
-    regenerating any non‑compliant root CAs as soon as possible.
-  - After regenerating a CA, validate that CA by switching the toggle off
-    through the following Helm value:
-    `nbexecservice.argo.workflow.disableVerifyX509Strict = false`.
+    through the following Helm values:
+    - `sl-jupyterhub.jupyterhub.singleuser.extraEnv.DISABLE_VERIFY_X509_STRICT = false`
+    - `nbexecservice.argo.workflow.disableVerifyX509Strict = false`
 
 ## Upgrade Considerations
 
