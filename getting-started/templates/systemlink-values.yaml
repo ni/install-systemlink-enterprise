@@ -711,6 +711,10 @@ dashboardhost:
 ## Configuration for the Data Frame service.
 ##
 dataframeservice:
+  ## Set true to enable the deployment of the DataFrame service.
+  ## By default, this is enabled and the DataFrame service is deployed.
+  enabled: &dataframeserviceEnabled true
+
   ## Ingress configuration
   ##
   ingress:
