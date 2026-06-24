@@ -102,6 +102,13 @@ content into:
 5. **Upgrade Considerations**: If applicable
 6. **Additional sections**: Bug fixes, SBOM, versions as needed
 
+### Bugs Fixed Section:
+
+- Link format: `[SystemLink Enterprise YYYY-MM Closed Bugs](github-link)`
+- Do **not** include "Only customer facing bugs have been included in this
+  list." — this line was dropped starting with 2025 releases and should be
+  omitted for all releases from 2025 onward.
+
 ### Content Organization:
 
 - Group related changes together
