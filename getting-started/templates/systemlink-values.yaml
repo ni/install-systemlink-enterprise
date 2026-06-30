@@ -118,6 +118,18 @@ global:
   ## Deploy the certificate stored in apiHostCertificateSecret to all managed systems.
   ##
   deployApiHostCertificateToSystems: false
+  ##
+  ## Use the flags below to enable or disable optional SystemLink capabilities.
+  # featureFlags:
+    # <ATTENTION> - Set to false to disable the deployment of the work item and lab management UI services.
+    ##
+    # workitem: true
+    ##
+    # <ATTENTION> - Set to false to disable the Work Order APIs (work orders, test plans, test plan templates,
+    #               and workflows), their Grafana dashboards and datasources, and their Swagger API entries.
+    #               Has no effect unless global.featureFlags.workitem is also true.
+    ##
+    # workOrderApis: true
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -1357,14 +1369,6 @@ comments:
   ## Maximum number of comments supported per delete comments request.
   ##
   maximumCommentsPerDeleteRequest: 1000
-
-## Configuration for work item service.
-##
-workitem:
-  ## <ATTENTION> - Set false to disable the deployment of the work item and lab management UI services.
-  ## By default, this is enabled and the work item and lab management UI services are deployed.
-  ##
-  enabled: true
 
 ## Configuration for specification management service.
 ##
