@@ -301,14 +301,6 @@ workitem:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 80
 
-  ## @param workitem.maximumWorkOrdersPerCreateRequest Maximum number of work orders per create work orders request.
-  maximumWorkOrdersPerCreateRequest: 1000
-  ## @param workitem.maximumTakePerQueryWorkOrdersRequest Maximum query take per query work orders request.
-  maximumTakePerQueryWorkOrdersRequest: 1000
-  ## @param workitem.maximumWorkOrdersPerUpdateRequest Maximum number of work orders per update work orders request.
-  maximumWorkOrdersPerUpdateRequest: 1000
-  ## @param workitem.maximumWorkOrdersPerDeleteRequest Maximum number of work orders per delete work orders request.
-  maximumWorkOrdersPerDeleteRequest: 1000
   ## @param workitem.maximumWorkItemsPerCreateRequest Maximum number of work items per create work items request.
   maximumWorkItemsPerCreateRequest: 1000
   ## @param workitem.maximumTakePerQueryWorkItemsRequest Maximum query take per query work items request.

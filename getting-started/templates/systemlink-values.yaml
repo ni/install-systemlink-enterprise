@@ -120,8 +120,9 @@ global:
   deployApiHostCertificateToSystems: false
   ##
   ## Use the flags below to enable or disable optional SystemLink capabilities.
+  ##
   # featureFlags:
-    # <ATTENTION> - Set to false to disable the deployment of the work item and lab management UI services.
+    # <ATTENTION> - Set to false to disable deployment of the work item and lab management UI services.
     ##
     # workitem: true
     ##
