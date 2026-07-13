@@ -1413,7 +1413,7 @@ serviceregistry:
         enabled: *specificationManagementEnabled
   privilegeToggles:
     ## Show or hide the option to set security privileges for data frame service
-    dataframe: true
+    dataframe: *dataframeserviceEnabled
 
 ## Configuration for dynamic form fields.
 ##
