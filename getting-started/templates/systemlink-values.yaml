@@ -1411,6 +1411,9 @@ serviceregistry:
       specification:
         ## Add the "Specification" service to the service registry if enabled
         enabled: *specificationManagementEnabled
+  privilegeToggles:
+    ## Show or hide the option to set security privileges for data frame service
+    dataframe: true
 
 ## Configuration for dynamic form fields.
 ##
