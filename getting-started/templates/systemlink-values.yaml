@@ -891,7 +891,7 @@ dataframeservice:
 
 ## Grafana provisioning
 ##
-# grafanaprovisioning:
+grafanaprovisioning:
   # grafanaDashboardsProvisioning:
     ## Dashboards listed are enumerated over the dashboard-configmap-template.yaml
     ## Each key under the "dashboards" item will be the name of a ConfigMap.
@@ -914,12 +914,12 @@ dataframeservice:
       #      enabled: false | true
       #      featureFlags:
       #        - someFlag
-  # grafanaDatasourcesProvisioning:
+  grafanaDatasourcesProvisioning:
     ## SystemLink enumerates all datasources in the datasource-configmap-template.yaml file.
     ## Each key under the "datasources" item will be the name of a datasource in the ConfigMap.
     ## By default, all "enabled" parameters are considered as true even if they are not mentioned. You can disable this by assigning "whitelistMode: true"
     # whitelistMode: false
-    # projects:
+    projects:
       ## Datasources must be grouped under projects.
       ## There is an optional "enabled" parameter that defaults to true which can be used to toggle the project/datasource on or off.
       ## There is an optional "featureFlags" list to gate a project or datasource on one or more global feature flags.
@@ -935,6 +935,12 @@ dataframeservice:
       #       type: some-datasource
       #       ## SystemLink copies each data source exactly as written into the template. To properly define an entry into the template, refer to the format as defined in the following link: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L458
       #       ## Instead of a list of data sources, SystemLink uses key-pair values. You can define these values in the same way as Grafana.
+      systemlink:
+        datasources:
+          ## Provision these datasources only when every listed feature flag is enabled under
+          ## global.featureFlags. The grafanaprovisioning helper resolves the names below.
+          ni-sldataframe-datasource:
+            enabled: *dataframeserviceEnabled
 
 ## Salt configuration.
 ##
