@@ -118,6 +118,19 @@ global:
   ## Deploy the certificate stored in apiHostCertificateSecret to all managed systems.
   ##
   deployApiHostCertificateToSystems: false
+  ##
+  ## Use the flags below to enable or disable optional SystemLink capabilities.
+  ##
+  # featureFlags:
+    # <ATTENTION> - Set to false to disable deployment of the work item and lab management UI services.
+    ##
+    # workitem: true
+    ##
+    # <ATTENTION> - Set to false to disable the Work Order APIs (work orders, test plans, test plan templates,
+    #               and workflows), their Grafana dashboards and datasources, and their Swagger API entries.
+    #               Has no effect unless global.featureFlags.workitem is also true.
+    ##
+    # workOrderApis: true
 
 ## Core configuration for the RabbitMQ message broker
 ##
@@ -684,25 +697,33 @@ dashboardhost:
       ## You must group all dashboards under a project.
       ## The "path" of a dashboard must point to a JSON file.
       ## Use the "enabled" parameter to toggle a project or dashboard on or off. This optional parameter defaults to 'true'.
+      ## Use the optional "featureFlags" list to gate a project or dashboard on one or more global feature flags.
+      ## A dashboard is provisioned only when: enabled=true AND every listed feature flag is enabled under global.featureFlags.
       # some-project:
       #   enabled: false | true
       #   dashboards:
       #     some-dashboard:
       #      path: "dashboards/project/some-dashboard.json"
       #      enabled: false | true
+      #      featureFlags:
+      #        - someFlag
   # grafanaDatasourcesProvisioning:
     ## SystemLink enumerates all datasources in the datasource-configmap-template.yaml file.
     ## Each key under the "datasources" item will be the name of a datasource in the ConfigMap.
     ## By default, all "enabled" parameters are considered as true even if they are not mentioned. You can disable this by assigning "whitelistMode: true"
     # whitelistMode: false
     # projects:
-      ## Datasources must be grouped under projects
-      ## There is an optional "enabled" parameter that defaults to true which can be used to toggle the project/dashboard on or off.
+      ## Datasources must be grouped under projects.
+      ## There is an optional "enabled" parameter that defaults to true which can be used to toggle the project/datasource on or off.
+      ## There is an optional "featureFlags" list to gate a project or datasource on one or more global feature flags.
+      ## A datasource is provisioned only when: enabled=true AND every listed feature flag is enabled under global.featureFlags.
       # some-project:
       #   enabled: false | true
       #   datasources:
       #     some-datasource:
       #       enabled: false | true
+      #       featureFlags:
+      #         - someFlag
       #       name: Some Datasource
       #       type: some-datasource
       #       ## SystemLink copies each data source exactly as written into the template. To properly define an entry into the template, refer to the format as defined in the following link: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L458
@@ -1357,14 +1378,6 @@ comments:
   ## Maximum number of comments supported per delete comments request.
   ##
   maximumCommentsPerDeleteRequest: 1000
-
-## Configuration for work item service.
-##
-workitem:
-  ## <ATTENTION> - Set false to disable the deployment of the work item and lab management UI services.
-  ## By default, this is enabled and the work item and lab management UI services are deployed.
-  ##
-  enabled: true
 
 ## Configuration for specification management service.
 ##
