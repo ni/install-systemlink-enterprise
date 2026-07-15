@@ -69,7 +69,7 @@ instructions, refer to
 
 ### NI Containers
 
-```
+```text
     alarmservice-routine-executor:0.26.104
     alarmservice:0.26.104
     alarmsui:0.36.80-20514973
