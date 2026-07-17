@@ -547,6 +547,12 @@ assetservicecdc:
             ## You can only configure this value for the first deployment. Subsequent deployments ignore this variable.
             primaryShardsCount: 1
 
+  ## Additional Flink configuration.
+  ## Only the Flink configuration keys explicitly listed below are applied. Any other key added here is ignored.
+  ##
+  flinkConfiguration:
+    pekko.framesize: "15728640b"
+
 ## Configuration for the Grafana dashboard provider.
 ##
 dashboardhost:
@@ -1102,6 +1108,12 @@ fileingestioncdc:
             ## You can only configure this value for the first deployment. Subsequent deployments ignore this variable.
             primaryShardsCount: 2
 
+  ## Additional Flink configuration.
+  ## Only the Flink configuration keys explicitly listed below are applied. Any other key added here is ignored.
+  ##
+  flinkConfiguration:
+    pekko.framesize: "10485760b"
+
 ## Configuration for JupyterHub.
 ##
 sl-jupyterhub:
@@ -1365,6 +1377,12 @@ systemscdc:
             ## The number of primary shards that SystemLink allocates for the systems elastic index.
             ## You can only configure this value for the first deployment. Subsequent deployments ignore this variable.
             primaryShardsCount: 2
+
+  ## Additional Flink configuration.
+  ## Only the Flink configuration keys explicitly listed below are applied. Any other key added here is ignored.
+  ##
+  flinkConfiguration:
+    pekko.framesize: "15728640b"
 
 ## Configuration for comments service.
 ##
