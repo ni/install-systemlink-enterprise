@@ -9,12 +9,14 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
+- SystemLink has added a new `About UI` section that displays release the
+  version and links to the new features online documentation.
 - Create work orders from templates. For more information, refer to
   [Creating and Managing Work Orders](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-and-managing-work-orders.html).
 - Automate your work orders through a Jupyter notebook. For more information,
   refer to
   [Automating Work Items and Work Orders with Jupyter Notebook](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/automate-test-plans-with-jupyter-notebook.html).
-- Support for the workorder and transportorder work item types in dynamic form
+- Support for the workorder and transport order work item types in dynamic form
   fields. For more information, refer to
   [Configuring Dynamic Form Fields](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/initiating-dynamic-form-field-configuration.html).
 - `dataframeservice:1.31.66`
@@ -27,19 +29,19 @@ required configuration changes.
     through the `dataframeservice.ingestion.maxRowDataStringValueSize` Helm
     value. However, increasing the limit reverts to the previous behavior.
 - `systemlink:0.51.79`
-  - Users can call `/api/config` to view SystemLink deployment. When you host
-    the UI at `<hostname>/api/config`, SystemLink returns a JSON object with an
-    `appDisplayVersionKey` value set to a date string. For example, the JSON
-    object might contain the value `2026-07`.
-  - SystemLink has added a new `About UI` section that displays release the
-    version and links to the new features wiki page.
+  - Call `<hostname>/api/config` to view the deployed SystemLink version.
+    SystemLink returns a JSON object containing an `appDisplayVersionKey` value
+    set to a date string, for example `2026-07`.
 - `assetservicecdc:0.5.87`, `fileingestioncdc:0.12.47`, `systemscdc:0.3.52`
   - SystemLink previously ignored the `authSource` value from the MongoDB
     connection strings and instead assumed an `admin` value. CDC apps now follow
-    the MongoDB convention:
-    [https://www.mongodb.com/docs/manual/reference/connection-string-options/#mongodb-urioption-urioption.authSource](https://www.mongodb.com/docs/manual/reference/connection-string-options/#mongodb-urioption-urioption.authSource).
+    the
+    [MongoDB auth source convention](https://www.mongodb.com/docs/manual/reference/connection-string-options/#mongodb-urioption-urioption.authSource).
 - `workitem:0.7.111`
-  - SystemLink migrated work orders as work items with `type: "workorder"`. The
+  - SystemLink migrates all work orders to work items. The migration job runs
+    during the Helm upgrade. This job causes a brief downtime. This downtime is
+    proportional to the number of existing work orders and child work items.
+  - SystemLink migrates work orders as work items with `type: "workorder"`. The
     `deprecated _Work Order_ APIs` remain functional for backward compatibility.
     This migration introduces breaking changes. You must update your existing
     workflows, custom roles with `_Work Order_` privileges, and external
@@ -55,21 +57,17 @@ required configuration changes.
     `timeline.dueDateTime`.
   - To create DFFs that apply only to work orders, use the resource type
     `workitem:workitem` with a `type == "workorder"` display rule condition.
-
-## Helm Chart Breaking Changes
-
 - `userservices:0.45.31`
-  - SystemLink disables calls to POST /niauth/v1/policies. Specifically,
+  - SystemLink disables calls to POST `/niauth/v1/policies`. Specifically,
     SystemLink disables calls that create a policy from a template with the
-    "workspace" field set to "\*". A bug in the input validation code permitted
+    "workspace" field set to `\*`. A bug in the input validation code permitted
     administrators to assign roles that applied in any workspace. This
     unintended behavior extended to existing and future workspaces. Attempts to
     create a policy with this method returns an HTTP 400 error message. You must
     manually delete any existing policies with this behavior.
-- `workitem:0.7.111`
-  - SystemLink migrates all work orders to work items. The migration job runs
-    during the Helm upgrade. This job causes a brief downtime. This downtime is
-    proportional to the number of existing work orders and child work items.
+
+## Helm Chart Breaking Changes
+
 - `systemlink:0.51.79`
   - The top-level SystemLink Helm values file has moved the condition that
     controls the deployment of `workitem` and `labmanagementui` services. The

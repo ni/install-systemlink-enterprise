@@ -45,6 +45,10 @@ Remind users that release notes should be compiled from these specific sources:
 ## Content Guidelines
 
 - Use active voice: "Added support for..." not "Support was added for..."
+- **Tense**: Use present tense in sub-bullets under versioned service references
+  (e.g., "SystemLink now limits..." not "SystemLink limited..."). Top-level
+  feature bullets may use imperative or past participle for brevity ("Create
+  work orders from templates", "Added support for...").
 - Explain user impact: What changed and why it matters to administrators
 - Include documentation links for new features when available
 - For breaking changes, provide configuration guidance
