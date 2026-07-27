@@ -9,7 +9,7 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- SystemLink has added a new `About UI` section that displays release the
+- SystemLink has added a new `About UI` section that displays the release
   version and links to the new features online documentation.
 - Create work orders from templates. For more information, refer to
   [Creating and Managing Work Orders](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/creating-and-managing-work-orders.html).
@@ -38,10 +38,10 @@ required configuration changes.
     the
     [MongoDB auth source convention](https://www.mongodb.com/docs/manual/reference/connection-string-options/#mongodb-urioption-urioption.authSource).
 - `workitem:0.7.111`
-  - SystemLink migrates all work orders to work items. The migration job runs
-    during the Helm upgrade. This job causes a brief downtime. This downtime is
-    proportional to the number of existing work orders and child work items.
-  - SystemLink migrates work orders as work items with `type: "workorder"`. The
+  - SystemLink migrates all work orders to work items during the Helm upgrade.
+    The migration causes a brief downtime proportional to the number of existing
+    work orders and child work items.
+  - SystemLink migrates work orders to work items with `type: "workorder"`. The
     `deprecated _Work Order_ APIs` remain functional for backward compatibility.
     You must update your existing workflows, custom roles with `_Work Order_`
     privileges, and external integrations. For more information, refer to
@@ -57,33 +57,35 @@ required configuration changes.
   - To create DFFs that apply only to work orders, use the resource type
     `workitem:workitem` with a `type == "workorder"` display rule condition.
 - `userservices:0.45.31`
-  - SystemLink disables calls to POST `/niauth/v1/policies`. Specifically,
-    SystemLink disables calls that create a policy from a template with the
-    "workspace" field set to `\*`. A bug in the input validation code permitted
-    administrators to assign roles that applied in any workspace. This
-    unintended behavior extended to existing and future workspaces. Attempts to
-    create a policy with this method returns an HTTP 400 error message. You must
-    manually delete any existing policies with this behavior.
+  - SystemLink disables calls to POST `/niauth/v1/policies` that create a policy
+    from a template with the "workspace" field set to `"*"`. A bug in the input
+    validation code permitted administrators to assign roles that applied in any
+    workspace. This unintended behavior extended to existing and future
+    workspaces. Attempts to create a policy with this method return an HTTP 400
+    error message. You must manually delete any existing policies with this
+    behavior.
 
 ## Helm Chart Breaking Changes
 
 - `systemlink:0.51.79`
-  - The top-level SystemLink Helm values file has moved the condition that
-    controls the deployment of `workitem` and `labmanagementui` services. The
-    condition is no longer under `workitem.enabled` but is now under
+
+  - The top-level SystemLink Helm values file moves the condition that controls
+    the deployment of `workitem` and `labmanagementui` services. The condition
+    is no longer under `workitem.enabled` but is now under
     `global.featureFlags.workitem`. If you set `workitem.enabled: false` to
     disable those services, you must change the override to
     `global.featureFlags.workitem: false`.
-  - SystemLink has introduced a new cross-cutting
+  - SystemLink introduces a new cross-cutting
     `global.featureFlags.workOrderApis` feature flag to centrally control the
     availability of all deprecated `_Work Order_ APIs`.
+
     - Setting the feature flag to `false` during a Helm upgrade has the
       following effects across the entire deployment:
       - Removes the deprecated ‘_Work Order_ Swagger’ entries from the Swagger
         UI API list.
       - No longer provisions the Grafana data sources for Work Orders and Test
         Plans. Any custom Grafana dashboards that depend on these data sources
-        will no longer function as you might expect.
+        will no longer function.
       - No longer provisions the following out-of-the-box Grafana dashboards:
         - Work Orders Overview
         - Test Plans Overview
@@ -96,9 +98,8 @@ required configuration changes.
     --set global.featureFlags.workOrderApis=false
     ```
 
-    - This feature flag is new. You do not need to have migrated previously. The
-      default of this flag is `true`, meaning that the Work Order surface
-      remains active.
+    - This flag defaults to `true`, meaning the Work Order surface remains
+      active. You do not need to have previously migrated to set this flag.
 
 ## Upgrade Considerations
 
