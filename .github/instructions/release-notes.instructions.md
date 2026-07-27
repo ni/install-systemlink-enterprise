@@ -34,7 +34,8 @@ Remind users that release notes should be compiled from these specific sources:
 
 ### Breaking Changes Format
 
-- Lead with service and version wrapped in backticks: `` `servicename:version.number` ``
+- Lead with service and version wrapped in backticks:
+  `` `servicename:version.number` ``
 - Structure as bulleted list with nested sub-items
 - Include "View this service configuration" links where applicable
 - Specify required administrative actions clearly
@@ -61,6 +62,9 @@ Remind users that release notes should be compiled from these specific sources:
 - Encourage verification of all links
 - Remind to use specific version numbers (avoid `.x`)
 - Suggest comparing against well-edited past releases for consistency
+- **No internal hostnames**: Never include real internal or CI/CD hostnames
+  (e.g. `test.lifecyclesolutions.ni.com`). Use the placeholder `<hostname>`
+  instead when a URL example is needed.
 
 ## Template Links
 
