@@ -43,9 +43,8 @@ required configuration changes.
     proportional to the number of existing work orders and child work items.
   - SystemLink migrates work orders as work items with `type: "workorder"`. The
     `deprecated _Work Order_ APIs` remain functional for backward compatibility.
-    This migration introduces breaking changes. You must update your existing
-    workflows, custom roles with `_Work Order_` privileges, and external
-    integrations. For more information, refer to
+    You must update your existing workflows, custom roles with `_Work Order_`
+    privileges, and external integrations. For more information, refer to
     [Work order to work item migration guidance](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/work-order-to-work-item-migration-guidance.html).
 - `dynamicformfields:0.20.69`
   - As part of the Work Order to Work Item migration, any existing DFFs with the
@@ -92,9 +91,11 @@ required configuration changes.
         endpoints.
     - To disable all Work Order API surfaces, pass the following bash command
       during the SystemLink upgrade:
+
     ```bash
     --set global.featureFlags.workOrderApis=false
     ```
+
     - This feature flag is new. You do not need to have migrated previously. The
       default of this flag is `true`, meaning that the Work Order surface
       remains active.

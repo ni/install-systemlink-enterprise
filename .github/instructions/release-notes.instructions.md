@@ -34,6 +34,18 @@ Remind users that release notes should be compiled from these specific sources:
 
 ### Breaking Changes Format
 
+**Helm Chart Breaking Changes** means exclusively: the administrator must modify
+a Helm configuration value to successfully upgrade. Do not use this section for
+behavior changes that happen to be disruptive, API deprecations, or changes
+requiring non-Helm admin action — those belong in New Features and Behavior
+Changes.
+
+Do not use the term "breaking change" in the New Features and Behavior Changes
+section. If an item requires administrator action (role updates, workflow
+changes, integration updates), communicate the requirement directly without
+labeling it a "breaking change," which creates confusion with the Helm breaking
+changes section.
+
 - Lead with service and version wrapped in backticks:
   `` `servicename:version.number` ``
 - Structure as bulleted list with nested sub-items
