@@ -136,9 +136,9 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.51.79`
+**Top Level Helm Chart:** `systemlink 0.51.89`
 
-**Admin Helm Chart:** `systemlink-admin 0.51.7`
+**Admin Helm Chart:** `systemlink-admin 0.51.10`
 
 **Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.13.18`
 
@@ -147,20 +147,20 @@ instructions, refer to
 ```text
 alarmservice-routine-executor:0.26.104
 alarmservice:0.26.104
-alarmsui:0.36.80-20514973
+alarmsui:0.36.81
 assetservice:0.37.141
 assetservicecdc:0.5.87
-assetui:0.36.81
+assetui:0.36.83
 comments:0.35.101
-dashboardsui:0.39.74
+dashboardsui:0.39.75
 dataframeservice-nessie:1.31.66
 dataframeservice:1.31.66
 dynamicformfields:0.20.69
-executionsui:0.39.71
+executionsui:0.39.72
 feedservice:0.28.46
-feedsui:0.27.73
+feedsui:0.27.74
 fileingestioncdc:0.12.47
-filesui:0.40.84
+filesui:0.40.85
 grafana-auth-proxy:0.38.19
 grafana-plugins:5.0.2
 grafana-rbac-integrator:0.38.19
@@ -174,12 +174,12 @@ helium-taghistorianmongomigration:0.34.24
 helium-taghistorianservices:0.34.24
 helium-userservices:0.45.31
 helium-webappservices:0.43.34
-helium-webserver:0.52.48
+helium-webserver:0.52.49
 jupyter-notebook-userpod:2.30.15
-jupyterui:0.39.68
-labmanagementui:0.30.110
-landingpageui:0.39.65
-locationmanagementui:0.9.73
+jupyterui:0.39.69
+labmanagementui:0.30.112
+landingpageui:0.39.66
+locationmanagementui:0.9.74
 locationservice:0.10.44
 nbexec-execution-helpers:0.40.47
 nbexec-notebook-runner:0.40.60
@@ -193,8 +193,8 @@ routineexecutor:0.40.99
 routinescheduletrigger:0.40.33
 routineservice-v2:0.41.51
 routineservice:0.41.51
-routinesui:0.40.83
-securityui:0.39.76
+routinesui:0.40.85
+securityui:0.39.77
 session-manager-service:0.46.41
 sl-configurable-http-proxy:2.30.9
 sl-k8s-hub:2.30.13
@@ -203,15 +203,15 @@ specificationmanagement:0.30.37
 systemscdc:0.3.52
 systemsmanagementservice:0.39.88
 systemsstateservice:0.29.41
-systemsstatesui:0.28.77
-systemsui:0.40.108
+systemsstatesui:0.28.78
+systemsui:0.40.110
 tageventprocessor:0.38.32
-tagsui:0.35.82
-testinsightsui:0.39.77
+tagsui:0.35.83
+testinsightsui:0.39.79
 testmonitorservice:0.48.102
 userdata:0.39.33
 userservice-setup:0.46.11
-webapphostui:0.38.76
+webapphostui:0.38.77
 workitem:0.7.111
 ```
 
