@@ -69,7 +69,7 @@ assigned during migration.
 Query the Work Item API and filter by `legacyWorkOrderId`. Use the returned `id`
 in subsequent API calls.
 
-```
+```text
 POST /niworkitem/v1/query-workitems
 {
   "filter": "legacyWorkOrderId == \"<old-work-order-id>\""
