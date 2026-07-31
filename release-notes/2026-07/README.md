@@ -45,7 +45,7 @@ required configuration changes.
     `deprecated _Work Order_ APIs` remain functional for backward compatibility.
     You must update your existing workflows, custom roles with `_Work Order_`
     privileges, and external integrations. For more information, refer to
-    [Work order to work item migration guidance](https://github.com/ni/install-systemlink-enterprise/tree/2026-07/release-notes/2026-07/Test-plan-to-work-item-migration-guidance.md).
+    [Work order to work item migration guidance](https://github.com/ni/install-systemlink-enterprise/tree/2026-07/release-notes/2026-07/Work-order-to-work-item-migration-guidance.md).
 - `dynamicformfields:0.20.69`
   - As part of the Work Order to Work Item migration, any existing DFFs with the
     `workorder:workorder` resource type automatically migrate to the
