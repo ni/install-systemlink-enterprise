@@ -1,0 +1,36 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:40ce3a3c-4fa1-4c6d-853c-9918967742b4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-09T17:17:15Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.46.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "pkg:helm/systemlinkelasticsearch@0.13.18",
+      "type": "application",
+      "publisher": "NI",
+      "name": "systemlinkelasticsearch",
+      "version": "0.13.18",
+      "description": "A Helm chart for elastic search",
+      "licenses": [
+        {
+          "license": {
+            "name": "SLE Software License"
+          }
+        }
+      ],
+      "purl": "pkg:helm/systemlinkelasticsearch@0.13.18"
+    }
+  }
+}

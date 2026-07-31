@@ -34,7 +34,20 @@ Remind users that release notes should be compiled from these specific sources:
 
 ### Breaking Changes Format
 
-- Lead with service and version wrapped in backticks: `` `servicename:version.number` ``
+**Helm Chart Breaking Changes** means exclusively: the administrator must modify
+a Helm configuration value to successfully upgrade. Do not use this section for
+behavior changes that happen to be disruptive, API deprecations, or changes
+requiring non-Helm admin action — those belong in New Features and Behavior
+Changes.
+
+Do not use the term "breaking change" in the New Features and Behavior Changes
+section. If an item requires administrator action (role updates, workflow
+changes, integration updates), communicate the requirement directly without
+labeling it a "breaking change," which creates confusion with the Helm breaking
+changes section.
+
+- Lead with service and version wrapped in backticks:
+  `` `servicename:version.number` ``
 - Structure as bulleted list with nested sub-items
 - Include "View this service configuration" links where applicable
 - Specify required administrative actions clearly
@@ -44,6 +57,10 @@ Remind users that release notes should be compiled from these specific sources:
 ## Content Guidelines
 
 - Use active voice: "Added support for..." not "Support was added for..."
+- **Tense**: Use present tense in sub-bullets under versioned service references
+  (e.g., "SystemLink now limits..." not "SystemLink limited..."). Top-level
+  feature bullets may use imperative or past participle for brevity ("Create
+  work orders from templates", "Added support for...").
 - Explain user impact: What changed and why it matters to administrators
 - Include documentation links for new features when available
 - For breaking changes, provide configuration guidance
@@ -61,6 +78,9 @@ Remind users that release notes should be compiled from these specific sources:
 - Encourage verification of all links
 - Remind to use specific version numbers (avoid `.x`)
 - Suggest comparing against well-edited past releases for consistency
+- **No internal hostnames**: Never include real internal or CI/CD hostnames
+  (e.g. `test.lifecyclesolutions.ni.com`). Use the placeholder `<hostname>`
+  instead when a URL example is needed.
 
 ## Template Links
 
