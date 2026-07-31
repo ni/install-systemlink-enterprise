@@ -42,8 +42,8 @@ required configuration changes.
     The migration causes a brief downtime proportional to the number of existing
     work orders and child work items.
   - SystemLink migrates work orders to work items with `type: "workorder"`. The
-    `deprecated _Work Order_ APIs` remain functional for backward compatibility.
-    You must update your existing workflows, custom roles with `_Work Order_`
+    deprecated _Work Order_ APIs remain functional for backward compatibility.
+    You must update your existing workflows, custom roles with _Work Order_
     privileges, and external integrations. For more information, refer to
     [Work order to work item migration guidance](https://github.com/ni/install-systemlink-enterprise/tree/2026-07/release-notes/2026-07/Work-order-to-work-item-migration-guidance.md).
 - `dynamicformfields:0.20.69`
@@ -58,7 +58,7 @@ required configuration changes.
     `workitem:workitem` with a `type == "workorder"` display rule condition.
 - `userservices:0.45.31`
   - SystemLink disables calls to POST `/niauth/v1/policies` that create a policy
-    from a template with the "workspace" field set to `"*"`. A bug in the input
+    from a template with the `"workspace"` field set to `"*"`. A bug in the input
     validation code permitted administrators to assign roles that applied in any
     workspace. This unintended behavior extended to existing and future
     workspaces. Attempts to create a policy with this method return an HTTP 400
@@ -77,11 +77,11 @@ required configuration changes.
     `global.featureFlags.workitem: false`.
   - SystemLink introduces a new cross-cutting
     `global.featureFlags.workOrderApis` feature flag to centrally control the
-    availability of all deprecated `_Work Order_ APIs`.
+    availability of all deprecated _Work Order_ APIs.
 
     - Setting the feature flag to `false` during a Helm upgrade has the
       following effects across the entire deployment:
-      - Removes the deprecated ‘_Work Order_ Swagger’ entries from the Swagger
+      - Removes the deprecated _Work Order_ Swagger entries from the Swagger
         UI API list.
       - No longer provisions the Grafana data sources for Work Orders and Test
         Plans. Any custom Grafana dashboards that depend on these data sources
@@ -89,17 +89,9 @@ required configuration changes.
       - No longer provisions the following out-of-the-box Grafana dashboards:
         - Work Orders Overview
         - Test Plans Overview
-      - Returns `403 Forbidden` requests for the deprecated ‘_Work Order_’ API
+      - Returns `403 Forbidden` requests for the deprecated _Work Order_ API
         endpoints.
-    - To disable all Work Order API surfaces, pass the following bash command
-      during the SystemLink upgrade:
-
-    ```bash
-    --set global.featureFlags.workOrderApis=false
-    ```
-
-    - This flag defaults to `true`, meaning the Work Order surface remains
-      active. You do not need to have previously migrated to set this flag.
+    - This flag defaults to `true`.
 
 ## Upgrade Considerations
 
