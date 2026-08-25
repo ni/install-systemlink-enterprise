@@ -7,21 +7,15 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from SystemLink Enterprise 2026-07 to 2026-08
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- Access the Product Summary dashboard within the product details page under the Overview tab. For more information, refer to [Using the Product Summary Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/product-summary-dashboard.html).
 
 ## Helm Chart Breaking Changes
 
-- `webserver:0.53.19`
+- `webserver:0.53.x`
   - SystemLink no longer uses the `webserver.secrets.encryptionKey` Helm configuration value. This update is not a breaking change. Your existing configurations shall continue to work, but you can remove the unnecessary Helm value.
-- `labmanagementui:0.31.51`
+- `labmanagementui:0.31.x`
   - You can no longer use work items or a work order UI to assign a work item to the built-in Admin User account. You also cannot use this method to have the Admin User account own a work item. This update should be unnoticeable. If you configure a work item in this way, that work item may appear as invalid in the UI.
 
 ## Upgrade Considerations
@@ -49,17 +43,13 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-08 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-08/release-notes/2026-08/closed-bugs-sle-2026-08.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-08/release-notes/2026-08/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-08/release-notes/2026-08/notices)
 
 ## Versions
 
