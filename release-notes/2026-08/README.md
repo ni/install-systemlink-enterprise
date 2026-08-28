@@ -1,22 +1,24 @@
 # SystemLink Enterprise 2026-08 Release Notes
 
-The 2026-08 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-08 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-- Access the Product Summary dashboard within the product details page under the Overview tab. For more information, refer to [Using the Product Summary Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/product-summary-dashboard.html).
+- Access the Product Summary dashboard within the product details page under the
+  Overview tab. For more information, refer to
+  [Using the Product Summary Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/product-summary-dashboard.html).
+- The `webserver.secrets.encryptionKey` Helm configuration value is no longer
+  used. Your existing configurations continue to work, but you can remove this
+  value.
 
 ## Helm Chart Breaking Changes
 
-- `webserver:0.53.x`
-  - SystemLink no longer uses the `webserver.secrets.encryptionKey` Helm configuration value. This update is not a breaking change. Your existing configurations shall continue to work, but you can remove the unnecessary Helm value.
-- `labmanagementui:0.31.x`
-  - You can no longer use work items or a work order UI to assign a work item to the built-in Admin User account. You also cannot use this method to have the Admin User account own a work item. This update should be unnoticeable. If you configure a work item in this way, that work item may appear as invalid in the UI.
+No breaking changes were introduced in this release.
 
 ## Upgrade Considerations
 
