@@ -67,7 +67,7 @@ instructions, refer to
 
 **Admin Helm Chart:** `systemlink-admin <chart version>`
 
-**Elasticsearch Helm Chart:** `systemlinkelasticsearch <chart version`
+**Elasticsearch Helm Chart:** `systemlinkelasticsearch <chart version>`
 
 ### NI Containers
 
