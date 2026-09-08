@@ -80,3 +80,45 @@ container:version
 ```text
 container:version
 ```
+
+## Verifying Container Signatures
+
+Images published for SystemLink Enterprise are signed with 
+[cosign v3](https://docs.sigstore.dev/cosign/system_config/installation/).
+
+NI's public container signing key is available at
+<https://container-keys.ni.dev/containers-1.pem>.
+
+### Verifying an image
+
+Image names in the **Versions** section above omit their registry path. Build
+the full image reference as follows:
+
+- **NI containers**—prefix with
+  `downloads.artifacts.ni.com/ni-docker/ni/systemlink/`
+- **3rd party containers**—prefix with `downloads.artifacts.ni.com/ni-docker/`
+
+For example, to verify `kiwigrid/k8s-sidecar:2.10.1`:
+
+```bash
+cosign verify --key https://container-keys.ni.dev/containers-1.pem \
+  downloads.artifacts.ni.com/ni-docker/kiwigrid/k8s-sidecar:2.10.1
+```
+
+cosign exits with status 0 and reports the following when the signature is
+valid:
+
+```text
+Verification for downloads.artifacts.ni.com/ni-docker/kiwigrid/k8s-sidecar:2.10.1 --
+The following checks were performed on each of these signatures:
+  - The cosign claims were validated
+  - Existence of the claims in the transparency log was verified offline
+  - The signatures were verified against the specified public key
+```
+
+cosign then writes the signature payload to standard output, which includes the
+`docker-manifest-digest` of the image that was verified.
+
+If an image is unsigned, signed with a different key, or has been modified,
+cosign exits with a non-zero status and reports an error such as
+`no signatures found`.
