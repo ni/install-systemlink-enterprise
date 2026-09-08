@@ -84,7 +84,7 @@ container:version
 ## Verifying Container Signatures
 
 Images published for SystemLink Enterprise are signed with 
-[cosign v2.x](https://docs.sigstore.dev/cosign/system_config/installation/).
+[cosign v3](https://docs.sigstore.dev/cosign/system_config/installation/).
 
 NI's public container signing key is available at
 <https://container-keys.ni.dev/containers-1.pem>.
