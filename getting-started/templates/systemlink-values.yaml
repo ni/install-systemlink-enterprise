@@ -122,6 +122,8 @@ global:
   ## Use the flags below to enable or disable optional SystemLink capabilities.
   ##
   # featureFlags:
+    # <ATTENTION> - Set to false to disable the deployment of the DataFrame service.
+    # dataframe: true
     # <ATTENTION> - Set to false to disable deployment of the work item and lab management UI services.
     ##
     # workitem: true
@@ -691,10 +693,6 @@ dashboardhost:
 ## Configuration for the Data Frame service.
 ##
 dataframeservice:
-  ## Set true to enable the deployment of the DataFrame service.
-  ## By default, this is enabled and the DataFrame service is deployed.
-  enabled: &dataframeserviceEnabled true
-
   ## Ingress configuration
   ##
   ingress:
@@ -941,12 +939,6 @@ grafanaprovisioning:
       #       type: some-datasource
       #       ## SystemLink copies each data source exactly as written into the template. To properly define an entry into the template, refer to the format as defined in the following link: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L458
       #       ## Instead of a list of data sources, SystemLink uses key-pair values. You can define these values in the same way as Grafana.
-      systemlink:
-        datasources:
-          ## Provision these datasources only when every listed feature flag is enabled under
-          ## global.featureFlags. The grafanaprovisioning helper resolves the names below.
-          ni-sldataframe-datasource:
-            enabled: *dataframeserviceEnabled
 
 ## Salt configuration.
 ##
@@ -1440,9 +1432,6 @@ serviceregistry:
       specification:
         ## Add the "Specification" service to the service registry if enabled
         enabled: *specificationManagementEnabled
-  privilegeToggles:
-    ## Show or hide the option to set security privileges for data frame service
-    dataframe: *dataframeserviceEnabled
 
 ## Configuration for dynamic form fields.
 ##
