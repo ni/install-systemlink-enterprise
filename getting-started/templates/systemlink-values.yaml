@@ -127,7 +127,7 @@ global:
     # workitem: true
     ##
     # <ATTENTION> - Set to false to disable the Work Order APIs (work orders, test plans, test plan templates,
-    #               and workflows), their Grafana dashboards and datasources, and their Swagger API entries.
+    #               and workflows), their Grafana datasources, and their Swagger API entries.
     #               Has no effect unless global.featureFlags.workitem is also true.
     ##
     # workOrderApis: true
