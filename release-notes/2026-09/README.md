@@ -10,9 +10,9 @@ all required configuration changes.
 ## New Features and Behavior changes
 
 Explore the September 2026 SystemLink Enterprise release, including new data space capabilities.
+- View limits from specifications with their associated data in data spaces. For more information, refer to [Visualizing Specification Limits in a Data Space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-spec-limits-in-data-spaces.html).
 - View channel data from TDMS files in Data Spaces.
 - By default, SystemLink enables the new TDM Reader service in all deployments. This service includes the `tdms:QueryData` and `tdms:ReadMetadata` privileges. SystemLink groups these privileges under a "TDM Reader" category and grants both privileges to the built-in Data Maintainer, Systems Maintainer, and Collaborator roles.
-- View limits from specifications with their associated data in data spaces. For more information, refer to [Visualizing Specification Limits in a Data Space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-spec-limits-in-data-spaces.html).
 
 ## Helm Chart Breaking Changes
 
