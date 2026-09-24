@@ -7,20 +7,16 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from SystemLink Enterprise 2026-08 to 2026-09
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+Explore the September 2026 SystemLink Enterprise release, including new data space capabilities.
+- View channel data from TDMS files in Data Spaces.
+- By default, SystemLink enables the new TDM Reader service in all deployments. This service includes the `tdms:QueryData` and `tdms:ReadMetadata` privileges. SystemLink groups these privileges under a "TDM Reader" category and grants both privileges to the built-in Data Maintainer, Systems Maintainer, and Collaborator roles.
+- View limits from specifications with their associated data in data spaces. For more information, refer to [Visualizing Specification Limits in a Data Space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-spec-limits-in-data-spaces.html).
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+No breaking changes were introduced in this release.
 
 ## Upgrade Considerations
 
