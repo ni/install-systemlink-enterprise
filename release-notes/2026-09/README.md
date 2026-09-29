@@ -1,19 +1,26 @@
 # SystemLink Enterprise 2026-09 Release Notes
 
-The 2026-09 release for SystemLink Enterprise has been
-published to <https://downloads.artifacts.ni.com>. This update includes new
-features, bug fixes, and security updates. Work with your account representative
-to obtain credentials to access these artifacts. If you are not upgrading from
-the previous release, refer to past release notes to ensure you have addressed
-all required configuration changes.
+The 2026-09 release for SystemLink Enterprise has been published to
+<https://downloads.artifacts.ni.com>. This update includes new features, bug
+fixes, and security updates. Work with your account representative to obtain
+credentials to access these artifacts. If you are not upgrading from the
+previous release, refer to past release notes to ensure you have addressed all
+required configuration changes.
 
 ## New Features and Behavior changes
 
-Explore the September 2026 SystemLink Enterprise release, including new data space capabilities.
+Explore the September 2026 SystemLink Enterprise release, including new data
+space capabilities.
 
-- View limits from specifications with their associated data in data spaces. For more information, refer to [Visualizing Specification Limits in a Data Space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-spec-limits-in-data-spaces.html).
-- View channel data from TDMS files in Data Spaces.
-- By default, SystemLink enables the new TDM Reader service in all deployments. This service includes the `tdms:QueryData` and `tdms:ReadMetadata` privileges. SystemLink groups these privileges under a "TDM Reader" category and grants both privileges to the built-in Data Maintainer, Systems Maintainer, and Collaborator roles.
+- View limits from specifications with their associated data in data spaces. For
+  more information, refer to
+  [Visualizing Specification Limits in a Data Space](https://www.ni.com/docs/en-US/bundle/systemlink-enterprise/page/visualizing-spec-limits-in-data-spaces.html).
+- View channel data from TDMS files in data spaces.
+- By default, SystemLink enables the new TDM Reader service in all deployments.
+  This service includes the `tdms:QueryData` and `tdms:ReadMetadata` privileges.
+  SystemLink groups these privileges under a **TDM Reader** category and grants
+  both privileges to the built-in **Data Maintainer**, **Systems Maintainer**,
+  and **Collaborator** roles.
 
 ## Helm Chart Breaking Changes
 
