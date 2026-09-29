@@ -54,7 +54,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.53.57`
+**Top Level Helm Chart:** `systemlink 0.53.59`
 
 **Admin Helm Chart:** `systemlink-admin 0.53.11`
 
@@ -126,7 +126,7 @@ systemsui:0.42.84
 tageventprocessor:0.40.19
 tagsui:0.37.48
 tdmreader:0.2.40
-testinsightsui:0.41.90
+testinsightsui:0.41.91
 testmonitorservice:0.50.79
 userdata:0.41.25
 userservice-setup:0.48.9
@@ -138,9 +138,13 @@ workitem:0.9.64
 
 ```text
 alpine:3.24.1
+alpine/curl:8.22.0
+apache/flink-kubernetes-operator:1.15.0
 bitnami-secure/containers/debian-12/argo-workflow-cli:4.1.2-debian-12-r1
 bitnami-secure/containers/debian-12/argo-workflow-controller:4.1.2-debian-12-r1
 bitnami-secure/containers/debian-12/argo-workflow-exec:4.1.2-debian-12-r2
+bitnami-secure/containers/debian-12/elasticsearch:9.5.3-debian-12-r1
+bitnami-secure/containers/debian-12/kibana:9.5.3-debian-12-r1
 bitnami-secure/containers/debian-12/kubectl:1.37.0
 bitnami-secure/containers/debian-12/rabbitmq:4.2.6-debian-12-r0
 bitnami-secure/containers/debian-12/redis-cluster:8.10.1-debian-12-r0
