@@ -1515,3 +1515,109 @@ dynamicformfields:
       ## The Certificate key to be retrieved from existing ConfigMap
       ##
       certificateSubPath: *postgresCertificateFileName
+
+## Configuration for the AI Assistant service.
+##
+aiassistantservice:
+  ## Set to false to disable the deployment of the AI Assistant service.
+  # <ATTENTION> - The AI Assistant service is enabled by default. It requires an external PostgreSQL database and
+  #               outbound HTTPS access from the cluster to the Nigel AI host configured in aiassistantservice.oidc.host.
+  ##
+  enabled: true
+
+  ## Feature toggles.
+  ##
+  featureFlags:
+    ## Enable the chat and login endpoints. These endpoints send data to the Nigel AI service.
+    # <ATTENTION> - Set to false to prevent the AI Assistant service from sending data to the Nigel AI service.
+    #               This setting does not affect the MCP server.
+    ##
+    chatEnabled: true
+    ## Expose SystemLink tools to AI clients through the Model Context Protocol (MCP) server.
+    ##
+    mcpServerEnabled: true
+
+  ## Connection to the Nigel AI service. The AI Assistant service authenticates users with this host and sends chat
+  ## requests to it.
+  ##
+  oidc:
+    ## Host name of the Nigel AI service. NI does not recommend changing this value.
+    ## If you change this value, you must also add "https://<host>" to webserver.trustedHostsForLocationHeader.
+    ##
+    host: "tnm.emerson.com"
+
+  ## Database configuration
+  ##
+  database:
+    ## The PostgreSQL database connection info.
+    ## The database migration job creates the "ai_assistant_service" schema in this database. The migration user
+    ## (or the service user, if migrationUser is unset) requires the CREATE privilege on the database.
+    # <ATTENTION> - You must configure the details of your external PostgreSQL database here.
+    ##
+    connectionInfo:
+      ## PostgreSQL host name.
+      ##
+      host: "" # <ATTENTION>
+      ## PostgreSQL port.
+      ##
+      port: "5432"
+      ## PostgreSQL database name.
+      ##
+      dbName: "" # <ATTENTION>
+      ## PostgreSQL user name used by the service.
+      ##
+      user: "" # <ATTENTION>
+      ## PostgreSQL user name used to perform migrations managed by this chart.
+      ## If unset database.connectionInfo.user is used instead.
+      ##
+      # migrationUser: ""
+      ## The name of the secret with PostgreSQL connection credentials.
+      ## If global.deploySecrets is true, this secret is created from aiassistantservice.secrets.database in systemlink-secrets.yaml.
+      ##
+      secretName: "aiassistant-postgres-credentials"
+      ## Password key for database.connectionInfo.user to be retrieved from the secret.
+      ##
+      passwordKey: "password"
+      ## Password key for database.connectionInfo.migrationUser to be retrieved from the secret.
+      ## If unset database.connectionInfo.passwordKey is used instead.
+      ##
+      # migrationPasswordKey: "migration-password"
+    ## Alternatively, provide the connection as a PostgreSQL URI stored in a secret.
+    ## NOTE: If `database.connectionString.secretName` is set, the `database.connectionInfo` parameters are ignored.
+    ## The URI must use the format postgresql://<user>:<password>@<host>:<port>/<database>. Special characters in the
+    ## user name and password must be percent-encoded. Configure TLS with the `database.tls` parameters rather than in the URI.
+    ##
+    # connectionString:
+    #   ## The name of the secret with the PostgreSQL connection string.
+    #   ## If global.deploySecrets is true, this secret is created from aiassistantservice.secrets.database in systemlink-secrets.yaml.
+    #   ##
+    #   secretName: "aiassistant-postgres-connection-string"
+    #   ## Key from the secret to retrieve the connection string the service will use to connect to PostgreSQL.
+    #   ##
+    #   connectionStringKey: "connection-string"
+    #   ## Key from the secret to retrieve the connection string that will be used to perform migrations managed by this chart.
+    #   ## If unset database.connectionString.connectionStringKey is used instead.
+    #   ##
+    #   migrationConnectionStringKey: null
+    ## The PostgreSQL database TLS configuration
+    ##
+    tls:
+      ## Enable TLS communication with the PostgreSQL database.
+      ## NOTE: If true, the public TLS certificate from the server (.pem or .crt)
+      ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
+      ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
+      ## parameters respectively.
+      ## Use the database.postgresCertificate value to automatically upload this certificate.
+      ##
+      enabled: true
+      ## PostgreSQL TLS verification mode. Supported values are "require", "verify-ca", and "verify-full".
+      ## "verify-full" also verifies that the database host name matches the server certificate and is recommended.
+      # <ATTENTION> - Use "verify-ca" if the server certificate does not contain the configured database host name.
+      ##
+      sslMode: "verify-full"
+      ## The name of an existing ConfigMap with a TLS certificate for the database.
+      ##
+      existingConfigMap: *postgresCertificateConfigMap
+      ## The Certificate key to be retrieved from existing ConfigMap
+      ##
+      certificateSubPath: *postgresCertificateFileName
