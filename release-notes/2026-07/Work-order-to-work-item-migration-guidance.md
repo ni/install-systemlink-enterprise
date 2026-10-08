@@ -17,6 +17,11 @@ Work Item APIs.
 1. Use the following table to find the equivalent Work Item endpoint for each
    Work Order API call, and update the request schema for any renamed fields.
 
+> **Note:** All existing work order data has already been migrated to the
+> work item collection in the database. No data migration action is required
+> from customers. Only the client-side API request and response schemas need
+> to be updated to match the new Work Item API.
+
 | Aspect                        | Work order API                            | Work item API                                                                |
 | ----------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------- |
 | Create                        | `POST /niworkorder/v1/workorders`         | `POST /niworkitem/v1/workitems` with `"type": "workorder"`                   |
@@ -26,8 +31,89 @@ Work Item APIs.
 | Delete                        | `POST /niworkorder/v1/delete-workorders`  | `POST /niworkitem/v1/delete-workitems`                                       |
 | Summary                       | `GET /niworkorder/v1/workorders-summary`  | `GET /niworkitem/v1/workitems-summary?type=workorder`                        |
 | **ID field**                  | Legacy work order ID for migrated records | New work item public ID                                                      |
-| **`earliestStartDate` field** | Flat field                                | `timeline.earliestStartDateTime` (nested)                                    |
-| **`dueDate` field**           | Flat field                                | `timeline.dueDateTime` (nested)                                              |
+
+### Field mapping reference
+
+The table below lists fields that have changed between the Work Order and
+Work Item schemas. The same field mappings also apply when using the
+`filter` and `projection` properties in `query-workitems` requests. Any
+field not listed keeps the same name and shape.
+
+| Work order field | Work item field | Change | Notes |
+| --- | --- | --- | --- |
+| `type` (`TEST_REQUEST`) | `type` (`workorder`) | **Changed** | The work order-specific type enum is replaced by the common work item `type`. Migrated and newly created work orders always have `type: "workorder"`. |
+| `earliestStartDate` | `timeline.earliestStartDateTime` | **Renamed + restructured** | |
+| `dueDate` | `timeline.dueDateTime` | **Renamed + restructured** | |
+| *(none)* | `templateId` | **New** | Work orders can now be created from a work item template. |
+| *(none)* | `timeline.estimatedDurationInSeconds` | **New** | |
+| *(none)* | `resources` | **Not supported** | Work orders don't support resource reservation. Systems, assets, DUTs, fixtures, and their filters don't apply to the `workorder` type. |
+| *(none)* | `executionActions` | **New** | |
+| *(none)* | `fileIdsFromTemplate` | **New** | Only applicable when `templateId` is used. |
+| *(none)* | `dashboard` | **New** | |
+| *(none)* | `workflowId` | **New** | Work orders can now use a configurable workflow instead of the fixed built-in state machine. |
+
+### Example: Create work order vs. create work item
+
+**Before migration — create (`POST /niworkorder/v1/workorders`):**
+
+```text
+{
+  "workOrders": [
+    {
+      "name": "Battery Pack Validation",
+      "type": "TEST_REQUEST",
+      "state": "NEW",
+      "description": "Validate battery pack cycle life under thermal stress.",
+      "assignedTo": "jane.doe@example.com",
+      "requestedBy": "ea9cd47e-23fc-4d71-b47e-e38b7a930e42",
+      "earliestStartDate": "2026-01-20T15:00:00Z",
+      "dueDate": "2026-01-25T15:00:00Z",
+      "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
+      "properties": {
+        "Priority": "High"
+      }
+    }
+  ]
+}
+```
+
+**After migration — create (`POST /niworkitem/v1/workitems`):**
+
+```text
+{
+  "workItems": [
+    {
+      "name": "Battery Pack Validation",
+      "type": "workorder",
+      "state": "new",
+      "description": "Validate battery pack cycle life under thermal stress.",
+      "templateId": "1000",
+      "assignedTo": "jane.doe@example.com",
+      "requestedBy": "ea9cd47e-23fc-4d71-b47e-e38b7a930e42",
+      "timeline": {
+        "earliestStartDateTime": "2026-01-20T15:00:00Z",
+        "dueDateTime": "2026-01-25T15:00:00Z",
+        "estimatedDurationInSeconds": 345600
+      },
+      "executionActions": [
+        {
+          "type": "MANUAL",
+          "action": "START"
+        }
+      ],
+      "fileIdsFromTemplate": ["19e943bd-a94d-4361-af64-0d1d2664a85b"],
+      "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
+      "properties": {
+        "Priority": "High"
+      },
+      "dashboard": {
+        "id": "cacfeca1-90a9-4603-a939-83332b33e3c5"
+      },
+      "workflowId": "7000"
+    }
+  ]
+}
+```
 
 ### Identify migrated work orders in the Work Item API
 
