@@ -63,12 +63,6 @@ field not listed keeps the same name and shape.
 
 ##### Resources restructuring
 
-> **Note:** This restructuring applies to work items only. Work item
-> templates keep their filter fields restructured the same way (see
-> [Work item template fields](#work-item-template-fields-formerly-test-plan-template-fields)
-> below), but have no `selections`, since templates don't reference
-> specific resource IDs.
-
 The flat `systemId`, `dutId`, `fixtureIds`, `systemFilter`, and `dutFilter`
 fields on test plans are now grouped under a single `resources` object on
 work items, with one entry per resource type (`systems`, `assets`, `duts`,
@@ -77,11 +71,17 @@ array of ID strings) and its own `filter` string.
 
 Each selection in `resources.duts`, `resources.assets`, and
 `resources.fixtures` also accepts optional `targetLocationId`,
-`targetSystemId`, and `targetParentId` fields, which were not available on
-test plans. These let you move the reserved resource to a new location,
-system, or parent asset as part of the same request. `resources.systems`
+`targetSystemId`, and `targetParentId` fields, which are not applicable for
+test plans. These parameters let you specify where the reserved resource has to
+be moved as part of the transport order work item. `resources.systems`
 selections only accept `targetLocationId`, since a system can't be moved to
 another system or connected to a parent asset.
+
+> **Note:** This restructuring applies to work items only. Work item
+> templates keep their filter fields restructured the same way (see
+> [Work item template fields](#work-item-template-fields-formerly-test-plan-template-fields)
+> below), but have no `selections`, since templates don't reference
+> specific resource IDs.
 
 #### Work item template fields (formerly test plan template fields)
 
@@ -94,25 +94,29 @@ another system or connected to a parent asset.
 | *(none)* | `resources.assets.filter` | **New** | |
 | *(none)* | `resources.fixtures.filter` | **New** | |
 
-#### Example: Create test plan vs. create work item
+#### Example: Test Plan vs. Work Item
 
-**Before migration — create (`POST /niworkorder/v1/testplans`):**
+**Before migration — create (`POST /niworkorder/v1/testplans`):**.
 
 ```text
 {
   "testPlans": [
     {
       "name": "Battery Cycle Test",
+      "state": "NEW",
       "templateId": "1000",
-      "workOrderId": "2000",
+      "description": "Validate battery pack cycle life under thermal stress.",
+      "assignedTo": "ea9cd47e-23fc-4d71-b47e-e38b7a930e43",
       "partNumber": "156502A-11L",
+      "testProgram": "BatteryCycleTest.py",
+      "workOrderId": "2000",
       "dutId": "d783c96e-b349-40cb-8479-834cf99a859",
-      "systemId": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
-      "fixtureIds": ["c8f7cba9-6299-4312-bb18-aa5c55265031"],
-      "systemFilter": "properties.data[\"Lab\"] = \"Battery Pack Lab\"",
+      "dutSerialNumber": "01BB877A",
       "dutFilter": "modelName = \"cRIO-9045\"",
+      "systemFilter": "properties.data[\"Lab\"] = \"Battery Pack Lab\"",
       "estimatedDurationInSeconds": 172800,
-      "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e"
+      "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
+      "workflowId": "1000"
     }
   ]
 }
@@ -120,15 +124,17 @@ another system or connected to a parent asset.
 
 To set the planned schedule, follow up with a call to
 `POST /niworkorder/v1/schedule-testplans`, using the `id` returned from the
-create call. Note that `plannedStartDateTime` and `estimatedEndDateTime`
-aren't accepted on the create request — they're only set via this
-schedule call:
+create call:
 
 ```text
 {
   "testPlans": [
     {
       "id": "3000",
+      "dutId": "d783c96e-b349-40cb-8479-834cf99a859",
+      "dutSerialNumber": "01BB877A",
+      "systemId": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
+      "fixtureIds": ["c8f7cba9-6299-4312-bb18-aa5c55265031"],
       "plannedStartDateTime": "2026-01-20T15:00:00Z",
       "estimatedEndDateTime": "2026-01-22T15:00:00Z",
       "estimatedDurationInSeconds": 172800
@@ -144,66 +150,32 @@ schedule call:
   "workItems": [
     {
       "name": "Battery Cycle Test",
-      "type": "testplan",
-      "state": "new",
-      "description": "Validate battery pack cycle life under thermal stress.",
+      "type": "testplan", // Required field for work items.
+      "state": "NEW",
       "templateId": "1000",
-      "parentId": "2000",
-      "assignedTo": "jane.doe@example.com",
-      "requestedBy": "ea9cd47e-23fc-4d71-b47e-e38b7a930e42",
-      "testProgram": "BatteryCycleTest.py",
+      "description": "Validate battery pack cycle life under thermal stress.",
+      "assignedTo": "ea9cd47e-23fc-4d71-b47e-e38b7a930e43",
       "partNumber": "156502A-11L",
+      "testProgram": "BatteryCycleTest.py",
+      "parentId": "2000",
       "resources": {
-        "assets": {
-          "selections": [
-            {
-              "id": "3f9c2b1a-7d4e-4f6a-9c8b-1a2b3c4d5e6f",
-              "targetLocationId": "f1e2d3c4-b5a6-4987-8765-432109876543",
-              "targetSystemId": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
-              "targetParentId": "9a8b7c6d-5e4f-4321-a123-456789abcdef"
-            }
-          ],
-          "filter": "properties.data[\"Type\"] = \"Battery Pack\""
-        },
         "duts": {
           "selections": [
             {
-              "id": "d783c96e-b349-40cb-8479-834cf99a859",
-              "targetLocationId": "f1e2d3c4-b5a6-4987-8765-432109876543",
-              "targetSystemId": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
-              "targetParentId": "9a8b7c6d-5e4f-4321-a123-456789abcdef"
+              "id": "d783c96e-b349-40cb-8479-834cf99a859"
             }
           ],
           "filter": "modelName = \"cRIO-9045\""
         },
-        "fixtures": {
-          "selections": [
-            {
-              "id": "c8f7cba9-6299-4312-bb18-aa5c55265031",
-              "targetLocationId": "f1e2d3c4-b5a6-4987-8765-432109876543",
-              "targetSystemId": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
-              "targetParentId": "9a8b7c6d-5e4f-4321-a123-456789abcdef"
-            }
-          ],
-          "filter": "modelName = \"Thermal Chamber\""
-        },
         "systems": {
-          "selections": [
-            {
-              "id": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
-              "targetLocationId": "f1e2d3c4-b5a6-4987-8765-432109876543"
-            }
-          ],
           "filter": "properties.data[\"Lab\"] = \"Battery Pack Lab\""
         }
       },
       "timeline": {
-        "earliestStartDateTime": "2026-01-20T15:00:00Z",
-        "dueDateTime": "2026-01-25T15:00:00Z",
         "estimatedDurationInSeconds": 172800
       },
       "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
-      "workflowId": "7000"
+      "workflowId": "1000"
     }
   ]
 }
@@ -222,6 +194,29 @@ create call:
         "plannedStartDateTime": "2026-01-20T15:00:00Z",
         "plannedEndDateTime": "2026-01-22T15:00:00Z",
         "plannedDurationInSeconds": 172800
+      },
+      "resources": {
+        "duts": {
+          "selections": [
+            {
+              "id": "d783c96e-b349-40cb-8479-834cf99a859"
+            }
+          ]
+        },
+        "fixtures": {
+          "selections": [
+            {
+              "id": "c8f7cba9-6299-4312-bb18-aa5c55265031"
+            }
+          ]
+        },
+        "systems": {
+          "selections": [
+            {
+              "id": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE"
+            }
+          ]
+        }
       }
     }
   ]

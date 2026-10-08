@@ -30,7 +30,6 @@ Work Item APIs.
 | Update                        | `POST /niworkorder/v1/update-workorders`  | `POST /niworkitem/v1/update-workitems`                                       |
 | Delete                        | `POST /niworkorder/v1/delete-workorders`  | `POST /niworkitem/v1/delete-workitems`                                       |
 | Summary                       | `GET /niworkorder/v1/workorders-summary`  | `GET /niworkitem/v1/workitems-summary?type=workorder`                        |
-| **ID field**                  | Legacy work order ID for migrated records | New work item public ID                                                      |
 
 ### Field mapping reference
 
@@ -47,12 +46,13 @@ field not listed keeps the same name and shape.
 | *(none)* | `templateId` | **New** | Work orders can now be created from a work item template. |
 | *(none)* | `timeline.estimatedDurationInSeconds` | **New** | |
 | *(none)* | `resources` | **Not supported** | Work orders don't support resource reservation. Systems, assets, DUTs, fixtures, and their filters don't apply to the `workorder` type. |
+| *(none)* | `legacyWorkOrderId` | **New** | Read-only. Set automatically during migration to the original work order ID. Not present on work orders created after migration. See [Identify migrated work orders in the Work Item API](#identify-migrated-work-orders-in-the-work-item-api). |
 | *(none)* | `executionActions` | **New** | |
 | *(none)* | `fileIdsFromTemplate` | **New** | Only applicable when `templateId` is used. |
 | *(none)* | `dashboard` | **New** | |
-| *(none)* | `workflowId` | **New** | Work orders can now use a configurable workflow instead of the fixed built-in state machine. |
+| *(none)* | `workflowId` | **New** | Work orders can now use a workflow to customize their lifecycle. |
 
-### Example: Create work order vs. create work item
+### Example: Work Order vs. Work Item
 
 **Before migration — create (`POST /niworkorder/v1/workorders`):**
 
@@ -64,7 +64,7 @@ field not listed keeps the same name and shape.
       "type": "TEST_REQUEST",
       "state": "NEW",
       "description": "Validate battery pack cycle life under thermal stress.",
-      "assignedTo": "jane.doe@example.com",
+      "assignedTo": "ea9cd47e-23fc-4d71-b47e-e38b7a930e43",
       "requestedBy": "ea9cd47e-23fc-4d71-b47e-e38b7a930e42",
       "earliestStartDate": "2026-01-20T15:00:00Z",
       "dueDate": "2026-01-25T15:00:00Z",
@@ -87,29 +87,16 @@ field not listed keeps the same name and shape.
       "type": "workorder",
       "state": "new",
       "description": "Validate battery pack cycle life under thermal stress.",
-      "templateId": "1000",
-      "assignedTo": "jane.doe@example.com",
+      "assignedTo": "ea9cd47e-23fc-4d71-b47e-e38b7a930e43",
       "requestedBy": "ea9cd47e-23fc-4d71-b47e-e38b7a930e42",
       "timeline": {
         "earliestStartDateTime": "2026-01-20T15:00:00Z",
-        "dueDateTime": "2026-01-25T15:00:00Z",
-        "estimatedDurationInSeconds": 345600
+        "dueDateTime": "2026-01-25T15:00:00Z"
       },
-      "executionActions": [
-        {
-          "type": "MANUAL",
-          "action": "START"
-        }
-      ],
-      "fileIdsFromTemplate": ["19e943bd-a94d-4361-af64-0d1d2664a85b"],
       "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
       "properties": {
         "Priority": "High"
-      },
-      "dashboard": {
-        "id": "cacfeca1-90a9-4603-a939-83332b33e3c5"
-      },
-      "workflowId": "7000"
+      }
     }
   ]
 }
