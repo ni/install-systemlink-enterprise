@@ -19,8 +19,209 @@ must be updated to use the new Work Item and Work Item Template APIs.
    1. For example, `/niworkorder/v1/testplans` should be replaced with
       `/niworkitem/v1/workitems`.
 1. Some existing fields have been modified, and new fields have been introduced
-   in the new API schemas. Refer to the Work Item and Work Item Template API
-   documentation for updated schema details.
+   in the new API schemas. Refer to the
+   [field mapping tables](#field-mapping-reference) for details and update
+   request/response handling as needed.
+
+> **Note:** All existing test plan and test plan template data has already
+> been migrated to the work item and work item template collections in the
+> database. No data migration action is required from customers. Only the
+> client-side API request and response schemas need to be updated to match
+> the new Work Item and Work Item Template APIs.
+
+### Field mapping reference
+
+The tables below list fields that have changed between the Test Plan/Test
+Plan Template and Work Item/Work Item Template schemas. The same field
+mappings also apply when using the `filter` and `projection` properties in
+`query-workitems` and `query-workitem-templates` requests. Any
+field not listed keeps the same name and shape.
+
+#### Work item fields (formerly test plan fields)
+
+| Test plan field | Work item field | Change | Notes |
+| --- | --- | --- | --- |
+| *(none)* | `type` | **New** | Required. Set to `testplan` to create/query work items to behave like test plans. |
+| `workOrderId` | `parentId` | **Renamed** | The parent work item must be of type `workorder`. |
+| `workOrderName` *(`GetTestPlanResponse` only)* | *(none)* | **Removed** | Look up the parent work item by `parentId` to get its name. |
+| *(none)* | `requestedBy` | **New** | ID of the user who requested the work item. |
+| `estimatedDurationInSeconds` (create/update) | `timeline.estimatedDurationInSeconds` | **Restructured** | Estimated duration set at creation/update time. |
+| *(none)* | `timeline.earliestStartDateTime` | **New** | Earliest date/time the work item can start. |
+| *(none)* | `timeline.dueDateTime` | **New** | Date/time by which the work item is due to close. |
+| *(none)* | `resources.assets` | **New** | Asset reservations (`selections` and `filter`) were not available on test plans. |
+| `dutId` | `resources.duts.selections[].id` | **Restructured** | See [Resources restructuring](#resources-restructuring). |
+| `dutSerialNumber` | *(none)* | **Removed** | No longer accepted or returned. Identify the DUT using `resources.duts.selections[].id`. |
+| `dutFilter` | `resources.duts.filter` | **Restructured** | |
+| `fixtureIds` | `resources.fixtures.selections[].id` | **Restructured** | Now an array of selection objects instead of an array of strings. |
+| `systemId` | `resources.systems.selections[].id` | **Restructured** | Only one system selection is supported. |
+| `systemFilter` | `resources.systems.filter` | **Restructured** | |
+| *(none)* | `resources.*.selections[].targetLocationId`, `.targetSystemId`, `.targetParentId` | **New** | Optional move metadata on a resource selection. See [Resources restructuring](#resources-restructuring) for which fields apply to each resource type. |
+| `plannedStartDateTime` | `schedule.plannedStartDateTime` | **Restructured** | Set/returned via `schedule-workitems`, same as `schedule-testplans`. |
+| `estimatedEndDateTime` | `schedule.plannedEndDateTime` | **Renamed + restructured** | Set/returned via `schedule-workitems`. |
+| `estimatedDurationInSeconds` (schedule) | `schedule.plannedDurationInSeconds` | **Renamed + restructured** | Planned duration set at scheduling time. |
+| `workflow` *(deprecated)* | *(none)* | **Removed** | Already deprecated on test plans. Use `workflowSnapshot` instead. |
+
+##### Resources restructuring
+
+The flat `systemId`, `dutId`, `fixtureIds`, `systemFilter`, and `dutFilter`
+fields on test plans are now grouped under a single `resources` object on
+work items, with one entry per resource type (`systems`, `assets`, `duts`,
+`fixtures`). Each entry has a `selections` array (instead of a single ID or
+array of ID strings) and its own `filter` string.
+
+Each selection in `resources.duts`, `resources.assets`, and
+`resources.fixtures` also accepts optional `targetLocationId`,
+`targetSystemId`, and `targetParentId` fields, which are not applicable for
+test plans. These parameters let you specify where the reserved resource has to
+be moved as part of the transport order work item. `resources.systems`
+selections only accept `targetLocationId`, since a system can't be moved to
+another system or connected to a parent asset.
+
+> **Note:** This restructuring applies to work items only. Work item
+> templates keep their filter fields restructured the same way (see
+> [Work item template fields](#work-item-template-fields-formerly-test-plan-template-fields)
+> below), but have no `selections`, since templates don't reference
+> specific resource IDs.
+
+#### Work item template fields (formerly test plan template fields)
+
+| Test plan template field | Work item template field | Change | Notes |
+| --- | --- | --- | --- |
+| *(none)* | `type` | **New** | Required. Set to `testplan` for templates that create work items of type `testplan`. |
+| `estimatedDurationInSeconds` | `timeline.estimatedDurationInSeconds` | **Restructured** | |
+| `systemFilter` | `resources.systems.filter` | **Restructured** | |
+| `dutFilter` | `resources.duts.filter` | **Restructured** | |
+| *(none)* | `resources.assets.filter` | **New** | |
+| *(none)* | `resources.fixtures.filter` | **New** | |
+
+#### Example: Test Plan vs. Work Item
+
+**Before migration — create (`POST /niworkorder/v1/testplans`):**.
+
+```text
+{
+  "testPlans": [
+    {
+      "name": "Battery Cycle Test",
+      "state": "NEW",
+      "templateId": "1000",
+      "description": "Validate battery pack cycle life under thermal stress.",
+      "assignedTo": "ea9cd47e-23fc-4d71-b47e-e38b7a930e43",
+      "partNumber": "156502A-11L",
+      "testProgram": "BatteryCycleTest.py",
+      "workOrderId": "2000",
+      "dutId": "d783c96e-b349-40cb-8479-834cf99a859",
+      "dutSerialNumber": "01BB877A",
+      "dutFilter": "modelName = \"cRIO-9045\"",
+      "systemFilter": "properties.data[\"Lab\"] = \"Battery Pack Lab\"",
+      "estimatedDurationInSeconds": 172800,
+      "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
+      "workflowId": "1000"
+    }
+  ]
+}
+```
+
+To set the planned schedule, follow up with a call to
+`POST /niworkorder/v1/schedule-testplans`, using the `id` returned from the
+create call:
+
+```text
+{
+  "testPlans": [
+    {
+      "id": "3000",
+      "dutId": "d783c96e-b349-40cb-8479-834cf99a859",
+      "dutSerialNumber": "01BB877A",
+      "systemId": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE",
+      "fixtureIds": ["c8f7cba9-6299-4312-bb18-aa5c55265031"],
+      "plannedStartDateTime": "2026-01-20T15:00:00Z",
+      "estimatedEndDateTime": "2026-01-22T15:00:00Z",
+      "estimatedDurationInSeconds": 172800
+    }
+  ]
+}
+```
+
+**After migration — create (`POST /niworkitem/v1/workitems`):**
+
+```text
+{
+  "workItems": [
+    {
+      "name": "Battery Cycle Test",
+      "type": "testplan", // Required field for work items.
+      "state": "NEW",
+      "templateId": "1000",
+      "description": "Validate battery pack cycle life under thermal stress.",
+      "assignedTo": "ea9cd47e-23fc-4d71-b47e-e38b7a930e43",
+      "partNumber": "156502A-11L",
+      "testProgram": "BatteryCycleTest.py",
+      "parentId": "2000",
+      "resources": {
+        "duts": {
+          "selections": [
+            {
+              "id": "d783c96e-b349-40cb-8479-834cf99a859"
+            }
+          ],
+          "filter": "modelName = \"cRIO-9045\""
+        },
+        "systems": {
+          "filter": "properties.data[\"Lab\"] = \"Battery Pack Lab\""
+        }
+      },
+      "timeline": {
+        "estimatedDurationInSeconds": 172800
+      },
+      "workspace": "846e294a-a007-47ac-9fc2-fac07eab240e",
+      "workflowId": "1000"
+    }
+  ]
+}
+```
+
+To set the planned schedule, follow up with a call to
+`POST /niworkitem/v1/schedule-workitems`, using the `id` returned from the
+create call:
+
+```text
+{
+  "workItems": [
+    {
+      "id": "3000",
+      "schedule": {
+        "plannedStartDateTime": "2026-01-20T15:00:00Z",
+        "plannedEndDateTime": "2026-01-22T15:00:00Z",
+        "plannedDurationInSeconds": 172800
+      },
+      "resources": {
+        "duts": {
+          "selections": [
+            {
+              "id": "d783c96e-b349-40cb-8479-834cf99a859"
+            }
+          ]
+        },
+        "fixtures": {
+          "selections": [
+            {
+              "id": "c8f7cba9-6299-4312-bb18-aa5c55265031"
+            }
+          ]
+        },
+        "systems": {
+          "selections": [
+            {
+              "id": "20FRS0MQ00--SN-R90N9L4N--MAC-54-EE-75-CE-B7-FE"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
 
 ## Custom roles migration
 
