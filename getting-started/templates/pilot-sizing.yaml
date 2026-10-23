@@ -21,6 +21,21 @@
 #
 # This is a YAML-formatted file.
 
+aiassistantservice:
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: 100m
+    limits:
+      memory: "512Mi"
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+    targetMemoryUtilizationPercentage: 80
+
 alarmservice:
   resources:
     requests:
