@@ -7,15 +7,18 @@ credentials to access these artifacts. If you are not upgrading from the
 previous release, refer to past release notes to ensure you have addressed all
 required configuration changes.
 
-## Upgrading from SystemLink Enterprise 2026-09 to 2026-10
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
-- Behavior change or new feature description
-
-- Behavior change or new feature description
+- `dataframeservice:1.34.x`
+  - SystemLink deprecated the `dataframeservice.enabled` flag. To disable the DataFrame service, set the `global.featureFlags.dataframe` to false. The new feature flag also disables related functionality outside of the DataFrame service, such as Grafana dashboards and the service registry.
+- `workitem:0.10.x`
+  - During the Helm upgrade, SystemLink adds the `resources.filterType` field to existing work items and work item templates. SystemLink sets the work items to `LINQ` to match the current filters. New work items and templates use `LUCENE` as the default value. Depending on the number of records, this migration can cause the Work Item service to experience a brief downtime.
+  - Clients that create or update the work items or templates with LINQ resource filters must explicitly set `resources.filterType` to `LINQ`. If this value is not set, SystemLink may evaluate the filters as Lucene queries. For more information, refer to the [Work-item-filter-type-migration-guidance.md](https://github.com/ni/install-systemlink-enterprise/blob/main/release-notes/2026-10/Work-item-filter-type-migration-guidance.md) file.
+- `grafana-plugins:5.23.x`
+  - Use the SystemLink Work Items data source in Grafana to query and visualize work-item data. For more information, refer to [Adding the Work Items Data Source to a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink/page/work-items-data-source.html) in the SystemLink User Manual. The Product Summary, Lab Test Overview, and Work Orders Overview premade dashboards now use this data source.
+  - SystemLink deprecated the Work Orders and Test Plans data sources. However, the data sources are still available. Existing custom dashboards that use the deprecated data sources are not migrated automatically. You must manually update the dashboards.
+- `systemlink 0.54.x`
+  - When you enable the `global.featureFlags.workitem` flag, SystemLink provisions the Lab Test Overview dashboard and the Work Orders Overview dashboard. Provisioning occurs regardless of the status of the `global.featureFlags.workOrderApis` flag.
 
 ## Helm Chart Breaking Changes
 
@@ -47,17 +50,13 @@ instructions, refer to
 
 ## Bugs Fixed
 
-<!-- This section should link to the excel document that list customer facing bugs, fixed in the current release. The URL for the release (tag) should be used. -->
-
-[link to closed bugs](link to closed bugs)
+[SystemLink Enterprise 2026-10 Closed Bugs](https://github.com/ni/install-systemlink-enterprise/tree/2026-10/release-notes/2026-10/closed-bugs-sle-2026-10.xlsx)
 
 ## Software Bill of Materials and Notices
 
-<!-- This section should link to the directories containing notices and SBOM. The URL for the release (tag) should be used. -->
+[SBOM](https://github.com/ni/install-systemlink-enterprise/tree/2026-10/release-notes/2026-10/sbom)
 
-[SBOM](link to SBOM)
-
-[Notices](link to SBOM)
+[Notices](https://github.com/ni/install-systemlink-enterprise/tree/2026-10/release-notes/2026-10/notices)
 
 ## Versions
 
