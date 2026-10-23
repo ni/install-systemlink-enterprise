@@ -56,6 +56,38 @@ assetservice:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
+assetservicecdc:
+  job:
+    parallelism: 1
+    connectors:
+      source:
+        mongo:
+          parallelism: 1
+        materializedStream:
+          parallelism: 1
+      sink:
+        elasticsearch:
+          parallelism: 1
+
+  jobManager:
+    replicaCount: 1
+    resources:
+      requests:
+        cpu: 50m
+        memory: 1Gi
+      limits:
+        cpu: 1
+        memory: 1Gi
+
+  taskManager:
+    resources:
+      requests:
+        cpu: 75m
+        memory: 2Gi
+      limits:
+        cpu: 1
+        memory: 2Gi
+
 assetui:
   resources:
     requests:
@@ -307,6 +339,36 @@ fileingestion:
     maxReplicas: 2
     targetCPUUtilizationPercentage: 80
     targetMemoryUtilizationPercentage: 90
+
+fileingestioncdc:
+  job:
+    parallelism: 1
+    connectors:
+      source:
+        mongo:
+          parallelism: 1
+      sink:
+        elasticsearch:
+          parallelism: 1
+
+  jobManager:
+    replicaCount: 1
+    resources:
+      requests:
+        cpu: 50m
+        memory: 1Gi
+      limits:
+        cpu: 1
+        memory: 1Gi
+
+  taskManager:
+    resources:
+      requests:
+        cpu: 75m
+        memory: 2Gi
+      limits:
+        cpu: 1
+        memory: 2Gi
 
 filesui:
   resources:
@@ -609,6 +671,38 @@ systems:
     enabled: true
     minReplicas: 2
     maxReplicas: 2
+
+systemscdc:
+  job:
+    parallelism: 1
+    connectors:
+      source:
+        mongo:
+          parallelism: 1
+        materializedStream:
+          parallelism: 1
+      sink:
+        elasticsearch:
+          parallelism: 1
+
+  jobManager:
+    replicaCount: 1
+    resources:
+      requests:
+        cpu: 50m
+        memory: 1Gi
+      limits:
+        cpu: 1
+        memory: 1Gi
+
+  taskManager:
+    resources:
+      requests:
+        cpu: 75m
+        memory: 2Gi
+      limits:
+        cpu: 1
+        memory: 2Gi
 
 systemsstate:
   resources:
