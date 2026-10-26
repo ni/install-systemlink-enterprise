@@ -19,11 +19,16 @@ required configuration changes.
   - SystemLink deprecated the Work Orders and Test Plans data sources. However, the data sources are still available. Existing custom dashboards that use the deprecated data sources are not migrated automatically. You must manually update the dashboards.
 - `systemlink 0.54.x`
   - When you enable the `global.featureFlags.workitem` flag, SystemLink provisions the Lab Test Overview dashboard and the Work Orders Overview dashboard. Provisioning occurs regardless of the status of the `global.featureFlags.workOrderApis` flag.
+- `helium-userservices:0.48.x`
+  - SystemLink includes the new built-in **AI Assistant Chat User** role. By default, this role enables the `aiassistant:AccessWebUI`, `aiassistant:Chat`, and `aiassistant:Mcp` privileges.
+  - The built-in **Systems Maintainer** and **Data Maintainer** roles now include the `aiassistant:AccessWebUI`, `aiassistant:Chat`, and `aiassistant:Mcp` privileges.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `aiassistantservice:0.4.x`
+  - The top-level `systemlink` Helm chart now enables the AI Assistant service by default.
+  - For more information about configuring the service, refer to the `aiassistantservice` section of the [`systemlink-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/cc3cd0c6d95cd4b8ce9e85953f1c419dc996e6c1/getting-started/templates/systemlink-values.yaml#L1519-L1623) template.
+  - For more information about configuring the required secrets, refer to the `aiassistantservice` section of the [`systemlink-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/cc3cd0c6d95cd4b8ce9e85953f1c419dc996e6c1/getting-started/templates/systemlink-secrets.yaml#L614-L652) template.
 
 ## Upgrade Considerations
 
