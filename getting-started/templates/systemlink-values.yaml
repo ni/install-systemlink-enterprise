@@ -553,6 +553,19 @@ assetservicecdc:
   # flinkConfiguration:
   #   pekko.framesize: "15728640b"
 
+  ## Uncomment this section to adjust the network policy that restricts access to the Flink JobManager REST API.
+  ## By default, only the Flink operator can reach the REST API of this deployment.
+  ## Set the namespace if the systemlinkadmin chart is installed in a different namespace than systemlink.
+  ##
+  # networkPolicy:
+  #   ## Set to false to not deploy the network policy.
+  #   ##
+  #   enabled: true
+  #   operator:
+  #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
+  #     ##
+  #     namespace: "systemlinkadmin"
+
 ## Configuration for the Grafana dashboard provider.
 ##
 dashboardhost:
@@ -1114,6 +1127,19 @@ fileingestioncdc:
   # flinkConfiguration:
   #   pekko.framesize: "10485760b"
 
+  ## Uncomment this section to adjust the network policy that restricts access to the Flink JobManager REST API.
+  ## By default, only the Flink operator can reach the REST API of this deployment.
+  ## Set the namespace if the systemlinkadmin chart is installed in a different namespace than systemlink.
+  ##
+  # networkPolicy:
+  #   ## Set to false to not deploy the network policy.
+  #   ##
+  #   enabled: true
+  #   operator:
+  #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
+  #     ##
+  #     namespace: "systemlinkadmin"
+
 ## Configuration for JupyterHub.
 ##
 sl-jupyterhub:
@@ -1383,6 +1409,19 @@ systemscdc:
   ##
   # flinkConfiguration:
   #   pekko.framesize: "15728640b"
+
+  ## Uncomment this section to adjust the network policy that restricts access to the Flink JobManager REST API.
+  ## By default, only the Flink operator can reach the REST API of this deployment.
+  ## Set the namespace if the systemlinkadmin chart is installed in a different namespace than systemlink.
+  ##
+  # networkPolicy:
+  #   ## Set to false to not deploy the network policy.
+  #   ##
+  #   enabled: true
+  #   operator:
+  #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
+  #     ##
+  #     namespace: "systemlinkadmin"
 
 ## Configuration for comments service.
 ##
