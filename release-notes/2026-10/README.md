@@ -27,8 +27,8 @@ required configuration changes.
 
 - `aiassistantservice:0.4.x`
   - The top-level `systemlink` Helm chart now enables the AI Assistant service by default.
-  - For more information about configuring the service, refer to the `aiassistantservice` section of the [`systemlink-values.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/cc3cd0c6d95cd4b8ce9e85953f1c419dc996e6c1/getting-started/templates/systemlink-values.yaml#L1519-L1623) template.
-  - For more information about configuring the required secrets, refer to the `aiassistantservice` section of the [`systemlink-secrets.yaml`](https://github.com/ni/install-systemlink-enterprise/blob/cc3cd0c6d95cd4b8ce9e85953f1c419dc996e6c1/getting-started/templates/systemlink-secrets.yaml#L614-L652) template.
+  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-10/getting-started/templates/systemlink-values.yaml#L1508).
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-10/getting-started/templates/systemlink-secrets.yaml#L614) template.
 
 ## Upgrade Considerations
 
@@ -65,7 +65,7 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink 0.54.126`
+**Top Level Helm Chart:** `systemlink 0.54.141`
 
 **Admin Helm Chart:** `systemlink-admin 0.54.15`
 
@@ -74,28 +74,28 @@ instructions, refer to
 ### NI Containers
 
 ```text
-aiassistantservice:0.4.122
-alarmservice:0.29.80
+aiassistantservice:0.4.125
 alarmservice-routine-executor:0.29.80
-alarmsui:0.39.106
+alarmservice:0.29.80
+alarmsui:0.39.107
 assetservice:0.40.165
 assetservicecdc:0.8.77
-assetui:0.39.114
+assetui:0.39.116
 comments:0.38.73
 dashboardsui:0.42.93
-dataframeservice:1.34.59
 dataframeservice-nessie:1.34.59
-dynamicformfields:0.23.51
-executionsui:0.42.93
+dataframeservice:1.34.59
+dynamicformfields:0.23.53
+executionsui:0.42.94
 feedservice:0.31.57
 feedsui:0.30.97
 fileingestioncdc:0.15.80
-filesui:0.43.112
+filesui:0.43.113
 grafana-auth-proxy:0.41.11
-grafana-plugins:5.23.2
+grafana-plugins:5.23.3
 grafana-rbac-integrator:0.41.24
-helium-dataservices:0.41.29
 helium-dataservices-mongomigration:0.41.29
+helium-dataservices:0.41.29
 helium-fileingestionservices:1.32.67
 helium-salt-master:1.39.9
 helium-serviceregistry:0.48.26
@@ -104,16 +104,16 @@ helium-taghistorianmongomigration:0.37.20
 helium-taghistorianservices:0.37.20
 helium-userservices:0.48.24
 helium-webappservices:0.46.34
-helium-webserver:0.55.54
+helium-webserver:0.55.55-22563408
 jupyter-notebook-userpod:2.33.15
 jupyterui:0.42.88
-labmanagementui:0.33.103
+labmanagementui:0.33.104
 landingpageui:0.42.89
 locationmanagementui:0.12.114
 locationservice:0.13.40
 nbexec-execution-helpers:0.43.68
-nbexec-notebook-runner:0.43.110
-nbexecservice:0.43.174
+nbexec-notebook-runner:0.43.111
+nbexecservice:0.43.176
 nbparsingservice:0.42.22
 ni-grafana:v12.3.1-6b8a586a158-ni
 notification:0.42.33
@@ -122,37 +122,37 @@ repository:0.38.37
 routineeventtrigger:0.43.57
 routineexecutor:0.43.77
 routinescheduletrigger:0.43.28
-routineservice:0.44.46
 routineservice-v2:0.44.46
-routinesui:0.43.93
-securityui:0.42.96
+routineservice:0.44.46
+routinesui:0.43.94
+securityui:0.42.97
 session-manager-service:0.49.37
 sl-configurable-http-proxy:2.33.4
 sl-k8s-hub:2.33.9
 smtp:0.42.38
-specificationmanagement:0.33.34
+specificationmanagement:0.33.35
 systemscdc:0.6.47
 systemsmanagementservice:0.42.77
 systemsstateservice:0.32.38
-systemsstatesui:0.31.109
-systemsui:0.43.129
+systemsstatesui:0.31.110
+systemsui:0.43.132
 tageventprocessor:0.41.29
-tagsui:0.38.98
+tagsui:0.38.100
 tdmreader:0.3.79
-testinsightsui:0.42.79
-testmonitorservice:0.51.84
+testinsightsui:0.42.80
+testmonitorservice:0.51.86
 userdata:0.42.38
 userservice-setup:0.49.19
-webapphostui:0.41.100
-workitem:0.10.77
+webapphostui:0.41.101
+workitem:0.10.78
 ```
 
 ### 3rd Party Containers
 
 ```text
+alpine/curl:8.22.0
 alpine:3.24.1
 alpine:3.24.2
-alpine/curl:8.22.0
 apache/flink-kubernetes-operator:1.16.1
 bitnami-secure/containers/debian-12/argo-workflow-cli:4.1.4-debian-12-r1
 bitnami-secure/containers/debian-12/argo-workflow-controller:4.1.4-debian-12-r1
@@ -161,13 +161,13 @@ bitnami-secure/containers/debian-12/elasticsearch:9.5.5-debian-12-r0
 bitnami-secure/containers/debian-12/kibana:9.5.5-debian-12-r0
 bitnami-secure/containers/debian-12/kubectl:1.37.1
 bitnami-secure/containers/debian-12/redis-cluster:8.10.2-debian-12-r3
-bitnami-secure/containers/photon-5/zookeeper:3.9.6
+bitnami-secure/containers/photon-5/zookeeper:3.9.6@sha256:ddb0ee3587568fb3ba419a77b63aae71af937baef9ff553d0bb046bb7ce64ccf
 dremio/busybox:1.37.0-r61-hardened
 dremio/dremio-enterprise:26.1.12
 jupyterhub/k8s-image-awaiter:4.4.0
-kiwigrid/k8s-sidecar:2.14.0
+kiwigrid/k8s-sidecar:2.14.1
 pause:3.10.1
-swaggerapi/swagger-ui:v5.33.1
+swaggerapi/swagger-ui:v5.33.2
 ```
 
 ## Verifying Container Signatures
