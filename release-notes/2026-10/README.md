@@ -27,8 +27,8 @@ required configuration changes.
 
 - `aiassistantservice:0.4.x`
   - The top-level `systemlink` Helm chart now enables the AI Assistant service by default.
-  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-10/getting-started/templates/systemlink-values.yaml#L1508).
-  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-10/getting-started/templates/systemlink-secrets.yaml#L614) template.
+  - [View this service configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-10/getting-started/templates/systemlink-values.yaml#L1508)
+  - [View this secret configuration](https://github.com/ni/install-systemlink-enterprise/blob/2026-10/getting-started/templates/systemlink-secrets.yaml#L614)
 
 ## Upgrade Considerations
 
