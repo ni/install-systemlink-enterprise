@@ -205,16 +205,6 @@ dataframeservice:
   ## Accepts units in "MiB" (Mebibytes, 1024 KiB) or in "MB" (Megabytes, 1000 KB)
   requestBodySizeLimit: 256MiB
 
-  ## This shows an example of configuring an nginx ingress to support large uploads.
-  ingress:
-    annotations:
-      # Increase request size limit to allow large uploads.
-      nginx.ingress.kubernetes.io/proxy-body-size: 256m
-      # Increase HTTP timeouts to allow for long-running synchronous read requests.
-      nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
-      nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-
 ## The file ingestion service stores files.
 fileingestion:
   resources:
@@ -231,13 +221,6 @@ fileingestion:
 
   ## @param fileingestion.uploadLimitGB Limit of the maximum accepted size of uploaded files, expressed in GB.
   uploadLimitGB: 10
-
-  ## This shows an example of configuring an nginx ingress to support large uploads.
-  ingress:
-    annotations:
-      nginx.ingress.kubernetes.io/proxy-body-size: 2000m
-      nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
-      nginx.ingress.kubernetes.io/proxy-buffering: "off"
 
 ## The specification management service stores specification documents.
 specificationmanagement:
