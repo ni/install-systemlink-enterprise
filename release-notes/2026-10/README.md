@@ -9,19 +9,24 @@ required configuration changes.
 
 ## New Features and Behavior changes
 
-- `dataframeservice:1.34.x`
-  - SystemLink deprecated the `dataframeservice.enabled` flag. To disable the DataFrame service, set the `global.featureFlags.dataframe` to false. The new feature flag also disables related functionality outside of the DataFrame service, such as Grafana dashboards and the service registry.
-- `workitem:0.10.x`
-  - During the Helm upgrade, SystemLink adds the `resources.filterType` field to existing work items and work item templates. SystemLink sets the work items to `LINQ` to match the current filters. New work items and templates use `LUCENE` as the default value. Depending on the number of records, this migration can cause the Work Item service to experience a brief downtime.
-  - Clients that create or update the work items or templates with LINQ resource filters must explicitly set `resources.filterType` to `LINQ`. If this value is not set, SystemLink may evaluate the filters as Lucene queries. For more information, refer to the [Work-item-filter-type-migration-guidance.md](https://github.com/ni/install-systemlink-enterprise/blob/main/release-notes/2026-10/Work-item-filter-type-migration-guidance.md) file.
-- `grafana-plugins:5.23.x`
-  - Use the SystemLink Work Items data source in Grafana to query and visualize work-item data. For more information, refer to [Adding the Work Items Data Source to a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink/page/work-items-data-source.html) in the SystemLink User Manual. The Product Summary, Lab Test Overview, and Work Orders Overview premade dashboards now use this data source.
-  - SystemLink deprecated the Work Orders and Test Plans data sources. However, the data sources are still available. Existing custom dashboards that use the deprecated data sources are not migrated automatically. You must manually update the dashboards.
-- `systemlink 0.54.x`
-  - When you enable the `global.featureFlags.workitem` flag, SystemLink provisions the Lab Test Overview dashboard and the Work Orders Overview dashboard. Provisioning occurs regardless of the status of the `global.featureFlags.workOrderApis` flag.
+Explore the October 2026 SystemLink release, including new editions of SystemLink.
+
+- Full release of SystemLink Base, Full, and Professional. For more information, refer to [Select Your NI SystemLink Edition](https://www.ni.com/en/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/systemlink/select-edition.html).
+- Integration of Nigel AI with systems, products, and lab intelligence. For more information, refer to [Using Nigel in SystemLink](https://www.ni.com/docs/en-US/bundle/systemlink/page/use-nigel-systemlink.html).
 - `helium-userservices:0.48.x`
   - SystemLink includes the new built-in **AI Assistant Chat User** role. By default, this role enables the `aiassistant:AccessWebUI`, `aiassistant:Chat`, and `aiassistant:Mcp` privileges.
   - The built-in **Systems Maintainer** and **Data Maintainer** roles now include the `aiassistant:AccessWebUI`, `aiassistant:Chat`, and `aiassistant:Mcp` privileges.
+- Create dashboards using the work items data source. For more information, refer to [Adding the Work Items Data Source to a Dashboard](https://www.ni.com/docs/en-US/bundle/systemlink/page/work-items-data-source.html) in the SystemLink User Manual.
+- `grafana-plugins:5.23.x`
+  - Use the SystemLink Work Items data source in Grafana to query and visualize work-item data. The Product Summary, Lab Test Overview, and Work Orders Overview premade dashboards now use this data source.
+  - SystemLink deprecated the Work Orders and Test Plans data sources. However, the data sources are still available. Existing custom dashboards that use the deprecated data sources are not migrated automatically. You must manually update the dashboards.
+- `workitem:0.10.x`
+  - During the Helm upgrade, SystemLink adds the `resources.filterType` field to existing work items and work item templates. SystemLink sets the work items to `LINQ` to match the current filters. New work items and templates use `LUCENE` as the default value. Depending on the number of records, this migration can cause the Work Item service to experience a brief downtime.
+  - Clients that create or update the work items or templates with LINQ resource filters must explicitly set `resources.filterType` to `LINQ`. If this value is not set, SystemLink may evaluate the filters as Lucene queries. For more information, refer to the [Work-item-filter-type-migration-guidance.md](https://github.com/ni/install-systemlink-enterprise/blob/main/release-notes/2026-10/Work-item-filter-type-migration-guidance.md) file.
+- `systemlink 0.54.x`
+  - When you enable the `global.featureFlags.workitem` flag, SystemLink provisions the Lab Test Overview dashboard and the Work Orders Overview dashboard. Provisioning occurs regardless of the status of the `global.featureFlags.workOrderApis` flag.
+- `dataframeservice:1.34.x`
+  - SystemLink deprecated the `dataframeservice.enabled` flag. To disable the DataFrame service, set the `global.featureFlags.dataframe` to false. The new feature flag also disables related functionality outside of the DataFrame service, such as Grafana dashboards and the service registry.
 
 ## Helm Chart Breaking Changes
 
