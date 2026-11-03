@@ -16,7 +16,7 @@
 #
 # For production deployments, the defaults in the SystemLink helm
 # charts should be used, or similar overrides in this file could be
-# specified to further increase the availablility and performance
+# specified to further increase the availability and performance
 # of specific workloads.
 #
 # This is a YAML-formatted file.
@@ -786,6 +786,40 @@ taghistorian:
       maxReplicas: 2
       targetCPUUtilizationPercentage: 60
       targetMemoryUtilizationPercentage: 70
+
+tdmreader:
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: 100m
+    limits:
+      # Validated with the file size and handle limits below. Raise these together.
+      memory: "512Mi"
+
+  # Fixed at 2 replicas for redundancy. Each pod has its own cache, so
+  # repeated queries on large files can miss the cache on the other pod.
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 80
+
+  fileDownload:
+    # Disk cache per pod. Also sets the /tmp emptyDir size and the ephemeral-storage
+    # request/limit. Reduced from 10Gi to limit TDMReader's share of the shared node root disk.
+    # Increase this if node disks are large and users repeatedly query large files.
+    maxCacheSize: 4Gi
+    # Largest TDMS file the service will read. Larger files are rejected before download.
+    # Raising this requires more memory.
+    maxFileSize: 128Mi
+    # Total size of all files in one request. Must stay below maxCacheSize * evictionTargetPercentage.
+    maxCombinedFileSize: 1Gi
+
+  fileLoad:
+    # In-memory TDMS handle cache per pod. Set equal to the default maxParallelLoads (4)
+    # so that files currently being loaded are never evicted.
+    maxCachedHandles: 4
 
 testinsightsui:
   resources:
