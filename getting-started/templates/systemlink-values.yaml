@@ -564,7 +564,7 @@ assetservicecdc:
   #   operator:
   #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
   #     ##
-  #     namespace: "systemlinkadmin"
+  #     namespace: ""
 
 ## Configuration for the Grafana dashboard provider.
 ##
@@ -1138,7 +1138,7 @@ fileingestioncdc:
   #   operator:
   #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
   #     ##
-  #     namespace: "systemlinkadmin"
+  #     namespace: ""
 
 ## Configuration for JupyterHub.
 ##
@@ -1421,7 +1421,7 @@ systemscdc:
   #   operator:
   #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
   #     ##
-  #     namespace: "systemlinkadmin"
+  #     namespace: ""
 
 ## Configuration for comments service.
 ##
