@@ -1564,6 +1564,17 @@ aiassistantservice:
     ## Expose SystemLink tools to AI clients through the Model Context Protocol (MCP) server.
     ##
     mcpServerEnabled: true
+    ## Enable private Nigel AI mode.
+    ##
+    privateNigelEnabled: false
+
+  ## Configuration for private Nigel AI.
+  ##
+  privateNigel:
+    ## Secrets containing trusted certificates for the private Nigel AI service.
+    ## The secrets must be deployed manually prior to installing this chart.
+    ##
+    trustedCertificatesSecrets: []
 
   ## Connection to the Nigel AI service. The AI Assistant service authenticates users with this host and sends chat
   ## requests to it.
