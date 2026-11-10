@@ -65,7 +65,7 @@ sl-elasticsearch:
       enabled: true
 
   ## Values that are specifically for users creation job.
-  userProvisioning:
+  usersProvisioning:
     ## Enable of disable the job that creates users in Elasticsearch.
     ##
     enabled: true
