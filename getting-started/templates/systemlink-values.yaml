@@ -122,6 +122,8 @@ global:
   ## Use the flags below to enable or disable optional SystemLink capabilities.
   ##
   # featureFlags:
+    # <ATTENTION> - Set to false to disable the deployment of the DataFrame service.
+    # dataframe: true
     # <ATTENTION> - Set to false to disable deployment of the work item and lab management UI services.
     ##
     # workitem: true
@@ -545,6 +547,19 @@ assetservicecdc:
   # flinkConfiguration:
   #   pekko.framesize: "15728640b"
 
+  ## Uncomment this section to adjust the network policy that restricts access to the Flink JobManager REST API.
+  ## By default, only the Flink operator can reach the REST API of this deployment.
+  ## Set the namespace if the systemlinkadmin chart is installed in a different namespace than systemlink.
+  ##
+  # networkPolicy:
+  #   ## Set to false to not deploy the network policy.
+  #   ##
+  #   enabled: true
+  #   operator:
+  #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
+  #     ##
+  #     namespace: ""
+
 ## Configuration for the Grafana dashboard provider.
 ##
 dashboardhost:
@@ -683,10 +698,6 @@ dashboardhost:
 ## Configuration for the Data Frame service.
 ##
 dataframeservice:
-  ## Set true to enable the deployment of the DataFrame service.
-  ## By default, this is enabled and the DataFrame service is deployed.
-  enabled: &dataframeserviceEnabled true
-
   ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica.
   ## Each replica of the dataframe service applies its own limit.
   ## Considering load-balancing, the effective rate will be higher than the
@@ -924,12 +935,6 @@ grafanaprovisioning:
       #       type: some-datasource
       #       ## SystemLink copies each data source exactly as written into the template. To properly define an entry into the template, refer to the format as defined in the following link: https://github.com/grafana/helm-charts/blob/307aae1ba29039c4c80581d457299c0a126b55c1/charts/grafana/values.yaml#L458
       #       ## Instead of a list of data sources, SystemLink uses key-pair values. You can define these values in the same way as Grafana.
-      systemlink:
-        datasources:
-          ## Provision these datasources only when every listed feature flag is enabled under
-          ## global.featureFlags. The grafanaprovisioning helper resolves the names below.
-          ni-sldataframe-datasource:
-            enabled: *dataframeserviceEnabled
 
 ## Salt configuration.
 ##
@@ -1086,6 +1091,19 @@ fileingestioncdc:
   ##
   # flinkConfiguration:
   #   pekko.framesize: "10485760b"
+
+  ## Uncomment this section to adjust the network policy that restricts access to the Flink JobManager REST API.
+  ## By default, only the Flink operator can reach the REST API of this deployment.
+  ## Set the namespace if the systemlinkadmin chart is installed in a different namespace than systemlink.
+  ##
+  # networkPolicy:
+  #   ## Set to false to not deploy the network policy.
+  #   ##
+  #   enabled: true
+  #   operator:
+  #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
+  #     ##
+  #     namespace: ""
 
 ## Configuration for JupyterHub.
 ##
@@ -1349,6 +1367,19 @@ systemscdc:
   # flinkConfiguration:
   #   pekko.framesize: "15728640b"
 
+  ## Uncomment this section to adjust the network policy that restricts access to the Flink JobManager REST API.
+  ## By default, only the Flink operator can reach the REST API of this deployment.
+  ## Set the namespace if the systemlinkadmin chart is installed in a different namespace than systemlink.
+  ##
+  # networkPolicy:
+  #   ## Set to false to not deploy the network policy.
+  #   ##
+  #   enabled: true
+  #   operator:
+  #     ## Namespace of the Flink operator. Leave empty when the operator is installed in the same namespace as systemlink.
+  #     ##
+  #     namespace: ""
+
 ## Configuration for comments service.
 ##
 comments:
@@ -1405,9 +1436,6 @@ serviceregistry:
       specification:
         ## Add the "Specification" service to the service registry if enabled
         enabled: *specificationManagementEnabled
-  privilegeToggles:
-    ## Show or hide the option to set security privileges for data frame service
-    dataframe: *dataframeserviceEnabled
 
 ## Configuration for dynamic form fields.
 ##
