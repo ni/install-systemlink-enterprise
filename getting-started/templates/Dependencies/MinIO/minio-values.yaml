@@ -23,8 +23,8 @@ ingress:
   hostname: example.com
   path: "/"
   annotations:
-    ## Set the maximum http request body size for file uploads
-    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
   tls: true
   ## If enabled, Helm will generate a self-signed certificate for this ingress during deployment
   selfSigned: true
@@ -35,8 +35,8 @@ apiIngress:
   hostname: "example.com"
   path: "/"
   annotations:
-    ## Set the maximum http request body size for file uploads if using an nginx ingress controller.
-    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
   tls: true
   ## If enabled, Helm will generate a self-signed certificate for this ingress during deployment
   selfSigned: true

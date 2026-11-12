@@ -183,12 +183,6 @@ webappservices:
     targetCPUUtilizationPercentage: 60
     targetMemoryUtilizationPercentage: 70
 
-  ## This shows an example of configuring an nginx ingress to support large uploads.
-  ingress:
-    annotations:
-      ## Increase the limit on the size of requests sent through the ingress.
-      nginx.ingress.kubernetes.io/proxy-body-size: 100m
-
   ## @param webappservices.notebookMaximumUploadSizeInMegabytes Maximum size of a notebook that can be uploaded
   ## using notebook APIs in MB.
   notebookMaximumUploadSizeInMegabytes: "10"
@@ -225,17 +219,6 @@ webserver:
     persistence:
       ## If increasing memory, volume size should also be increased.
       size: 150Mi
-
-  ## This shows an example of configuring an nginx ingress to support heavy UI usage with
-  ## long-running queries and large uploads.
-  ## Different annotations will be required if a different ingress is in use.
-  ingress:
-    annotations:
-      ## Increase the read timeout from the nginx default to give proxied services more time to respond to requests.
-      ## This should be configured to allow for the longest expected query time.
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "90"
-      ## Increase the limit on the size of requests sent through the ingress.
-      nginx.ingress.kubernetes.io/proxy-body-size: 100m
 
   ## Configure rate limiting for requests that pass through an instance of this web server. Each replica of this server
   ## applies its own per-user limit. So, with load balancing, the effective rate as seen by the user will be much higher
