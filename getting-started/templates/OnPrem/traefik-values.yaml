@@ -1,0 +1,17 @@
+# Values overrides for self-hosted deployments using Traefik as the ingress controller.
+#
+# This file should be passed in as a values file with systemlink-values.yaml,
+# systemlink-secrets.yaml, and storage-values.yaml during SLE installation.
+#
+# This is a YAML-formatted file.
+
+global:
+  ingress:
+    api:
+      annotations:
+        kubernetes.io/ingress.class: traefik
+        traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    ui:
+      annotations:
+        kubernetes.io/ingress.class: traefik
+        traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
