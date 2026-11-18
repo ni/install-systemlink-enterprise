@@ -13,14 +13,19 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
-- Bug 4132914: The Role Editor scopes the privileges of the `Dynamic Form Fields` to the resource of another category, such as `workitem:workitem`
+- Role Editor | Bug 4132914: The Role Editor scopes the privileges of the `Dynamic Form Fields` to the resource of another category, such as `workitem:workitem`
   - This bug affected multiple custom roles by storing the DFF privilege under work items instead of as a separate privilege. These roles displayed DFF as `enabled`. However, the roles could not create, update, or delete DFFs.
   - This error occurred after saving a work item, or an older Work Orders/Test Plans privilege, and later adding DFF.
   - This fix instead displays DFF as `disabled` for those roles. To grant the privilege, administrators need to select DFF again and save the role.
   - Use the [find_roles_with_dff_privileges_scoped_to_workitems.ipynb](https://github.com/ni/install-systemlink-enterprise/blob/main/release-notes/2026-11/find_roles_with_dff_privileges_scoped_to_workitems.ipynb) notebook to find affected roles.
   - After the 2026-11 release is deployed, admins should open each listed role, select DFF privileges again, and save the role to grant the privilege.
-
-- Behavior change or new feature description
+- Role Editor| Bug 4162676: Users cannot create assets without `system:ExecuteJobs` privileges
+  - Users with asset privileges can now run asset jobs on systems.
+  - Upgrading to the 2026-11 release does not update the existing custom roles. Only roles created after the upgrade get these job permissions automatically.
+  - To update an existing role, open it in the role editor, clear the affected Asset Management permissions, select them again, and save.
+- `testmonitorservice-0.52.x`
+  - Organization ID information is now part of the database scheme for products, test results, test steps, and paths.
+  - The `testmonitorservice.database.migrationCommandAndStatementTimeoutInSeconds` helm value may need to be adjusted to allow more time for migrations of databases with many records. The default value is 600 seconds (10 minutes). The database migration may take up to ~45 minutes depending on database size.
 
 ## Helm Chart Breaking Changes
 
