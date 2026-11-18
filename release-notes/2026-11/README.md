@@ -7,12 +7,11 @@ to obtain credentials to access these artifacts. If you are not upgrading from
 the previous release, refer to past release notes to ensure you have addressed
 all required configuration changes.
 
-## Upgrading from SystemLink Enterprise release_older_year-release_older_month to release_year-release_month
-
-<!-- Optional section to include comments and instructions needed to successfully upgrade from the previous release to the current release. If the only changes needed are already captured in Helm Chart Breaking Changes, this section is not needed. -->
-
 ## New Features and Behavior changes
 
+- `testmonitorservice-0.52.x`
+  - Organization ID information is now part of the database scheme for products, test results, test steps, and paths.
+  - The `testmonitorservice.database.migrationCommandAndStatementTimeoutInSeconds` helm value may need to be adjusted to allow more time for migrations of databases with many records. The default value is 600 seconds (10 minutes). The database migration may take up to ~45 minutes depending on database size.
 - Role Editor | Bug 4132914: The Role Editor scopes the privileges of the `Dynamic Form Fields` to the resource of another category, such as `workitem:workitem`
   - This bug affected multiple custom roles by storing the DFF privilege under work items instead of as a separate privilege. These roles displayed DFF as `enabled`. However, the roles could not create, update, or delete DFFs.
   - This error occurred after saving a work item, or an older Work Orders/Test Plans privilege, and later adding DFF.
@@ -23,9 +22,6 @@ all required configuration changes.
   - Users with asset privileges can now run asset jobs on systems.
   - Upgrading to the 2026-11 release does not update the existing custom roles. Only roles created after the upgrade get these job permissions automatically.
   - To update an existing role, open it in the role editor, clear the affected Asset Management permissions, select them again, and save.
-- `testmonitorservice-0.52.x`
-  - Organization ID information is now part of the database scheme for products, test results, test steps, and paths.
-  - The `testmonitorservice.database.migrationCommandAndStatementTimeoutInSeconds` helm value may need to be adjusted to allow more time for migrations of databases with many records. The default value is 600 seconds (10 minutes). The database migration may take up to ~45 minutes depending on database size.
 
 ## Helm Chart Breaking Changes
 
@@ -70,11 +66,11 @@ instructions, refer to
 
 ## Versions
 
-**Top Level Helm Chart:** `systemlink <chart version>`
+**Top Level Helm Chart:** `systemlink 0.55.136`
 
-**Admin Helm Chart:** `systemlink-admin <chart version>`
+**Admin Helm Chart:** `systemlink-admin 0.55.15`
 
-**Elasticsearch Helm Chart:** `systemlinkelasticsearch <chart version>`
+**Elasticsearch Helm Chart:** `systemlinkelasticsearch 0.17.29`
 
 ### NI Containers
 
