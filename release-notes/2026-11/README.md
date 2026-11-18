@@ -19,8 +19,11 @@ all required configuration changes.
 
 ## Helm Chart Breaking Changes
 
-- Chart Name and version
-  - Description of breaking change.
+- `assetservicecdc:0.9.x`, `systemscdc:0.7.x`, `fileingestioncdc:0.16.x`
+  - The addition of NetworkPolicy restricts access to the Apache Flink JobManager HTTP API. If a user installed `systemlinkadmin` in a different namespace than SystemLink, they must configure the namespace in NetworkPolicy. Other deployments are unaffected.
+  - [View this service configuration - assetservicecdc](https://github.com/ni/install-systemlink-enterprise/blob/2026-11/getting-started/templates/systemlink-values.yaml#L550)
+  - [View this service configuration - systemscdc](https://github.com/ni/install-systemlink-enterprise/blob/2026-11/getting-started/templates/systemlink-values.yaml#L1370)
+  - [View this service configuration - fileingestioncdc](https://github.com/ni/install-systemlink-enterprise/blob/2026-11/getting-started/templates/systemlink-values.yaml#L095)
 
 ## Upgrade Considerations
 
