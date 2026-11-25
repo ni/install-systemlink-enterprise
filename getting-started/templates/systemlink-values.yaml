@@ -1534,6 +1534,17 @@ aiassistantservice:
     ## This gives users access to SystemLink through MCP clients such as VS Code, Claude, and ChatGPT.
     ##
     mcpServerEnabled: true
+    ## Enable private Nigel AI mode.
+    ##
+    privateNigelEnabled: false
+
+  ## Configuration for private Nigel AI.
+  ##
+  privateNigel:
+    ## Secrets containing trusted certificates for the private Nigel AI service.
+    ## The secrets must be deployed manually prior to installing this chart.
+    ##
+    trustedCertificatesSecrets: []
 
   ## Connection to the Nigel AI service. The AI Assistant service authenticates users with this host and sends chat
   ## requests to it.
