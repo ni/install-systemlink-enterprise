@@ -2,7 +2,7 @@
 ##
 ## - When hosted on Amazon Web Services, reference AWS/aws-supplemental-values.yaml.
 ## - When hosted on Azure, reference Azure/azure-supplemental-values.yaml.
-## - When self-hosted, reference OnPrem/storage-values.yaml.
+## - When self-hosted, reference OnPrem/storage-values.yaml and OnPrem/traefik-values.yaml.
 ##
 ## This is a YAML-formatted file.
 ## Declare override values for variables.
@@ -162,14 +162,6 @@ webserver:
   ## Represents the log level of the service. The log level must be one of the following values: ['error', 'warn', 'info', 'debug']
   ##
   logLevel: 'info'
-  ## Ingress configuration
-  ##
-  ingress:
-    ## Increase the read timeout from the nginx default to give proxied services more time to respond to requests.
-    ## Applies only if you are using an nginx ingress controller.
-    ##
-    annotations:
-      nginx.ingress.kubernetes.io/proxy-read-timeout: '90'
   ## Values used to configure OpenID Connect providers.
   # <ATTENTION> - Configure your OpenID Connect provider here, as well as the claims to make available to the SystemLink application.
   #    Consult your provider's documentation regarding exposing scopes to clients.
@@ -706,15 +698,6 @@ dashboardhost:
 ## Configuration for the Data Frame service.
 ##
 dataframeservice:
-  ## Ingress configuration
-  ##
-  ingress:
-    ## Increase the maximum HTTP request body size from the nginx default. Only applies if an nginx
-    ## ingress controller is used. Should be set to the same size as requestBodySizeLimit.
-    ##
-    annotations:
-      nginx.ingress.kubernetes.io/proxy-body-size: 256m
-
   ## <ATTENTION> - Configure rate limiting. Limits are enforced per-replica.
   ## Each replica of the dataframe service applies its own limit.
   ## Considering load-balancing, the effective rate will be higher than the
@@ -985,16 +968,6 @@ feedservice:
 ## FileIngestion configuration.
 ##
 fileingestion:
-  ## Ingress configuration
-  ##
-  ingress:
-    ## Override the default upload limit for an nginx ingress controller.
-    ##
-    annotations:
-      nginx.ingress.kubernetes.io/proxy-body-size: 2000m
-      nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
-      nginx.ingress.kubernetes.io/proxy-buffering: "off"
-
   ## Feature toggles.
   ##
   featureToggle:
@@ -1156,14 +1129,6 @@ sl-jupyterhub:
         ## PVC Storage Request for every JupyterHub userpod.
         # <ATTENTION> - Adjust this size to match the needs of your application.
         capacity: 1Gi
-
-  ## Ingress configuration.
-  ##
-  ingress:
-    ## Override the default upload limit for an nginx ingress controller.
-    ##
-    annotations:
-      nginx.ingress.kubernetes.io/proxy-body-size: 100m
 
 ## Configuration for Argo Workflows.
 ##
@@ -1547,9 +1512,11 @@ dynamicformfields:
 ## Configuration for the AI Assistant service.
 ##
 aiassistantservice:
-  ## Set to false to disable the deployment of the AI Assistant service.
-  # <ATTENTION> - The AI Assistant service is enabled by default. It requires an external PostgreSQL database and
-  #               outbound HTTPS access from the cluster to the Nigel AI host configured in aiassistantservice.oidc.host.
+  # <ATTENTION> - The AI Assistant service is enabled by default and requires an external PostgreSQL database for both
+  #               the MCP server and chat features. Outbound HTTPS access (port 443) from the cluster to ni.com and to
+  #               the host configured in aiassistantservice.oidc.host is required only when
+  #               aiassistantservice.featureFlags.chatEnabled is true.
+  ## Set to false to disable the deployment of the AI Assistant service. This also disables the MCP server and chat.
   ##
   enabled: true
 
@@ -1557,11 +1524,14 @@ aiassistantservice:
   ##
   featureFlags:
     ## Enable the chat and login endpoints. These endpoints send data to the Nigel AI service.
-    # <ATTENTION> - Set to false to prevent the AI Assistant service from sending data to the Nigel AI service.
-    #               This setting does not affect the MCP server.
+    # <ATTENTION> - A functioning chat experience in the UI requires outbound HTTPS access (port 443)
+    #               from the cluster to both ni.com and the host configured in aiassistantservice.oidc.host.
+    #               Set to false to disable chat and prevent the AI Assistant service from sending data to the
+    #               Nigel AI service. This setting does not affect the MCP server.
     ##
     chatEnabled: true
     ## Expose SystemLink tools to AI clients through the Model Context Protocol (MCP) server.
+    ## This gives users access to SystemLink through MCP clients such as VS Code, Claude, and ChatGPT.
     ##
     mcpServerEnabled: true
     ## Enable private Nigel AI mode.
@@ -1581,6 +1551,7 @@ aiassistantservice:
   ##
   oidc:
     ## Host name of the Nigel AI service. NI does not recommend changing this value.
+    ## This value is not used when aiassistantservice.featureFlags.chatEnabled is false.
     ## If you change this value, you must also add "https://<host>" to webserver.trustedHostsForLocationHeader.
     ##
     host: "tnm.emerson.com"
@@ -1607,24 +1578,26 @@ aiassistantservice:
       ##
       user: "" # <ATTENTION>
       ## PostgreSQL user name used to perform migrations managed by this chart.
-      ## If unset database.connectionInfo.user is used instead.
+      ## If unset, aiassistantservice.database.connectionInfo.user is used instead.
       ##
       # migrationUser: ""
       ## The name of the secret with PostgreSQL connection credentials.
       ## If global.deploySecrets is true, this secret is created from aiassistantservice.secrets.database in systemlink-secrets.yaml.
       ##
       secretName: "aiassistant-postgres-credentials"
-      ## Password key for database.connectionInfo.user to be retrieved from the secret.
+      ## Password key for aiassistantservice.database.connectionInfo.user to be retrieved from the secret.
       ##
       passwordKey: "password"
-      ## Password key for database.connectionInfo.migrationUser to be retrieved from the secret.
-      ## If unset database.connectionInfo.passwordKey is used instead.
+      ## Password key for aiassistantservice.database.connectionInfo.migrationUser to be retrieved from the secret.
+      ## If unset, aiassistantservice.database.connectionInfo.passwordKey is used instead.
       ##
       # migrationPasswordKey: "migration-password"
     ## Alternatively, provide the connection as a PostgreSQL URI stored in a secret.
-    ## NOTE: If `database.connectionString.secretName` is set, the `database.connectionInfo` parameters are ignored.
+    ## NOTE: If `aiassistantservice.database.connectionString.secretName` is set, the
+    ## `aiassistantservice.database.connectionInfo` parameters are ignored.
     ## The URI must use the format postgresql://<user>:<password>@<host>:<port>/<database>. Special characters in the
-    ## user name and password must be percent-encoded. Configure TLS with the `database.tls` parameters rather than in the URI.
+    ## user name and password must be percent-encoded. Configure TLS with the `aiassistantservice.database.tls`
+    ## parameters rather than in the URI.
     ##
     # connectionString:
     #   ## The name of the secret with the PostgreSQL connection string.
@@ -1635,7 +1608,7 @@ aiassistantservice:
     #   ##
     #   connectionStringKey: "connection-string"
     #   ## Key from the secret to retrieve the connection string that will be used to perform migrations managed by this chart.
-    #   ## If unset database.connectionString.connectionStringKey is used instead.
+    #   ## If unset, aiassistantservice.database.connectionString.connectionStringKey is used instead.
     #   ##
     #   migrationConnectionStringKey: null
     ## The PostgreSQL database TLS configuration
@@ -1644,9 +1617,9 @@ aiassistantservice:
       ## Enable TLS communication with the PostgreSQL database.
       ## NOTE: If true, the public TLS certificate from the server (.pem or .crt)
       ## must be uploaded to the cluster as a Kubernetes ConfigMap and its name and key
-      ## be set under the `database.tls.existingConfigMap` and `database.tls.certificateSubPath`
-      ## parameters respectively.
-      ## Use the database.postgresCertificate value to automatically upload this certificate.
+      ## be set under the `aiassistantservice.database.tls.existingConfigMap` and
+      ## `aiassistantservice.database.tls.certificateSubPath` parameters respectively.
+      ## Use the `database.postgresCertificate` value to automatically upload this certificate.
       ##
       enabled: true
       ## PostgreSQL TLS verification mode. Supported values are "require", "verify-ca", and "verify-full".
@@ -1657,6 +1630,6 @@ aiassistantservice:
       ## The name of an existing ConfigMap with a TLS certificate for the database.
       ##
       existingConfigMap: *postgresCertificateConfigMap
-      ## The Certificate key to be retrieved from existing ConfigMap
+      ## The certificate key to be retrieved from the existing ConfigMap.
       ##
       certificateSubPath: *postgresCertificateFileName
