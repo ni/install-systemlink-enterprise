@@ -9,6 +9,10 @@ all required configuration changes.
 
 ## New Features and Behavior changes
 
+Explore the November 2026 SystemLink release, including new MCP capabilities.
+
+- MCP-compatible clients and AI assistants can now discover and use SystemLink capabilities. For more information, refer to [Connecting AI Assistants to the SystemLink MCP Server](https://www.ni.com/docs/en-US/bundle/systemlink/page/connect-mcp-server.html).
+- In the State Details page, use the History tab to view state history and restore previous versions. For more information, refer to [Restoring a Previous Version of a System State](https://www.ni.com/docs/en-US/bundle/systemlink/page/restore-state.html).
 - `testmonitorservice:0.52.x`
   - Organization ID information is now part of the database scheme for products, test results, test steps, and paths.
   - The `testmonitorservice.database.migrationCommandAndStatementTimeoutInSeconds` helm value may need to be adjusted to allow more time for migrations of databases with many records. The default value is 600 seconds (10 minutes). The database migration may take up to ~45 minutes depending on database size.
